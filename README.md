@@ -1,26 +1,18 @@
-# Everything Machine — Minimal Site (Kepler)
-
-**Kurz:** Ein dunkles, GitHub Pages-bereites Prozesslog für künstlerisch-wissenschaftliche Forschung. Einträge in Markdown, lokale Speicherung (localStorage), Export/Import als JSON.
-
-## Struktur
-- `index.html` — Startseite / Single-page  
-- `style.css` — Design / Dark palette  
-- `scripts/markdown.js` — Einfacher Markdown-Renderer  
-- `everything-machine-export.json` — (optional) Exportdatei aus UI
-
-## Lokale Nutzung
-1. Alle Dateien in einen Ordner legen.  
-2. `index.html` im Browser öffnen (Chrome oder Edge empfohlen).  
-3. Neue Einträge: „Neuer Eintrag“ → Markdown schreiben → Speichern.  
-4. Export → JSON herunterladen. Import → JSON wiederherstellen.
-
-## GitHub Pages Deploy
-1. Neues Git-Repository anlegen (z. B. `everything-machine`).  
-2. Dateien committen:  
-   ```bash
-   git init
-   git add .
-   git commit -m "Everything Machine — initial site"
-   git branch -M main
-   git remote add origin <DEIN_REMOTE_URL>
-   git push -u origin main
+Artistic Research: Everything Machine (Kepler)Dies ist das GitHub-Repository für das Artistic Research-Projekt "Everything Machine (Kepler)" von Jennifer Meier (MA Medienproduktion, 2025).Die Website dient als interaktives Logbuch und Ausstellungsplattform für einen explorativen Prozess an der Schnittstelle von Generativer KI, Digitaler Identität und Musikproduktion.[Demo-Link](Füge hier den Link zu deiner GitHub Pages-Website ein, z.B. https://dein-username.github.io/dein-repo-name/)ProjektübersichtKünstler verfügen über eine Fülle von "Inputs" – nicht nur Bilder, sondern auch Musik, Texte und einen schwer fassbaren "Vibe". Generative KI bietet neue "Output"-Werkzeuge, doch es fehlt an etablierten Prozessen, diese Inputs zur Erweiterung einer bestehenden digitalen Identität zu nutzen. Diese Arbeit untersucht dies in einem explorativen Artistic Research-Prozess am Fallbeispiel des Alter Egos "Kepler".Die Website ist in drei Hauptbereiche gegliedert:Projektübersicht: Das formale Exposé, einschließlich Abstract, Forschungsfragen und Methodik.Prozess-Logbuch: Ein detailliertes Tagebuch der technischen Experimente (ComfyUI, AnimateDiff), der Input-Analyse und der Reflexionen.Künstler-Dialoge: Transkripte der semi-strukturierten Dialoge mit dem "Künstler-Klienten" (Gavin Just), die als Meilensteine des Projekts dienen.Technische UmsetzungDiese Website ist eine statische Seite, die für die Veröffentlichung auf GitHub Pages optimiert ist.HTML5: Semantische Struktur.CSS3: Benutzerdefiniertes Dark-Theme ("Kepler Vibe") mit IBM Plex Mono Font. Das Layout verwendet CSS Grid für das "Logbuch".Tailwind CSS: Wird per CDN für Utility-Klassen und schnelles Prototyping geladen.JavaScript: Natives JavaScript (ES6+) für die SPA-ähnliche Seitennavigation (Ein-/Ausblenden von Sektionen) und den integrierten Mini-Audio-Player.Projektstruktur.
+├── index.html          # Die Haupt-HTML-Datei
+├── style.css           # Alle benutzerdefinierten Stile
+├── script.js           # Die gesamte JavaScript-Logik
+├── README.md           # Diese Datei
+└── assets/
+    ├── audio/          # Speicherort für .mp3-Dateien
+    │   ├── kepler_preview_1.mp3
+    │   └── ...
+    ├── images/         # Speicherort für Bilder (.png, .jpg, .gif)
+    │   ├── kepler-voxel.png
+    │   ├── comfyui-graph.png
+    │   └── ...
+    └── videos/         # Speicherort für Videos (.mp4)
+        └── anim-test.mp4
+Setup & Lokale EntwicklungRepository klonen:git clone [https://github.com/dein-username/dein-repo-name.git](https://github.com/dein-username/dein-repo-name.git)
+cd dein-repo-name
+Assets hinzufügen:Fülle den Ordner assets/audio/ mit deinen .mp3-Dateien.Fülle den Ordner assets/images/ mit deinen Projektbildern.Fülle den Ordner assets/videos/ mit deinen .mp4-Dateien.Pfade anpassen:Öffne script.js und bearbeite das playlist-Array, um die Dateinamen, Titel, Alben und Spotify-IDs deiner Songs zu hinterlegen.Öffne index.html und ersetze die src-Pfade der <img>- und <video>-Tags, damit sie auf deine Dateien im assets-Ordner verweisen.Lokale Vorschau:Da die Seite nur statische Dateien verwendet, kannst du die index.html direkt in deinem Browser öffnen.Für eine realistischere Vorschau (um CORS-Probleme zu vermeiden) wird ein lokaler Server empfohlen. Wenn du VS Code hast, ist die Erweiterung "Live Server" ideal.Veröffentlichung auf GitHub PagesPushe deine Änderungen (einschließlich des assets-Ordners) in dein GitHub-Repository.Gehe in deinem Repository zu Settings > Pages.Wähle unter Build and deployment > Source die Option Deploy from a branch.Wähle den main (oder master) Branch und den / (root) Ordner.Klicke auf Save.Nach wenigen Minuten ist deine Website unter der oben angezeigten URL erreichbar.

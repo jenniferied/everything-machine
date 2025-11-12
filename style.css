@@ -1,48 +1,287 @@
-:root {
-  --bg: #07070a;
-  --panel: #0f1114;
-  --muted: #9aa6b0;
-  --glow: #6fe0d6;
-  --accent: #4fb3e0;
-  --glass: rgba(255,255,255,0.03);
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color-scheme: dark;
+/* --- Dark Theme & Kepler Vibe --- */
+body {
+    background-color: #111; /* Dunkler als bg-gray-900 */
+    color: #d1d5db; /* text-gray-300 */
+    font-family: 'IBM Plex Mono', monospace; /* Monospace-Font für den "Matrix/Research"-Look */
 }
-*{ box-sizing: border-box; }
-html, body { height:100%; margin:0; background:linear-gradient(180deg, var(--bg), #050507); color:#e8eef2; }
-.shell { max-width:1200px; margin:26px auto; padding:18px; }
-.topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; }
-.brand { display:flex; gap:12px; align-items:center; }
-.logo { width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg, var(--glow), #2a6f9f); display:flex; align-items:center; justify-content:center; font-weight:700; color:#021214; }
-h1 { font-size:18px; margin:0; }
-.subtitle { font-size:12px; color:var(--muted); margin-top:2px; }
-.navbtn { background:transparent; border:1px solid rgba(255,255,255,0.03); padding:8px 10px; border-radius:8px; color:var(--muted); cursor:pointer; }
-.grid { display:grid; grid-template-columns:1fr 420px; gap:18px; margin-top:18px; }
-.panel { background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border:1px solid rgba(255,255,255,0.03); padding:14px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.6); }
-.intro h2 { margin:0 0 8px 0; }
-.small { color:var(--muted); font-size:13px; }
-.loghead { display:flex; justify-content:space-between; align-items:center; gap:8px; }
-.controls { display:flex; gap:8px; align-items:center; }
-.controls input { padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:inherit; }
-.btn { padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:var(--muted); cursor:pointer; }
-.btn.primary { background:linear-gradient(90deg, var(--glow), var(--accent)); color:#041012; font-weight:700; }
-.editor.hidden { display:none; }
-.row { display:flex; gap:10px; margin-top:10px; }
-textarea, input[type="text"], input[type="file"] { width:100%; padding:10px; border-radius:8px; border:1px dashed rgba(255,255,255,0.03); background:transparent; color:inherit; }
-textarea { min-height:160px; resize:vertical; font-family:var(--mono); font-size:13px; }
-.preview { width:320px; border-left:1px solid rgba(255,255,255,0.02); padding-left:10px; }
-.previewInner { min-height:140px; overflow:auto; }
-.feed { margin-top:12px; display:flex; flex-direction:column; gap:12px; max-height:60vh; overflow:auto; padding-right:6px; }
-.entry { padding:12px; border-radius:10px; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.02); }
-.entry header { display:flex; justify-content:space-between; align-items:center; gap:8px; }
-.entry .meta { font-size:12px; color:var(--muted); }
-.entryBody { margin-top:8px; }
-.entryBody img { max-width:100%; border-radius:6px; }
-.entryTags .tag { display:inline-block; margin-top:8px; background:rgba(255,255,255,0.02); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted); }
-.entryActions { margin-top:10px; display:flex; gap:8px; }
-.aside .tags { display:flex; flex-wrap:wrap; gap:8px; }
-.tagBtn { background:transparent; border:1px solid rgba(255,255,255,0.03); padding:6px 8px; border-radius:999px; color:var(--muted); cursor:pointer; }
-.media img.thumb { max-width:100%; margin-top:8px; border-radius:8px; }
-.foot { margin-top:12px; opacity:0.9; }
-@media(max-width:980px){ .grid { grid-template-columns:1fr; } .preview { display:none; } }
+
+/* --- Akzentfarbe: Matrix Grün --- */
+.text-accent {
+    color: #4ade80; /* text-green-400 */
+}
+.border-accent {
+    border-color: #4ade80; /* border-green-400 */
+}
+.hover-accent:hover {
+     color: #111;
+     background-color: #4ade80;
+}
+
+/* --- Eigene Font hochladen --- */
+/*
+@font-face {
+    font-family: 'DeinPixelFont';
+    src: url('pfad/zu/deinpixelfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.font-custom {
+    font-family: 'DeinPixelFont', sans-serif;
+}
+*/
+
+/* --- Das "fließende Blöcke" Layout (CSS Grid) --- */
+/* Bleibt gleich, wird aber jetzt IN den Sektionen verwendet */
+.logbook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem; /* 24px */
+}
+
+/* Styling für die einzelnen Blöcke */
+.logbook-item {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.25rem; /* rounded-sm */
+    padding: 1.5rem; /* p-6 */
+    align-self: start; 
+}
+
+/* --- Header & Navigation (Neu) --- */
+.top-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    border-bottom: 1px solid #374151; /* border-gray-700 */
+    z-index: 50;
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    font-size: 0.875rem; /* text-sm */
+    letter-spacing: 0.05em; /* tracking-wider */
+    text-transform: uppercase;
+}
+
+.nav-separator {
+    color: #4b5563; /* text-gray-600 */
+    margin: 0 0.75rem; /* mx-3 */
+}
+
+.nav-link {
+    cursor: pointer;
+    color: #d1d5db; /* text-gray-300 */
+    transition: color 0.2s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: #4ade80; /* text-accent */
+}
+.nav-link.dropdown-toggle::after {
+    content: ' ↓';
+    font-size: 0.75rem;
+}
+
+/* Dropdown-Menü (Neu) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    min-width: 200px;
+    z-index: 60;
+    padding: 0.5rem 0; /* py-2 */
+}
+.dropdown-menu.show {
+    display: block;
+}
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+}
+.dropdown-item:hover {
+    background-color: #374151; /* bg-gray-700 */
+    color: #4ade80; /* text-accent */
+}
+.dropdown-item.active {
+    background-color: #374151; /* bg-gray-700 */
+    color: #4ade80; /* text-accent */
+}
+
+/* --- "Fullscreen" Seiten-Container --- */
+.page-content {
+    display: none; /* Standardmäßig ausgeblendet */
+    padding: 1.5rem; /* p-6 */
+}
+.page-content.active {
+    display: block; /* Wird per JS eingeblendet */
+}
+
+/* Utility für Dialog-Blöcke */
+.dialog-item {
+    background-color: #0c2a1e; /* Dunkles Grün */
+    border: 1px solid #4ade80; /* border-accent */
+}
+
+/* --- Mini Audio Player (Neu) --- */
+.mini-player-container {
+    display: flex;
+    align-items: center;
+    max-width: 300px; /* Begrenzt die Breite des Players */
+    margin-left: 1.5rem; /* ml-6 */
+}
+.play-pause-btn {
+    background: none;
+    border: 1px solid #4ade80; /* border-accent */
+    color: #4ade80; /* text-accent */
+    width: 20px; /* Kleiner gemacht (war 28px) */
+    height: 20px; /* Kleiner gemacht (war 28px) */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0; /* Verhindert, dass der Button schrumpft */
+    margin-right: 0.5rem; /* mr-2, war 0.75rem */
+    transition: background-color 0.2s, color 0.2s;
+}
+.play-pause-btn:hover {
+    background-color: #4ade80;
+    color: #111;
+}
+.play-pause-btn .icon-play,
+.play-pause-btn .icon-pause {
+    display: none; /* Standardmäßig ausblenden */
+    padding-left: 1px; /* Kleines visuelles Tuning für Play (war 2px) */
+}
+.play-pause-btn.playing .icon-pause {
+    display: block;
+    padding-left: 0;
+}
+.play-pause-btn:not(.playing) .icon-play {
+    display: block;
+}
+
+/* Marquee (Scrolling Text) */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+.marquee-content {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    animation-play-state: paused; /* Standardmäßig pausiert */
+    /* padding-left: 100%; */ /* Entfernt, damit der Text sofort sichtbar ist */
+    color: #9ca3af; /* text-gray-400 */
+}
+.marquee-content span {
+    color: #9ca3af; /* text-gray-400 */
+}
+.marquee-content a {
+    color: #d1d5db; /* text-gray-300 */
+    text-decoration: none;
+}
+.marquee-content a:hover {
+    color: #4ade80; /* text-accent */
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* --- Playlist Dropdown (Neu) --- */
+.playlist-toggle-btn {
+    background: none;
+    border: 1px solid #4ade80;
+    color: #4ade80;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 0.5rem; /* mr-2 */
+    transition: background-color 0.2s, color 0.2s;
+}
+.playlist-toggle-btn:hover, .playlist-toggle-btn.active {
+    background-color: #4ade80;
+    color: #111;
+}
+.playlist-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* Etwas Abstand zur Leiste */
+    left: 0;
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    min-width: 320px; /* Breite für die Playlist */
+    z-index: 60;
+    padding: 0.5rem 0; /* py-2 */
+    max-height: 400px;
+    overflow-y: auto;
+}
+.playlist-dropdown.show {
+    display: block;
+}
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #374151; /* border-gray-700 */
+}
+.playlist-item:last-child {
+    border-bottom: none;
+}
+.playlist-item:hover {
+    background-color: #374151; /* bg-gray-700 */
+}
+.playlist-item.active {
+    background-color: #0c2a1e; /* Dunkles Grün */
+    color: #4ade80; /* text-accent */
+}
+.playlist-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    margin-right: 0.5rem; /* mr-2 */
+    color: #9ca3af; /* text-gray-400 */
+}
+.playlist-item.active .playlist-icon {
+    color: #4ade80; /* text-accent */
+}
+.song-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.song-title {
+    font-weight: 500;
+}
+.album-info {
+    font-size: 0.75rem; /* text-xs */
+    color: #9ca3af; /* text-gray-400 */
+}
+.playlist-item.active .album-info {
+    color: #86efac; /* text-green-200 */
+}
+.duration {
+    margin-left: auto;
+    font-size: 0.75rem; /* text-xs */
+    color: #9ca3af; /* text-gray-400 */
+    padding-left: 0.5rem; /* pl-2 */
+}
