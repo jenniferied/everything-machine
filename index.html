@@ -46,16 +46,8 @@
                         </svg>
                     </button>
                     <div class="marquee-container">
-                        <div class="marquee-content">
-                            <!-- Info-Text aktualisiert (Künstler - Titel (Album, Jahr)) -->
-                            <a id="marquee-link" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" title="Kepler auf Spotify öffnen">
-                                Kepler - Deine Moves (BLUE EDITION, 2023)
-                            </a>
-                            <!-- Inhalt wird für den Scroll-Effekt dupliziert -->
-                            <span class="mx-4">|</span>
-                            <a href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" title="Kepler auf Spotify öffnen">
-                                Kepler - Deine Moves (BLUE EDITION, 2023)
-                            </a>
+                        <div class="marquee-content" id="marquee-content">
+                            <!-- Content wird dynamisch von scripts.js generiert -->
                         </div>
                     </div>
                     <!-- Audio-Tag bleibt, wird von JS gesteuert -->
@@ -247,7 +239,7 @@
     </footer>
 
     <!-- Externe JavaScript-Datei -->
-    <script src="script.js" defer></script>
+    <script src="scripts.js" defer></script>
 
 </body>
 </html>

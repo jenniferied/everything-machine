@@ -17,24 +17,25 @@ const iconAlbum = `<svg class="playlist-icon" xmlns="http://www.w3.org/2000/svg"
     <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
 </svg>`;
 
-// --- Deine Playlist-Daten ---
-// ACHTUNG: Passe die 'src' Pfade und 'spotifyID' an deine echten Dateien an.
-// Die 'duration' wird jetzt automatisch geladen.
+// --- PLAYLIST: EINZIGE QUELLE FÜR ALLE AUDIO-DATEN ---
+// Füge hier Songs hinzu - alles andere wird automatisch generiert!
 const playlist = [
     {
         artist: "Kepler",
         title: "Deine Moves",
-        album: "SINGLE",
-        year: "2024",
-        src: "assets/audio/06_Deine_Moves_Master_Song.mp3", // Aktualisierter Pfad
-        spotifyID: "15LqPeE0iqNMV31haEobtl" 
+        album: "BLUE EDITION",
+        year: "2023",
+        src: "assets/audio/06_Deine_Moves_Master_Song.mp3",
+        cover: "assets/images/06_Deine_Moves_Cover.png",
+        spotifyID: "15LqPeE0iqNMV31haEobtl"
     },
     {
         artist: "Kepler",
         title: "Es tut mir Leid",
         album: "Es tut mir Leid (Single)",
         year: "2023",
-        src: "assets/audio/kepler_preview_2.mp3", // Aktualisierter Pfad
+        src: "assets/audio/kepler_preview_2.mp3",
+        cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png",
         spotifyID: "YOUR_SONG_ID_2"
     },
     {
@@ -42,10 +43,11 @@ const playlist = [
         title: "Für mich",
         album: "Für mich (Single)",
         year: "2023",
-        src: "assets/audio/kepler_preview_3.mp3", // Aktualisierter Pfad
+        src: "assets/audio/kepler_preview_3.mp3",
+        cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png", // Fallback, falls kein Cover vorhanden
         spotifyID: "YOUR_SONG_ID_3"
     }
-    // Füge hier mehr Songs hinzu...
+    // Füge hier mehr Songs hinzu - nur diese Liste muss aktualisiert werden!
 ];
 let currentTrackIndex = 0;
 let isPlaying = false;
@@ -53,8 +55,7 @@ let isPlaying = false;
 // Player-Elemente holen
 const audioPlayer = document.getElementById('audio-player');
 const playPauseButton = document.getElementById('play-pause-button');
-const marqueeContent = document.querySelector('.marquee-content');
-const marqueeLink = document.getElementById('marquee-link');
+const marqueeContent = document.getElementById('marquee-content');
 const playlistToggleBtn = document.getElementById('playlist-toggle-btn');
 const playlistDropdown = document.getElementById('playlist-dropdown');
 
@@ -94,6 +95,21 @@ function togglePlay() {
     }
 }
 
+// Funktion zum Aktualisieren des Marquee-Texts
+function updateMarquee(track) {
+    if (!marqueeContent) return;
+    
+    const newText = `${track.artist} - ${track.title} (${track.album}, ${track.year})`;
+    const newLink = `https://open.spotify.com/track/${track.spotifyID || 'YOUR_ARTIST_ID'}`;
+    
+    // Marquee-Content dynamisch generieren (für Scroll-Effekt dupliziert)
+    marqueeContent.innerHTML = `
+        <a href="${newLink}" target="_blank" title="${track.artist} auf Spotify öffnen">${newText}</a>
+        <span class="mx-4">|</span>
+        <a href="${newLink}" target="_blank" title="${track.artist} auf Spotify öffnen">${newText}</a>
+    `;
+}
+
 // Funktion zum Laden eines Tracks
 function loadTrack(index) {
     currentTrackIndex = index;
@@ -103,14 +119,7 @@ function loadTrack(index) {
     audioPlayer.load();
 
     // Marquee-Text aktualisieren
-    const newText = `${track.artist} - ${track.title} (${track.album}, ${track.year})`;
-    const newLink = `https://open.spotify.com/track/${track.spotifyID || 'YOUR_ARTIST_ID'}`;
-    
-    // Alle Links im Marquee aktualisieren
-    marqueeContent.querySelectorAll('a').forEach(a => {
-        a.href = newLink;
-        a.textContent = newText;
-    });
+    updateMarquee(track);
 
     // "Active" Status in der Playlist aktualisieren
     document.querySelectorAll('.playlist-item').forEach((item, i) => {
@@ -134,11 +143,15 @@ function populatePlaylist() {
     if (!playlistDropdown) return;
     let html = '';
     
-    // 1. HTML-Struktur aufbauen (mit Platzhaltern für die Dauer)
+    // 1. HTML-Struktur aufbauen (mit Album-Cover-Icon und Platzhaltern für die Dauer)
     playlist.forEach((song, index) => {
         html += `
             <button class="playlist-item" data-index="${index}">
                 ${iconSong}
+                <img src="${song.cover || 'assets/images/06_Deine_Moves_Cover.png'}" 
+                     alt="${song.album}" 
+                     class="album-cover-icon"
+                     onerror="this.style.display='none'">
                 <div class="song-details">
                     <span class="song-title">${song.title}</span>
                     <span class="album-info">
@@ -259,6 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Player initialisieren
     if (typeof populatePlaylist === 'function') {
         populatePlaylist();
-        loadTrack(0); // Ersten Track laden
+        loadTrack(0); // Ersten Track laden (initialisiert auch den Marquee)
     }
 });
