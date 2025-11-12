@@ -24,10 +24,10 @@ const playlist = [
     {
         artist: "Kepler",
         title: "Deine Moves",
-        album: "BLUE EDITION",
-        year: "2023",
-        src: "assets/audio/kepler_preview_1.mp3", // Aktualisierter Pfad
-        spotifyID: "YOUR_SONG_ID_1" 
+        album: "SINGLE",
+        year: "2024",
+        src: "assets/audio/06_Deine_Moves_Song.mp3", // Aktualisierter Pfad
+        spotifyID: "15LqPeE0iqNMV31haEobtl" 
     },
     {
         artist: "Kepler",
