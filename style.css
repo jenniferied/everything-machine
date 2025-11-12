@@ -258,6 +258,15 @@ body {
     margin-right: 0.5rem; /* mr-2 */
     color: #9ca3af; /* text-gray-400 */
 }
+.album-cover-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 0.5rem; /* mr-2 */
+    border: 1px solid #374151; /* border-gray-700 */
+}
 .playlist-item.active .playlist-icon {
     color: #4ade80; /* text-accent */
 }
