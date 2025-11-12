@@ -26,7 +26,7 @@ const playlist = [
         title: "Deine Moves",
         album: "SINGLE",
         year: "2024",
-        src: "assets/audio/06_Deine_Moves_Song.mp3", // Aktualisierter Pfad
+        src: "assets/audio/06_Deine_Moves_Master_Song.mp3", // Aktualisierter Pfad
         spotifyID: "15LqPeE0iqNMV31haEobtl" 
     },
     {
