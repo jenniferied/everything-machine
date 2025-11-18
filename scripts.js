@@ -341,14 +341,15 @@ function parseMarkdown(markdown) {
     // Welt-Info-Dropdown-Komponenten verarbeiten (Format: [WORLD_INFO:...])
     // Syntax: [WORLD_INFO:title|model|seed|publicMode|previewImage|link|vrLink|description]
     // Die Beschreibung kommt am Ende, damit sie Pipes enthalten kann
+    // WICHTIG: Diese müssen VOR der Abschnitts-Aufteilung verarbeitet werden
+    const worldInfoPlaceholder = '___WORLD_INFO_PLACEHOLDER___';
+    const worldInfoMap = new Map();
+    let worldInfoCounter = 0;
+    
     const worldInfoRegex = /\[WORLD_INFO:([^\]]+)\]/g;
-    html = html.replace(worldInfoRegex, (match, data) => {
+    markdown = markdown.replace(worldInfoRegex, (match, data) => {
         // Teile die Daten auf
-        // Format: title|model|seed|publicMode|previewImage|link|vrLink|description
         const parts = data.split('|');
-        
-        // Die Teile sind: title, model, seed, publicMode, previewImage, link, vrLink, description
-        // Alles nach dem 7. Pipe ist die Beschreibung
         const worldData = {
             title: parts[0] || '',
             model: parts[1] || '',
@@ -357,9 +358,12 @@ function parseMarkdown(markdown) {
             previewImage: parts[4] || '',
             link: parts[5] || '',
             vrLink: parts[6] || '',
-            description: parts.slice(7).join('|') || '' // Alles ab Index 7 ist die Beschreibung
+            description: parts.slice(7).join('|') || ''
         };
-        return createWorldInfoDropdown(worldData);
+        const placeholder = `${worldInfoPlaceholder}${worldInfoCounter}${worldInfoPlaceholder}`;
+        worldInfoMap.set(placeholder, createWorldInfoDropdown(worldData));
+        worldInfoCounter++;
+        return placeholder;
     });
     
     // Markdown in Abschnitte aufteilen (jede Überschrift wird ein Bubble)
@@ -374,9 +378,9 @@ function parseMarkdown(markdown) {
         const line = lines[i];
         const trimmed = line.trim();
         
-        // Überschrift erkennen (## oder ###)
-        const headingMatch = trimmed.match(/^(##+)\s+(.+)$/);
-        if (headingMatch) {
+        // Überschrift erkennen (#, ## oder ###) - aber nicht die erste H1, die ist der Titel
+        const headingMatch = trimmed.match(/^(#{1,3})\s+(.+)$/);
+        if (headingMatch && headingMatch[1].length > 1) { // Nur ## und ###, nicht #
             hasSections = true;
             // Aktuellen Abschnitt abschließen
             if (currentParagraph.length > 0) {
@@ -496,11 +500,15 @@ function parseMarkdown(markdown) {
         }
         
         sections.forEach((section) => {
-            // Inhalt formatieren - aber WORLD_INFO Dropdowns und Links erstmal schützen
+            // Inhalt formatieren
             let sectionContent = section.content.map(para => {
                 if (!para.trim()) return '';
                 
-                // WORLD_INFO Dropdowns schützen (werden bereits vorher verarbeitet)
+                // WORLD_INFO Placeholder wiederherstellen
+                worldInfoMap.forEach((html, placeholder) => {
+                    para = para.replace(placeholder, html);
+                });
+                
                 // Fettdruck und Kursiv
                 para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
@@ -512,8 +520,11 @@ function parseMarkdown(markdown) {
             const headingClass = section.headingLevel === 2 ? 'text-2xl' : 'text-xl';
             const bubbleSize = section.headingLevel === 2 ? 'bubble-large' : 'bubble-medium';
             
-            // Überschrift richtig escapen
-            const headingText = (section.heading || 'Abschnitt').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            // Überschrift richtig escapen (aber nicht das "#" Zeichen)
+            let headingText = section.heading || 'Abschnitt';
+            // Entferne eventuelle "#" am Anfang
+            headingText = headingText.replace(/^#+\s*/, '').trim();
+            headingText = headingText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
             
             gridHTML += `
                 <div class="content-bubble ${bubbleSize}">
@@ -553,8 +564,8 @@ function parseMarkdown(markdown) {
         linkCounter++;
         return placeholder;
     });
-    // WORLD_INFO Dropdowns schützen
-    html = html.replace(/<div class="world-info-container">.*?<\/div>/gis, (match) => {
+    // WORLD_INFO Dropdowns schützen (multiline match)
+    html = html.replace(/<div class="world-info-container">[\s\S]*?<\/div>/gi, (match) => {
         const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
         linkMap.set(placeholder, match);
         linkCounter++;
