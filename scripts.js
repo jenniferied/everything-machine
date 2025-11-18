@@ -715,17 +715,14 @@ function displayEntry(index) {
     
     const entry = allJournalEntries[index];
     
-    const html = `
-        <div class="logbook-entry">
-            <div class="logbook-entry-header">
-                <div class="logbook-entry-date">${entry.formattedDate}</div>
-                <h2 class="logbook-entry-title">${entry.title}</h2>
-            </div>
-            <div class="prose prose-invert max-w-none text-gray-300">
-                ${entry.html}
-            </div>
-        </div>
-    `;
+    // Direkt den HTML-Inhalt einfügen (ohne logbook-entry Wrapper)
+    // Der parseMarkdown erstellt bereits das content-grid
+    let html = entry.html;
+    
+    // Falls noch kein content-grid vorhanden ist (Fallback), eines hinzufügen
+    if (!html.includes('content-grid')) {
+        html = `<div class="content-grid">${html}</div>`;
+    }
     
     container.innerHTML = html;
     
