@@ -46,9 +46,9 @@ Statische Website optimiert für GitHub Pages:
    
    **Optionen für lokalen Server:**
    - VS Code: Live Server Extension verwenden
-   - Python: `python3 -m http.server 8000` im Projektverzeichnis
-   - Node.js: `npx http-server` im Projektverzeichnis
-   - Dann im Browser öffnen: `http://localhost:8000`
+   - Python: `python3 -m http.server 8001` im Projektverzeichnis (Port 8000 ist oft von ComfyUI belegt)
+   - Node.js: `npx http-server -p 8001` im Projektverzeichnis
+   - Dann im Browser öffnen: `http://localhost:8001`
 
 ## Veröffentlichung auf GitHub Pages
 
