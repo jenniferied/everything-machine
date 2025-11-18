@@ -138,9 +138,20 @@
 
         <!-- ===== SEITE 2: PROZESS-LOGBUCH (Die fließenden Blöcke) ===== -->
         <section id="page-logbook" class="page-content">
-            <h2 class="text-3xl font-bold mb-8 uppercase tracking-wider">Prozess-Logbuch</h2>
-            <div class="logbook-grid" id="logbook-container">
-                <!-- Journal-Einträge werden hier dynamisch geladen -->
+            <div class="logbook-layout">
+                <!-- Horizontale Timeline oben -->
+                <aside class="timeline-horizontal" id="timeline-sidebar">
+                    <div class="timeline-list" id="timeline-list">
+                        <!-- Timeline-Einträge werden hier dynamisch geladen -->
+                    </div>
+                </aside>
+                
+                <!-- Hauptinhalt: Einzelner Eintrag -->
+                <main class="logbook-main">
+                    <div class="logbook-entry-container" id="logbook-container">
+                        <!-- Einzelner Journal-Eintrag wird hier angezeigt -->
+                    </div>
+                </main>
             </div>
         </section>
 
