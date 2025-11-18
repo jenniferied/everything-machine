@@ -256,41 +256,21 @@ function updateAlbumCover(track) {
 // Funktion zum Laden eines Tracks
 // preservePlayState: true = State erhalten, false = immer spielen
 function loadTrack(index, preservePlayState = true) {
-    // Set loading flag at the very beginning to prevent event listeners from interfering
-    isLoadingTrack = true;
-    
     currentTrackIndex = index;
     const track = playlist[index];
     
-    // WICHTIG: Speichere Play-Status basierend auf isPlaying Variable
+    // Speichere Play-Status
     const wasPlaying = isPlaying;
-    
-    // Bestimme ob Track spielen soll
     const shouldPlay = preservePlayState ? wasPlaying : true;
     
-    // DEBUG: Log the state
-    console.log('🔍 loadTrack called:', {
-        index,
-        preservePlayState,
-        wasPlaying,
-        isPlaying,
-        shouldPlay,
-        'audioPlayer.paused': audioPlayer.paused
-    });
-    
-    // Pausiere aktuellen Track, bevor wir wechseln
+    // Pausiere aktuellen Track
     audioPlayer.pause();
     
     // Lade neuen Track
     audioPlayer.src = track.src;
     audioPlayer.load();
-    
-    // Zeit auf 0:00 zurücksetzen
     audioPlayer.currentTime = 0;
     
-    // KRITISCH: Pausiere SOFORT nach load() - manche Browser starten automatisch
-    audioPlayer.pause();
-
     // Marquee-Text aktualisieren
     updateMarquee(track);
     
@@ -302,22 +282,6 @@ function loadTrack(index, preservePlayState = true) {
         timeDisplay.textContent = '0:00/0:00';
     }
     
-    // Animation-Geschwindigkeit basierend auf gewünschtem Play-Status setzen
-    if (marqueeContent) {
-        marqueeContent.style.animationDuration = shouldPlay ? '7s' : '40s';
-        marqueeContent.style.animationDelay = '0s';
-    }
-    
-    // Update isPlaying Variable
-    isPlaying = shouldPlay;
-    
-    // Update Button-Status
-    if (shouldPlay) {
-        playPauseButton.classList.add('playing');
-    } else {
-        playPauseButton.classList.remove('playing');
-    }
-
     // "Active" Status in der Playlist aktualisieren
     document.querySelectorAll('.playlist-item').forEach((item, i) => {
         if (i === index) {
@@ -327,105 +291,25 @@ function loadTrack(index, preservePlayState = true) {
         }
     });
     
-    // VEREINFACHTE LOGIK: Wenn shouldPlay = false, ENFORCE pause
-    if (!shouldPlay) {
-        console.log('❌ shouldPlay = false, ENFORCING pause');
-        
-        // AKTIVIERE enforcePause Flag - dies blockiert ALLE play Events
-        enforcePause = true;
-        
-        // Pausiere sofort
-        audioPlayer.pause();
-        
-        // Setze einen Timer für wiederholtes Pausieren
-        let pauseCount = 0;
-        const maxPauses = 10; // 10x pausieren über 500ms
-        
-        const forcePause = setInterval(() => {
-            pauseCount++;
-            if (!audioPlayer.paused) {
-                console.log(`⚠️ Browser playing at ${pauseCount * 50}ms! Force pausing...`);
-                audioPlayer.pause();
-            }
-            
-            if (pauseCount >= maxPauses) {
-                clearInterval(forcePause);
-                console.log(`✓ Pause enforced, final state: paused=${audioPlayer.paused}`);
-                
-                // DEAKTIVIERE enforcePause Flag NACH dem Timeout
-                enforcePause = false;
-                
-                // Setze isLoadingTrack = false
-                isLoadingTrack = false;
-                
-                // NACH dem Flag-Reset: Stelle sicher dass State korrekt ist
-                isPlaying = false;
-                playPauseButton.classList.remove('playing');
-                changeMarqueeSpeed(40);
-                
-                console.log('✓ Final state set: isPlaying =', isPlaying, 'enforcePause =', enforcePause);
-            }
-        }, 50); // Alle 50ms prüfen für 500ms total
-        
-        return; // BEENDE HIER - keine weitere Logik nötig
-    }
-    
-    // Wenn shouldPlay = true, stelle sicher dass enforcePause deaktiviert ist
-    enforcePause = false;
-    
-    // Nur wenn shouldPlay = true: Warte auf Audio und starte Playback
-    console.log('✅ shouldPlay = true, will start playback');
-    
-    const startPlayback = () => {
-        // Stelle sicher, dass wir noch spielen sollen (könnte sich geändert haben)
-        if (!shouldPlay) {
-            console.log('⚠️ shouldPlay changed to false, not starting');
-            audioPlayer.pause();
-            isLoadingTrack = false;
-            return;
-        }
-        
-        console.log('▶️ Starting playback...');
-        // Start playback
-        audioPlayer.play().catch(err => {
-            console.warn('Auto-play prevented:', err);
-            // Falls Auto-play verhindert wird, setze State auf paused
-            isPlaying = false;
-            playPauseButton.classList.remove('playing');
-            if (marqueeContent) {
-                marqueeContent.style.animationDuration = '40s';
-            }
-            isLoadingTrack = false;
-        });
-        
-        // Clear loading flag after playback starts
+    // Setze State und UI
+    if (shouldPlay) {
+        // Warte kurz, dann starte Playback
         setTimeout(() => {
-            isLoadingTrack = false;
-        }, 100);
-    };
-    
-    // Warte auf Audio-Bereitschaft
-    if (audioPlayer.readyState >= 3) {
-        // Audio ist bereits geladen
-        setTimeout(startPlayback, 10);
+            audioPlayer.play().catch(err => {
+                console.warn('Auto-play prevented:', err);
+                updatePlayerUI(false);
+            });
+            updatePlayerUI(true);
+        }, 50);
     } else {
-        // Warte auf canplay Event
-        audioPlayer.addEventListener('canplay', startPlayback, { once: true });
-        // Fallback
-        setTimeout(() => {
-            if (isLoadingTrack && shouldPlay) {
-                startPlayback();
-            }
-        }, 2000);
+        // Bleibe pausiert
+        audioPlayer.pause();
+        updatePlayerUI(false);
     }
 }
 
 // Vorherigen Track abspielen
 function playPreviousTrack() {
-    // Speichere aktuellen Play-Status
-    const wasPlaying = !audioPlayer.paused;
-    
-    // Wechsle Track (State wird in loadTrack wiederhergestellt)
     currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
     loadTrack(currentTrackIndex, true); // preservePlayState = true
 }
@@ -505,38 +389,6 @@ function populatePlaylist() {
 if (playPauseButton) {
     playPauseButton.addEventListener('click', togglePlay);
     audioPlayer.addEventListener('ended', () => playNextTrack(true)); // Automatisch weiterspielen wenn Track endet
-    audioPlayer.addEventListener('play', () => {
-        console.log('🎵 play event fired, isLoadingTrack:', isLoadingTrack, 'enforcePause:', enforcePause, 'paused:', audioPlayer.paused);
-        
-        // KRITISCH: Wenn enforcePause aktiv ist, pausiere SOFORT
-        if (enforcePause) {
-            console.log('⛔ enforcePause active! Force pausing...');
-            audioPlayer.pause();
-            return;
-        }
-        
-        // Skip state updates during track loading to prevent overriding intended state
-        if (isLoadingTrack) return;
-        
-        // Zusätzlicher Check: Wenn Audio sofort wieder pausiert wird, ignoriere das Event
-        // (Das passiert wenn Browser kurz abspielt und wir es sofort pausieren)
-        if (audioPlayer.paused) {
-            console.log('⚠️ Ignoring play event - audio is already paused');
-            return;
-        }
-        
-        isPlaying = true;
-        playPauseButton.classList.add('playing');
-        changeMarqueeSpeed(7);
-    });
-    audioPlayer.addEventListener('pause', () => {
-        console.log('⏸️ pause event fired, isLoadingTrack:', isLoadingTrack);
-        // Skip state updates during track loading to prevent overriding intended state
-        if (isLoadingTrack) return;
-        isPlaying = false;
-        playPauseButton.classList.remove('playing');
-        changeMarqueeSpeed(40);
-    });
     
     // Zeit-Anzeige aktualisieren
     audioPlayer.addEventListener('loadedmetadata', () => {
