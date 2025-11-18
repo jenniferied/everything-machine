@@ -203,12 +203,12 @@ function updateMarquee(track) {
     const newText = `${track.artist} - ${track.title} (${track.album}, ${track.year})`;
     const newLink = `https://open.spotify.com/track/${track.spotifyID || ''}`;
     
-    // Marquee-Content: Eine Kopie mit Link, eine Kopie ohne für nahtlosen Loop
+    // Marquee-Content: Beide Kopien mit Links für nahtlosen Loop
     // Animation geht von 0% zu -50% (eine komplette Kopie)
     marqueeContent.innerHTML = `
         <a href="${newLink}" target="_blank" rel="noopener noreferrer" title="${track.artist} auf Spotify öffnen" style="pointer-events: auto;">${newText}</a>
         <span class="mx-4">|</span>
-        <span>${newText}</span>
+        <a href="${newLink}" target="_blank" rel="noopener noreferrer" title="${track.artist} auf Spotify öffnen" style="pointer-events: auto;">${newText}</a>
     `;
 }
 
@@ -263,13 +263,16 @@ function loadTrack(index, preservePlayState = true) {
     const wasPlaying = isPlaying;
     const shouldPlay = preservePlayState ? wasPlaying : true;
     
-    // Pausiere aktuellen Track
+    console.log('🔍 loadTrack:', { index, preservePlayState, wasPlaying, isPlaying, shouldPlay });
+    
+    // SOFORT: Setze UI
+    updatePlayerUI(false); // IMMER erstmal auf false
+    
+    // Pausiere alten Player
     audioPlayer.pause();
     
-    // Lade neuen Track
+    // Setze neue src
     audioPlayer.src = track.src;
-    audioPlayer.load();
-    audioPlayer.currentTime = 0;
     
     // Marquee-Text aktualisieren
     updateMarquee(track);
@@ -291,21 +294,26 @@ function loadTrack(index, preservePlayState = true) {
         }
     });
     
-    // Setze State und UI
-    if (shouldPlay) {
-        // Warte kurz, dann starte Playback
-        setTimeout(() => {
-            audioPlayer.play().catch(err => {
-                console.warn('Auto-play prevented:', err);
-                updatePlayerUI(false);
-            });
-            updatePlayerUI(true);
-        }, 50);
-    } else {
-        // Bleibe pausiert
-        audioPlayer.pause();
-        updatePlayerUI(false);
+    // KRITISCH: Wenn shouldPlay = FALSE, tue NICHTS weiter
+    // Der Browser wird NICHT automatisch spielen wenn wir play() nicht aufrufen
+    if (!shouldPlay) {
+        console.log('⏸️ Will stay paused - not calling play()');
+        return; // RETURN HIER - keine weitere Logik
     }
+    
+    // Nur wenn shouldPlay = TRUE: Warte und starte dann
+    console.log('✅ Will play after load');
+    const handleCanPlay = () => {
+        audioPlayer.play().then(() => {
+            console.log('✅ Playing');
+            updatePlayerUI(true);
+        }).catch(err => {
+            console.warn('❌ Auto-play prevented:', err);
+            updatePlayerUI(false);
+        });
+    };
+    
+    audioPlayer.addEventListener('canplay', handleCanPlay, { once: true });
 }
 
 // Vorherigen Track abspielen
