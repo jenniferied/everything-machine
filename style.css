@@ -47,6 +47,178 @@ body {
     align-self: start; 
 }
 
+/* --- Logbook Layout mit horizontaler Timeline (Neu) --- */
+.logbook-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-height: calc(100vh - 80px); /* Mindesthöhe minus Header */
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Horizontale Timeline oben */
+.timeline-horizontal {
+    width: 100%;
+    height: 80px; /* Schmale Höhe */
+    background-color: #111; /* Dunkler Hintergrund */
+    border-bottom: 1px solid #374151; /* border-gray-700 */
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.timeline-horizontal::-webkit-scrollbar {
+    height: 4px;
+}
+
+.timeline-horizontal::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+.timeline-horizontal::-webkit-scrollbar-thumb {
+    background: #4ade80;
+    border-radius: 2px;
+}
+
+.timeline-list {
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem; /* gap-2 */
+    align-items: center;
+    min-width: 100%;
+}
+
+.timeline-item {
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    background-color: transparent;
+    border-bottom: 2px solid #374151; /* border-gray-700 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 0.25rem; /* rounded-sm */
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    height: 100%;
+    justify-content: center;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #374151; /* border-gray-700 */
+    border: 2px solid #111;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    background-color: #1f2937; /* bg-gray-800 */
+    border-bottom-color: #4ade80; /* border-accent */
+    transform: translateY(-2px);
+}
+
+.timeline-item:hover::before {
+    background-color: #4ade80; /* bg-accent */
+    border-color: #4ade80;
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+}
+
+.timeline-item.active {
+    background-color: #0c2a1e; /* Dunkles Grün */
+    border-bottom-color: #4ade80; /* border-accent */
+}
+
+.timeline-item.active::before {
+    background-color: #4ade80; /* bg-accent */
+    border-color: #4ade80;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.6);
+}
+
+.timeline-item-date {
+    font-size: 0.7rem; /* text-xs - kleiner für horizontale Timeline */
+    color: #9ca3af; /* text-gray-400 */
+    margin-bottom: 0.25rem; /* mb-1 */
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.timeline-item:hover .timeline-item-date,
+.timeline-item.active .timeline-item-date {
+    color: #4ade80; /* text-accent */
+}
+
+.timeline-item-title {
+    font-size: 0.75rem; /* text-xs - kleiner für horizontale Timeline */
+    font-weight: 500;
+    color: #d1d5db; /* text-gray-300 */
+    line-height: 1.3;
+    transition: color 0.3s ease;
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-item:hover .timeline-item-title,
+.timeline-item.active .timeline-item-title {
+    color: #4ade80; /* text-accent */
+}
+
+/* Hauptinhalt: Einzelner Eintrag */
+.logbook-main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem; /* p-8 */
+    background-color: #111;
+    min-height: 0; /* Wichtig für Flexbox overflow */
+}
+
+.logbook-entry-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logbook-entry {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.25rem; /* rounded-sm */
+    padding: 2rem; /* p-8 */
+}
+
+.logbook-entry-header {
+    margin-bottom: 2rem; /* mb-8 */
+    padding-bottom: 1rem; /* pb-4 */
+    border-bottom: 1px solid #374151; /* border-gray-700 */
+}
+
+.logbook-entry-date {
+    font-size: 0.875rem; /* text-sm */
+    color: #9ca3af; /* text-gray-400 */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.logbook-entry-title {
+    font-size: 1.875rem; /* text-2xl */
+    font-weight: bold;
+    color: #4ade80; /* text-accent */
+    margin: 0;
+}
+
 /* --- Header & Navigation (Neu) --- */
 .top-bar {
     position: sticky;
@@ -115,9 +287,13 @@ body {
 .page-content {
     display: none; /* Standardmäßig ausgeblendet */
     padding: 1.5rem; /* p-6 */
+    min-height: calc(100vh - 80px);
 }
 .page-content.active {
     display: block; /* Wird per JS eingeblendet */
+}
+#page-logbook.active {
+    padding: 0; /* Kein Padding für Logbook, da Layout es selbst verwaltet */
 }
 
 /* Utility für Dialog-Blöcke */
@@ -293,4 +469,130 @@ body {
     font-size: 0.75rem; /* text-xs */
     color: #9ca3af; /* text-gray-400 */
     padding-left: 0.5rem; /* pl-2 */
+}
+
+/* --- Link Pills (Neu) --- */
+.link-pill {
+    display: inline-block;
+    padding: 0.25rem 0.75rem; /* py-1 px-3 */
+    margin: 0 0.25rem; /* mx-1 */
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #4ade80; /* border-accent */
+    border-radius: 9999px; /* rounded-full */
+    color: #4ade80; /* text-accent */
+    text-decoration: none;
+    font-size: 0.875rem; /* text-sm */
+    transition: all 0.2s ease;
+    word-break: break-all;
+}
+.link-pill:hover {
+    background-color: #4ade80; /* bg-accent */
+    color: #111; /* text-dark */
+    transform: translateY(-1px);
+}
+
+/* --- Welt-Info Dropdown (Neu) --- */
+.world-info-container {
+    margin: 1.5rem 0; /* my-6 */
+}
+.world-info-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.25rem; /* rounded-sm */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #d1d5db; /* text-gray-300 */
+}
+.world-info-toggle:hover {
+    background-color: #374151; /* bg-gray-700 */
+    border-color: #4ade80; /* border-accent */
+}
+.world-info-toggle.active {
+    border-color: #4ade80; /* border-accent */
+    background-color: #0c2a1e; /* Dunkles Grün */
+}
+.world-info-toggle-title {
+    font-weight: 500;
+    color: #4ade80; /* text-accent */
+}
+.world-info-toggle-icon {
+    transition: transform 0.2s ease;
+    color: #9ca3af; /* text-gray-400 */
+}
+.world-info-toggle.active .world-info-toggle-icon {
+    transform: rotate(180deg);
+    color: #4ade80; /* text-accent */
+}
+.world-info-dropdown {
+    display: none;
+    margin-top: 0.5rem; /* mt-2 */
+    padding: 1rem; /* p-4 */
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.25rem; /* rounded-sm */
+    border-top: 1px solid #4ade80; /* border-accent */
+}
+.world-info-dropdown.show {
+    display: block;
+}
+.world-info-preview {
+    margin-bottom: 1rem; /* mb-4 */
+}
+.world-info-preview img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem; /* rounded-sm */
+    border: 1px solid #374151; /* border-gray-700 */
+}
+.world-info-details {
+    font-size: 0.875rem; /* text-sm */
+    color: #9ca3af; /* text-gray-400 */
+    line-height: 1.6;
+}
+.world-info-details strong {
+    color: #d1d5db; /* text-gray-300 */
+    font-weight: 500;
+}
+.world-info-description {
+    margin-top: 1rem; /* mt-4 */
+    padding-top: 1rem; /* pt-4 */
+    border-top: 1px solid #374151; /* border-gray-700 */
+    color: #d1d5db; /* text-gray-300 */
+    line-height: 1.6;
+}
+.world-info-links {
+    margin-bottom: 1rem; /* mb-4 */
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem; /* gap-3 */
+    flex-wrap: wrap;
+}
+.world-info-link {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    background-color: #4ade80; /* bg-accent */
+    color: #111; /* text-dark */
+    text-decoration: none;
+    border-radius: 0.25rem; /* rounded-sm */
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+.world-info-link:hover {
+    background-color: #22c55e; /* hover-green-500 */
+    transform: translateY(-1px);
+}
+.world-info-link-vr {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #4ade80; /* border-accent */
+    color: #4ade80; /* text-accent */
+}
+.world-info-link-vr:hover {
+    background-color: #4ade80; /* bg-accent */
+    color: #111; /* text-dark */
 }
