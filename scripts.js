@@ -378,9 +378,9 @@ function parseMarkdown(markdown) {
         const line = lines[i];
         const trimmed = line.trim();
         
-        // Überschrift erkennen (#, ## oder ###) - aber nicht die erste H1, die ist der Titel
+        // Überschrift erkennen (#, ## oder ###) - alle Überschriften verarbeiten
         const headingMatch = trimmed.match(/^(#{1,3})\s+(.+)$/);
-        if (headingMatch && headingMatch[1].length > 1) { // Nur ## und ###, nicht #
+        if (headingMatch) { // Alle Überschriften (#, ##, ###)
             hasSections = true;
             // Aktuellen Abschnitt abschließen
             if (currentParagraph.length > 0) {
