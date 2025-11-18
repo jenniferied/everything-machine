@@ -496,9 +496,11 @@ function parseMarkdown(markdown) {
         }
         
         sections.forEach((section) => {
-            // Inhalt formatieren
+            // Inhalt formatieren - aber WORLD_INFO Dropdowns und Links erstmal schützen
             let sectionContent = section.content.map(para => {
                 if (!para.trim()) return '';
+                
+                // WORLD_INFO Dropdowns schützen (werden bereits vorher verarbeitet)
                 // Fettdruck und Kursiv
                 para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
@@ -510,9 +512,12 @@ function parseMarkdown(markdown) {
             const headingClass = section.headingLevel === 2 ? 'text-2xl' : 'text-xl';
             const bubbleSize = section.headingLevel === 2 ? 'bubble-large' : 'bubble-medium';
             
+            // Überschrift richtig escapen
+            const headingText = (section.heading || 'Abschnitt').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            
             gridHTML += `
                 <div class="content-bubble ${bubbleSize}">
-                    <h${section.headingLevel || 2} class="${headingClass} font-bold mb-4 text-accent">${section.heading || 'Abschnitt'}</h${section.headingLevel || 2}>
+                    <h${section.headingLevel || 2} class="${headingClass} font-bold mb-4 text-accent">${headingText}</h${section.headingLevel || 2}>
                     <div class="bubble-content">
                         ${sectionContent}
                     </div>
@@ -522,6 +527,10 @@ function parseMarkdown(markdown) {
         
         gridHTML += '</div>';
         html = gridHTML;
+        
+        // URL/Link-Verarbeitung NACH dem Grid-HTML (damit es die HTML-Struktur nicht zerstört)
+        // Aber nur auf Text-Inhalt anwenden, nicht auf bereits verarbeitete HTML-Tags
+        // Das wird später in der Funktion gemacht
     }
     
     // URLs in Links umwandeln (als Pills) - nach Absatz-Verarbeitung
@@ -531,7 +540,7 @@ function parseMarkdown(markdown) {
     const linkMap = new Map();
     let linkCounter = 0;
     
-    // Temporär alle existierenden Links und Bilder ersetzen
+    // Temporär alle existierenden Links, Bilder und WORLD_INFO Dropdowns ersetzen
     html = html.replace(/<a[^>]*>.*?<\/a>/gi, (match) => {
         const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
         linkMap.set(placeholder, match);
@@ -539,6 +548,13 @@ function parseMarkdown(markdown) {
         return placeholder;
     });
     html = html.replace(/<img[^>]*>/gi, (match) => {
+        const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
+        linkMap.set(placeholder, match);
+        linkCounter++;
+        return placeholder;
+    });
+    // WORLD_INFO Dropdowns schützen
+    html = html.replace(/<div class="world-info-container">.*?<\/div>/gis, (match) => {
         const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
         linkMap.set(placeholder, match);
         linkCounter++;
