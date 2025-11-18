@@ -281,20 +281,100 @@ const journalFiles = [
     'journal/journal-2025-11-18-marble-worldlabs.md'
 ];
 
+// Funktion zum Erstellen einer Welt-Info-Dropdown-Komponente
+function createWorldInfoDropdown(worldData) {
+    const id = `world-info-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    const hasLink = worldData.link && worldData.link.trim() !== '';
+    const hasVrLink = worldData.vrLink && worldData.vrLink.trim() !== '';
+    
+    return `
+        <div class="world-info-container">
+            ${hasLink || hasVrLink ? `
+                <div class="world-info-links">
+                    ${hasLink ? `
+                        <a href="${worldData.link}" target="_blank" rel="noopener noreferrer" class="world-info-link">
+                            Welt öffnen →
+                        </a>
+                    ` : ''}
+                    ${hasVrLink ? `
+                        <a href="${worldData.vrLink}" target="_blank" rel="noopener noreferrer" class="world-info-link world-info-link-vr">
+                            VR-Modus öffnen →
+                        </a>
+                    ` : ''}
+                </div>
+            ` : ''}
+            <div class="world-info-toggle" onclick="toggleWorldInfo('${id}')">
+                <span class="world-info-toggle-title">${worldData.title || 'Welt-Info'}</span>
+                <span class="world-info-toggle-icon">▼</span>
+            </div>
+            <div class="world-info-dropdown" id="${id}">
+                <div class="world-info-details">
+                    ${worldData.model ? `<p><strong>Model:</strong> ${worldData.model}</p>` : ''}
+                    ${worldData.seed !== undefined ? `<p><strong>Seed:</strong> ${worldData.seed}</p>` : ''}
+                    ${worldData.publicMode !== undefined ? `<p><strong>Public mode:</strong> ${worldData.publicMode ? 'Yes' : 'No'}</p>` : ''}
+                </div>
+                ${worldData.description ? `
+                    <div class="world-info-description">
+                        <strong>World Guide:</strong>
+                        <p>${worldData.description}</p>
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+    `;
+}
+
+// Funktion zum Toggle der Welt-Info-Dropdown
+function toggleWorldInfo(id) {
+    const dropdown = document.getElementById(id);
+    const toggle = dropdown.previousElementSibling;
+    if (dropdown && toggle) {
+        dropdown.classList.toggle('show');
+        toggle.classList.toggle('active');
+    }
+}
+
 // Einfacher Markdown-Parser
 function parseMarkdown(markdown) {
     let html = markdown;
     
+    // Welt-Info-Dropdown-Komponenten verarbeiten (Format: [WORLD_INFO:...])
+    // Syntax: [WORLD_INFO:title|model|seed|publicMode|previewImage|link|vrLink|description]
+    // Die Beschreibung kommt am Ende, damit sie Pipes enthalten kann
+    const worldInfoRegex = /\[WORLD_INFO:([^\]]+)\]/g;
+    html = html.replace(worldInfoRegex, (match, data) => {
+        // Teile die Daten auf
+        // Format: title|model|seed|publicMode|previewImage|link|vrLink|description
+        const parts = data.split('|');
+        
+        // Die Teile sind: title, model, seed, publicMode, previewImage, link, vrLink, description
+        // Alles nach dem 7. Pipe ist die Beschreibung
+        const worldData = {
+            title: parts[0] || '',
+            model: parts[1] || '',
+            seed: parts[2] || '',
+            publicMode: parts[3] === 'true' || parts[3] === '1',
+            previewImage: parts[4] || '',
+            link: parts[5] || '',
+            vrLink: parts[6] || '',
+            description: parts.slice(7).join('|') || '' // Alles ab Index 7 ist die Beschreibung
+        };
+        return createWorldInfoDropdown(worldData);
+    });
+    
     // Zuerst Fettdruck und Kursiv behandeln (vor Überschriften)
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    // Bilder behandeln (![alt](path)) - vor Überschriften, damit sie nicht in Absätze eingebettet werden
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-6 rounded-sm w-full h-auto max-w-4xl mx-auto" />');
     
     // Überschriften (# ## ###) - nach Fettdruck, damit ** nicht stört
     html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
     html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>');
     html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-8 mb-4">$1</h1>');
     
-    // Absätze: Zeilen in Absätze umwandeln (aber nicht Überschriften oder leere Zeilen)
+    // Absätze: Zeilen in Absätze umwandeln (aber nicht Überschriften, Bilder oder leere Zeilen)
     const lines = html.split('\n');
     const processedLines = [];
     let currentParagraph = [];
@@ -321,6 +401,16 @@ function parseMarkdown(markdown) {
             continue;
         }
         
+        // Wenn die Zeile ein Bild ist, beende Absatz und füge Bild hinzu
+        if (line.match(/^<img/)) {
+            if (currentParagraph.length > 0) {
+                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+                currentParagraph = [];
+            }
+            processedLines.push(line);
+            continue;
+        }
+        
         // Normale Textzeile zum Absatz hinzufügen
         currentParagraph.push(line);
     }
@@ -331,6 +421,40 @@ function parseMarkdown(markdown) {
     }
     
     html = processedLines.join('\n');
+    
+    // URLs in Links umwandeln (als Pills) - nach Absatz-Verarbeitung
+    // Erkennt URLs in Text (http://, https://, www.), aber nicht in bereits existierenden Links
+    // Wir müssen zuerst alle bereits existierenden Links markieren, dann URLs konvertieren, dann Markierungen entfernen
+    const linkPlaceholder = '___LINK_PLACEHOLDER___';
+    const linkMap = new Map();
+    let linkCounter = 0;
+    
+    // Temporär alle existierenden Links und Bilder ersetzen
+    html = html.replace(/<a[^>]*>.*?<\/a>/gi, (match) => {
+        const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
+        linkMap.set(placeholder, match);
+        linkCounter++;
+        return placeholder;
+    });
+    html = html.replace(/<img[^>]*>/gi, (match) => {
+        const placeholder = `${linkPlaceholder}${linkCounter}${linkPlaceholder}`;
+        linkMap.set(placeholder, match);
+        linkCounter++;
+        return placeholder;
+    });
+    
+    // URLs in Links umwandeln (als Pills)
+    const urlRegex = /(https?:\/\/[^\s<>"{}|\\^`\[\]]+|www\.[^\s<>"{}|\\^`\[\]]+)/gi;
+    html = html.replace(urlRegex, (url) => {
+        const href = url.startsWith('http') ? url : `https://${url}`;
+        const displayUrl = url.length > 50 ? url.substring(0, 47) + '...' : url;
+        return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="link-pill">${displayUrl}</a>`;
+    });
+    
+    // Platzhalter wieder durch ursprüngliche Links ersetzen
+    linkMap.forEach((originalLink, placeholder) => {
+        html = html.replace(placeholder, originalLink);
+    });
     
     return html;
 }
@@ -356,16 +480,23 @@ function extractTitle(markdown) {
     return match ? match[1] : 'Unbenannter Eintrag';
 }
 
+// Globale Variable für alle geladenen Einträge
+let allJournalEntries = [];
+let currentEntryIndex = 0;
+
 // Journal-Einträge laden und anzeigen
 async function loadJournalEntries() {
     const container = document.getElementById('logbook-container');
-    if (!container) {
-        console.error('Logbook-Container nicht gefunden');
+    const timelineList = document.getElementById('timeline-list');
+    
+    if (!container || !timelineList) {
+        console.error('Logbook-Container oder Timeline-Liste nicht gefunden');
         return;
     }
     
     // Loading-State anzeigen
-    container.innerHTML = '<div class="logbook-item"><p class="text-gray-400">Lade Journal-Einträge...</p></div>';
+    container.innerHTML = '<div class="logbook-entry"><p class="text-gray-400">Lade Journal-Einträge...</p></div>';
+    timelineList.innerHTML = '';
     
     const entries = [];
     
@@ -410,28 +541,94 @@ async function loadJournalEntries() {
     console.log(`${entries.length} Einträge geladen`);
     
     if (entries.length === 0) {
-        container.innerHTML = '<div class="logbook-item"><p class="text-gray-400">Keine Journal-Einträge gefunden.</p></div>';
+        container.innerHTML = '<div class="logbook-entry"><p class="text-gray-400">Keine Journal-Einträge gefunden.</p></div>';
         return;
     }
     
-    // Nach Datum sortieren (neueste zuerst)
+    // Nach Datum sortieren (neueste zuerst für horizontale Timeline)
     entries.sort((a, b) => b.date - a.date);
     
-    // HTML generieren und einfügen
-    let html = '';
+    // Globale Variable speichern
+    allJournalEntries = entries;
+    
+    // Timeline generieren
+    generateTimeline(entries);
+    
+    // Ersten Eintrag anzeigen
+    currentEntryIndex = 0;
+    displayEntry(0);
+}
+
+// Timeline generieren
+function generateTimeline(entries) {
+    const timelineList = document.getElementById('timeline-list');
+    if (!timelineList) return;
+    
+    let timelineHTML = '';
     entries.forEach((entry, index) => {
-        html += `
-            <div class="logbook-item">
-                <span class="text-sm text-gray-400">${entry.formattedDate}</span>
-                <h3 class="text-xl font-bold mt-2 mb-4 text-accent">${entry.title}</h3>
-                <div class="prose prose-invert max-w-none text-gray-300">
-                    ${entry.html}
-                </div>
+        timelineHTML += `
+            <div class="timeline-item" data-index="${index}" onclick="selectEntry(${index})">
+                <div class="timeline-item-date">${entry.formattedDate}</div>
+                <div class="timeline-item-title">${entry.title}</div>
             </div>
         `;
     });
     
+    timelineList.innerHTML = timelineHTML;
+}
+
+// Eintrag auswählen und anzeigen
+function selectEntry(index) {
+    if (index < 0 || index >= allJournalEntries.length) return;
+    
+    currentEntryIndex = index;
+    displayEntry(index);
+    
+    // Active-Status in Timeline aktualisieren
+    document.querySelectorAll('.timeline-item').forEach((item, i) => {
+        if (i === index) {
+            item.classList.add('active');
+            // Scroll zu aktivem Item (horizontal)
+            const timelineContainer = document.getElementById('timeline-sidebar');
+            if (timelineContainer && item) {
+                const itemLeft = item.offsetLeft;
+                const itemWidth = item.offsetWidth;
+                const containerWidth = timelineContainer.offsetWidth;
+                const scrollLeft = itemLeft - (containerWidth / 2) + (itemWidth / 2);
+                timelineContainer.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+
+// Eintrag anzeigen
+function displayEntry(index) {
+    const container = document.getElementById('logbook-container');
+    if (!container || !allJournalEntries[index]) return;
+    
+    const entry = allJournalEntries[index];
+    
+    const html = `
+        <div class="logbook-entry">
+            <div class="logbook-entry-header">
+                <div class="logbook-entry-date">${entry.formattedDate}</div>
+                <h2 class="logbook-entry-title">${entry.title}</h2>
+            </div>
+            <div class="prose prose-invert max-w-none text-gray-300">
+                ${entry.html}
+            </div>
+        </div>
+    `;
+    
     container.innerHTML = html;
+    
+    // Zum Anfang scrollen
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Standardmäßig die 'overview'-Seite anzeigen

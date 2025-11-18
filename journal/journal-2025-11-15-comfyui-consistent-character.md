@@ -8,11 +8,29 @@ Zuerst habe ich versucht, bestehende Bilder als Referenzen zu verwenden. Das hat
 
 Nach ein paar frustrierenden Versuchen habe ich beschlossen, eine eigene Referenz zu erstellen. Ich habe Kepler auf einem neutralen grauen Hintergrund fotografiert, ohne störende Elemente, ohne Basketball, ohne komplexe Hintergründe. Nur er, klar und deutlich. Dann habe ich die Prompts leicht angepasst, um zu sehen, wie sich das auf die Ergebnisse auswirkt.
 
+![Referenzbild von Kepler auf neutralem Hintergrund](assets/journal/comfyui-consistent-character/reference-kepler.png)
+
 Die Ergebnisse waren gemischt. Einige Bilder sahen wirklich gut aus – der Charakter war konsistent, die Details stimmten, und die Maske wurde korrekt dargestellt. Andere waren weniger überzeugend. Manchmal verlor der Workflow die Konsistenz komplett, besonders bei unterschiedlichen Posen oder wenn ich versucht habe, komplexere Szenen zu generieren. Es scheint, als ob das System am besten funktioniert, wenn die Referenzbilder möglichst klar und unkompliziert sind.
+
+![Generiertes Kepler-Bild 1](assets/journal/comfyui-consistent-character/generated-kepler-001.png)
+
+![Generiertes Kepler-Bild 2](assets/journal/comfyui-consistent-character/generated-kepler-002.png)
+
+![Generiertes Kepler-Bild 3](assets/journal/comfyui-consistent-character/generated-kepler-003.png)
+
+![Generiertes Kepler-Bild 4](assets/journal/comfyui-consistent-character/generated-kepler-004.png)
+
+![Generiertes Kepler-Bild 5](assets/journal/comfyui-consistent-character/generated-kepler-005.png)
+
+![Generiertes Kepler-Bild 6](assets/journal/comfyui-consistent-character/generated-kepler-006.png)
 
 ## Die Technologie dahinter
 
 Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die zusammenarbeiten, um konsistente Charakterdarstellungen zu ermöglichen. ComfyUI selbst ist eine grafische Benutzeroberfläche für Stable Diffusion, die es ermöglicht, komplexe Bildgenerierungsprozesse durch modulare Workflows zu steuern. Statt Code zu schreiben, verbindet man Nodes miteinander, die verschiedene Funktionen repräsentieren – von der Bildladung über die Prompt-Verarbeitung bis hin zur finalen Ausgabe.
+
+![ComfyUI Workflow Screenshot 1](assets/journal/comfyui-consistent-character/workflow-screenshot-001.png)
+
+![ComfyUI Workflow Screenshot 2](assets/journal/comfyui-consistent-character/workflow-screenshot-002.png)
 
 Der Consistent Character Workflow nutzt dabei hauptsächlich das Flux-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
 
