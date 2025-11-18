@@ -55,6 +55,8 @@ body {
     min-height: calc(100vh - 80px); /* Mindesthöhe minus Header */
     height: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* Horizontale Timeline oben */
@@ -372,6 +374,7 @@ body {
 }
 #page-logbook.active {
     padding: 0; /* Kein Padding für Logbook, da Layout es selbst verwaltet */
+    margin: 0;
 }
 
 /* Utility für Dialog-Blöcke */
