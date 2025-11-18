@@ -23,7 +23,7 @@ const playlist = [
     {
         artist: "Kepler",
         title: "Deine Moves",
-        album: "BLUE EDITION",
+        album: "Deine Moves (Single)",
         year: "2023",
         src: "assets/audio/06_Deine_Moves_Master_Song.mp3",
         cover: "assets/images/06_Deine_Moves_Cover.png",
@@ -34,7 +34,7 @@ const playlist = [
         title: "Es tut mir Leid",
         album: "Es tut mir Leid (Single)",
         year: "2023",
-        src: "assets/audio/kepler_preview_2.mp3",
+        src: "assets/audio/PLATZHALTER_02.mp3",
         cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png",
         spotifyID: "YOUR_SONG_ID_2"
     },
@@ -43,7 +43,7 @@ const playlist = [
         title: "Für mich",
         album: "Für mich (Single)",
         year: "2023",
-        src: "assets/audio/kepler_preview_3.mp3",
+        src: "assets/audio/PLATZHALTER_03.mp3",
         cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png", // Fallback, falls kein Cover vorhanden
         spotifyID: "YOUR_SONG_ID_3"
     }
@@ -55,6 +55,8 @@ let isPlaying = false;
 // Player-Elemente holen
 const audioPlayer = document.getElementById('audio-player');
 const playPauseButton = document.getElementById('play-pause-button');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
 const marqueeContent = document.getElementById('marquee-content');
 const playlistToggleBtn = document.getElementById('playlist-toggle-btn');
 const playlistDropdown = document.getElementById('playlist-dropdown');
@@ -72,20 +74,117 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
 
+// Funktion zum Ändern der Animation-Geschwindigkeit ohne Position zu verlieren
+function changeMarqueeSpeed(newDuration) {
+    if (!marqueeContent) return;
+    
+    // Schritt 1: Lese aktuelle Position (während Animation noch läuft)
+    const computedStyle = window.getComputedStyle(marqueeContent);
+    const transform = computedStyle.transform;
+    
+    let currentTranslateX = 0;
+    if (transform && transform !== 'none') {
+        const matrix = transform.match(/matrix\(([^)]+)\)/);
+        if (matrix) {
+            const values = matrix[1].split(',');
+            currentTranslateX = parseFloat(values[4]) || 0;
+        }
+    }
+    
+    // Schritt 2: Berechne Fortschritt
+    const totalWidth = marqueeContent.scrollWidth;
+    const oneCopyWidth = totalWidth / 2; // 2 Kopien = 50% pro Kopie
+    const maxTranslate = -oneCopyWidth;
+    
+    let progress = 0;
+    if (Math.abs(maxTranslate) > 0) {
+        progress = (Math.abs(currentTranslateX) / Math.abs(maxTranslate)) % 1;
+    }
+    
+    // Schritt 3: Berechne negativen Delay für nahtlosen Übergang
+    const newDelay = -(progress * newDuration);
+    
+    // Schritt 4: Setze Position manuell BEVOR Animation entfernt wird
+    marqueeContent.style.transform = `translateX(${currentTranslateX}px)`;
+    
+    // Schritt 5: Entferne Animation komplett (nicht nur pausieren)
+    marqueeContent.style.animation = 'none';
+    
+    // Schritt 6: Warte zwei Frames, damit Browser die Position setzt
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            // Schritt 7: Starte Animation mit neuer Dauer und negativem Delay
+            marqueeContent.style.animation = `marquee ${newDuration}s linear ${newDelay}s infinite`;
+            
+            // Schritt 8: Warte mehrere Frames und prüfe, ob Animation die Position übernommen hat
+            let checkCount = 0;
+            const maxChecks = 20; // Mehr Checks für bessere Genauigkeit
+            
+            const checkPosition = () => {
+                checkCount++;
+                const newTransform = window.getComputedStyle(marqueeContent).transform;
+                let newTranslateX = 0;
+                if (newTransform && newTransform !== 'none') {
+                    const matrix = newTransform.match(/matrix\(([^)]+)\)/);
+                    if (matrix) {
+                        const values = matrix[1].split(',');
+                        newTranslateX = parseFloat(values[4]) || 0;
+                    }
+                }
+                
+                // Berechne erwartete Position basierend auf Delay
+                const expectedTranslateX = -(progress * oneCopyWidth);
+                const diff = Math.abs(newTranslateX - expectedTranslateX);
+                
+                // Wenn Animation nahe genug ist (sehr kleine Toleranz) oder max Checks erreicht
+                if (diff < 0.5 || checkCount >= maxChecks) {
+                    // Entferne manuelle transform nur wenn Position stimmt
+                    if (diff < 0.5) {
+                        marqueeContent.style.transform = '';
+                    } else {
+                        // Falls nicht perfekt, behalte manuelle transform länger
+                        setTimeout(() => {
+                            marqueeContent.style.transform = '';
+                        }, 200);
+                    }
+                } else {
+                    // Weiter prüfen
+                    requestAnimationFrame(checkPosition);
+                }
+            };
+            
+            // Starte Prüfung nach weiteren Frames
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(checkPosition);
+                });
+            });
+        });
+    });
+}
+
 // Funktion zum Abspielen
 function playTrack() {
     audioPlayer.play();
-    playPauseButton.classList.add('playing');
-    if (marqueeContent) marqueeContent.style.animationPlayState = 'running';
-    isPlaying = true;
+    updatePlayerUI(true);
 }
 
 // Funktion zum Pausieren
 function pauseTrack() {
     audioPlayer.pause();
-    playPauseButton.classList.remove('playing');
-    if (marqueeContent) marqueeContent.style.animationPlayState = 'paused';
-    isPlaying = false;
+    updatePlayerUI(false);
+}
+
+// Zentralisierte UI-Update-Funktion
+function updatePlayerUI(playing) {
+    isPlaying = playing;
+    if (playing) {
+        playPauseButton.classList.add('playing');
+        changeMarqueeSpeed(7);
+    } else {
+        playPauseButton.classList.remove('playing');
+        changeMarqueeSpeed(40);
+    }
 }
 
 // Funktion zum Umschalten (Play/Pause)
@@ -102,13 +201,14 @@ function updateMarquee(track) {
     if (!marqueeContent) return;
     
     const newText = `${track.artist} - ${track.title} (${track.album}, ${track.year})`;
-    const newLink = `https://open.spotify.com/track/${track.spotifyID || 'YOUR_ARTIST_ID'}`;
+    const newLink = `https://open.spotify.com/track/${track.spotifyID || ''}`;
     
-    // Marquee-Content dynamisch generieren (für Scroll-Effekt dupliziert)
+    // Marquee-Content: Eine Kopie mit Link, eine Kopie ohne für nahtlosen Loop
+    // Animation geht von 0% zu -50% (eine komplette Kopie)
     marqueeContent.innerHTML = `
-        <a href="${newLink}" target="_blank" title="${track.artist} auf Spotify öffnen">${newText}</a>
+        <a href="${newLink}" target="_blank" rel="noopener noreferrer" title="${track.artist} auf Spotify öffnen" style="pointer-events: auto;">${newText}</a>
         <span class="mx-4">|</span>
-        <a href="${newLink}" target="_blank" title="${track.artist} auf Spotify öffnen">${newText}</a>
+        <span>${newText}</span>
     `;
 }
 
@@ -133,6 +233,17 @@ function updateAlbumCover(track) {
         albumCover.src = track.cover;
         albumCover.alt = `${track.album} Cover`;
         albumCover.style.display = 'block';
+        albumCover.style.cursor = 'pointer';
+        
+        // Spotify-Link hinzufügen
+        const spotifyLink = `https://open.spotify.com/track/${track.spotifyID || ''}`;
+        albumCover.onclick = function(e) {
+            e.preventDefault();
+            if (track.spotifyID && track.spotifyID !== 'YOUR_SONG_ID_2' && track.spotifyID !== 'YOUR_SONG_ID_3') {
+                window.open(spotifyLink, '_blank', 'noopener,noreferrer');
+            }
+        };
+        
         // Fallback bei Fehler
         albumCover.onerror = function() {
             this.style.display = 'none';
@@ -143,12 +254,42 @@ function updateAlbumCover(track) {
 }
 
 // Funktion zum Laden eines Tracks
-function loadTrack(index) {
+// preservePlayState: true = State erhalten, false = immer spielen
+function loadTrack(index, preservePlayState = true) {
+    // Set loading flag at the very beginning to prevent event listeners from interfering
+    isLoadingTrack = true;
+    
     currentTrackIndex = index;
     const track = playlist[index];
     
+    // WICHTIG: Speichere Play-Status basierend auf isPlaying Variable
+    const wasPlaying = isPlaying;
+    
+    // Bestimme ob Track spielen soll
+    const shouldPlay = preservePlayState ? wasPlaying : true;
+    
+    // DEBUG: Log the state
+    console.log('🔍 loadTrack called:', {
+        index,
+        preservePlayState,
+        wasPlaying,
+        isPlaying,
+        shouldPlay,
+        'audioPlayer.paused': audioPlayer.paused
+    });
+    
+    // Pausiere aktuellen Track, bevor wir wechseln
+    audioPlayer.pause();
+    
+    // Lade neuen Track
     audioPlayer.src = track.src;
     audioPlayer.load();
+    
+    // Zeit auf 0:00 zurücksetzen
+    audioPlayer.currentTime = 0;
+    
+    // KRITISCH: Pausiere SOFORT nach load() - manche Browser starten automatisch
+    audioPlayer.pause();
 
     // Marquee-Text aktualisieren
     updateMarquee(track);
@@ -160,6 +301,22 @@ function loadTrack(index) {
     if (timeDisplay) {
         timeDisplay.textContent = '0:00/0:00';
     }
+    
+    // Animation-Geschwindigkeit basierend auf gewünschtem Play-Status setzen
+    if (marqueeContent) {
+        marqueeContent.style.animationDuration = shouldPlay ? '7s' : '40s';
+        marqueeContent.style.animationDelay = '0s';
+    }
+    
+    // Update isPlaying Variable
+    isPlaying = shouldPlay;
+    
+    // Update Button-Status
+    if (shouldPlay) {
+        playPauseButton.classList.add('playing');
+    } else {
+        playPauseButton.classList.remove('playing');
+    }
 
     // "Active" Status in der Playlist aktualisieren
     document.querySelectorAll('.playlist-item').forEach((item, i) => {
@@ -169,13 +326,117 @@ function loadTrack(index) {
             item.classList.remove('active');
         }
     });
+    
+    // VEREINFACHTE LOGIK: Wenn shouldPlay = false, ENFORCE pause
+    if (!shouldPlay) {
+        console.log('❌ shouldPlay = false, ENFORCING pause');
+        
+        // AKTIVIERE enforcePause Flag - dies blockiert ALLE play Events
+        enforcePause = true;
+        
+        // Pausiere sofort
+        audioPlayer.pause();
+        
+        // Setze einen Timer für wiederholtes Pausieren
+        let pauseCount = 0;
+        const maxPauses = 10; // 10x pausieren über 500ms
+        
+        const forcePause = setInterval(() => {
+            pauseCount++;
+            if (!audioPlayer.paused) {
+                console.log(`⚠️ Browser playing at ${pauseCount * 50}ms! Force pausing...`);
+                audioPlayer.pause();
+            }
+            
+            if (pauseCount >= maxPauses) {
+                clearInterval(forcePause);
+                console.log(`✓ Pause enforced, final state: paused=${audioPlayer.paused}`);
+                
+                // DEAKTIVIERE enforcePause Flag NACH dem Timeout
+                enforcePause = false;
+                
+                // Setze isLoadingTrack = false
+                isLoadingTrack = false;
+                
+                // NACH dem Flag-Reset: Stelle sicher dass State korrekt ist
+                isPlaying = false;
+                playPauseButton.classList.remove('playing');
+                changeMarqueeSpeed(40);
+                
+                console.log('✓ Final state set: isPlaying =', isPlaying, 'enforcePause =', enforcePause);
+            }
+        }, 50); // Alle 50ms prüfen für 500ms total
+        
+        return; // BEENDE HIER - keine weitere Logik nötig
+    }
+    
+    // Wenn shouldPlay = true, stelle sicher dass enforcePause deaktiviert ist
+    enforcePause = false;
+    
+    // Nur wenn shouldPlay = true: Warte auf Audio und starte Playback
+    console.log('✅ shouldPlay = true, will start playback');
+    
+    const startPlayback = () => {
+        // Stelle sicher, dass wir noch spielen sollen (könnte sich geändert haben)
+        if (!shouldPlay) {
+            console.log('⚠️ shouldPlay changed to false, not starting');
+            audioPlayer.pause();
+            isLoadingTrack = false;
+            return;
+        }
+        
+        console.log('▶️ Starting playback...');
+        // Start playback
+        audioPlayer.play().catch(err => {
+            console.warn('Auto-play prevented:', err);
+            // Falls Auto-play verhindert wird, setze State auf paused
+            isPlaying = false;
+            playPauseButton.classList.remove('playing');
+            if (marqueeContent) {
+                marqueeContent.style.animationDuration = '40s';
+            }
+            isLoadingTrack = false;
+        });
+        
+        // Clear loading flag after playback starts
+        setTimeout(() => {
+            isLoadingTrack = false;
+        }, 100);
+    };
+    
+    // Warte auf Audio-Bereitschaft
+    if (audioPlayer.readyState >= 3) {
+        // Audio ist bereits geladen
+        setTimeout(startPlayback, 10);
+    } else {
+        // Warte auf canplay Event
+        audioPlayer.addEventListener('canplay', startPlayback, { once: true });
+        // Fallback
+        setTimeout(() => {
+            if (isLoadingTrack && shouldPlay) {
+                startPlayback();
+            }
+        }, 2000);
+    }
 }
 
-// Nächsten Track abspielen (für 'ended' Event)
-function playNextTrack() {
-    currentTrackIndex = (currentTrackIndex + 1) % playlist.length; // Loop
-    loadTrack(currentTrackIndex);
-    playTrack();
+// Vorherigen Track abspielen
+function playPreviousTrack() {
+    // Speichere aktuellen Play-Status
+    const wasPlaying = !audioPlayer.paused;
+    
+    // Wechsle Track (State wird in loadTrack wiederhergestellt)
+    currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+    loadTrack(currentTrackIndex, true); // preservePlayState = true
+}
+
+// Nächsten Track abspielen (für 'ended' Event oder manuell)
+function playNextTrack(autoPlay = false) {
+    // Wechsle Track
+    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+    // autoPlay=true: immer spielen (preservePlayState=false)
+    // autoPlay=false: State erhalten (preservePlayState=true)
+    loadTrack(currentTrackIndex, !autoPlay);
 }
 
 // --- ANGEPASSTE FUNKTION: Playlist-Dropdown füllen ---
@@ -232,8 +493,8 @@ function populatePlaylist() {
     playlistDropdown.querySelectorAll('.playlist-item').forEach(item => {
         item.addEventListener('click', () => {
             const index = parseInt(item.dataset.index, 10);
-            loadTrack(index);
-            playTrack();
+            loadTrack(index, false); // Beim Klick auf Playlist-Item immer spielen (preservePlayState = false)
+            // loadTrack ruft bereits play() auf wenn shouldPlay = true
             playlistDropdown.classList.remove('show'); // Dropdown schließen
             playlistToggleBtn.classList.remove('active');
         });
@@ -243,9 +504,39 @@ function populatePlaylist() {
 // --- Event Listeners für den Player ---
 if (playPauseButton) {
     playPauseButton.addEventListener('click', togglePlay);
-    audioPlayer.addEventListener('ended', playNextTrack);
-    audioPlayer.addEventListener('play', () => isPlaying = true);
-    audioPlayer.addEventListener('pause', () => isPlaying = false);
+    audioPlayer.addEventListener('ended', () => playNextTrack(true)); // Automatisch weiterspielen wenn Track endet
+    audioPlayer.addEventListener('play', () => {
+        console.log('🎵 play event fired, isLoadingTrack:', isLoadingTrack, 'enforcePause:', enforcePause, 'paused:', audioPlayer.paused);
+        
+        // KRITISCH: Wenn enforcePause aktiv ist, pausiere SOFORT
+        if (enforcePause) {
+            console.log('⛔ enforcePause active! Force pausing...');
+            audioPlayer.pause();
+            return;
+        }
+        
+        // Skip state updates during track loading to prevent overriding intended state
+        if (isLoadingTrack) return;
+        
+        // Zusätzlicher Check: Wenn Audio sofort wieder pausiert wird, ignoriere das Event
+        // (Das passiert wenn Browser kurz abspielt und wir es sofort pausieren)
+        if (audioPlayer.paused) {
+            console.log('⚠️ Ignoring play event - audio is already paused');
+            return;
+        }
+        
+        isPlaying = true;
+        playPauseButton.classList.add('playing');
+        changeMarqueeSpeed(7);
+    });
+    audioPlayer.addEventListener('pause', () => {
+        console.log('⏸️ pause event fired, isLoadingTrack:', isLoadingTrack);
+        // Skip state updates during track loading to prevent overriding intended state
+        if (isLoadingTrack) return;
+        isPlaying = false;
+        playPauseButton.classList.remove('playing');
+        changeMarqueeSpeed(40);
+    });
     
     // Zeit-Anzeige aktualisieren
     audioPlayer.addEventListener('loadedmetadata', () => {
@@ -257,6 +548,15 @@ if (playPauseButton) {
     audioPlayer.addEventListener('durationchange', () => {
         updateTimeDisplay();
     });
+}
+
+// Event Listeners für Previous/Next Buttons
+if (prevButton) {
+    prevButton.addEventListener('click', playPreviousTrack);
+}
+
+if (nextButton) {
+    nextButton.addEventListener('click', playNextTrack);
 }
 
 // Event Listener für Playlist-Dropdown
@@ -907,48 +1207,25 @@ let scrollTimeout = null;
 // Global flag to track if typing animation is active
 let isTypingAnimationActive = false;
 
+// Global storage for bubble positions during animation
+let bubblePositionsDuringAnimation = null;
+
 // Smart Grid Layout optimieren
-function optimizeGridLayout(preserveScroll = true) {
+// Optional: targetBubble - if provided, only update this bubble's span (for incremental updates during typing)
+function optimizeGridLayout(targetBubble = null) {
     const grid = document.querySelector('.content-grid');
     if (!grid) return;
     
     const bubbles = grid.querySelectorAll('.content-bubble');
     if (bubbles.length === 0) return;
     
-    // Find the scrollable container (logbook-main)
-    const scrollContainer = grid.closest('.logbook-main') || window;
-    
-    // Don't preserve scroll if user is actively scrolling or typing animation is active
-    if (preserveScroll && (isUserScrolling || isTypingAnimationActive)) {
-        preserveScroll = false;
-    }
-    
-    // Store scroll position relative to a reference element (second bubble or first if only one)
-    // This prevents jumping when the first bubble (title) changes height during typing
-    let referenceElement = bubbles.length > 1 ? bubbles[1] : bubbles[0];
-    let referenceTop = 0;
-    let currentScrollTop = 0;
-    if (preserveScroll && referenceElement) {
-        currentScrollTop = scrollContainer === window 
-            ? window.pageYOffset 
-            : scrollContainer.scrollTop;
-        // Store the reference element's position relative to the scroll container
-        const containerRect = scrollContainer === window 
-            ? { top: 0 } 
-            : scrollContainer.getBoundingClientRect();
-        const referenceRect = referenceElement.getBoundingClientRect();
-        referenceTop = referenceRect.top - containerRect.top + currentScrollTop;
-    }
-    
     const containerWidth = grid.offsetWidth || window.innerWidth;
     const optimalColumns = calculateOptimalColumns(bubbles.length, containerWidth);
     
     // Grid-Spalten dynamisch setzen
     grid.style.gridTemplateColumns = `repeat(${optimalColumns}, minmax(0, 1fr))`;
-    grid.style.gridAutoFlow = optimalColumns > 1 ? 'row dense' : 'row';
-
-    // Reset all gridRowEnd before recalculating to avoid stale values
-    bubbles.forEach(bubble => bubble.style.gridRowEnd = 'auto');
+    // Use 'row' instead of 'row dense' always to prevent repacking
+    grid.style.gridAutoFlow = 'row';
 
     // Read gap and grid-auto-rows from computed styles
     const styles = window.getComputedStyle(grid);
@@ -964,47 +1241,27 @@ function optimizeGridLayout(preserveScroll = true) {
     // Calculate total row size: rowHeight + rowGap
     const totalRowSize = rowHeight + rowGap;
     
-    // Recalculate spans for all bubbles
-    // Formula: We need N rows such that: bubbleHeight <= N * rowHeight + (N - 1) * rowGap
-    // Which simplifies to: N >= (bubbleHeight + rowGap) / (rowHeight + rowGap)
-    bubbles.forEach(bubble => {
-        // Use offsetHeight for more accurate measurement (excludes margins)
-        const bubbleHeight = bubble.offsetHeight;
+    // If targetBubble is provided, only update that bubble (incremental update during typing)
+    if (targetBubble && targetBubble.classList.contains('content-bubble')) {
+        const bubbleHeight = targetBubble.offsetHeight;
+        const span = Math.max(1, Math.ceil((bubbleHeight + rowGap) / totalRowSize));
+        targetBubble.style.gridRowEnd = `span ${span}`;
         
-        // Calculate span: ceil ensures we have enough space
+        // Force reflow to ensure Grid recalculates immediately
+        void grid.offsetHeight;
+        return;
+    }
+    
+    // Full recalculation: Calculate spans for all bubbles
+    bubbles.forEach((bubble) => {
+        const bubbleHeight = bubble.offsetHeight;
         const span = Math.max(1, Math.ceil((bubbleHeight + rowGap) / totalRowSize));
         bubble.style.gridRowEnd = `span ${span}`;
     });
     
-    // Force a reflow to ensure all spans are applied before next calculation
+    // Force reflow to ensure all spans are applied synchronously
+    // This makes the browser recalculate layout immediately
     void grid.offsetHeight;
-    
-    // Restore scroll position relative to reference element
-    // Only if user is not actively scrolling
-    if (preserveScroll && referenceElement && !isUserScrolling) {
-        requestAnimationFrame(() => {
-            // Double-check user is still not scrolling
-            if (isUserScrolling) return;
-            
-            const containerRect = scrollContainer === window 
-                ? { top: 0 } 
-                : scrollContainer.getBoundingClientRect();
-            const referenceRect = referenceElement.getBoundingClientRect();
-            const newReferenceTop = referenceRect.top - containerRect.top + (scrollContainer === window ? window.pageYOffset : scrollContainer.scrollTop);
-            const delta = newReferenceTop - referenceTop;
-            
-            // Only restore if delta is significant (more than 1px) to avoid micro-adjustments
-            if (Math.abs(delta) > 1) {
-                const newScroll = currentScrollTop + delta;
-                
-                if (scrollContainer === window) {
-                    window.scrollTo(0, newScroll);
-                } else {
-                    scrollContainer.scrollTop = newScroll;
-                }
-            }
-        });
-    }
 }
 
 // Eintrag anzeigen
@@ -1043,7 +1300,7 @@ function displayEntry(index) {
 
     // Initial layout optimization before typing animation starts
     setTimeout(() => {
-        optimizeGridLayout(false);
+        optimizeGridLayout();
     }, 0);
 
     // Typing Effekt bei erster Bubble (Titel)
@@ -1061,34 +1318,85 @@ function displayEntry(index) {
         caret.className = 'journal-title-caret';
         titleElement.appendChild(caret);
 
+        // Find the bubble containing the title to observe its height changes
+        const titleBubble = titleElement.closest('.content-bubble');
+        const grid = container.querySelector('.content-grid');
+        
+        // Set typing animation flag
+        isTypingAnimationActive = true;
+        
+        // Capture initial bubble positions before animation starts
+        const bubbles = grid ? Array.from(grid.querySelectorAll('.content-bubble')) : [];
+        const titleBubbleIndex = bubbles.indexOf(titleBubble);
+        
+        // Store initial positions for smooth transitions
+        const initialPositions = new Map();
+        bubbles.forEach((bubble, index) => {
+            const rect = bubble.getBoundingClientRect();
+            initialPositions.set(bubble, {
+                top: rect.top,
+                height: bubble.offsetHeight
+            });
+        });
+        
+        // Track last height to detect actual changes
+        let lastTitleBubbleHeight = titleBubble ? titleBubble.offsetHeight : 0;
+        let layoutUpdateScheduled = false;
+        let updateCounter = 0;
+        
+        // Function to update layout smoothly (batched with RAF, throttled)
+        const scheduleLayoutUpdate = (fullUpdate = false) => {
+            if (layoutUpdateScheduled) return;
+            layoutUpdateScheduled = true;
+            
+            requestAnimationFrame(() => {
+                if (!titleBubble) {
+                    layoutUpdateScheduled = false;
+                    return;
+                }
+                
+                const currentHeight = titleBubble.offsetHeight;
+                const heightDiff = currentHeight - lastTitleBubbleHeight;
+                
+                // Update if height changed by more than 1px OR forced full update
+                // Very low threshold = very frequent updates = smoothest movement
+                if (fullUpdate || Math.abs(heightDiff) > 1) {
+                    lastTitleBubbleHeight = currentHeight;
+                    
+                    // Update ALL bubbles at once to prevent overlap/async movement
+                    // This ensures title bubble and bubbles below move synchronously
+                    optimizeGridLayout();
+                }
+                
+                layoutUpdateScheduled = false;
+            });
+        };
+
         let idx = 0;
         
-        // Set typing animation flag to prevent layout updates during animation
-        // Set after initial layout is done
-        setTimeout(() => {
-            isTypingAnimationActive = true;
-        }, 100);
-
         const typeNext = () => {
             if (idx < text.length) {
                 typedSpan.textContent += text[idx];
                 idx += 1;
-                // No layout updates during typing to prevent scroll jumping
+                updateCounter += 1;
+                
+                // Update layout after every character for maximum synchronization
+                // This minimizes visible lag between title and bubble movement
+                scheduleLayoutUpdate();
+                
                 setTimeout(typeNext, 55 + Math.random() * 45);
             } else {
                 caret.classList.add('blink');
-                // Animation complete - reset flag and optimize layout once
-                isTypingAnimationActive = false;
                 
-                // Optimize layout after animation completes
+                // Final layout update with full recalculation (forced)
                 requestAnimationFrame(() => {
-                    optimizeGridLayout(false); // Don't preserve scroll, let user's position stay
+                    scheduleLayoutUpdate(true);
                 });
                 
-                // Additional layout pass after a short delay to ensure final spacing is correct
+                // Reset flag after delay
                 setTimeout(() => {
-                    optimizeGridLayout(false);
-                }, 200);
+                    isTypingAnimationActive = false;
+                }, 300);
             }
         };
         setTimeout(typeNext, 300);
@@ -1131,7 +1439,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Player initialisieren
     if (typeof populatePlaylist === 'function') {
         populatePlaylist();
-        loadTrack(0); // Ersten Track laden (initialisiert auch den Marquee)
+        loadTrack(0, true); // Ersten Track laden, pausiert (preservePlayState=true, aber initial ist paused=true)
         
         // Zeit-Anzeige nach dem Laden der Metadaten aktualisieren
         if (audioPlayer) {
