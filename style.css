@@ -201,7 +201,7 @@ body {
     width: 100%;
     /* Mobile: 1 Spalte, zentriert */
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -210,7 +210,8 @@ body {
     .content-grid {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
-        margin: 0;
+        margin: 0 auto;
+        padding: 0 1rem;
     }
 }
 
