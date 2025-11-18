@@ -189,8 +189,66 @@ body {
 }
 
 .logbook-entry-container {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Content Grid für Bubbles */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+/* Content Bubbles */
+.content-bubble {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-bubble:hover {
+    border-color: #4ade80; /* border-accent */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+}
+
+.bubble-large {
+    grid-column: span 2;
+}
+
+.bubble-medium {
+    grid-column: span 1;
+}
+
+.bubble-content {
+    color: #d1d5db; /* text-gray-300 */
+    line-height: 1.6;
+}
+
+.bubble-content p {
+    margin-bottom: 1rem;
+}
+
+.bubble-content img {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bubble-large {
+        grid-column: span 1;
+    }
 }
 
 .logbook-entry {
