@@ -189,17 +189,32 @@ body {
 }
 
 .logbook-entry-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 1.5rem;
 }
 
-/* Content Grid für Bubbles */
+/* Content Grid für Bubbles - dynamisch 1-3 Spalten */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    width: 100%;
+    /* Mobile: 1 Spalte */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 Spalten */
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 Spalten */
+@media (min-width: 1200px) {
+    .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Content Bubbles */
@@ -220,7 +235,14 @@ body {
 }
 
 .bubble-large {
-    grid-column: span 2;
+    /* Kann 1-2 Spalten einnehmen, je nach verfügbarem Platz */
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .bubble-large {
+        grid-column: span 2;
+    }
 }
 
 .bubble-medium {
@@ -241,15 +263,6 @@ body {
     border-radius: 0.25rem;
 }
 
-@media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .bubble-large {
-        grid-column: span 1;
-    }
-}
 
 .logbook-entry {
     background-color: #1f2937; /* bg-gray-800 */
