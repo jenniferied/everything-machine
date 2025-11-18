@@ -362,65 +362,167 @@ function parseMarkdown(markdown) {
         return createWorldInfoDropdown(worldData);
     });
     
-    // Zuerst Fettdruck und Kursiv behandeln (vor Überschriften)
-    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-    
-    // Bilder behandeln (![alt](path)) - vor Überschriften, damit sie nicht in Absätze eingebettet werden
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-6 rounded-sm w-full h-auto max-w-4xl mx-auto" />');
-    
-    // Überschriften (# ## ###) - nach Fettdruck, damit ** nicht stört
-    html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
-    html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>');
-    html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-8 mb-4">$1</h1>');
-    
-    // Absätze: Zeilen in Absätze umwandeln (aber nicht Überschriften, Bilder oder leere Zeilen)
-    const lines = html.split('\n');
-    const processedLines = [];
+    // Markdown in Abschnitte aufteilen (jede Überschrift wird ein Bubble)
+    const lines = markdown.split('\n');
+    const sections = [];
+    let currentSection = { heading: null, headingLevel: null, content: [] };
     let currentParagraph = [];
+    let hasSections = false;
+    let introText = [];
     
     for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
+        const line = lines[i];
+        const trimmed = line.trim();
         
-        // Wenn die Zeile leer ist, beende den aktuellen Absatz
-        if (line === '') {
+        // Überschrift erkennen (## oder ###)
+        const headingMatch = trimmed.match(/^(##+)\s+(.+)$/);
+        if (headingMatch) {
+            hasSections = true;
+            // Aktuellen Abschnitt abschließen
             if (currentParagraph.length > 0) {
-                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+                if (currentSection.heading) {
+                    currentSection.content.push(currentParagraph.join(' '));
+                } else {
+                    // Text vor der ersten Überschrift
+                    introText.push(currentParagraph.join(' '));
+                }
+                currentParagraph = [];
+            }
+            if (currentSection.heading || currentSection.content.length > 0) {
+                sections.push(currentSection);
+            }
+            
+            // Neuen Abschnitt starten
+            const headingLevel = headingMatch[1].length;
+            const headingText = headingMatch[2];
+            currentSection = {
+                heading: headingText,
+                headingLevel: headingLevel,
+                content: []
+            };
+            continue;
+        }
+        
+        // Leere Zeile - Absatz beenden
+        if (trimmed === '') {
+            if (currentParagraph.length > 0) {
+                if (currentSection.heading) {
+                    currentSection.content.push(currentParagraph.join(' '));
+                } else {
+                    introText.push(currentParagraph.join(' '));
+                }
                 currentParagraph = [];
             }
             continue;
         }
         
-        // Wenn die Zeile eine Überschrift ist, beende Absatz und füge Überschrift hinzu
-        if (line.match(/^<h[1-6]/)) {
-            if (currentParagraph.length > 0) {
-                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
-                currentParagraph = [];
-            }
-            processedLines.push(line);
-            continue;
-        }
-        
-        // Wenn die Zeile ein Bild ist, beende Absatz und füge Bild hinzu
-        if (line.match(/^<img/)) {
-            if (currentParagraph.length > 0) {
-                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
-                currentParagraph = [];
-            }
-            processedLines.push(line);
-            continue;
-        }
-        
-        // Normale Textzeile zum Absatz hinzufügen
-        currentParagraph.push(line);
+        // Normale Zeile zum Absatz hinzufügen
+        currentParagraph.push(trimmed);
     }
     
-    // Letzten Absatz hinzufügen, falls vorhanden
+    // Letzten Absatz und Abschnitt hinzufügen
     if (currentParagraph.length > 0) {
-        processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+        if (currentSection.heading) {
+            currentSection.content.push(currentParagraph.join(' '));
+        } else {
+            introText.push(currentParagraph.join(' '));
+        }
+    }
+    if (currentSection.heading || currentSection.content.length > 0) {
+        sections.push(currentSection);
     }
     
-    html = processedLines.join('\n');
+    // Wenn keine Überschriften gefunden wurden, Fallback zum alten Verhalten
+    if (!hasSections || sections.length === 0) {
+        // Zuerst Fettdruck und Kursiv behandeln
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        
+        // Bilder behandeln
+        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-6 rounded-sm w-full h-auto max-w-4xl mx-auto" />');
+        
+        // Überschriften
+        html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
+        html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>');
+        html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-8 mb-4">$1</h1>');
+        
+        // Absätze
+        const processedLines = html.split('\n');
+        const finalLines = [];
+        let para = [];
+        
+        for (const line of processedLines) {
+            const trimmed = line.trim();
+            if (trimmed === '') {
+                if (para.length > 0) {
+                    finalLines.push('<p class="mb-4">' + para.join(' ') + '</p>');
+                    para = [];
+                }
+            } else if (trimmed.match(/^<h[1-6]/) || trimmed.match(/^<img/)) {
+                if (para.length > 0) {
+                    finalLines.push('<p class="mb-4">' + para.join(' ') + '</p>');
+                    para = [];
+                }
+                finalLines.push(trimmed);
+            } else {
+                para.push(trimmed);
+            }
+        }
+        if (para.length > 0) {
+            finalLines.push('<p class="mb-4">' + para.join(' ') + '</p>');
+        }
+        html = finalLines.join('\n');
+    } else {
+        // Grid-Container mit Bubbles erstellen
+        let gridHTML = '<div class="content-grid">';
+        
+        // Intro-Text am Anfang anzeigen (falls vorhanden)
+        if (introText.length > 0) {
+            let introContent = introText.map(para => {
+                if (!para.trim()) return '';
+                para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-4 rounded-sm w-full h-auto" />');
+                return '<p class="mb-4">' + para + '</p>';
+            }).filter(p => p).join('\n');
+            
+            gridHTML += `
+                <div class="content-bubble bubble-large">
+                    <div class="bubble-content">
+                        ${introContent}
+                    </div>
+                </div>
+            `;
+        }
+        
+        sections.forEach((section) => {
+            // Inhalt formatieren
+            let sectionContent = section.content.map(para => {
+                if (!para.trim()) return '';
+                // Fettdruck und Kursiv
+                para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                // Bilder
+                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-4 rounded-sm w-full h-auto" />');
+                return '<p class="mb-4">' + para + '</p>';
+            }).filter(p => p).join('\n');
+            
+            const headingClass = section.headingLevel === 2 ? 'text-2xl' : 'text-xl';
+            const bubbleSize = section.headingLevel === 2 ? 'bubble-large' : 'bubble-medium';
+            
+            gridHTML += `
+                <div class="content-bubble ${bubbleSize}">
+                    <h${section.headingLevel || 2} class="${headingClass} font-bold mb-4 text-accent">${section.heading || 'Abschnitt'}</h${section.headingLevel || 2}>
+                    <div class="bubble-content">
+                        ${sectionContent}
+                    </div>
+                </div>
+            `;
+        });
+        
+        gridHTML += '</div>';
+        html = gridHTML;
+    }
     
     // URLs in Links umwandeln (als Pills) - nach Absatz-Verarbeitung
     // Erkennt URLs in Text (http://, https://, www.), aber nicht in bereits existierenden Links
