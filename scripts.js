@@ -58,6 +58,8 @@ const playPauseButton = document.getElementById('play-pause-button');
 const marqueeContent = document.getElementById('marquee-content');
 const playlistToggleBtn = document.getElementById('playlist-toggle-btn');
 const playlistDropdown = document.getElementById('playlist-dropdown');
+const timeDisplay = document.getElementById('time-display');
+const albumCover = document.getElementById('album-cover');
 
 // --- NEUE FUNKTION: Zeitformatierung ---
 // Formatiert Sekunden (z.B. 32.123) in "m:ss" (z.B. "0:32")
@@ -110,6 +112,36 @@ function updateMarquee(track) {
     `;
 }
 
+// Funktion zum Aktualisieren der Zeit-Anzeige
+function updateTimeDisplay() {
+    if (!timeDisplay || !audioPlayer) return;
+    
+    const currentTime = audioPlayer.currentTime || 0;
+    const duration = audioPlayer.duration || 0;
+    
+    const currentTimeFormatted = formatTime(currentTime);
+    const durationFormatted = formatTime(duration);
+    
+    timeDisplay.textContent = `${currentTimeFormatted}/${durationFormatted}`;
+}
+
+// Funktion zum Aktualisieren des Albumcovers
+function updateAlbumCover(track) {
+    if (!albumCover) return;
+    
+    if (track.cover) {
+        albumCover.src = track.cover;
+        albumCover.alt = `${track.album} Cover`;
+        albumCover.style.display = 'block';
+        // Fallback bei Fehler
+        albumCover.onerror = function() {
+            this.style.display = 'none';
+        };
+    } else {
+        albumCover.style.display = 'none';
+    }
+}
+
 // Funktion zum Laden eines Tracks
 function loadTrack(index) {
     currentTrackIndex = index;
@@ -120,6 +152,14 @@ function loadTrack(index) {
 
     // Marquee-Text aktualisieren
     updateMarquee(track);
+    
+    // Albumcover aktualisieren
+    updateAlbumCover(track);
+    
+    // Zeit-Anzeige zurücksetzen
+    if (timeDisplay) {
+        timeDisplay.textContent = '0:00/0:00';
+    }
 
     // "Active" Status in der Playlist aktualisieren
     document.querySelectorAll('.playlist-item').forEach((item, i) => {
@@ -206,6 +246,17 @@ if (playPauseButton) {
     audioPlayer.addEventListener('ended', playNextTrack);
     audioPlayer.addEventListener('play', () => isPlaying = true);
     audioPlayer.addEventListener('pause', () => isPlaying = false);
+    
+    // Zeit-Anzeige aktualisieren
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        updateTimeDisplay();
+    });
+    audioPlayer.addEventListener('timeupdate', () => {
+        updateTimeDisplay();
+    });
+    audioPlayer.addEventListener('durationchange', () => {
+        updateTimeDisplay();
+    });
 }
 
 // Event Listener für Playlist-Dropdown
@@ -252,6 +303,11 @@ function showPage(pageId, clickedElement) {
         journalEntriesLoaded = true;
     }
     
+    // Lightbox-Funktionalität für die aktuelle Seite initialisieren
+    setTimeout(() => {
+        initializeImageLightbox();
+    }, 100);
+    
     // Aktive Seite in localStorage speichern
     localStorage.setItem('activePage', pageId);
     
@@ -283,7 +339,8 @@ window.addEventListener('click', (e) => {
 // Liste der Journal-Dateien (wird automatisch erweitert, wenn neue hinzugefügt werden)
 const journalFiles = [
     'journal/journal-2025-11-15-comfyui-consistent-character.md',
-    'journal/journal-2025-11-18-marble-worldlabs.md'
+    'journal/journal-2025-11-18-marble-worldlabs.md',
+    'journal/journal-2025-11-19-cursor-build.md'
 ];
 
 // Funktion zum Erstellen einer Welt-Info-Dropdown-Komponente
@@ -340,7 +397,7 @@ function toggleWorldInfo(id) {
 }
 
 // Einfacher Markdown-Parser
-function parseMarkdown(markdown) {
+function parseMarkdown(markdown, title = null, date = null, time = null) {
     let html = markdown;
     
     // Welt-Info-Dropdown-Komponenten verarbeiten (Format: [WORLD_INFO:...])
@@ -370,6 +427,58 @@ function parseMarkdown(markdown) {
         worldInfoCounter++;
         return placeholder;
     });
+
+    const restoreWorldInfoBlocks = (text) => {
+        if (!text) return text;
+        worldInfoMap.forEach((componentHTML, placeholder) => {
+            if (text.includes(placeholder)) {
+                text = text.split(placeholder).join(componentHTML);
+            }
+        });
+        return text;
+    };
+
+    const convertMarkdownLinks = (text) => {
+        if (!text) return text;
+        return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, rawUrl) => {
+            let href = rawUrl.trim();
+            if (!/^https?:\/\//i.test(href)) {
+                href = `https://${href}`;
+            }
+            const safeLabel = label.trim();
+            return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="link-pill link-inline">${safeLabel}</a>`;
+        });
+    };
+
+    const formatParagraphs = (paragraphs, useFullWidthImages = false) => {
+        return paragraphs.map(para => {
+            if (!para || !para.trim()) return '';
+            let processed = para.trim();
+            processed = restoreWorldInfoBlocks(processed);
+            processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            processed = processed.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            // Prüfen, ob der gesamte Absatz nur ein Bild ist (ohne weiteren Text)
+            const imageOnlyMatch = processed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+            if (imageOnlyMatch) {
+                // Standalone Bild - immer als Full-Width rendern (mit Caption als <figure>)
+                const caption = imageOnlyMatch[1] || '';
+                processed = `<figure class="image-figure my-4">
+                    <img src="${imageOnlyMatch[2]}" alt="${caption}" class="img-100 rounded-sm h-auto" />
+                    ${caption ? `<figcaption class="image-caption">${caption}</figcaption>` : ''}
+                </figure>`;
+            } else {
+                // Bilder innerhalb von Text - Bild-Klasse basierend auf Parameter
+                const imageClass = useFullWidthImages ? 'img-100' : 'img-50';
+                processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, `<img src="$2" alt="$1" class="${imageClass} my-4 rounded-sm h-auto" />`);
+            }
+            processed = convertMarkdownLinks(processed);
+            // Wenn der gesamte Absatz nur ein Bild ist, ohne <p> Tag rendern
+            if (processed.match(/^<figure/)) {
+                return processed;
+            }
+            return '<p class="mb-4">' + processed + '</p>';
+        }).filter(Boolean).join('\n');
+    };
     
     // Markdown in Abschnitte aufteilen (jede Überschrift wird ein Bubble)
     const lines = markdown.split('\n');
@@ -459,8 +568,11 @@ function parseMarkdown(markdown) {
         html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
         
-        // Bilder behandeln - Standard 75% Breite
-        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-6 rounded-sm h-auto" />');
+        // Bilder behandeln - Standard 50% Breite
+        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-50 my-6 rounded-sm h-auto" />');
+
+        // Markdown-Links verarbeiten
+        html = convertMarkdownLinks(html);
         
         // Überschriften
         html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
@@ -497,42 +609,51 @@ function parseMarkdown(markdown) {
         // Grid-Container mit Bubbles erstellen
         let gridHTML = '<div class="content-grid">';
         
-        // Intro-Text am Anfang anzeigen (falls vorhanden)
+        // Überschrift mit Datum/Zeit in der ersten Bubble
+        let firstBubbleContent = '';
+        if (title && date) {
+            const dateStr = formatDate(date);
+            const timeStr = time || '10:30';
+            firstBubbleContent = `
+                <div class="journal-header">
+                    <h1 class="journal-title">${title}</h1>
+                    <div class="journal-date-time">${dateStr} · ${timeStr}</div>
+                </div>
+            `;
+        }
+        
+        // Intro-Text am Anfang anzeigen (falls vorhanden) - mit fullwidth Bildern
         if (introText.length > 0) {
-            let introContent = introText.map(para => {
-                if (!para.trim()) return '';
-                para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-4 rounded-sm h-auto" />');
-                return '<p class="mb-4">' + para + '</p>';
-            }).filter(p => p).join('\n');
-            
+            firstBubbleContent += formatParagraphs(introText, true);
+        }
+
+        let remainingSections = [...sections];
+        let mergedSection = null;
+
+        if (remainingSections.length > 0 && remainingSections[0].headingLevel === 1) {
+            mergedSection = remainingSections.shift();
+        } else if (introText.length === 0 && remainingSections.length > 0) {
+            mergedSection = remainingSections.shift();
+        }
+
+        if (mergedSection) {
+            firstBubbleContent += formatParagraphs(mergedSection.content);
+        }
+        
+        // Erste Bubble mit Überschrift und/oder Intro-Text
+        if (firstBubbleContent) {
             gridHTML += `
                 <div class="content-bubble bubble-large">
                     <div class="bubble-content">
-                        ${introContent}
+                        ${firstBubbleContent}
                     </div>
                 </div>
             `;
         }
         
-        sections.forEach((section) => {
+        remainingSections.forEach((section) => {
             // Inhalt formatieren
-            let sectionContent = section.content.map(para => {
-                if (!para.trim()) return '';
-                
-                // WORLD_INFO Placeholder wiederherstellen
-                worldInfoMap.forEach((html, placeholder) => {
-                    para = para.replace(placeholder, html);
-                });
-                
-                // Fettdruck und Kursiv
-                para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                // Bilder - Standard 75% Breite
-                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-4 rounded-sm h-auto" />');
-                return '<p class="mb-4">' + para + '</p>';
-            }).filter(p => p).join('\n');
+            let sectionContent = formatParagraphs(section.content);
             
             const headingClass = section.headingLevel === 2 ? 'text-2xl' : 'text-xl';
             const bubbleSize = section.headingLevel === 2 ? 'bubble-large' : 'bubble-medium';
@@ -545,7 +666,7 @@ function parseMarkdown(markdown) {
             
             gridHTML += `
                 <div class="content-bubble ${bubbleSize}">
-                    <h${section.headingLevel || 2} class="${headingClass} font-bold mb-4 text-accent">${headingText}</h${section.headingLevel || 2}>
+                    <h${section.headingLevel || 2} class="${headingClass} font-bold mb-4 text-accent bubble-section-title bubble-heading-level-${section.headingLevel || 2}">${headingText}</h${section.headingLevel || 2}>
                     <div class="bubble-content">
                         ${sectionContent}
                     </div>
@@ -664,13 +785,27 @@ async function loadJournalEntries() {
             const date = extractDate(filename);
             const title = extractTitle(markdown);
             
+            // Realistische Zeit generieren basierend auf dem Datum
+            // 15. Nov: 14:15, 18. Nov: 10:30
+            let time = '10:30';
+            if (date.getDate() === 15) {
+                time = '14:15';
+            } else if (date.getDate() === 18) {
+                time = '10:30';
+            }
+            
             // Datum-Zeile entfernen (Format: **DD. Monat YYYY** oder ähnlich)
             markdown = markdown.replace(/^\*\*.*?\d{1,2}\.\s+\w+\s+\d{4}.*?\*\*\s*$/gm, '');
+
+            // Erste H1-Überschrift entfernen, damit sie nicht doppelt erscheint
+            let headingRemoved = false;
+            markdown = markdown.replace(/^# .+$/m, (match) => {
+                if (headingRemoved) return match;
+                headingRemoved = true;
+                return '';
+            }).trimStart();
             
-            let html = parseMarkdown(markdown);
-            
-            // Erste Überschrift (H1) entfernen, da sie bereits als Titel extrahiert wurde
-            html = html.replace(/<h1[^>]*>.*?<\/h1>\s*/i, '');
+            let html = parseMarkdown(markdown, title, date, time);
             
             entries.push({
                 filename,
@@ -752,6 +887,126 @@ function selectEntry(index) {
     });
 }
 
+// Optimale Spaltenanzahl für Grid berechnen
+function calculateOptimalColumns(bubbleCount, containerWidth) {
+    if (containerWidth >= 1200) {
+        return Math.min(3, Math.max(1, bubbleCount));
+    }
+    
+    if (containerWidth >= 768) {
+        return Math.min(2, Math.max(1, bubbleCount));
+    }
+    
+    return 1;
+}
+
+// Global flag to track if user is actively scrolling
+let isUserScrolling = false;
+let scrollTimeout = null;
+
+// Global flag to track if typing animation is active
+let isTypingAnimationActive = false;
+
+// Smart Grid Layout optimieren
+function optimizeGridLayout(preserveScroll = true) {
+    const grid = document.querySelector('.content-grid');
+    if (!grid) return;
+    
+    const bubbles = grid.querySelectorAll('.content-bubble');
+    if (bubbles.length === 0) return;
+    
+    // Find the scrollable container (logbook-main)
+    const scrollContainer = grid.closest('.logbook-main') || window;
+    
+    // Don't preserve scroll if user is actively scrolling or typing animation is active
+    if (preserveScroll && (isUserScrolling || isTypingAnimationActive)) {
+        preserveScroll = false;
+    }
+    
+    // Store scroll position relative to a reference element (second bubble or first if only one)
+    // This prevents jumping when the first bubble (title) changes height during typing
+    let referenceElement = bubbles.length > 1 ? bubbles[1] : bubbles[0];
+    let referenceTop = 0;
+    let currentScrollTop = 0;
+    if (preserveScroll && referenceElement) {
+        currentScrollTop = scrollContainer === window 
+            ? window.pageYOffset 
+            : scrollContainer.scrollTop;
+        // Store the reference element's position relative to the scroll container
+        const containerRect = scrollContainer === window 
+            ? { top: 0 } 
+            : scrollContainer.getBoundingClientRect();
+        const referenceRect = referenceElement.getBoundingClientRect();
+        referenceTop = referenceRect.top - containerRect.top + currentScrollTop;
+    }
+    
+    const containerWidth = grid.offsetWidth || window.innerWidth;
+    const optimalColumns = calculateOptimalColumns(bubbles.length, containerWidth);
+    
+    // Grid-Spalten dynamisch setzen
+    grid.style.gridTemplateColumns = `repeat(${optimalColumns}, minmax(0, 1fr))`;
+    grid.style.gridAutoFlow = optimalColumns > 1 ? 'row dense' : 'row';
+
+    // Reset all gridRowEnd before recalculating to avoid stale values
+    bubbles.forEach(bubble => bubble.style.gridRowEnd = 'auto');
+
+    // Read gap and grid-auto-rows from computed styles
+    const styles = window.getComputedStyle(grid);
+    const rowGap = parseFloat(styles.rowGap) || 0;
+    const rowHeight = parseFloat(styles.gridAutoRows) || 0.2 * 16; // Default to 0.2rem in px (assuming 16px base)
+    
+    // Ensure we have valid values
+    if (rowHeight <= 0 || rowGap < 0) {
+        console.warn('grid-auto-rows or rowGap is invalid');
+        return;
+    }
+    
+    // Calculate total row size: rowHeight + rowGap
+    const totalRowSize = rowHeight + rowGap;
+    
+    // Recalculate spans for all bubbles
+    // Formula: We need N rows such that: bubbleHeight <= N * rowHeight + (N - 1) * rowGap
+    // Which simplifies to: N >= (bubbleHeight + rowGap) / (rowHeight + rowGap)
+    bubbles.forEach(bubble => {
+        // Use offsetHeight for more accurate measurement (excludes margins)
+        const bubbleHeight = bubble.offsetHeight;
+        
+        // Calculate span: ceil ensures we have enough space
+        const span = Math.max(1, Math.ceil((bubbleHeight + rowGap) / totalRowSize));
+        bubble.style.gridRowEnd = `span ${span}`;
+    });
+    
+    // Force a reflow to ensure all spans are applied before next calculation
+    void grid.offsetHeight;
+    
+    // Restore scroll position relative to reference element
+    // Only if user is not actively scrolling
+    if (preserveScroll && referenceElement && !isUserScrolling) {
+        requestAnimationFrame(() => {
+            // Double-check user is still not scrolling
+            if (isUserScrolling) return;
+            
+            const containerRect = scrollContainer === window 
+                ? { top: 0 } 
+                : scrollContainer.getBoundingClientRect();
+            const referenceRect = referenceElement.getBoundingClientRect();
+            const newReferenceTop = referenceRect.top - containerRect.top + (scrollContainer === window ? window.pageYOffset : scrollContainer.scrollTop);
+            const delta = newReferenceTop - referenceTop;
+            
+            // Only restore if delta is significant (more than 1px) to avoid micro-adjustments
+            if (Math.abs(delta) > 1) {
+                const newScroll = currentScrollTop + delta;
+                
+                if (scrollContainer === window) {
+                    window.scrollTo(0, newScroll);
+                } else {
+                    scrollContainer.scrollTop = newScroll;
+                }
+            }
+        });
+    }
+}
+
 // Eintrag anzeigen
 function displayEntry(index) {
     const container = document.getElementById('logbook-container');
@@ -769,9 +1024,82 @@ function displayEntry(index) {
     }
     
     container.innerHTML = html;
+
+    const gridElement = container.querySelector('.content-grid');
+    const requestOptimize = () => {
+        window.requestAnimationFrame(() => optimizeGridLayout());
+    };
+    if (gridElement) {
+        const mediaElements = gridElement.querySelectorAll('img, video');
+        mediaElements.forEach(element => {
+            if (element.complete || element.readyState >= 2) {
+                requestOptimize();
+            } else {
+                element.addEventListener('load', requestOptimize, { once: true });
+                element.addEventListener('error', requestOptimize, { once: true });
+            }
+        });
+    }
+
+    // Initial layout optimization before typing animation starts
+    setTimeout(() => {
+        optimizeGridLayout(false);
+    }, 0);
+
+    // Typing Effekt bei erster Bubble (Titel)
+    const titleElement = container.querySelector('.journal-title');
+    if (titleElement) {
+        const text = titleElement.dataset.fullText || titleElement.textContent.trim();
+        titleElement.textContent = '';
+        titleElement.classList.add('journal-title-typing');
+
+        const typedSpan = document.createElement('span');
+        typedSpan.className = 'journal-title-text';
+        titleElement.appendChild(typedSpan);
+
+        const caret = document.createElement('span');
+        caret.className = 'journal-title-caret';
+        titleElement.appendChild(caret);
+
+        let idx = 0;
+        
+        // Set typing animation flag to prevent layout updates during animation
+        // Set after initial layout is done
+        setTimeout(() => {
+            isTypingAnimationActive = true;
+        }, 100);
+
+        const typeNext = () => {
+            if (idx < text.length) {
+                typedSpan.textContent += text[idx];
+                idx += 1;
+                // No layout updates during typing to prevent scroll jumping
+                setTimeout(typeNext, 55 + Math.random() * 45);
+            } else {
+                caret.classList.add('blink');
+                // Animation complete - reset flag and optimize layout once
+                isTypingAnimationActive = false;
+                
+                // Optimize layout after animation completes
+                requestAnimationFrame(() => {
+                    optimizeGridLayout(false); // Don't preserve scroll, let user's position stay
+                });
+                
+                // Additional layout pass after a short delay to ensure final spacing is correct
+                setTimeout(() => {
+                    optimizeGridLayout(false);
+                }, 200);
+            }
+        };
+        setTimeout(typeNext, 300);
+    }
     
-    // Zum Anfang scrollen
-    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Layout wird bereits vor der Typing-Animation optimiert (siehe oben)
+    
+    // Lightbox-Funktionalität für Bilder initialisieren
+    initializeImageLightbox();
+    
+    // (Kein automatischer Scroll nach oben, um "Jumping" zu vermeiden)
 }
 
 // Standardmäßig die 'overview'-Seite anzeigen
@@ -804,11 +1132,246 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof populatePlaylist === 'function') {
         populatePlaylist();
         loadTrack(0); // Ersten Track laden (initialisiert auch den Marquee)
+        
+        // Zeit-Anzeige nach dem Laden der Metadaten aktualisieren
+        if (audioPlayer) {
+            audioPlayer.addEventListener('loadedmetadata', () => {
+                updateTimeDisplay();
+            }, { once: true });
+        }
     }
     
     // Journal-Einträge laden, wenn Logbuch-Seite aktiv ist
     if (pageToShow === 'logbook') {
         loadJournalEntries();
         journalEntriesLoaded = true;
+    }
+    
+    // Window Resize Handler für Layout-Optimierung
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            optimizeGridLayout();
+        }, 150);
+    });
+    
+    // Track user scrolling to prevent scroll position restoration during active scrolling
+    const logbookMain = document.querySelector('.logbook-main');
+    if (logbookMain) {
+        const handleScrollStart = () => {
+            isUserScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 150); // Reset flag 150ms after scrolling stops
+        };
+        
+        logbookMain.addEventListener('scroll', handleScrollStart, { passive: true });
+        logbookMain.addEventListener('wheel', handleScrollStart, { passive: true });
+        logbookMain.addEventListener('touchmove', handleScrollStart, { passive: true });
+    }
+    
+    // Lightbox-Funktionalität initialisieren
+    setTimeout(() => {
+        initializeImageLightbox();
+    }, 100);
+});
+
+// --- IMAGE LIGHTBOX / GALLERY SYSTEM ---
+
+let currentImageGallery = [];
+let currentImageIndex = 0;
+
+// Initialisiert die Lightbox-Funktionalität für alle Bilder
+function initializeImageLightbox() {
+    // Alle Bubbles finden
+    const bubbles = document.querySelectorAll('.content-bubble');
+    
+    bubbles.forEach(bubble => {
+        // Alle Bilder in dieser Bubble finden
+        const images = bubble.querySelectorAll('img:not([data-lightbox-initialized])');
+        
+        if (images.length === 0) return;
+        
+        // Gallery-Array für diese Bubble erstellen
+        const gallery = Array.from(bubble.querySelectorAll('img')).map(img => {
+            // Caption finden (kann in figcaption oder alt-Attribut sein)
+            let caption = '';
+            const figure = img.closest('figure');
+            if (figure) {
+                const figcaption = figure.querySelector('figcaption');
+                if (figcaption) {
+                    caption = figcaption.textContent.trim();
+                }
+            }
+            if (!caption) {
+                caption = img.getAttribute('alt') || '';
+            }
+            
+            return {
+                src: img.src,
+                alt: img.getAttribute('alt') || '',
+                caption: caption
+            };
+        });
+        
+        // Click-Handler für jedes Bild hinzufügen (nur für noch nicht initialisierte)
+        images.forEach((img, index) => {
+            // Index im gesamten Gallery-Array finden
+            const allImages = Array.from(bubble.querySelectorAll('img'));
+            const actualIndex = allImages.indexOf(img);
+            
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(gallery, actualIndex);
+            });
+            
+            // Markieren als initialisiert
+            img.setAttribute('data-lightbox-initialized', 'true');
+        });
+    });
+    
+    // Auch für Bilder außerhalb von Bubbles (z.B. in overview-Seite)
+    const standaloneImages = document.querySelectorAll('#page-overview img:not([data-lightbox-initialized]), #page-dialogues img:not([data-lightbox-initialized])');
+    standaloneImages.forEach(img => {
+        // Nur wenn nicht bereits in einer Bubble
+        if (!img.closest('.content-bubble')) {
+            const gallery = [{
+                src: img.src,
+                alt: img.getAttribute('alt') || '',
+                caption: img.getAttribute('alt') || ''
+            }];
+            
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(gallery, 0);
+            });
+            
+            // Markieren als initialisiert
+            img.setAttribute('data-lightbox-initialized', 'true');
+        }
+    });
+}
+
+// Öffnet die Lightbox mit einer Gallery
+function openLightbox(gallery, startIndex = 0) {
+    if (!gallery || gallery.length === 0) return;
+    
+    currentImageGallery = gallery;
+    currentImageIndex = Math.max(0, Math.min(startIndex, gallery.length - 1));
+    
+    const overlay = document.getElementById('image-lightbox-overlay');
+    const image = document.getElementById('image-lightbox-image');
+    const caption = document.getElementById('image-lightbox-caption');
+    const counter = document.getElementById('image-lightbox-counter');
+    const prevBtn = overlay.querySelector('.image-lightbox-nav.prev');
+    const nextBtn = overlay.querySelector('.image-lightbox-nav.next');
+    
+    // Bild und Caption aktualisieren
+    updateLightboxContent();
+    
+    // Navigation-Buttons anzeigen/verstecken
+    if (gallery.length > 1) {
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+        counter.style.display = 'block';
+    } else {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+        counter.style.display = 'none';
+    }
+    
+    // Overlay anzeigen
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Scroll verhindern
+    
+    // Keyboard-Navigation
+    window.addEventListener('keydown', handleLightboxKeyboard);
+}
+
+// Aktualisiert den Inhalt der Lightbox
+function updateLightboxContent() {
+    if (currentImageGallery.length === 0) return;
+    
+    const item = currentImageGallery[currentImageIndex];
+    const image = document.getElementById('image-lightbox-image');
+    const caption = document.getElementById('image-lightbox-caption');
+    const counter = document.getElementById('image-lightbox-counter');
+    
+    image.src = item.src;
+    image.alt = item.alt;
+    
+    if (item.caption) {
+        caption.textContent = item.caption;
+        caption.style.display = 'block';
+    } else {
+        caption.style.display = 'none';
+    }
+    
+    if (currentImageGallery.length > 1) {
+        counter.textContent = `${currentImageIndex + 1} / ${currentImageGallery.length}`;
+    }
+}
+
+// Schließt die Lightbox
+function closeLightbox() {
+    const overlay = document.getElementById('image-lightbox-overlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = ''; // Scroll wieder erlauben
+    
+    // Keyboard-Listener entfernen
+    window.removeEventListener('keydown', handleLightboxKeyboard);
+    
+    currentImageGallery = [];
+    currentImageIndex = 0;
+}
+
+// Navigiert in der Gallery
+function navigateLightbox(direction) {
+    if (currentImageGallery.length === 0) return;
+    
+    currentImageIndex += direction;
+    
+    // Loop durch die Gallery
+    if (currentImageIndex < 0) {
+        currentImageIndex = currentImageGallery.length - 1;
+    } else if (currentImageIndex >= currentImageGallery.length) {
+        currentImageIndex = 0;
+    }
+    
+    updateLightboxContent();
+}
+
+// Keyboard-Navigation für Lightbox
+function handleLightboxKeyboard(e) {
+    const overlay = document.getElementById('image-lightbox-overlay');
+    if (!overlay.classList.contains('active')) return;
+    
+    switch(e.key) {
+        case 'Escape':
+            closeLightbox();
+            break;
+        case 'ArrowLeft':
+            navigateLightbox(-1);
+            e.preventDefault();
+            break;
+        case 'ArrowRight':
+            navigateLightbox(1);
+            e.preventDefault();
+            break;
+    }
+}
+
+// Click auf Overlay schließt Lightbox
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('image-lightbox-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', (e) => {
+            // Nur schließen, wenn direkt auf Overlay geklickt wurde
+            if (e.target === overlay) {
+                closeLightbox();
+            }
+        });
     }
 });
