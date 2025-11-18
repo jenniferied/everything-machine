@@ -199,14 +199,18 @@ body {
     display: grid;
     gap: 1.5rem;
     width: 100%;
-    /* Mobile: 1 Spalte */
+    /* Mobile: 1 Spalte, zentriert */
     grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Tablet: 2 Spalten */
-@media (min-width: 768px) {
+/* Tablet/Small Desktop: 2 Spalten (ab ~600px, z.B. 15" Mac) */
+@media (min-width: 600px) {
     .content-grid {
         grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        margin: 0;
     }
 }
 
