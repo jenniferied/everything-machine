@@ -398,12 +398,24 @@ function parseMarkdown(markdown) {
             
             // Neuen Abschnitt starten
             const headingLevel = headingMatch[1].length;
-            const headingText = headingMatch[2];
+            // Überschrift-Text extrahieren - sicherstellen, dass kein # enthalten ist
+            let headingText = headingMatch[2].trim();
+            // Falls doch ein # am Anfang ist, entfernen
+            headingText = headingText.replace(/^#+\s*/, '').trim();
+            
             currentSection = {
                 heading: headingText,
                 headingLevel: headingLevel,
                 content: []
             };
+            continue;
+        }
+        
+        // Falls eine Zeile mit # beginnt, aber nicht als Überschrift erkannt wurde, entferne das #
+        // (Fallback für fehlerhafte Formatierung)
+        if (trimmed.startsWith('#') && !trimmed.match(/^#{1,3}\s+/)) {
+            // Zeile beginnt mit #, aber ist keine gültige Überschrift - entferne das #
+            currentParagraph.push(trimmed.replace(/^#+\s*/, ''));
             continue;
         }
         
