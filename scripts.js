@@ -263,8 +263,6 @@ function loadTrack(index, preservePlayState = true) {
     const wasPlaying = isPlaying;
     const shouldPlay = preservePlayState ? wasPlaying : true;
     
-    console.log('🔍 loadTrack:', { index, preservePlayState, wasPlaying, isPlaying, shouldPlay });
-    
     // SOFORT: Setze UI
     updatePlayerUI(false); // IMMER erstmal auf false
     
@@ -297,18 +295,15 @@ function loadTrack(index, preservePlayState = true) {
     // KRITISCH: Wenn shouldPlay = FALSE, tue NICHTS weiter
     // Der Browser wird NICHT automatisch spielen wenn wir play() nicht aufrufen
     if (!shouldPlay) {
-        console.log('⏸️ Will stay paused - not calling play()');
         return; // RETURN HIER - keine weitere Logik
     }
     
     // Nur wenn shouldPlay = TRUE: Warte und starte dann
-    console.log('✅ Will play after load');
     const handleCanPlay = () => {
         audioPlayer.play().then(() => {
-            console.log('✅ Playing');
             updatePlayerUI(true);
         }).catch(err => {
-            console.warn('❌ Auto-play prevented:', err);
+            console.warn('Auto-play prevented:', err);
             updatePlayerUI(false);
         });
     };
