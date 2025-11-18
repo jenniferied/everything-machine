@@ -237,7 +237,9 @@ function showPage(pageId, clickedElement) {
     dropdownItems.forEach(item => {
         item.classList.remove('active');
     });
-    clickedElement.classList.add('active');
+    if (clickedElement) {
+        clickedElement.classList.add('active');
+    }
     
     // "active" Status auf dem Haupt-Toggle-Button aktualisieren
     toggleButton.classList.add('active');
@@ -249,6 +251,9 @@ function showPage(pageId, clickedElement) {
         loadJournalEntries();
         journalEntriesLoaded = true;
     }
+    
+    // Aktive Seite in localStorage speichern
+    localStorage.setItem('activePage', pageId);
     
     dropdown.classList.remove('show');
 }
@@ -454,8 +459,8 @@ function parseMarkdown(markdown) {
         html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
         
-        // Bilder behandeln
-        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-6 rounded-sm w-full h-auto max-w-4xl mx-auto" />');
+        // Bilder behandeln - Standard 75% Breite
+        html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-6 rounded-sm h-auto" />');
         
         // Überschriften
         html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
@@ -498,7 +503,7 @@ function parseMarkdown(markdown) {
                 if (!para.trim()) return '';
                 para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-4 rounded-sm w-full h-auto" />');
+                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-4 rounded-sm h-auto" />');
                 return '<p class="mb-4">' + para + '</p>';
             }).filter(p => p).join('\n');
             
@@ -524,8 +529,8 @@ function parseMarkdown(markdown) {
                 // Fettdruck und Kursiv
                 para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 para = para.replace(/\*(.*?)\*/g, '<em>$1</em>');
-                // Bilder
-                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="my-4 rounded-sm w-full h-auto" />');
+                // Bilder - Standard 75% Breite
+                para = para.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="img-75 my-4 rounded-sm h-auto" />');
                 return '<p class="mb-4">' + para + '</p>';
             }).filter(p => p).join('\n');
             
@@ -771,9 +776,29 @@ function displayEntry(index) {
 
 // Standardmäßig die 'overview'-Seite anzeigen
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('page-overview').classList.add('active');
+    // Prüfe localStorage für gespeicherte aktive Seite
+    const savedPage = localStorage.getItem('activePage');
+    const pageToShow = savedPage || 'overview';
+    
+    // Alle Seiten ausblenden
+    pages.forEach(page => {
+        page.classList.remove('active');
+    });
+    
+    // Gespeicherte Seite anzeigen
+    document.getElementById('page-' + pageToShow).classList.add('active');
+    
     // Den passenden Menüpunkt auch als "active" markieren
-    dropdown.querySelector('[data-page="overview"]').classList.add('active');
+    const activeMenuItem = dropdown.querySelector(`[data-page="${pageToShow}"]`);
+    if (activeMenuItem) {
+        dropdownItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        activeMenuItem.classList.add('active');
+    } else {
+        // Fallback: overview markieren
+        dropdown.querySelector('[data-page="overview"]').classList.add('active');
+    }
 
     // Player initialisieren
     if (typeof populatePlaylist === 'function') {
@@ -781,8 +806,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadTrack(0); // Ersten Track laden (initialisiert auch den Marquee)
     }
     
-    // Journal-Einträge laden, wenn Logbuch-Seite bereits aktiv ist
-    if (document.getElementById('page-logbook').classList.contains('active')) {
+    // Journal-Einträge laden, wenn Logbuch-Seite aktiv ist
+    if (pageToShow === 'logbook') {
         loadJournalEntries();
         journalEntriesLoaded = true;
     }
