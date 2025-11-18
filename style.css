@@ -71,7 +71,7 @@ body {
     overflow-y: hidden;
     flex-shrink: 0;
     position: relative;
-    padding: 0 0.25rem; /* Sehr minimale Abstände links/rechts */
+    padding: 0 0.125rem; /* Minimale Abstände links/rechts */
 }
 
 .timeline-horizontal::-webkit-scrollbar {
@@ -194,7 +194,7 @@ body {
 .logbook-entry-container {
     max-width: 100%;
     margin: 0;
-    padding: 0.5rem 0.25rem; /* Sehr minimale Abstände */
+    padding: 0.5rem 0.125rem; /* Minimale Abstände für Touch-Targets */
 }
 
 /* Content Grid für Bubbles - dynamisch 1-3 Spalten */
@@ -202,11 +202,12 @@ body {
     display: grid;
     gap: 1rem; /* Reduzierter Gap */
     width: 100%;
+    align-items: start; /* Bubbles nur so hoch wie ihr Inhalt */
     /* Mobile: 1 Spalte, zentriert */
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
-    padding: 0.5rem 0; /* Keine seitlichen Abstände */
+    padding: 0.5rem 0.125rem; /* Minimale Abstände */
 }
 
 /* Tablet/Small Desktop: 2 Spalten (ab ~600px, z.B. 15" Mac) */
@@ -215,7 +216,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
         margin: 0;
-        padding: 0.5rem 0; /* Keine seitlichen Abstände, align mit Timeline */
+        padding: 0.5rem 0.125rem; /* Minimale Abstände, align mit Timeline */
     }
 }
 
@@ -254,6 +255,13 @@ body {
     }
 }
 
+/* Dynamisches Sizing: Bubbles können basierend auf Inhalt unterschiedlich breit sein */
+/* Für jetzt: Responsive Spalten, aber Bubbles können bei Bedarf mehrere Spalten überspannen */
+.content-bubble {
+    height: auto; /* Keine feste Höhe */
+    min-height: auto; /* Keine minimale Höhe */
+}
+
 .bubble-medium {
     grid-column: span 1;
 }
@@ -270,6 +278,28 @@ body {
 .bubble-content img {
     margin: 1rem 0;
     border-radius: 0.25rem;
+}
+
+/* Image scaling classes */
+.img-50 {
+    width: 50% !important;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.img-75 {
+    width: 75% !important;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.img-100 {
+    width: 100% !important;
+    max-width: 100%;
 }
 
 
