@@ -222,6 +222,9 @@ if (playlistToggleBtn) {
 // --- Ende Player Logic ---
 
 
+// Flag, um zu verfolgen, ob Journal-Einträge bereits geladen wurden
+let journalEntriesLoaded = false;
+
 function showPage(pageId, clickedElement) {
     // Alle Seiten ausblenden
     pages.forEach(page => {
@@ -240,6 +243,13 @@ function showPage(pageId, clickedElement) {
     toggleButton.classList.add('active');
 
     // Dropdown schließen
+    
+    // Journal-Einträge laden, wenn Logbuch-Seite angezeigt wird
+    if (pageId === 'logbook' && !journalEntriesLoaded) {
+        loadJournalEntries();
+        journalEntriesLoaded = true;
+    }
+    
     dropdown.classList.remove('show');
 }
 
@@ -263,6 +273,167 @@ window.addEventListener('click', (e) => {
     }
 });
 
+// --- JOURNAL-LOGBUCH SYSTEM ---
+
+// Liste der Journal-Dateien (wird automatisch erweitert, wenn neue hinzugefügt werden)
+const journalFiles = [
+    'journal/journal-2025-11-15-comfyui-consistent-character.md',
+    'journal/journal-2025-11-18-marble-worldlabs.md'
+];
+
+// Einfacher Markdown-Parser
+function parseMarkdown(markdown) {
+    let html = markdown;
+    
+    // Zuerst Fettdruck und Kursiv behandeln (vor Überschriften)
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    
+    // Überschriften (# ## ###) - nach Fettdruck, damit ** nicht stört
+    html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-accent">$1</h3>');
+    html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>');
+    html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-8 mb-4">$1</h1>');
+    
+    // Absätze: Zeilen in Absätze umwandeln (aber nicht Überschriften oder leere Zeilen)
+    const lines = html.split('\n');
+    const processedLines = [];
+    let currentParagraph = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        
+        // Wenn die Zeile leer ist, beende den aktuellen Absatz
+        if (line === '') {
+            if (currentParagraph.length > 0) {
+                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+                currentParagraph = [];
+            }
+            continue;
+        }
+        
+        // Wenn die Zeile eine Überschrift ist, beende Absatz und füge Überschrift hinzu
+        if (line.match(/^<h[1-6]/)) {
+            if (currentParagraph.length > 0) {
+                processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+                currentParagraph = [];
+            }
+            processedLines.push(line);
+            continue;
+        }
+        
+        // Normale Textzeile zum Absatz hinzufügen
+        currentParagraph.push(line);
+    }
+    
+    // Letzten Absatz hinzufügen, falls vorhanden
+    if (currentParagraph.length > 0) {
+        processedLines.push('<p class="mb-4">' + currentParagraph.join(' ') + '</p>');
+    }
+    
+    html = processedLines.join('\n');
+    
+    return html;
+}
+
+// Datum aus Dateinamen extrahieren (Format: journal-YYYY-MM-DD-...)
+function extractDate(filename) {
+    const match = filename.match(/journal-(\d{4})-(\d{2})-(\d{2})/);
+    if (match) {
+        return new Date(parseInt(match[1]), parseInt(match[2]) - 1, parseInt(match[3]));
+    }
+    return new Date(0); // Fallback für ungültige Daten
+}
+
+// Datum formatieren (z.B. "15. Nov 2025")
+function formatDate(date) {
+    const months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+    return `${date.getDate()}. ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+// Titel aus Markdown extrahieren (erste Zeile mit #)
+function extractTitle(markdown) {
+    const match = markdown.match(/^# (.+)$/m);
+    return match ? match[1] : 'Unbenannter Eintrag';
+}
+
+// Journal-Einträge laden und anzeigen
+async function loadJournalEntries() {
+    const container = document.getElementById('logbook-container');
+    if (!container) {
+        console.error('Logbook-Container nicht gefunden');
+        return;
+    }
+    
+    // Loading-State anzeigen
+    container.innerHTML = '<div class="logbook-item"><p class="text-gray-400">Lade Journal-Einträge...</p></div>';
+    
+    const entries = [];
+    
+    console.log('Lade Journal-Einträge:', journalFiles);
+    
+    // Alle Journal-Dateien laden
+    for (const filename of journalFiles) {
+        try {
+            console.log(`Versuche ${filename} zu laden...`);
+            const response = await fetch(filename);
+            if (!response.ok) {
+                console.warn(`Konnte ${filename} nicht laden: ${response.status} ${response.statusText}`);
+                continue;
+            }
+            
+            let markdown = await response.text();
+            console.log(`${filename} erfolgreich geladen (${markdown.length} Zeichen)`);
+            
+            const date = extractDate(filename);
+            const title = extractTitle(markdown);
+            
+            // Datum-Zeile entfernen (Format: **DD. Monat YYYY** oder ähnlich)
+            markdown = markdown.replace(/^\*\*.*?\d{1,2}\.\s+\w+\s+\d{4}.*?\*\*\s*$/gm, '');
+            
+            let html = parseMarkdown(markdown);
+            
+            // Erste Überschrift (H1) entfernen, da sie bereits als Titel extrahiert wurde
+            html = html.replace(/<h1[^>]*>.*?<\/h1>\s*/i, '');
+            
+            entries.push({
+                filename,
+                date,
+                title,
+                html,
+                formattedDate: formatDate(date)
+            });
+        } catch (error) {
+            console.error(`Fehler beim Laden von ${filename}:`, error);
+        }
+    }
+    
+    console.log(`${entries.length} Einträge geladen`);
+    
+    if (entries.length === 0) {
+        container.innerHTML = '<div class="logbook-item"><p class="text-gray-400">Keine Journal-Einträge gefunden.</p></div>';
+        return;
+    }
+    
+    // Nach Datum sortieren (neueste zuerst)
+    entries.sort((a, b) => b.date - a.date);
+    
+    // HTML generieren und einfügen
+    let html = '';
+    entries.forEach((entry, index) => {
+        html += `
+            <div class="logbook-item">
+                <span class="text-sm text-gray-400">${entry.formattedDate}</span>
+                <h3 class="text-xl font-bold mt-2 mb-4 text-accent">${entry.title}</h3>
+                <div class="prose prose-invert max-w-none text-gray-300">
+                    ${entry.html}
+                </div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+}
+
 // Standardmäßig die 'overview'-Seite anzeigen
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('page-overview').classList.add('active');
@@ -273,5 +444,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof populatePlaylist === 'function') {
         populatePlaylist();
         loadTrack(0); // Ersten Track laden (initialisiert auch den Marquee)
+    }
+    
+    // Journal-Einträge laden, wenn Logbuch-Seite bereits aktiv ist
+    if (document.getElementById('page-logbook').classList.contains('active')) {
+        loadJournalEntries();
+        journalEntriesLoaded = true;
     }
 });

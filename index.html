@@ -139,64 +139,9 @@
         <!-- ===== SEITE 2: PROZESS-LOGBUCH (Die fließenden Blöcke) ===== -->
         <section id="page-logbook" class="page-content">
             <h2 class="text-3xl font-bold mb-8 uppercase tracking-wider">Prozess-Logbuch</h2>
-            <div class="logbook-grid">
-                <!-- Log 1 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 1 // 15. Nov 2025</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-accent">Block 1: Exploration & Setup</h3>
-                    <p class="mb-4">Start des Projekts. Sammlung aller "Ground Truth"-Artefakte: Bestehende Cover (Unreal Engine), das Voxel-Modell und das geteilte Pinterest-Board. Erste Tests in ComfyUI, um ein Basis-Stilmodell (LoRA oder IPAdapter) mit diesen Inputs zu trainieren.</p>
-                    <img src="assets/images/comfyui-graph.png" alt="ComfyUI Node Graph" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/600x400/111111/9ca3af?text=ComfyUI+Node+Graph';this.onerror=null;">
-                </div>
-                <!-- Log 2 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 2 // 22. Nov 2025</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4">Input-Analyse: Der "Vibe"</h3>
-                    <p class="mb-4">Analyse der non-visuellen Inputs. Ich habe mir das Album "BLUE EDITION" und die Single "Deine Moves" angehört und die Songtexte analysiert. Keywords: "Melancholie", "Digital", "Isolation", "Exoplanet". Diese Begriffe werden nun als Teil der Text-Prompts getestet, um zu sehen, wie sie den trainierten Stil beeinflussen.</p>
-                </div>
-                <!-- Log 3 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 3 // 05. Dez 2025</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-accent">Block 2: Experiment A (Character Sheets)</h3>
-                    <p class="mb-4">Versuch, konsistente Character Sheets zu erstellen. Das ist die größte Hürde. Ich nutze ControlNet (OpenPose) mit Posen aus den Fotoshoot-Bildern. Ergebnis: Die Posen sind konsistent, aber die Kleidung und Details (die Maske) variieren stark. Die "Identität" ist noch nicht stabil.</p>
-                    <img src="assets/images/char-sheet-1.png" alt="Character Sheet Test 1" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/600x400/111111/9ca3af?text=Character+Sheet+Test+1';this.onerror=null;">
-                </div>
-                <!-- Log 4 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 4 // 12. Dez 2025</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-accent">Block 2: Experiment B (Statische Welten)</h3>
-                    <p class="mb-4">Parallel zu den Charakter-Tests: Generierung von "Statischen Welten" (Hintergründen) für Album Cover. Das funktioniert extrem gut. Die Kombination aus dem Stilmodell und den "Vibe"-Keywords erzeugt stimmige, melancholische Sci-Fi-Umgebungen. Diese könnte man leicht mit dem Voxel-Modell in After Effects kombinieren.</p>
-                    <img src="assets/images/gen-cover.png" alt="Neues Cover (Gen BG)" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/600x600/111111/9ca3af?text=Neues+Cover+(Gen+BG)';this.onerror=null;">
-                </div>
-                <!-- Log 5 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 5 // 10. Jan 2026</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-accent">Block 3: Experiment C (Animation)</h3>
-                    <p class="mb-4">Beginn der Animationstests. Workflow 1: AnimateDiff auf die statischen Cover-Hintergründe (Log 4). Ergebnis: Gute, subtile Bewegungen (Wolken, Lichter). Ideal für Spotify Canvas.</p>
-                    <p class="mb-4">Workflow 2: Versuch, eine animierte Sequenz mit einem ControlNet (Depth Map) aus Unreal Engine zu rendern. Ergebnis: Starke Fluktuation, Kohärenz bricht zusammen.</p>
-                    <video controls muted class="rounded-sm w-full h-auto" poster="https://placehold.co/600x400/111111/9ca3af?text=Animation+Test+(AnimateDiff)">
-                        <!-- Ersetze dies mit deinem Video-Pfad -->
-                        <source src="assets/videos/anim-test.mp4" type="video/mp4">
-                        Dein Browser unterstützt das Video-Tag nicht.
-                    </video>
-                </div>
-                <!-- Log 6 -->
-                <div class="logbook-item">
-                    <span class="text-sm text-gray-400">Logbucheintrag 6 // 15. Jan 2026</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4">Reflexion: Urheberschaft & Ethik</h3>
-                    <p class="mb-4">Während des Prozesses stellt sich die Ethik-Frage (Forschungsfrage 3). Unser Training basiert nur auf "eigenen Werken" (Gavins Musik, meine Artworks, unser Pinterest-Board). Wir nutzen keine Bilder von anderen Künstlern. Das fühlt sich "sauber" an. Die KI ist hier klar ein Werkzeug, das unseren Stil remixed, kein Ersatz für die Kreation.</p>
-                </div>
-                <!-- Log 7 / Evaluation -->
-                <div class="logbook-item" style="grid-column: 1 / -1;"> <!-- Breiterer Block für Auswertung -->
-                    <span class="text-sm text-gray-400">Logbucheintrag 7 // 01. Feb 2026</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-accent">Block 4: Evaluation & Reflexion</h3>
-                    <p class="mb-4">Auswertung der Logbücher und Dialoge. Die Forschungsfragen können wie folgt beantwortet werden:
-                       <br>1. **Kohärenz:** Die Kohärenz konnte für "Welten" und "Vibes" extrem gut gewahrt werden. Bei der "Charakter"-Generierung scheiterte sie.
-                       <br>2. **Produktion:** Das Voxel-Problem wurde nicht *gelöst*, sondern *umgangen*. Der beste Workflow ist: **Voxel-Charakter (UE/C4D) + KI-Hintergrund (ComfyUI) + Compositing (AE)**.
-                       <br>3. **Ethik:** Durch die Nutzung eines "sauberen" Input-Pools wurde die künstlerische Autorschaft gewahrt.
-                       <br>4. **Reflexion:** Der Prozess wurde von beiden Parteien als extrem fruchtbar empfunden. Die KI dient als Inspirations- und Produktionspartner, nicht als Ersatz. Die Metapher der "hyperrealen" Transformation wurde bestätigt.
-                    </p>
-                </div>
-            </div> <!-- Ende .logbook-grid -->
+            <div class="logbook-grid" id="logbook-container">
+                <!-- Journal-Einträge werden hier dynamisch geladen -->
+            </div>
         </section>
 
         <!-- ===== SEITE 3: KÜNSTLER-DIALOGE (Gesonderte Seite) ===== -->
