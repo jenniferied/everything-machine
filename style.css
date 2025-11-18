@@ -69,6 +69,7 @@ body {
     overflow-y: hidden;
     flex-shrink: 0;
     position: relative;
+    padding: 0 0.5rem; /* Minimale Abstände links/rechts */
 }
 
 .timeline-horizontal::-webkit-scrollbar {
@@ -85,7 +86,7 @@ body {
 }
 
 .timeline-list {
-    padding: 0.75rem 1rem; /* py-3 px-4 */
+    padding: 0.75rem 0.25rem; /* py-3, minimale px */
     display: flex;
     flex-direction: row;
     gap: 0.5rem; /* gap-2 */
@@ -183,7 +184,7 @@ body {
 .logbook-main {
     flex: 1;
     overflow-y: auto;
-    padding: 2rem; /* p-8 */
+    padding: 0; /* Kein Padding */
     background-color: #111;
     min-height: 0; /* Wichtig für Flexbox overflow */
 }
@@ -191,18 +192,19 @@ body {
 .logbook-entry-container {
     max-width: 100%;
     margin: 0;
-    padding: 1.5rem;
+    padding: 0.5rem 0.75rem; /* Minimale Abstände */
 }
 
 /* Content Grid für Bubbles - dynamisch 1-3 Spalten */
 .content-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem; /* Reduzierter Gap */
     width: 100%;
     /* Mobile: 1 Spalte, zentriert */
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+    padding: 0.5rem 0.25rem; /* Minimale Abstände */
 }
 
 /* Tablet/Small Desktop: 2 Spalten (ab ~600px, z.B. 15" Mac) */
@@ -210,8 +212,8 @@ body {
     .content-grid {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
-        margin: 0 auto;
-        padding: 0 1rem;
+        margin: 0;
+        padding: 0.5rem 0.25rem; /* Minimale Abstände, align mit Timeline */
     }
 }
 
