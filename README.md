@@ -30,6 +30,8 @@ Statische Website optimiert für GitHub Pages:
 ├── style.css           # Benutzerdefinierte Stile
 ├── scripts.js          # JavaScript-Logik
 ├── README.md           # Diese Datei
+├── journal/            # Journal-Einträge (Markdown)
+│   └── *.md            # Journal-Dateien im Format journal-YYYY-MM-DD-titel.md
 └── assets/
     ├── images/         # Projektbilder
     └── videos/         # Videos
@@ -40,7 +42,13 @@ Statische Website optimiert für GitHub Pages:
 1. Repository klonen
 2. Assets hinzufügen: Bilder und Videos in den entsprechenden `assets/`-Ordnern ablegen
 3. Pfade in `index.html` anpassen
-4. Lokale Vorschau: `index.html` direkt im Browser öffnen oder einen lokalen Server verwenden (z.B. VS Code Live Server)
+4. **WICHTIG**: Lokale Vorschau erfordert einen lokalen Server, da die Journal-Einträge per `fetch()` geladen werden (CORS-Beschränkungen bei `file://` Protokoll)
+   
+   **Optionen für lokalen Server:**
+   - VS Code: Live Server Extension verwenden
+   - Python: `python3 -m http.server 8000` im Projektverzeichnis
+   - Node.js: `npx http-server` im Projektverzeichnis
+   - Dann im Browser öffnen: `http://localhost:8000`
 
 ## Veröffentlichung auf GitHub Pages
 
