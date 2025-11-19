@@ -21,20 +21,60 @@ Statische Website optimiert für GitHub Pages:
 - **HTML5**: Semantische Struktur
 - **CSS3**: Benutzerdefiniertes Dark-Theme ("Kepler Vibe") mit IBM Plex Mono Font, CSS Grid Layout
 - **Tailwind CSS**: Per CDN für Utility-Klassen
-- **JavaScript**: Natives ES6+ für SPA-ähnliche Seitennavigation
+- **JavaScript**: Modular ES6+ mit SOLID-Prinzipien
+
+## Architektur
+
+Dieses Projekt folgt konsequent SOLID-Prinzipien für wartbaren, testbaren Code:
+
+- **Single Responsibility**: Jedes Modul hat eine klar definierte Aufgabe
+- **Open/Closed**: Erweiterbar durch Komposition, nicht durch Modifikation
+- **Liskov Substitution**: Alle Viewer/Player implementieren Basis-Interfaces
+- **Interface Segregation**: Minimale, fokussierte Schnittstellen
+- **Dependency Inversion**: Abhängigkeiten von Abstraktionen (EventBus), nicht von konkreten Klassen
+
+Alle Features sind als ES6-Module mit klaren Verantwortlichkeiten und Dependency Injection implementiert. Siehe [IMPLEMENTATION.md](IMPLEMENTATION.md) für Details zur Architektur.
 
 ## Projektstruktur
 
 ```
-├── index.html          # Haupt-HTML-Datei
-├── style.css           # Benutzerdefinierte Stile
-├── scripts.js          # JavaScript-Logik
-├── README.md           # Diese Datei
-├── journal/            # Journal-Einträge (Markdown)
-│   └── *.md            # Journal-Dateien im Format journal-YYYY-MM-DD-titel.md
+├── index.html              # Haupt-HTML-Datei
+├── style.css               # Benutzerdefinierte Stile
+├── .cursorrules            # KI-Entwicklungsrichtlinien (SOLID)
+├── README.md               # Diese Datei
+├── IMPLEMENTATION.md       # Architektur-Dokumentation
+├── js/                     # Modulare JavaScript-Architektur
+│   ├── app.js              # Haupt-Orchestrator
+│   ├── core/               # Kern-Services (EventBus, FeatureDetector, ScriptLoader)
+│   ├── audio/              # Musik-Player-System
+│   │   ├── MusicPlayer.js          # Haupt-Koordinator
+│   │   ├── Playlist.js             # Playlist-Daten
+│   │   ├── PlaybackController.js   # Wiedergabe-Logik
+│   │   ├── PlayerUI.js             # UI-Updates & Marquee
+│   │   └── timeFormatter.js        # Zeit-Formatierung
+│   ├── navigation/         # Navigations-System
+│   │   ├── PageNavigator.js        # Seitenwechsel
+│   │   ├── DropdownController.js   # Dropdown-Verwaltung
+│   │   └── NavigationState.js      # localStorage-Persistenz
+│   ├── journal/            # Journal-System
+│   │   ├── JournalManager.js       # Haupt-Koordinator
+│   │   ├── JournalLoader.js        # Datei-Laden
+│   │   ├── MarkdownParser.js       # Markdown → HTML
+│   │   ├── TimelineRenderer.js     # Timeline-Anzeige
+│   │   ├── EntryRenderer.js        # Eintrags-Darstellung
+│   │   ├── TypingAnimation.js      # Tipp-Animation
+│   │   ├── GridLayoutOptimizer.js  # Grid-Layout
+│   │   └── WorldInfoComponent.js   # Welt-Info-Widgets
+│   ├── viewers/            # 3D/Video-Viewer
+│   ├── animations/         # Floating-Animationen
+│   ├── media/              # LazyLoader, ImageGallery
+│   └── ui/                 # UI-Komponenten (AIAttribution)
+├── journal/                # Journal-Einträge (Markdown)
+│   └── *.md                # Format: journal-YYYY-MM-DD-titel.md
 └── assets/
-    ├── images/         # Projektbilder
-    └── videos/         # Videos
+    ├── images/             # Projektbilder
+    ├── audio/              # Musik-Dateien
+    └── journal/            # Journal-Assets
 ```
 
 ## Lokale Entwicklung
