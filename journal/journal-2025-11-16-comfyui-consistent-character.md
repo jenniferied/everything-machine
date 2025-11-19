@@ -1,6 +1,6 @@
-# Referenzen sammeln und ComfyUI Consistent Character Workflow ausprobieren
+# ComfyUI Consistent Character Workflow ausprobieren
 
-**15. November 2025**
+**16. November 2025**
 
 Heute habe ich mich zum ersten Mal richtig mit dem ComfyUI Consistent Character Workflow beschäftigt. Das Ziel war klar: Ich wollte herausfinden, ob ich damit konsistente Darstellungen von Kepler über verschiedene Bilder hinweg erzeugen kann, ohne jedes Mal von vorne anfangen zu müssen.
 

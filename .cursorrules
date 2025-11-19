@@ -1,0 +1,243 @@
+# Everything Machine - Cursor AI Rules
+
+## Code Architecture Principles
+
+### SOLID Principles (MANDATORY)
+- **Single Responsibility**: Each class/module has ONE clear purpose
+- **Open/Closed**: Extend through composition, not modification
+- **Liskov Substitution**: Implementations must be interchangeable
+- **Interface Segregation**: Minimal, focused interfaces
+- **Dependency Inversion**: Depend on abstractions (EventBus), not concrete classes
+
+### Module Structure
+- One class per file (except small utilities)
+- ES6 modules exclusively (import/export)
+- Dependency injection via constructors
+- EventBus for cross-component communication
+- NO global variables (except the app instance)
+- Every component has a `dispose()` method for cleanup
+
+### File Naming Conventions
+- **Classes**: PascalCase (e.g., `MusicPlayer.js`, `PlaybackController.js`)
+- **Utilities**: camelCase (e.g., `timeFormatter.js`, `dateUtils.js`)
+- **Descriptive names**: `PlayerUI.js` not `UI.js`, `JournalLoader.js` not `Loader.js`
+
+### Event Naming Convention
+- **Format**: `category:action` (lowercase, colon separator)
+- **Examples**: 
+  - `player:play`, `player:pause`, `player:trackChanged`
+  - `journal:loaded`, `journal:entrySelected`
+  - `nav:pageChanged`, `nav:dropdownToggled`
+- **Consistency**: Use past tense for completed actions (`loaded`, `changed`)
+
+## Code Quality Standards
+
+### Documentation
+- JSDoc comments for public methods
+- Explain WHY, not WHAT (code should be self-explanatory)
+- Document parameter types and return values
+- Include usage examples for complex APIs
+
+### Error Handling
+- Always handle promise rejections
+- Log errors with context: `console.error('[ComponentName] Error message:', error)`
+- Provide fallbacks for non-critical failures
+- Never fail silently
+
+### Performance
+- Debounce expensive operations (layout calculations, DOM updates)
+- Use `requestAnimationFrame` for visual updates
+- Lazy load heavy dependencies
+- Dispose resources properly (event listeners, timers, observers)
+
+## Commit Strategy (CRITICAL)
+
+### When to Commit
+✅ **COMMIT WHEN**:
+- Feature works and is tested manually in browser
+- All console errors are resolved
+- Feature integration doesn't break existing functionality
+- You have verified the changes visually
+
+❌ **DO NOT COMMIT WHEN**:
+- You "think" it works but haven't tested
+- There are console errors
+- You haven't opened the browser yet
+- Code is incomplete or commented out
+
+### Testing Before Commit Checklist
+1. Open browser DevTools (Console + Network tabs)
+2. Test the feature manually (click buttons, navigate, etc.)
+3. Check console for errors or warnings
+4. Verify no regressions in related features
+5. Check EventBus debug logs (if enabled)
+6. Test on both desktop and mobile viewport
+7. **THEN** commit with descriptive message
+
+### Commit Message Format
+```
+[Component] Brief description
+
+- Detailed change 1
+- Detailed change 2
+
+Tested: [What you tested manually]
+```
+
+Example:
+```
+[Audio] Implement SOLID music player system
+
+- Create Playlist, PlaybackController, PlayerUI modules
+- Wire up EventBus communication
+- Migrate marquee animation from scripts.js
+
+Tested: Play/pause, next/prev, playlist selection, time display
+```
+
+## Development Workflow
+
+### Building New Features
+1. **Plan**: Identify responsibilities and dependencies
+2. **Create**: Build module with clear interface
+3. **Test**: Test in isolation first
+4. **Integrate**: Wire into app.js with EventBus
+5. **Verify**: Test integration and cross-feature behavior
+6. **Document**: Update IMPLEMENTATION.md
+7. **Commit**: Follow commit checklist above
+
+### Refactoring Existing Code
+1. **Understand**: Read and understand current implementation
+2. **Extract**: Identify distinct responsibilities
+3. **Create**: Build new modules with SOLID principles
+4. **Parallel**: Keep old code working while building new
+5. **Switch**: Replace old with new, test thoroughly
+6. **Remove**: Delete old code only after verification
+7. **Document**: Update documentation
+
+### Debugging
+- Use browser DevTools, not console.log spam
+- Enable EventBus debug mode: `eventBus.setDebugMode(true)`
+- Check Network tab for failed fetches
+- Use breakpoints, not alerts
+- Check memory leaks with Performance tab
+
+## Project-Specific Guidelines
+
+### EventBus Usage
+```javascript
+// Emit events for state changes
+this.eventBus.emit('player:trackChanged', { trackIndex, track });
+
+// Listen to events from other components
+this.eventBus.on('nav:pageChanged', (pageId) => {
+  // React to page change
+});
+
+// Always dispose listeners
+dispose() {
+  this.eventBus.off('nav:pageChanged', this.handlePageChange);
+}
+```
+
+### DOM Element Injection
+```javascript
+// GOOD: Inject DOM elements
+constructor(containerElement, eventBus) {
+  this.container = containerElement;
+  this.eventBus = eventBus;
+}
+
+// BAD: Query inside constructor
+constructor(eventBus) {
+  this.container = document.getElementById('player'); // Hard-coded coupling
+}
+```
+
+### Progressive Enhancement
+- Always provide fallbacks
+- Detect capabilities before using features
+- Graceful degradation for unsupported browsers
+- Mobile-first responsive design
+
+### Audio System Specifics
+- Use EventBus for playback state changes
+- Time updates throttled to avoid performance issues
+- Playlist data is immutable
+- UI updates are reactive to playback events
+
+### Journal System Specifics
+- Markdown parsing is synchronous
+- Rendering is asynchronous (waits for images)
+- Grid layout optimizes on resize (debounced)
+- Typing animation uses RAF for smooth updates
+
+### Navigation System Specifics
+- localStorage for persistence
+- Emit events for page changes
+- Lazy load journal only when needed
+- Dropdowns are mutually exclusive
+
+## Code Smells to Avoid
+
+❌ **Global Variables**
+```javascript
+let currentTrack = 0; // BAD
+```
+
+❌ **Direct DOM Queries in Methods**
+```javascript
+play() {
+  document.getElementById('audio').play(); // BAD
+}
+```
+
+❌ **Mixed Concerns**
+```javascript
+loadTrack(index) {
+  // Load audio
+  // Update UI
+  // Save to localStorage
+  // Send analytics
+  // BAD - too many responsibilities
+}
+```
+
+❌ **Magic Numbers/Strings**
+```javascript
+if (type === 'song') // BAD
+const SONG_TYPE = 'song'; // GOOD
+```
+
+## AI Agent Instructions
+
+When asked to implement features:
+1. Ask clarifying questions if requirements are ambiguous
+2. Propose SOLID architecture before coding
+3. Show interface/API design first
+4. Implement with dependency injection
+5. Include dispose methods
+6. Emit relevant events
+7. Test manually before marking done
+
+When asked to debug:
+1. Ask for browser console output
+2. Check EventBus logs
+3. Verify DOM elements exist
+4. Check network requests
+5. Propose hypothesis before making changes
+
+When asked to refactor:
+1. Identify SOLID violations
+2. Propose module breakdown
+3. Keep old code working during transition
+4. Test each module independently
+5. Remove old code only after verification
+
+## Resources
+
+- **SOLID Principles**: https://en.wikipedia.org/wiki/SOLID
+- **EventBus Pattern**: Pub/sub for loose coupling
+- **Dependency Injection**: Constructor injection preferred
+- **Project Documentation**: See IMPLEMENTATION.md for architecture details
+

@@ -3,6 +3,18 @@ body {
     background-color: #111; /* Dunkler als bg-gray-900 */
     color: #d1d5db; /* text-gray-300 */
     font-family: 'IBM Plex Mono', monospace; /* Monospace-Font für den "Matrix/Research"-Look */
+    font-size: 16px; /* Explizite Base-Size für konsistente Darstellung */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%; /* Verhindert Safari's automatische Text-Vergrößerung */
+    text-size-adjust: 100%;
+}
+
+/* Safari-spezifische Monospace-Font Korrektur */
+@supports (-webkit-hyphens:none) {
+    body, p, div, span, a, button, input, textarea {
+        font-size: inherit; /* Safari rendert Monospace oft größer - erzwingt Vererbung */
+    }
 }
 
 /* --- Akzentfarbe: Matrix Grün --- */
@@ -62,6 +74,7 @@ main.container {
     flex-direction: column;
     gap: 0;
     min-height: calc(100vh - 80px); /* Mindesthöhe minus Header */
+    min-height: -webkit-calc(100vh - 80px); /* Safari-spezifisch */
     height: 100%;
     overflow: hidden;
     margin: 0;
@@ -72,7 +85,7 @@ main.container {
 /* Horizontale Timeline oben */
 .timeline-horizontal {
     width: 100%;
-    height: 60px; /* Schlanker */
+    height: 70px; /* Höher für Safari (war 60px) */
     background-color: #111; /* Dunkler Hintergrund */
     border-bottom: 1px solid #374151; /* border-gray-700 */
     display: flex;
@@ -82,6 +95,7 @@ main.container {
     flex-shrink: 0;
     position: relative;
     padding: 0 1.25rem; /* Max 20px auf Desktop */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling auf iOS Safari */
 }
 
 @media (max-width: 768px) {
@@ -104,12 +118,13 @@ main.container {
 }
 
 .timeline-list {
-    padding: 0.45rem 0; /* kompakter */
+    padding: 0.5rem 0; /* Etwas mehr padding für Safari */
     display: flex;
     flex-direction: row;
     gap: 0.5rem; /* gap-2 */
     align-items: center;
     min-width: 100%;
+    height: 100%; /* Volle Höhe der Timeline nutzen */
 }
 
 .timeline-item {
@@ -126,14 +141,16 @@ main.container {
     flex-direction: column;
     align-items: center;
     min-width: 110px;
-    height: 100%;
+    height: auto; /* auto statt 100% für Safari */
+    max-height: 100%;
     justify-content: center;
+    padding-bottom: 0.5rem; /* Mehr Platz für das ::before Element */
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -3px; /* Weniger negativ (war -6px) damit es nicht über den Rand geht */
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
@@ -177,6 +194,13 @@ main.container {
     text-align: center;
 }
 
+/* Safari-spezifische Korrektur für Timeline-Text */
+@supports (-webkit-hyphens:none) {
+    .timeline-item-date {
+        font-size: 0.65rem; /* Kleiner in Safari */
+    }
+}
+
 .timeline-item:hover .timeline-item-date,
 .timeline-item.active .timeline-item-date {
     color: #4ade80; /* text-accent */
@@ -192,6 +216,13 @@ main.container {
     max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Safari-spezifische Korrektur für Timeline-Titel */
+@supports (-webkit-hyphens:none) {
+    .timeline-item-title {
+        font-size: 0.7rem; /* Kleiner in Safari */
+    }
 }
 
 .timeline-item:hover .timeline-item-title,
@@ -266,6 +297,14 @@ main.container {
 .bubble-content {
     color: #d1d5db; /* text-gray-300 */
     line-height: 1.6;
+    font-size: 1rem; /* Explizite Größe für Konsistenz */
+}
+
+/* Safari-spezifische Korrektur für Bubble-Content */
+@supports (-webkit-hyphens:none) {
+    .bubble-content {
+        font-size: 0.95rem; /* Etwas kleiner in Safari */
+    }
 }
 
 .bubble-content p {
@@ -313,6 +352,13 @@ main.container {
     position: relative;
     display: inline-flex;
     align-items: center;
+}
+
+/* Safari-spezifische Korrektur für Journal-Titel */
+@supports (-webkit-hyphens:none) {
+    .journal-title {
+        font-size: 1.9rem; /* Kleiner in Safari */
+    }
 }
 
 .journal-title-typing {
@@ -496,6 +542,13 @@ main.container {
     text-transform: uppercase;
 }
 
+/* Safari-spezifische Korrektur für Navigation */
+@supports (-webkit-hyphens:none) {
+    .top-bar {
+        font-size: 0.8rem; /* Kleiner in Safari */
+    }
+}
+
 .nav-separator {
     color: #4b5563; /* text-gray-600 */
     margin: 0 0.75rem; /* mx-3 */
@@ -551,6 +604,7 @@ main.container {
     display: none; /* Standardmäßig ausgeblendet */
     padding: 1.5rem; /* p-6 */
     min-height: calc(100vh - 80px);
+    min-height: -webkit-calc(100vh - 80px); /* Safari-spezifisch */
 }
 .page-content.active {
     display: block; /* Wird per JS eingeblendet */
@@ -1116,5 +1170,309 @@ main.container {
     .image-lightbox-caption {
         font-size: 0.875rem;
         padding: 0.75rem 1rem;
+    }
+}
+
+/* --- Viewer Components --- */
+.viewer-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.viewer-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 17, 17, 0.9);
+    z-index: 10;
+    color: #4ade80;
+}
+
+.viewer-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #374151;
+    border-top-color: #4ade80;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.viewer-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.viewer-fallback-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.viewer-fallback-text {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* --- AI Attribution Component --- */
+.ai-attribution {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Simple, low-key one-liner style */
+.ai-attribution-simple {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.ai-attribution-simple .ai-attribution-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* Legacy badge styles (kept for backwards compatibility) */
+.ai-attribution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid #4ade80;
+    border-radius: 9999px;
+    color: #4ade80;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ai-attribution-badge:hover {
+    background: rgba(74, 222, 128, 0.1);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+.ai-attribution-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.ai-attribution-text {
+    font-weight: 500;
+}
+
+.ai-attribution-toggle {
+    background: none;
+    border: none;
+    color: #4ade80;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.ai-attribution-toggle:hover {
+    transform: scale(1.1);
+}
+
+.ai-attribution-toggle[aria-expanded="true"] .ai-attribution-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.ai-attribution-toggle-icon {
+    transition: transform 0.2s ease;
+}
+
+.ai-attribution-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.ai-attribution-details.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.ai-attribution-section {
+    background: rgba(31, 41, 55, 0.3);
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ai-attribution-section:last-child {
+    margin-bottom: 0;
+}
+
+.ai-attribution-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4ade80;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ai-attribution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ai-attribution-list-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #374151;
+    color: #d1d5db;
+}
+
+.ai-attribution-list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ai-attribution-list-item strong {
+    color: #f3f4f6;
+    font-weight: 500;
+}
+
+.ai-attribution-provider {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.ai-attribution-usage {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.ai-attribution-workflow {
+    margin: 0;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.ai-attribution-note {
+    background: rgba(74, 222, 128, 0.05);
+    border-left: 3px solid #4ade80;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+.ai-attribution-note p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* --- Floating Animation Elements --- */
+.floating-element,
+.parallax-element {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-element:hover,
+.parallax-element:hover {
+    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.15);
+}
+
+/* CSS fallback animations */
+@keyframes float-subtle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotate-subtle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .floating-element,
+    .parallax-element,
+    .viewer-spinner,
+    .ai-attribution-toggle-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .viewer-container {
+        height: 300px !important;
+    }
+    
+    .ai-attribution {
+        margin: 1rem;
+    }
+    
+    .ai-attribution-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .ai-attribution-section {
+        padding: 1rem;
+    }
+    
+    .ai-attribution-section-title {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Touch-friendly targets for mobile --- */
+@media (hover: none) and (pointer: coarse) {
+    .ai-attribution-badge,
+    .ai-attribution-toggle,
+    .viewer-fallback {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
