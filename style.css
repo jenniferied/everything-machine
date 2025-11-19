@@ -11,7 +11,17 @@ body {
 }
 
 /* Safari-spezifische Monospace-Font Korrektur */
+/* TODO: Safari fonts sind immer noch etwas größer - weitere Optionen:
+   - Base font-size weiter reduzieren (14px oder 13.5px)
+   - Alternativ: CSS Transform scale(0.95) auf body für Safari
+   - Oder: Jeden Font-Size Wert einzeln mit calc() reduzieren
+   - Testen mit: font-size: calc(1rem * 0.9375); für Safari
+*/
 @supports (-webkit-hyphens:none) {
+    body {
+        font-size: 15px; /* Kleinere Base-Size für Safari (war 16px) */
+    }
+    
     body, p, div, span, a, button, input, textarea {
         font-size: inherit; /* Safari rendert Monospace oft größer - erzwingt Vererbung */
     }
