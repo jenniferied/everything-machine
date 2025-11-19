@@ -116,13 +116,13 @@
                         <p>Dieses Artistic Research-Projekt knüpft an eine solche bestehende künstlerische Kollaboration an: die digitale Identität "Kepler" des Musikers Gavin Just. Aufbauend auf einer gemeinsamen Praxis, in der bereits digitale Album-/Song Cover und "Shorts" (Animationen) entstanden sind, stellt sich eine zentrale Herausforderung: Die visuelle Welt von Kepler entwickelt sich oft langsamer als die musikalische oder performative Ebene des Künstlers. Diese Diskrepanz steht in einem besonderen Spannungsfeld zu Keplers eigenem Narrativ – einer geplanten Transformation von einer 2D-Figur über eine 3D-Voxel-Gestalt bis hin zu einer realen und schließlich "hyperrealen" Existenz.</p>
                         
                         <!-- 
-                        ACHTUNG: Aktualisiere diese Pfade, sodass sie auf deine Bilder im Ordner 'assets/images/' verweisen.
+                        Floating images with parallax effects
                         -->
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <img src="assets/images/kepler-voxel.png" alt="Kepler Voxel-Art" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Kepler+Voxel';this.onerror=null;">
-                            <img src="assets/images/artefakt-1.png" alt="Projekt-Artefakt 1" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Artefakt+1';this.onerror=null;">
-                            <img src="assets/images/artefakt-2.png" alt="Projekt-Artefakt 2" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Artefakt+2';this.onerror=null;">
-                            <img src="assets/images/inspiration.png" alt="Inspiration-Board" class="rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Inspiration';this.onerror=null;">
+                            <img src="assets/images/kepler-voxel.png" alt="Kepler Voxel-Art" class="floating-element rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Kepler+Voxel';this.onerror=null;" data-floating>
+                            <img src="assets/images/artefakt-1.png" alt="Projekt-Artefakt 1" class="floating-element rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Artefakt+1';this.onerror=null;" data-floating>
+                            <img src="assets/images/artefakt-2.png" alt="Projekt-Artefakt 2" class="floating-element rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Artefakt+2';this.onerror=null;" data-floating>
+                            <img src="assets/images/inspiration.png" alt="Inspiration-Board" class="floating-element rounded-sm object-cover w-full h-auto" onerror="this.src='https://placehold.co/400x400/1f2937/9ca3af?text=Inspiration';this.onerror=null;" data-floating>
                         </div>
 
                         <p>Das Ziel dieser Arbeit ist es, einen explorativen, KI-gestützten Prozess zu entwickeln... Diese Herangehensweise ist von der Arbeit von Künstlern wie Refik Anadol inspiriert... In diesem Projekt wird der Einsatz von KI somit selbst zur Metapher für Keplers Transformation in eine "hyperreale" Identität.</p>
@@ -145,8 +145,22 @@
                         <p class="mb-4">Diese Arbeit folgt keinem starren technischen Plan, sondern einer Methodik des explorativen Artistic Research. Der Prozess wird in drei iterative Zeitblöcke aufgeteilt...</p>
                         <p>Parallel wird ein reflexives Prozess-Tagebuch ("Logbuch") geführt. Jeder Block schließt mit einem semi-strukturierten "Künstler-Klienten-Dialog" mit Gavin Just...</p>
                         <!-- Platzhalter für das Zeitplan-Diagramm -->
-                        <img src="assets/images/zeitplan.png" alt="Zeitplan" class="rounded-sm object-cover w-full h-auto mt-4" onerror="this.src='https://placehold.co/600x200/1f2937/9ca3af?text=Zeitplan-Diagramm+(Block+1-4)';this.onerror=null;">
+                        <img src="assets/images/zeitplan.png" alt="Zeitplan" class="parallax-element rounded-sm object-cover w-full h-auto mt-4" onerror="this.src='https://placehold.co/600x200/1f2937/9ca3af?text=Zeitplan-Diagramm+(Block+1-4)';this.onerror=null;" data-parallax>
                     </div>
+                </div>
+
+                <!-- 3D Viewer Section (Kepler Model) -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Kepler in 3D</h3>
+                    <p class="text-gray-300 mb-6">Interaktive 3D-Visualisierung der Kepler-Figur. Bewege die Maus oder berühre den Bildschirm, um das Modell zu drehen.</p>
+                    <div id="3d-viewer-container" class="viewer-container" style="height: 400px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
+                </div>
+
+                <!-- Point Cloud Viewer Section (Optional) -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Point Cloud Exploration</h3>
+                    <p class="text-gray-300 mb-6">Experimentelle Punktwolken-Visualisierung (nur auf unterstützten Geräten).</p>
+                    <div id="point-cloud-viewer-container" class="viewer-container" style="height: 400px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
                 </div>
 
             </div>
@@ -207,7 +221,9 @@
     </main>
 
     <footer class="text-center py-8 mt-12 border-t border-gray-800">
-        <p class="text-sm text-gray-500">Ein Artistic Research-Projekt von Jennifer Meier (MA Medienproduktion).</p>
+        <p class="text-sm text-gray-500 mb-4">Ein Artistic Research-Projekt von Jennifer Meier (MA Medienproduktion).</p>
+        <!-- AI Attribution Component (will be rendered by JavaScript) -->
+        <div class="ai-attribution-container"></div>
     </footer>
 
     <!-- Image Lightbox Modal -->
@@ -222,8 +238,8 @@
         </div>
     </div>
 
-    <!-- Externe JavaScript-Datei -->
-    <script src="scripts.js" defer></script>
+    <!-- Modular Architecture -->
+    <script type="module" src="js/app.js"></script>
 
 </body>
 </html>
