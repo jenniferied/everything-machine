@@ -30,9 +30,12 @@
                 <div class="relative">
                     <button id="contents-toggle" class="nav-link dropdown-toggle active" aria-haspopup="true">Inhalt</button>
                     <div id="dropdown-menu" class="dropdown-menu" role="menu">
-                        <button class="dropdown-item active" data-page="overview" onclick="showPage('overview', this)" role="menuitem">Projektübersicht</button>
-                        <button class="dropdown-item" data-page="logbook" onclick="showPage('logbook', this)" role="menuitem">Prozess-Logbuch</button>
-                        <button class="dropdown-item" data-page="dialogues" onclick="showPage('dialogues', this)" role="menuitem">Künstler-Dialoge</button>
+                        <button class="dropdown-item active" data-page="overview" role="menuitem">Projektübersicht</button>
+                        <button class="dropdown-item" data-page="framework" role="menuitem">Forschungsrahmen</button>
+                        <button class="dropdown-item" data-page="references" role="menuitem">Referenzarbeiten</button>
+                        <button class="dropdown-item" data-page="logbook" role="menuitem">Prozess-Logbuch</button>
+                        <button class="dropdown-item" data-page="dialogues" role="menuitem">Künstler-Dialoge</button>
+                        <button class="dropdown-item" data-page="about" role="menuitem">Über mich</button>
                     </div>
                 </div>
 
@@ -152,17 +155,44 @@
                 <!-- 3D Viewer Section (Kepler Model) -->
                 <div>
                     <h3 class="text-2xl font-bold mb-4 uppercase">Kepler in 3D</h3>
-                    <p class="text-gray-300 mb-6">Interaktive 3D-Visualisierung der Kepler-Figur. Bewege die Maus oder berühre den Bildschirm, um das Modell zu drehen.</p>
-                    <div id="3d-viewer-container" class="viewer-container" style="height: 400px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
+                    <p class="text-gray-300 mb-4">Interaktive 3D-Visualisierung der Kepler-Figur. Bewege die Maus oder berühre den Bildschirm, um das Modell zu drehen.</p>
+                    <div id="3d-viewer-container" class="viewer-container" style="height: 280px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
                 </div>
 
-                <!-- Point Cloud Viewer Section (Optional) -->
+                <!-- Point Cloud Viewer Section -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase">Point Cloud Exploration</h3>
-                    <p class="text-gray-300 mb-6">Experimentelle Punktwolken-Visualisierung (nur auf unterstützten Geräten).</p>
-                    <div id="point-cloud-viewer-container" class="viewer-container" style="height: 400px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Point Cloud</h3>
+                    <p class="text-gray-300 mb-4">Interaktive Punktwolken-Visualisierung mit Three.js.</p>
+                    <div id="point-cloud-viewer-container" class="viewer-container" style="height: 280px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
                 </div>
 
+                <!-- Gaussian Splat Viewer Section -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Gaussian Splat</h3>
+                    <p class="text-gray-300 mb-4">3D Gaussian Splatting - eine neue Technik für fotorealistische 3D-Szenen.</p>
+                    <div id="gaussian-splat-viewer-container" class="viewer-container" style="height: 280px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SEITE: FORSCHUNGSRAHMEN ===== -->
+        <section id="page-framework" class="page-content">
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="prose prose-invert max-w-none" id="framework-content">
+                    <!-- Inhalt wird aus FORSCHUNGSRAHMEN.md geladen -->
+                    <p class="text-gray-400">Lade Forschungsrahmen...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEITE: REFERENZARBEITEN ===== -->
+        <section id="page-references" class="page-content">
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="prose prose-invert max-w-none" id="references-content">
+                    <!-- Inhalt wird aus referenzen.md geladen -->
+                    <p class="text-gray-400">Lade Referenzarbeiten...</p>
+                </div>
             </div>
         </section>
 
@@ -218,6 +248,95 @@
             </div> <!-- Ende .logbook-grid -->
         </section>
 
+        <!-- ===== SEITE 4: ÜBER MICH (About Page) ===== -->
+        <section id="page-about" class="page-content">
+            <div class="about-layout max-w-4xl mx-auto">
+                <!-- Profile Header -->
+                <div class="about-header">
+                    <div class="about-profile-grid">
+                        <div class="about-image-container">
+                            <img src="https://placehold.co/300x300/1f2937/4ade80?text=Jennifer+Meier" alt="Jennifer Meier" class="about-profile-image">
+                        </div>
+                        <div class="about-info">
+                            <h1 class="about-name">Jennifer Meier</h1>
+                            <p class="about-role">Master Student + Research Assistant</p>
+                            <p class="about-institution">Technische Hochschule OWL</p>
+                            <a href="mailto:m.jennifer@outlook.com" class="about-email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="inline mr-2">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                                m.jennifer@outlook.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests Section -->
+                <div class="about-section">
+                    <h2 class="about-section-title">Interessen & Schwerpunkte</h2>
+                    <div class="about-interests-grid">
+                        <div class="about-interest-card">
+                            <div class="about-interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-interest-title">Virtual Production</h3>
+                            <p class="about-interest-desc">LED Walls, Real-Time Rendering, Unreal Engine für Film- und Fernsehproduktion</p>
+                        </div>
+                        <div class="about-interest-card">
+                            <div class="about-interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 1a.5.5 0 0 1 .5.5V6h-1V1.5A.5.5 0 0 1 8 1Zm0 14a.5.5 0 0 1-.5-.5V10h1v4.5a.5.5 0 0 1-.5.5ZM2 7a1 1 0 0 0-1 1v.5H.5a.5.5 0 0 0 0 1h.5V10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2Zm.5 1.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM13 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-.5h.5a.5.5 0 0 0 0-1H15V8a1 1 0 0 0-1-1h-1Zm.5 1.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM5 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-interest-title">3D</h3>
+                            <p class="about-interest-desc">3D-Modellierung, Animation, Voxel-Art und immersive Erlebnisse</p>
+                        </div>
+                        <div class="about-interest-card">
+                            <div class="about-interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/>
+                                    <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/>
+                                </svg>
+                            </div>
+                            <h3 class="about-interest-title">AI</h3>
+                            <p class="about-interest-desc">Generative KI, Machine Learning für kreative Workflows und Artistic Research</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="about-section">
+                    <h2 class="about-section-title">Kontakt</h2>
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Name</label>
+                            <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Dein Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">E-Mail</label>
+                            <input type="email" id="contact-email" name="email" class="form-input" required placeholder="deine@email.de">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject" class="form-label">Betreff</label>
+                            <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Betreff deiner Nachricht">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Nachricht</label>
+                            <textarea id="contact-message" name="message" class="form-textarea" rows="5" required placeholder="Deine Nachricht..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="inline mr-2">
+                                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                            </svg>
+                            Nachricht senden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="text-center py-8 mt-12 border-t border-gray-800">
@@ -239,7 +358,7 @@
     </div>
 
     <!-- Modular Architecture -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js?v=20241223d"></script>
 
 </body>
 </html>

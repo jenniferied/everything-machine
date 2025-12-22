@@ -8,10 +8,11 @@ import { FeatureDetector } from './core/FeatureDetector.js';
 import { ScriptLoader } from './core/ScriptLoader.js';
 import { EventBus } from './core/EventBus.js';
 
-// Import viewers
-import { ThreeDViewer } from './viewers/ThreeDViewer.js';
-import { PointCloudViewer } from './viewers/PointCloudViewer.js';
-import { VideoViewer } from './viewers/VideoViewer.js';
+// Import viewers (cache-bust: v20241223d)
+import { ThreeDViewer } from './viewers/ThreeDViewer.js?v=20241223d';
+import { PointCloudViewer } from './viewers/PointCloudViewer.js?v=20241223d';
+import { GaussianSplatViewer } from './viewers/GaussianSplatViewer.js?v=20241223d';
+import { VideoViewer } from './viewers/VideoViewer.js?v=20241223d';
 
 // Import animations
 import { AnimationController } from './animations/AnimationController.js';
@@ -241,11 +242,26 @@ class Application {
       );
       
       this.viewers.set('point-cloud-viewer', pointCloudViewer);
-      
+
       // Setup viewer immediately
       pointCloudViewer.setup();
     }
-    
+
+    // Gaussian Splat Viewer setup
+    const gaussianSplatContainer = document.getElementById('gaussian-splat-viewer-container');
+    if (gaussianSplatContainer) {
+      const gaussianSplatViewer = new GaussianSplatViewer(
+        gaussianSplatContainer,
+        {},
+        this.eventBus,
+        this.scriptLoader,
+        this.featureDetector
+      );
+
+      this.viewers.set('gaussian-splat-viewer', gaussianSplatViewer);
+      gaussianSplatViewer.setup();
+    }
+
     // Video viewers setup
     const videoContainers = document.querySelectorAll('[data-video-viewer]');
     videoContainers.forEach((container, index) => {
@@ -357,25 +373,26 @@ class Application {
    * @returns {Promise<void>}
    */
   async setupAudioPlayer() {
-    // Playlist data (from scripts.js)
+    // Playlist data - Real Kepler songs from Spotify
+    // Artist Spotify: https://open.spotify.com/artist/42o6wEuAtZaVCte7QZnDtH
     const playlistData = [
       {
-        artist: "Kepler",
+        artist: "Kepler ft. Kravalier, Animate",
         title: "Deine Moves",
         album: "Deine Moves (Single)",
-        year: "2023",
+        year: "2024",
         src: "assets/audio/06_Deine_Moves_Master_Song.mp3",
-        cover: "assets/images/06_Deine_Moves_Cover.png",
+        cover: "https://i.scdn.co/image/ab67616d00001e022997326ebc5a0d12bc446dab",
         spotifyID: "15LqPeE0iqNMV31haEobtl"
       },
       {
-        artist: "Kepler",
-        title: "Es tut mir Leid",
-        album: "Es tut mir Leid (Single)",
+        artist: "Kepler ft. Noemi",
+        title: "MEIN BABE",
+        album: "BLUE EDITION (EP)",
         year: "2023",
         src: "assets/audio/PLATZHALTER_02.mp3",
-        cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png",
-        spotifyID: "YOUR_SONG_ID_2"
+        cover: "https://i.scdn.co/image/ab67616d00001e02fbf8a6a5cfd2baf88ce2599b",
+        spotifyID: "7BRwvMOzuYk57CNlOjctAL"
       },
       {
         artist: "Kepler",
@@ -383,8 +400,35 @@ class Application {
         album: "Für mich (Single)",
         year: "2023",
         src: "assets/audio/PLATZHALTER_03.mp3",
-        cover: "assets/images/10_Es_Tut_Mir_Leid_Cover.png",
-        spotifyID: "YOUR_SONG_ID_3"
+        cover: "https://i.scdn.co/image/ab67616d00001e02576df0829caf083b089f9e32",
+        spotifyID: "4BnGlg3l5KcRVADo5pPymE"
+      },
+      {
+        artist: "Kepler",
+        title: "Status",
+        album: "Status (Album)",
+        year: "2021",
+        src: "assets/audio/PLATZHALTER_04.mp3",
+        cover: "https://i.scdn.co/image/ab67616d00001e02cd3b41e206e39be67db3e727",
+        spotifyID: "5grxrbIDjr0EAvnHJaom5w"
+      },
+      {
+        artist: "Kepler",
+        title: "BLANCA",
+        album: "RED EDITION (EP)",
+        year: "2022",
+        src: "assets/audio/PLATZHALTER_05.mp3",
+        cover: "https://i.scdn.co/image/ab67616d00001e02b564493bcfb28734944bde34",
+        spotifyID: "2rNoHEeDoW5ZuRsLVV5lRf"
+      },
+      {
+        artist: "Kepler",
+        title: "DOSIS",
+        album: "RED EDITION (EP)",
+        year: "2022",
+        src: "assets/audio/PLATZHALTER_06.mp3",
+        cover: "https://i.scdn.co/image/ab67616d00001e02b564493bcfb28734944bde34",
+        spotifyID: "5kdxgteCgC78DquVqeKeB"
       }
     ];
     
