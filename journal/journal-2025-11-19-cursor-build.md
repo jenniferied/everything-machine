@@ -8,7 +8,7 @@ Für mein Artistic Research-Projekt "Everything Machine (Kepler)" brauchte ich e
 
 Cursor ist im Grunde ein Fork von VS Code, der mit KI-Features erweitert wurde. Man kann direkt im Editor mit der KI chatten, Code generieren lassen oder bestehenden Code refactoren. Für mich war das perfekt, weil ich so nicht ständig zwischen Browser und Dokumentation wechseln musste – die KI kennt den Kontext meines Projekts und kann direkt helfen.
 
-![Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.](assets/journal/cursor-build/cursor-interface-screenshot.png)
+![Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.](assets/journal/2025-11-19-cursor-build/cursor-interface-screenshot.png)
 
 Das Projekt ist komplett in Git versioniert. Jede größere Änderung wurde als Commit festgehalten, was es mir ermöglicht, den Entwicklungsprozess nachzuvollziehen. Die Struktur ist simpel: `index.html` für die Hauptseite, `scripts.js` für die Logik, `style.css` für das Styling, und ein `journal/` Ordner für alle Markdown-Einträge. Keine komplexen Build-Tools, keine Dependencies außer Tailwind CSS über CDN – alles läuft direkt im Browser.
 
@@ -16,7 +16,7 @@ Das Projekt ist komplett in Git versioniert. Jede größere Änderung wurde als 
 
 Als Inspiration diente mir die [Research Catalogue](https://www.researchcatalogue.net/) – eine Plattform für Artistic Research, die ich während meines Studiums kennengelernt habe. Die hat diesen cleanen, wissenschaftlichen Look mit klarer Navigation und guter Lesbarkeit. Ich habe mir das Konzept geliehen, aber es für Kepler angepasst.
 
-![Research Catalogue Layout-Beispiel. Ein cooler Artikel auf researchcatalogue.net, der das Layout demonstriert – cleanes Design mit klarer Navigation und guter Lesbarkeit.](assets/journal/cursor-build/research-catalogue-layout-screenshot.png)
+![Research Catalogue Layout-Beispiel. Ein cooler Artikel auf researchcatalogue.net, der das Layout demonstriert – cleanes Design mit klarer Navigation und guter Lesbarkeit.](assets/journal/2025-11-19-cursor-build/research-catalogue-layout-screenshot.png)
 
 Ein besonders gutes Beispiel für das Research Catalogue Design ist dieser [Design Phenomenographies for Industrial Wastelands](https://www.researchcatalogue.net/view/2829981/3316740), der zeigt, wie multimediale Inhalte in einem wissenschaftlichen Kontext präsentiert werden können.
 
