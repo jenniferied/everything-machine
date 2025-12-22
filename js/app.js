@@ -35,6 +35,9 @@ import { NavigationState } from './navigation/NavigationState.js';
 // Import journal
 import { JournalManager } from './journal/JournalManager.js';
 
+// Import pages
+import { MarkdownPageLoader } from './pages/MarkdownPageLoader.js';
+
 /**
  * Application class
  * Follows dependency injection and SOLID principles
@@ -103,10 +106,13 @@ class Application {
     // Phase 9: Setup journal
     await this.setupJournal();
     
-    // Phase 10: Initialize media lazy loading
+    // Phase 10: Setup markdown pages
+    await this.setupMarkdownPages();
+    
+    // Phase 11: Initialize media lazy loading
     await this.setupMediaLazyLoading();
     
-    // Phase 11: Start the application
+    // Phase 12: Start the application
     this.start();
     
     this.initialized = true;
@@ -189,9 +195,14 @@ class Application {
    * @returns {Promise<void>}
    */
   async setupViewers() {
+    console.log('[App] setupViewers called');
+    
     // 3D Viewer setup
     const threeDContainer = document.getElementById('3d-viewer-container');
+    console.log('[App] 3D viewer container found:', !!threeDContainer);
+    
     if (threeDContainer) {
+      console.log('[App] Creating ThreeDViewer...');
       const threeDViewer = new ThreeDViewer(
         threeDContainer,
         {
@@ -206,9 +217,12 @@ class Application {
       
       this.viewers.set('3d-viewer', threeDViewer);
       
-      // Wait for viewport, then setup
-      threeDViewer.waitForViewport(0.1).then(() => {
-        threeDViewer.setup();
+      // Setup viewer immediately (controls will be visible)
+      console.log('[App] Calling threeDViewer.setup()...');
+      threeDViewer.setup().then(() => {
+        console.log('[App] ThreeDViewer setup complete');
+      }).catch(err => {
+        console.error('[App] ThreeDViewer setup failed:', err);
       });
     }
     
@@ -228,10 +242,8 @@ class Application {
       
       this.viewers.set('point-cloud-viewer', pointCloudViewer);
       
-      // Wait for viewport, then setup
-      pointCloudViewer.waitForViewport(0.1).then(() => {
-        pointCloudViewer.setup();
-      });
+      // Setup viewer immediately
+      pointCloudViewer.setup();
     }
     
     // Video viewers setup
@@ -473,6 +485,35 @@ class Application {
     
     this.uiComponents.set('journal-manager', journalManager);
     console.log('[App] Journal system initialized');
+  }
+
+  /**
+   * Setup markdown pages (Forschungsrahmen, Referenzen)
+   * @returns {Promise<void>}
+   */
+  async setupMarkdownPages() {
+    const markdownPageLoader = new MarkdownPageLoader(this.eventBus);
+    
+    // Define pages to load
+    const pages = [
+      { id: 'framework', file: 'docs/FORSCHUNGSRAHMEN.md', container: 'framework-content' },
+      { id: 'references', file: 'docs/referenzen.md', container: 'references-content' }
+    ];
+    
+    // Listen for page changes to lazy-load content
+    this.eventBus.on('nav:pageChanged', async (data) => {
+      const page = pages.find(p => p.id === data.pageId);
+      if (page) {
+        const container = document.getElementById(page.container);
+        if (container && !container.dataset.loaded) {
+          await markdownPageLoader.loadPage(page.file, container);
+          container.dataset.loaded = 'true';
+        }
+      }
+    });
+    
+    this.uiComponents.set('markdown-page-loader', markdownPageLoader);
+    console.log('[App] Markdown pages setup');
   }
 
   /**
