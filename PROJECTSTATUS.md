@@ -1,16 +1,6 @@
 # PROJECT STATUS: Everything Machine – Artistic Research
 
-> **Letzte Aktualisierung:** 23. Dezember 2025  
-> **Projekttyp:** Einzelarbeit (keine Gruppenarbeit)  
-> **Fokus:** Künstlerische Praxis mit KI-Tools (Kepler-Projekt)
-
----
-
-## 🎯 Projektübersicht
-
 Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digitalen Alter Ego – unter Einsatz verschiedener generativer KI-Tools. Die Dokumentation erfolgt auf einer Website, die selbst mit KI-Unterstützung erstellt wird.
-
----
 
 ## 📋 MASTER TO-DO LIST
 
@@ -41,6 +31,22 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
 - [ ] **ILIAS einloggen** und restliche Folien herunterladen
 - [ ] **Fehlende Texte** ins Projekt laden (`academic/artistic-research/`)
 - [ ] **3 empfohlene Websites** vom Professor auflisten (TODO: welche?)
+
+#### 0.2.1 📚 Pflichtlektüre Artistic Research (aus ILIAS)
+
+**Verfügbare Texte** (PDF + extrahierter Text in `academic/texts/extracted/`):
+| Status | Quelle | Datei |
+|--------|--------|-------|
+| 📄 | **Borgdorff (2012)**: *The Conflict of The Faculties* | `Borgdorff2012Conflict.txt` |
+| 📄 | **Henke et al. (2019)**: *Manifest der Künstlerischen Forschung* | `Henke2019Manifest.txt` |
+| 📄 | **Schön (1983)**: *The Reflective Practitioner* | `Schoen1983Practitioner.txt` |
+| 📄 | **Frayling (1993)**: *Research in Art and Design* | `Frayling1993Research.txt` |
+| 📄 | **Wall (2006)**: *An Autoethnography on Learning About Autoethnography* | `Wall2006Autoethnography.txt` |
+| 📄 | **Ellis (2010)**: *Autoethnografie* | `Ellis2010Autoethnografie.txt` |
+| 📄 | **Wesseling (2017)**: *Q&A* | `Wesseling2017QandA.txt` |
+| ❌ | **Haarmann (2019)**: *Artistic Research. Eine epistemologische Ästhetik* | Noch nicht verfügbar |
+
+> **Hinweis:** Bei "PDF too large" Fehlern → Nutze die `.txt` Dateien in `academic/texts/extracted/`
 
 #### 0.3 Grundverständnis aufbauen
 - [ ] Folien + Texte systematisch mit KI durcharbeiten
