@@ -31,6 +31,15 @@ No build step, bundler, or package.json - this is a vanilla JavaScript project w
 ├── scripts/                  # Utility scripts (journal manifest generator)
 ├── js/                       # ES6 modules (app.js, core/, audio/, navigation/, etc.)
 ├── journal/                  # Markdown entries (journal-YYYY-MM-DD-title.md)
+├── academic/                 # MA thesis academic materials (NOT deployed to GitHub Pages)
+│   ├── Abgabe.md            # Submission requirements (Markdown version)
+│   ├── Exposé_*.pdf         # Project exposé
+│   ├── artistic-research/   # Literature sources for bibliography
+│   ├── examples/            # Lesson material examples
+│   ├── lesson-material/     # Class materials and slides
+│   ├── texts/               # Literature PDFs for review
+│   │   └── extracted/       # Pre-extracted .txt files (use these for large PDFs!)
+│   └── thilos-straightA-submission/  # Reference: A-grade submission example
 └── assets/
     ├── audio/, images/       # Media files
     ├── journal/              # Journal assets (YYYY-MM-DD-topic/)
@@ -135,3 +144,69 @@ When editing journal entries in `journal/`, use this structure:
 - **Nächste Schritte**: What's next?
 
 Focus on process over results, document failures, use first-person perspective.
+
+## Academic Submission Requirements
+
+The `academic/` folder contains materials for the MA thesis Artistic Research course. See `academic/Abgabe.md` for full details.
+
+### Teil 1: Vorbereitung (Preparation)
+| Deliverable | Details |
+|-------------|---------|
+| Exposé | 1-2 pages, practical project description |
+| Forschungsfrage | ~5 research questions, choose one with most potential |
+| Literaturrecherche | ~10 papers, APA format, 4-sentence summaries, relevance description |
+| Methodologie | Description of methods and justification |
+
+### Teil 2: Dokumentation (~10 pages paper)
+1. **Einleitung** - Background, motivation, summary (funnel approach: general → specific)
+2. **Stand der Forschung** - Literature review results
+3. **Methodologie** - Methods used, justification, ethics discussion
+4. **"Meine Forschung"** - Decisions, path to results, experiments, reflection
+5. **Diskussion** - Summary, implications, limitations, outlook
+6. **Literatur** - Bibliography (APA format)
+7. **Anhänge** (optional) - Images, transcripts
+
+### Reference: thilos-straightA-submission/
+Contains an A-grade submission example with similar theme (generative AI + media production). Key approaches:
+- Autoethnographic methodology with video diary
+- Iterative workflow: develop → create → reflect → refine
+- Theories: "Suspension of Disbelief", "Uncanny Valley Effect"
+- Literature funnel: VFX history → digital effects → AI terminology → disruptive tech theory → synthesis
+
+## Literature Review Workflow
+
+### PDF Processing
+
+Literature PDFs are stored in `academic/texts/`. Pre-extracted text versions are in `academic/texts/extracted/`.
+
+**Available texts:**
+| Source | PDF | Extracted Text |
+|--------|-----|----------------|
+| Henke et al. (2019) - Manifest der Künstlerischen Forschung | `texts/Henke2019Manifest.pdf` | `texts/extracted/Henke2019Manifest.txt` |
+| Schön (1983) - The Reflective Practitioner | `texts/Schoen1983Practitioner.pdf` | `texts/extracted/Schoen1983Practitioner.txt` |
+| Borgdorff (2012) - The Conflict of the Faculties | `texts/Borgdorff2012Conflict.pdf` | `texts/extracted/Borgdorff2012Conflict.txt` |
+| Frayling (1993) - Research in Art and Design | `texts/Frayling1993Research.pdf` | `texts/extracted/Frayling1993Research.txt` |
+| Wall (2006) - Autoethnography | `texts/Wall2006Autoethnography.pdf` | `texts/extracted/Wall2006Autoethnography.txt` |
+| Ellis (2010) - Autoethnografie | `texts/Ellis2010Autoethnografie.pdf` | `texts/extracted/Ellis2010Autoethnografie.txt` |
+| Wesseling (2017) - Q&A | `texts/Wesseling2017QandA.pdf` | `texts/extracted/Wesseling2017QandA.txt` |
+
+### Handling "PDF too large" Errors
+
+**IMPORTANT:** When encountering "PDF too large" errors, do NOT ask the user - handle it automatically:
+
+1. **First choice:** Use the pre-extracted `.txt` file from `academic/texts/extracted/`
+2. **If no extracted text exists:** Run `pdftotext` to extract it:
+   ```bash
+   pdftotext "academic/texts/SomeFile.pdf" "academic/texts/extracted/SomeFile.txt"
+   ```
+3. **Then read the `.txt` file** instead of the PDF
+
+The `poppler` package is installed and provides `pdftotext`, `pdfinfo`, `pdfseparate`, and other PDF tools.
+
+### Literature Review Checkpoint
+
+Current status of literature review work is tracked in `PROJECTSTATUS.md`. When working on literature review:
+1. Check `PROJECTSTATUS.md` for current progress
+2. Use extracted text files for reading sources
+3. Update `PROJECTSTATUS.md` after completing work
+4. Output goes to `submission/` folder
