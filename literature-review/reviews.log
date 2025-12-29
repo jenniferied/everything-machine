@@ -1,0 +1,31 @@
+# Literature Review Critique Log
+
+This file tracks all critique loop feedback for quality assurance.
+
+---
+
+## Log Format
+
+```
+## [Date] - [Phase/Domain]
+
+**Grade:** [A-F]
+**Reviewer:** Claude Code
+
+### Strengths
+- ...
+
+### Weaknesses
+- ...
+
+### Required Revisions
+- ...
+
+### Post-Revision Grade:** [A-F]
+```
+
+---
+
+## Reviews
+
+*(No reviews yet - critique loop will begin after domain summaries are drafted)*
