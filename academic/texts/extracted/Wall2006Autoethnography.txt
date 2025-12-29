@@ -1,0 +1,694 @@
+Article
+
+An Autoethnography on Learning About Autoethnography
+Sarah Wall
+University of Alberta
+Edmonton, Alberta, Canada
+© 2006 Wall. This is an Open Access article distributed under the terms of the Creative Commons
+Attribution License (http://creativecommons.org/licenses/by/2.0), which permits unrestricted use,
+distribution, and reproduction in any medium, provided the original work is properly cited.
+
+Abstract
+Autoethnography is an emerging qualitative research method that allows the author to write in a
+highly personalized style, drawing on his or her experience to extend understanding about a
+societal phenomenon. Autoethnography is grounded in postmodern philosophy and is linked to
+growing debate about reflexivity and voice in social research. The intent of autoethnography is to
+acknowledge the inextricable link between the personal and the cultural and to make room for
+nontraditional forms of inquiry and expression. In this autoethnography, the author explores the
+state of understanding regarding autoethnography as a research method and describes the
+experience of an emerging qualitative researcher in learning about this new and ideologically
+challenging genre of inquiry.
+Keywords: autoethnography, personal narrative, qualitative methods, self
+Author’s note: I thank Dr. Maria Mayan for her encouragement, support, and constructive
+suggestions during the pre -paration of this article. Thanks are also extended to the anonymous
+reviewers of an earlier version of this article for their helpful comments.
+
+Introduction
+I can write this down now. It has been swirling around in my head for a month, the readings mixing with
+my thoughts and reactions, but I did not know just how to put it down on paper. So much of what I want
+to say about autoethnography is about me, not it. I am surprised at the difficulty of this task. When I
+happened on a brief mention of autobiographical methods during the course of my regular reading, I
+realized that I wanted to know more about it. Quite unexpectedly, my curiosity turned into a foray into
+postmodern philosophy and critical theory, reflexivity and voice, various vague approaches to
+autobiographical inquiry, validity and acceptability, defences and criticisms, and a wide range of
+published personal narratives, the typical product of autoethnography. I was confronted, challenged,
+moved, and changed by what I learned. Therefore, in keeping with the essence of autoethnography, I
+finally came to the realization that I could share my experience of learning about autoethnography and, in
+the text, co-mingle me and it. Autoethnographies “are highly personalized accounts that draw upon the
+experience of the author/researcher for the purposes of extending sociological understanding” (Sparkes,
+
+146
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+2000, p. 21). An autoethnography “lets you use yourself to get to culture” (Pelias, 2003, p. 372). My
+personal struggles and conclusions reflect the dynamics in the academic community as we seek to balance
+excellence in inquiry with constant growth and learning.
+Philosophical and theoretical foundations for autobiographical methods
+Traditional scientific approaches, still very much at play today, require researchers to minimize their
+selves, viewing self as a contaminant and attempting to transcend and deny it. The researcher ostensibly
+puts bias and subjectivity aside in the scientific research process by denying his or her identity. “Concerns
+about the situatedness of the knower, the context of discovery, and the relation of the knower to the
+subjects of her inquiry are demons at the door of positivist science. The production of [what has always
+been considered to be] „legitimate‟ knowledge begins by slamming the door shut” (McCorkel & Myers,
+2003, p. 200).
+From a positivist perspective, there is only one way to “do science,” and any intellectual inquiry must
+conform to established research methods. Most people, like me, have grown up believing that positivism
+is science (Neuman, 1994). Without knowing about the alternatives, I have been socialized to believe that
+“real” science is quantitative, experimental, and understood by only a select and elite few (my earlier
+conception being that I might never become competent in such a difficult field). So strong is the positivist
+tradition that researchers who use even well-established qualitative research methods are continually
+asked to defend their research as valid science (Denzin & Lincoln, 2000). Ways of inquiry that connect
+with real people, their lives, and their issues are seen as soft and fluffy and, although nice, not valuable in
+the scientific community.
+With the rise of postmodern philosophy and my awareness of it, this is changing, and I am able to learn to
+think differently about what constitutes knowing. The essence of postmodernism is that many ways of
+knowing and inquiring are legitimate and that no one way should be privileged. “It distrusts abstract
+explanation and holds that research can never do more than describe, with all descriptions equally valid . .
+. [Any] researcher can do no more than describe his or her personal experiences” (Neuman, 1994, p. 74).
+Several researchers have highlighted the presence of the researcher‟s rhetoric, prejudice, and experience
+in the interpretation of observations and numbers and the way in which they simply construct one
+interpretation from among many that could be consistent with their numerical data analysis. They have
+also revealed how data can be socially constructed (see, for example, Bloor, Goldberg & Emslie, 1991;
+Garkinkel, 1967; Gephart, 1988; Knorr-Cetina, 1991). This has been important in breaking down the
+façade of objectivity and freedom from bias in the dominant positivist paradigm, lending support for
+research methods that rely more on subjectivity, such as qualitative methods as a whole. However,
+postmodernism creates a context of doubt, in which all methods are subject to critique but are not
+automatically rejected as false. The goal of postmodernism is not to eliminate the traditional scientific
+method but to question its dominance and to demonstrate that it is possible to gain and share knowledge
+in many ways. From a postmodern viewpoint, having a partial, local, and/or historical knowledge is still
+knowing (Richardson, 2000). All assumptions inherent in established research methods (both qualitative
+and quantitative) are questioned, and we are encouraged to “abandon all established and preconceived
+values, theories, perspectives . . . and prejudices as resources for . . . study” (Vidich & Lyman, 2000, p.
+60).
+The postmodern era has made it possible for critical theories to emerge and take hold in academic inquiry
+and to open up the possible range of research strategies. For example, feminist theory, and feminist
+research using multiple research techniques, has grown in reaction to the “male-oriented perspective that
+has predominated in the development of social science” (Neuman, 1994, p. 72). Many feminist writers
+now advocate for research that starts with one‟s own experience (Ellis, 2004). In contrast to the dominant,
+
+147
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+objective, competitive, logical male point of view, feminist researchers “emphasize the subjective,
+empathetic, process-oriented, and inclusive sides of social life” (Neuman, 1994, p. 72).
+Other emancipatory theories, such as those aimed at addressing the power imbalances associated with
+race and class, also find a space in postmodernity. Academic writers are beginning to acknowledge the
+normative value of inquiry. Critics of scientific traditions have argued for the abandonment of rationality,
+objectivity, and truth to move social science beyond a focus on method, toward the power of social
+research to have a moral effect (Bochner, 2001). Stivers (1993) has stated that a vision of universal truth
+is really just a dream of power over others and that liberatory, emancipatory projects are better served by
+alternative knowledge production process.
+This is the philosophical open door into which autoethnography creeps. The questioning of the dominant
+scientific paradigm, the making of room for other ways of knowing, and the growing emphasis on the
+power of research to change the world create a space for the sharing of unique, subjective, and evocative
+stories of experience that contribute to our understanding of the social world and allow us to reflect on
+what could be different because of what we have learned. As a woman in a man‟s world, a nurse in a
+doctors‟ world, and a qualitative researcher coming from a positivist discipline (health services research),
+I find that the relentless nudging of autoethnography against the world of traditional science holds
+wonderful, symbolic, emancipatory promise. It says that what I know matters. How much more promise
+could it hold for people far more marginalized than I? I am warming up to this method.
+Reflexivity and voice
+The research community is relatively comfortable with the concept of reflexivity, in which the researcher
+pauses for a moment to think about how his or her presence, standpoint, or characteristics might have
+influenced the outcome of the research process. However, new “methods” such as autoethnography,
+founded on postmodern ideas, challenge the value of token reflection that is often included as a paragraph
+in an otherwise neutral and objectively presented manuscript. Denzin and Lincoln (1994) have referred to
+this call to genuine reflexivity as the “crisis of representation” (p. 10), which began in the mid-1980s,
+with the appearance of a number of noted publications that questioned traditional notions of science.
+As we are still dealing with this “crisis” (Denzin & Lincoln, 1994), it has become increasingly apparent
+that the studied world can be captured only from the perspective of the researcher (Denzin & Lincoln,
+1994). From the time that traditional ethnography was first criticized and experimental writing was first
+explored, “the question [has been] raised about political and cultural representation—not only about who
+should represent whom but what should be the forms of representation in relationship to hegemonic
+practices” (Clough, 2000, p. 283). In research that seeks to discover personal experience, there is a unique
+relationship between researcher and participant, and the issue of voice arises (Clandinin & Connelly,
+1994). It is suggested that the freedom of a researcher to speak as a player in a research project and to
+mingle his or her experience with the experience of those studied is precisely what is needed to move
+inquiry and knowledge further along. If a researcher‟s voice is omitted from a text, the writing is reduced
+to a mere summary and interpretation of the works of others, with nothing new added (Clandinin &
+Connelly, 1994). Taking the question of voice and representation a step further, we could argue that an
+individual is best situated to describe his or her own experience more accurately than anyone else. Ellis
+(1991), a strong advocate emotion-based, autobiographical inquiry, has suggested that a social scientist
+who has lived through an experience and has consuming, unanswered questions about it can use
+introspection as a data source and, following accepted practices of field research, study him- or herself as
+with any “n” of 1. “Experimental writing means re-thinking the condition of representation and therefore
+[engaging] with figures of subjectivity that do not depend on representation as it has been understood”
+(Clough, 2000, p. 286).
+
+148
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+Although many qualitative researchers are now aware of the need for genuine and thorough reflection on
+the research process and their role in it, Pillow (2003) has been critical of reflexivity that merely
+acknowledges the researcher‟s perspective or attempts to convey a greater truthfulness or awareness of
+other. The emergence of autoethnography as a method of inquiry moves researchers‟ “use of selfobservation as part of the situation studied to self-introspection or self-ethnography as a legitimate focus
+of study in and of itself” (Ellis, 1991, p. 30). New epistemologies (such as autoethnography) from
+previously silenced groups remove the risks inherent in the representation of others, allow for the
+production of new knowledge by a unique and uniquely situated researcher, and offer small-scale
+knowledge that can inform specific problems and specific situations (Denzin & Lincoln, 1994).
+Autoethnography also challenges traditional writing conventions that attempt to validate empirical
+science and uphold the power that accompanies scientific knowledge. In the traditional paradigm,
+research that has been conducted according to established methods must also be reported in a
+standardized format.
+How we are expected to write affects what we can write about . . . The conventions hold
+tremendous material and symbolic power over [researchers]. Using them increases the probability
+of [acceptance] but they are not . . . evidence of greater—or lesser—truth value . . . than . . .
+writing using other conventions. (Richardson, 2000, p. 7)
+What I see as most significant is that traditional research and writing conventions create only the illusion
+that the knowledge produced is more legitimate. As for me, I have been a blind follower of convention.
+When I wrote my first autoethnography, I asked my supervisor if I was “allowed” to write that kind of
+article, given that it was not research. Originally coauthored, that article was written in the first person
+plural, the use of “we” somehow symbolic of corroborated and therefore more legitimate knowledge than
+just something “I” had to share. This is the first article I have ever written in the first person, so difficult is
+it to break away from long-held beliefs about the legitimacy of what I know. Clearly, I am not alone in
+my uncertainty regarding my knowledge and its presentation. “For many, especially for women being
+educated as researchers, voice is an acknowledgment that they have something to say” (Clandinin &
+Connelly, 1994, p. 423). The potential power of autoethnography to address unanswered questions and
+include the new and unique ideas of the researcher is inspiring to me as one who wishes to find my niche
+and make my own special contribution. Certainly my knowledge has jumped forward through my
+encounter with this emerging, unconventional method, in contrast with the slower, incremental growth
+that I have experienced in interacting with more traditional approaches and texts. I cannot deny that my
+conventional habits are challenged by this entirely new way of thinking, but I suspect it is precisely the
+fact that I am forced to bend in a new way that is the reason behind the growth I see in myself.
+Understanding the autobiographical method
+Ironically, perhaps, my use of the term autoethnography is a nod to a dominant claim related to this
+emerging method. Ellis and Bochner (2000) have listed almost a page of terms that have been attached to
+autobiographical research and argued that
+it seems appropriate now to include under the broad rubric of autoethnography those studies that
+have been referred to by other similarly situated terms, such as personal narratives . . . lived
+experience, critical autobiography . . . evocative narratives . . . reflexive ethnography . . .
+ethnographic autobiography . . . autobiographical ethnography, personal sociology . . . [and]
+autoanthropology. (pp. 739-740)
+They noted, however, that the term autoethnography has been in use for more than 20 years (originated by
+Hayano, 1979) and has become the term of choice in describing studies of a personal nature (Ellis, 2004;
+
+149
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+Ellis & Bochner, 2000). I can see that there is value in the standardization of terminology with respect to
+this method, as it would allow for unified advances in using, appreciating, and understanding this method.
+“Autoethnography” builds on a familiar qualitative research term while introducing a whole new way of
+pursuing social knowledge. However, given that there have been and are many other terms in circulation,
+I would like to discuss the method as it is put forward by researchers who use differing terms. Moustakas
+(1990), writing from as early as the late 1960s, labeled the method heuristic inquiry. Ellis and Bochner, as
+noted, have referred to the method as autoethnography, and a number of authors simply present the
+method and its product as personal narrative.
+First, heuristic inquiry (Moustakas, 1990) has arisen from the phenomenological tradition and began with
+a question that has been a personal challenge for the researcher. The aim is to “awaken and inspire
+researchers to make contact with and respect their own questions and problems, to suggest a process that
+affirms imagination, intuition, self-reflection, and the tacit dimension as valid ways in the search for
+knowledge and understanding” (Douglass & Moustakas, 1985, p. 40). The basic design of a heuristic
+research project involves six steps: initial engagement, immersion, incubation, illumination, explication,
+and culmination in a creative synthesis (Moustakas, 1990). Initial engagement with a research topic
+occurs with the discovery of an intense interest, a passionate concern that is not only personally
+meaningful but has broader social implications. In this phase, intense introspection allows a question to
+emerge. Immersion involves sustained focus and total concentration on the question and a deep
+exploration of the researcher‟s tacit knowledge of the topic. On the other hand, the incubation phase is a
+period of retreat from thought related to the question. The purpose of this phase is to focus on unrelated
+distractions that leave the research topic to percolate in the subconscious. During this time, new ideas
+form in much the same way as a forgotten name suddenly comes to mind when we are thinking about
+something else. The phase of illumination appears to be a mysterious phase in which something
+completely new is seen in something familiar. The way in which the researcher causes illumination to
+occur is not clearly specified by Moustakas but appears to result from genuine openness to unique
+possibilities. In explication, the researcher develops a comprehensive depiction of the core themes. The
+major components of the phenomenon are explicated through the researcher‟s self-awareness as well as
+through conversations with others. In the final stage, creative synthesis takes place, in which the
+researcher presents the meanings and themes associated with the question in the form of a narrative (with
+verbatim material and examples), poem, drawing, painting, or other creative form.
+Although these phases, as described by Moustakas (1990), strike me as quite idealistic and abstract, they
+do set the tone for a very nontraditional form of study that “engages one‟s total self and evokes a personal
+and passionate involvement and active participation in the [research] process” (p. 42). As Moustakas
+continued his discussion, he offered some more concrete details regarding the techniques that can be used
+but acknowledged that “methods of heuristic inquiry are open-ended [with] each research process
+unfold[ing] in its own way” (p. 43). He also noted that heuristic inquiry methods should reveal the nature
+of a phenomenon more completely than would ordinary experience, which suggests a process that is
+characterized by some degree of rigor and systematicity. Moustakas suggested that heuristic researchers
+work with other researchers and seek research participants, so that a personal topic can be illuminated by
+a variety of perspectives. Likely sources of data include personal documents such as notes or journals,
+interview notes and transcripts, poems, and/or artwork. Data analysis consists of thorough discussion,
+introspection, and thought (immersion and incubation) until themes and meanings emerge. Ultimately,
+heuristic research is similar to more familiar forms of qualitative research, in that it focuses on experience
+and meaning and uses similar data sets and analysis techniques. However, it is intensely personal and
+introspective and, as Moustakas describes it, almost obsessive in its depth and rigor.
+Second, autobiographical research methods have become increasingly known as “autoethnography” and
+have been promoted, influenced, and developed by Ellis and Bochner (1999, 2000). As with personal
+research labeled “heuristic research,” the autobiographical genre here referred to as “autoethnography”
+
+150
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+has been further advanced by the postmodern challenge, reiterated by Ellis and Bochner, to infuse social
+science with the emotions and person of the researcher. Unfortunately, however, these authors‟
+discussions of this method are, like Moustakas‟s, very philosophical and abstract, and somewhat lacking
+in concrete information about the method and how someone new to it might proceed. In a lengthy book
+chapter (Ellis & Bochner, 2000), information about the method is presented, in part, in the form of a story
+about a particular graduate student interested in an autoethnographic dissertation. In this story,
+autoethnography is accomplished through the use of personal writing and reflection, the stories of others
+(gathered through a series of highly interactive and even therapeutic interviews with individuals and
+groups), personal poetry, and an understanding of the relevant literature (especially knowledge of the gaps
+in the literature that can be answered only through personally focused inquiry). The use of
+autoethnography alongside other well-known qualitative research methods is suggested. Autoethnography
+is referred to as “action research for the individual” (p. 754), and it is suggested to the graduate student in
+the story that she might do a “straight grounded theory analysis” (p. 757). Not unlike more familiar
+approaches to qualitative research, common products of autoethnographic research can include “short
+stories, poetry, fiction, novels, photographic essays, personal essays, journals, fragmented and layered
+writing, and social science prose” (p. 739). In the case of a dissertation, it appears that the form can be
+very fluid and evolving, and include personal stories and excerpts from interviews, possibly accompanied
+by other more standard components of this type of research presentation. Ellis (2004), in a
+methodological novel about autoethnography, restated a number of the methodological points she put
+forward with Bochner (Ellis & Bochner, 2000). She acknowledged that “autoethnography does not
+proceed linearly” (p. 119), is complex, is not conducted according to a special formula, and can be
+likened to being sent “into the woods without a compass” (p. 120). However, she encouraged
+autoethnographers to deal with the uncertainty of the process so that adequate time is taken to “wander
+around a bit and [get] the lay of the land” (p. 120).
+Muncey (2005) added some concrete assistance to the question of “how to do” autoethnography. She
+suggested the use of snapshots, artifacts/documents, metaphor, and psychological and literal journeys as
+techniques for reflecting on and conveying a “patchwork of feelings, experiences, emotions, and
+behaviors that portray a more complete view of . . . life” (p. 10). Overall, however, discussions of
+autoethnography leave many questions regarding the method. What is presented, though, is an inspiring
+and compelling argument for the methodological possibilities that exist when the researcher is a full study
+participant.
+A third widely discussed approach to the researcher‟s use of self is personal narrative. Personal narrative
+is often presented as a typical product of autoethnography but is also proposed as a method unto itself.
+Noting that her perspective is contrary to convention in qualitative inquiry, Richardson (1994) purported
+that writing is a
+method of inquiry, a way of finding out about yourself and your topic. Although we usually think
+about writing as a form of “telling” about the social world . . . writing is also a way of
+“knowing”—a method of discovery and analysis. By writing in different ways, we discover new
+aspects of our topic and our relationship to it. Form and content are inseparable (p. 516, italics in
+original).
+Historically, writing has been divided into two genres: literary and scientific. The goal of personal
+narrative as research is to fuse the form with the content and the literary with the scientific, to create a
+social scientific art form, thereby revealing the hand of the researcher/author who created the work and
+demonstrating explicitly the expertise of the author rather than constructing his or her absence (Ellis &
+Bochner, 2000; Richardson, 2000). Autoethnographically based personal narratives are
+
+151
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+highly personalized, revealing texts in which authors tell stories about their own lived experience,
+relating the personal to the cultural . . . In telling the story, the writer calls upon . . . fictionwriting techniques. Through these techniques, the writing constructs a sequence of events . . .
+holding back on interpretation, asking the reader to emotionally “relive” the events with the
+writer. (Richardson, 2000, p. 11)
+What can be learned about method in autoethnography is that it varies widely, from the highly
+introspective, through more familiar approaches connected to qualitative research, to somewhat
+experimental literary methods, experimental, at least, in terms of thinking of writing as research.
+During this learning process, I was disappointed to find that much of what was written on
+autoethnography (or otherwise labeled autobiographical research) was highly abstract and lacking in
+specificity. I came to wonder whether autoethnography is less of a method and more of a philosophy,
+theoretical underpinning, or paradigm, aimed at restoring and acknowledging the presence of the
+researcher/author in research, the validity of personal knowing, and the social and scientific value of the
+pursuit of personal questions. This seems to be of concern for many others who debate the theory/method
+divide. Nevertheless, my need to have something concrete to learn was unsatisfied by my general reading
+on autoethnography as a method. Fortunately, I managed to find several examples of autoethnography
+that provided excellent insights into the use of self in research and the ways in which it might be
+accomplished.
+Understanding autoethnography by example
+As I have noted, there is considerable latitude with respect to how autoethnography is conducted and what
+product results. Autoethnographers tend to vary in their emphasis on auto- (self), -ethno- (the cultural
+link), and -graphy (the application of a research process) (Ellis & Bochner, 2000, paraphrasing ReedDanahay, 1997). This variable emphasis on the separate dimensions of autoethnography results in the
+production of manuscripts that differ significantly in tone, structure, and intent. It must also be noted that
+some authors who have pursued autobiographical inquiry have not referred to their written products as
+autoethnographies. However, in keeping with the way in which Ellis and Bochner subsumed other labels
+under autoethnography, the contemporary term of choice, I will bring a number of articles into the
+discussion that, although their authors used various labels, can also be thought of as autoethnographies. In
+other words, to adapt a well-known axiom, an autoethnography by any other name is still an
+autoethnography. By considering these examples together, we can gather helpful information on the
+practical aspects of using this type of inquiry.
+Sparkes (1996) offered an excellent example of autoethnography, as well as a very helpful expository on
+the process of writing and publishing the resulting narrative (2000). (He described his original article as a
+“narrative” but referred to it in his later analysis as an “autoethnography.”) His work “The Fatal Flaw: A
+Narrative of the Fragile Body-Self” (1996), nicely balances the auto-, -ethno-, and -graphy components of
+this method, as in it , he described his personal journey from elite athlete to a man who is forced to face
+an “interrupted body project” (p. 463) when inflammatory back disease became a permanent part of his
+life and interfered with his participation in sport and, indeed, many activities of his ordinary daily life.
+Sparkes (1996) aligned himself philosophically with autoethnography and connected the personal with the
+cultural when he said, “I . . . attempt to take you as the reader into the intimacies of my world. I hope to
+do this in such a way that you are stimulated to reflect upon your own life in relation to mine” (p. 467).
+As a professor, he described how the early stages of his autoethnographic writing were shaped by his
+assumptions about what constituted proper academic work and how he “felt the need to add something to
+the story to signal it as scholarship” (2000, p. 28). His original draft contained a personal story framed by
+solid sections of theory to support the presentation of his experience, but as he became more confident in
+
+152
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+the value of sharing his story, he began to focus more on telling his story and weaving theoretical content
+into it where needed. The published version reads as an intelligent, personal, emotional story that is, I
+feel, reassuringly supported by previously held sociological knowledge. Sparkes bolstered his story by
+incorporating other data sources, such as medical diagnostic test reports, reconstructions of conversations
+with others, selections from newspapers reporting on his athletic accomplishments, and excerpts from his
+personal diary. In his later analysis (2000), he presented the comments of the various reviewers of his
+submitted manuscript, revealing a wide range of reaction to this genre of research, from those rejecting it
+as scholarship to those calling for less theory and more pure story. The report of his experiences as he
+endeavored to interject a personal narrative into traditional academia demonstrates the readiness of
+scholars to accept this method and offers future autoethnographers some insights into successfully
+attempting autoethnography.
+Holt (2001) published an autoethnography that is similar in approach to Sparkes‟s (1996), although it
+deals with a very different topic. Holt told his story about becoming a graduate teaching assistant in a
+university and using a three-level reflection strategy to refine his teaching methods. He used his practical
+background to generate questions and implications for the future development of the graduate teaching
+assistant role, thereby linking his personal experience to issues in his social situation. He incorporated
+previous research and existing models of teaching into his work by contrasting his personal ideology and
+past experience with the expectations of the new university setting in which he took up a teaching
+assignment. He used a 2-year reflective logbook as the primary data course for his study. Like Sparkes
+(2000), Holt offered a very helpful and insightful article (2003) in which he told the story of his struggles
+to have his autoethnography accepted and published. Presenting the story as hypothetical discussions
+between him and various reviewers, he deconstructed his reviewers‟ feedback, ranging from the
+sympathetic to the skeptical, in an effort to inform future autoethnographers about the difficulties
+associated with work of this type. He encouraged future researchers to be persistent and resilient, to
+continue to “develop new avenues of criticism and support for such work” (2003, p. 6), and to pursue
+publication in mainstream journals to enhance the profile of autoethnography.
+An autoethnographic study by Duncan (2004) is an excellent example of a methodologically rigorous
+study that “could possibly be placed at the conservative end of the continuum of autoethnographic
+reporting” (p. 8). Duncan introduces the skeptic to this method in a more gradual, comfortable way. Her
+research demonstrates explicitly how autoethnography can assist in answering otherwise unanswerable
+questions. As a multimedia/hypermedia designer (involving the design of computer assisted learning
+applications in which users navigate the program content according to individual needs), she wanted to
+evaluate and improve her practice. The novelty of this type of medium and the delay in receiving
+feedback from end users necessitated a personal, reflective approach for timely practice evaluation. To
+Duncan, autoethnography was a method of inquiry in which the inner dialogue of the researcher was
+considered valid, that encouraged systematic reflection, offered an organized and traceable means of data
+analysis and resulted in a scholarly account (p. 3). Rigor in the research process (“-graphy”) is
+emphasized by Duncan.
+[T]his research tradition does more than just tell stories. It provides reports that are scholarly and
+justifiable interpretations . . . [that] do not consist solely of the researcher‟s opinions but are also
+supported by other data that can confirm or triangulate those opinions. Methods of collecting data
+include participant observation, reflective writing, interviewing, and gathering documents and
+artifacts. (p. 5)
+The main data source in this study was a reflective journal, kept over a 1-year period, consisting of
+handwritten entries created twice weekly and averaging two pages in length. Entries were numbered and
+indexed, and supported by other documents such as e-mails, memos and letters, storyboard and graphic
+sketches, computer screen images, notes to self and from other design team members, government
+
+153
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+documents, and technical logs. Following data collection, Duncan began the process of categorization and
+theming, and the construction of meaning that provided the basis for theory development. In conclusion,
+she charged “those engaged in this emerging art . . . to include in the research report adequate justification
+for the choice of this method and [a] demonstration of how appropriate evaluation criteria might be
+applied” (p. 12). Despite her conservative approach to the method, in contrast to Sparkes (1996) and Holt
+(2001), Duncan raised similar issues in the acceptability of autoethnography by the wider research
+community and suggested similar strategies for promoting understanding.
+Spanning the theoretical and the literary, Pelias (2003) shared some of his personal observations in “The
+Academic Tourist: An Autoethnography.” This is a short, humorous, but insightful offering that gives the
+reader a look into the daily habits and demands of academic life. It is characterized most obviously by
+long, run-on sentences that leave the reader feeling the monotony and endlessness of the obligations of an
+academic career but, at the same time, reveal the expertise and cultural familiarity of the author. The
+academic is metaphorically compared to a tour guide who knows his part, recites his lines, and fulfills the
+expectations on him. References to theory and other authors writing about autoethnography are included
+as a half-hearted nod to tradition.
+On the other end of the continuum are a number of examples of personal narrative that rely almost
+exclusively on a highly personal, evocative writing style, focusing on the auto-, omitting any reference to
+research conventions, and leaving the reader to make his or her own societal or cultural applications. An
+essay called “A Choice for K‟aila” (Paulette, 1993) is a mother‟s story about her decision not to permit
+her infant son, with terminal liver disease, to have a liver transplant. It is the story of a parent who
+resolved a difficult dilemma (with her husband) about her child‟s future, based on her faith and beliefs
+and an informed understanding of the anticipated life course of a liver transplant recipient. This narrative
+recounts a unique and rare experience and, in doing so, gives voice to a seldom-noticed perspective.
+Clarke (1992), inspired by her daughter‟s award-winning essay about being asthmatic, shared her
+experience as the parent of an asthmatic child. She referred to her work as phenomenology, but given that
+it uses self as subject, it can be considered to be autoethnographic (Ellis, 2004). Clarke incorporated the
+text of her daughter‟s essay and wove in the poetry of others to illustrate her message. Her style is very
+poetic, and the article is organized in short, dramatic sections that recount specific instances, some very
+profound and evocative. Some theory is included, but this piece is very much an artful communication of
+what it feels like to live with asthma.
+As these examples attest, the range of autoethnographic writings is vast and includes everything from the
+conservative, methodologically rigorous study (Duncan, 2004), the personal but theoretically supported
+(Sparkes, 1996, and, to a slightly lesser extent, Holt, 2001, and Pelias, 2003), and the highly literary and
+evocative (Clarke, 1992; Paulette, 1993). These examples provoked quite different responses from me
+that, as I came to learn, reflect precisely the range of responses from the academic community at large.
+Each prompts concerns in different ways, but all of them represent a genre that is still struggling for
+acceptance.
+Criticisms, defenses, and validity
+Judging by my reactions as I read these selected autoethnographies, I was not surprised to learn that there
+are still many who are not ready to give themselves over to this avant-garde method. Criticisms abound,
+and the debate rages. “The emergence of autoethnography and narratives of self . . . has not been troublefree, and their status as proper research remains problematic” (Sparkes, 2000, p. 22). Expert knowledge is
+socially sanctioned in a way that commonsense or personal knowledge is not. As well, how knowledge is
+produced and who produces it are important in how status is attributed to knowledge (Muncey, 2005).
+
+154
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+Despite the influence of postmodern thought, the academic conventions are powerful, and there is
+resistance to the intrusion of autobiographical approaches to knowledge production and sharing.
+Despite their wide-ranging characteristics, autoethnographic writings all begin with the researcher‟s use
+of the subjective self. By using self as a source of data, perhaps the only source, autoethnography has
+been criticized for being self-indulgent, narcissistic, introspective, and individualized (Atkinson, 1997;
+Sparkes, 2000). The focus on biography rather than formality is a concern for some, because personal
+experiences are placed on a pedestal and separated from other discourses in their contexts. “The narratives
+seem to float in a social vacuum. The voices echo in an otherwise empty world. There is an extraordinary
+absence of social context, social action, and social interaction” (Atkinson, 1997, p. 339). A focus on a
+single, subjective subject lacks genuinely thick description and threatens to substitute a psychotherapeutic
+for a sociological view of life.
+Lack of systematicity and methodological rigor is also noted as a barrier to the acceptance of
+autoethnography. Sparkes (2000) and Holt (2003) both described reviewers of their manuscripts who
+wished to see adherence to traditional scientific tenets. Grounding in a theoretical framework, overtly
+described methodological and data analysis procedures, an audit trail and replicability were cited as
+important in judging the value of their submissions, despite the obvious difficulties in applying these to
+autoethnography. Even for those open to qualitative inquiry, traditional criteria such as credibility,
+dependability, and trustworthiness can be important, although not always easily applied to
+autoethnography (Holt, 2003). Duncan (2004), herself an autoethnographer (as discussed previously), has
+noted that criticisms have been leveled at the “more experimental forms of autoethnography in which the
+boundaries of scholarship are merged with artistic expression as a way of challenging the limitations of
+what is normally accepted as knowledge in academic contexts” (p. 11). She criticized evocative personal
+writing that relies on a direct emotional response from a reader rather than offering analysis, grounding in
+theory, and methodological rigor.
+In response, those who support autobiographical inquiry have argued that autoethnography is more
+authentic than traditional research approaches, precisely because of the researcher‟s use of self, the voice
+of the insider being more true than that of the outsider (Reed-Danahay, 1997). “Autobiographies . . . and
+life stories are likely to present fuller pictures [thick description], ones in which the meanings of events
+and relationships are more likely to be told than inferred” (Laslett, 1999, p. 391, italics added). The
+sensibility of the use of self in research was revealed by Ellis when she asked, “Who would make a better
+subject than a researcher consumed by wanting to figure it all out?” (1991, p. 30). Her frequent
+collaborator, Bochner (2001), objected to the assertion that a focus on self is decontextualized. Those who
+complain that personal narratives emphasis a single, speaking subject fail to realize that no individual
+voice speaks apart from a societal framework of co-constructed meaning. There is a direct and
+inextricable link between the personal and the cultural. Thus, rich meaning, culturally relevant personal
+experience, and an intense motivation to know are what typify and strengthen autoethnography.
+Some proponents of autoethnography and personal narrative acknowledge methodological issues
+associated with technique. “[T]hat we have to take precautions in interpreting, generalizing, and
+eliminating bias here the same as we do with any data we collect is assumed” (Ellis, 1991, p. 30). As we
+have seen, Duncan (2004) represented a response to these issues in which autoethnography is approached
+not for its poetic license but for its usefulness in explicating tacit knowledge and improving practice. She
+used self as subject but took precautions by adhering closely to accepted research conventions.
+Others, perhaps tending toward the more experimental forms of autoethnography than Duncan (2004) did,
+have argued that traditional criteria for judging validity cannot be and need not be applied to
+autoethnographic writing.
+
+155
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+The word criteria is a term that separates modernists from postmodernists . . . empiricists from
+interpretivists . . . Both [sides] agree that inevitably they make choices about what is good, what
+is useful, and what is not. The difference is that one side believes that “objective” methods and
+procedures can be applied to determine the choices we make, whereas the other side believes
+these choices are ultimately and inextricably tied to our values and our subjectivities. (Bochner,
+2000, p. 266)
+Because different epistemological and ontological assumptions inform autoethnographic inquiry, it makes
+no sense to impose traditional criteria in judging the value of a personal text (Sparkes, 2000). It is
+suggested that rigorous methodology and generalizability are not necessarily that which we should attain.
+“Think of the life being expressed [in a narrative] not merely as data to be analyzed and categorized but
+as a story to be respected and engaged . . . we shouldn‟t prematurely brush aside the particulars to get to
+the general” (Bochner, 2001, p. 132). Frank (2000) noted that those who criticize the rigor of personal
+narrative are missing the point. “Maybe the point is not to engage [narrative] systematically but to engage
+it personally” (p. 355). In judging narratives, then, we should “seek to meet literary criteria of coherence,
+verisimilitude, and interest” (Richardson, 2000, p. 11). In other words, “Does this account work for us?
+Do we find it to be believable and evocative on the basis of our own experiences?” (Garratt & Hodkinson,
+cited in Sparkes, 2000, p. 29).
+This is, finally, where anyone who, like me, first encounters autoethnography is faced with a choice.
+Having considered the epistemological and ontological assumptions and the methodological approaches,
+familiarized myself with a number of examples of autoethnography, and absorbed the arguments on both
+sides of the credibility/validity debate, I must now decide whether I am inclined to reject, tolerate, accept,
+defend, or even embrace this challenging genre of research and writing.
+I believe that I am forever called to be a moderate. Postmodern ideology appeals to me because it exposes
+the flaws in our traditional reliance on neutrality and objectivity. It says that we cannot separate ourselves
+from what we do. It breaks down dominant structures that seek to exclude the contributions of others. I
+like that. Yet, I still believe that some things are right and some are wrong, that some things are real, and
+that truth can sometimes be known the same way by all people.
+Methodology arises out of philosophy. I am solidly committed to qualitative research, itself a subjugated
+field of inquiry, because the aim of qualitative inquiry is to connect with people on the level of human
+meaning. Although I value quantitative research and admire those who excel at it, I am not interested in
+disembodied research that aims to speak neutrally for everyone. However, I like structure, and I believe
+that rigor is possible and necessary in qualitative research. Using self as subject is not a problem for me,
+but how self is used is very important.
+Each of the examples I read, several of which have been discussed in this article, resonated with me and
+made a contribution to my personal body of knowledge. Sparkes‟s (1996) piece balanced academic
+tradition with personal expression in a way that was very comfortable for me. His judicious use of theory
+helped me to interpret his personal experiences and to apply the concepts he presented to me. Clough
+(2000) supported this theory-based approach, with which I am at ease, by arguing that “staying close to
+theory allows experimental writing to be a vehicle for thinking new sociological subjects, new parameters
+of the social” (p. 290). Although, of course, I am a woman who has never been an elite athlete, I am a
+recreational runner who has often felt disappointment that my body cannot do what I so wish it would.
+Sparkes‟s story transferred in many ways to my life.
+As I am a doctoral student, Holt‟s (2001) description of adapting to a new university culture and learning
+to teach undergraduate students resonated with my experience. His use of self as data source was framed
+within an established framework of reflective practice, giving his story structure and equipping me as a
+
+156
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+reader with a new tool to apply in my reflective practice. Ellis (2000) suggested a number of questions
+that can be asked to judge the value of a story, including “Can the author legitimately make these claims
+for his story? Did the author learn anything new about himself? . . . Will this story help others cope with
+or better understand their worlds?” (p. 275). In reading Holt‟s story (autoethnography), I was certain that
+the answers to these questions were affirmative.
+Duncan‟s (2004) work allows a gentle step into the world of autoethnography. I have to admit that the
+realist inside of me was comforted by her rigorous methodological approach, and I felt very confident that
+I could trust her findings and conclusions. Although Duncan‟s writing is much more conventional than
+evocative, she conveyed legitimacy and usefulness in her use of a method that is “a new way to twist the
+familiar” (Ellis, 2000, p. 275).
+Ironically, perhaps, the unstructured, more literary personal narratives were also wonderful to experience
+as a reader. Paulette‟s story (1993) of letting her child go was easy to connect with. I read the whole story,
+lingering on points that called forth my experience, thoughts, and beliefs, the sign of a reading that Ellis
+(2000) has claimed to be worthy because it has evoked something in me (p. 274). Paulette described what
+I have often felt and what Illich (1976) so aptly stated, that “the medical establishment has become a
+major threat to health” (p. 3). Paulette‟s story is an important one for people in a dominant culture to hear.
+She made a holistic health decision for her child, resting on her faith, her family, and the sufficiency of
+her knowledge to come to a conclusion.
+Clarke‟s (1992) phenomenological dialogue on asthma was a stretch for me. Although it was beautifully
+written, I found it hard to engage fully with her message. Perhaps I am a philistine, but I did not always
+understand the meaning of the poetry she included and found the general presentation a little bit esoteric.
+Nevertheless, I have to admit that there were parts of it to which I could directly relate and from which I
+could take a new insight. Clarke managed to accomplish what Ellis (2000) strongly values: She painted
+vivid pictures, conveyed intense feeling, and demonstrated tremendous literary sensitivity. As well,
+Clarke‟s thematically organized presentation is a powerful approach to sharing memories that can be
+fragmentary and elusive (Muncey, 2005).
+Finally, I just simply enjoyed Pelias‟s (2003) autoethnographic story. Having been in the world of
+academia for only 2 years, I can already see how his description of the life academic is accurate. His
+words give me pause as I plan for my future, but his writing is lighthearted enough for me to see that,
+despite its shortcomings, people still choose an academic career and become comfortable in it. This story
+captured my imagination, entertained me, and taught me something rich and new about the world of the
+author, a success by Ellis‟s (2000) standards.
+I have lived long enough to have learned that when I am thinking something, I know someone else is, too.
+Other readers will have different reactions to these (and other) examples of autoethnography, but overall,
+I know that what attracts me to autoethnography and what concerns me about it are felt by others. My
+inner process and reactions connect to the experiences of others in the world beyond me. My personal
+experiences link to the cultural.
+In my opinion, all of these examples, as different as they are, have something important to offer. They are
+the sharing of new and unique knowledge that is useful and applicable in a broader context. Still, there is
+one final rub for me. Are they research?
+As we seek the answer, “there‟s a lot of room to do interesting and innovative work on both sides of the
+divide, and there doesn‟t have to be this winner-take-all mentality” (Bochner, 2001, p. 134). Knowledge
+
+157
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+does not have to result from research to be worthwhile, and personal stories should have their place
+alongside research in contribution to what we know about the world in which we live.
+Certainly, I have taken some liberties in classifying several examples as autoethnography, even when the
+authors do not. However, as I mentioned, this reflects the confusing nomenclature that exists in relation to
+what is increasingly referred to as autoethnography (Ellis & Bochner, 2000). Some authors, such as
+Sparkes (1996, 2000) began a personal narrative not referring to it as an autoethnography. Others have
+subsumed a tremendous range of writing styles under the heading “autoethnography” (Ellis & Bochner,
+2000). If we intend to unify our labels with the term autoethnography, I think we have to decide what we
+will put into that category. I see autoethnography as a research method that is part of, but delineated from,
+the broader realm of autobiography. By conceptualizing it this way, we can use self in a methodologically
+rigorous way, but personal stories can coexist with autoethnographic research.
+There does seem to be a distinction emerging, along methodological lines, between the works that are
+specifically referred to as autoethnographies (Duncan, 2004; Holt, 2001; Pelias, 2003; Sparkes, 1996) and
+those that might, according to some, fit into the category but are not labeled thus (Clarke, 1992; Paulette,
+1993). Ultimately, using self as subject is a way of acknowledging the self that was always there anyway
+and of exploring personal connections to our culture. We must be cautious, though, that we do not adopt
+new approaches in an uncritical fashion and that we make principled, disciplined choices about how we
+will understand and write about the social world (Coffey & Atkinson, 1996). We live in a time of great
+possibility; let us proceed wisely.
+References
+Atkinson, P. (1997). Narrative turn or blind alley? Qualitative Health Research, 7, 325-344.
+Bloor, M., Goldberg, D., & Emslie, J. (1991). Ethnostatistics and the AIDS epidemic. British Journal of
+Sociology, 42(1), 131-138.
+Bochner, A. P. (2000). Criteria against ourselves. Qualitative Inquiry, 6(2), 266-272.
+Bochner, A. P. (2001). Narrative‟s virtues. Qualitative Inquiry, 7(2), 131-157.
+Clandinin, D. J., & Connelly, F. M. (1994). Personal experience methods. In N. K. Denzin & Y. S.
+Lincoln (Eds.), Handbook of qualitative research (pp. 413-427). Thousand Oaks, CA: Sage.
+Clarke, M. (1992). Memories of breathing: a phenomenological dialogue: Asthma as a way of becoming.
+In J. Morse (Ed.), Qualitative health research (pp. 123-140). Newbury Park: Sage.
+Clough, P. T. (2000). Comments on setting criteria for experimental writing. Qualitative Inquiry, 6(2),
+278-291.
+Coffey, A., & Atkinson, P. (1996). Making sense of qualitative data: Complementary research strategies.
+Thousand Oaks, CA: Sage.
+Denzin, N. K., & Lincoln, Y. S. (1994). Entering the field of qualitative research. In N. K. Denzin & Y. S.
+Lincoln (Eds.), Handbook of qualitative research (pp. 1-17). Thousand Oaks, CA: Sage.
+Denzin, N. K., & Lincoln, Y. S. (2000). The discipline and practice of qualitative research. In N. K.
+Denzin & Y. S. Lincoln (Eds.), Handbook of qualitative research (2nd ed., pp. 1-28). Thousand
+Oaks, CA: Sage.
+
+158
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+Douglass, B. G., & Moustakas, C. (1985). Heuristic inquiry: The internal search to know. Journal of
+Humanistic Psychology, 25(3), 39-55.
+Duncan, M. (2004). Autoethnography: Critical appreciation of an emerging art. International Journal of
+Qualitative Methods, 3(4), Article 3. Retrieved June 28, 2005, from
+http://www.ualberta.ca/~iiqm/backissues/3_4/pdf/duncan.pdf
+Ellis, C. (1991). Sociological introspection and emotional experience. Symbolic Interaction, 14(1), 23-50.
+Ellis, C. (2000). Creating criteria: An ethnographic short story. Qualitative Inquiry, 6(2), 273-277.
+Ellis, C. (2004). The Ethnographic I. Walnut Creek, CA: AltaMira.
+Ellis, C., & Bochner, A. P. (1999). Bringing emotion and personal narrative into medical social
+science. Health, 3(2), 229-237.
+Ellis, C., & Bochner, A. P. (2000). Autoethnography, personal narrative, reflexivity. In N. K. Denzin &
+Y. S. Lincoln (Eds.), Handbook of qualitative research (2nd ed., pp. 733-768). Thousand Oaks,
+CA: Sage.
+Frank, A. W. (2000). The standpoint of storyteller. Qualitative Health Research, 10(3), 354-365.
+Garfinkel, H. (1967). “Good” organizational reasons for “bad” clinical records. In H. Garfinkel
+(Ed.), Studies in ethnomethodology (pp. 186-208). Inglewood Cliffs, NJ: Prentice Hall.
+Gephart, R. P. (1988). Ethnostatistics: Qualitative foundations for quantitative research. Newbury Park,
+CA: Sage.
+Hayano, D. M. (1979). Auto-ethnography: Paradigms, problems, and prospects. Human Organization, 38,
+113-120.
+Holt, N. L. (2001). Beyond technical reflection: Demonstrating the modification of teaching behaviors
+using three levels of reflection. Avante, 7(2), 66-76.
+Holt, N. L. (2003). Representation, legitimation, and autoethnography: An autoethnographic writing
+story. International Journal of Qualitative Methods, 2(1), Article 2. Retrieved June 20, 2005,
+from http://www.ualberta.ca/~iiqm/backissues/2_1/html/holt.html
+Illich, I. (1976). Limits to medicine. Toronto, Canada: McClelland and Stewart.
+Knorr-Cetina, K. (1991). Epistemic cultures: Forms of reason in science. History of Political
+Economy, 23(1), 105-122.
+Laslett, B. (1999). Personal narratives as sociology. Contemporary Sociology, 28(4), 391-401.
+McCorkel, J. A., & Myers, K. (2003). What difference does difference make: Position and privilege in the
+field. Qualitative Sociology, 26(2), 199-231.
+Moustakas, C. (1990). Heuristic research: Design, methodology, and applications. Newbury Park, CA:
+Sage.
+
+159
+
+International Journal of Qualitative Methods 2006, 5(2)
+
+Muncey, T. (2005). Doing autoethnography. International Journal of Qualitative Methods, 4(3), Article
+5. Retrieved April 7, 2006, from http://www.ualberta.ca/~iiqm/backissues/4_1/pdf/muncey.pdf
+Neuman, W. L. (1994). Social research methods: Qualitative and quantitative approaches. Needham
+Heights, MA: Allyn and Bacon.
+Paulette, L. (1993). A choice for K‟aila. Humane Medicine, 9(1), 13-17.
+Pelias, R. J. (2003). The academic tourist: An autoethnography. Qualitative Inquiry, 9(3), 369-373.
+Pillow, W. S. (2003). Confession, catharsis, or cure? Rethinking the uses of reflexivity as methodological
+power in qualitative research. Qualitative Studies in Education, 16(2), 175-196.
+Reed-Danahay, D. E. (1997). Auto/Ethnography: Rewriting the self and the social. Oxford, UK: Berg.
+Richardson, L. (1994). Writing: A method of inquiry. In N. K. Denzin & Y. S. Lincoln (Eds.), Handbook
+of qualitative research (pp. 516-529). Thousand Oaks, CA: Sage.
+Richardson, L. (2000). New writing practices in qualitative research. Sociology of Sport Journal, 17, 520.
+Sparkes, A. C. (1996). The fatal flaw: A narrative of the fragile body-self. Qualitative Inquiry, 2(4), 463494.
+Sparkes, A. C. (2000). Autoethnography and narratives of self: Reflections on criteria in action. Sociology
+of Sport Journal, 17, 21-43.
+Stivers, C. (1993). Reflections on the role of personal narrative in social science. Signs: Journal of
+Women in Culture and Society, 18(2), 408-425.
+Vidich, A. J., & Lyman, S. M. (2000). Qualitative methods: Their history in sociology and anthropology.
+In N. K. Denzin & Y. S. Lincoln (Eds.), Handbook of qualitative research (2nd ed., pp. 37-84).
+Thousand Oaks, CA: Sage.
+
+160
+
+
