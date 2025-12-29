@@ -28,9 +28,15 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
   - [ ] Methodologie-Struktur verstehen
 
 #### 0.2 Fehlende Materialien sammeln
-- [ ] **ILIAS einloggen** und restliche Folien herunterladen
-- [ ] **Fehlende Texte** ins Projekt laden (`academic/artistic-research/`)
-- [ ] **3 empfohlene Websites** vom Professor auflisten (TODO: welche?)
+- [x] **ILIAS einloggen** und restliche Folien herunterladen ✅
+- [x] **Fehlende Texte** ins Projekt laden (`academic/artistic-research/`) ✅
+- [x] **3 empfohlene Websites** vom Professor auflisten ✅ (siehe 1.3)
+
+#### 0.2.2 🤖 Systematic Literature Review (Agent-based)
+- [ ] **Agent-based Literature Review** durchführen (`literature-review/`)
+  - Setup: Siehe `literature-review/SETUP.md`
+  - Skills & Workflow: Siehe `literature-review/Skill.md`
+  - Status: Siehe `literature-review/checkpoint.md`
 
 #### 0.2.1 📚 Pflichtlektüre Artistic Research (aus ILIAS)
 
@@ -265,4 +271,5 @@ Dieses Projekt ist selbst ein Beispiel für den untersuchten Prozess:
 - [x] FORSCHUNGSRAHMEN.md erstellt
 - [x] referenzen.md begonnen
 - [x] ~~**Welche 3 Websites** hat der Professor empfohlen?~~ ✅ (siehe oben)
+- [x] `literature-review/` Ordner hinzugefügt (Agent-based Systematic Literature Review Workflow)
 
