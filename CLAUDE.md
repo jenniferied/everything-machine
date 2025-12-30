@@ -17,6 +17,9 @@ npx http-server -p 8001
 
 # Generate journal manifest after adding entries
 node scripts/generate-journal-manifest.js
+
+# Build thesis PDFs
+cd thesis/submission && make all
 ```
 
 No build step, bundler, or package.json - this is a vanilla JavaScript project with ES6 modules.
@@ -25,25 +28,39 @@ No build step, bundler, or package.json - this is a vanilla JavaScript project w
 
 ```
 /
-├── README.md, CLAUDE.md      # Root documentation
-├── index.html, style.css     # Entry point and styles
-├── docs/                     # Documentation (IMPLEMENTATION, TESTING, research docs)
-├── scripts/                  # Utility scripts (journal manifest generator)
-├── js/                       # ES6 modules (app.js, core/, audio/, navigation/, etc.)
-├── journal/                  # Markdown entries (journal-YYYY-MM-DD-title.md)
-├── academic/                 # MA thesis academic materials (NOT deployed to GitHub Pages)
-│   ├── Abgabe.md            # Submission requirements (Markdown version)
-│   ├── Exposé_*.pdf         # Project exposé
-│   ├── artistic-research/   # Literature sources for bibliography
-│   ├── examples/            # Lesson material examples
-│   ├── lesson-material/     # Class materials and slides
-│   ├── texts/               # Literature PDFs for review
-│   │   └── extracted/       # Pre-extracted .txt files (use these for large PDFs!)
-│   └── thilos-straightA-submission/  # Reference: A-grade submission example
-└── assets/
-    ├── audio/, images/       # Media files
-    ├── journal/              # Journal assets (YYYY-MM-DD-topic/)
-    └── archive/              # Unused/archived assets
+├── [WEBSITE - Deployed to GitHub Pages]
+│   ├── index.html, style.css     # Entry point and styles
+│   ├── js/                       # ES6 modules (app.js, core/, audio/, navigation/, etc.)
+│   ├── journal/                  # Markdown entries (journal-YYYY-MM-DD-title.md)
+│   │   └── TEMPLATE.md           # Template for new journal entries
+│   ├── content/                  # Website content pages
+│   │   ├── forschungsrahmen.md   # Research framework page
+│   │   └── referenzen.md         # References page
+│   ├── assets/
+│   │   ├── audio/, images/       # Media files
+│   │   └── journal/              # Journal assets (YYYY-MM-DD-topic/)
+│   └── scripts/                  # Build scripts (journal manifest generator)
+│
+├── [THESIS - MA Artistic Research]
+│   └── thesis/
+│       ├── ROADMAP.md            # Thesis progress & deadlines
+│       ├── academic/             # Course materials, PDFs, required reading
+│       │   ├── Abgabe.md         # Submission requirements
+│       │   ├── texts/            # Literature PDFs
+│       │   │   └── extracted/    # Pre-extracted .txt files (use for large PDFs!)
+│       │   ├── lesson-material/  # Class slides
+│       │   └── thilos-straightA-submission/  # Reference A-grade example
+│       ├── submission/           # PDF generation (Makefile, LaTeX)
+│       │   ├── docs/             # Markdown source files
+│       │   └── references/       # bibliography.bib
+│       └── literature-review/    # Systematic review workflow
+│
+├── [DEV DOCUMENTATION]
+│   └── docs/                     # Developer docs (IMPLEMENTATION, TESTING, QUICK_START)
+│
+├── README.md                     # Project overview
+├── CLAUDE.md                     # This file
+└── WEBSITE_TODO.md               # Website feature tasks
 ```
 
 ## Architecture
@@ -136,18 +153,17 @@ Manual browser testing required before commits:
 
 ## Journal Entry Writing
 
-When editing journal entries in `journal/`, use this structure:
-- **Intention**: What was the goal?
-- **Prozess**: What was done? (screenshots, prompts)
-- **Ergebnis**: What happened?
-- **Reflexion**: What was learned? Surprises? Workflow changes?
-- **Nächste Schritte**: What's next?
+When editing journal entries in `journal/`, use the template in `journal/TEMPLATE.md`:
+- **Kontext**: Tool/Workflow used, intention
+- **Prozess**: Input, iterations, output
+- **Erkenntnisse**: Surprises, errors as features, my role vs AI
+- **Weiterentwicklung**: Workflow changes, open questions, next steps
 
 Focus on process over results, document failures, use first-person perspective.
 
 ## Academic Submission Requirements
 
-The `academic/` folder contains materials for the MA thesis Artistic Research course. See `academic/Abgabe.md` for full details.
+The `thesis/academic/` folder contains materials for the MA thesis Artistic Research course. See `thesis/academic/Abgabe.md` for full details.
 
 ### Teil 1: Vorbereitung (Preparation)
 | Deliverable | Details |
@@ -166,7 +182,7 @@ The `academic/` folder contains materials for the MA thesis Artistic Research co
 6. **Literatur** - Bibliography (APA format)
 7. **Anhänge** (optional) - Images, transcripts
 
-### Reference: thilos-straightA-submission/
+### Reference: thesis/academic/thilos-straightA-submission/
 Contains an A-grade submission example with similar theme (generative AI + media production). Key approaches:
 - Autoethnographic methodology with video diary
 - Iterative workflow: develop → create → reflect → refine
@@ -177,7 +193,7 @@ Contains an A-grade submission example with similar theme (generative AI + media
 
 ### PDF Processing
 
-Literature PDFs are stored in `academic/texts/`. Pre-extracted text versions are in `academic/texts/extracted/`.
+Literature PDFs are stored in `thesis/academic/texts/`. Pre-extracted text versions are in `thesis/academic/texts/extracted/`.
 
 **Available texts:**
 | Source | PDF | Extracted Text |
@@ -194,10 +210,10 @@ Literature PDFs are stored in `academic/texts/`. Pre-extracted text versions are
 
 **IMPORTANT:** When encountering "PDF too large" errors, do NOT ask the user - handle it automatically:
 
-1. **First choice:** Use the pre-extracted `.txt` file from `academic/texts/extracted/`
+1. **First choice:** Use the pre-extracted `.txt` file from `thesis/academic/texts/extracted/`
 2. **If no extracted text exists:** Run `pdftotext` to extract it:
    ```bash
-   pdftotext "academic/texts/SomeFile.pdf" "academic/texts/extracted/SomeFile.txt"
+   pdftotext "thesis/academic/texts/SomeFile.pdf" "thesis/academic/texts/extracted/SomeFile.txt"
    ```
 3. **Then read the `.txt` file** instead of the PDF
 
@@ -205,8 +221,8 @@ The `poppler` package is installed and provides `pdftotext`, `pdfinfo`, `pdfsepa
 
 ### Literature Review Checkpoint
 
-Current status of literature review work is tracked in `PROJECTSTATUS.md`. When working on literature review:
-1. Check `PROJECTSTATUS.md` for current progress
+Current status of literature review work is tracked in `thesis/ROADMAP.md`. When working on literature review:
+1. Check `thesis/ROADMAP.md` for current progress
 2. Use extracted text files for reading sources
-3. Update `PROJECTSTATUS.md` after completing work
-4. Output goes to `submission/` folder
+3. Update `thesis/ROADMAP.md` after completing work
+4. Output goes to `thesis/submission/` folder
