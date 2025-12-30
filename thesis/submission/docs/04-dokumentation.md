@@ -43,11 +43,25 @@ Gliederung:
 
 ## Hintergrund und Motivation
 
-*«Die zunehmende Verfügbarkeit generativer KI-Systeme verändert kreative Arbeitsprozesse grundlegend. Text-zu-Bild-Generatoren, Large Language Models und Audio-Synthese-Tools ermöglichen neue Formen der künstlerischen Produktion, die weder rein menschlich noch rein maschinell sind. Für Medienproduzent\*innen stellt sich die Frage, wie diese Technologien den kreativen Prozess transformieren -- und welche ästhetischen Qualitäten aus dieser Transformation entstehen.*
+### Der Moment der generativen KI
 
-*Im Kontext meiner eigenen künstlerischen Praxis manifestiert sich diese Frage in der Entwicklung von "Kepler" -- einem digitalen Alter Ego, das als Musikerin und visuelle Künstlerin existiert. Kepler ist keine rein fiktive Figur, die ich erfunden habe, sondern ein emergentes Ergebnis meiner Zusammenarbeit mit KI-Systemen: Ihre visuelle Erscheinung entsteht durch Diffusion Models, ihre Texte durch Kollaboration mit LLMs, ihre Musik durch KI-gestützte Produktion.*
+*«Wir erleben einen historischen Umbruch in der kreativen Produktion. Zwischen 2022 und 2025 hat sich eine Explosion generativer KI-Tools ereignet, die nahezu alle kreativen Domänen erfasst: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Was vor wenigen Jahren noch Gegenstand von Science-Fiction-Spekulationen war, ist heute alltägliches Werkzeug.*
 
-*Das Projekt "Everything Machine" dokumentiert diesen Entwicklungsprozess transparent auf einer öffentlichen Website. Der Name verweist auf die Idee einer Maschine, die "alles" produzieren kann -- und fragt gleichzeitig kritisch, was dieses "alles" wert ist.»*
+*Diese Entwicklung demokratisiert kreative Produktion auf beispiellose Weise. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Demokratisierung fundamentale Fragen auf: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren? Was ist ästhetischer Wert, wenn "alles" auf Knopfdruck möglich scheint?*
+
+*Diese Fragen sind nicht abstrakt-philosophisch, sondern berühren die konkrete Praxis von Medienproduzent\*innen, Künstler\*innen und Kreativen weltweit.»*
+
+### Kepler: Ein digitales Alter Ego
+
+*«Im Kontext meiner eigenen künstlerischen Praxis manifestiert sich diese Transformation in der Entwicklung von "Kepler" -- einem digitalen Alter Ego, das als Musikerin und visuelle Künstlerin existiert. Kepler ist keine rein fiktive Figur, die ich erfunden habe, sondern ein emergentes Ergebnis meiner Zusammenarbeit mit KI-Systemen: Ihre visuelle Erscheinung entsteht durch Diffusion Models, ihre Texte durch Kollaboration mit LLMs, ihre Musik durch KI-gestützte Produktion.*
+
+*Das Projekt begann mit einer einfachen Frage: Was passiert, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite? Die Antwort hat mich überrascht: Kepler entwickelte eine Eigenlogik, die ich nicht vollständig geplant hatte. Sie wurde mehr als eine Figur -- sie wurde ein Spiegel meiner Auseinandersetzung mit dieser neuen kreativen Landschaft.»*
+
+### "Everything Machine": Der Projektname
+
+*«Das Projekt "Everything Machine" dokumentiert diesen Entwicklungsprozess transparent auf einer öffentlichen Website. Der Name verweist auf die Idee einer Maschine, die "alles" produzieren kann -- Text, Bild, Audio, Video, Code. Gleichzeitig fragt er kritisch, was dieses "alles" wert ist. Wenn eine Maschine alles kann, was bedeutet das für die Dinge, die wir wertschätzen?*
+
+*Der Name enthält auch eine Ironie: Je mehr ich mit generativer KI arbeite, desto deutlicher wird, dass sie eben nicht "alles" kann. Sie kann keine echten Erfahrungen machen, keine authentischen Emotionen empfinden, keine wirklichen Beziehungen aufbauen. Die "Everything Machine" ist zugleich mächtig und begrenzt -- und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.»*
 
 ## Forschungsfrage und Überblick
 
@@ -119,7 +133,28 @@ Gliederung:
 
 ### Öffentliche Website als Forschungsartefakt
 
-*«Die Website "Everything Machine" macht den gesamten Prozess transparent zugänglich. Sie ist selbst Teil des künstlerischen Outputs und dient gleichzeitig als Forschungsdokumentation.»*
+*«Die Website "Everything Machine" macht den gesamten Prozess transparent zugänglich. Sie ist selbst Teil des künstlerischen Outputs und dient gleichzeitig als Forschungsdokumentation. Die Website wurde bewusst ohne externes Content-Management-System entwickelt -- stattdessen als maßgeschneiderte Webanwendung mit modernem JavaScript (ES6 Module, EventBus-Pattern für lose Kopplung der Komponenten).*
+
+*Die technische Architektur der Website reflektiert die methodischen Prinzipien des Projekts: Transparenz durch Versionierung (Git), Iterativität durch modularen Aufbau, und Selbstreflexion durch ein integriertes Journal-System.»*
+
+### KI-gestützter Reflexionsprozess
+
+*«Ein zentrales Element der Methodik ist der strukturierte Reflexionsprozess, der selbst die Kollaboration mit KI einbezieht. Jeder Journal-Eintrag wird nach dem Schreiben einer KI-gestützten Reflexion unterzogen:»*
+
+1. *«**Dokumentieren:** Ich schreibe den Journal-Eintrag während oder direkt nach der kreativen Arbeit.»*
+2. *«**Reflektieren mit KI:** Nach dem Schreiben führe ich eine Konversation mit der KI (Claude). Sie liest den Eintrag, stellt Rückfragen und hilft mir, strukturierte Reflexionsfragen zu beantworten.»*
+3. *«**Verdichten:** Die KI fasst die Konversation in einem standardisierten Format zusammen -- mit immer gleichen Fragen, um Vergleichbarkeit über alle Einträge hinweg zu gewährleisten.»*
+
+*«Die festen Reflexionsfragen folgen einer Struktur, die auf autoethnografischer Praxis [@ellis2011autoethnography] und Donald Schöns Konzept des "Reflection-in-Action" [@schoen1983practitioner] basiert:»*
+
+- *«**Kontext:** Tool/Workflow, Intention»*
+- *«**Prozess:** Input, Iterationen, Output»*
+- *«**Erkenntnisse:** Überraschungen, Fehler als Feature, meine Rolle vs. KI»*
+- *«**Weiterentwicklung:** Workflow-Änderung, offene Fragen, nächste Schritte»*
+
+*«Dieser Prozess selbst ist Teil meiner Artistic Research: Die KI wird zum Sparringspartner für die Selbstreflexion, nicht zum Autor. Die Antworten entstehen im Dialog -- die KI strukturiert und verdichtet, aber die Erkenntnisse kommen aus meiner Erfahrung.*
+
+*Die Website stellt diese Reflexionen als spezielle Widgets dar, die visuell vom Haupttext abgesetzt sind und Keywords für die spätere Cross-Entry-Analyse extrahierbar machen.»*
 
 ## Ethische Überlegungen
 
