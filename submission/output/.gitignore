@@ -1,0 +1,13 @@
+# Ignore generated PDFs
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Keep directory
+!.gitignore

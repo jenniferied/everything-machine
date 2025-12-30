@@ -33,7 +33,7 @@ Dieses Projekt folgt konsequent SOLID-Prinzipien für wartbaren, testbaren Code:
 - **Interface Segregation**: Minimale, fokussierte Schnittstellen
 - **Dependency Inversion**: Abhängigkeiten von Abstraktionen (EventBus), nicht von konkreten Klassen
 
-Alle Features sind als ES6-Module mit klaren Verantwortlichkeiten und Dependency Injection implementiert. Siehe [IMPLEMENTATION.md](IMPLEMENTATION.md) für Details zur Architektur.
+Alle Features sind als ES6-Module mit klaren Verantwortlichkeiten und Dependency Injection implementiert. Siehe [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md) für Details zur Architektur.
 
 ## Projektstruktur
 
@@ -42,7 +42,8 @@ Alle Features sind als ES6-Module mit klaren Verantwortlichkeiten und Dependency
 ├── style.css               # Benutzerdefinierte Stile
 ├── .cursorrules            # KI-Entwicklungsrichtlinien (SOLID)
 ├── README.md               # Diese Datei
-├── IMPLEMENTATION.md       # Architektur-Dokumentation
+├── docs/                   # Dokumentation
+│   └── IMPLEMENTATION.md   # Architektur-Dokumentation
 ├── js/                     # Modulare JavaScript-Architektur
 │   ├── app.js              # Haupt-Orchestrator
 │   ├── core/               # Kern-Services (EventBus, FeatureDetector, ScriptLoader)

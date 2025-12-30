@@ -17,11 +17,16 @@ export class PointCloudViewer extends ViewerBase {
     this.animationFrameId = null;
     this.isAnimating = true;
     this.rotation = 0;
-    this.rotationY = 0;    // Horizontal rotation (user controlled)
-    this.rotationX = 0;    // Vertical rotation (user controlled)
-    this.autoRotation = 0; // Auto-rotation component
-    this.zoom = 8;         // Camera distance
+    this.rotationY = 0;
+    this.rotationX = 0;
+    this.autoRotation = 0;
+    this.zoom = 8;
     this.pointCount = 0;
+
+    // FPS limiting
+    this.lastFrameTime = 0;
+    this.targetFPS = 24;
+    this.frameInterval = 1000 / this.targetFPS;
 
     // Mouse interaction state
     this.isDragging = false;
@@ -49,11 +54,24 @@ export class PointCloudViewer extends ViewerBase {
 
     console.log('[PointCloudViewer] Initializing:', width, 'x', height);
 
+    // Clear container
+    this.container.innerHTML = '';
+    this.container.style.position = 'relative';
+
+    // Create wrapper for flex layout (canvas + controls)
+    this.wrapper = document.createElement('div');
+    this.wrapper.style.cssText = `
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    `;
+
     // Create canvas
     this.canvas = document.createElement('canvas');
     this.canvas.width = width;
-    this.canvas.height = height;
-    this.canvas.style.cssText = 'display: block; width: 100%; height: 100%;';
+    this.canvas.height = height - 32; // Leave room for controls
+    this.canvas.style.cssText = 'display: block; width: 100%; flex: 1;';
 
     // Get WebGL2 context
     this.gl = this.canvas.getContext('webgl2', {
@@ -65,10 +83,8 @@ export class PointCloudViewer extends ViewerBase {
       throw new Error('WebGL2 not available');
     }
 
-    // Clear and add canvas
-    this.container.innerHTML = '';
-    this.container.style.position = 'relative';
-    this.container.appendChild(this.canvas);
+    this.wrapper.appendChild(this.canvas);
+    this.container.appendChild(this.wrapper);
 
     // Setup shaders
     this.setupShaders();
@@ -79,6 +95,7 @@ export class PointCloudViewer extends ViewerBase {
     // Load real PLY data
     await this.loadPLYData();
 
+    // Create control panel (under canvas)
     this.createControlPanel();
 
     // Setup mouse interaction
@@ -92,7 +109,6 @@ export class PointCloudViewer extends ViewerBase {
   }
 
   setupMouseControls() {
-    // Mouse down - start dragging
     this.canvas.addEventListener('mousedown', (e) => {
       this.isDragging = true;
       this.lastMouseX = e.clientX;
@@ -100,7 +116,6 @@ export class PointCloudViewer extends ViewerBase {
       this.canvas.style.cursor = 'grabbing';
     });
 
-    // Mouse move - rotate
     this.canvas.addEventListener('mousemove', (e) => {
       if (!this.isDragging) return;
 
@@ -109,21 +124,17 @@ export class PointCloudViewer extends ViewerBase {
 
       this.rotationY += deltaX * 0.01;
       this.rotationX += deltaY * 0.01;
-
-      // Clamp vertical rotation
       this.rotationX = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, this.rotationX));
 
       this.lastMouseX = e.clientX;
       this.lastMouseY = e.clientY;
     });
 
-    // Mouse up - stop dragging
     window.addEventListener('mouseup', () => {
       this.isDragging = false;
       this.canvas.style.cursor = 'grab';
     });
 
-    // Mouse wheel - zoom
     this.canvas.addEventListener('wheel', (e) => {
       e.preventDefault();
       this.zoom += e.deltaY * 0.01;
@@ -158,7 +169,6 @@ export class PointCloudViewer extends ViewerBase {
       this.isDragging = false;
     });
 
-    // Set initial cursor
     this.canvas.style.cursor = 'grab';
   }
 
@@ -178,7 +188,6 @@ export class PointCloudViewer extends ViewerBase {
       out vec3 vColor;
 
       void main() {
-        // Rotation around Y axis (horizontal drag)
         float cy = cos(uRotationY);
         float sy = sin(uRotationY);
         mat3 rotY = mat3(
@@ -187,7 +196,6 @@ export class PointCloudViewer extends ViewerBase {
           -sy, 0.0, cy
         );
 
-        // Rotation around X axis (vertical drag)
         float cx = cos(uRotationX);
         float sx = sin(uRotationX);
         mat3 rotX = mat3(
@@ -200,9 +208,8 @@ export class PointCloudViewer extends ViewerBase {
         vec4 viewPos = uView * vec4(rotatedPos, 1.0);
         gl_Position = uProjection * viewPos;
 
-        // Size attenuation based on distance
         float dist = length(viewPos.xyz);
-        gl_PointSize = uPointSize * 150.0 / dist;
+        gl_PointSize = uPointSize * 8.0 / dist;
 
         vColor = aColor;
       }
@@ -214,7 +221,6 @@ export class PointCloudViewer extends ViewerBase {
       out vec4 fragColor;
 
       void main() {
-        // Circular points with soft edge
         vec2 coord = gl_PointCoord - vec2(0.5);
         float dist = length(coord);
         if (dist > 0.5) discard;
@@ -224,7 +230,6 @@ export class PointCloudViewer extends ViewerBase {
       }
     `;
 
-    // Compile shaders
     const vs = this.compileShader(gl.VERTEX_SHADER, vsSource);
     const fs = this.compileShader(gl.FRAGMENT_SHADER, fsSource);
 
@@ -237,7 +242,6 @@ export class PointCloudViewer extends ViewerBase {
       console.error('[PointCloudViewer] Program link error:', gl.getProgramInfoLog(this.program));
     }
 
-    // Get locations
     this.aPosition = gl.getAttribLocation(this.program, 'aPosition');
     this.aColor = gl.getAttribLocation(this.program, 'aColor');
     this.uProjection = gl.getUniformLocation(this.program, 'uProjection');
@@ -260,9 +264,6 @@ export class PointCloudViewer extends ViewerBase {
     return shader;
   }
 
-  /**
-   * Convert HSL to RGB
-   */
   hslToRgb(h, s, l) {
     let r, g, b;
     if (s === 0) {
@@ -298,35 +299,31 @@ export class PointCloudViewer extends ViewerBase {
 
   async loadPLYData() {
     const gl = this.gl;
-
-    // PCD file from Three.js examples - Zaghetto statue (59,750 points)
-    const pcdUrl = 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/pcd/binary/Zaghetto.pcd';
+    // Stanford Bunny PLY (not gzipped, much smaller than Dragon)
+    const plyUrl = 'https://raw.githubusercontent.com/naucoin/VTKData/master/Data/bunny.ply';
 
     try {
-      console.log('[PointCloudViewer] Fetching PCD:', pcdUrl);
-      const response = await fetch(pcdUrl);
+      console.log('[PointCloudViewer] Fetching Stanford Bunny PLY:', plyUrl);
+      const response = await fetch(plyUrl);
+
+      // No decompression needed for this PLY
       const arrayBuffer = await response.arrayBuffer();
 
-      // Parse PCD file
-      const { positions, colors, count } = this.parsePCD(arrayBuffer);
+      const { positions, colors, count } = this.parsePLY(arrayBuffer);
 
-      // Remove loading indicator
       if (this.loadingEl) {
         this.loadingEl.remove();
       }
 
-      // Create VAO
       this.vao = gl.createVertexArray();
       gl.bindVertexArray(this.vao);
 
-      // Position buffer
       this.posBuffer = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, this.posBuffer);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
       gl.enableVertexAttribArray(this.aPosition);
       gl.vertexAttribPointer(this.aPosition, 3, gl.FLOAT, false, 0, 0);
 
-      // Color buffer
       this.colorBuffer = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, this.colorBuffer);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
@@ -336,26 +333,177 @@ export class PointCloudViewer extends ViewerBase {
       gl.bindVertexArray(null);
       this.pointCount = count;
 
-      console.log('[PointCloudViewer] Loaded', count, 'points from PCD');
+      console.log('[PointCloudViewer] Loaded', count, 'points from PLY');
+      this.modelName = 'Stanford Bunny';
+
+      // Update label after control panel is created
+      setTimeout(() => {
+        const label = this.controlPanel?.querySelector('.model-label');
+        if (label) {
+          label.textContent = `Stanford Bunny (${(count / 1000).toFixed(0)}K pts)`;
+        }
+      }, 100);
 
     } catch (error) {
-      console.error('[PointCloudViewer] Failed to load PCD:', error);
+      console.error('[PointCloudViewer] Failed to load PLY:', error);
       this.createFallbackPointCloud();
     }
+  }
+
+  parsePLY(arrayBuffer) {
+    const textDecoder = new TextDecoder();
+    const text = textDecoder.decode(arrayBuffer);
+
+    // Parse PLY header
+    const headerEndIndex = text.indexOf('end_header');
+    if (headerEndIndex === -1) {
+      throw new Error('Invalid PLY: no end_header');
+    }
+
+    const header = text.substring(0, headerEndIndex);
+    const vertexMatch = header.match(/element vertex (\d+)/);
+    const vertexCount = vertexMatch ? parseInt(vertexMatch[1]) : 0;
+
+    // Check format
+    const isBinary = header.includes('format binary');
+    const isAscii = header.includes('format ascii');
+
+    console.log('[PointCloudViewer] PLY format:', isBinary ? 'binary' : 'ascii', 'vertices:', vertexCount);
+
+    if (isBinary) {
+      return this.parseBinaryPLY(arrayBuffer, header, vertexCount);
+    } else {
+      return this.parseAsciiPLY(text, headerEndIndex, vertexCount);
+    }
+  }
+
+  parseBinaryPLY(arrayBuffer, header, vertexCount) {
+    // Find data start (after "end_header\n")
+    const uint8 = new Uint8Array(arrayBuffer);
+    let dataStart = 0;
+    for (let i = 0; i < Math.min(2000, uint8.length - 10); i++) {
+      if (uint8[i] === 101 && uint8[i+1] === 110 && uint8[i+2] === 100 &&
+          uint8[i+3] === 95 && uint8[i+4] === 104) { // "end_h"
+        // Find newline after end_header
+        for (let j = i; j < i + 20; j++) {
+          if (uint8[j] === 10) {
+            dataStart = j + 1;
+            break;
+          }
+        }
+        break;
+      }
+    }
+
+    const dataView = new DataView(arrayBuffer, dataStart);
+    const positions = [];
+    const colors = [];
+
+    // Bounds for normalization
+    let minX = Infinity, maxX = -Infinity;
+    let minY = Infinity, maxY = -Infinity;
+    let minZ = Infinity, maxZ = -Infinity;
+
+    const rawPoints = [];
+
+    // Read vertices (assuming x, y, z as float32)
+    for (let i = 0; i < vertexCount; i++) {
+      const offset = i * 12; // 3 floats * 4 bytes
+      if (offset + 12 > dataView.byteLength) break;
+
+      const x = dataView.getFloat32(offset, true);
+      const y = dataView.getFloat32(offset + 4, true);
+      const z = dataView.getFloat32(offset + 8, true);
+
+      if (isFinite(x) && isFinite(y) && isFinite(z)) {
+        rawPoints.push({ x, y, z });
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+        minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
+      }
+    }
+
+    // Center and scale
+    const centerX = (minX + maxX) / 2;
+    const centerY = (minY + maxY) / 2;
+    const centerZ = (minZ + maxZ) / 2;
+    const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
+    const scale = 5 / maxDim;
+
+    for (const { x, y, z } of rawPoints) {
+      positions.push(
+        (x - centerX) * scale,
+        (y - centerY) * scale,
+        (z - centerZ) * scale
+      );
+
+      // Golden/bronze color for dragon (no RGB in file)
+      const brightness = 0.4 + Math.random() * 0.2;
+      colors.push(0.85 * brightness, 0.65 * brightness, 0.35 * brightness);
+    }
+
+    return { positions, colors, count: rawPoints.length };
+  }
+
+  parseAsciiPLY(text, headerEndIndex, vertexCount) {
+    const dataStart = headerEndIndex + 11; // "end_header\n"
+    const lines = text.substring(dataStart).trim().split('\n');
+
+    const positions = [];
+    const colors = [];
+
+    let minX = Infinity, maxX = -Infinity;
+    let minY = Infinity, maxY = -Infinity;
+    let minZ = Infinity, maxZ = -Infinity;
+
+    const rawPoints = [];
+
+    for (let i = 0; i < Math.min(vertexCount, lines.length); i++) {
+      const parts = lines[i].trim().split(/\s+/);
+      if (parts.length >= 3) {
+        const x = parseFloat(parts[0]);
+        const y = parseFloat(parts[1]);
+        const z = parseFloat(parts[2]);
+
+        if (isFinite(x) && isFinite(y) && isFinite(z)) {
+          rawPoints.push({ x, y, z });
+          minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+          minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+          minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
+        }
+      }
+    }
+
+    const centerX = (minX + maxX) / 2;
+    const centerY = (minY + maxY) / 2;
+    const centerZ = (minZ + maxZ) / 2;
+    const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
+    const scale = 5 / maxDim;
+
+    for (const { x, y, z } of rawPoints) {
+      positions.push(
+        (x - centerX) * scale,
+        (y - centerY) * scale,
+        (z - centerZ) * scale
+      );
+
+      // Golden/bronze color for dragon
+      const brightness = 0.4 + Math.random() * 0.2;
+      colors.push(0.85 * brightness, 0.65 * brightness, 0.35 * brightness);
+    }
+
+    return { positions, colors, count: rawPoints.length };
   }
 
   parsePCD(arrayBuffer) {
     const textDecoder = new TextDecoder();
     const uint8View = new Uint8Array(arrayBuffer);
 
-    // Find end of header
     let headerEnd = 0;
     for (let i = 0; i < Math.min(1000, uint8View.length - 5); i++) {
-      // Look for "DATA binary\n"
       if (uint8View[i] === 68 && uint8View[i+1] === 65 && uint8View[i+2] === 84 && uint8View[i+3] === 65) {
-        // Find newline after DATA
         for (let j = i; j < i + 20; j++) {
-          if (uint8View[j] === 10) { // newline
+          if (uint8View[j] === 10) {
             headerEnd = j + 1;
             break;
           }
@@ -364,19 +512,16 @@ export class PointCloudViewer extends ViewerBase {
       }
     }
 
-    // Parse header for point count
     const headerText = textDecoder.decode(uint8View.slice(0, headerEnd));
     const pointsMatch = headerText.match(/POINTS\s+(\d+)/);
     const pointCount = pointsMatch ? parseInt(pointsMatch[1]) : 0;
 
     console.log('[PointCloudViewer] PCD header parsed, points:', pointCount);
 
-    // Read binary data (float32 x, y, z per point)
     const dataView = new DataView(arrayBuffer, headerEnd);
     const positions = [];
     const colors = [];
 
-    // Find bounds for normalization
     let minX = Infinity, maxX = -Infinity;
     let minY = Infinity, maxY = -Infinity;
     let minZ = Infinity, maxZ = -Infinity;
@@ -384,9 +529,9 @@ export class PointCloudViewer extends ViewerBase {
     const rawPoints = [];
 
     for (let i = 0; i < pointCount; i++) {
-      const offset = i * 12; // 3 floats * 4 bytes
+      const offset = i * 12;
       if (offset + 12 <= dataView.byteLength) {
-        const x = dataView.getFloat32(offset, true);     // little endian
+        const x = dataView.getFloat32(offset, true);
         const y = dataView.getFloat32(offset + 4, true);
         const z = dataView.getFloat32(offset + 8, true);
 
@@ -399,7 +544,6 @@ export class PointCloudViewer extends ViewerBase {
       }
     }
 
-    // Normalize and center
     const centerX = (minX + maxX) / 2;
     const centerY = (minY + maxY) / 2;
     const centerZ = (minZ + maxZ) / 2;
@@ -407,17 +551,22 @@ export class PointCloudViewer extends ViewerBase {
     const scale = 5 / maxDim;
 
     for (const { x, y, z } of rawPoints) {
-      positions.push(
-        (x - centerX) * scale,
-        (z - centerZ) * scale,  // Swap Y and Z for better orientation
-        (y - centerY) * scale
-      );
+      const nx = (x - centerX) * scale;
+      const ny = (z - centerZ) * scale;
+      const nz = (y - centerY) * scale;
 
-      // Generate color based on height (bronze/gold statue look)
-      const normalizedY = (z - minZ) / (maxZ - minZ);
-      const hue = 0.08 + normalizedY * 0.05; // Gold to bronze
-      const sat = 0.6;
-      const light = 0.4 + normalizedY * 0.25;
+      positions.push(nx, ny, nz);
+
+      // Multi-color gradient based on 3D position (rainbow effect)
+      const normalizedX = (x - minX) / (maxX - minX);
+      const normalizedY = (y - minY) / (maxY - minY);
+      const normalizedZ = (z - minZ) / (maxZ - minZ);
+
+      // Combine position into hue for rainbow coloring
+      const hue = (normalizedX * 0.3 + normalizedY * 0.4 + normalizedZ * 0.3) * 0.8;
+      const sat = 0.7;
+      const light = 0.45 + normalizedZ * 0.2;
+
       const rgb = this.hslToRgb(hue, sat, light);
       colors.push(rgb.r, rgb.g, rgb.b);
     }
@@ -425,89 +574,7 @@ export class PointCloudViewer extends ViewerBase {
     return { positions, colors, count: rawPoints.length };
   }
 
-  parsePLY(plyText) {
-    const lines = plyText.split('\n');
-    let vertexCount = 0;
-    let headerEnd = 0;
-    let hasColor = false;
-
-    // Parse header
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (line.startsWith('element vertex')) {
-        vertexCount = parseInt(line.split(' ')[2]);
-      }
-      if (line.includes('red') || line.includes('diffuse_red')) {
-        hasColor = true;
-      }
-      if (line === 'end_header') {
-        headerEnd = i + 1;
-        break;
-      }
-    }
-
-    const positions = [];
-    const colors = [];
-
-    // Find bounding box for normalization
-    let minX = Infinity, maxX = -Infinity;
-    let minY = Infinity, maxY = -Infinity;
-    let minZ = Infinity, maxZ = -Infinity;
-
-    const rawPositions = [];
-
-    // First pass: read positions and find bounds
-    for (let i = headerEnd; i < headerEnd + vertexCount && i < lines.length; i++) {
-      const parts = lines[i].trim().split(/\s+/);
-      if (parts.length >= 3) {
-        const x = parseFloat(parts[0]);
-        const y = parseFloat(parts[1]);
-        const z = parseFloat(parts[2]);
-
-        if (!isNaN(x) && !isNaN(y) && !isNaN(z)) {
-          rawPositions.push({ x, y, z, parts });
-          minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-          minY = Math.min(minY, y); maxY = Math.max(maxY, y);
-          minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
-        }
-      }
-    }
-
-    // Normalize and center
-    const centerX = (minX + maxX) / 2;
-    const centerY = (minY + maxY) / 2;
-    const centerZ = (minZ + maxZ) / 2;
-    const scale = 4 / Math.max(maxX - minX, maxY - minY, maxZ - minZ);
-
-    for (const { x, y, z, parts } of rawPositions) {
-      positions.push(
-        (x - centerX) * scale,
-        (y - centerY) * scale,
-        (z - centerZ) * scale
-      );
-
-      // Extract or generate colors
-      if (hasColor && parts.length >= 6) {
-        // PLY colors are usually 0-255
-        colors.push(
-          parseFloat(parts[3]) / 255 || 0.5,
-          parseFloat(parts[4]) / 255 || 0.7,
-          parseFloat(parts[5]) / 255 || 0.9
-        );
-      } else {
-        // Generate color based on position (ocean gradient for dolphins)
-        const normalizedY = (y - minY) / (maxY - minY);
-        const hue = 0.55 + normalizedY * 0.15; // Blue to cyan
-        const rgb = this.hslToRgb(hue, 0.7, 0.5 + normalizedY * 0.2);
-        colors.push(rgb.r, rgb.g, rgb.b);
-      }
-    }
-
-    return { positions, colors, count: rawPositions.length };
-  }
-
   createFallbackPointCloud() {
-    // Fallback: Simple sphere if PLY fails
     const gl = this.gl;
     const count = 10000;
     const positions = [];
@@ -552,13 +619,18 @@ export class PointCloudViewer extends ViewerBase {
   }
 
   async render() {
-    this.animate();
+    this.animate(0);
   }
 
-  animate() {
+  animate(currentTime) {
     if (!this.gl || !this.program) return;
 
-    this.animationFrameId = requestAnimationFrame(() => this.animate());
+    this.animationFrameId = requestAnimationFrame((t) => this.animate(t));
+
+    // FPS limiting
+    const elapsed = currentTime - this.lastFrameTime;
+    if (elapsed < this.frameInterval) return;
+    this.lastFrameTime = currentTime - (elapsed % this.frameInterval);
 
     const gl = this.gl;
     const width = this.canvas.width;
@@ -574,7 +646,6 @@ export class PointCloudViewer extends ViewerBase {
 
     gl.useProgram(this.program);
 
-    // Perspective projection matrix
     const fov = 50 * Math.PI / 180;
     const aspect = width / height;
     const near = 0.1;
@@ -587,7 +658,6 @@ export class PointCloudViewer extends ViewerBase {
       0, 0, (2 * far * near) / (near - far), 0
     ]);
 
-    // View matrix (camera looking at origin, distance controlled by zoom)
     const view = new Float32Array([
       1, 0, 0, 0,
       0, 1, 0, 0,
@@ -598,17 +668,14 @@ export class PointCloudViewer extends ViewerBase {
     gl.uniformMatrix4fv(this.uProjection, false, projection);
     gl.uniformMatrix4fv(this.uView, false, view);
 
-    // Update auto-rotation when not dragging
     if (this.isAnimating && !this.isDragging) {
       this.autoRotation += 0.004;
     }
 
-    // Combine auto-rotation with user rotation
     gl.uniform1f(this.uRotationX, this.rotationX);
     gl.uniform1f(this.uRotationY, this.rotationY + this.autoRotation);
-    gl.uniform1f(this.uPointSize, 3.0);
+    gl.uniform1f(this.uPointSize, 1.0);
 
-    // Draw
     gl.bindVertexArray(this.vao);
     gl.drawArrays(gl.POINTS, 0, this.pointCount);
     gl.bindVertexArray(null);
@@ -617,47 +684,44 @@ export class PointCloudViewer extends ViewerBase {
   createControlPanel() {
     this.controlPanel = document.createElement('div');
     this.controlPanel.style.cssText = `
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      background: rgba(17, 17, 17, 0.95);
-      border: 1px solid #4ade80;
-      border-radius: 8px;
-      z-index: 10;
+      justify-content: center;
+      gap: 4px;
+      padding: 4px 8px;
+      background: #111;
+      border-top: 1px solid #374151;
       font-family: 'IBM Plex Mono', monospace;
     `;
 
-    const animBtn = this.isAnimating ? '⏸' : '▶';
     this.controlPanel.innerHTML = `
       <button data-action="toggle" style="
-        width: 32px; height: 32px; background: #1f2937; border: 1px solid #374151;
-        border-radius: 6px; color: #4ade80; cursor: pointer; font-size: 14px;
-      ">${animBtn}</button>
-      <span style="color: #9ca3af; font-size: 11px; text-transform: uppercase;">
-        Zaghetto Statue (60K pts)
+        width: 24px; height: 24px; background: #1f2937; border: 1px solid #374151;
+        border-radius: 4px; color: ${this.isAnimating ? '#4ade80' : '#9ca3af'}; cursor: pointer; font-size: 10px;
+        display: flex; align-items: center; justify-content: center;
+      ">${this.isAnimating ? '⏸' : '▶'}</button>
+      <div style="width: 1px; height: 16px; background: #374151;"></div>
+      <span class="model-label" style="color: #9ca3af; font-size: 9px; text-transform: uppercase;">
+        Stanford Bunny
       </span>
     `;
 
     this.controlPanel.addEventListener('click', (e) => {
       const btn = e.target.closest('button');
-      if (btn) {
+      if (btn && btn.dataset.action === 'toggle') {
         this.isAnimating = !this.isAnimating;
         btn.textContent = this.isAnimating ? '⏸' : '▶';
+        btn.style.color = this.isAnimating ? '#4ade80' : '#9ca3af';
       }
     });
 
-    this.container.appendChild(this.controlPanel);
+    this.wrapper.appendChild(this.controlPanel);
   }
 
   onResize() {
     if (!this.canvas || !this.container) return;
     this.canvas.width = this.container.clientWidth;
-    this.canvas.height = this.container.clientHeight || 280;
+    this.canvas.height = (this.container.clientHeight || 280) - 32;
   }
 
   showFallback() {

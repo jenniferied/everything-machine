@@ -48,3 +48,30 @@ Das Problem ist, dass jeder dieser Schritte Fehler einführen kann. Wenn die Ref
 
 Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hintergrund – funktioniert, weil sie dem System weniger Raum für Fehlinterpretationen lässt. Wenn nur der Charakter zu sehen ist, ohne störende Elemente, kann das Modell sich auf die wichtigen Merkmale konzentrieren. Aber selbst dann ist die Konsistenz nicht garantiert, besonders wenn man versucht, den Charakter in verschiedenen Posen oder Kontexten zu zeigen.
 
+---
+
+## Reflexion
+
+### Kontext
+
+- **Tool/Workflow:** ComfyUI mit Consistent Character Workflow, Flux-Modell, IP-Adapter, ControlNet, Face Detailer
+- **Intention:** Konsistente Darstellungen von Kepler über verschiedene Bilder hinweg erzeugen, ohne jedes Mal von vorne anfangen zu müssen.
+
+### Prozess
+
+- **Input:** Verschiedene Referenzbilder von Kepler, Text-Prompts mit Beschreibungen (z.B. Maske hinzufügen), Parameter im ComfyUI-Workflow.
+- **Iterationen:** Mehrere Versuche mit unterschiedlichen Referenzbildern. Erst komplexe Szenen (Basketball, Hintergründe), dann Pivot zu neutralem grauem Hintergrund. Prompts wurden angepasst, um bessere Ergebnisse zu erzielen.
+- **Output:** Gemischte Ergebnisse – einige konsistente Bilder, andere mit Artefakten (zusätzliche Gesichter, nicht entfernte Objekte wie Basketball).
+
+### Erkenntnisse
+
+- **Überraschungen:** Das Modell "versteht" nicht semantisch, was es generiert. Es erkennt Muster, aber hat kein Verständnis davon, dass Basketball und Maske nicht gleichzeitig vorhanden sein sollten. Face Detailer erkennt manchmal Gesichter, wo keine sein sollten.
+- **Fehler als Feature:** Die Artefakte und unerwarteten Gesichter zeigen die Grenzen des Systems auf. Diese "Fehler" helfen zu verstehen, wie das Modell arbeitet – es kombiniert visuelle Elemente ohne logische Zusammenhänge.
+- **Meine Rolle vs. KI:** Ich entscheide über Referenzbilder, Prompts, und wann ein Ergebnis "gut genug" ist. Das System generiert Variationen basierend auf meinen Inputs. Die kritische Bewertung bleibt bei mir.
+
+### Weiterentwicklung
+
+- **Workflow-Änderung:** Für zukünftige Generierungen: Immer mit klaren Referenzen auf neutralem Hintergrund arbeiten. Komplexe Elemente erst nach der Basisgenerierung hinzufügen.
+- **Offene Fragen:** Wie kann ich verschiedene Posen und Kontexte erreichen, ohne die Konsistenz zu verlieren? Gibt es Workflows, die besser mit komplexen Szenen umgehen?
+- **Nächste Schritte:** Weitere Experimente mit verschiedenen ControlNet-Einstellungen. Eventuell ein eigenes Modell auf Kepler trainieren (Fine-Tuning)?
+
