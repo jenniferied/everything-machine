@@ -50,3 +50,41 @@ Ein interessanter Aspekt ist, dass Marble wahrscheinlich auch KI-gestützte Funk
 
 Die Browser-Basis von Marble bringt sowohl Vorteile als auch Herausforderungen mit sich. Der Vorteil ist die Zugänglichkeit – man braucht keine Installation, und es funktioniert auf verschiedenen Plattformen. Die Herausforderung ist, dass Browser-Umgebungen weniger Ressourcen haben als native Anwendungen, und dass die Kompatibilität zwischen verschiedenen Browsern manchmal problematisch sein kann. Aber moderne Browser und Web-Technologien haben diese Lücke in den letzten Jahren deutlich verkleinert.
 
+---
+
+## Reflexion
+
+### Kontext
+
+- **Tool/Workflow:** Marble von Worldlabs (marble.worldlabs.ai) – browserbasierte 3D-Weltenerstellung mit KI-Unterstützung
+- **Intention:** Testen, ob Marble für schnelle 3D-Prototypen und Weltenbau für das Kepler-Projekt geeignet ist. Verstehen, wie das Tool funktioniert und welche Möglichkeiten es bietet.
+
+### Prozess
+
+- **Input:**
+  - Welt 1: Foto aus einem Soviet-inspirierten Café (Spiegelbild)
+  - Welt 2: Konzept "Märchenwald" (keine Referenz, nur Idee)
+  - Welt 3: Konzept "Unterwasserwelt" (Test für Partikelsysteme)
+- **Iterationen:** Drei komplett unterschiedliche Welten erstellt, um die Flexibilität des Tools zu testen. Bei jeder Welt verschiedene Assets, Beleuchtung und Effekte ausprobiert.
+- **Output:**
+  - Welt 1: Verzerrte, gruselige Interpretation des Fotos – das System hat das Spiegelbild als Spiegel erkannt und Personen in den Raum "gebracht"
+  - Welt 2: Kohärenter Märchenwald mit automatisch angepasster Beleuchtung
+  - Welt 3: Funktionierende Unterwasserwelt mit Partikelsystemen für Blasen
+
+### Erkenntnisse
+
+- **Überraschungen:**
+  - Das System hat das Spiegelbild intelligent interpretiert – es hat den Spiegel als solchen erkannt und die gespiegelten Personen in den 3D-Raum gebracht. Das war unerwartet und gleichzeitig faszinierend und gruselig.
+  - Die automatische Beleuchtungsanpassung war sehr hilfreich und hat Zeit gespart.
+- **Fehler als Feature:** Die verzerrten, gruseligen Proportionen in Welt 1 waren ein "Fehler" des Systems, aber ästhetisch interessant. Diese Artefakte könnten absichtlich genutzt werden, um eine bestimmte Stimmung zu erzeugen.
+- **Meine Rolle vs. KI:** Ich wähle das Quellmaterial und die Richtung (Märchenwald, Unterwasser), das System interpretiert und generiert die Details. Bei der ersten Welt hat das System mehr "entschieden" als ich – die Interpretation des Spiegelbilds war komplett automatisch.
+
+### Weiterentwicklung
+
+- **Workflow-Änderung:** Marble ist gut für schnelle Prototypen, aber für finale Produktion würde ich detailliertere Tools wie Blender oder Unreal Engine verwenden. Marble könnte als Ideenfindungs-Tool dienen – schnell Konzepte visualisieren, die dann in anderen Programmen verfeinert werden.
+- **Offene Fragen:**
+  - Kann ich Marble-Welten exportieren und in Unreal Engine weiterverarbeiten?
+  - Wie würde Kepler in einer Marble-generierten Welt aussehen?
+  - Gibt es Möglichkeiten, die KI-gestützten Interpretationen zu steuern oder zu beeinflussen?
+- **Nächste Schritte:** Testen, ob Export-Funktionen vorhanden sind. Eventuell Kepler in eine Marble-Welt integrieren und schauen, wie das aussieht.
+

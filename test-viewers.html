@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Viewer Test Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Import map for gsplat.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "gsplat": "https://unpkg.com/gsplat@latest/dist/index.es.js"
+        }
+    }
+    </script>
+
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: 'IBM Plex Mono', monospace;
+            padding: 20px;
+        }
+        .viewer-section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .viewer-container {
+            height: 400px;
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1 style="font-size: 24px;">3D Viewer</h1>
+        <a href="index.html" style="color: #9ca3af; font-size: 12px; text-decoration: none;">&larr; Back</a>
+    </div>
+
+    <!-- Point Cloud Viewer -->
+    <div class="viewer-section">
+        <h2>Point Cloud (Stanford Bunny)</h2>
+        <div id="point-cloud-viewer-container" class="viewer-container"></div>
+    </div>
+
+    <!-- Gaussian Splat Viewer -->
+    <div class="viewer-section">
+        <h2>Gaussian Splat (Nike Shoe)</h2>
+        <div id="gaussian-splat-viewer-container" class="viewer-container"></div>
+    </div>
+
+    <script type="module" src="js/app.js?v=20241223d"></script>
+</body>
+</html>
