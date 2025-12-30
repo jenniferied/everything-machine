@@ -28,3 +28,31 @@ Der Drive-Ordner ist jetzt strukturiert:
 
 Morgen plane ich, erste Versuche mit ComfyUI zu machen. Ich habe schon ein bisschen über den Consistent Character Workflow gelesen und bin gespannt, wie gut das funktioniert.
 
+---
+
+## Reflexion
+
+**Keywords:** #Pinterest #GoogleDrive #Referenzen #Recherche #Kollaboration #Vorbereitung #CharacterDesign
+
+### Kontext
+
+- **Tool/Workflow:** Pinterest für visuelle Recherche, Google Drive für kollaborative Dateiorganisation
+- **Intention:** Eine solide visuelle Grundlage für Kepler schaffen, bevor ich mit der KI-gestützten Bildgenerierung beginne. Verstehen, welche Stile funktionieren könnten.
+
+### Prozess
+
+- **Input:** Suchbegriffe auf Pinterest (Character Design, Sci-Fi Aesthetics, Posen), eigene erste Skizzen und Notizen, Gavins technische Zeichnungen und Konzeptideen.
+- **Iterationen:** Mehrere Boards angelegt und kuratiert. Mischung aus hyperrealistischen und stilisierten Referenzen gesucht. Ordnerstruktur auf Drive mehrfach angepasst.
+- **Output:** Strukturierter Google Drive-Ordner mit vier Kategorien (Referenzen, Konzept, Fotos, Generiert). Gemeinsame Ressourcenbasis mit Gavin.
+
+### Erkenntnisse
+
+- **Überraschungen:** Die Vielfalt an Interpretationen ähnlicher Charaktere war größer als erwartet. Gavins Vorschlag, neutrale Hintergrundfotos zu erstellen, war ein wichtiger Perspektivwechsel – ich hatte nicht daran gedacht, dass die Qualität der Input-Referenzen so entscheidend für KI-Tools sein würde.
+- **Fehler als Feature:** Die anfängliche Unstrukturiertheit der Sammlung hat geholfen, breiter zu denken, bevor ich mich festgelegt habe.
+- **Meine Rolle vs. KI:** Hier war noch keine KI im Spiel – alles war menschliche Kuration und Entscheidung. Die Vorbereitung ist der Teil, der komplett bei mir liegt.
+
+### Weiterentwicklung
+
+- **Workflow-Änderung:** Referenzen sollten von Anfang an kategorisiert werden, nicht erst nachträglich. Klare Benennung spart später Zeit.
+- **Offene Fragen:** Wie viele Referenzen brauche ich wirklich? Wann ist "genug recherchiert"? Wie beeinflusst die Art der Referenzen die späteren KI-Ergebnisse?
+- **Nächste Schritte:** Neutrale Hintergrundfotos von Kepler erstellen. ComfyUI Consistent Character Workflow ausprobieren.

@@ -1019,6 +1019,270 @@ main.container {
     color: #111; /* text-dark */
 }
 
+/* --- Reflection Widget (Autoethnographic Documentation) --- */
+.reflection-widget {
+    margin: 2rem 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0f1a 0%, #111827 50%, #0a1628 100%);
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(74, 222, 128, 0.1);
+}
+
+.reflection-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(90deg, rgba(74, 222, 128, 0.15) 0%, rgba(74, 222, 128, 0.05) 100%);
+    border-bottom: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.reflection-icon {
+    font-size: 1.25rem;
+    color: #4ade80;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.reflection-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.875rem;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reflection-subtitle {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-left: auto;
+}
+
+.reflection-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #1f2937;
+}
+
+.reflection-keyword {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    color: #4ade80;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.reflection-keyword-inline {
+    color: #4ade80;
+    font-weight: 500;
+}
+
+.reflection-content {
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .reflection-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.reflection-section {
+    padding: 1rem;
+    background-color: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
+    border-radius: 0.375rem;
+}
+
+.reflection-section-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #374151;
+}
+
+.reflection-field {
+    margin-bottom: 0.75rem;
+}
+
+.reflection-field:last-child {
+    margin-bottom: 0;
+}
+
+.reflection-question {
+    font-size: 0.7rem;
+    color: #4ade80;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reflection-answer {
+    font-size: 0.85rem;
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.reflection-answer strong {
+    color: #f3f4f6;
+}
+
+.reflection-answer em {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.reflection-link {
+    color: #4ade80;
+    text-decoration: none;
+    border-bottom: 1px dotted #4ade80;
+    transition: all 0.2s ease;
+}
+
+.reflection-link:hover {
+    color: #22c55e;
+    border-bottom-style: solid;
+}
+
+.reflection-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #1f2937;
+    text-align: right;
+}
+
+.reflection-reference {
+    font-size: 0.65rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Reflection Info Toggle Button */
+.reflection-info-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    background-color: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reflection-info-toggle:hover {
+    background-color: rgba(74, 222, 128, 0.2);
+    border-color: #4ade80;
+}
+
+.reflection-info-toggle.active {
+    background-color: #4ade80;
+    border-color: #4ade80;
+}
+
+.reflection-info-icon {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4ade80;
+    line-height: 1;
+}
+
+.reflection-info-toggle.active .reflection-info-icon {
+    color: #111;
+}
+
+/* Reflection Info Box */
+.reflection-info-box {
+    display: none;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(31, 41, 55, 0.8) 100%);
+    border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+    overflow: hidden;
+}
+
+.reflection-info-box.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 600px;
+    }
+}
+
+.reflection-info-content {
+    padding: 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.reflection-info-content h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.75rem 0;
+}
+
+.reflection-info-content h4:not(:first-child) {
+    margin-top: 1.25rem;
+}
+
+.reflection-info-content p {
+    margin: 0 0 0.75rem 0;
+}
+
+.reflection-info-content strong {
+    color: #f3f4f6;
+}
+
+.reflection-info-content ol {
+    margin: 0 0 1rem 0;
+    padding-left: 1.25rem;
+}
+
+.reflection-info-content li {
+    margin-bottom: 0.5rem;
+}
+
+.reflection-info-sources {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.reflection-info-sources em {
+    font-style: italic;
+}
+
 /* --- Image Lightbox / Gallery Modal --- */
 .image-lightbox-overlay {
     display: none;

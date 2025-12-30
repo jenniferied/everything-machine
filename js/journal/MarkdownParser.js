@@ -1,9 +1,10 @@
 /**
  * MarkdownParser
  * Single responsibility: Parse markdown to HTML
- * Handles custom syntax including world-info dropdowns
+ * Handles custom syntax including world-info dropdowns and reflection widgets
  */
 import { WorldInfoComponent } from './WorldInfoComponent.js';
+import { ReflectionComponent } from './ReflectionComponent.js';
 
 export class MarkdownParser {
   constructor() {
@@ -21,20 +22,34 @@ export class MarkdownParser {
    * @returns {string} HTML string
    */
   parse(markdown, options = {}) {
+    // Pre-process: Extract reflection section (renders as special widget)
+    const { hasReflection, reflectionData, markdownWithoutReflection } =
+      ReflectionComponent.parseReflection(markdown);
+
     // Pre-process world info components
-    const { processedText, worldInfoMap } = WorldInfoComponent.parseWorldInfo(markdown);
-    
+    const { processedText, worldInfoMap } = WorldInfoComponent.parseWorldInfo(markdownWithoutReflection);
+
     // Parse into sections
     const sections = this.parseIntoSections(processedText);
-    
+
     // If no sections (no headings), fall back to simple parsing
     if (sections.sections.length === 0 && sections.introText.length === 0) {
-      return this.parseSimple(markdown);
+      let html = this.parseSimple(markdownWithoutReflection);
+      // Add reflection widget if present
+      if (hasReflection && reflectionData) {
+        html += ReflectionComponent.createWidget(reflectionData);
+      }
+      return html;
     }
-    
+
     // Build grid HTML with sections
-    const html = this.buildGridHTML(sections, options, worldInfoMap);
-    
+    let html = this.buildGridHTML(sections, options, worldInfoMap);
+
+    // Add reflection widget at the end (outside the grid, full width)
+    if (hasReflection && reflectionData) {
+      html += ReflectionComponent.createWidget(reflectionData);
+    }
+
     // Post-process: convert URLs to links
     return this.convertURLsToLinks(html);
   }
