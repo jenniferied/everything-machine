@@ -47,12 +47,6 @@ everything-machine/
 │       │   └── references/     # bibliography.bib
 │       └── literature-review/  # Systematic Review Workflow
 │
-├── [DEV DOCUMENTATION]
-│   └── docs/
-│       ├── IMPLEMENTATION.md   # Architektur-Dokumentation
-│       ├── TESTING.md          # Test-Richtlinien
-│       └── QUICK_START.md      # Schnellstart für Entwickler
-│
 ├── README.md                   # Diese Datei
 ├── CLAUDE.md                   # AI-Entwicklungsrichtlinien
 └── WEBSITE_TODO.md             # Website Feature-Tasks
@@ -107,7 +101,7 @@ Alle Features sind als ES6-Module mit klaren Verantwortlichkeiten und Dependency
 - **Single Responsibility**: Jedes Modul hat eine klar definierte Aufgabe
 - **Dependency Inversion**: Abhängigkeiten von Abstraktionen, nicht konkreten Klassen
 
-Siehe [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md) für Details.
+Siehe [CLAUDE.md](CLAUDE.md) für Details.
 
 ## Veröffentlichung auf GitHub Pages
 
