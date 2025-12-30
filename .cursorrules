@@ -241,3 +241,134 @@ When asked to refactor:
 - **Dependency Injection**: Constructor injection preferred
 - **Project Documentation**: See IMPLEMENTATION.md for architecture details
 
+---
+
+# Artistic Research Guidelines
+
+**WICHTIG**: Diese Richtlinien gelten beim Bearbeiten von Markdown-Dateien im `journal/`-Ordner und anderen inhaltlichen Dokumenten.
+
+## Forschungsrahmen (Quick Reference)
+
+Dieses Projekt untersucht: **Wie verändert der Einsatz generativer KI-Werkzeuge kreative Arbeitsprozesse?**
+
+Vollständiger Rahmen: Siehe [FORSCHUNGSRAHMEN.md](FORSCHUNGSRAHMEN.md)
+Referenzarbeiten: Siehe [referenzen.md](referenzen.md)
+
+## Journal-Eintrag Struktur (EMPFOHLEN)
+
+Beim Schreiben oder Bearbeiten von Journal-Einträgen, erinnere an diese Struktur:
+
+```markdown
+# [Titel des Experiments/der Session]
+
+**[Datum]**
+
+## Intention
+Was wollte ich erreichen? Welche Frage habe ich verfolgt?
+
+## Prozess
+Was habe ich konkret getan? (Screenshots, Prompts, Einstellungen)
+
+## Ergebnis
+Was ist passiert? Erfolgreich oder nicht?
+
+## Reflexion ← KRITISCH FÜR AR
+- Was habe ich gelernt?
+- Was hat mich überrascht?
+- Wie verändert das meinen Workflow?
+- Welche neuen Fragen entstehen?
+
+## Nächste Schritte
+Was mache ich als nächstes?
+```
+
+## AR Reflexions-Prompts
+
+Wenn ein Journal-Eintrag geschrieben wird, stelle diese Fragen:
+
+### Workflow-Transformation
+- [ ] Hat sich mein Arbeitsablauf durch dieses Experiment verändert?
+- [ ] Welche Schritte waren neu? Welche sind weggefallen?
+- [ ] Wie schnell kam ich zu Ergebnissen im Vergleich zu traditionellen Methoden?
+
+### Autorschaft & Kollaboration
+- [ ] Wer hat dieses Ergebnis "gemacht" – ich oder die KI?
+- [ ] Wie war das Verhältnis von Kontrolle vs. Emergenz?
+- [ ] War das Ergebnis vorhersehbar oder überraschend?
+
+### Scheitern als Erkenntnis
+- [ ] Was hat NICHT funktioniert und warum?
+- [ ] Was verrät dieser Fehler über die Technologie?
+- [ ] Kann ich das Scheitern dokumentieren? (Screenshots!)
+
+### Verbindung zum Ganzen
+- [ ] Wie passt dieses Experiment zu meinen Forschungsfragen?
+- [ ] Gibt es Verbindungen zu den Referenzarbeiten?
+- [ ] Entwickelt sich eine eigene ästhetische Sprache?
+
+## Qualitätskriterien für AR Journal-Einträge
+
+✅ **GUT**:
+- Zeigt den Prozess, nicht nur das Ergebnis
+- Dokumentiert Fehlschläge und Umwege
+- Enthält persönliche Reflexion ("Ich war überrascht, dass...")
+- Verbindet konkrete Erfahrung mit größeren Fragen
+- Enthält visuelles Material (Screenshots, generierte Bilder)
+
+❌ **VERMEIDEN**:
+- Nur Tutorial-artige Beschreibung ("Klicke hier, dann dort")
+- Nur Ergebnisse ohne Kontext
+- Fehlende Reflexion ("Es hat funktioniert" – WARUM? WAS BEDEUTET DAS?)
+- Rein technische Beschreibung ohne persönliche Perspektive
+
+## Reminder für AI-Assistenten
+
+Wenn die Nutzerin einen Journal-Eintrag schreibt oder bearbeitet:
+
+1. **Frage nach der Reflexion**: "Was hat dich überrascht?" / "Wie hat das deinen Workflow verändert?"
+2. **Erinnere an Fehlerdokumentation**: "Kannst du auch zeigen, was nicht funktioniert hat?"
+3. **Verbinde zum Forschungsrahmen**: "Wie passt das zu deiner Frage nach Workflow-Transformation?"
+4. **Schlage Referenzen vor**: "Das erinnert an Anna Ridlers Arbeit mit Datensätzen..."
+
+## Zitierformat für Referenzen
+
+Wenn auf Referenzarbeiten verwiesen wird:
+
+```markdown
+Ähnlich wie in [TroublingGAN](referenzen.md#troublinggan) zeigt sich hier, dass...
+
+Vgl. Anna Ridlers Konzept des "Dataset as Art" – die Sammlung der Referenzbilder ist selbst Teil der künstlerischen Arbeit.
+```
+
+## Sprachliche Konventionen
+
+- **Ich-Perspektive**: "Ich habe festgestellt..." statt "Man kann feststellen..."
+- **Prozessorientiert**: "Beim Experimentieren zeigte sich..." statt "Das Ergebnis ist..."
+- **Ehrlich über Unsicherheit**: "Ich bin mir nicht sicher, ob..." ist völlig okay
+- **Fragen stellen**: Ein Eintrag darf mit offenen Fragen enden
+
+---
+
+# Academic Materials (academic/)
+
+The `academic/` folder contains MA thesis materials for the Artistic Research course. This folder is NOT deployed to GitHub Pages.
+
+## Folder Purpose
+
+| Folder | Purpose |
+|--------|---------|
+| `Abgabe.md` | **CRITICAL**: Submission requirements defining final output structure |
+| `Exposé_*.pdf` | Project exposé document |
+| `artistic-research/` | Literature sources for bibliography |
+| `examples/` | Lesson material examples |
+| `lesson-material/` | Class materials and slides |
+| `thilos-straightA-submission/` | **IMPORTANT**: A-grade submission example with similar theme |
+
+## When Working on Academic Content
+
+1. **Always reference Abgabe.md** for submission requirements
+2. **Use Thilo's submission** as a structural reference (not content)
+3. **Literature goes in artistic-research/** folder
+4. **Follow APA format** for citations
+5. **Paper structure**: Einleitung → Stand der Forschung → Methodologie → Meine Forschung → Diskussion
+

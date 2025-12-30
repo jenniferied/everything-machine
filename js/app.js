@@ -469,22 +469,31 @@ class Application {
    * @returns {Promise<void>}
    */
   async setupNavigation() {
+    // Check if navigation elements exist (not on test pages)
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const contentsToggle = document.getElementById('contents-toggle');
+
+    if (!dropdownMenu || !contentsToggle) {
+      console.log('[App] Navigation elements not found, skipping navigation setup');
+      return;
+    }
+
     // Create navigation state
     const navigationState = new NavigationState('activePage');
-    
+
     // Create page navigator
     const pageNavigator = new PageNavigator(this.eventBus, navigationState);
     pageNavigator.initialize();
-    
+
     // Create dropdown controllers
     const mainDropdown = new DropdownController({
-      dropdown: document.getElementById('dropdown-menu'),
-      toggleButton: document.getElementById('contents-toggle'),
+      dropdown: dropdownMenu,
+      toggleButton: contentsToggle,
       eventBus: this.eventBus,
       name: 'main-dropdown'
     });
     mainDropdown.initialize();
-    
+
     // Setup dropdown item click handlers
     const dropdownItems = document.querySelectorAll('#dropdown-menu .dropdown-item');
     dropdownItems.forEach(item => {
@@ -495,12 +504,12 @@ class Application {
         }
       });
     });
-    
+
     // Store in components
     this.uiComponents.set('page-navigator', pageNavigator);
     this.uiComponents.set('main-dropdown', mainDropdown);
     this.uiComponents.set('navigation-state', navigationState);
-    
+
     console.log('[App] Navigation system initialized');
   }
 

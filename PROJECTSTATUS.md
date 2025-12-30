@@ -33,9 +33,12 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
 - [x] **3 empfohlene Websites** vom Professor auflisten ✅ (siehe 1.3)
 
 #### 0.2.2 🤖 Systematic Literature Review (Agent-based)
-- [ ] **Agent-based Literature Review** durchführen (`literature-review/`)
-  - Setup: Siehe `literature-review/SETUP.md`
-  - Skills & Workflow: Siehe `literature-review/Skill.md`
+- [x] **Agent-based Literature Review** Phase 1-2 abgeschlossen ✅
+  - [x] Phase 1: Required Reading (7 Texte gelesen & zusammengefasst)
+  - [x] Phase 2: Exploration (Suchen, Citation Trails, JAR Crawl)
+  - [x] Phase 3: Domain Definition (4 Domains identifiziert)
+  - [x] Source Classification (18 Quellen klassifiziert nach Disziplin/Autor)
+  - [x] Critique Loop (reviews.log dokumentiert Stärken/Schwächen)
   - Status: Siehe `literature-review/checkpoint.md`
 
 #### 0.2.1 📚 Pflichtlektüre Artistic Research (aus ILIAS)
@@ -55,9 +58,15 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
 > **Hinweis:** Bei "PDF too large" Fehlern → Nutze die `.txt` Dateien in `academic/texts/extracted/`
 
 #### 0.3 Grundverständnis aufbauen
-- [ ] Folien + Texte systematisch mit KI durcharbeiten
-- [ ] Kernfrage klären: "Was ist Artistic Research?"
-- [ ] Anwendung auf eigenen Use Case reflektieren
+- [x] Folien + Texte systematisch mit KI durcharbeiten ✅
+- [x] Kernfrage klären: "Was ist Artistic Research?" ✅ (siehe `literature-review/checkpoint.md`)
+- [x] Anwendung auf eigenen Use Case reflektieren ✅
+
+**Kernerkenntnisse zu Artistic Research:**
+- Frayling (1993): Research INTO / THROUGH / FOR art
+- Borgdorff (2012): Kunstpraxis als epistemologischer Ort
+- Henke (2019): "Ästhetisches Wissen" als eigenständige Erkenntnisform
+- Schön (1983): Reflection-in-Action als Methode
 
 ---
 
@@ -68,19 +77,21 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
 - [x] Exposé erstellt ✅ (bereits vorhanden: `academic/Exposé_...pdf`)
 
 #### 1.2 Forschungsfrage(n) entwickeln
-- [ ] **5 mögliche Forschungsfragen** formulieren
-- [ ] **Eine Hauptfrage auswählen** und Wahl begründen
-- [ ] Forschungsfrage in `submission/docs/01-forschungsfrage.md` dokumentieren
+- [x] **5 mögliche Forschungsfragen** formuliert ✅
+- [x] **Eine Hauptfrage ausgewählt** und Wahl begründet ✅
+- [x] Forschungsfrage in `submission/docs/01-forschungsfrage.md` dokumentiert ✅
+- [x] **Weiterentwickelte Forschungsfrage** mit theoretischer Verankerung (Coleridge, Mori) ✅
+- [x] **4 alternative Formulierungen** zur Diskussion dokumentiert ✅
 
-**Mögliche Richtungen:**
-- Wie verändert KI den kreativen Workflow?
-- Wie entsteht ein digitales Alter Ego durch KI-Kollaboration?
-- Was bedeutet Autorschaft bei KI-generierter Kunst?
+**Gewählte Hauptfrage:**
+> Welche ästhetischen Qualitäten – im Spannungsfeld zwischen "Suspension of Disbelief" und "Uncanny Valley" – entstehen durch die iterative Kollaboration zwischen Künstler*in und generativer KI bei der Konstruktion des virtuellen Alter Egos "Kepler"?
 
 #### 1.3 Initiale Literaturrecherche
-- [ ] **Mindestens 10 Paper** finden und dokumentieren
-- [ ] Bibliographie im APA-Format erstellen
-- [ ] Pro Paper: 4 Sätze Zusammenfassung + Relevanz
+- [x] **18 Quellen** gefunden und dokumentiert ✅ (siehe `submission/docs/02-literaturrecherche.md`)
+- [x] Bibliographie im APA-Format erstellt ✅ (siehe `submission/references/bibliography.bib`)
+- [x] Pro Quelle: 4 Sätze Zusammenfassung + Relevanz ✅
+- [x] **Qualitätsbewertung** aller Quellen durchgeführt (Peer-Review-Status, Zitationen, Venue-Typ)
+- [x] **Citation Trail Analysis** für hochwertige Zusatzquellen (Turkle, Franceschelli, Ellis et al.)
 
 ##### 🔗 Empfohlene Artistic Research Ressourcen
 
@@ -127,9 +138,24 @@ Dieses Projekt dokumentiert den Prozess der Arbeit an "Kepler" – einem digital
 - [ ] Zusammenfassung schreiben
 
 #### 1.5 Methodologie-Kurzbeschreibung
-- [ ] Methoden identifizieren und beschreiben
-- [ ] Begründung für Methodenwahl
-- [ ] In `submission/docs/03-methodologie.md` dokumentieren
+- [x] Methoden identifiziert und beschrieben ✅
+- [x] Begründung für Methodenwahl ✅
+- [x] In `submission/docs/03-methodologie.md` dokumentiert ✅
+- [x] **Vier-Phasen-Struktur mit Interview-Reflexion** entwickelt ✅
+
+**Gewählte Methoden:**
+1. Practice-Based Research (Praxis als Forschung)
+2. Autoethnografische Reflexion (Prozess-Journaling)
+3. Iterative Experimentierung (Prompt-Engineering)
+4. Website als Forschungsartefakt
+
+**Vier-Phasen-Struktur:**
+| Phase | Fokus | Interview-Frage |
+|-------|-------|-----------------|
+| 1. Onboarding | Was ist möglich? | Vision & Erwartungen |
+| 2. Exploration | Was entsteht? | Prozess & Überraschungen |
+| 3. Vertiefung | Was bedeutet es? | Erkenntnis & Perspektivwechsel |
+| 4. Synthese | Was wurde gelernt? | Implikationen & Offenes |
 
 ---
 
@@ -272,4 +298,5 @@ Dieses Projekt ist selbst ein Beispiel für den untersuchten Prozess:
 - [x] referenzen.md begonnen
 - [x] ~~**Welche 3 Websites** hat der Professor empfohlen?~~ ✅ (siehe oben)
 - [x] `literature-review/` Ordner hinzugefügt (Agent-based Systematic Literature Review Workflow)
+- [x] **Literaturrecherche abgeschlossen** (15 Quellen mit Zusammenfassungen) ✅
 
