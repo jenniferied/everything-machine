@@ -55,9 +55,6 @@ No build step, bundler, or package.json - this is a vanilla JavaScript project w
 │       │   └── references/       # bibliography.bib
 │       └── literature-review/    # Systematic review workflow
 │
-├── [DEV DOCUMENTATION]
-│   └── docs/                     # Developer docs (IMPLEMENTATION, TESTING, QUICK_START)
-│
 ├── README.md                     # Project overview
 ├── CLAUDE.md                     # This file
 └── WEBSITE_TODO.md               # Website feature tasks
@@ -99,13 +96,41 @@ Debug mode auto-enables on localhost.
 
 ### Module Organization
 
-- **js/core/**: Singleton services (EventBus, FeatureDetector, ScriptLoader)
-- **js/audio/**: Music player (MusicPlayer facade coordinates Playlist, PlaybackController, PlayerUI)
-- **js/navigation/**: Page switching (PageNavigator, DropdownController, NavigationState)
-- **js/journal/**: Markdown journal system (JournalManager coordinates loading, parsing, rendering)
-- **js/viewers/**: 3D/video viewers extend ViewerBase abstract class
-- **js/animations/**: FloatingAnimation managed by AnimationController
-- **js/media/**: LazyLoader (IntersectionObserver), ImageGallery (lightbox)
+```
+js/
+├── core/               # Singleton services
+│   ├── EventBus.js         # Pub/sub event system
+│   ├── FeatureDetector.js  # Device capability detection
+│   └── ScriptLoader.js     # Dynamic script loading
+├── audio/              # Music player (SOLID)
+│   ├── MusicPlayer.js      # Facade coordinator
+│   ├── Playlist.js         # Data management
+│   ├── PlaybackController.js # Playback logic
+│   └── PlayerUI.js         # UI updates
+├── navigation/         # Page switching
+│   ├── PageNavigator.js    # Page visibility
+│   ├── DropdownController.js # Dropdown state
+│   └── NavigationState.js  # localStorage persistence
+├── journal/            # Journal system
+│   ├── JournalManager.js   # Coordinator
+│   ├── JournalLoader.js    # Fetch data
+│   ├── MarkdownParser.js   # Parse to HTML
+│   ├── TimelineRenderer.js # Timeline UI
+│   ├── EntryRenderer.js    # Entry display
+│   └── WorldInfoComponent.js # World-info widget
+├── viewers/            # 3D/video viewers
+│   ├── ViewerBase.js       # Abstract base
+│   ├── ThreeDViewer.js     # Three.js
+│   ├── PointCloudViewer.js # Point clouds
+│   └── VideoViewer.js      # Video.js
+├── animations/
+│   ├── AnimationController.js
+│   └── FloatingAnimation.js
+├── media/
+│   ├── LazyLoader.js       # IntersectionObserver
+│   └── ImageGallery.js     # Lightbox
+└── app.js              # Main orchestrator
+```
 
 ### Viewer Pattern
 
@@ -124,6 +149,47 @@ dispose()               // Cleanup
 Journal entries are markdown files in `journal/` loaded via `journal-manifest.json`. Custom syntax:
 - `[WORLD_INFO:...]` creates expandable world-info dropdowns
 - Images are auto-formatted (full-width standalone, 50% inline)
+
+### System Event Flows
+
+**Audio System:**
+1. User clicks play → MusicPlayer.handlePlayPauseClick()
+2. MusicPlayer calls PlaybackController.togglePlay()
+3. PlaybackController emits `playback:play` event
+4. PlayerUI receives event and updates UI
+
+**Navigation System:**
+1. User clicks menu item → dropdown handler
+2. PageNavigator.showPage() called
+3. Page visibility updated, localStorage saved
+4. `nav:pageChanged` event emitted
+5. JournalManager listens and loads journal if needed
+
+**Journal System:**
+1. `nav:pageChanged` event → JournalManager.load()
+2. Fetch manifest → load markdown → parse → render
+3. TimelineRenderer creates timeline, EntryRenderer displays entry
+4. TypingAnimation and GridLayoutOptimizer update layout
+
+### Adding a New Viewer
+
+```javascript
+import { ViewerBase } from './ViewerBase.js';
+
+export class MyViewer extends ViewerBase {
+  async checkSupport() { /* return true/false */ }
+  async loadDependencies() { /* load libs via ScriptLoader */ }
+  async initialize() { /* setup */ }
+  async render() { /* display */ }
+  showFallback() { /* static image */ }
+  dispose() { /* cleanup */ }
+}
+
+// Register in app.js:
+const myViewer = new MyViewer(container, options, eventBus, scriptLoader, featureDetector);
+this.viewers.set('my-viewer', myViewer);
+await myViewer.setup();
+```
 
 ## Code Conventions
 
