@@ -52,6 +52,8 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 
 ## Reflexion
 
+**Keywords:** #ComfyUI #Flux #IPAdapter #ControlNet #FaceDetailer #Konsistenz #Bildgenerierung #Kepler
+
 ### Kontext
 
 - **Tool/Workflow:** ComfyUI mit Consistent Character Workflow, Flux-Modell, IP-Adapter, ControlNet, Face Detailer
@@ -74,4 +76,3 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 - **Workflow-Änderung:** Für zukünftige Generierungen: Immer mit klaren Referenzen auf neutralem Hintergrund arbeiten. Komplexe Elemente erst nach der Basisgenerierung hinzufügen.
 - **Offene Fragen:** Wie kann ich verschiedene Posen und Kontexte erreichen, ohne die Konsistenz zu verlieren? Gibt es Workflows, die besser mit komplexen Szenen umgehen?
 - **Nächste Schritte:** Weitere Experimente mit verschiedenen ControlNet-Einstellungen. Eventuell ein eigenes Modell auf Kepler trainieren (Fine-Tuning)?
-

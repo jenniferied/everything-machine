@@ -76,3 +76,32 @@ _Screenshot Placeholder 01 – Cursor mit geöffnetem Projekt-Workspace, zeigt d
 _Screenshot Placeholder 02 – Player-Preview im Browserfenster, zeigt den Mini-Player in der Navigation mit Marquee-Text._
 
 _Screenshot Placeholder 03 – Journal-Layout-Test, zeigt einen Eintrag im Bubble-Grid mit Pixel-Headings und Timeline oben._
+
+---
+
+## Reflexion
+
+**Keywords:** #Cursor #VSCode #KI-Programmierung #Git #WebDevelopment #Tailwind #JavaScript
+
+### Kontext
+
+- **Tool/Workflow:** Cursor (AI-gestützter Code-Editor, Fork von VS Code), Git für Versionierung, HTML/CSS/JavaScript ohne Build-Tools, Tailwind CSS via CDN
+- **Intention:** Eine Website für das Artistic Research-Projekt erstellen, die wissenschaftlichen Anspruch mit Keplers digitaler Ästhetik verbindet. Dokumentationsplattform für den kreativen Prozess.
+
+### Prozess
+
+- **Input:** Research Catalogue als Design-Inspiration, Abstract als Textbasis, Keplers visuelle Identität (Voxel-Ästhetik, dunkles Theme), natürliche Sprache Prompts an Cursor.
+- **Iterationen:** Inkrementelle Entwicklung über Git-Commits: Grundstruktur → Player → Journal-System → Timeline → Bubble-Layouts. Jeder Schritt wurde committet und bei Problemen konnte ich zurückrollen.
+- **Output:** Funktionsfähige Website Version 1.0 mit Player, automatischem Journal-Loading, horizontaler Timeline, Pixel-Headings, responsivem Grid-Layout.
+
+### Erkenntnisse
+
+- **Überraschungen:** Wie schnell repetitive Aufgaben (Markdown-Parsing, Grid-Layout) mit Cursor erledigt werden konnten. Die KI verstand den Projektkontext nach kurzer Zeit gut und machte passende Vorschläge.
+- **Fehler als Feature:** Einige Cursor-Vorschläge waren nicht optimal, aber das Ablehnen und Korrigieren hat mein eigenes Verständnis der Codebasis vertieft. Der Dialog mit der KI war produktiv, auch wenn nicht jeder Vorschlag übernommen wurde.
+- **Meine Rolle vs. KI:** Ich habe Architektur-Entscheidungen getroffen (keine Build-Tools, flache Struktur), Design-Richtung vorgegeben, und Qualität bewertet. Cursor hat Code generiert und Implementierungsdetails vorgeschlagen. Meine Web-Entwicklungs-Erfahrung war entscheidend, um Vorschläge einschätzen zu können.
+
+### Weiterentwicklung
+
+- **Workflow-Änderung:** Bei zukünftigen Projekten: Früher committen, kleinere Schritte. Die Git-History ist wertvolle Dokumentation des Entwicklungsprozesses.
+- **Offene Fragen:** Wie verändert sich meine Programmier-Praxis langfristig durch KI-Assistenz? Verkümmern bestimmte Fähigkeiten oder entwickeln sich neue? Was passiert, wenn die KI besseren Code schreibt als ich selbst könnte?
+- **Nächste Schritte:** Mehr Journal-Einträge hinzufügen. Kleine Features polieren. Eventuell 3D-Viewer für Kepler-Modelle integrieren.
