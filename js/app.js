@@ -549,8 +549,8 @@ class Application {
     
     // Define pages to load
     const pages = [
-      { id: 'framework', file: 'docs/FORSCHUNGSRAHMEN.md', container: 'framework-content' },
-      { id: 'references', file: 'docs/referenzen.md', container: 'references-content' }
+      { id: 'framework', file: 'content/forschungsrahmen.md', container: 'framework-content' },
+      { id: 'references', file: 'content/referenzen.md', container: 'references-content' }
     ];
     
     // Listen for page changes to lazy-load content
