@@ -80,20 +80,15 @@ export class EntryRenderer {
       console.warn('[EntryRenderer] No ImageGallery instance available');
       return;
     }
-    
-    // Find all bubbles
-    const bubbles = gridElement.querySelectorAll('.content-bubble');
-    
-    bubbles.forEach((bubble, bubbleIndex) => {
-      // Find all images in this bubble
-      const images = bubble.querySelectorAll('img');
-      
-      if (images.length === 0) return;
-      
-      // Register gallery for this bubble
-      const galleryId = `journal-bubble-${bubbleIndex}`;
-      this.imageGallery.registerGallery(galleryId, images);
-    });
+
+    // Find ALL images in the entire entry (not per-bubble)
+    const allImages = gridElement.querySelectorAll('img');
+
+    if (allImages.length === 0) return;
+
+    // Register a single gallery for the entire entry
+    const galleryId = 'journal-entry-gallery';
+    this.imageGallery.registerGallery(galleryId, allImages);
   }
 
   /**

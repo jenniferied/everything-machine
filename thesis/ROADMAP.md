@@ -109,6 +109,8 @@ Dieses Dokument trackt den Fortschritt der MA-Thesis "Everything Machine" im Kur
 ### 2.2 Interviews & Kollaborationen
 - [ ] **Interviews mit Gavin** durchführen/fortsetzen
 - [ ] Weitere relevante Gespräche dokumentieren
+- [x] **Reflection Interview Skill erstellt** ✅ (`.claude/skills/reflection-interview/`)
+- [x] **Interview-Placeholder für Gavin** erstellt ✅ (`journal/images/2025-11-15/interview-gavin.md`)
 
 ### 2.3 Assets sammeln
 - [ ] **Gavin nach echten MP3s/Audio-Dateien fragen** für Songs
@@ -184,3 +186,49 @@ Dieses Dokument trackt den Fortschritt der MA-Thesis "Everything Machine" im Kur
 ### Literatur-Review
 - `literature-review/checkpoint.md`
 - `literature-review/todo.md`
+
+---
+
+## 🔄 Retrospektiven
+
+### 2026-01-11: Chat-Format & Interview-Skill
+
+**Erledigt:**
+- Journal-Eintrag "KI wirklich verstehen – Teil 1" erstellt (Chat-Bubble-Format)
+- CSS für Chat-Bubbles: Claude orange (#C15F3C), User dunkel, runde Avatare
+- SVG-Icons erstellt: `assets/icons/user.svg`, `assets/icons/claude.svg`
+- Pinterest-Artikel überarbeitet: Link + Bilder hinzugefügt
+- Reflection Interview Skill erstellt (`.claude/skills/reflection-interview/`)
+- Interview-Placeholder für Gavin erstellt
+
+**Technische Änderungen:**
+- `EntryRenderer.js`: Gallery-Navigation auf gesamten Artikel umgestellt (nicht funktional)
+- `style.css`: Chat-Bubble-Styling, `.chat-intro` für narrative Einleitungen
+
+**Offene Punkte:**
+- Gallery-Navigation funktioniert nicht wie erwartet
+- Firefox Refresh: Journals sollten sauber reloaden ohne zu glitchen
+
+**Neuer Skill:**
+`/reflection-interview` — Interaktives Interview basierend auf den 5 Forschungs-Unterfragen (Workflow, Autorschaft, Iteration, Scheitern, Ästhetik)
+
+---
+
+## 📝 TODO: Reflexionen mit Interview-Skill überarbeiten
+
+**Ziel:** Alle Journal-Reflexionen mit `/reflection-interview` neu durchführen, Skill dabei iterativ verbessern.
+
+| # | Journal-Eintrag | Status | Skill-Version |
+|---|-----------------|--------|---------------|
+| 1 | `journal-2025-11-15-referenzen-sammeln.md` | ⬜ Ausstehend | - |
+| 2 | `journal-2025-11-16-comfyui-consistent-character.md` | ⬜ Ausstehend | - |
+| 3 | `journal-2025-11-18-marble-worldlabs.md` | ⬜ Ausstehend | - |
+| 4 | `journal-2025-11-19-cursor-build.md` | ⬜ Ausstehend | - |
+| 5 | `journal-2026-01-11-ki-verstehen.md` | ⬜ Ausstehend | - |
+
+**Iterativer Prozess:**
+1. Interview durchführen
+2. Reflexion schreiben
+3. Skill-Verbesserungen notieren
+4. Skill updaten
+5. Nächsten Eintrag bearbeiten

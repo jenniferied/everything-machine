@@ -2153,8 +2153,156 @@ main.container {
     .contact-form {
         padding: 1.5rem;
     }
-    
+
     .form-submit-btn {
         width: 100%;
+    }
+}
+
+/* =============================================================================
+   CHAT-STYLE MESSAGE BUBBLES
+   Used for conversational journal entries (e.g., voice dialogues with Claude)
+   ============================================================================= */
+
+/* Chat container - multi-column layout */
+.chat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chat-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chat-column.user-side {
+    align-items: flex-end;
+}
+
+.chat-column.claude-side {
+    align-items: flex-start;
+}
+
+/* Individual message */
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 100%;
+}
+
+/* Round avatar icons */
+.chat-avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.chat-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.chat-avatar svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* User avatar - transparent, icon has own background */
+.chat-message.user .chat-avatar {
+    background: transparent;
+}
+
+/* Claude avatar - transparent, icon has own background */
+.chat-message.claude .chat-avatar {
+    background: transparent;
+}
+
+/* User messages - aligned RIGHT, dark bubble */
+.chat-message.user {
+    flex-direction: row-reverse;
+}
+
+.chat-message.user .chat-bubble {
+    background: #1a1a2e;
+    border: 1px solid #2d2d44;
+    color: #d1d5db;
+    border-radius: 1rem 0.25rem 1rem 1rem;
+}
+
+/* Claude messages - aligned LEFT, orange bubble */
+.chat-message.claude .chat-bubble {
+    background: linear-gradient(135deg, #C15F3C 0%, #a84e30 100%);
+    border: none;
+    color: #fff;
+    border-radius: 0.25rem 1rem 1rem 1rem;
+}
+
+/* The chat bubble itself - smaller text */
+.chat-bubble {
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.chat-bubble:hover {
+    transform: translateY(-1px);
+}
+
+.chat-message.claude .chat-bubble:hover {
+    box-shadow: 0 4px 12px rgba(193, 95, 60, 0.3);
+}
+
+.chat-message.user .chat-bubble:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Content within bubbles */
+.chat-bubble p {
+    margin: 0 0 0.5rem 0;
+}
+
+.chat-bubble p:last-child {
+    margin-bottom: 0;
+}
+
+/* Intro bubble - separate style for narrative intro */
+.chat-intro {
+    background: rgba(30, 30, 50, 0.6);
+    border-left: 3px solid #C15F3C;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+    .chat-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .chat-column.user-side,
+    .chat-column.claude-side {
+        align-items: stretch;
+    }
+
+    .chat-bubble {
+        font-size: 0.85rem;
     }
 }
