@@ -66,6 +66,21 @@ showFallback()           // Static image fallback
 dispose()                // Cleanup
 ```
 
+**Existing viewers:** ThreeDViewer, PointCloudViewer, AudioViewer
+
+### Embedding Viewers in Journal Markdown
+
+Use data attributes for viewer configuration:
+```html
+<div data-audio-viewer
+     data-prompt="Description of what was requested"
+     data-artist="Artist Name"
+     data-tracks='[{"src": "path/to/file.mp3", "title": "Track", "description": "..."}]'>
+</div>
+```
+
+EntryRenderer auto-initializes viewers via dynamic import.
+
 ## Code Conventions
 
 - One class per file (PascalCase classes, camelCase utilities)
