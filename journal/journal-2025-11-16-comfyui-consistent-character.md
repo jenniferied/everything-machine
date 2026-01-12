@@ -52,27 +52,27 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 
 ## Reflexion
 
-**Keywords:** #ComfyUI #Flux #IPAdapter #ControlNet #FaceDetailer #Konsistenz #Bildgenerierung #Kepler
+<details>
+<summary>ℹ️ Interview-Protokoll</summary>
 
-### Kontext
+**Tools:** ComfyUI mit [Mickmumpitz](https://www.youtube.com/@mickmumpitz) Workflow (lokal auf M1 MacBook)
+**Intention:** Album-Cover/Konzeptbilder für Kepler, Konsistenz erreichen, ComfyUI lernen
+**Workflow:** Komplett neuer Workflow – muss wiederkommen um es besser zu verstehen
+**Autorschaft:** Lernende, experimentierend – Netzwerk einer anderen Person verwendet
+**Iteration:** Frustration – lokale Installation dauerte lang, viele Gigabyte, nicht schnell
+**Scheitern:** Inkonsistent, Basketball nicht entfernt, Gesichter in Keplers Maske interpretiert
+**Ästhetik:** Nicht erreicht – Ergebnisse sahen generisch KI-mäßig aus
 
-- **Tool/Workflow:** ComfyUI mit Consistent Character Workflow, Flux-Modell, IP-Adapter, ControlNet, Face Detailer
-- **Intention:** Konsistente Darstellungen von Kepler über verschiedene Bilder hinweg erzeugen, ohne jedes Mal von vorne anfangen zu müssen.
+**Skill-Version:** v2 (Januar 2026)
 
-### Prozess
+</details>
 
-- **Input:** Verschiedene Referenzbilder von Kepler, Text-Prompts mit Beschreibungen (z.B. Maske hinzufügen), Parameter im ComfyUI-Workflow.
-- **Iterationen:** Mehrere Versuche mit unterschiedlichen Referenzbildern. Erst komplexe Szenen (Basketball, Hintergründe), dann Pivot zu neutralem grauem Hintergrund. Prompts wurden angepasst, um bessere Ergebnisse zu erzielen.
-- **Output:** Gemischte Ergebnisse – einige konsistente Bilder, andere mit Artefakten (zusätzliche Gesichter, nicht entfernte Objekte wie Basketball).
+Das war frustrierend. ComfyUI lokal auf meinem M1 MacBook zu installieren hat ewig gedauert und viele Gigabyte verschlungen. Und dann: Die Ergebnisse haben nicht das geliefert, was ich wollte.
 
-### Erkenntnisse
+Das Hauptproblem war Kepler selbst. Er hat kein sichtbares Gesicht – das ist Teil seines Designs. Aber das System interpretiert hartnäckig Gesichter in seine Maske hinein, selbst mit negativen Prompts. Das zeigt mir: Die Trainingsdaten enthalten halt vor allem Gesichter. Und das Modell "will" ein Gesicht sehen, wo keines sein soll.
 
-- **Überraschungen:** Das Modell "versteht" nicht semantisch, was es generiert. Es erkennt Muster, aber hat kein Verständnis davon, dass Basketball und Maske nicht gleichzeitig vorhanden sein sollten. Face Detailer erkennt manchmal Gesichter, wo keine sein sollten.
-- **Fehler als Feature:** Die Artefakte und unerwarteten Gesichter zeigen die Grenzen des Systems auf. Diese "Fehler" helfen zu verstehen, wie das Modell arbeitet – es kombiniert visuelle Elemente ohne logische Zusammenhänge.
-- **Meine Rolle vs. KI:** Ich entscheide über Referenzbilder, Prompts, und wann ein Ergebnis "gut genug" ist. Das System generiert Variationen basierend auf meinen Inputs. Die kritische Bewertung bleibt bei mir.
+Ich wollte durch KI neue Möglichkeiten schaffen – intuitiv, spaßig, zeitsparend. Aber es zeigt sich: Die Art Directability ist noch nicht da. Es sind keine magischen Tools. Mit einer realistischen oder Anime-Figur hätte es vielleicht funktioniert. Aber Kepler ist eben Kepler.
 
-### Weiterentwicklung
+Offen bleibt: Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
 
-- **Workflow-Änderung:** Für zukünftige Generierungen: Immer mit klaren Referenzen auf neutralem Hintergrund arbeiten. Komplexe Elemente erst nach der Basisgenerierung hinzufügen.
-- **Offene Fragen:** Wie kann ich verschiedene Posen und Kontexte erreichen, ohne die Konsistenz zu verlieren? Gibt es Workflows, die besser mit komplexen Szenen umgehen?
-- **Nächste Schritte:** Weitere Experimente mit verschiedenen ControlNet-Einstellungen. Eventuell ein eigenes Modell auf Kepler trainieren (Fine-Tuning)?
+**Keywords:** #ComfyUI #Flux #Konsistenz #Frustration #Kepler #ArtDirectability
