@@ -229,6 +229,15 @@ export class EntryRenderer {
         // Setup immediately since already in viewport
         audioViewer.setup();
 
+        // Listen for description toggle to trigger layout optimization
+        if (app?.eventBus) {
+          app.eventBus.on('audio:descriptionToggled', () => {
+            requestAnimationFrame(() => {
+              this.layoutOptimizer.optimize(gridElement);
+            });
+          });
+        }
+
         // Track for potential cleanup
         if (app?.viewers) {
           app.viewers.set(`journal-audio-${index}`, audioViewer);
