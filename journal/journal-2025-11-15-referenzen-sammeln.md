@@ -35,20 +35,26 @@ Morgen plane ich, erste Versuche mit ComfyUI zu machen. Ich habe schon ein bissc
 ## Reflexion
 
 <details>
-<summary>ℹ️ Über diese Reflexion</summary>
+<summary>ℹ️ Interview-Protokoll</summary>
 
-Diese Reflexion wurde mit dem `/reflection-interview` [Claude Code Skill](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) erstellt – einem interaktiven Interview-Format, das sich dynamisch weiterentwickelt. Der Skill basiert auf den 5 Forschungs-Unterfragen des Projekts: Workflow, Autorschaft, Iteration, Scheitern und Ästhetik.
+Diese Reflexion wurde mit dem `/reflection-interview` Skill erstellt.
 
-**Skill-Version:** v1 (Januar 2026)
+**Tools:** Pinterest, Google Drive – keine KI
+**Intention:** Referenzen sammeln, Zusammenarbeit starten, Inspiration finden
+**Workflow:** Klassische digitale Kollaboration, wie gewohnt
+**Autorschaft:** Kollaboration mit Gavin
+**Iteration:** Keine KI verwendet
+**Scheitern:** Gavin wurde ungeduldig – ich wollte mehr Struktur, er weniger
+**Ästhetik:** Nicht relevant (Vorarbeit)
+
+**Skill-Version:** v2 (Januar 2026)
 
 </details>
 
-Das hier war ein guter Tag. Gavin und ich haben parallel gearbeitet – remote, jeder an seinem Rechner. Er hatte ein paar Probleme mit der Technologie, und ich musste ihm ein bisschen helfen. Er ist zwar nur ein paar Jahre älter als ich, aber ich bin definitiv die Medienaffinere von uns beiden.
+Das hier war ein guter Tag. Gavin und ich haben parallel gearbeitet – remote, jeder an seinem Rechner. Er hatte ein paar Probleme mit der Technologie, und ich musste ihm helfen. Er ist nur ein paar Jahre älter als ich, aber ich bin definitiv die Medienaffinere von uns beiden.
 
 Pinterest macht einfach Spaß. Man scrollt, sieht coole Bilder, speichert sie. Was mir dabei bewusst geworden ist: Das hat erstmal nichts mit KI zu tun. Ja, vielleicht sind einige der Bilder KI-generiert – man kann das oft nicht mehr unterscheiden. Aber wir haben selbst keine KI verwendet. Es war reine menschliche Kuration.
 
-Gavin war schnell frustriert mit der Technik, aber auch inspiriert. Das ist irgendwie typisch für ihn. Überrascht hat mich das nicht, aber es war trotzdem schön zu sehen, wie er sich für das Projekt begeistert.
-
-Die Referenzen könnten später als Input für KI-Bildgenerierung dienen. Ich mache mir aber Gedanken über Urheberrechte – was bedeutet es, wenn man fremde Bilder als Stilreferenz nutzt? Bis jetzt habe ich noch nichts damit getan. Aber die Idee bleibt: Wenn es möglich ist, einen ähnlichen Stil zu generieren, wäre das cool.
+Gavin war schnell frustriert mit der Technik, aber auch inspiriert – typisch für ihn. Er wollte loslegen, ich wollte erst strukturieren. Es fehlen immer noch ein paar Sachen, die er hochladen wollte. Naja.
 
 **Keywords:** #Pinterest #Kollaboration #Referenzen #Vorbereitung #CharacterDesign
