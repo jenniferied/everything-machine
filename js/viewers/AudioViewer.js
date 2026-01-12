@@ -341,6 +341,13 @@ export class AudioViewer extends ViewerBase {
     this.ui.descToggle.textContent = this.descriptionExpanded
       ? 'AI-Generated Description ▲'
       : 'AI-Generated Description ▼';
+
+    // Emit event after CSS transition completes
+    const onTransitionEnd = () => {
+      this.ui.descContent.removeEventListener('transitionend', onTransitionEnd);
+      this.emitEvent('audio:descriptionToggled', { expanded: this.descriptionExpanded });
+    };
+    this.ui.descContent.addEventListener('transitionend', onTransitionEnd);
   }
 
   updatePlayPauseButton() {

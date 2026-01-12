@@ -4,11 +4,11 @@
 
 ## Der Start
 
-Heute habe ich angefangen, Referenzen für Kepler zu sammeln. Das Ziel war, eine solide Grundlage zu schaffen, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen gut funktionieren könnten.
+Heute haben wir angefangen, Referenzen für Kepler zu sammeln. Das Ziel war, eine solide Grundlage zu schaffen, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
 
 ## Pinterest-Recherche
 
-Ich habe Pinterest durchforstet und verschiedene Boards angelegt – von Character Design über Sci-Fi Aesthetics bis hin zu spezifischen Posen und Ausdrücken. Es ist erstaunlich, wie viele verschiedene Interpretationen es von ähnlichen Charakteren gibt. Manche sind hyperrealistisch, andere eher stilisiert. Ich habe versucht, eine gute Mischung zu finden, die zu meiner Vision von Kepler passt.
+Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angelegt – von Cover-Inspiration über Kleidung bis hin zu Vibes für spezifische Songs. Es ist erstaunlich, wie viele coole "Ästhetiken" sich auf Pinterest wiederfinden. Manche Looks sind hyperrealistisch, andere eher stilisiert. Wir haben versucht, eine gute Mischung zu finden, die zu der Vision von Kepler passt.
 
 **Mein Pinterest-Board:** [Kepler x Me](https://uk.pinterest.com/jennifer_ied/kepler-x-me/)
 
@@ -16,15 +16,13 @@ Ich habe Pinterest durchforstet und verschiedene Boards angelegt – von Charact
 
 ![Pinterest Song Bescheid](assets/journal/2025-11-15-referenzen-sammeln/pinterest-song-bescheid.png)
 
-## Zusammenarbeit mit Gavin
+## Google Ordner
 
-Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavin zu teilen. Wir beide arbeiten an Kepler-bezogenen Projekten, und es macht Sinn, unsere Ressourcen zu bündeln. Ich habe die gesammelten Referenzbilder, einige erste Skizzen und Notizen hochgeladen. Gavin hat ebenfalls Material beigesteuert – Fotos, existierende Medien (Cover, Artwork) und Konzeptideen, die ich noch nicht hatte.
+Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavin zu teilen. Wir beide arbeiten an Kepler-bezogenen Projekten, und es macht Sinn, unsere Ressourcen zu bündeln. Ich habe die gesammelten Referenzbilder, bereits erstellte Cover und 3D Daten hochgeladen. Gavin hat ebenfalls Material beigesteuert – Fotos, existierende Medien die von Anderen für Kepler erstellt worden sind (Cover, Artwork) und Konzeptideen, die ich noch nicht hatte.
 
 ![Google Drive Ordner](assets/journal/2025-11-15-referenzen-sammeln/google-ordner.png)
 
 ![Google Drive Referenzen](assets/journal/2025-11-15-referenzen-sammeln/google-order-referenzen.png)
-
-Der Austausch ist produktiv. Es ist hilfreich, eine zweite Perspektive zu haben, besonders wenn es um Details geht.
 
 ## Nächste Schritte
 

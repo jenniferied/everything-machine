@@ -211,6 +211,34 @@ Dieses Dokument trackt den Fortschritt der MA-Thesis "Everything Machine" im Kur
 
 ---
 
+### 2026-01-13: AudioViewer Bubble Resize Bug (UNRESOLVED)
+
+**Problem:** When toggling the "AI-Generated Description" dropdown in AudioViewer, the bubble itself resizes but bubbles below don't reflow/move to accommodate.
+
+**Root Cause:** GridLayoutOptimizer.optimize() recalculates grid spans, but CSS Grid isn't reflowing other elements.
+
+**Files Modified:**
+- `js/viewers/AudioViewer.js` — Added `transitionend` listener in `handleDescriptionToggle()` to emit `audio:descriptionToggled` event after CSS transition completes
+- `js/journal/EntryRenderer.js` — Added eventBus listener to call `layoutOptimizer.optimize(gridElement)` on event
+
+**Attempts Made:**
+1. ❌ setTimeout(320ms) after toggle → bubble resizes, others don't move
+2. ❌ transitionend event + requestAnimationFrame → same result
+
+**Similar Working Code:** Typing animation in `EntryRenderer.setupTypingAnimation()` (lines 124-178) — calls `optimize(gridElement)` on height change and it works.
+
+**Difference:** Typing animation updates incrementally during animation. AudioViewer expands all at once via CSS transition.
+
+**Possible Next Steps:**
+- Compare CSS between title bubble and audio bubble
+- Try forcing display:none/block toggle to force reflow
+- Check if grid-auto-rows or gridRowEnd calculation differs
+- Consider using ResizeObserver instead of transitionend
+
+**Temporary Workaround:** None currently working.
+
+---
+
 ### 2026-01-11: Chat-Format & Interview-Skill
 
 **Erledigt:**
