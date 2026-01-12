@@ -8,40 +8,33 @@ Heute ein kleines Experiment außerhalb des Kepler-Kontexts. Ich arbeite an eine
 
 ## Prozeduralismus und Pattern-basiertes Design
 
-Das Projekt "ПАНЕЛЬКИ" (Panelki) ist eine Masterarbeit über prozedurale Weltgenerierung. Der Kern: Anstatt jeden Straßenzug manuell zu platzieren, definiere ich *Regeln* und *Muster*, aus denen die Welt emergent entsteht. In Houdini habe ich drei HDAs (Houdini Digital Assets) entwickelt:
+Das Projekt "ПАНЕЛЬКИ" (Panelki) entsteht im Rahmen des Masterkurses über prozedurale Weltgenerierung – Virtuelle Welten. Der Kern: Anstatt jedes Gebäude und jeden Straßenzug manuell zu platzieren, definiere ich *Regeln* und *Muster*, aus denen die Welt emergent entsteht. In Houdini habe ich drei HDAs (Houdini Digital Assets) entwickelt:
 
 - **terrain_generator**: Echte Höhendaten aus Neryungi, Russland (ALOS PALSAR DEM)
-- **building_generator**: Modulare Chruschtschowka-Architektur aus OSM-Footprints
+- **building_generator**: Modulare Soviet-Architektur aus OpenStreetMap-Footprints
 - **street_generator**: Straßennetzwerke, die die Gebäude verbinden
 
 Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Tierfiguren im Stil sowjetischer Zeichentrickfilme.
 
-![Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter.](assets/journal/2026-01-12-suno-experiment/concept-wolf-streetlamp.png)
+![Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (Nano Banana Pro).](assets/journal/2026-01-12-suno-experiment/concept-wolf-streetlamp.png)
 
-## KI-Musik: Näher an "professional quality" als Bilder?
+## KI-Musik
 
-Was mich zu diesem Experiment gebracht hat: Ich höre seit einiger Zeit kommerziell produzierte Musik und bin überrascht, wie viel davon inzwischen KI-generiert ist – ohne dass es auffällt. Bei Bildern und Videos sehe ich noch deutliche Artefakte und Inkonsistenzen. Bei Audio? Erschreckend nah am professionellen Standard.
+Was mich zu diesem Experiment gebracht hat: Ich sah ein Video eines Musikproduzenten in meinem YouTube Feed: viele kommerzielle Musik wird inzwischen KI-generiert – ohne dass es auffällt. Bei Bildern und Videos sehe ich noch deutliche Artefakte und Inkonsistenzen, KI-Werbespots werden regelmäßig "außeinandergenommen" und kritisiert. Bei Audio liegt es anscheinend für einen Laien nah am professionellen Standard. Suno ist wohl aktuell der Marktführer.
 
-Suno ist aktuell der Marktführer:
-- **Version 4.5** (kostenlos) bzw. **v5** (Pro, $10/Monat)
-- Studioqualität bei 44.1 kHz
-- 8-minütige Songs möglich
-- Vollständige Arrangements mit Vocals
-
-Warner Music hat bereits einen Deal abgeschlossen. Sony klagt noch. Die Musikindustrie ist nervös – und ich verstehe warum.
 
 ## Das Experiment: Zwei Prompts
 
-Ich brauchte Hintergrundmusik für ein Pixel-Game: loopbar, atmosphärisch, sowjetisch-dystopisch. Keine Vocals. Also habe ich zwei Ansätze getestet.
+Das Video hatte mich inspiriert: ich brauchte Hintergrundmusik für meine Welt, die einen Pixel-look haben sollte: loopbar, atmosphärisch, sowjetisch-dystopisch. Keine Vocals. Also habe ich mich angemeldet und zwei Ansätze auf Suno getestet.
 
 ### Versuch 1: "Lo-fi"
 
 <div data-audio-viewer
      data-prompt="Soviet-inspired dystopian winter lo fi game music loop, no vocals"
-     data-artist="Suno AI v4.5"
+     data-artist="Suno AI"
      data-tracks='[
-       {"src": "assets/journal/2026-01-12-suno-experiment/red-snow-protocol.mp3", "title": "Red Snow Protocol", "cover": "assets/journal/2026-01-12-suno-experiment/red-snow-protocol-cover.jpg", "description": "Cold-war lo-fi loop with dusty vinyl crackle, tape-warbled strings, and a low, pulsing bass. Minimal piano figures trade with distant metallic hits, like factory echoes under falling snow. Muffled snare and soft rim knocks keep a slow, hypnotic groove; saturated synth pads swell in and out to suggest looming surveillance. Arrangement cycles subtly so it can loop seamlessly in-game, building a quiet, relentless tension."},
-       {"src": "assets/journal/2026-01-12-suno-experiment/frozen-terminals.mp3", "title": "Frozen Terminals", "description": "Glacial lo-fi loop built on a bed of detuned tape-warped synth strings and distant radio static. A sparse, muted kick-and-rim pattern pulses like a frozen heartbeat, while an icy Rhodes piano plays melancholic two-note motifs. Reverb-drenched pads and subtle vinyl crackle add analog warmth amid the cold atmosphere. Arrangement is intentionally minimal and repetitive for seamless in-game looping, evoking empty corridors under flickering fluorescent lights."}
+       {"src": "assets/journal/2026-01-12-suno-experiment/frozen-terminals.mp3", "title": "Frozen Terminals", "cover": "assets/journal/2026-01-12-suno-experiment/cover-frozen-terminals.jpeg", "artist": "Suno v5 (beta)", "description": "Dusty lo-fi loop built on detuned analog pads, soft tape hiss, and distant mechanical clanks. Low, pulsing bass stays static and hypnotic while a brittle music-box motif and minor-key piano fragments drift in and out. Subtle vinyl wobble and filtered wind FX create a bleak Soviet-dystopia winter mood; arrangement evolves slowly for seamless looping, with occasional radio-interference swells to reset the ear."},
+       {"src": "assets/journal/2026-01-12-suno-experiment/red-snow-protocol.mp3", "title": "Red Snow Protocol", "cover": "assets/journal/2026-01-12-suno-experiment/cover-red-snow-protocol.jpeg", "artist": "Suno v4.5", "description": "Cold-war lo-fi loop with dusty vinyl crackle, tape-warbled strings, and a low, pulsing bass. Minimal piano figures trade with distant metallic hits, like factory echoes under falling snow. Muffled snare and soft rim knocks keep a slow, hypnotic groove; saturated synth pads swell in and out to suggest looming surveillance. Arrangement cycles subtly so it can loop seamlessly in-game, building a quiet, relentless tension."}
      ]'>
 </div>
 
@@ -51,37 +44,34 @@ Ich brauchte Hintergrundmusik für ein Pixel-Game: loopbar, atmosphärisch, sowj
 
 <div data-audio-viewer
      data-prompt="pixel game soundtrack, soviet inspired, winter and snow, dystopian and lonely, slow, minimal, no vocals"
-     data-artist="Suno AI v4.5"
+     data-artist="Suno AI"
      data-tracks='[
-       {"src": "assets/journal/2026-01-12-suno-experiment/frozen-relay.mp3", "title": "Frozen Relay", "description": "Bitcrushed chiptune pads over a sparse, detuned synth choir; slow, mechanical pulse with occasional metallic hits and distant wind FX. Melody is minimal and repetitive, using cold-square leads and low, droning bass. Reverb-drenched bells hint at Soviet-era clock towers in a buried city, with the energy staying restrained and lonely throughout; mix is narrow and mono-leaning, like an aging arcade cabinet in an abandoned bunker."},
-       {"src": "assets/journal/2026-01-12-suno-experiment/iron-frost-protocol.mp3", "title": "Iron Frost Protocol", "description": "Sparse 8-bit pads drift over a muted, dusty beat, while detuned synth strings add a ghostly Soviet-era chill. A simple, repetitive melody plays on cold square-wave leads, occasionally punctuated by distant metallic chimes and lo-fi static. Slow tempo and limited note range evoke isolation and decay. The arrangement is intentionally monotonous, looping seamlessly as if echoing through an abandoned Siberian facility."}
+       {"src": "assets/journal/2026-01-12-suno-experiment/frozen-relay.mp3", "title": "Frozen Relay", "cover": "assets/journal/2026-01-12-suno-experiment/cover-frozen-relay.jpeg", "artist": "Suno v5 (beta)", "description": "Bitcrushed chiptune pads over a sparse, detuned synth choir; slow, mechanical pulse with occasional metallic hits and distant wind FX. Melody is minimal and repetitive, using cold-square leads and low, droning bass. Reverb-drenched bells hint at Soviet-era clock towers in a buried city, with the energy staying restrained and lonely throughout; mix is narrow and mono-leaning, like an aging arcade cabinet in an abandoned bunker."},
+       {"src": "assets/journal/2026-01-12-suno-experiment/iron-frost-protocol.mp3", "title": "Iron Frost Protocol", "cover": "assets/journal/2026-01-12-suno-experiment/cover-iron-frost-protocol.jpeg", "artist": "Suno v4.5", "description": "Minimal chiptune score with cold, glassy square waves and a slow, mechanical pulse. Sparse low-register synths suggest distant engines; high, bell-like arps trace falling snow. Reverb is long and metallic, as if heard in an empty hangar. Occasional detuned tones and filtered white-noise gusts create a bleak, dystopian hush."}
      ]'>
 </div>
 
-**Ergebnis:** Näher dran. "Minimal" funktioniert besser als "lo-fi". Aber immer noch nicht ganz das, was ich im Kopf hatte. Die Beschreibungen sind evokativ ("aging arcade cabinet in an abandoned bunker"), der Sound selbst bleibt generisch.
+**Ergebnis:** Nicht wirklich minimal. Der Fokus auf "pixel game soundtrack" hat dazu geführt, dass es teilweise wie ein Hero-Soundtrack aus einem Indie-Game klingt – nicht wie atmosphärische Hintergrundmusik für ein Spiel, in dem man explorativ durch eine verlassene Stadt läuft. Die Beschreibungen sind interessant ("aging arcade cabinet in an abandoned bunker"), ich finde der tatsächliche Sound geht in eine andere Richtung.
 
 ## Die Beschreibungs-Output-Diskrepanz
 
-![Pixel-Art-Ästhetik: Das Schaf auf sowjetischer Straße – genau dieser Stil bräuchte passende Musik.](assets/journal/2026-01-12-suno-experiment/concept-sheep-pixel.png)
+![Pixel-Art-Ästhetik: Das Schaf auf sowjetischer Straße – genau dieser Stil bräuchte passende Musik. Konzeptbild erstellt mit Midjourney v7.](assets/journal/2026-01-12-suno-experiment/concept-sheep-pixel.png)
 
-Was auffällt: Suno generiert wunderbar detaillierte Beschreibungen. "Bitcrushed chiptune pads over a sparse, detuned synth choir" klingt exakt nach dem, was ich will. Der tatsächliche Output? Klingt wie generische Stock-Music.
+Was auffällt: Suno generiert wunderbar detaillierte Beschreibungen. "Bitcrushed chiptune pads over a sparse, detuned synth choir" klingt exakt nach dem, was ich will. Der tatsächliche Output? Klingt halt etwas zu "polished", wie Stock-Music.
 
-Das ist dasselbe Muster wie bei meinen ComfyUI-Experimenten mit Kepler: Ich wollte einen voxelisierten, pixeligen Charakter ohne erkennbares Gesicht. Die KI lieferte immer wieder fotorealistisch anmutende Ergebnisse, obwohl der Prompt explizit "voxel", "blocky", "no face" enthielt.
+Das ist dasselbe Muster wie bei meinen ComfyUI-Experimenten mit Kepler: Ich wollte einen voxelisierten, pixeligen Charakter ohne erkennbares Gesicht. Die KI lieferte typisch KI-generiert aussehende Ergebnisse mit Uncanny-Valley-Gesichtern, obwohl der Prompt explizit "voxel", "blocky", "no face" enthielt.
 
-**Die Erkenntnis:** Generalistische KI-Tools sind auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder:
-- Sehr viele Iterationen
-- Spezialisierte Fine-Tunes
-- Manuelle Nachbearbeitung
+**Die Erkenntnis:** Generalistische KI-Tools sind wahrscheinlich einfach auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder sehr viele Iterationen, sezialisierte Fine-Tunes oder manuelle Nachbearbeitung
 
-Das Tool erfüllt 80% der Anforderungen sofort. Die letzten 20% – der Teil, der einen kreativen Output *einzigartig* macht – erfordern nach wie vor menschliche Expertise.
+In diesem Fall hat das Tool die Anforderungen nicht erfüllt – der Output schien für mich "handwerklich solide", aber stilistisch daneben, "too much". Für kommerzielle Mainstream-Musik mag das funktionieren, für spezialisierte Nischen braucht es nach wie vor menschliche Expertise oder zumindest erhebliche Nachbearbeitung.
 
 ## Technische Notizen
 
 Suno bietet zwei Modelle:
 - **v4.5**: Kostenlos, 50 Credits/Tag, "previously unimaginable production capabilities"
-- **v5**: $10/Monat, noch höhere Qualität, v5-Samples werden parallel angeboten
+- **v5**: $30/Monat (Pro), noch höhere Qualität, v5-Samples werden parallel angeboten
 
-Ich habe v4.5 genutzt. Die v5-Samples, die zum Vergleich angezeigt werden, klingen tatsächlich besser – aber ohne Musikexpertise kann ich nicht genau sagen, *warum*. Es klingt "voller"? "Sauberer"? Die Unterschiede sind subtil.
+Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen Relay) sind mit v5 (beta) generiert – im Free Trial allerdings auf eine Minute begrenzt. Red Snow Protocol und Iron Frost Protocol stammen aus v4.5 und sind länger, gefallen mir aber weniger – **warum genau, kann ich nicht sagen**.
 
 ---
 

@@ -1,7 +1,25 @@
 ---
 name: website-development
-triggers: ["/website", "js", "javascript", "journal", "viewer", "EventBus", "component"]
-description: Website development skill for Everything Machine. Covers ES6 architecture, EventBus patterns, viewers, and journal system.
+version: "1.1.0"
+last_validated: "2026-01-13"
+triggers:
+  - "/website"
+  - js
+  - javascript
+  - journal
+  - viewer
+  - EventBus
+  - component
+  - bubble
+  - grid
+  - layout
+  - resize
+  - AudioViewer
+  - ThreeDViewer
+  - GridLayoutOptimizer
+  - CSS
+  - style.css
+description: Use when working on Everything Machine frontend — JavaScript modules, journal entries, viewers, grid layout, bubbles, or CSS styling.
 ---
 
 # Website Development Skill
