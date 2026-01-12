@@ -67,7 +67,10 @@ export class EntryRenderer {
     
     // Initialize image lightbox/gallery
     this.initializeImageLightbox(gridElement);
-    
+
+    // Initialize audio viewers
+    this.initializeAudioViewers(gridElement);
+
     console.log('[EntryRenderer] Entry rendered');
   }
 
@@ -183,6 +186,59 @@ export class EntryRenderer {
       this.currentAnimation = null;
     }
     this.container.innerHTML = '';
+  }
+
+  /**
+   * Initialize audio viewers within the entry
+   * @param {HTMLElement} gridElement - Grid element
+   */
+  initializeAudioViewers(gridElement) {
+    const audioContainers = gridElement.querySelectorAll('[data-audio-viewer]');
+
+    if (audioContainers.length === 0) return;
+
+    // Get app instance for eventBus
+    const app = window.everythingMachineApp;
+
+    audioContainers.forEach((container, index) => {
+      // Parse tracks from data attribute
+      let tracks = [];
+      try {
+        const tracksData = container.dataset.tracks;
+        if (tracksData) {
+          tracks = JSON.parse(tracksData);
+        }
+      } catch (e) {
+        console.warn('[EntryRenderer] Failed to parse audio tracks:', e);
+        return;
+      }
+
+      if (tracks.length === 0) return;
+
+      const prompt = container.dataset.prompt || null;
+      const artist = container.dataset.artist || '';
+
+      // Dynamic import to avoid circular dependencies
+      import('../viewers/AudioViewer.js').then(({ AudioViewer }) => {
+        const audioViewer = new AudioViewer(
+          container,
+          { tracks, prompt, artist },
+          app?.eventBus || null
+        );
+
+        // Setup immediately since already in viewport
+        audioViewer.setup();
+
+        // Track for potential cleanup
+        if (app?.viewers) {
+          app.viewers.set(`journal-audio-${index}`, audioViewer);
+        }
+
+        console.log(`[EntryRenderer] AudioViewer ${index + 1} initialized`);
+      }).catch(err => {
+        console.error('[EntryRenderer] Failed to load AudioViewer:', err);
+      });
+    });
   }
 
   /**

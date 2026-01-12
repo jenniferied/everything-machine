@@ -2306,3 +2306,299 @@ main.container {
         font-size: 0.85rem;
     }
 }
+
+/* =============================================================================
+   AUDIO VIEWER COMPONENT
+   Embedded audio player for journal entries with multi-track support
+   ============================================================================= */
+
+.audio-viewer {
+    margin: 1.5rem 0;
+}
+
+.audio-viewer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: #0a0f18;
+    background-image: linear-gradient(150deg, rgba(4, 6, 10, 0.98) 0%, rgba(12, 17, 27, 0.98) 100%);
+    border: 1px solid #1f2937;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.audio-viewer-wrapper:hover {
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
+}
+
+/* Prompt Display */
+.audio-viewer-prompt {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    padding: 0.5rem 0.75rem;
+    background: rgba(31, 41, 55, 0.5);
+    border-radius: 0.375rem;
+    border-left: 2px solid #4ade80;
+}
+
+.audio-viewer-prompt-label {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/* Player Container */
+.audio-viewer-player {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* Cover Art */
+.audio-viewer-cover {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.audio-viewer-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    border: 1px solid #374151;
+}
+
+/* Controls Container */
+.audio-viewer-controls {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Track Info */
+.audio-viewer-track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.audio-viewer-title {
+    font-family: 'Press Start 2P', 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    color: #f3f4f6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.audio-viewer-artist {
+    font-size: 0.7rem;
+    color: #9ca3af;
+}
+
+/* Controls Row */
+.audio-viewer-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Buttons */
+.audio-viewer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 50%;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.audio-viewer-btn:hover {
+    background: #374151;
+    color: #4ade80;
+    border-color: #4ade80;
+}
+
+.audio-viewer-btn.playing,
+.audio-viewer-btn.active {
+    background: #4ade80;
+    color: #111;
+    border-color: #4ade80;
+}
+
+.audio-viewer-play-btn {
+    width: 36px;
+    height: 36px;
+}
+
+.audio-viewer-nav-btn {
+    width: 28px;
+    height: 28px;
+}
+
+.audio-viewer-loop-btn {
+    width: 26px;
+    height: 26px;
+}
+
+/* Progress Bar */
+.audio-viewer-progress-container {
+    flex: 1;
+    min-width: 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.audio-viewer-progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #374151;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.audio-viewer-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+    border-radius: 2px;
+    transition: width 0.1s ease;
+}
+
+.audio-viewer-progress-container:hover .audio-viewer-progress-bar {
+    height: 6px;
+}
+
+.audio-viewer-progress-container:hover .audio-viewer-progress-fill {
+    background: linear-gradient(90deg, #86efac, #4ade80);
+}
+
+/* Time Display */
+.audio-viewer-time {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    min-width: 65px;
+    text-align: right;
+}
+
+/* Track Indicator */
+.audio-viewer-track-indicator {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    color: #6b7280;
+    padding: 0.125rem 0.375rem;
+    background: #1f2937;
+    border-radius: 0.25rem;
+}
+
+/* Description Section */
+.audio-viewer-description-section {
+    border-top: 1px solid #1f2937;
+    padding-top: 0.5rem;
+}
+
+.audio-viewer-desc-toggle {
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+}
+
+.audio-viewer-desc-toggle:hover {
+    color: #4ade80;
+}
+
+.audio-viewer-desc-content {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.audio-viewer-desc-content.expanded {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(31, 41, 55, 0.3);
+    border-radius: 0.25rem;
+}
+
+/* Fallback */
+.audio-viewer-fallback {
+    padding: 1rem;
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    .audio-viewer-player {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .audio-viewer-cover {
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    .audio-viewer-cover-img {
+        aspect-ratio: 1;
+    }
+
+    .audio-viewer-controls-row {
+        flex-wrap: wrap;
+        gap: 0.375rem;
+    }
+
+    .audio-viewer-progress-container {
+        order: 10;
+        flex-basis: 100%;
+    }
+
+    .audio-viewer-time {
+        min-width: auto;
+        font-size: 0.6rem;
+    }
+
+    .audio-viewer-title {
+        font-size: 0.55rem;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .audio-viewer-progress-fill {
+        transition: none;
+    }
+
+    .audio-viewer-desc-content {
+        transition: none;
+    }
+}

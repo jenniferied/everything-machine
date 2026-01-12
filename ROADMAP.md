@@ -191,6 +191,26 @@ Dieses Dokument trackt den Fortschritt der MA-Thesis "Everything Machine" im Kur
 
 ## 🔄 Retrospektiven
 
+### 2026-01-12: AudioViewer & Suno-Experiment
+
+**Erledigt:**
+- Journal-Eintrag "KI-Musik für prozedurale Spielwelten: Ein Suno-Experiment" erstellt
+- AudioViewer-Komponente erstellt (`js/viewers/AudioViewer.js`, ~300 Zeilen)
+- CSS für AudioViewer hinzugefügt (~300 Zeilen)
+- EntryRenderer um `initializeAudioViewers()` erweitert
+- 10 Assets kopiert (4 MP3s, Cover, 3 Konzeptbilder)
+
+**Technische Änderungen:**
+- Neues Viewer-Pattern: Data-Attribute für Viewer-Konfiguration in Markdown
+- Dynamischer Import in EntryRenderer vermeidet zirkuläre Dependencies
+- Multi-Track-Playlist mit Prev/Next, Loop, Progress-Bar, Description-Toggle
+
+**Patterns:**
+- `data-audio-viewer`, `data-tracks`, `data-prompt` für Embedding
+- ViewerBase erfolgreich für Audio erweitert
+
+---
+
 ### 2026-01-11: Chat-Format & Interview-Skill
 
 **Erledigt:**
@@ -225,6 +245,7 @@ Dieses Dokument trackt den Fortschritt der MA-Thesis "Everything Machine" im Kur
 | 3 | `journal-2025-11-18-marble-worldlabs.md` | ⬜ Ausstehend | - |
 | 4 | `journal-2025-11-19-cursor-build.md` | ⬜ Ausstehend | - |
 | 5 | `journal-2026-01-11-ki-verstehen.md` | ⬜ Ausstehend | - |
+| 6 | `journal-2026-01-12-suno-experiment.md` | ⬜ Ausstehend | - |
 
 **Iterativer Prozess:**
 1. Interview durchführen
