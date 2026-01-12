@@ -17,14 +17,14 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 ---
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich will mehr über KI lernen. Ich will das wirklich tiefer verstehen.</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Vielleicht kannst du ein Gespräch mit mir führen und mein Level einschätzen, und mir dann ein Level höher erklären?</p>
   </div>
@@ -38,28 +38,28 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Also ich nutze Claude Code gerade, hab ein paar GitHub-Repos für Research, schreibe meine Masterarbeit, mache generelle Recherche zu PhD-Themen...</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich hab Web-Development-Erfahrung und bin generell im Computer Graphics Bereich. Also breites aber vielleicht nicht super tiefes Wissen.</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich will die Grundlagen von KI und KI-Forschung verstehen. Wie fängt der Weg von der Mathematik zur KI an?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Gib mir ruhig lange Antworten. Ich kann gerade nicht lesen, also erkläre es ausführlich.</p>
   </div>
@@ -76,14 +76,14 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ja. Das wurde ja im letzten Jahrhundert ein Ding... Das basiert auf Mathe.</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Hilf mir, den Weg von 1920 bis 2020 zu verstehen. Wann hat KI eigentlich angefangen? Wo wurde geforscht? Wie kam es zu Durchbrüchen?</p>
   </div>
@@ -97,7 +97,7 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ja, die Prägung des Begriffs. Erzähl mir mehr.</p>
   </div>
@@ -113,14 +113,14 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Oh, das ist super interessant. Das will ich in meiner Masterarbeit haben...</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Kannst du das noch mehr erklären? Das mit Claude Shannon?</p>
   </div>
@@ -137,14 +137,14 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Okay. Super Erklärung. Kannst du da noch ein bisschen tiefer reingehen?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Und wird das heute noch benutzt, die symbolischen Repräsentationen? Das sind ja Weights und Biases jetzt, oder?</p>
   </div>
@@ -161,21 +161,21 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Okay. Wie realistisch ist es für mich, das zu verstehen?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich glaub nicht, dass es so sehr vom Anwendungsfall abhängt... Ich meine, Large Language Models sind ja was anderes als, sagen wir, Blur-Filter in Photoshop, oder?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich meine, wir hatten ja schon Noise Reduction und Color Grading. Wieso fühlt sich jetzt alles gleichzeitig an?</p>
   </div>
@@ -192,7 +192,7 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Und ja. Und dann, je nachdem... GPT-2 kam raus...</p>
   </div>
@@ -208,21 +208,21 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ja. Jetzt ist es ja nicht mehr nur das Training der Modelle...</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Also ich nutze KI ja nicht nur für Text. Auch für Bilder, 3D, Video...</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>MCP, und jetzt Skills versus Agents und so. Können wir noch eine Sekunde auf dieser Ebene bleiben?</p>
   </div>
@@ -248,35 +248,35 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Okay, wenn ich dieses Thema wirklich tief verstehen will, und auch die Brücke schlagen will zu den Technologien, die ich benutze – Cursor, Claude Code für Research und Coding, ComfyUI, Houdini, Unreal Engine – was wäre der beste Weg dahin?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Sollte ich den Text selbst schreiben? Auch wenn du ihn generiert hast? Es gibt ja diese Studien, dass das Verständnis nicht so tief ist, wenn Essays mit KI geschrieben werden. Aber ich brauche dieses Fundament, um weiterzumachen.</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Andererseits habe ich das Gefühl, dass ich Wissen schrittweise aufbaue. Manchmal wollte ich Computer Graphics wirklich tief verstehen. Hab reingeschaut und dann aufgehört. Aber ich glaube, ich habe danach ein höheres Verständnis. Oder bilde ich mir das nur ein?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Zum Beispiel Houdini lernen – zum vierten oder fünften Mal. Ich mache langsam Fortschritte. Wie lernen menschliche Gehirne eigentlich?</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich hatte meinen ersten Computer mit 7. Einfache Spiele, Kekse dekorieren. Dann hab ich viel gezeichnet und war im Internet, dann hab ich eine Pokemon-Website gemacht, indem ich HTML und CSS von jemand anderem kopiert habe. In der Schule hatte ich Programmieren, ganz basic. Dann Innenarchitektur studiert mit 3ds Max und am Ende Unreal Engine. Das ist viel. Ein langer Weg, um all dieses spezialisierte Wissen zu sammeln.</p>
   </div>
@@ -294,7 +294,7 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ja, ich fühle, dass es entscheidende Lücken gibt. Um es wirklich vollständig und tief zu verstehen.</p>
   </div>
@@ -309,14 +309,14 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Nur ganz leicht. Ich verstehe Bild- oder Video-Generierungsmodelle nicht ganz, und ich bin mir nicht sicher, wie interessiert ich daran bin.</p>
   </div>
 </div>
 
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.svg" alt="User"></div>
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
     <p>Ich will eigentlich einen Lo-Fi Soviet Dystopian Winter Soundtrack mit KI erstellen. Vielleicht kann ich da anfangen.</p>
   </div>

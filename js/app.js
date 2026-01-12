@@ -9,10 +9,10 @@ import { ScriptLoader } from './core/ScriptLoader.js';
 import { EventBus } from './core/EventBus.js';
 
 // Import viewers (cache-bust: v20241223d)
-import { ThreeDViewer } from './viewers/ThreeDViewer.js?v=20241223d';
-import { PointCloudViewer } from './viewers/PointCloudViewer.js?v=20241223d';
-import { GaussianSplatViewer } from './viewers/GaussianSplatViewer.js?v=20241223d';
-import { VideoViewer } from './viewers/VideoViewer.js?v=20241223d';
+import { ThreeDViewer } from './viewers/ThreeDViewer.js?v=20260112';
+import { PointCloudViewer } from './viewers/PointCloudViewer.js?v=20260112';
+import { GaussianSplatViewer } from './viewers/GaussianSplatViewer.js?v=20260112';
+import { VideoViewer } from './viewers/VideoViewer.js?v=20260112';
 
 // Import animations
 import { AnimationController } from './animations/AnimationController.js';
