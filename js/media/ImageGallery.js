@@ -77,20 +77,53 @@ export class ImageGallery {
       options: options
     });
     
-    // Add click handlers
+    // Add click handlers (store reference for cleanup)
     galleryData.forEach((imageData) => {
-      imageData.element.addEventListener('click', (e) => {
+      imageData.clickHandler = (e) => {
         e.preventDefault();
         e.stopPropagation();
         this.openGallery(galleryId, imageData.index);
-      });
-      
+      };
+      imageData.element.addEventListener('click', imageData.clickHandler);
+
       // Add cursor pointer
       imageData.element.style.cursor = 'pointer';
       imageData.element.classList.add('gallery-image');
     });
     
     this.emitEvent('image-gallery:registered', { galleryId, count: galleryData.length });
+  }
+
+  /**
+   * Unregister a gallery and cleanup its resources
+   * @param {string} galleryId - Gallery ID to unregister
+   * @returns {boolean} - True if gallery was found and removed
+   */
+  unregisterGallery(galleryId) {
+    if (!this.galleries.has(galleryId)) {
+      return false;
+    }
+
+    const gallery = this.galleries.get(galleryId);
+
+    // Remove click handlers from existing elements
+    gallery.images.forEach((imageData) => {
+      if (imageData.element && imageData.clickHandler) {
+        imageData.element.removeEventListener('click', imageData.clickHandler);
+        imageData.element.style.cursor = '';
+        imageData.element.classList.remove('gallery-image');
+      }
+    });
+
+    // If this gallery is currently open, close it
+    if (this.currentGallery === gallery) {
+      this.closeGallery();
+    }
+
+    this.galleries.delete(galleryId);
+    this.emitEvent('image-gallery:unregistered', { galleryId });
+
+    return true;
   }
 
   /**
