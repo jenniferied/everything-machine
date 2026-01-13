@@ -28,6 +28,7 @@ export class AudioViewer extends ViewerBase {
     this.duration = 0;
     this.currentTime = 0;
     this.descriptionExpanded = false;
+    this.descriptionResizeObserver = null;
 
     // Bound handlers
     this.handlePlayPause = this.handlePlayPause.bind(this);
@@ -342,12 +343,22 @@ export class AudioViewer extends ViewerBase {
       ? 'AI-Generated Description ▲'
       : 'AI-Generated Description ▼';
 
-    // Emit event after CSS transition completes
-    const onTransitionEnd = () => {
-      this.ui.descContent.removeEventListener('transitionend', onTransitionEnd);
-      this.emitEvent('audio:descriptionToggled', { expanded: this.descriptionExpanded });
-    };
-    this.ui.descContent.addEventListener('transitionend', onTransitionEnd);
+    // Use ResizeObserver to emit events during transition (not just at end)
+    // This allows GridLayoutOptimizer to reflow subsequent bubbles continuously
+    if (!this.descriptionResizeObserver) {
+      const bubble = this.container.closest('.content-bubble');
+      if (bubble) {
+        let lastHeight = bubble.offsetHeight;
+        this.descriptionResizeObserver = new ResizeObserver(() => {
+          const currentHeight = bubble.offsetHeight;
+          if (Math.abs(currentHeight - lastHeight) > 1) {
+            lastHeight = currentHeight;
+            this.emitEvent('audio:descriptionToggled', { expanded: this.descriptionExpanded });
+          }
+        });
+        this.descriptionResizeObserver.observe(bubble);
+      }
+    }
   }
 
   updatePlayPauseButton() {
@@ -393,6 +404,12 @@ export class AudioViewer extends ViewerBase {
     if (this.ui.prevBtn) this.ui.prevBtn.removeEventListener('click', this.handlePrevTrack);
     if (this.ui.nextBtn) this.ui.nextBtn.removeEventListener('click', this.handleNextTrack);
     if (this.ui.descToggle) this.ui.descToggle.removeEventListener('click', this.handleDescriptionToggle);
+
+    // Clean up ResizeObserver
+    if (this.descriptionResizeObserver) {
+      this.descriptionResizeObserver.disconnect();
+      this.descriptionResizeObserver = null;
+    }
 
     this.emitEvent('viewer:disposed', { viewer: this.constructor.name });
   }

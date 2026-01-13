@@ -85,12 +85,18 @@ export class EntryRenderer {
     }
 
     // Find ALL images in the entire entry (not per-bubble)
-    const allImages = gridElement.querySelectorAll('img');
+    // Filter out chat avatars to avoid 40+ tiny images in gallery
+    const allImages = Array.from(gridElement.querySelectorAll('img'))
+      .filter(img => !img.closest('.chat-avatar'));
 
     if (allImages.length === 0) return;
 
     // Register a single gallery for the entire entry
     const galleryId = 'journal-entry-gallery';
+
+    // Cleanup old gallery before registering new one
+    this.imageGallery.unregisterGallery(galleryId);
+
     this.imageGallery.registerGallery(galleryId, allImages);
   }
 
@@ -185,6 +191,12 @@ export class EntryRenderer {
       this.currentAnimation.stop();
       this.currentAnimation = null;
     }
+
+    // Cleanup gallery before destroying DOM
+    if (this.imageGallery) {
+      this.imageGallery.unregisterGallery('journal-entry-gallery');
+    }
+
     this.container.innerHTML = '';
   }
 

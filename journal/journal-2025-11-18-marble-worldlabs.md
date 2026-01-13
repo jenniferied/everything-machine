@@ -88,36 +88,27 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 
 ## Reflexion
 
-**Keywords:** #Marble #WorldLabs #3D #WorldModel #KI-Interpretation #Weltenbau #Workaround
+<details>
+<summary>ℹ️ Interview-Protokoll</summary>
 
-### Kontext
+**Tools:** Marble (marble.worldlabs.ai)
+**Intention:** Tool testen – Alternative für Hintergründe/Welten, nachdem Kepler als Charakter in ComfyUI nicht funktionierte
+**Workflow:** Experimentell – Gaussian Splats bekannt, beeindruckt von Geschwindigkeit
+**Autorschaft:** Jemand der experimentiert und ein Produkt ausprobiert
+**Iteration:** Spaß, schnell, interessant für Zukunft – generative Möglichkeiten interessanter als Rekonstruktion
+**Scheitern:** Personen gruselig/Uncanny Valley, aber keine hohen Ansprüche
+**Ästhetik:** Noch nicht entwickelt – neues Tool im Hinterkopf
 
-- **Tool/Workflow:** Marble von Worldlabs (marble.worldlabs.ai) – World Model für 3D-Weltengenerierung mit KI
-- **Intention:** Testen, wie Marble mit verschiedenen Input-Strategien umgeht – von konkreten Fotos bis zu abstrakten Vibes.
+**Skill-Version:** v2 (Januar 2026)
 
-### Prozess
+</details>
 
-- **Input:**
-  - Welt 1: Foto aus Soviet-Café (Spiegelbild) → System-Interpretation
-  - Welt 2: Kepler-Foto ohne Prompt → nur Bild als Input
-  - Welt 3: Pinterest-Bild + kurze Prompt → Bild + Text kombiniert
-  - Welt 4: Claude-generierte Prompt aus mehreren Pinterest-Bildern → Workaround für Einbild-Limitierung
-- **Iterationen:** Vier Experimente mit unterschiedlichen Input-Strategien, um die Grenzen und Möglichkeiten zu testen.
-- **Output:**
-  - Welt 1: Verzerrte Spiegel-Interpretation (creepy, aber faszinierend)
-  - Welt 2: Uncanny Valley Kepler in Spiegelscherben-Installation
-  - Welt 3: Sehr nah am Input-Bild, wenig Interpretation
-  - Welt 4: Abstraktere, kreativere Ergebnisse durch Vibe-basierte Prompts
+Marble hat Spaß gemacht. Es ging schnell, war browserbasiert, kein lokaler Installationshorror wie bei ComfyUI. Nachdem Kepler als Charakter in ComfyUI nicht funktioniert hatte, wollte ich schauen, ob wir wenigstens Hintergründe generieren könnten.
 
-### Erkenntnisse
+Das Interessante: Als ich ein Foto aus einem Soviet-inspirierten Café hochgeladen habe – mit Spiegelungen – hat das System den Spiegel erkannt und die gespiegelten Personen in den 3D-Raum gebracht. Das Ergebnis war gruselig, Uncanny Valley, verzerrt. Aber irgendwie auch faszinierend.
 
-- **Überraschungen:** Marble orientiert sich sehr stark am Input-Bild. Das ist gut für Rekonstruktionen, aber limitiert kreative Interpretation.
-- **Fehler als Feature:** Die Uncanny-Valley-Proportionen bei Kepler und die schwarzen Hintergründe (wo das Modell nichts sieht) erzeugen interessante Artefakte. Als CG-Hintergründe mit Unschärfe nutzbar.
-- **Meine Rolle vs. KI:** Je konkreter das Input-Bild, desto mehr "entscheidet" das Modell. Bei abstrakten Text-Prompts habe ich mehr kreative Kontrolle.
-- **Workaround entdeckt:** Claude als "Prompt-Aggregator" – mehrere Referenzbilder hochladen, um die Einbild-Limitierung zu umgehen.
+Jetzt, wo ich darüber nachdenke: Man könnte mit diesen "Fehlern" absichtlich spielen. Ich könnte sogar 3D-gerenderte Bilder in einen Gaussian Splat Generator eingeben – das wäre ein interessanter Workflow. Das kommt auf die ROADMAP.
 
-### Weiterentwicklung
+Für finale Produktion würde ich Blender oder Unreal nehmen. Aber als schnelles Prototyping-Tool – warum nicht?
 
-- **Workflow-Änderung:** Für kreativere Ergebnisse: Text-Prompts > Bild-Input. Claude als Zwischenschritt für Vibe-Aggregation nutzen.
-- **Beantwortete Fragen:** Ja, Kepler in einer Marble-Welt ist möglich, aber mit Uncanny-Valley-Effekt. Export ist möglich (Gaussian Splats, Meshes).
-- **Nächste Schritte:** Chisel Editor testen für strukturierte Layouts. Gaussian Splat Export in Unreal Engine importieren.
+**Keywords:** #Marble #GaussianSplats #3D #Prototyping #UncannyValley #Weltenbau

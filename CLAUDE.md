@@ -26,6 +26,7 @@ thesis/        # MA thesis (academic/, submission/, ROADMAP.md)
 | `/website` | js, component, viewer | Website dev, architecture |
 | `/thesis` | academic, literature | Thesis writing, lit review |
 | `/reflection-interview` | Reflexion schreiben | Journal reflection based on 5 research sub-questions |
+| `/roadmap` | what's next, show tasks | Display tasks, interactive selection, sub-agent suggestions |
 
 ## Guardrails
 - **Language**: German for thesis, English for code
