@@ -58,28 +58,30 @@ export class JournalLoader {
   }
 
   /**
-   * Load all journal entries from manifest
+   * Load all journal entries from manifest (parallel loading)
    * @returns {Promise<Array>} Array of entry objects with markdown content
    */
   async loadAllEntries() {
     if (!this.manifest) {
       await this.loadManifest();
     }
-    
-    const entries = [];
-    
-    for (const filename of this.manifest) {
-      try {
-        const markdown = await this.loadEntry(filename);
-        entries.push({
-          filename,
-          markdown
-        });
-      } catch (error) {
-        console.warn(`[JournalLoader] Skipping ${filename} due to error`);
-      }
-    }
-    
+
+    // Load all entries in parallel for better performance
+    const results = await Promise.all(
+      this.manifest.map(async (filename) => {
+        try {
+          const markdown = await this.loadEntry(filename);
+          return { filename, markdown };
+        } catch (error) {
+          console.warn(`[JournalLoader] Skipping ${filename} due to error`);
+          return null;
+        }
+      })
+    );
+
+    // Filter out failed entries while preserving order
+    const entries = results.filter((entry) => entry !== null);
+
     console.log(`[JournalLoader] Loaded ${entries.length} entries`);
     return entries;
   }

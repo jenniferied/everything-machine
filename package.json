@@ -1,0 +1,20 @@
+{
+  "name": "everything-machine",
+  "version": "1.0.0",
+  "description": "MA thesis artistic research website - generative AI, digital identity, music production",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/tailwind.css --minify",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/tailwind.css --watch",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "artistic-research",
+    "generative-ai",
+    "digital-identity"
+  ],
+  "author": "Jennifer Meier",
+  "license": "MIT"
+}
