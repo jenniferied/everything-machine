@@ -63,8 +63,8 @@ export class MusicPlayer {
     // Setup event listeners
     this.setupEventListeners();
     
-    // Load first track (paused)
-    await this.playbackController.loadTrack(0, false);
+    // Load first track (paused) - pass true to preserve play state (which is false/paused at init)
+    await this.playbackController.loadTrack(0, true);
     
     console.log('[MusicPlayer] Initialized successfully');
   }
