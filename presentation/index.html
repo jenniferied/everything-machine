@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Machine (Kepler) - Präsentation</title>
+
+    <!-- Google Fonts (same as website) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        /* === WEBSITE COLORS & FONTS === */
+        :root {
+            --bg-dark: #111;
+            --bg-bubble: #050a13;
+            --accent: #4ade80;
+            --accent-dark: #16a34a;
+            --text-primary: #d1d5db;
+            --text-secondary: #9ca3af;
+            --border: #374151;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === SLIDE CONTAINER === */
+        .slides {
+            width: 100%;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* === ANIMATED TITLE (from website) === */
+        .title-animated {
+            font-family: 'Press Start 2P', 'IBM Plex Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: normal;
+            line-height: 1.4;
+            background-image: linear-gradient(115deg, #16a34a 0%, #4ade80 50%, #f3f4f6 100%);
+            background-size: 220% 220%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: titleGlow 7s linear infinite;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        @keyframes titleGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* === SECTION TITLES === */
+        .section-title {
+            font-family: 'Press Start 2P', 'IBM Plex Mono', monospace;
+            font-size: 1.25rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+        }
+
+        /* === SUBTITLE === */
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        /* === CONTENT BUBBLE (from website) === */
+        .bubble {
+            background-color: var(--bg-bubble);
+            background-image: linear-gradient(150deg, rgba(4, 6, 10, 0.98) 0%, rgba(12, 17, 27, 0.98) 55%, rgba(5, 8, 14, 0.98) 100%);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            max-width: 900px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .bubble:hover {
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.15), 0 0 60px rgba(74, 222, 128, 0.08);
+        }
+
+        /* === IMAGES === */
+        .image-row {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .image-row img {
+            height: 200px;
+            width: auto;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            object-fit: cover;
+        }
+
+        .image-large {
+            max-width: 80%;
+            height: auto;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        .image-hero {
+            max-height: 40vh;
+            width: auto;
+            border-radius: 0.5rem;
+        }
+
+        /* === TEXT === */
+        .text-accent { color: var(--accent); }
+        .text-secondary { color: var(--text-secondary); }
+        .text-center { text-align: center; }
+        .text-large { font-size: 1.25rem; line-height: 1.7; }
+        .text-italic { font-style: italic; }
+
+        /* === LIST === */
+        ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        ul li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        ul li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* === KEYWORDS === */
+        .keywords {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .keyword {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        /* === FOOTER === */
+        .slide-footer {
+            position: absolute;
+            bottom: 2rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* === GRID === */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+        }
+
+        /* === PRINT STYLES === */
+        @media print {
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .title-animated {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* === BLINK CARET === */
+        .caret {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: #d1fae5;
+            margin-left: 0.2rem;
+            animation: caretBlink 0.8s ease-in-out infinite;
+            vertical-align: baseline;
+        }
+
+        @keyframes caretBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slides">
+
+        <!-- SLIDE 1: Title -->
+        <section class="slide">
+            <img src="../assets/images/kepler-voxel.png" alt="Kepler" class="image-hero" style="margin-bottom: 2rem;">
+            <h1 class="title-animated">Everything Machine<span class="caret"></span></h1>
+            <p class="subtitle">MA Artistic Research — TH OWL 2025</p>
+            <p class="subtitle text-secondary">Jennifer Meier</p>
+            <div class="slide-footer">Kepler • Generative AI • Digitale Identität</div>
+        </section>
+
+        <!-- SLIDE 2: Abstract -->
+        <section class="slide">
+            <h2 class="section-title">I / O (Abstract)</h2>
+            <div class="bubble">
+                <p class="text-large text-italic text-center">
+                    Künstler verfügen über eine Fülle von "Inputs" – Bilder, Musik, Texte und einen schwer fassbaren "Vibe". Generative KI bietet neue "Output"-Werkzeuge, doch es fehlt an etablierten Prozessen, diese Inputs zur Erweiterung einer bestehenden digitalen Identität zu nutzen.
+                </p>
+            </div>
+            <div class="keywords">
+                <span class="keyword">Generative AI</span>
+                <span class="keyword">Digitale Identität</span>
+                <span class="keyword">Artistic Research</span>
+                <span class="keyword">Alter Ego</span>
+                <span class="keyword">Cover Art</span>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Kepler -->
+        <section class="slide">
+            <h2 class="section-title">Wer ist Kepler?</h2>
+            <div class="image-row">
+                <img src="../assets/images/kepler-squatting.png" alt="Kepler Pixel-Art">
+                <img src="../assets/images/white-suit.png" alt="Kepler Real">
+                <img src="../assets/images/kepler-studio.png" alt="Kepler Studio">
+            </div>
+            <p class="text-center text-secondary" style="margin-top: 1.5rem;">
+                Digitale Künstler-Persona von Gavin Just — 12 Tracks auf Spotify
+            </p>
+            <img src="../assets/images/album-covers-row.png" alt="Album Covers" class="image-large">
+        </section>
+
+        <!-- SLIDE 4: Forschungsfragen -->
+        <section class="slide">
+            <h2 class="section-title">Forschungsfragen</h2>
+            <div class="bubble">
+                <ul>
+                    <li>Wie kann generative KI die <span class="text-accent">stilistische Kohärenz</span> einer künstlerischen Identität wahren?</li>
+                    <li>Können Produktionsprobleme (z.B. Voxel-Animation) durch <span class="text-accent">KI-Workflows</span> gelöst werden?</li>
+                    <li>Wie wird <span class="text-accent">künstlerische Autorschaft</span> gewahrt?</li>
+                    <li>Wie erleben "Künstlerin" und "Klient" diesen Prozess?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Artefakte -->
+        <section class="slide">
+            <h2 class="section-title">Artefakte</h2>
+            <div class="image-row">
+                <img src="../assets/images/artefakt-1.png" alt="Artefakt 1">
+                <img src="../assets/images/artefakt-2.png" alt="Artefakt 2">
+                <img src="../assets/images/basketball-scene.png" alt="Basketball">
+                <img src="../assets/images/inspiration.png" alt="Inspiration">
+            </div>
+            <p class="text-center text-secondary" style="margin-top: 1.5rem;">
+                Unreal Engine • ComfyUI • Suno AI • Claude
+            </p>
+        </section>
+
+        <!-- SLIDE 6: Live Demo -->
+        <section class="slide">
+            <h2 class="section-title">Website & Dokumentation</h2>
+            <div class="bubble text-center">
+                <p class="text-large">
+                    <span class="text-accent">→ Live-Demo auf der Website</span>
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Prozess-Logbuch • Journal-Einträge • 3D-Viewer • Audio-Player
+                </p>
+            </div>
+            <div class="slide-footer">github.com/jmeier/everything-machine</div>
+        </section>
+
+    </div>
+</body>
+</html>
