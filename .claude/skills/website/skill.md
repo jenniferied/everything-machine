@@ -1,7 +1,7 @@
 ---
 name: website-development
-version: "1.1.0"
-last_validated: "2026-01-13"
+version: "1.2.0"
+last_validated: "2026-01-14"
 triggers:
   - "/website"
   - js
@@ -98,6 +98,36 @@ Use data attributes for viewer configuration:
 ```
 
 EntryRenderer auto-initializes viewers via dynamic import.
+
+## Grid Reflow Pattern (ResizeObserver)
+
+When a component's height changes during CSS transitions, use ResizeObserver to trigger `GridLayoutOptimizer.optimize()` continuously — not just after transition ends.
+
+```javascript
+// In component that changes height:
+if (!this.resizeObserver) {
+  const bubble = this.container.closest('.content-bubble');
+  if (bubble) {
+    let lastHeight = bubble.offsetHeight;
+    this.resizeObserver = new ResizeObserver(() => {
+      const currentHeight = bubble.offsetHeight;
+      if (Math.abs(currentHeight - lastHeight) > 1) {
+        lastHeight = currentHeight;
+        this.emitEvent('component:resized', {});
+      }
+    });
+    this.resizeObserver.observe(bubble);
+  }
+}
+
+// In dispose():
+if (this.resizeObserver) {
+  this.resizeObserver.disconnect();
+  this.resizeObserver = null;
+}
+```
+
+**Why:** CSS Grid doesn't automatically reflow sibling elements when one element's height changes via transition. ResizeObserver fires during the transition, allowing continuous layout updates.
 
 ## Code Conventions
 
