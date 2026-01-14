@@ -1,16 +1,28 @@
 {
   "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@anthropic-ai/mcp-playwright@latest"]
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "disabled": true
+    },
     "zotero": {
       "command": "npx",
       "args": ["-y", "mcp-zotero"],
-      "env": {
-        "ZOTERO_API_KEY": "vrjjAVhjabLd9iil0kVZdhXA",
-        "ZOTERO_USER_ID": "13820503"
-      }
+      "disabled": true
     },
     "semantic-scholar": {
       "command": "uvx",
-      "args": ["semantic-scholar-mcp", "serve"]
+      "args": ["semantic-scholar-mcp", "serve"],
+      "disabled": true
+    },
+    "openalex": {
+      "command": "npx",
+      "args": ["-y", "@seacolour/openalex-mcp-tool"],
+      "disabled": true
     }
   }
 }
