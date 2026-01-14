@@ -22,12 +22,12 @@
 ### Reflexionen mit /reflection-interview
 | Journal | Status |
 |---------|--------|
-| referenzen-sammeln | ⬜ |
-| comfyui-consistent-character | ⬜ |
-| marble-worldlabs | ⬜ |
-| cursor-build | ⬜ |
-| ki-verstehen | ⬜ |
-| suno-experiment | ⬜ |
+| referenzen-sammeln | ✅ |
+| comfyui-consistent-character | ✅ |
+| marble-worldlabs | ✅ |
+| cursor-build | ✅ |
+| ki-verstehen | ✅ |
+| suno-experiment | ✅ |
 
 ---
 

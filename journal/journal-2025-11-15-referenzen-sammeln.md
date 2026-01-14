@@ -32,27 +32,96 @@ Morgen plane ich, erste Versuche mit ComfyUI zu machen. Ich habe schon ein bissc
 
 ## Reflexion
 
-<details>
-<summary>ℹ️ Interview-Protokoll</summary>
+Das hier war ein guter Tag. Gavin und ich haben parallel gearbeitet – remote, jeder an seinem Rechner. Pinterest macht Spaß: Man scrollt, sieht coole Bilder, speichert sie. Was mir dabei bewusst geworden ist – das hat erstmal nichts mit KI zu tun. Es war reine menschliche Kuration.
 
-Diese Reflexion wurde mit dem `/reflection-interview` Skill erstellt.
+Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlich einige der Bilder selbst KI-generiert. Die Unterscheidung wird zunehmend schwieriger. Aber der Prozess des Sammelns, Sortierens und Kuratierens bleibt ein zutiefst menschlicher.
 
-**Tools:** Pinterest, Google Drive – keine KI
-**Intention:** Referenzen sammeln, Zusammenarbeit starten, Inspiration finden
-**Workflow:** Klassische digitale Kollaboration, wie gewohnt
-**Autorschaft:** Kollaboration mit Gavin
-**Iteration:** Keine KI verwendet
-**Scheitern:** Gavin wurde ungeduldig – ich wollte mehr Struktur, er weniger
-**Ästhetik:** Nicht relevant (Vorarbeit)
+### Kontext
 
-**Skill-Version:** v2 (Januar 2026)
+- **Tools:** Pinterest, Google Drive und keine KI-Tools so far.
+- **Intention:** Alle drei (Referenzen sammeln, Zusammenarbeit starten, Inspiration finden).
 
-</details>
+### Die 5 Forschungsfragen
 
-Das hier war ein guter Tag. Gavin und ich haben parallel gearbeitet – remote, jeder an seinem Rechner. Er hatte ein paar Probleme mit der Technologie, und ich musste ihm helfen. Er ist nur ein paar Jahre älter als ich, aber ich bin definitiv die Medienaffinere von uns beiden.
+- **Workflow:** Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.
+- **Autorschaft:** Kollaboration.
+- **Iteration:** Keine KI verwendet.
+- **Scheitern:** Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).
+- **Ästhetik:** Nicht relevant.
 
-Pinterest macht einfach Spaß. Man scrollt, sieht coole Bilder, speichert sie. Was mir dabei bewusst geworden ist: Das hat erstmal nichts mit KI zu tun. Ja, vielleicht sind einige der Bilder KI-generiert – man kann das oft nicht mehr unterscheiden. Aber wir haben selbst keine KI verwendet. Es war reine menschliche Kuration.
+### Synthese
 
-Gavin war schnell frustriert mit der Technik, aber auch inspiriert – typisch für ihn. Er wollte loslegen, ich wollte erst strukturieren. Es fehlen immer noch ein paar Sachen, die er hochladen wollte. Naja.
+- **Zentrale Erkenntnis:** Das Sammeln von Referenzen ist ein rein menschlicher, kurativer Prozess – auch wenn manche der gesammelten Bilder selbst KI-generiert sein könnten.
+- **Offene Frage:** Was bedeutet es für Urheberrechte, wenn man fremde Bilder als Stilreferenz für KI-Generierung nutzt?
 
 **Keywords:** #Pinterest #Kollaboration #Referenzen #Vorbereitung #CharacterDesign
+
+<div class="interview-transcript">
+<div class="transcript-section-header">Kontext</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Pinterest, Google Drive und keine KI-Tools so far.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Alle drei (Referenzen sammeln, Zusammenarbeit starten, Inspiration finden).</p></div>
+</div>
+<div class="transcript-section-header">Die 5 Forschungsfragen</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? Was war neu, was ist weggefallen? <em>(Workflow)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle in diesem Prozess erlebt? <em>(Autorschaft)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Kollaboration.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Keine KI verwendet.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen und was hast du daraus gelernt? <em>(Scheitern)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich durch die Arbeit eine eigene visuelle/stilistische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nicht relevant.</p></div>
+</div>
+<div class="transcript-section-header">Synthese</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast erwähnt, dass du dir Gedanken über Urheberrechte machst – wenn man fremde Bilder als Stilreferenz nutzt. Hat das Sammeln der Referenzen dein Verhältnis zu 'originalem' versus 'inspiriertem' Schaffen verändert?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich weiß nicht ganz, was mit der Frage gemeint ist.</p></div>
+</div>
+</div>
