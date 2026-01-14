@@ -77,31 +77,96 @@ Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen R
 
 ## Reflexion
 
-*Dieser Abschnitt folgt der autoethnografischen Methodik nach Ellis et al. (2011) und Schöns "Reflection-in-Action" (1983).*
+Das war frustrierend. Ich wollte Musik für meine sowjetisch-dystopische Spielwelt: minimal, loopbar, atmosphärisch. Suno lieferte Stock-Music-Qualität – handwerklich solide, aber austauschbar.
+
+Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "Bitcrushed chiptune pads over a sparse, detuned synth choir" – genau das wollte ich. Der Output? Zu poliert, zu kommerziell.
 
 ### Kontext
 
-- **Tool/Workflow:** Suno AI v4.5 (Web-Interface), direkte Prompt-Eingabe
-- **Intention:** Ambient-Musik für prozedural generierte Spielwelt, loopbar, sowjetisch-dystopisch
+- **Tools:** Suno AI (Web-Interface)
+- **Intention:** Game-Soundtrack für das Panelki-Projekt erstellen
 
-### Prozess
+### Die 5 Forschungsfragen
 
-- **Input:** Zwei Text-Prompts mit Genre-, Stimmungs- und Stilangaben
-- **Iterationen:** 2 Prompts × 2 generierte Tracks = 4 Ergebnisse
-- **Output:** Vier Tracks zwischen 10 Sekunden und mehreren Minuten, professionell produziert, aber generisch
+- **Workflow:** Schneller Prototyp – Ideen testen ohne Musikwissen.
+- **Autorschaft:** Enttäuscht, Kurator:in – ich habe nur ausgewählt, nicht gestaltet.
+- **Iteration:** Verworfen – vermute, mit diesem Modell nicht weit zu kommen.
+- **Scheitern:** Zu kommerziell. Die Beschreibungen waren besser als der Output.
+- **Ästhetik:** Verfehlt – KI lieferte generischen Sound statt minimal-dystopisch.
 
-### Erkenntnisse
+### Synthese
 
-- **Überraschungen:** Die generierten Beschreibungen sind oft evocativer als die Musik selbst. Suno "versteht" den gewünschten Vibe auf textueller Ebene, setzt ihn aber in einen kommerziellen Sound um.
-- **Fehler als Feature:** Die "zu kommerzielle" Qualität zeigt, worauf das Modell trainiert wurde. Das ist kein Bug, sondern die logische Konsequenz aus Training auf erfolgreicher Musik.
-- **Meine Rolle vs. KI:** Ich habe die kreative Vision (sowjetisch-minimalistisch), die KI liefert handwerklich solide, aber austauschbare Umsetzungen. Der *spezifische* Sound, der diese Spielwelt einzigartig machen würde, entsteht nicht automatisch.
+- **Zentrale Erkenntnis:** Die generierten Beschreibungen zeigen mir: Für meine Vision gibt es Begriffe. Ich könnte damit existierende Musik suchen, ein anderes Tool probieren, oder einem echten Musiker ein Briefing geben.
+- **Offene Frage:** Sind generalistische KI-Tools für spezialisierte Nischen überhaupt geeignet – oder braucht es immer Fine-Tunes oder menschliche Expertise?
 
-### Weiterentwicklung
+**Keywords:** #Suno #Musik #GameAudio #Frustration #Beschreibung≠Output
 
-- **Workflow-Änderung:** Detailliertere Prompts mit spezifischen musikalischen Referenzen testen. "Klingt wie [Komponist X]" statt abstrakter Genre-Beschreibungen.
-- **Offene Fragen:** Kann ein Fine-Tune auf 8-bit/Chiptune-Musik das Ergebnis verbessern? Lohnt sich die manuelle Nachbearbeitung (EQ, Bitcrushing) für Authentizität?
-- **Nächste Schritte:** Tracks als Ausgangsmaterial nutzen und in einer DAW bearbeiten. Der "Rohstoff" ist da – die Veredelung bleibt menschliche Arbeit.
-
----
-
-*Referenzen: Ellis, Adams & Bochner (2011) - Autoethnography: An Overview; Schön (1983) - The Reflective Practitioner*
+<div class="interview-transcript">
+<h4>Kontext</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Suno AI.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Game-Soundtrack.</p></div>
+</div>
+<h4>Die 5 Forschungsfragen</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Schneller Prototyp.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Enttäuscht, Kurator:in.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>In dem Fall habe ich das Ganze ja verworfen, weil ich vermute, dass ich mit dem Modell nicht sonderlich weit komme.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Zu kommerziell, Beschreibung ≠ Output.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene musikalische/ästhetische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nein, verfehlt.</p></div>
+</div>
+<h4>Synthese</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Im Eintrag schreibst du, dass Sunos generierte Beschreibungen ('Bitcrushed chiptune pads over a sparse, detuned synth choir') besser klingen als die Musik selbst. Ist das frustrierend – oder zeigt es, dass du die KI vielleicht als Text-Generator für Briefings an echte Musiker nutzen könntest?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also zeigt mir, dass für die Vision, die ich hatte, gibt es Begriffe, und es gibt mir Hoffnung, dass ich entweder bereits existierende Musik mit diesen Begriffen finden kann, ein anderes Tool verwenden könnte, um so etwas zu generieren, oder es einem echten Musiker geben könnte. Es ist sehr frustrierend.</p></div>
+</div>
+</div>

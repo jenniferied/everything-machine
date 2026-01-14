@@ -10,6 +10,8 @@ Static website (GitHub Pages) + academic thesis. Two workstreams:
 ## Commands
 ```bash
 python3 -m http.server 8001              # Website dev
+npm run build:css                         # Build Tailwind CSS
+npm run watch:css                         # Watch mode (dev)
 node scripts/generate-journal-manifest.js # Update journal
 cd thesis/submission && make all          # Thesis PDFs
 ```

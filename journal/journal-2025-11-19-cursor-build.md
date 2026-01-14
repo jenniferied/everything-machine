@@ -81,27 +81,106 @@ _Screenshot Placeholder 03 – Journal-Layout-Test, zeigt einen Eintrag im Bubbl
 
 ## Reflexion
 
-**Keywords:** #Cursor #VSCode #KI-Programmierung #Git #WebDevelopment #Tailwind #JavaScript
+Das war einfach krass. Das Aufsetzen dieser Website ging tausendfach schneller als ohne KI. Ich konnte mein bestehendes Wissen einbringen, musste aber bei Kleinigkeiten nicht selbst googeln und bugfixen – Cursor und Claude haben das erledigt. Ich konnte quasi meine kreative Vision umsetzen.
+
+Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Manchmal war es Kollaboration, wenn wir zusammen nicht weiterkamen. Ich habe viel reviewed – und dabei auch gelernt, weil ich in den Thinking-Prozess reinschauen konnte. Die Debugging-Schleifen waren nervig, aber ich habe gelernt, wie man die KI besser anleitet: den Chat öfter erneuern, weil zu viel Kontext die KI verschlechtert, und falsche Ansätze ablehnen statt weiterzumachen.
 
 ### Kontext
 
-- **Tool/Workflow:** Cursor (AI-gestützter Code-Editor, Fork von VS Code), Git für Versionierung, HTML/CSS/JavaScript ohne Build-Tools, Tailwind CSS via CDN
-- **Intention:** Eine Website für das Artistic Research-Projekt erstellen, die wissenschaftlichen Anspruch mit Keplers digitaler Ästhetik verbindet. Dokumentationsplattform für den kreativen Prozess.
+- **Tools:** Cursor, Version Control via Github, und größtenteils die Modelle von Anthropic
+- **Intention:** Ich wollte sowohl die Website erstellen als auch Cursor ausprobieren, da es sich interessant für mich anhörte und ich bereits Webentwicklungserfahrung habe, aber nur sehr limitiert und es würde sehr lange dauern, wenn ich es ganz alleine mache.
 
-### Prozess
+### Die 5 Forschungsfragen
 
-- **Input:** Research Catalogue als Design-Inspiration, Abstract als Textbasis, Keplers visuelle Identität (Voxel-Ästhetik, dunkles Theme), natürliche Sprache Prompts an Cursor.
-- **Iterationen:** Inkrementelle Entwicklung über Git-Commits: Grundstruktur → Player → Journal-System → Timeline → Bubble-Layouts. Jeder Schritt wurde committet und bei Problemen konnte ich zurückrollen.
-- **Output:** Funktionsfähige Website Version 1.0 mit Player, automatischem Journal-Loading, horizontaler Timeline, Pixel-Headings, responsivem Grid-Layout.
+- **Workflow:** Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht. Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.
+- **Autorschaft:** I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.
+- **Iteration:** (nicht im Interview abgedeckt)
+- **Scheitern:** Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.
+- **Ästhetik:** Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.
 
-### Erkenntnisse
+### Synthese
 
-- **Überraschungen:** Wie schnell repetitive Aufgaben (Markdown-Parsing, Grid-Layout) mit Cursor erledigt werden konnten. Die KI verstand den Projektkontext nach kurzer Zeit gut und machte passende Vorschläge.
-- **Fehler als Feature:** Einige Cursor-Vorschläge waren nicht optimal, aber das Ablehnen und Korrigieren hat mein eigenes Verständnis der Codebasis vertieft. Der Dialog mit der KI war produktiv, auch wenn nicht jeder Vorschlag übernommen wurde.
-- **Meine Rolle vs. KI:** Ich habe Architektur-Entscheidungen getroffen (keine Build-Tools, flache Struktur), Design-Richtung vorgegeben, und Qualität bewertet. Cursor hat Code generiert und Implementierungsdetails vorgeschlagen. Meine Web-Entwicklungs-Erfahrung war entscheidend, um Vorschläge einschätzen zu können.
+- **Zentrale Erkenntnis:** Garbage in, garbage out. Vorwissen macht einen großen Unterschied – einfache Sachen funktionieren schnell, aber je spezifischer die Anforderungen und je größer die Codebase, desto schwieriger wird es für Laien zu managen.
+- **Offene Frage:** Glaubst du, jemand ohne deine Web-Erfahrung hätte ein ähnliches Ergebnis erreichen können?
 
-### Weiterentwicklung
+**Keywords:** #Cursor #KI-Programmierung #WebDevelopment #Workflow #Lernen
 
-- **Workflow-Änderung:** Bei zukünftigen Projekten: Früher committen, kleinere Schritte. Die Git-History ist wertvolle Dokumentation des Entwicklungsprozesses.
-- **Offene Fragen:** Wie verändert sich meine Programmier-Praxis langfristig durch KI-Assistenz? Verkümmern bestimmte Fähigkeiten oder entwickeln sich neue? Was passiert, wenn die KI besseren Code schreibt als ich selbst könnte?
-- **Nächste Schritte:** Mehr Journal-Einträge hinzufügen. Kleine Features polieren. Eventuell 3D-Viewer für Kepler-Modelle integrieren.
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Cursor, Version Control via Github, und größtenteils die Modelle von Anthropic.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte sowohl die Website erstellen als auch Cursor ausprobieren, da es sich interessant für mich anhörte und ich bereits Webentwicklungserfahrung habe, aber nur sehr limitiert und es würde sehr lange dauern, wenn ich es ganz alleine mache.</p></div>
+</div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht.
+
+Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p><em>(Nicht im Interview abgedeckt)</em></p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.</p></div>
+</div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast geschrieben, dass deine bestehende Web-Erfahrung entscheidend war, um KI-Vorschläge einzuschätzen. Glaubst du, jemand ohne diese Erfahrung hätte ein ähnliches Ergebnis erreichen können?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also ich glaube, es hängt sehr stark von der Person ab. Ich glaube, Leute, die gar keinen Hintergrund haben und auch nicht so viel Geduld, würden schnell an ihre Grenzen kommen. Also, es ist nicht so, dass man einfach alles an die KI geben kann. Garbage in, garbage out. Man muss schon ein bisschen mitlernen, obwohl es schon Ergebnisse gibt, die mit relativ viel wenig Arbeit gut sein können. Ich denke, wenn jemand einfach nur sagt: "Hey, kannst du mir einen Taschenrechner programmieren? Vielleicht in einer bestimmten Farbe, die mir gefällt?" – dann würde das schnell funktionieren, einfach nur weil es so viel vorhandener Code für das Programmieren von Taschenrechnern gibt.
+
+Aber umso spezifischer die Anforderungen werden, umso länger der Chat und umso größer die codebase, desto schwieriger wird es das ganze für einen Laien zu managen.</p></div>
+</div>
+</div>

@@ -88,27 +88,114 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 
 ## Reflexion
 
-<details>
-<summary>ℹ️ Interview-Protokoll</summary>
+Marble hat Spaß gemacht. Es ging schnell, war browserbasiert. Ich wollte zum einen das Tool testen – nachdem die Gesichter ja nicht funktioniert haben, also Kepler als Charakter nicht funktioniert hat im ComfyUI-Workflow, hatte mich interessiert, ob wir vielleicht Hintergrundwelten generieren könnten.
 
-**Tools:** Marble (marble.worldlabs.ai)
-**Intention:** Tool testen – Alternative für Hintergründe/Welten, nachdem Kepler als Charakter in ComfyUI nicht funktionierte
-**Workflow:** Experimentell – Gaussian Splats bekannt, beeindruckt von Geschwindigkeit
-**Autorschaft:** Jemand der experimentiert und ein Produkt ausprobiert
-**Iteration:** Spaß, schnell, interessant für Zukunft – generative Möglichkeiten interessanter als Rekonstruktion
-**Scheitern:** Personen gruselig/Uncanny Valley, aber keine hohen Ansprüche
-**Ästhetik:** Noch nicht entwickelt – neues Tool im Hinterkopf
+Das Interessante war, wie schnell das jetzt ging, aus einem einzigen Bild einen übereinstimmenden Splat zu erzeugen. Ich war aber jetzt nicht so überzeugt davon, dass ich es sicher verwenden werde. Das freiere Ergebnis war nicht hundertprozentig überzeugend – und als ich Personen drin hatte mit Spiegelungen, waren die Personen gruselig und Uncanny-Valley-mäßig verzerrt.
 
-**Skill-Version:** v2 (Januar 2026)
+### Kontext
 
-</details>
+- **Tools:** Marble (marble.worldlabs.ai)
+- **Intention:** Tool testen – Alternative für Hintergründe/Welten, nachdem Kepler als Charakter in ComfyUI nicht funktionierte
 
-Marble hat Spaß gemacht. Es ging schnell, war browserbasiert, kein lokaler Installationshorror wie bei ComfyUI. Nachdem Kepler als Charakter in ComfyUI nicht funktioniert hatte, wollte ich schauen, ob wir wenigstens Hintergründe generieren könnten.
+### Die 5 Forschungsfragen
 
-Das Interessante: Als ich ein Foto aus einem Soviet-inspirierten Café hochgeladen habe – mit Spiegelungen – hat das System den Spiegel erkannt und die gespiegelten Personen in den 3D-Raum gebracht. Das Ergebnis war gruselig, Uncanny Valley, verzerrt. Aber irgendwie auch faszinierend.
+- **Workflow:** Experimentell mit Marble. Gaussian Splats waren mir als Konzept bekannt – beeindruckt von der Geschwindigkeit, aber nicht überzeugt genug für sicheren Einsatz.
+- **Autorschaft:** Einfach nur jemand, der experimentiert und ein Produkt ausprobiert.
+- **Iteration:** Das Ausprobieren machte Spaß, es ging schnell, und das könnte für die Zukunft interessant sein. Aber eher die generativen Möglichkeiten – sich komplette Welten ausdenken anstatt existierende Welten 3D zu machen.
+- **Scheitern:** Das freiere Ergebnis war nicht hundertprozentig überzeugend. Personen mit Spiegelungen waren gruselig und Uncanny-Valley-mäßig verzerrt. Aber keine großen Ansprüche – nächstes Mal Input-Bilder ohne Personen oder komplexe Spiegelungen.
+- **Ästhetik:** Noch nicht entwickelt – neues Tool im Hinterkopf behalten. Aber ja, man könnte tatsächlich visuell damit spielen.
 
-Jetzt, wo ich darüber nachdenke: Man könnte mit diesen "Fehlern" absichtlich spielen. Ich könnte sogar 3D-gerenderte Bilder in einen Gaussian Splat Generator eingeben – das wäre ein interessanter Workflow. Das kommt auf die ROADMAP.
+### Synthese
 
-Für finale Produktion würde ich Blender oder Unreal nehmen. Aber als schnelles Prototyping-Tool – warum nicht?
+- **Zentrale Erkenntnis:** Man könnte mit diesen "Fehlern" absichtlich als ästhetisches Mittel spielen. Auch 3D gerenderte Bilder in einen Gaussian Splat Generator eingeben – das wäre ein interessanter Workflow.
+- **Offene Frage:** Wie einfach ist es, das wirklich im 3D-Raum umzusetzen? Ich bin eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.
 
 **Keywords:** #Marble #GaussianSplats #3D #Prototyping #UncannyValley #Weltenbau
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Marble (marble.worldlabs.ai).</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte zum einen das Tool testen, ich hatte es gerade gesehen und da die Gesichter ja nicht funktioniert haben, also Kepler als Charakter nicht funktioniert hat im Comp-V-Wire-Workflow, hatte mich interessiert, ob wir vielleicht Hintergrundwelten generieren könnten.</p></div>
+</div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich habe hier mit Marble erstmal experimentiert. Ich kannte bereits Gaussian Splats als Konzept und ich fand es interessant, wie schnell das jetzt ging, aus einem einzigen Bild einen übereinstimmenden Splat zu erzeugen.
+
+Ich war aber jetzt nicht so überzeugt davon, dass ich es sicher verwenden werde.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Einfach nur jemand, der experimentiert und ein Produkt ausprobiert.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Das Ausprobieren machte Spaß, es ging schnell, und das könnte für die Zukunft interessant sein.
+
+Aber mich interessieren dann eher die generativen Möglichkeiten. Also, wirklich, sich komplette Welten ausdenken anstatt existierende Welten 3D zu machen. Obwohl ich, wenn ich jetzt darüber nachdenke, mir gar nicht mehr so sicher bin. Es kann schon interessante Use Cases haben...</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nicht unbedingt, außer dass das freiere, letzte Ergebnis nicht hundertprozentig überzeugend ist, aber schon mal interessant.
+
+Und dass, als ich Personen drin hatte mit Spiegelungen und so, dass die Personen gruselig und Uncanny-Valley-mäßig verzerrt waren.
+
+Aber ich hatte jetzt gar keine Ansprüche an das Tool und würde Input-Bilder ohne Personen oder komplexe Spiegelungen nehmen das nächste Mal.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Noch nicht, also ich habe nur im Hinterkopf ein neues Tool, das ich verwenden könnte.</p></div>
+</div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Im Eintrag steht, dass das System das Spiegelbild als Spiegel erkannt und die gespiegelten Personen in den 3D-Raum gebracht hat – faszinierend und gruselig zugleich. Könntest du dir vorstellen, solche 'Fehler' absichtlich als ästhetisches Mittel zu nutzen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Jetzt, wo du es sagst, ja, also man könnte tatsächlich wirklich damit visuell spielen. Ich weiß nur nicht, wie einfach es ist, das wirklich jetzt im 3D-Raum umzusetzen.
+
+Klar, wenn ich ein reales Bild von ihm nehme und dann ein Gaussian-Splat erzeuge, könnte das interessant sein. Aber ich bin ja eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.
+
+Aber es ist auf jeden Fall ein cooler Ansatz. Wobei, da fällt mir gerade ein, ich könnte auch 3D gerenderte Bilder in ein Gaussian Splat Generator eingeben.</p></div>
+</div>
+</div>

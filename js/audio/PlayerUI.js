@@ -83,7 +83,7 @@ export class PlayerUI {
     if (this.elements.playPauseButton) {
       this.elements.playPauseButton.classList.add('playing');
     }
-    this.changeMarqueeSpeed(7); // Fast when playing
+    this.setMarqueePlayState(true); // Start scrolling when playing
   }
 
   /**
@@ -93,7 +93,7 @@ export class PlayerUI {
     if (this.elements.playPauseButton) {
       this.elements.playPauseButton.classList.remove('playing');
     }
-    this.changeMarqueeSpeed(40); // Slow when paused
+    this.setMarqueePlayState(false); // Stop scrolling when paused
   }
 
   /**
@@ -210,90 +210,15 @@ export class PlayerUI {
   }
 
   /**
-   * Change marquee animation speed
-   * @param {number} newDuration - New animation duration in seconds
+   * Set marquee animation play state
+   * @param {boolean} playing - Whether the animation should be running
    */
-  changeMarqueeSpeed(newDuration) {
+  setMarqueePlayState(playing) {
     const marqueeContent = this.elements.marqueeContent;
     if (!marqueeContent) return;
-    
-    // Step 1: Read current position
-    const computedStyle = window.getComputedStyle(marqueeContent);
-    const transform = computedStyle.transform;
-    
-    let currentTranslateX = 0;
-    if (transform && transform !== 'none') {
-      const matrix = transform.match(/matrix\(([^)]+)\)/);
-      if (matrix) {
-        const values = matrix[1].split(',');
-        currentTranslateX = parseFloat(values[4]) || 0;
-      }
-    }
-    
-    // Step 2: Calculate progress
-    const totalWidth = marqueeContent.scrollWidth;
-    const oneCopyWidth = totalWidth / 2;
-    const maxTranslate = -oneCopyWidth;
-    
-    let progress = 0;
-    if (Math.abs(maxTranslate) > 0) {
-      progress = (Math.abs(currentTranslateX) / Math.abs(maxTranslate)) % 1;
-    }
-    
-    // Step 3: Calculate negative delay for seamless transition
-    const newDelay = -(progress * newDuration);
-    
-    // Step 4: Set position manually BEFORE removing animation
-    marqueeContent.style.transform = `translateX(${currentTranslateX}px)`;
-    
-    // Step 5: Remove animation
-    marqueeContent.style.animation = 'none';
-    
-    // Step 6: Wait frames, then restart with new duration
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        // Step 7: Start animation with new duration and negative delay
-        marqueeContent.style.animation = `marquee ${newDuration}s linear ${newDelay}s infinite`;
-        
-        // Step 8: Check position and remove manual transform
-        let checkCount = 0;
-        const maxChecks = 20;
-        
-        const checkPosition = () => {
-          checkCount++;
-          const newTransform = window.getComputedStyle(marqueeContent).transform;
-          let newTranslateX = 0;
-          if (newTransform && newTransform !== 'none') {
-            const matrix = newTransform.match(/matrix\(([^)]+)\)/);
-            if (matrix) {
-              const values = matrix[1].split(',');
-              newTranslateX = parseFloat(values[4]) || 0;
-            }
-          }
-          
-          const expectedTranslateX = -(progress * oneCopyWidth);
-          const diff = Math.abs(newTranslateX - expectedTranslateX);
-          
-          if (diff < 0.5 || checkCount >= maxChecks) {
-            if (diff < 0.5) {
-              marqueeContent.style.transform = '';
-            } else {
-              setTimeout(() => {
-                marqueeContent.style.transform = '';
-              }, 200);
-            }
-          } else {
-            requestAnimationFrame(checkPosition);
-          }
-        };
-        
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            requestAnimationFrame(checkPosition);
-          });
-        });
-      });
-    });
+
+    // Use CSS animation-play-state to pause/resume smoothly
+    marqueeContent.style.animationPlayState = playing ? 'running' : 'paused';
   }
 
   /**

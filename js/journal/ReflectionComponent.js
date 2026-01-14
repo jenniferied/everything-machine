@@ -1,32 +1,28 @@
 /**
  * ReflectionComponent
  * Single responsibility: Render reflection sections as structured widgets
- * Creates HTML for autoethnographic reflection following Ellis et al. (2011) and Schön (1983)
+ * Based on 5 research sub-questions (Workflow, Autorschaft, Iteration, Scheitern, Ästhetik)
  */
 export class ReflectionComponent {
   /**
-   * Fixed questions for the reflection widget (hardcoded)
-   * These follow the autoethnographic methodology
+   * Questions based on the 5 research sub-questions
+   * Main research question: "Wie verändert der Einsatz generativer KI-Werkzeuge meinen kreativen Arbeitsprozess?"
    */
   static QUESTIONS = {
-    context: {
-      tool: 'Tool/Workflow',
+    kontext: {
+      tools: 'Tools',
       intention: 'Intention'
     },
-    process: {
-      input: 'Input',
-      iterations: 'Iterationen',
-      output: 'Output'
+    forschung: {
+      workflow: 'Workflow',
+      autorschaft: 'Autorschaft',
+      iteration: 'Iteration',
+      scheitern: 'Scheitern',
+      aesthetik: 'Ästhetik'
     },
-    insights: {
-      surprise: 'Überraschungen',
-      errorFeature: 'Fehler als Feature',
-      myRole: 'Meine Rolle vs. KI'
-    },
-    development: {
-      workflowChange: 'Workflow-Änderung',
-      openQuestions: 'Offene Fragen',
-      nextSteps: 'Nächste Schritte'
+    synthese: {
+      erkenntnis: 'Zentrale Erkenntnis',
+      offen: 'Offene Frage'
     }
   };
 
@@ -34,10 +30,9 @@ export class ReflectionComponent {
    * Section titles (German)
    */
   static SECTIONS = {
-    context: 'Kontext',
-    process: 'Prozess',
-    insights: 'Erkenntnisse',
-    development: 'Weiterentwicklung'
+    kontext: 'Kontext',
+    forschung: 'Die 5 Forschungsfragen',
+    synthese: 'Synthese'
   };
 
   /**
@@ -73,22 +68,37 @@ export class ReflectionComponent {
 
   /**
    * Parse reflection content into structured data
+   * New format based on 5 research sub-questions + interview transcript
    * @param {string} reflectionMarkdown - Markdown starting with ## Reflexion
    * @returns {Object} Structured reflection data
    */
   static parseReflectionContent(reflectionMarkdown) {
     const data = {
-      context: { tool: '', intention: '' },
-      process: { input: '', iterations: '', output: '' },
-      insights: { surprise: '', errorFeature: '', myRole: '' },
-      development: { workflowChange: '', openQuestions: '', nextSteps: '' },
-      keywords: []
+      kontext: { tools: '', intention: '' },
+      forschung: { workflow: '', autorschaft: '', iteration: '', scheitern: '', aesthetik: '' },
+      synthese: { erkenntnis: '', offen: '' },
+      keywords: [],
+      transcript: [],  // Chat transcript array
+      summary: ''      // Narrative summary text
     };
 
-    // Extract keywords (hashtags) - can be after **Keywords:** or standalone
+    // Extract keywords (hashtags)
     const keywordMatches = reflectionMarkdown.match(/#([\w-]+)/g);
     if (keywordMatches) {
       data.keywords = keywordMatches.map(k => k.substring(1));
+    }
+
+    // Extract chat transcript from <div class="interview-transcript">
+    // Use greedy match to capture all nested divs until the final closing tag
+    const transcriptMatch = reflectionMarkdown.match(/<div class="interview-transcript">([\s\S]*)<\/div>\s*$/);
+    if (transcriptMatch) {
+      data.transcript = this.parseTranscript(transcriptMatch[1]);
+    }
+
+    // Extract summary (text between ## Reflexion and first ### or **Keywords:**)
+    const summaryMatch = reflectionMarkdown.match(/## Reflexion\s*\n+([\s\S]*?)(?=\n###|\n\*\*Keywords|\n<div class="interview)/);
+    if (summaryMatch) {
+      data.summary = summaryMatch[1].trim();
     }
 
     // Parse sections
@@ -100,46 +110,35 @@ export class ReflectionComponent {
     for (const line of lines) {
       const trimmed = line.trim();
 
-      // Skip ## Reflexion header, intro text, and Keywords line
+      // Skip headers and special lines
       if (trimmed.startsWith('## Reflexion') ||
-          trimmed.startsWith('*Dieser Abschnitt') ||
           trimmed.startsWith('**Keywords:**') ||
-          trimmed.startsWith('*Referenzen:')) {
+          trimmed.startsWith('<div') ||
+          trimmed.startsWith('</div')) {
         continue;
       }
 
-      // Detect main sections (### Kontext, ### Prozess, etc.)
-      const sectionMatch = trimmed.match(/^### (Kontext|Prozess|Erkenntnisse|Weiterentwicklung)\s*$/);
+      // Detect main sections (### Kontext, ### Die 5 Forschungsfragen, ### Synthese)
+      const sectionMatch = trimmed.match(/^### (Kontext|Die 5 Forschungsfragen|Synthese)\s*$/);
       if (sectionMatch) {
-        // Save previous field content
         if (currentField && currentContent.length > 0) {
           this.setFieldValue(data, currentMainSection, currentField, currentContent.join(' '));
         }
-
         currentMainSection = this.getSectionKey(sectionMatch[1]);
         currentField = null;
         currentContent = [];
         continue;
       }
 
-      // Detect field labels (- **Tool/Workflow:** ...)
+      // Detect field labels (- **Tools:** ...)
       const fieldMatch = trimmed.match(/^-\s*\*\*([^:]+):\*\*\s*(.*)$/);
       if (fieldMatch) {
-        // Save previous field content
         if (currentField && currentContent.length > 0) {
           this.setFieldValue(data, currentMainSection, currentField, currentContent.join(' '));
         }
-
         const fieldName = fieldMatch[1].trim();
         currentField = this.getFieldKey(fieldName);
         currentContent = fieldMatch[2].trim() ? [fieldMatch[2].trim()] : [];
-        continue;
-      }
-
-      // Detect sub-items (indented with -)
-      const subItemMatch = trimmed.match(/^\s*-\s+(.+)$/);
-      if (subItemMatch && currentField) {
-        currentContent.push(subItemMatch[1].trim());
         continue;
       }
 
@@ -149,7 +148,6 @@ export class ReflectionComponent {
       }
     }
 
-    // Save last field content
     if (currentField && currentContent.length > 0) {
       this.setFieldValue(data, currentMainSection, currentField, currentContent.join(' '));
     }
@@ -158,14 +156,31 @@ export class ReflectionComponent {
   }
 
   /**
+   * Parse interview transcript HTML into array of messages
+   */
+  static parseTranscript(html) {
+    const messages = [];
+    // Match the full structure: chat-message -> chat-avatar -> chat-bubble with p tag
+    const messageRegex = /<div class="chat-message (claude|user)">\s*<div class="chat-avatar">[\s\S]*?<\/div>\s*<div class="chat-bubble"><p>([\s\S]*?)<\/p><\/div>\s*<\/div>/g;
+    let match;
+
+    while ((match = messageRegex.exec(html)) !== null) {
+      messages.push({
+        role: match[1],
+        content: match[2].trim()
+      });
+    }
+    return messages;
+  }
+
+  /**
    * Get section key from German name
    */
   static getSectionKey(germanName) {
     const mapping = {
-      'Kontext': 'context',
-      'Prozess': 'process',
-      'Erkenntnisse': 'insights',
-      'Weiterentwicklung': 'development'
+      'Kontext': 'kontext',
+      'Die 5 Forschungsfragen': 'forschung',
+      'Synthese': 'synthese'
     };
     return mapping[germanName] || null;
   }
@@ -175,17 +190,18 @@ export class ReflectionComponent {
    */
   static getFieldKey(label) {
     const mapping = {
-      'Tool/Workflow': 'tool',
+      // Kontext
+      'Tools': 'tools',
       'Intention': 'intention',
-      'Input': 'input',
-      'Iterationen': 'iterations',
-      'Output': 'output',
-      'Überraschungen': 'surprise',
-      'Fehler als Feature': 'errorFeature',
-      'Meine Rolle vs. KI': 'myRole',
-      'Workflow-Änderung': 'workflowChange',
-      'Offene Fragen': 'openQuestions',
-      'Nächste Schritte': 'nextSteps'
+      // Forschungsfragen
+      'Workflow': 'workflow',
+      'Autorschaft': 'autorschaft',
+      'Iteration': 'iteration',
+      'Scheitern': 'scheitern',
+      'Ästhetik': 'aesthetik',
+      // Synthese
+      'Zentrale Erkenntnis': 'erkenntnis',
+      'Offene Frage': 'offen'
     };
     return mapping[label] || null;
   }
@@ -208,7 +224,43 @@ export class ReflectionComponent {
     if (!reflectionData) return '';
 
     const id = `reflection-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    const infoId = `reflection-info-${id}`;
+    const transcriptId = `transcript-${id}`;
+    const infoId = `info-${id}`;
+
+    // Build info box HTML with methodology explanation
+    const infoBoxHTML = `
+      <div class="reflection-info-box" id="${infoId}">
+        <div class="reflection-info-content">
+          <p><strong>Methodischer Rahmen</strong></p>
+          <p>Diese Reflexionen folgen dem Ansatz der <em>Autoethnographie</em> (Ellis et al., 2011) –
+          einer Forschungsmethode, die persönliche Erfahrungen systematisch analysiert,
+          um kulturelle Praktiken zu verstehen. Die Struktur basiert auf <em>Reflection-in-Action</em> (Schön, 1983).</p>
+
+          <p><strong>Die Forschungsfrage</strong></p>
+          <p><em>„Wie verändert der Einsatz generativer KI-Werkzeuge meinen kreativen Arbeitsprozess?"</em></p>
+
+          <p><strong>Interview-Prozess</strong></p>
+          <p>Nach jeder dokumentierten Session wird ein strukturiertes Interview mit Claude Code durchgeführt.
+          Der Prozess folgt einem definierten Skill (<code>/reflection-interview</code>), der dieselben Fragen
+          in derselben Reihenfolge stellt, um Vergleichbarkeit zu gewährleisten.</p>
+
+          <p><strong>Die 5 Unterfragen</strong></p>
+          <ol class="reflection-subquestions">
+            <li><strong>Workflow:</strong> Welche neuen Arbeitsschritte entstehen? Welche fallen weg?</li>
+            <li><strong>Autorschaft:</strong> Wer ist Autor:in? Wie verschiebt sich meine Rolle?</li>
+            <li><strong>Iteration:</strong> Wie beeinflusst die Unmittelbarkeit von KI-Output meinen Prozess?</li>
+            <li><strong>Scheitern:</strong> Was lerne ich aus fehlgeschlagenen Experimenten?</li>
+            <li><strong>Ästhetik:</strong> Entwickelt sich eine eigene visuelle Sprache?</li>
+          </ol>
+          <p>Zusätzlich wird eine kontextuelle Frage basierend auf dem spezifischen Journal-Eintrag generiert.</p>
+
+          <div class="reflection-info-refs">
+            <span>Ellis, C., Adams, T. E., & Bochner, A. P. (2011). Autoethnography: An Overview.</span>
+            <span>Schön, D. A. (1983). The Reflective Practitioner.</span>
+          </div>
+        </div>
+      </div>
+    `;
 
     // Build keywords HTML
     const keywordsHTML = reflectionData.keywords.length > 0
@@ -217,10 +269,18 @@ export class ReflectionComponent {
         </div>`
       : '';
 
+    // Build summary HTML (narrative text)
+    const summaryHTML = reflectionData.summary
+      ? `<div class="reflection-summary">${this.formatAnswer(reflectionData.summary)}</div>`
+      : '';
+
     // Build sections HTML
     const sectionsHTML = Object.entries(this.SECTIONS).map(([sectionKey, sectionTitle]) => {
       const sectionData = reflectionData[sectionKey];
+      if (!sectionData) return '';
+
       const questions = this.QUESTIONS[sectionKey];
+      if (!questions) return '';
 
       const fieldsHTML = Object.entries(questions).map(([fieldKey, fieldLabel]) => {
         const value = sectionData[fieldKey] || '';
@@ -244,53 +304,62 @@ export class ReflectionComponent {
       `;
     }).filter(Boolean).join('');
 
-    // Info box content about the autoethnographic methodology
-    const infoBoxHTML = `
-      <div class="reflection-info-box" id="${infoId}">
-        <div class="reflection-info-content">
-          <h4>Über diesen Reflexionsprozess</h4>
-
-          <p><strong>Autoethnografie</strong> ist eine qualitative Forschungsmethode, die persönliche Erfahrungen systematisch dokumentiert und analysiert. Sie verbindet das Subjektive mit dem Kulturellen und macht implizites Wissen explizit (Ellis, Adams & Bochner, 2011).</p>
-
-          <p><strong>Reflection-in-Action</strong> nach Donald Schön (1983) beschreibt, wie Praktiker*innen während des Arbeitens reflektieren – ein kontinuierlicher Dialog zwischen Handeln und Nachdenken.</p>
-
-          <h4>Mein Workflow</h4>
-          <ol>
-            <li><strong>Dokumentieren:</strong> Ich schreibe den Journal-Eintrag während oder direkt nach der kreativen Arbeit.</li>
-            <li><strong>Reflektieren mit KI:</strong> Nach dem Schreiben führe ich eine Konversation mit der KI (Claude). Sie liest den Artikel, stellt Rückfragen und hilft mir, die strukturierten Reflexionsfragen zu beantworten.</li>
-            <li><strong>Verdichten:</strong> Die KI fasst unsere Konversation in diesem standardisierten Format zusammen – mit den immer gleichen Fragen, um Vergleichbarkeit über alle Einträge hinweg zu gewährleisten.</li>
-          </ol>
-
-          <p>Dieser Prozess selbst ist Teil meiner Artistic Research: Die KI wird zum Sparringspartner für die Selbstreflexion, nicht zum Autor. Die Antworten entstehen im Dialog – die KI strukturiert und verdichtet, aber die Erkenntnisse kommen aus meiner Erfahrung.</p>
-
-          <div class="reflection-info-sources">
-            <strong>Quellen:</strong><br>
-            Ellis, C., Adams, T. E., & Bochner, A. P. (2011). Autoethnography: An Overview. <em>Historical Social Research</em>, 36(4), 273–290.<br>
-            Schön, D. A. (1983). <em>The Reflective Practitioner: How Professionals Think in Action</em>. Basic Books.
-          </div>
-        </div>
-      </div>
-    `;
+    // Build transcript dropdown HTML
+    const transcriptHTML = reflectionData.transcript && reflectionData.transcript.length > 0
+      ? this.createTranscriptDropdown(reflectionData.transcript, transcriptId)
+      : '';
 
     return `
       <div class="reflection-widget" id="${id}">
         <div class="reflection-header">
           <div class="reflection-icon">◈</div>
           <div class="reflection-title">Reflexion</div>
-          <div class="reflection-subtitle">Autoethnografische Dokumentation</div>
+          <div class="reflection-subtitle">Interview-basierte Dokumentation</div>
           <button class="reflection-info-toggle" onclick="toggleReflectionInfo('${infoId}')" title="Was ist das?">
             <span class="reflection-info-icon">?</span>
           </button>
         </div>
         ${infoBoxHTML}
         ${keywordsHTML}
+        ${summaryHTML}
         <div class="reflection-content">
           ${sectionsHTML}
         </div>
+        ${transcriptHTML}
         <div class="reflection-footer">
-          <span class="reflection-reference">Ellis et al. (2011) · Schön (1983)</span>
+          <span class="reflection-reference">Basierend auf der Forschungsfrage und 5 Unterfragen · Interview via Claude Code</span>
         </div>
       </div>
+    `;
+  }
+
+  /**
+   * Create transcript dropdown with chat bubbles
+   */
+  static createTranscriptDropdown(transcript, id) {
+    const messagesHTML = transcript.map(msg => {
+      const isUser = msg.role === 'user';
+      const avatarSrc = isUser ? '/assets/icons/user.png' : '/assets/icons/claude.svg';
+      const avatarAlt = isUser ? 'Jennifer' : 'Claude';
+
+      return `
+        <div class="transcript-message ${msg.role}">
+          <img class="transcript-avatar" src="${avatarSrc}" alt="${avatarAlt}">
+          <div class="transcript-bubble">${msg.content}</div>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <details class="reflection-transcript" id="${id}">
+        <summary class="transcript-toggle">
+          <span class="transcript-icon">💬</span>
+          <span>Interview-Transkript anzeigen</span>
+        </summary>
+        <div class="transcript-content">
+          ${messagesHTML}
+        </div>
+      </details>
     `;
   }
 

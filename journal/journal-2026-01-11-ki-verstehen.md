@@ -334,22 +334,110 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 
 ## Reflexion
 
-<div class="chat-intro">
-Ich bin zu Hause angekommen und fühle mich... auf der einen Seite neugierig und etwas gesicherter in meinem Wissen. Ich habe ja diese Nachfragen gestellt, nachdem ich mich schon mehrfach an verschiedenen Zeitpunkten in den letzten Monaten und Jahren immer mal wieder mit KI beschäftigt habe. Das Gespräch hat mein Wissen gefestigt.
+Ich bin zu Hause angekommen und fühle mich... neugierig und etwas gesicherter in meinem Wissen. Das Gespräch hat mein vorhandenes Wissen gefestigt – ich habe mich an Konzepte und historische Ereignisse erinnert, die ich vergessen hatte.
+
+Aber gleichzeitig: Es könnte die Gefahr geben, dass ich der Illusion unterliege, etwas zu verstehen, obwohl ich es vielleicht nicht tue. Die Fluency Illusion – du hast das Gefühl, etwas verstanden zu haben, weil du es gehört hast. Trügerisch.
+
+### Kontext
+
+- **Tools:** Claude mit Spracheingabe (Autofahrt)
+- **Intention:** KI-Grundlagen verstehen, Lücken schließen, Lernweg planen
+
+### Die 5 Forschungsfragen
+
+- **Workflow:** Neuer Lernmodus – personalisiert, Dialog statt Videos oder Lesen.
+- **Autorschaft:** Die Fragende – ich habe die Richtung bestimmt, Claude hat erklärt.
+- **Iteration:** Wissen gefestigt, an vergessene Konzepte erinnert – aber die Gefahr der Fluency Illusion bleibt.
+- **Scheitern:** Nicht ganz flüssig (Bugs bei der Spracheingabe), von der Autofahrt abgelenkt, würde es so nicht wiederholen.
+- **Ästhetik:** Würde öfter im Dialog mit KI lernen – das Format hat funktioniert.
+
+### Synthese
+
+- **Zentrale Erkenntnis:** Die Theorie ist jetzt da, irgendwo im Hinterkopf. Sie wird erst real, wenn ich sie anwende.
+- **Offene Frage:** Wie kann ich testen, ob ich wirklich verstanden habe – und nicht nur der Fluency Illusion unterliege?
+
+**Keywords:** #Lernen #Dialog #FluencyIllusion #KI-Geschichte #Autofahrt
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Claude (Spracheingabe).</p></div>
 </div>
 
-<div class="chat-intro">
-Aber gleichzeitig habe ich das Gefühl, dass es ein Riesenfeld ist. Ich will mehr Gespräche führen, um die Theorie zu vertiefen. Ich will mit anderen darüber reden – ich habe schon Freunde damit genervt und versucht, meinen Eltern ein bisschen mehr zu erklären. Ich will es wirklich lernen und verstehen, ohne jetzt Dinge ausrechnen zu müssen.
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>KI-Grundlagen verstehen, Lücken schließen, Lernweg planen.</p></div>
 </div>
 
-<div class="chat-intro">
-Es gibt diese Studie von Bastani et al. (2024), die zeigt, dass Studierende, die mit KI-Unterstützung lernen, das Material weniger gut behalten. Die Information fließt durch dich hindurch, aber sie bleibt nicht hängen. Die Fluency Illusion – du hast das Gefühl, etwas verstanden zu haben, weil du es gehört hast, aber das ist trügerisch.
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Personalisiert, Neuer Lernmodus.</p></div>
 </div>
 
-<div class="chat-intro">
-Trotzdem: Durch diese Website und durch die Dialoge, die ich hier darstellen kann, merke ich, dass mir das eigentlich gefällt. Zum Beispiel habe ich mit KI zusammen diese Chat-Bubbles konfiguriert. Das ist noch viel lockerer als eine systematische Literaturrecherche. Mein Feed ist voller Videos zu dem Thema. Und eventuell will ich in Artistic Research tiefer einsteigen – in genau dieses Feld.
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Die Fragende.</p></div>
 </div>
 
-<div class="chat-intro">
-Die Theorie ist jetzt da, irgendwo im Hinterkopf. Aber sie wird erst real, wenn ich sie anwende. Nächster Schritt: Der Lo-Fi Soundtrack. Kreativ anfangen, rückwärts arbeiten, die Theorie sacken lassen.
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Zum einen denke ich, dass ich mein bereits bekanntes Wissen noch einmal gestärkt habe und mich an ein paar Konzepte und historische Ereignisse erinnert habe, die ich schon vergessen hatte.</p>
+  <p>Ich glaube aber, es könnte die Gefahr geben, dass ich der Illusion unterliege, dass ich es verstehe, obwohl ich es vielleicht nicht tue. Aber das Gleiche gilt ja auch, wenn ich mir ein Video anschaue.</p></div>
+</div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es lief noch nicht ganz so flüssig. Ich glaube, die Implementation von ChatGPT ist ein bisschen besser.</p>
+  <p>Da wurde ich ein bisschen von der Autofahrt abgelenkt, ich würde das vielleicht nicht unbedingt noch einmal wiederholen. Wäre es jetzt wie ein Telefonat, dann ja, aber durch die Bugs lieber nicht. Aber sicherlich wird sich noch einiges tun in den nächsten Monaten.</p></div>
+</div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene 'Lern-Sprache' oder Methode entwickelt? <em>(Ästhetik)</em></p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich denke ich würde jetzt öfters im Dialog mit der KI versuchen Dinge zu lernen.</p></div>
+</div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Am Ende des Eintrags hast du geschrieben: 'Die Theorie wird erst real, wenn ich sie anwende. Nächster Schritt: Der Lo-Fi Soundtrack.' – Hast du das inzwischen gemacht?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ja, Suno-Experiment.</p></div>
+</div>
+
 </div>

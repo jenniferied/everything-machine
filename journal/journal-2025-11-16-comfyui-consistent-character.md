@@ -52,27 +52,105 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 
 ## Reflexion
 
-<details>
-<summary>ℹ️ Interview-Protokoll</summary>
+Das war frustrierend. ComfyUI lokal auf meinem M1 MacBook Pro Max 64 GB zu installieren hat ewig gedauert und viele Gigabyte verschlungen. Die Ergebnisse haben nicht das geliefert, was ich wollte – sehr inkonsistent, Prompts haben nicht das erfüllt, was sie sollten.
 
-**Tools:** ComfyUI mit [Mickmumpitz](https://www.youtube.com/@mickmumpitz) Workflow (lokal auf M1 MacBook)
-**Intention:** Album-Cover/Konzeptbilder für Kepler, Konsistenz erreichen, ComfyUI lernen
-**Workflow:** Komplett neuer Workflow – muss wiederkommen um es besser zu verstehen
-**Autorschaft:** Lernende, experimentierend – Netzwerk einer anderen Person verwendet
-**Iteration:** Frustration – lokale Installation dauerte lang, viele Gigabyte, nicht schnell
-**Scheitern:** Inkonsistent, Basketball nicht entfernt, Gesichter in Keplers Maske interpretiert
-**Ästhetik:** Nicht erreicht – Ergebnisse sahen generisch KI-mäßig aus
+Das Hauptproblem war Kepler selbst. Er hat kein sichtbares Gesicht – das ist Teil seines Designs. Aber das System interpretiert hartnäckig Gesichter in seine Maske hinein, selbst mit negativen Prompts. Ich glaube, das wird ein größeres Problem: Die Trainingsdaten enthalten vor allem Gesichter, und das Modell "will" ein Gesicht sehen, wo keines sein soll.
 
-**Skill-Version:** v2 (Januar 2026)
+### Kontext
 
-</details>
+- **Tools:** ComfyUI mit einem Network von Mickmumpitz (lokal auf M1 MacBook Pro Max 64 GB)
+- **Intention:** Album-Cover und Konzeptbilder für Kepler erstellen, Konsistenz erreichen, ComfyUI als Plattform lernen
 
-Das war frustrierend. ComfyUI lokal auf meinem M1 MacBook zu installieren hat ewig gedauert und viele Gigabyte verschlungen. Und dann: Die Ergebnisse haben nicht das geliefert, was ich wollte.
+### Die 5 Forschungsfragen
 
-Das Hauptproblem war Kepler selbst. Er hat kein sichtbares Gesicht – das ist Teil seines Designs. Aber das System interpretiert hartnäckig Gesichter in seine Maske hinein, selbst mit negativen Prompts. Das zeigt mir: Die Trainingsdaten enthalten halt vor allem Gesichter. Und das Modell "will" ein Gesicht sehen, wo keines sein soll.
+- **Workflow:** Komplett neuer Workflow mit ComfyUI. Muss wiederkommen, um es besser zu verstehen – vielleicht nicht mit Kepler als Charakter. Er ist besonders schwierig: kein Mensch per se, Maske statt Gesicht, voxelisiert.
+- **Autorschaft:** Lernende und Experimentierende – ich habe mich an dem Netzwerk einer anderen Person orientiert.
+- **Iteration:** Gar nicht so schnell – lokale Installation auf M1 MacBook, langer Installationsprozess, viele Gigabyte. Frustrierend.
+- **Scheitern:** Sehr inkonsistente Ergebnisse. Der Basketball wurde nicht entfernt. Besonders frustrierend: Gesichter wurden in Keplers Maske interpretiert, auch mit negativen Prompts.
+- **Ästhetik:** Nicht so weit gekommen – die Ergebnisse sahen generisch KI-mäßig aus.
 
-Ich wollte durch KI neue Möglichkeiten schaffen – intuitiv, spaßig, zeitsparend. Aber es zeigt sich: Die Art Directability ist noch nicht da. Es sind keine magischen Tools. Mit einer realistischen oder Anime-Figur hätte es vielleicht funktioniert. Aber Kepler ist eben Kepler.
+### Synthese
 
-Offen bleibt: Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
+- **Zentrale Erkenntnis:** Es ist frustrierend, aber am Ende ein technisches Problem. Die Art Directability ist noch nicht da. Es sind keine magischen Tools – für viele fühlt es sich beim ersten Mal mit ChatGPT so an, aber es sind einfach Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Mit einer realistischen, Anime- oder Cartoon-Figur hätte es besser funktioniert. Aber Kepler hat kein sichtbares Gesicht, und die Trainingsdaten enthalten Gesichter – deswegen bleiben sie hartnäckig dort.
+- **Offene Frage:** Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
 
 **Keywords:** #ComfyUI #Flux #Konsistenz #Frustration #Kepler #ArtDirectability
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>ComfyUI mit einem Network von Mickmumpitz (Füge einen Link zu seinem YT Channel hinzu).</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte schauen, ob ich Album-Cover- oder Konzeptbilder erstellen konnte von Kepler. Mir war aber wichtig, dass eine Konsistenz besteht und es ästhetisch aussieht. Ich war auch etwas von dem ComfyUI Workflow und dem Konzept überfordert, deswegen wollte ich das als Plattform nutzen, um das Ganze zu lernen.</p></div>
+</div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? (Workflow)</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es ist ein komplett neuer Workflow mit ComfyUI zu arbeiten. Ich glaube, ich muss wiederkehren, um das Ganze besser zu verstehen, und vielleicht nicht mit Kepler als Charakter. Denn ich habe gleich gesehen, dass er besonders schwierig ist. Er ist jetzt kein Mensch per se, und sein Stil könnte schwierig zu replizieren sein, da er kein Gesicht hat, eine Maske trägt und in der Version, in der ich sie ihnen zeigen möchte, auch noch voxelized ist.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? (Autorschaft)</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich war Lernende und experimentierte eher als ich das Tool wirklich verwendete. Ich hatte mich ja an dem Netzwerk einer anderen Person orientiert.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? (Iteration)</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war gar nicht so schnell, da ich es tatsächlich lokal auf meinem M1-MacBook Pro Max 64 GB ausprobiert habe. Auch der Prozess, das Ganze zu installieren, hat länger gedauert und hat viele Gigabyte benötigt. Also war es etwas frustrierend.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? (Scheitern)</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war sehr inkonsistent. Die Prompts haben nicht das erfüllt, was sie erfüllen sollten. Der Basketball wurde nicht entfernt, als ich ein Bild mit Basketball eingefügt habe. Besonders frustrierend war, dass Gesichter in Keplers Maske rein interpretiert worden sind. Auch als ich negative Prompts dafür eingefügt habe. Ich glaube, das wird ein größeres Problem.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? (Ästhetik)</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nein, denn so weit bin ich gar nicht erst gekommen in diesem Anlauf. Denn es haben Sachen ja auch nicht funktioniert, und das, was herauskam, sah schon sehr generisch KI-mäßig aus.</p></div>
+</div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast erwähnt, dass das System Gesichter in Keplers Maske interpretiert hat – obwohl er bewusst kein Gesicht haben soll. Wie fühlt es sich an, wenn die KI deine künstlerische Intention so grundlegend 'missversteht'?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es ist einfach frustrierend. Am Ende des Tages ist es ein technisches Problem.</p>
+<p>Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen und auch Zeit einsparen, um Dinge zu kreieren, ohne jetzt mir ganz die Arbeit abzunehmen.</p>
+<p>Aber es zeigt halt, dass wir noch nicht ganz da sind und die Art Directability noch nicht da ist. Und das würde ich mir eben wünschen. Aber es sind halt keine magischen Tools, so wie es sich anfühlt.</p>
+<p>Für viele, wenn sie das erste Mal ChatGPT benutzen, sind es einfach nur Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Es hätte zufällig gut funktionieren können. Es würde viel besser funktionieren, wenn es sich um eine realistische, oder Anime-style, oder Cartoon-style Figur handeln würde. Aber dem ist nicht so. Kepler hat eben kein sichtbares Gesicht, aber viele der Trainingsdaten enthalten Gesichter und deswegen bleiben sie hartnäckig dort.</p></div>
+</div>
+</div>

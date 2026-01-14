@@ -197,13 +197,16 @@ class Application {
    */
   async setupViewers() {
     console.log('[App] setupViewers called');
-    
-    // 3D Viewer setup
+
+    // 3D Viewer setup with lazy loading
     const threeDContainer = document.getElementById('3d-viewer-container');
     console.log('[App] 3D viewer container found:', !!threeDContainer);
-    
+
     if (threeDContainer) {
-      console.log('[App] Creating ThreeDViewer...');
+      // Show placeholder until viewer loads
+      this.showViewerPlaceholder(threeDContainer, '3D Viewer');
+
+      // Create viewer instance (but don't setup yet)
       const threeDViewer = new ThreeDViewer(
         threeDContainer,
         {
@@ -215,15 +218,51 @@ class Application {
         this.scriptLoader,
         this.featureDetector
       );
-      
+
       this.viewers.set('3d-viewer', threeDViewer);
-      
-      // Setup viewer immediately (controls will be visible)
-      console.log('[App] Calling threeDViewer.setup()...');
-      threeDViewer.setup().then(() => {
-        console.log('[App] ThreeDViewer setup complete');
-      }).catch(err => {
-        console.error('[App] ThreeDViewer setup failed:', err);
+
+      // Lazy load: Only setup when visible in viewport AND on overview page
+      const initViewer = async () => {
+        // Check if we're on the overview page
+        const overviewPage = document.getElementById('page-overview');
+        const isOnOverview = overviewPage && overviewPage.classList.contains('active');
+
+        if (!isOnOverview) {
+          console.log('[App] 3D viewer: Not on overview page, deferring load');
+          return false;
+        }
+
+        console.log('[App] 3D viewer: Initializing (viewport visible + overview page)');
+        try {
+          await threeDViewer.setup();
+          console.log('[App] ThreeDViewer setup complete');
+          return true;
+        } catch (err) {
+          console.error('[App] ThreeDViewer setup failed:', err);
+          return false;
+        }
+      };
+
+      // Wait for viewport visibility, then check page
+      threeDViewer.waitForViewport(0.1).then(() => {
+        initViewer();
+      });
+
+      // Also listen for page changes - load if navigating TO overview
+      this.eventBus.on('nav:pageChanged', (data) => {
+        if (data.pageId === 'overview' && !threeDViewer.isInitialized) {
+          // Check if container is visible
+          if (threeDViewer.isInViewport()) {
+            initViewer();
+          } else {
+            // Wait for it to become visible
+            threeDViewer.waitForViewport(0.1).then(() => {
+              if (!threeDViewer.isInitialized) {
+                initViewer();
+              }
+            });
+          }
+        }
       });
     }
     
@@ -601,6 +640,49 @@ class Application {
   }
 
   /**
+   * Show placeholder for lazy-loaded viewer
+   * @param {HTMLElement} container - Viewer container element
+   * @param {string} label - Label for the placeholder
+   */
+  showViewerPlaceholder(container, label = 'Viewer') {
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="viewer-placeholder" style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 200px;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        color: #6b7280;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      ">
+        <div style="
+          width: 40px;
+          height: 40px;
+          border: 2px solid #374151;
+          border-top-color: #4ade80;
+          border-radius: 50%;
+          animation: viewer-placeholder-spin 1s linear infinite;
+          margin-bottom: 12px;
+        "></div>
+        <span>${label}</span>
+        <span style="font-size: 10px; opacity: 0.6; margin-top: 4px;">Loading when visible...</span>
+      </div>
+      <style>
+        @keyframes viewer-placeholder-spin {
+          to { transform: rotate(360deg); }
+        }
+      </style>
+    `;
+  }
+
+  /**
    * Start the application (begin animations, etc.)
    */
   start() {
@@ -609,7 +691,7 @@ class Application {
       this.animationController.startAll();
       console.log('[App] Animations started');
     }
-    
+
     this.eventBus.emit('app:started');
   }
 
