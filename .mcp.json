@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "npx",
+      "args": ["-y", "mcp-zotero"],
+      "env": {
+        "ZOTERO_API_KEY": "vrjjAVhjabLd9iil0kVZdhXA",
+        "ZOTERO_USER_ID": "13820503"
+      }
+    },
+    "semantic-scholar": {
+      "command": "uvx",
+      "args": ["semantic-scholar-mcp", "serve"]
+    }
+  }
+}

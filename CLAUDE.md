@@ -16,12 +16,6 @@ node scripts/generate-journal-manifest.js # Update journal
 cd thesis/submission && make all          # Thesis PDFs
 ```
 
-## Structure
-```
-/              # Website (js/, journal/, content/)
-thesis/        # MA thesis (academic/, submission/, ROADMAP.md)
-```
-
 ## Skills
 | Skill | Trigger | Purpose |
 |-------|---------|---------|
