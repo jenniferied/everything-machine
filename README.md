@@ -47,9 +47,14 @@ everything-machine/
 │       │   └── references/     # bibliography.bib
 │       └── literature-review/  # Systematic Review Workflow
 │
-├── README.md                   # Diese Datei
-├── CLAUDE.md                   # AI-Entwicklungsrichtlinien
-└── WEBSITE_TODO.md             # Website Feature-Tasks
+├── presentation/              # Kolloquium-Präsentation (HTML + PDF)
+│
+├── src/input.css              # Tailwind CSS Input
+├── dist/tailwind.css          # Generierte Tailwind Styles
+│
+├── README.md                  # Diese Datei
+├── CLAUDE.md                  # AI-Entwicklungsrichtlinien
+└── ROADMAP.md                 # Projekt-Roadmap & Tasks
 ```
 
 ## Technische Umsetzung
@@ -58,7 +63,7 @@ Statische Website optimiert für GitHub Pages:
 
 - **HTML5**: Semantische Struktur
 - **CSS3**: Benutzerdefiniertes Dark-Theme ("Kepler Vibe") mit IBM Plex Mono Font
-- **Tailwind CSS**: Per CDN für Utility-Klassen
+- **Tailwind CSS**: Lokales Build-System (v3.4+)
 - **JavaScript**: Modular ES6+ mit SOLID-Prinzipien und EventBus-Architektur
 
 ## Lokale Entwicklung
@@ -67,6 +72,13 @@ Statische Website optimiert für GitHub Pages:
 # Repository klonen
 git clone https://github.com/jenniferied/everything-machine.git
 cd everything-machine
+
+# Dependencies installieren
+npm install
+
+# Tailwind CSS bauen
+npm run build:css        # Einmalig bauen
+npm run watch:css        # Watch-Mode für Entwicklung
 
 # Lokalen Server starten (erforderlich für fetch/CORS)
 python3 -m http.server 8001
@@ -82,15 +94,6 @@ open http://localhost:8001
 Nach dem Hinzufügen neuer Journal-Einträge:
 ```bash
 node scripts/generate-journal-manifest.js
-```
-
-### Thesis PDFs generieren
-
-```bash
-cd thesis/submission
-make all        # Alle PDFs bauen
-make literatur  # Nur Literaturrecherche
-make clean      # Generierte Dateien löschen
 ```
 
 ## Architektur
