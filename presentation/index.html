@@ -212,6 +212,145 @@
             }
         }
 
+        /* === PORTRAIT vs SQUARE IMAGES === */
+        .img-portrait {
+            height: 280px !important;
+            width: auto;
+        }
+
+        .img-square {
+            height: 180px !important;
+            width: auto;
+        }
+
+        /* === INTERVIEW QUESTIONS === */
+        .interview-questions {
+            font-size: 0.85rem;
+            padding: 1.5rem;
+        }
+
+        .question-category {
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .question-category:first-child {
+            margin-top: 0;
+        }
+
+        .question-item {
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .question-item em {
+            color: var(--text-secondary);
+            font-size: 0.8em;
+        }
+
+        /* === CHAT BUBBLES === */
+        .chat-example {
+            padding: 1.25rem;
+            font-size: 0.8rem;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chat-msg {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .chat-msg .chat-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .chat-msg .chat-text {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.5rem;
+            line-height: 1.5;
+            max-width: 90%;
+        }
+
+        .chat-claude .chat-text {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+
+        .chat-user .chat-text {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        /* === KEPLER IMAGE === */
+        .image-kepler {
+            max-height: 70vh;
+            width: auto;
+            border-radius: 0.5rem;
+        }
+
+        /* === SCREENSHOTS === */
+        .screenshot-row {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .screenshot-container {
+            text-align: center;
+        }
+
+        .screenshot-img {
+            height: 350px;
+            width: auto;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .screenshot-img-large {
+            height: 450px;
+            width: auto;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .screenshot-label {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* === PLAIN LIST (no arrows) === */
+        .list-plain {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+
+        .list-plain li {
+            padding-left: 0;
+        }
+
+        .list-plain li::before {
+            content: none;
+        }
+
         /* === BLINK CARET === */
         .caret {
             display: inline-block;
@@ -234,83 +373,110 @@
 
         <!-- SLIDE 1: Title -->
         <section class="slide">
-            <img src="../assets/images/kepler-voxel.png" alt="Kepler" class="image-hero" style="margin-bottom: 2rem;">
+            <img src="../assets/images/broken-glass-square.png" alt="Kepler" class="image-hero" style="margin-bottom: 2rem;">
             <h1 class="title-animated">Everything Machine<span class="caret"></span></h1>
-            <p class="subtitle">MA Artistic Research — TH OWL 2025</p>
+            <p class="subtitle">MA Artistic Research — TH OWL 2026</p>
             <p class="subtitle text-secondary">Jennifer Meier</p>
-            <div class="slide-footer">Kepler • Generative AI • Digitale Identität</div>
-        </section>
-
-        <!-- SLIDE 2: Abstract -->
-        <section class="slide">
-            <h2 class="section-title">I / O (Abstract)</h2>
-            <div class="bubble">
-                <p class="text-large text-italic text-center">
-                    Künstler verfügen über eine Fülle von "Inputs" – Bilder, Musik, Texte und einen schwer fassbaren "Vibe". Generative KI bietet neue "Output"-Werkzeuge, doch es fehlt an etablierten Prozessen, diese Inputs zur Erweiterung einer bestehenden digitalen Identität zu nutzen.
-                </p>
-            </div>
-            <div class="keywords">
-                <span class="keyword">Generative AI</span>
-                <span class="keyword">Digitale Identität</span>
-                <span class="keyword">Artistic Research</span>
-                <span class="keyword">Alter Ego</span>
-                <span class="keyword">Cover Art</span>
+            <div class="slide-footer">
+                <a href="https://open.spotify.com/artist/42o6wEuAtZaVCte7QZnDtH" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Kepler auf Spotify</a> • Generative AI • Digitale Identität
             </div>
         </section>
 
-        <!-- SLIDE 3: Kepler -->
+        <!-- SLIDE 2: Kepler -->
         <section class="slide">
-            <h2 class="section-title">Wer ist Kepler?</h2>
-            <div class="image-row">
-                <img src="../assets/images/kepler-squatting.png" alt="Kepler Pixel-Art">
-                <img src="../assets/images/white-suit.png" alt="Kepler Real">
-                <img src="../assets/images/kepler-studio.png" alt="Kepler Studio">
+            <img src="../assets/images/kepler-squatting.png" alt="Kepler" class="image-kepler">
+        </section>
+
+        <!-- SLIDE 3: Artefakte (Unreal Engine) -->
+        <section class="slide">
+            <h2 class="section-title">Bereits erstellte Artefakte</h2>
+            <div class="image-row" style="align-items: flex-end;">
+                <img src="../assets/images/artefakt-2.png" alt="Artefakt 2" class="img-portrait">
+                <img src="../assets/images/artefakt-1.png" alt="Artefakt 1" class="img-square">
+                <img src="../assets/images/basketball-scene.png" alt="Basketball" class="img-square">
+                <img src="../assets/images/inspiration.png" alt="Inspiration" class="img-portrait">
             </div>
             <p class="text-center text-secondary" style="margin-top: 1.5rem;">
-                Digitale Künstler-Persona von Gavin Just — 12 Tracks auf Spotify
+                Unreal Engine
             </p>
-            <img src="../assets/images/album-covers-row.png" alt="Album Covers" class="image-large">
         </section>
 
         <!-- SLIDE 4: Forschungsfragen -->
         <section class="slide">
-            <h2 class="section-title">Forschungsfragen</h2>
+            <h2 class="section-title">Forschungsfrage</h2>
             <div class="bubble">
+                <p class="text-large text-center" style="margin-bottom: 2rem;">
+                    <span class="text-accent">Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?</span>
+                </p>
                 <ul>
-                    <li>Wie kann generative KI die <span class="text-accent">stilistische Kohärenz</span> einer künstlerischen Identität wahren?</li>
-                    <li>Können Produktionsprobleme (z.B. Voxel-Animation) durch <span class="text-accent">KI-Workflows</span> gelöst werden?</li>
-                    <li>Wie wird <span class="text-accent">künstlerische Autorschaft</span> gewahrt?</li>
-                    <li>Wie erleben "Künstlerin" und "Klient" diesen Prozess?</li>
+                    <li><strong>Workflow</strong>: Welche Arbeitsschritte entstehen neu, welche fallen weg?</li>
+                    <li><strong>Autorschaft</strong>: Wie verschiebt sich meine Rolle – Künstlerin, Kuratorin, Auftraggeberin?</li>
+                    <li><strong>Iteration</strong>: Wie beeinflusst die Unmittelbarkeit von KI-Output meinen Prozess?</li>
+                    <li><strong>Scheitern</strong>: Was lerne ich aus fehlgeschlagenen Experimenten?</li>
+                    <li><strong>Ästhetik</strong>: Entwickelt sich eine eigene visuelle Sprache?</li>
                 </ul>
+            </div>
+            <div class="keywords">
+                <span class="keyword">Practice-based Research</span>
+                <span class="keyword">Research through Design</span>
+                <span class="keyword">Autoethnographie</span>
             </div>
         </section>
 
-        <!-- SLIDE 5: Artefakte -->
+        <!-- SLIDE 5: Interview-Struktur -->
         <section class="slide">
-            <h2 class="section-title">Artefakte</h2>
-            <div class="image-row">
-                <img src="../assets/images/artefakt-1.png" alt="Artefakt 1">
-                <img src="../assets/images/artefakt-2.png" alt="Artefakt 2">
-                <img src="../assets/images/basketball-scene.png" alt="Basketball">
-                <img src="../assets/images/inspiration.png" alt="Inspiration">
+            <h2 class="section-title">Methode: Interaktives Interview</h2>
+            <div class="grid-2">
+                <div class="bubble interview-questions">
+                    <p class="question-category">Kontext</p>
+                    <p class="question-item">Welche Tools hast du verwendet?</p>
+                    <p class="question-item">Was wolltest du erreichen?</p>
+
+                    <p class="question-category">Die 5 Unterfragen</p>
+                    <p class="question-item">Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p>
+                    <p class="question-item">Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p>
+                    <p class="question-item">Wie hat die KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p>
+                    <p class="question-item">Was ist schiefgelaufen? <em>(Scheitern)</em></p>
+                    <p class="question-item">Hat sich eine eigene Sprache entwickelt? <em>(Ästhetik)</em></p>
+
+                    <p class="question-category">Generierte Frage</p>
+                    <p class="question-item text-italic">Kontextspezifisch, basierend auf dem Eintrag</p>
+                </div>
+                <div class="bubble chat-example">
+                    <div class="chat-msg chat-claude">
+                        <img src="../assets/icons/claude.svg" alt="Claude" class="chat-avatar">
+                        <div class="chat-text">Du hast erwähnt, dass das System Gesichter in Keplers Maske interpretiert hat – obwohl er bewusst kein Gesicht haben soll. Wie fühlt es sich an, wenn die KI deine künstlerische Intention so grundlegend 'missversteht'?</div>
+                    </div>
+                    <div class="chat-msg chat-user">
+                        <img src="../assets/icons/user.png" alt="Jennifer" class="chat-avatar">
+                        <div class="chat-text">Es ist einfach frustrierend. Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen und auch Zeit einsparen. Aber es zeigt, dass wir noch nicht ganz da sind und die Directability noch nicht da ist. Es sind halt keine magischen Tools, so wie es sich anfühlt.</div>
+                    </div>
+                    <div class="chat-msg chat-claude">
+                        <img src="../assets/icons/claude.svg" alt="Claude" class="chat-avatar">
+                        <div class="chat-text">Du hast geschrieben, dass deine bestehende Web-Erfahrung entscheidend war. Glaubst du, jemand ohne diese Erfahrung hätte ein ähnliches Ergebnis erreichen können?</div>
+                    </div>
+                    <div class="chat-msg chat-user">
+                        <img src="../assets/icons/user.png" alt="Jennifer" class="chat-avatar">
+                        <div class="chat-text">Es hängt sehr stark von der Person ab. Leute ohne Hintergrund und ohne Geduld würden schnell an ihre Grenzen kommen. Garbage in, garbage out. Man muss schon mitlernen. Aber umso spezifischer die Anforderungen werden, umso schwieriger wird es für einen Laien.</div>
+                    </div>
+                </div>
             </div>
-            <p class="text-center text-secondary" style="margin-top: 1.5rem;">
-                Unreal Engine • ComfyUI • Suno AI • Claude
+            <p class="text-center text-secondary" style="margin-top: 1.5rem; font-size: 0.85rem;">
+                KI-gestützte Reflexion nach jeder Session → strukturierte Dokumentation
             </p>
         </section>
 
-        <!-- SLIDE 6: Live Demo -->
+        <!-- SLIDE 6: Website & Dokumentation -->
         <section class="slide">
             <h2 class="section-title">Website & Dokumentation</h2>
-            <div class="bubble text-center">
-                <p class="text-large">
-                    <span class="text-accent">→ Live-Demo auf der Website</span>
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    Prozess-Logbuch • Journal-Einträge • 3D-Viewer • Audio-Player
-                </p>
+            <div class="screenshot-container">
+                <img src="../assets/images/screenshot-homepage.png" alt="Homepage" class="screenshot-img-large">
             </div>
-            <div class="slide-footer">github.com/jmeier/everything-machine</div>
+            <div class="keywords" style="margin-top: 1.5rem;">
+                <span class="keyword">Prozesslogbuch</span>
+                <span class="keyword">3D Viewer</span>
+                <span class="keyword">Audio Player</span>
+            </div>
         </section>
 
     </div>
