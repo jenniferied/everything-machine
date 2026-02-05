@@ -43,6 +43,16 @@ Gliederung:
 
 ## Hintergrund und Motivation
 
+### Artistic Research
+
+Die vorliegende Arbeit versteht Artistic Research primär im Sinne von Henk Borgdorffs Definition als künstlerische Praxis, die sich als Forschung qualifiziert, wenn ihr Zweck darin besteht, Wissen und Verständnis durch originäre Untersuchungen in und durch Kunstobjekte und kreative Prozesse zu erweitern (borgdorff2013theconflictof chunk 68, borgdorff2013theconflictofa pages 179-181). Dabei adressiert
+
+Artistic Research Fragen, die sowohl für den Forschungskontext als auch für die Kunstwelt relevant sind, und verwendet experimentelle sowie hermeneutische Methoden, um implizites Wissen in Kunstwerken und künstlerischen Prozessen offenzulegen (borgdorff2013theconflictofa pages 179-181). Wesentliche Komponenten umfassen die Intention zur Wissenserweiterung über die persönliche künstlerische Entwicklung hinaus, Originalität sowie verschiedene Wissensformen einschließlich propositionalem Wissen, Fertigkeitswissen und implizitem Wissen (borgdorff2013theconflictof chunk 68).
+
+Diese Arbeit positioniert sich im Bereich der praxisbasierten Forschung (practice-based research), bei der das Machen, Kreieren und Performen sowie die resultierenden Kunstwerke eine konstitutive methodologische Rolle spielen (borgdorff2013theconflictof chunk 46). Konkret werden kleine KI-Experimente anhand eines realen Projekts durchgeführt: der Entwicklung visueller Inhalte wie Albumcover und kurzer Reels für ein musikalisches Alter Ego namens Kepler. Die Forschungsergebnisse werden auf einer Website mit Journaleinträgen dokumentiert und der Forschungsgemeinschaft sowie der Öffentlichkeit zugänglich gemacht (borgdorff2013theconflictof chunk 68, borgdorff2013theconflictof chunk 27).
+
+Borgdorff, H. (2013). *The conflict of the faculties: Perspectives on artistic research and academia*. https://doi.org/10.26530/oapen_595042 
+
 ### Der Moment der generativen KI
 
 *«Wir erleben einen historischen Umbruch in der kreativen Produktion. Zwischen 2022 und 2025 hat sich eine Explosion generativer KI-Tools ereignet, die nahezu alle kreativen Domänen erfasst: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Was vor wenigen Jahren noch Gegenstand von Science-Fiction-Spekulationen war, ist heute alltägliches Werkzeug.*
