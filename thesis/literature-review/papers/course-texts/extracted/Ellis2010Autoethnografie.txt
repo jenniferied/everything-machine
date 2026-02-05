@@ -1,0 +1,568 @@
+Autoethnografie
+
+345
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+Autoethnografie1
+1
+
+Entstehungsgeschichte und historische Relevanz
+
+Autoethnografie ist ein Forschungsansatz, der sich darum bemüht, persönliche Erfahrung
+(auto) zu beschreiben und systematisch zu analysieren (grafie), um kulturelle Erfahrung
+(ethno) zu verstehen (Ellis 2004; Holman Jones 2005). Er stellt kanonische Gepflogenheiten, Forschung zu betreiben und zu präsentieren, infrage (Spry 2001) und behandelt Forschung als einen politischen und sozialen Akt (Adams & Holman Jones 2008). Forschende
+nutzen Grundsätze der Autobiografie und Ethnografie, um Autoethnografie zu betreiben
+und zu schreiben. Daher bezeichnet Autoethnografie sowohl eine Methode/einen Prozess
+als auch ein Produkt.
+Die vom Postmodernismus der 1980er Jahre inspirierte crisis of confidence erbrachte
+neue Möglichkeiten, die Ziele und Formen sozialwissenschaftlicher Forschung zu überdenken: Wissenschaftler/innen zeigten sich zunehmend beunruhigt über deren ontologische,
+epistemologische und axiologische Beschränkungen (Ellis & Bochner 2000) und begannen
+aufzuzeigen, wie die „gefundenen“ „Fakten“ und „Wahrheiten“ untrennbar mit dem Vokabular und den Paradigmen verbunden waren, die die Forscher/innen nutzten (Kuhn 1996;
+Rorty 1982). Sie begannen, die Grenzen großer, universeller Erzählungen zu erkennen (de
+Certeau 1984; Lyotard 1984) und über neue Beziehungen zwischen Autor/innen, Leser/innen und Texten nachzudenken (Barthes 1977; Derrida 1978; Radway 1984). Es entstand
+das Bedürfnis, sich kolonialistischen und „sterilen“ Forschungsintentionen zu widersetzen,
+die in fremde Kulturen eindrangen, deren Mitglieder ausnutzten und dann gingen, interessiert an eigenem materiellen oder professionellen Nutzen und ohne Rücksicht auf Beziehungen, die im Verlauf der Forschung entstanden waren (Conquergood 1991; Ellis 2007;
+Riedmann 1993). Sozialwissenschaftler/innen fragten sich auch, was aus ihren je konkreten
+Herkunftsdisziplinen werden würde, wenn diese der Literaturwissenschaft näher stünden
+als der Physik, wenn sie Erzählungen anstatt Theorien bevorzugten und wenn sie bewusst
+wertorientiert wären, anstatt zu behaupten, wertfrei zu sein (Bochner 1994).
+Viele dieser Wissenschaftler/innen wendeten sich der Autoethnografie zu, da sie sich
+um eine positive Antwort auf die Kritik an den kanonischen Vorstellungen, was Forschung
+ist und wie Forschung betrieben werden sollte, bemühten. Im Besonderen wollten sie sich
+auf Möglichkeiten konzentrieren, bedeutsame, zugängliche und sinnhafte Ergebnisse hervorzubringen, die auf persönlicher Erfahrung gegründet und respektvoll gegenüber fremder
+Erfahrung ist (Ellis & Bochner 2000). Dies bedeutet zugleich zu reflektieren, in welcher
+Weise persönliche Erfahrung den Forschungsprozess beeinflusst: Forschende entscheiden
+beispielsweise, wen oder was, wann, wo und wie sie jemanden oder etwas untersuchen.
+1
+
+Aus dem Englischen übersetzt von Paul Sebastian Ruppel und Katja Mruck.
+
+G. Mey K. Mruck (Hrsg.), Handbuch Qualitative Forschung in der Psychologie, DOI: 978-3-531-92052-8_24,
+© VS Verlag für Sozialwissenschaften | Springer Fachmedien Wiesbaden GmbH 2010
+
+346
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+Diese Entscheidungen sind an institutionelle Voraussetzungen (z.B. Begutachtungsgremien), Ressourcen (z.B. Finanzierung) und persönliche Umstände (z.B. Krebsforschung
+aufgrund persönlicher Erfahrung mit Krebs) gebunden. Obwohl einige Forscher/ innen
+immer noch annehmen, Forschung könne von einem neutralen und objektiven Standpunkt
+aus betrieben werden (Atkinson 1997; Buzard 2003; Delamont 2009), halten die meisten
+dies mittlerweile für nicht machbar (Bochner 2002; Denzin & Lincoln 2000; Rorty 1982).
+Des Weiteren haben Wissenschaftler/innen zunehmend akzeptiert, dass verschiedene
+Menschen verschiedene Weltanschauungen, Sprech- und Schreibweisen, Bewertungs- und
+Glaubensformen etc. haben, die u.a. resultieren können aus Rasse (Davis 2009), Gender
+(Keller 1995), Alter (Paulson & Willig 2008), Klasse (Dykins Callahan 2008), Bildung
+(Valenzuela 1999) oder Religion (Droogsma 2007). Diejenigen, die für kanonische Formen
+von Forschung plädieren, vertreten hingegen implizit eine weiße, maskuline, heterosexuelle, christliche und nicht-behinderte Perspektive der Mittel- und Oberschicht, die andere
+Formen von Wissen ausklammert bzw. als unzulänglich und ungültig erscheinen lässt.
+Autoethnografie hingegen will zu einem breiteren Blick auf die Welt verhelfen, der auf
+rigide Definitionen von „richtiger“ Forschung, ihrem Prozess und ihren Ergebnissen, verzichtet.
+
+2
+
+Der autoethnografische Arbeitsprozess
+
+Als Methode verbindet die Autoethnografie Merkmale der Autobiografie und Ethnografie.
+Wenn Autor/innen eine Autobiografie verfassen, schreiben sie nachträglich und selektiv über vergangene Erfahrungen. Für gewöhnlich durchleben sie diese Erfahrungen nicht
+(nur) mit dem Ziel der Veröffentlichung: Erfahrungen werden vielmehr im Nachhinein
+zusammengefügt (Bruner 1993; Freeman 2004). Während des Schreibens können dann z.B.
+andere Personen interviewt (Foster 2006; Tillmann-Healy 2001) oder Texte, Fotos oder
+Zeitschriften hinzugezogen werden, um sich besser zu erinnern (Delany 2004; Goodall
+2006). Am häufigsten schreiben Autobiograf/innen über „Epiphanien“ – erinnerte Momente, die als besonders bedeutsam wahrgenommen werden (Bochner & Ellis 1992; Denzin
+1989), oder existenzielle Krisen, die eine Auseinandersetzung erzwingen (Zaner 2004).
+Obwohl es sich um Phänomene handelt, bei denen eine Person eine Erfahrung als verändernd ansehen mag, während eine andere dies vielleicht nicht tut, wird in ihnen ersichtlich,
+wie Menschen „intensive Situationen“ erleben und deren Folgen, die noch lange nach dem
+eigentlichen Ereignis nachwirken (können), bewältigen (Bochner 1984, S.595).
+Wenn Forscher/innen Ethnografie betreiben, untersuchen sie kulturelle Praktiken, d.h.
+kulturell geteilte Werte, Überzeugungen und Erfahrungen, um Mitgliedern der Kultur und
+kulturfremden Personen zu helfen, eine Kultur besser zu verstehen (Maso 2001). Ethnograf/innen tun dies, indem sie teilnehmende Beobachter/innen in der Kultur werden, d.h. sie
+fertigen Feldnotizen zu kulturellen Ereignissen, ihrer eigenen Rolle und der Beteiligung
+von anderen Personen an (Geertz 1973; Goodall 2001). Ethnograf/innen können auch Mitglieder einer Kultur interviewen (Berry 2005; Nicholas 2004), deren Sprechweisen und
+Beziehungsformen untersuchen (Ellis 1986; Lindquist 2002), Verwendungen und Vorstellungen von Raum und Ort erforschen (Makagon 2004; Philipsen 1976) und/oder Artefakte
+wie etwa Kleidung und Architektur (Borchard 1998) oder Bücher, Filme und Fotos analysieren (Goodall 2006; Neumann 1999; siehe zur Ethnografie Thomas in diesem Band).
+
+Autoethnografie
+
+347
+
+Autoethnograf/innen schreiben retrospektiv und selektiv über herausragende Ereignisse, die daraus resultieren, dass sie Teil einer Kultur sind und/oder eine bestimmte kulturelle
+Identität besitzen. Sie sind jedoch (häufig) durch sozialwissenschaftliche Veröffentlichungskonventionen gefordert, Erlebtes nicht nur zu erzählen, sondern auch zu analysieren.
+„Otherwise [you’re] telling [your] story – and that’s nice – but people do that on Oprah [eine
+Talkshow] every day. Why is your story more valid than anyone else’s? What makes your story
+more valid is that you are a researcher. You have a set of theoretical and methodological tools
+and a research literature to use. That’s your advantage. If you can’t frame it around these tools
+and literature and just frame it as ‚my story‘, then why or how should I privilege your story over
+anyone else’s I see 25 times a day on TV?“ (Mitch Allen, persönliches Interview, 4. Mai 2006)
+
+Autoethnograf/innen müssen sich zur Analyse nicht nur ihrer methodologischen Werkzeuge und der Forschungsliteratur bedienen, sondern sie müssen persönliche Erfahrungen auch
+nutzen, um Facetten kultureller Erfahrung Insidern und Outsidern zu veranschaulichen. Um
+dies zu erreichen, kann es erforderlich sein, persönliche Erfahrung mit bestehender Forschung zu vergleichen und zu kontrastieren (Ronai 1996) oder, wie zuvor erwähnt, Mitglieder einer Kultur zu interviewen und/oder relevante kulturelle Artefakte zu untersuchen
+(Boylorn 2008; Denzin 2006).
+
+3
+
+Das autoethnografische Produkt
+
+Im Falle von Autobiografien wird von den Autor/innen in den meisten Fällen erwartet, dass
+sie über ausgezeichnete Schreibtechniken verfügen (Adams 2008; Lorde 1984; siehe Gergen & Gergen in diesem Band zu Möglichkeiten performativer Forschung): Eine Autobiografie sollte ästhetisch und plastisch sein, Leser/innen fesseln und von Konventionen der
+Erzählkunst wie Figur, Szene und Handlungsentwicklung (Ellis & Ellingson 2000)
+und/oder einem chronologischen oder fragmentarischen Erzählverlauf (Didion 2005; Frank
+1995) Gebrauch machen. Sie sollte außerdem neue Sichtweisen auf persönliche Erfahrung
+– auf Epiphanien – aufzeigen bzw. „Lücken“ in bestehenden verwandten Erzählungen
+schließen (Couser 1997; Goodall 2001).
+Um Texte ästhetisch und plastisch zu gestalten und Leser/innen mit dem Schauplatz
+des Geschehens (und insbesondere mit Gedanken, Emotionen und Handlungen) vertraut zu
+machen (Ellis & Bochner 2006), können Techniken des „Zeigens“ (Adams 2006; Lamott
+1994) angewendet werden. Es kann z.B. Konversation genutzt werden, um Ereignisse fesselnd und emotionsreich zu schildern. „Erzählen“ ist eine weitere Strategie des Schreibens,
+die eine gewisse Distanz zu den beschriebenen Ereignissen verschafft, sodass über Ereignisse auf abstraktere Weise nachgedacht werden kann. Einer Geschichte, die „zeigt“, durch
+„Erzählen“ zu ergänzen, ist eine wirkungsvolle Art, für das Verständnis erforderliche Informationen zu vermitteln, die nicht der Unmittelbarkeit von Dialog oder sinnlicher Anteilnahme bedürfen.
+Es ist auch möglich, die Erzählperspektive zu wechseln. So wird meist die 1. Person
+verwendet, um eine Geschichte zu erzählen, die persönlich beobachtet oder durchlebt wurde und Charakteristika eines „Augenzeugenberichts“ (Caulley 2008) hat. Sollen Leser/innen in eine Szene hineinversetzt werden, um mit der Autorin oder dem Autor eine
+Erfahrung intensiv mitzuerleben und Teil eines Geschehens zu sein, empfiehlt sich die
+
+348
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+Verwendung der 2. Person; diese Erzählperspektive kann auch genutzt werden, um Momente zu beschreiben, die zu behaupten als zu schwierig empfunden wird (Glave 2005;
+McCauley 1996). Manchmal verwenden Autobiograf/innen auch die 3. Person, um z.B. den
+Handlungskontext oder Ergebnisse darzustellen (Caulley 2008).
+Wenn Forscher/innen Ethnografien schreiben, fertigen sie „dichte Beschreibungen“ an
+(Geertz, 1973, S.10), um eine Kultur oder kulturelle Praktiken besser verstehbar zu machen.
+Hierzu werden (induktiv) erkannte Muster kultureller Erfahrung durch Feldnotizen, Interviews und/oder Artefakte usw. belegt (Jorgenson 2002).
+Wenn Forscher/Innen Autoethnografien schreiben, bemühen sie sich um ästhetisch
+und plastisch dichte Beschreibungen persönlicher und zwischenmenschlicher Erfahrungen.
+Sie erreichen dies, indem sie zuerst Muster kultureller Erfahrung erkennen, durch Feldnotizen, Interviews und/oder Artefakte belegen, und diese Muster dann mithilfe von Facetten
+der Erzählkunst beschreiben, „zeigen“, „erzählen“ und die Erzählperspektive wechseln. Sie
+versuchen dies mit dem Ziel, auch ein breiteres und heterogeneres Publikum zu erreichen,
+das traditionelle Forschung üblicherweise außer Acht lässt, um zu persönlicher Veränderung und sozialem Wandel für möglichst viele Menschen beizutragen (Goodall 2006;
+Hooks 1994).
+
+4
+
+Autoethnografische Herangehensweisen
+
+4.1 Formen von Autoethnografie
+Autoethnografien unterscheiden sich darin, wie stark der Akzent auf die Beforschung anderer oder die Forscher/innen selbst und deren Interaktion, auf traditionelle Analysen und den
+Interviewkontext und/oder auf Machtbeziehungen gesetzt wird.
+So werden z.B. indigene Ethnografien genutzt, um Macht in der Forschung zu thematisieren und zu unterbinden, insbesondere den Anspruch autoritativer (außenstehender)
+Forscher/innen, (exotische) „Andere“ zu beforschen. Einst im Dienste der (weißen, maskulinen, heterosexuellen, christlichen und nicht-behinderten Mittel- und Oberschicht-) Ethnografen, arbeiten indigene Ethnograf/innen nun daran, ihre persönlichen und kulturellen
+Erzählungen zu konstruieren (siehe Denzin, Lincoln & Smith 2008).
+Narrative Ethnografien sind in Erzählform verfasste Texte, die die Erfahrungen der
+Forschenden enthalten, die Betonung liegt aber auf der ethnografischen Beforschung anderer Menschen. Hierzu wird bspw. das Zusammentreffen zwischen der/dem Forschenden
+und Mitgliedern der beforschten Gruppe(n) beschrieben (Tedlock 1991), wobei Erzählungen häufig mit Analysen von Mustern und Prozessen kombiniert werden.
+Reflexive, dyadische Interviews nehmen die interaktiv hergestellten Bedeutungen und
+emotionalen Dynamiken des Interviews selbst in den Fokus. Obwohl der Hauptaugenmerk
+auf den Beforschten und deren Geschichte liegt, werden Gedanken und Gefühle der Forscher/innen ebenfalls berücksichtigt (z.B. die persönliche Motivation, ein Projekt durchzuführen, eigene Erfahrungen mit dem behandelten Thema, emotionale Reaktionen auf das
+Interview und aus ihm möglicherweise resultierende Veränderungen für die Interviewenden/Forschenden). Auch wenn deren Erfahrungen nicht den Hauptfokus bilden, stellen
+persönliche Reflexionen einen zusätzlichen Kontext für die Erzählungen über die Beforschten bereit (Ellis 2004).
+
+Autoethnografie
+
+349
+
+Reflexive Ethnografien dokumentieren, wie sich Wissenschaftler/innen durch ihre
+Feldforschung verändern. Reflexive/narrative Ethnografien bilden ein Kontinuum, beginnend bei Forschung, die ihren Ausgangpunkt in der Biografie der Ethnograf/innen nimmt,
+über Berichte von Ethnograf/innen, die ihr Leben und das von Mitgliedern einer spezifischen Kultur beforschen, bis hin zu ethnografischen Memoiren (Ellis 2004, S.50) oder
+confessional tales (Van Maanen 1988), bei denen die ethnografischen Forschungsbemühungen hinter den Kulissen im Zentrum stehen (Ellis 2004).
+Sog. layered accounts zielen häufig auf die Erfahrung der Autor/innen und heben den
+Prozesscharakter von Forschung hervor. Ähnlich der Grounded-Theory-Methodologie
+(GTM) soll so veranschaulicht werden, wie Datenerhebung und -analyse gleichzeitig voranschreiten (Charmaz 1983, S.110); bereits verfügbare Forschung wird in diesem Zusammenhang eher als Quelle für Fragen und Vergleiche statt als eine Art „Wahrheitsmaß“ (S.117)
+genutzt. Anders als bei der GTM kommen aber Vignetten, multiple Stimmen und Introspektion (Ellis 1991) zum Einsatz, um Lesenden zu ermöglichen, der emergenten Erfahrung,
+Forschung zu betreiben und (darüber) zu schreiben, beizuwohnen (Ronai 1992, S.123).
+Interaktive Interviews vermitteln ein tief greifendes Verständnis von emotionsgeladenen und sensiblen Themen (Ellis, Kiesinger & Tillmann-Healy 1997, S.121). Hier geht es
+darum, dass Forschende und Forschungsteilnehmende im gemeinsamen Gespräch über
+bestimmte Themen (z.B. Essstörungen) forschen. Interaktive Interviews erstrecken sich
+üblicherweise über mehrere Sitzungen; im Unterschied zu traditionellen Einzelinterviews
+mit Fremden ist für sie die (teilweise über die Zeit erst entstehende) vertrauensvolle Beziehung zwischen den Beteiligten charakteristisch (Adams 2008). Hier sind neben den Geschichten und Erfahrungen, die von beiden bereits in die Forschungsbegegnung mitgebracht werden, die Interaktionen im Interviewsetting Gegenstand der Analyse.
+Ähnlich wie interaktive Interviews nutzen auch sog. community autoethnografies persönliche Erfahrung von Forscher/innen in einem kollaborativen Forschungsprozess, um
+aufzuzeigen, wie sich bestimmte soziale/kulturelle Praktiken in einer Gemeinschaft manifestieren (z.B. whiteness, siehe Toyosaki, Pensoneau-Conway, Wendt & Leathers 2009).
+Sie fördern so nicht nur gemeinschaftsbildende Forschungspraxen, sondern schaffen auch
+Möglichkeiten für kulturelle und soziale Interventionen (S.59).
+Ko-konstruierte Erzählungen veranschaulichen Beziehungserfahrungen, z.B. wie
+Menschen Ambiguitäten, Unsicherheiten und Widersprüche bewältigen, die aus Freundschaft, Familie und/oder Partnerschaft erwachsen. Dabei werden Beziehungen als gemeinsam hervorgebracht, unvollständig und historisch situiert verstanden; aus der gemeinsamen
+Beschäftigung mit ihnen erwachsen ko-konstruierte Forschungsprojekte: Jede Person
+schreibt zuerst ihre oder seine Erfahrung auf – diese handelt oft direkt oder indirekt von
+einer Epiphanie –, teilt diese mit und geht auf die Erzählung ein, die die andere Person
+zeitgleich geschrieben hat (siehe Bochner & Ellis 1995; Vande Berg & Trujillo 2008).
+In persönlichen Erzählungen setzen sich die Autor/innen mit sich selbst, ihrem akademischen und Privatleben auseinander (z.B. Berry 2007; Tillmann 2009). Dies sind für
+traditionelle Sozialwissenschaftler/innen oftmals die kontroversesten Formen von Autoethnografie, insbesondere wenn sie nicht von herkömmlichen Analysen und/oder Bezügen zu
+wissenschaftlicher Literatur begleitet werden. Persönliche Erzählungen beabsichtigen, ein
+Selbst oder Aspekte eines Lebens, das in einem spezifischen kulturellen und sozialen Kontext stattfindet zu verstehen. Leser/innen sollen eingeladen werden, die „Welt“ der Autorin
+
+350
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+bzw. des Autors zu betreten, um über ihr eigenes Leben nachzudenken, es zu verstehen und
+zu meistern (Ellis 2004, S.46).
+
+4.2 Schreiben als Therapie
+Schreiben ist eine Art des Wissens, eine Untersuchungsmethode (Richardson 2000). Mithin
+kann das Schreiben persönlicher Erzählungen therapeutisch wirken, da wir schreiben, um
+uns selbst und unsere Erfahrungen zu verstehen (Kiesinger 2002; Poulos 2008), um uns zu
+entlasten (Atkinson 2007) oder um kanonische Erzählungen zu hinterfragen – konventionelle, autoritative und projektive Erzählhandlungen, die kartieren, wie „mustergültige“ Menschen leben sollten (Tololyan 1987, S.218; Bochner 2001, 2002). Auf diese Weise können
+Beziehungen besser verstanden und/oder verbessert (Adams 2006; Wyatt 2008), Vorurteile
+abgebaut (Ellis 2002a, 2009), persönliche Verantwortung und Handlungsfähigkeit bestärkt
+(Pelias 2000, 2007) und kultureller Wandel vorangetrieben werden (Ellis 2002b; Goodall
+2006).
+Persönliche Geschichten können auch für Forschungsteilnehmer/innen und Leser/innen eine therapeutische Wirkung haben. Die Feministin Betty Friedan (1964) erkannte z.B. während der 1960er Jahre in den Vereinigten Staaten eine diffuse Unzufriedenheit,
+die viele weiße Frauen aus der Mittelschicht erlebten, weil sie sich nicht mit ihrer persönlichen Entwicklung beschäftigen und vor allem keiner außerhäuslichen Arbeit in einem
+gleichberechtigten, unterstützenden Arbeitsumfeld nachgehen konnten (Wood 2009, S.78).
+Isoliert bei der Hausarbeit für den größten Teil des Tages, erlebten diese Frauen ihre Isolation und ihre Gefühle als persönliche Probleme. Friedan wandte sich daher dem Schreiben
+zu, um Geschichten von Frauen vorzustellen und an ihnen teilzuhaben. Ihre Schriften wirkten für viele Frauen nicht nur therapeutisch, sondern regten auch einen bedeutenden kulturellen Wandel im Umgang mit Frauenrechten an. Persönliche Geschichten ermöglichen das
+„Bezeugen“ (Denzin 2004; Ellis & Bochner 2006), d.h. Probleme zu erkennen, sie zu benennen und öffentlich zu machen – gleich ob es um die Verschwörung einer Regierung
+(Goodall 2006), die Isolation, die eine Person nach der Diagnose einer Krankheit empfinden mag (Frank 1995) oder um benachteiligende Gender-Normen (Crawley 2002; Pelias
+2007) geht.
+
+4.3 Beziehungsethik
+Forscher/innen leben eingebunden in soziale Netzwerke mit Freund/innen und Verwandten,
+Partner/innen und Kindern, Arbeitskolleg/innen und Studierenden. Folglich werden andere
+Menschen in die (Veröffentlichung über die) Forschung verwickelt. Werden z.B. in einer
+Universität Anti-Rauch-Kampagnen untersucht und entwickelt, könnten Tabakfirmen von
+finanziellen Zuwendungen an diese Universität absehen. Ähnlich sind in traditionellen
+Ethnografien die Wohnorte der Gemeinschaften, über die geschrieben wird, meist identifizierbar, ebenso einige der Teilnehmer/innen in Feldforschungsprojekten (siehe Vidich &
+Bensman 1958).
+Die Frage der Beziehungsethik stellt sich für Autoethnografien noch verstärkt (Ellis
+2007). Indem sie persönliche Erfahrung nutzen, beziehen Autoethnograf/innen nicht nur
+
+Autoethnografie
+
+351
+
+sich selbst in ihre Arbeit ein, sondern auch andere nahe stehende und vertraute Personen
+(Adams 2006; Trahar 2009). Wird z.B. die eigene Mutter erwähnt, dann ist es schwer, diese
+„zu tarnen“, ohne den Sinn und die Bedeutung der Geschichte zu verändern; ähnlich wie in
+kommunalen Studien z.B. Bürgermeister/innen oder andere gewählte Amtsträger/innen, ist
+auch die Mutter des Autors/der Autorin leicht identifizierbar. Wird über rassistische Handlungen eines bestimmten Nachbarn geschrieben, dann betrifft ihn dies, selbst wenn sein
+Name nicht erwähnt wurde. Zwar kann die Ortsangabe der Gemeinde verändert werden,
+aber es bedarf keiner großen Mühe, den Wohnort des Autors/der Autorin herauszufinden
+und folglich den Nachbarn zu identifizieren (Ellis 2009).
+Des Weiteren halten Autoethnograf/innen Beziehungen mit den Forschungsteilnehmer/innen häufig über längere Zeiträume aufrecht, was ethische Fragen kompliziert. Teilnehmende sind bereits zu Beginn der Forschung befreundet oder werden es im Forschungsverlauf, sie sind keine „gesichtslosen Subjekte“, die nur Daten liefern sollen. Ethische Fragestellungen in Verbindung mit Freundschaft werden so zu einem wichtigen Teil des Forschungsprozesses und seiner Ergebnisse (Tillmann-Healy 2001; Tillmann 2009).
+Autoethnograf/innen betrachten Beziehungsbelange als eine äußerst wichtige Dimension der Untersuchung (Ellis 2007, S.25; Trahar 2009), die während des gesamten Forschungsprozesses der Aufmerksamkeit bedürfen. Dies verpflichtet sie in vielen Fällen dazu,
+anderen, die mit ihren Texten in Verbindung stehen oder gebracht werden können, ihre
+Arbeit zu zeigen, damit diese reagieren und ggf. widersprechen können. Ähnlich wie traditionelle Ethnograf/innen müssen Autoethnograf/innen gegebenenfalls die Privatsphäre
+anderer schützen, indem sie Merkmale, die eine Identifizierung erlauben würden, abwandeln. Obwohl die Sinnhaftigkeit der Forschungserzählung wichtiger ist als die genaue Wiedergabe von Einzelheiten (Bochner 2002; Tullis Owen, McRae, Adams & Vitale 2009),
+muss Autoethnograf/innen bewusst sein, wie diese Schutzmaßnahmen sowohl die Integrität
+ihrer Forschung beeinflussen können als auch die Art und Weise, wie ihre Arbeit interpretiert und verstanden wird.
+
+4.4 Reliabilität, Generalisierbarkeit und Validität
+Autoethnograf/innen schätzen narrative Wahrheit mit Blick auf das, was eine Erzählung
+auslöst – wie sie verwendet und verstanden wird, wie Autor/innen, Teilnehmer/innen, Publikum usw. auf sie reagieren (Bochner 1994; Denzin 1989). Dabei wird anerkannt, dass das,
+was als „Wahrheit“ bezeichnet wird, sich mit dem Genre des Schreibens oder Darstellens
+von Erfahrung verändert (z.B. Romanliteratur oder Sachbücher; Memoiren, Geschichtsbücher oder wissenschaftliche Literatur). Außerdem wird die Bedeutung von Kontingenz
+akzeptiert: Erinnerung ist fehlbar, und es ist unmöglich, Ereignisse so „abzubilden“, wie sie
+erlebt und empfunden wurden; meist erzählen Menschen, die das „selbe“ Ereignis erlebt
+haben, verschiedene Geschichten über das Geschehene (Tullis Owen et al. 2009). Wenn
+Begriffe wie Reliabilität, Validität und Generalisierbarkeit auf Autoethnografie angewendet
+werden, verändern sich folglich der Kontext, die Bedeutung und der Nutzen dieser Begriffe.
+Fragen der Reliabilität beziehen sich in der Autoethnografie auf die Glaubwürdigkeit
+der Erzählenden. Können sie in Anbetracht verfügbarer „faktischer Beweise“ die beschriebenen Erfahrungen gemacht haben? Glauben sie, dass dies wirklich das ist, was ihnen passiert ist? (Bochner 2002, S.86) Oder haben sie die „literarische Freiheit“ so weit getrieben,
+
+352
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+dass es sich eher um Dichtung als um einen (der Intention nach) wahrheitsgemäßen Bericht
+handelt?
+In engem Zusammenhang zur Reliabilität stehen auch Fragen der Validität. Für Autoethnograf/innen bedeutet Validität, dass ein Werk sich um Wahrscheinlichkeit bemüht; es
+ruft in den Leser/innen das Gefühl hervor, dass die beschriebene Erfahrung glaubhaft und
+möglich ist, dass das, was dargestellt worden ist, wahr sein könnte. Die Geschichte sollte
+deshalb kohärent sein, Autor/innen und Leser/innen verbinden und ihren Leben Kontinuität
+verleihen. Sie sollte den Leser/innen ermöglichen, in die Welt der Erzähler/innen „einzutauchen“ und sie mit deren Augen zu sehen, auch wenn diese Welt nicht „der“ Wirklichkeit
+entspricht (Plummer 2001, S.401). Eine Autoethnografie kann auch danach beurteilt werden, ob sie Leser/innen hilft, mit Menschen, die anders sind als sie zu kommunizieren, oder
+ob sie Möglichkeiten eröffnet, das Leben (von Forschungsteilnehmer/innen, Leser/innen,
+Autor/innen) zu verbessern (Ellis 2004, S.124). Es geht insbesondere darum, wie nützlich
+eine Geschichte ist und wofür sie verwendet werden kann (Bochner 2002).
+Auch Generalisierbarkeit ist für Autoethnografie wichtig, jedoch nicht in der traditionellen, sozialwissenschaftlichen Bedeutung, die sich auf große Stichproben bezieht. In der
+Autoethnografie verschiebt sich der Fokus der Generalisierbarkeit von den Befragten zu
+den Leser/innen: Sie wird von Letzteren auf die Probe gestellt, wenn diese feststellen, ob
+eine Geschichte an eigene Erfahrungen oder an die Erfahrung von anderen Menschen, die
+sie kennen, anschließt. Die Generalisierbarkeit ist auch abhängig davon, ob es gelingt, unbekannte kulturelle Prozesse so zu beleuchten, dass Leser/innen darüber nachdenken, inwiefern Leben einander ähnlich und verschieden sind und spüren, dass sie Neues über unbekannte Menschen oder Leben erfahren haben (Ellis 2004, S.195).
+
+5
+
+Autoethnografie im Lichte der Kritik
+
+Da Autoethnografie sich teils die Ethnografie und teils die Autobiografie zunutze macht,
+möchten Kritiker/innen sie häufig für die (Nicht-) Einhaltung von Kriterien zur Rechenschaft ziehen, die entweder auf traditionelle Ethnografien oder auf autobiografische
+Schreibstandards angewendet werden: Autoethnografie wird entweder dafür kritisiert, zu
+künstlerisch und nicht wissenschaftlich oder zu wissenschaftlich und nicht genügend künstlerisch zu sein.
+Der traditionellen Ethnografie ist die Autoethnografie, bezogen auf sozialwissenschaftliche Standards, nicht genügend streng, theoretisch und analytisch bzw. zu ästhetisch,
+emotional und therapeutisch (Ellis 2009; hooks 1994; Keller 1995). Autoethnograf/innen
+werden kritisiert, weil sie zu wenig Feldforschung betreiben, zu wenige Mitglieder einer
+Kultur beobachten oder nicht genug Zeit mit (fremden) Menschen verbringen (Buzard
+2003; Fine 2003; Delamont 2009). Stattdessen werde auf persönliche Erfahrung zurückgriffen, es würden „verzerrte“ Daten (Anderson 2006; Atkinson 1997; Gans 1999) verwendet,
+und Autoethnograf/innen seien „Nabelschau betreibende“ (Madison 2006), von sich selbst
+eingenommene Narzisst/innen, die die wissenschaftlichen Pflichten des Hypothetisierens,
+Analysierens und Theoretisierens nicht erfüllten.
+Umgekehrt wird Autoethnografie, bezogen auf autobiografische (Schreib-) Standards,
+oft als nicht genügend ästhetisch, literarisch und künstlerisch abgetan. Es werde versucht,
+durch Rückgriff auf literarische Formen wissenschaftliche Legitimität zu erlangen, während
+
+Autoethnografie
+
+353
+
+„echte“ Imagination und künstlerische Qualitäten und Talente außer Acht gelassen würden
+(Gingrich-Philbrook 2005). Moro (2006) zum Beispiel meint, nur „verdammt gute“ Autor/innen seien in der Lage, Autoethnografie zu betreiben.
+Beide Kritiken positionieren Kunst und Wissenschaft in einem Widerspruchsverhältnis, ein Zustand, den Autoethnograf/innen zu beheben versuchen bzw. sie bemühen sich
+darum, gerade diese Dichotomie von Wissenschaft und Kunst aufzulösen: Forschung kann
+strikt theoretisch und analytisch und emotional, persönlich und therapeutisch sein. Autoethnograf/innen schätzen auch die Möglichkeit und Notwendigkeit, Forschung auf plastische
+und ästhetische Art und Weise zu schreiben und darzustellen (z.B. Ellis 1995, 2004; Pelias
+2000), ohne dass deshalb Belletristik zitiert werden muss oder eine Ausbildung in Literaturwissenschaft oder darstellender Kunst erforderlich wäre. Die wichtigsten Fragen für
+Autoethnograf/innen sind: Wer liest unsere Arbeiten, wie sind die Leser/innen davon betroffen und wie halten die Arbeiten das Gespräch/Diskurse in Gang?
+Darüber hinaus finden es Autoethnograf/innen vergeblich, in einer Welt voller (methodologischer) Differenz darüber zu diskutieren, ob Autoethnografie ein zulässiger Forschungsprozess oder ein berechtigtes Forschungsprodukt ist (Bochner 2000; Ellis 2009).
+Sofern wir uns nicht auf ein Ziel einigen, können wir uns auch nicht auf die Bedingungen
+einigen, nach denen wir beurteilen können, wie es zu erreichen ist. Einfach ausgedrückt
+heißt das, dass Autoethnograf/innen eine andere Perspektive auf den Gegenstand der Sozialwissenschaften einnehmen. Nach Rorty handelt es sich bei diesen unterschiedlichen
+Sichtweisen nicht nur um Probleme, die gelöst werden müssten, sondern um Differenzen,
+mit denen es zu leben gilt (1982, S.197). Autoethnograf/innen betrachten Forschung und
+Schreiben als Akte der Teilhabe an sozialer Gerechtigkeit; statt der Beschäftigung mit Exaktheit ist das Ziel, analytische und zugängliche Texte zu verfassen, die beitragen wollen,
+uns und die Welt, in der wir leben, zum Besseren zu verändern (Holman Jones 2005,
+S.764).
+
+Weiterführende Literatur
+Ellis, Carolyn (2004). The ethnographic I: A methodological novel about autoethnography. Walnut
+Creek, CA: AltaMira Press.
+Holman Jones, Stacy (2005). Autoethnography: Making the personal political. In Norman K. Denzin
+& Yvonna S. Lincoln (Hrsg.), Handbook of qualitative research (S.763-791). Thousand Oaks,
+CA: Sage.
+Reed-Danahay, Deborah E. (Hrsg.) (1997). Auto/Ethnography: Rewriting the self and the social.
+Oxford: Berg.
+
+Literatur
+Adams, Tony E. (2006). Seeking father: Relationally reframing a troubled love story. Qualitative
+Inquiry, 12(4), 704-723.
+Adams, Tony E. (2008). A review of narrative ethics. Qualitative Inquiry, 14(2), 175-194.
+Adams, Tony E. & Holman Jones, Stacy (2008). Autoethnography is queer. In Norman K. Denzin,
+Yvonna S. Lincoln & Linda T. Smith (Hrsg.), Handbook of critical and indigenous methodologies (S.373-390). Thousand Oaks, CA: Sage.
+
+354
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+Anderson, Leon (2006). Analytic autoethnography. Journal of Contemporary Ethnography, 35(4),
+373-395.
+Atkinson, Paul (1997). Narrative turn or blind alley? Qualitative Health Research, 7(3), 325-344.
+Atkinson, Robert (2007). The life story interview as a bridge in narrative inquiry. In D. Jean Clandinin (Hrsg.), Handbook of narrative inquiry (S.224-245). Thousand Oaks, CA: Sage.
+Barthes, Roland (1977). Image, music, text (übersetzt von S. Heath). New York: Hill and Wang.
+Berry, Keith (2005). To the „speeches“ themselves: An ethnographic and phenomenological account
+of emergent identity formation. International Journal of Communication, 15(1-2), 21-50.
+Berry, Keith (2007). Embracing the catastrophe: Gay body seeks acceptance. Qualitative Inquiry,
+13(2), 259-281.
+Bochner, Arthur P. (1984). The functions of human communication in interpersonal bonding. In
+Carroll C. Arnold & John W. Bowers (Hrsg.), Handbook of rhetorical and communication theory (S.544-621). Boston: Allyn and Bacon.
+Bochner, Arthur P. (1994). Perspectives on inquiry II: Theories and stories. In Mark L. Knapp &
+Gerald R. Miller (Hrsg.), Handbook of interpersonal communication (S.21-41). Thousand Oaks,
+CA: Sage.
+Bochner, Arthur P. (2000). Criteria against ourselves. Qualitative Inquiry, 6(2), 266-272.
+Bochner, Arthur P. (2001). Narrative’s virtues. Qualitative Inquiry, 7(2), 131-157.
+Bochner, Arthur P. (2002). Perspectives on inquiry III: The moral of stories. In Mark L. Knapp &
+John A. Daly (Hrsg.), Handbook of interpersonal communication (3. Aufl., S.73-101). Thousand Oaks, CA: Sage.
+Bochner, Arthur P. & Ellis, Carolyn (1992). Personal narrative as a social approach to interpersonal
+communication. Communication Theory, 2(2), 165-172.
+Bochner, Arthur P. & Ellis, Carolyn (1995). Telling and living: Narrative co-construction and the
+practices of interpersonal relationships. In Wendy Leeds-Hurwitz (Hrsg.), Social approaches to
+communication (S.201-213). New York: Guilford.
+Borchard, Kurt (1998). Between a hard rock and postmodernism: Opening the Hard Rock Hotel and
+Casino. Journal of Contemporary Ethnography, 27(2), 242-269.
+Boylorn, Robin M. (2008). As seen on TV: An autoethnographic reflection on race and reality television. Critical Studies in Media Communication, 25(4), 413-433.
+Bruner, Jerome (1993). The autobiographical process. In Robert Folkenflik (Hrsg.), The culture of
+autobiography: Constructions of self-representation (S.38-56). Stanford, CA: Stanford University Press.
+Buzard, James (2003). On auto-ethnographic authority. The Yale Journal of Criticism, 16(1), 61-91.
+Caulley, Darrel N. (2008). Making qualitative research reports less boring: The techniques of writing
+creative nonfiction. Qualitative Inquiry, 14(3), 424-449.
+Charmaz, Kathy (1983). The grounded theory method: An explication and interpretation. In Robert
+M. Emerson (Hrsg.), Contemporary field research: A collection of readings (S.109-125). Prospect Heights, IL: Waveland.
+Conquergood, Dwight (1991). Rethinking ethnography: Towards a critical cultural politics. Communication Monographs, 58, 179-194.
+Couser, G. Thomas (1997). Recovering bodies: Illness, disability, and life writing. Madison: University of Wisconsin Press.
+Crawley, Sara L. (2002). „They still don’t understand why I hate wearing dresses!“ An autoethnographic rant on dresses, boats, and butchness. Cultural Studies $ Critical Methodologies, 2(1),
+69-92.
+Davis, Amira M. (2009). What we tell our daughters and ourselves about „ssshhh!!!!“ hysterectomy.
+Qualitative Inquiry, 15(8), 1303-1337.
+de Certeau, Michel. (1984). The practice of everyday life (übersetzt von S. Rendall). Berkeley: University of California Press.
+Delamont, Sara (2009). The only honest thing: Autoethnography, reflexivity and small crises in
+fieldwork. Ethnography and Education, 4(1), 51-63.
+
+Autoethnografie
+
+355
+
+Delany, Samuel R. (2004). The motion of light in water. Minneapolis: University of Minnesota Press.
+Denzin, Norman K. (1989). Interpretive biography. Newbury Park, CA: Sage.
+Denzin, Norman K. (2004). The war on culture, the war on truth. Cultural Studies $ Critical Methodologies, 4(2), 137-142.
+Denzin, Norman K. (2006). Mother and Mickey. The South Atlantic Quarterly, 105(2), 391-395.
+Denzin, Norman K. & Lincoln, Yvonna S. (2000). Introduction: The discipline and practice of qualitative research. In Norman K. Denzin & Yvonna S. Lincoln (Hrsg.), Handbook of qualitative research (2. Aufl., S.1-28). Thousand Oaks, CA: Sage.
+Denzin, Norman K.; Lincoln, Yvonna S. & Smith, Linda T. (Hrsg.) (2008). Handbook of critical and
+indigenous methodologies. Thousand Oaks, CA: Sage.
+Derrida, Jacques (1978). Writing and difference (übersetzt von A. Bass). Chicago: University of
+Chicago Press.
+Didion, Joan (2005). The year of magical thinking. New York: A.A. Knopf.
+Droogsma, Rachel A. (2007). Redefining Hijab: American Muslim women’s standpoints on veiling.
+Journal of Applied Communication Research, 35(3), 294-319.
+Dykins Callahan, Sara B. (2008). Academic outings. Symbolic Interaction, 31(4), 351-375.
+Ellis, Carolyn (1986). Fisher folk: Two communities on Chesapeake Bay. Lexington: University Press
+of Kentucky.
+Ellis, Carolyn (1991). Sociological introspection and emotional experience. Symbolic Interaction,
+14(1), 23-50.
+Ellis, Carolyn (1995). Final negotiations: A story of love, loss, and chronic illness. Philadelphia:
+Temple University Press.
+Ellis, Carolyn (2002a). Shattered lives: Making sense of September 11th and its aftermath. Journal of
+Contemporary Ethnography, 31(4), 375-410.
+Ellis, Carolyn (2002b). Being real: Moving inward toward social change. Qualitative Studies in Education, 15(4), 399-406.
+Ellis, Carolyn (2004). The ethnographic I: A methodological novel about autoethnography. Walnut
+Creek, CA: AltaMira Press.
+Ellis, Carolyn (2007). Telling secrets, revealing lives: Relational ethics in research with intimate
+others. Qualitative Inquiry, 13(1), 3-29.
+Ellis, Carolyn (2009). Telling tales on neighbors: Ethics in two voices. International Review of Qualitative Research, 2(1), 3-28.
+Ellis, Carolyn & Bochner, Arthur P. (2000). Autoethnography, personal narrative, reflexivity. In
+Norman K. Denzin & Yvonna S. Lincoln (Hrsg.), Handbook of qualitative research (2. Aufl.,
+S.733-768). Thousand Oaks, CA: Sage.
+Ellis, Carolyn & Bochner, Arthur P. (2006). Analyzing analytic autoethnography: An autopsy. Journal of Contemporary Ethnography, 35(4), 429-449.
+Ellis, Carolyn & Ellingson, Laura (2000). Qualitative methods. In Edgar Borgatta & Rhonda Montgomery (Hrsg.), Encyclopedia of sociology (S.2287-2296). New York: Macmillan.
+Ellis, Carolyn; Kiesinger, Christine E. & Tillmann-Healy, Lisa M. (1997). Interactive interviewing:
+Talking about emotional experience. In Rosanna Hertz (Hrsg.), Reflexivity and voice (S.119149). Thousand Oaks, CA: Sage.
+Fine, Gary A. (2003). Towards a people ethnography: Developing a theory from group life. Ethnography, 4(1), 41-60.
+Foster, Elissa (2006). Communicating at the end of life. Mahwah, NJ: Lawrence Erlbaum.
+Frank, Arthur W. (1995). The wounded storyteller. Chicago: University of Chicago Press.
+Freeman, Mark (2004). Data are everywhere: Narrative criticism in the literature of experience. In
+Colette Daiute & Cynthia Lightfoot (Hrsg.), Narrative analysis: Studying the development of individuals in society (S.63-81). Thousand Oaks, CA: Sage.
+Friedan, Betty (1964). The feminine mystique. New York: Dell.
+Gans, Herbert J. (1999). Participant observation: In the era of „ethnography.“ Journal of Contemporary Ethnography, 28(5), 540-548.
+
+356
+
+Carolyn Ellis, Tony E. Adams & Arthur P. Bochner
+
+Geertz, Clifford (1973). The interpretation of cultures. New York: Basic Books.
+Gingrich-Philbrook, Craig (2005). Autoethnography’s family values: Easy access to compulsory
+experiences. Text and Performance Quarterly, 25(4), 297-314.
+Glave, Thomas (2005). Words to our now: Imagination and dissent. Minneapolis: University of Minneapolis Press.
+Goodall, Bud H.L. (2001). Writing the new ethnography. Walnut Creek, CA: AltaMira.
+Goodall, Bud H.L. (2006). A need to know: The clandestine history of a CIA family. Walnut Creek,
+CA: Left Coast Press.
+Holman Jones, Stacy (2005). Autoethnography: Making the personal political. In Norman K. Denzin
+& Yvonna S. Lincoln (Hrsg.), Handbook of qualitative research (S.763-791). Thousand Oaks,
+CA: Sage.
+Hooks, Bell (1994). Teaching to transgress: Education as the practice of freedom. New York:
+Routledge.
+Jorgenson, Jane (2002). Engineering selves: Negotiating gender and identity in technical work. Management Communication Quarterly, 15(3), 350-380.
+Keller, Evelyn F. (1995). Reflections on gender and science. New Haven, NJ: Yale University Press.
+Kiesinger, Christine E. (2002). My father’s shoes: The therapeutic value of narrative reframing. In
+Arthur P. Bochner & Carolyn Ellis (Hrsg.), Ethnographically speaking: Autoethnography, literature, and aesthetics (S.95-114). Walnut Creek, CA: AltaMira.
+Kuhn, Thomas S. (1996). The structure of scientific revolutions (3. Aufl.). Chicago: University of
+Chicago Press.
+Lamott, Anne (1994). Bird by bird: Some instructions on writing and life. New York: Anchor.
+Lindquist, Julie (2002). A place to stand: Politics and persuasion in a working-class bar. Oxford:
+Oxford University Press.
+Lorde, Audre (1984). Sister outsider. Berkeley, CA: The Crossing Press.
+Lyotard, Jean-François (1984). The postmodern condition: A report on knowledge (übersetzt von G.
+Bennington & B. Massumi). Minneapolis: University of Minnesota Press.
+Madison, D. Soyini (2006). The dialogic performative in critical ethnography. Text and Performance
+Quarterly, 26(4), 320-324.
+Makagon, Daniel (2004). Where the ball drops: Days and nights in Times Square. Minneapolis:
+University of Minnesota Press.
+Maso, Ilja (2001). Phenomenology and ethnography. In Paul Atkinson, Amanda Coffey, Sara Delamont, John Lofland & Lyn Lofland (Hrsg.), Handbook of ethnography (S.136-144). Thousand
+Oaks, CA: Sage.
+McCauley, Stephen (1996). Let’s say. In Patrick Merla (Hrsg.), Boys like us: Gay writers tell their
+coming out stories (S.186-192). New York: Avon.
+Moro, Pamela (2006). It takes a darn good writer: A review of The Ethnographic I. Symbolic Interaction, 29(2), 265-269.
+Neumann, Mark (1999). On the rim: Looking for the Grand Canyon. Minneapolis: University of
+Minnesota Press.
+Nicholas, Cheryl L. (2004). Gaydar: Eye-gaze as identity recognition among gay men and lesbians.
+Sexuality and Culture, 8(1), 60-86.
+Paulson, Susan & Willig, Carla (2008). Older women and everyday talk about the ageing body. Journal of Health Psychology, 13(1), 106-120.
+Pelias, Ronald J. (2000). The critical life. Communication Education, 49(3), 220-228.
+Pelias, Ronald J. (2007). Jarheads, girly men, and the pleasures of violence. Qualitative Inquiry,
+13(7), 945-959.
+Philipsen, Gerry (1976). Places for speaking in Teamsterville. Quarterly Journal of Speech, 62(1), 1525.
+Plummer, Ken (2001). The call of life stories in ethnographic research. In Paul Atkinson, Amanda
+Coffey, Sara Delamont, John Lofland & Lyn Lofland (Hrsg.), Handbook of ethnography (S.395406). Thousand Oaks, CA: Sage.
+
+Autoethnografie
+
+357
+
+Poulos, Christopher N. (2008). Accidental ethnography: An inquiry into family secrecy. Walnut
+Creek, CA: Left Coast Press.
+Radway, Janice A. (1984). Reading the romance: Women, patriarchy, and popular literature. Chapel
+Hill: University of North Carolina Press.
+Richardson, Laurel (2000). Writing: A method of inquiry. In Norman K. Denzin & Yvonna S. Lincoln (Hrsg.), Handbook of qualitative research (S.923-948). Thousand Oaks, CA: Sage.
+Riedmann, Agnes (1993). Science that colonizes: A critique of fertility studies in Africa. Philadelphia:
+Temple University Press.
+Ronai, Carol R. (1992). The reflexive self through narrative: A night in the life of an erotic
+dancer/researcher. In Carolyn Ellis & Michael G. Flaherty (Hrsg.), Investigating subjectivity:
+Research on lived experience (S.102-124). Newbury Park, CA: Sage.
+Ronai, Carol R. (1996). My mother is mentally retarded. In Carolyn Ellis & Arthur P. Bochner
+(Hrsg.), Composing ethnography: Alternative forms of qualitative writing (S.109-131). Walnut
+Creek, CA: AltaMira.
+Rorty, Richard (1982). Consequences of pragmatism (essays 1972-1980). Minneapolis: University of
+Minnesota Press.
+Spry, Tami (2001). Performing autoethnography: An embodied methodological praxis. Qualitative
+Inquiry, 7(6), 706-732.
+Tedlock, Barbara. (1991). From participant observation to the observation of participation: The mergence of narrative ethnography. Journal of Anthropological Research, 47(1), 69-94.
+Tillmann, Lisa M. (2009). Body and bulimia revisited: Reflections on „A Secret Life.“ Journal of
+Applied Communication Research, 37(1), 98-112.
+Tillmann-Healy, Lisa M. (2001). Between gay and straight: Understanding friendship across sexual
+orientation. Walnut Creek, CA: AltaMira.
+Tololyan, Khachig (1987). Cultural narrative and the motivation of the terrorist. The Journal of Strategic Studies, 10(4), 217-233.
+Toyosaki, Satoshi; Pensoneau-Conway, Sandra L.; Wendt, Nathan A. & Leathers, Kyle (2009).
+Community autoethnography: Compiling the personal and resituating whiteness. Cultural Studies $ Critical Methodologies, 9(1), 56-83.
+Trahar, Sheila (2009). Beyond the story itself: Narrative inquiry and autoethnography in intercultural
+research in higher education. Forum Qualitative Sozialforschung / Forum: Qualitative Social
+Research, 10(1), Art. 30, http://nbn-resolving.de/urn:nbn:de:0114-fqs0901308.
+Tullis Owen, Jillian A.; McRae, Chris; Adams, Tony E. & Vitale, Alisha (2009). Truth troubles.
+Qualitative Inquiry, 15(1), 178-200.
+Valenzuela, Angela (1999). Subtractive schooling: U.S.-Mexican youth and the politics of caring.
+Albany: State University of New York Press.
+Van Maanen, John (1988). Tales of the field: On writing ethnography. Chicago: University of Chicago Press.
+Vande Berg, Leah & Trujillo, Nick (2008). Cancer and death: A love story in two voices. Cresskill,
+NJ: Hampton Press.
+Vidich, Arthur & Bensman, Joseph (1958). Small town in mass society. Princeton: Princeton University Press.
+Wood, Julie T. (2009). Gendered lives: Communication, gender, and culture. Boston: Wadsworth.
+Wyatt, Jonathan (2008). No longer loss: Autoethnographic stammering. Qualitative Inquiry, 14(6),
+955-967.
+Zaner, Richard M. (2004). Conversations on the edge: Narratives of ethics and illness. Washington,
+DC: Georgetown University Press.
+
+Günter Mey · Katja Mruck (Hrsg.)
+Handbuch Qualitative Forschung in der Psychologie
+
+Günter Mey
+Katja Mruck (Hrsg.)
+
+Handbuch
+Qualitative Forschung
+in der Psychologie
+
+Bibliografische Information der Deutschen Nationalbibliothek
+Die Deutsche Nationalbibliothek verzeichnet diese Publikation in der
+Deutschen Nationalbibliografie; detaillierte bibliografische Daten sind im Internet über
+<http://dnb.d-nb.de> abrufbar.
+
+1. Auflage 2010
+Alle Rechte vorbehalten
+© VS Verlag für Sozialwissenschaften | Springer Fachmedien Wiesbaden GmbH 2010
+Lektorat: Kea S. Brahms
+VS Verlag für Sozialwissenschaften ist eine Marke von Springer Fachmedien.
+Springer Fachmedien ist Teil der Fachverlagsgruppe Springer Science+Business Media.
+www.vs-verlag.de
+Das Werk einschließlich aller seiner Teile ist urheberrechtlich geschützt. Jede
+Verwertung außerhalb der engen Grenzen des Urheberrechtsgesetzes ist ohne
+Zustimmung des Verlags unzulässig und strafbar. Das gilt insbesondere für
+Vervielfältigungen, Übersetzungen, Mikroverfilmungen und die Einspeicherung
+und Verarbeitung in elektronischen Systemen.
+Die Wiedergabe von Gebrauchsnamen, Handelsnamen, Warenbezeichnungen usw. in diesem Werk
+berechtigt auch ohne besondere Kennzeichnung nicht zu der Annahme, dass solche Namen im
+Sinne der Warenzeichen- und Markenschutz-Gesetzgebung als frei zu betrachten wären und daher
+von jedermann benutzt werden dürften.
+Umschlaggestaltung: KünkelLopka Medienentwicklung, Heidelberg
+Druck und buchbinderische Verarbeitung: Ten Brink, Mepel
+Gedruckt auf säurefreiem und chlorfrei gebleichtem Papier
+Printed in the Netherlands
+ISBN 978-3-531-16726-8
+
+
