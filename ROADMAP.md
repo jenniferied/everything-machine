@@ -1,6 +1,49 @@
 # ROADMAP: Everything Machine
 
+> *Kepler's identity workshop — emergent aesthetics through human-AI collaboration*
+
 ## 📋 Aktive Aufgaben
+
+### Literature Review (2026-01-22) ✅
+| Domain | Papers | Downloaded | Missing | Status |
+|--------|--------|------------|---------|--------|
+| Human-AI Collaboration | 8 | 5 | 3 | ✅ Search + download |
+| Digital Identity / Virtual Personas | 9 | 1 | 8 | ✅ Search + download |
+| Generative Art Theory | 10 | 5 | 5 | ✅ Search + download |
+| Practice-Based Research | 7 | — | — | ✅ Already have |
+| **Total** | **27** | **11** | **16** | |
+
+**Downloaded (11):** Shneiderman 2007, Deterding 2017, Rezwana & Maher 2022, Ha & Eck 2018, Wang 2023, Molin & Nordgren 2019, Galanter 2003, Colton & Wiggins 2012, Jordanous 2012, Elgammal 2017, Gatys 2016
+
+**Missing (16) — need university proxy:**
+- Davis 2016 (Co-Creative Design) — ACM
+- Koch 2019 (Creative AI) — ACM
+- Turkle 1984, 1995 — books (library)
+- Arsenyan & Mirowska 2021, Mori 2012, Sands 2022, Thomas & Fowler 2021 — journals
+- boyd 2014 — book (library)
+- Boden 1990, 1998 — book + Elsevier
+- McCormack 2012, 2019, Colton 2012 (Painting Fool) — Springer chapters
+
+See full list: `thesis/literature-review/papers-index.md`
+
+**Files:**
+- `thesis/literature-review/papers-index.md`
+- `thesis/literature-review/outputs/*.md`
+
+**iCloud:** `~/Library/Mobile Documents/com~apple~CloudDocs/papers/everything-machine/`
+
+**PDF Download Strategy:**
+1. **Author websites** — search `[author] [title] PDF site:[university].edu`
+2. **University repositories** — White Rose, Kent, DiVA, Figshare
+3. **Conference sites** — computationalcreativity.net, ICCC proceedings
+4. **arXiv** — ML/AI papers (best coverage)
+5. **OpenAlex API** — check `is_oa:true` before searching
+6. **University proxy** — for ACM, Springer, Elsevier (see below)
+
+**Using University Proxy:**
+- Log in via TH OWL library portal → EZproxy
+- Download PDFs through proxy, then give me the files to organize
+- Or: use browser extension (EZproxy Redirect) for direct downloads
 
 ### Thesis
 | Task | Status |
