@@ -2,6 +2,7 @@
 name: reflection-interview
 triggers: ["/reflection", "/interview", "Reflexion schreiben", "reflection interview"]
 description: Interactive interview for journal entry reflections. Covers all 5 research sub-questions (Workflow, Autorschaft, Iteration, Scheitern, Ästhetik) aligned with the main research question.
+last_validated: "2026-02-12"
 ---
 
 # Reflection Interview Skill

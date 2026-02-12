@@ -2,6 +2,7 @@
 name: thesis-writing
 triggers: ["/thesis", "academic", "submission", "literature", "Abgabe", "Exposé", "APA"]
 description: Thesis writing skill for MA Artistic Research. Covers academic requirements, submission format, and literature review workflow.
+last_validated: "2026-02-12"
 ---
 
 # Thesis Writing Skill
