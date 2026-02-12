@@ -2,67 +2,76 @@
 
 > *Kepler's identity workshop — emergent aesthetics through human-AI collaboration*
 
-## 📋 Aktive Aufgaben
+## 📋 Thesis-Abschluss (2026-02-12 → 2026-02-14)
 
-### Literature Review (2026-01-22) ✅
-| Domain | Papers | Downloaded | Missing | Status |
-|--------|--------|------------|---------|--------|
-| Human-AI Collaboration | 8 | 5 | 3 | ✅ Search + download |
-| Digital Identity / Virtual Personas | 9 | 1 | 8 | ✅ Search + download |
-| Generative Art Theory | 10 | 5 | 5 | ✅ Search + download |
-| Practice-Based Research | 7 | — | — | ✅ Already have |
-| **Total** | **27** | **11** | **16** | |
+### Zeitplan: 2 Tage
 
-**Downloaded (11):** Shneiderman 2007, Deterding 2017, Rezwana & Maher 2022, Ha & Eck 2018, Wang 2023, Molin & Nordgren 2019, Galanter 2003, Colton & Wiggins 2012, Jordanous 2012, Elgammal 2017, Gatys 2016
+**Tag 1 (12.02.): Experimente + Quellen**
+| # | Task | Agent | Status |
+|---|------|-------|--------|
+| 1 | Experiment 7: FLUX 2 + PuLID Character Consistency | Jennifer (hands-on) | ⬜ |
+| 2 | Experiment 8: Agentic Creative Pipeline | Claude Code schreibt Script | ⬜ |
+| 3 | Journal-Einträge für Exp. 7+8 schreiben | /reflection-interview | ⬜ |
+| 4 | TroublingGAN (Hámošová & Rusnák) lesen + einordnen | Subagent: Recherche | ⬜ |
+| 5 | Quellen auf 7 Kern-Quellen reduzieren | Subagent: Lit Review | ⬜ |
 
-**Missing (16) — need university proxy:**
-- Davis 2016 (Co-Creative Design) — ACM
-- Koch 2019 (Creative AI) — ACM
-- Turkle 1984, 1995 — books (library)
-- Arsenyan & Mirowska 2021, Mori 2012, Sands 2022, Thomas & Fowler 2021 — journals
-- boyd 2014 — book (library)
-- Boden 1990, 1998 — book + Elsevier
-- McCormack 2012, 2019, Colton 2012 (Painting Fool) — Springer chapters
+**Tag 2 (13.02.): Synthese + Schreiben**
+| # | Task | Agent | Status |
+|---|------|-------|--------|
+| 6 | Section 4 "Meine Forschung" schreiben (~1.500 Wörter) | Subagent: Writer + Jennifer Review | ⬜ |
+| 7 | Section 5 "Diskussion" schreiben (~800 Wörter) | Subagent: Writer + Jennifer Review | ⬜ |
+| 8 | Abstract vervollständigen | Subagent: Writer | ⬜ |
+| 9 | Ethische Überlegungen einfügen | Subagent: Writer | ⬜ |
+| 10 | Finales Review + PDF bauen | Subagent: Reviewer | ⬜ |
 
-See full list: `thesis/literature-review/papers-index.md`
+### Agent-Orchestrierung (Opus 4.6)
 
-**Files:**
-- `thesis/literature-review/papers-index.md`
-- `thesis/literature-review/outputs/*.md`
+**Wie wir die Arbeit aufteilen:**
 
-**iCloud:** `~/Library/Mobile Documents/com~apple~CloudDocs/papers/everything-machine/`
+| Agent | Typ | Aufgabe |
+|-------|-----|---------|
+| **Orchestrator** (Hauptchat) | Opus 4.6 | Koordination, high-level Entscheidungen, Feedback |
+| **Writer** | Opus 4.6 Subagent | Schreibt Sektionen auf Deutsch, autoethnographischer Stil |
+| **Reviewer** | Opus 4.6 Subagent | Prüft gegen Thilos 1,0-Standard, AR-Qualität, Quellencheck |
+| **Researcher** | Sonnet Subagent | Recherchiert Tools, Quellen, technische Details |
+| **Experiment-Helper** | Sonnet Subagent | Schreibt Python-Scripts für Experiment 8 |
 
-**PDF Download Strategy:**
-1. **Author websites** — search `[author] [title] PDF site:[university].edu`
-2. **University repositories** — White Rose, Kent, DiVA, Figshare
-3. **Conference sites** — computationalcreativity.net, ICCC proceedings
-4. **arXiv** — ML/AI papers (best coverage)
-5. **OpenAlex API** — check `is_oa:true` before searching
-6. **University proxy** — for ACM, Springer, Elsevier (see below)
+**Workflow pro Sektion:**
+1. Orchestrator gibt Briefing (Struktur, Ton, Quellen)
+2. Writer-Agent schreibt ersten Entwurf
+3. Jennifer reviewt und gibt Feedback
+4. Reviewer-Agent prüft akademische Qualität
+5. Writer überarbeitet → fertig
 
-**Using University Proxy:**
-- Log in via TH OWL library portal → EZproxy
-- Download PDFs through proxy, then give me the files to organize
-- Or: use browser extension (EZproxy Redirect) for direct downloads
+### 7 Kern-Quellen (reduziert von 31)
 
-### Thesis
-| Task | Status |
-|------|--------|
-| KI-Experimente durchführen & dokumentieren | 🔄 |
-| Interviews mit Gavin | 🔄 |
-| Assets sammeln (MP3s, Portrait-Reels) | ⬜ |
-| Video-Reflexion aufnehmen | ⬜ |
-| Paper schreiben (~10 Seiten) | ⬜ |
-| 3D-Renders → Gaussian Splat Generator testen | ⬜ |
+| # | Quelle | Funktion in der Arbeit |
+|---|--------|----------------------|
+| 1 | Borgdorff (2013) | AR-Definition, Praxis als Forschung |
+| 2 | Candy (2006) | Practice-based vs practice-led |
+| 3 | Boden (2004) | Kreativitäts-Framework (explorativ, kombinatorisch, transformativ) |
+| 4 | Ellis (2011) | Autoethnographie-Methodik |
+| 5 | Schön (1983) | Reflection-in-Action |
+| 6 | Mori (2012) | Uncanny Valley + Suspension of Disbelief (Coleridge) |
+| 7 | TroublingGAN — Hámošová & Rusnák (JAR 31) | GAN + AR, "exposing to failure," Scheitern als Ästhetik |
 
-### Website Features
-| Feature | Status |
-|---------|--------|
-| Splat Viewer fertigstellen | ⬜ |
-| Point Cloud Viewer | ⬜ |
-| Alle Unterseiten reviewen | ⬜ |
+### 2 Neue Experimente
 
-### Reflexionen mit /reflection-interview
+**Experiment 7: FLUX 2 + PuLID Multi-Reference Character Consistency**
+- Tool: ComfyUI + FLUX 2 + PuLID-Flux-II
+- Ziel: Testen ob neuere Modelle (2026) Keplers Maske besser respektieren
+- Erwartung: Besser als Nov 2025, aber immer noch Nischenproblem
+- Dauer: ~2h
+- Forschungsbeitrag: Bestätigt/widerlegt "Training Data Bias" These
+
+**Experiment 8: Agentic Creative Pipeline**
+- Tool: Claude Code + Python + FLUX API oder lokales ComfyUI
+- Ziel: KI schreibt Script das automatisiert Kepler-Varianten testet
+- Einzigartig: Dreistufige Kollaboration (Jennifer → Claude Code → Bildmodell)
+- Dauer: ~2h
+- Forschungsbeitrag: Neue Autorschaftsform "Orchestratorin"
+
+### Reflexionen
 | Journal | Status |
 |---------|--------|
 | referenzen-sammeln | ✅ |
@@ -71,6 +80,8 @@ See full list: `thesis/literature-review/papers-index.md`
 | cursor-build | ✅ |
 | ki-verstehen | ✅ |
 | suno-experiment | ✅ |
+| flux2-character-consistency | ⬜ |
+| agentic-creative-pipeline | ⬜ |
 
 ---
 
