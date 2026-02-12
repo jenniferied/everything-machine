@@ -13,7 +13,7 @@ Use when writing or rewriting reflection sections for journal entries in the Eve
 
 ## Research Context
 
-**Hauptfrage:** Wie verändert der Einsatz generativer KI-Werkzeuge meinen kreativen Arbeitsprozess?
+**Hauptfrage:** Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?
 
 **Unterfragen:**
 1. Workflow — Welche neuen Arbeitsschritte entstehen? Welche fallen weg?
