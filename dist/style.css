@@ -1107,7 +1107,7 @@ main.container {
 
 .reflection-section-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: #9ca3af;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -1125,7 +1125,7 @@ main.container {
 }
 
 .reflection-question {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #4ade80;
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -1134,7 +1134,7 @@ main.container {
 }
 
 .reflection-answer {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #d1d5db;
     line-height: 1.5;
 }
@@ -1168,7 +1168,7 @@ main.container {
 }
 
 .reflection-reference {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     color: #6b7280;
     font-style: italic;
 }
@@ -1242,7 +1242,7 @@ main.container {
 
 .reflection-info-content h4 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     color: #4ade80;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -2271,7 +2271,7 @@ main.container {
 .chat-bubble {
     padding: 0.75rem 1rem;
     line-height: 1.5;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -2654,7 +2654,7 @@ main.container {
 }
 
 .reflection-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #6b7280;
 }
 
@@ -2699,13 +2699,13 @@ main.container {
 }
 
 .reflection-question {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #6b7280;
     margin-bottom: 0.25rem;
 }
 
 .reflection-answer {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #d1d5db;
     line-height: 1.5;
 }
@@ -2717,7 +2717,7 @@ main.container {
 }
 
 .reflection-reference {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     color: #6b7280;
 }
 
@@ -2778,7 +2778,7 @@ main.container {
     max-width: 80%;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     line-height: 1.4;
 }
 
