@@ -83,16 +83,16 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 
 ### Kontext
 
-- **Tools:** Suno AI (Web-Interface)
-- **Intention:** Game-Soundtrack für das Panelki-Projekt erstellen
+- **Tools:** Suno AI im Browser, v4.5 (kostenlos) und v5 (beta, im Free Trial)
+- **Intention:** Loopbarer, atmosphärischer Soundtrack für die sowjetisch-dystopische Spielwelt Panelki – minimal, kalt, pixelig, keine Vocals
 
 ### Die 5 Forschungsfragen
 
-- **Workflow:** Schneller Prototyp – Ideen testen ohne Musikwissen.
-- **Autorschaft:** Enttäuscht, Kurator:in – ich habe nur ausgewählt, nicht gestaltet.
+- **Workflow:** Schneller Prototyp – Ideen testen ohne selbst Musik produzieren zu können. Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte.
+- **Autorschaft:** Enttäuschend – ich war nur Kurator:in. Kein Regler, kein Parameter zum Drehen. Nur der Prompt, und der wurde anders interpretiert als gemeint.
 - **Iteration:** Verworfen – vermute, mit diesem Modell nicht weit zu kommen.
-- **Scheitern:** Zu kommerziell. Die Beschreibungen waren besser als der Output.
-- **Ästhetik:** Verfehlt – KI lieferte generischen Sound statt minimal-dystopisch.
+- **Scheitern:** Zu kommerziell, zu poliert, wie Stock-Music. Die generierten *Beschreibungen* trafen genau meinen Geschmack, aber die Musik selbst klang völlig anders.
+- **Ästhetik:** Komplett verfehlt. Ich wollte minimal-dystopisch, bekommen habe ich generischen Indie-Game-Sound. Suno ist auf kommerzielle Mehrheitsästhetik trainiert – meine Nische liegt außerhalb dessen, was das Modell liefern kann.
 
 ### Synthese
 
@@ -109,7 +109,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Suno AI.</p></div>
+  <div class="chat-bubble"><p>Suno AI, im Browser. Ich habe sowohl v4.5 (kostenlos) als auch v5 (beta, im Free Trial) getestet.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -117,7 +117,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Game-Soundtrack.</p></div>
+  <div class="chat-bubble"><p>Einen loopbaren, atmosphärischen Soundtrack für meine sowjetisch-dystopische Spielwelt Panelki. Minimal, kalt, pixelig. Keine Vocals, eher Hintergrundmusik zum Explorieren.</p></div>
 </div>
 <h4>Die 5 Forschungsfragen</h4>
 <div class="chat-message claude">
@@ -126,7 +126,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Schneller Prototyp.</p></div>
+  <div class="chat-bubble"><p>Es war ein schneller Prototyp. Ich konnte Ideen testen, ohne selbst Musik produzieren zu können. Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -134,7 +134,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Enttäuscht, Kurator:in.</p></div>
+  <div class="chat-bubble"><p>Enttäuschend. Ich war nur Kurator:in, ich konnte auswählen, aber nicht gestalten. Kein Regler, kein Parameter, den ich hätte drehen können. Nur der Prompt, und der wurde offensichtlich anders interpretiert als gemeint.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -150,7 +150,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Zu kommerziell, Beschreibung ≠ Output.</p></div>
+  <div class="chat-bubble"><p>Der Output klang zu kommerziell, zu poliert, wie Stock-Music. Das Frustrierende: Die generierten <em>Beschreibungen</em> trafen genau meinen Geschmack ('Bitcrushed chiptune pads over a sparse, detuned synth choir'), aber die Musik selbst klang völlig anders.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -158,7 +158,7 @@ Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Nein, verfehlt.</p></div>
+  <div class="chat-bubble"><p>Nein, komplett verfehlt. Ich wollte minimal-dystopisch, bekommen habe ich generischen Indie-Game-Sound. Das zeigt mir, dass Suno auf kommerzielle Mehrheitsästhetik trainiert ist. Meine Nische liegt einfach außerhalb dessen, was das Modell liefern kann.</p></div>
 </div>
 <h4>Synthese</h4>
 <div class="chat-message claude">

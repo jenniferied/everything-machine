@@ -44,14 +44,14 @@ Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlic
 ### Die 5 Forschungsfragen
 
 - **Workflow:** Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.
-- **Autorschaft:** Kollaboration.
-- **Iteration:** Keine KI verwendet.
+- **Autorschaft:** Kollaboration mit Gavin – ich habe die Struktur vorgegeben (Ordner, Boards), er hat Material beigesteuert. Keine KI, rein menschliche Kuration.
+- **Iteration:** Keine KI verwendet, daher keine KI-Iteration. Aber der Prozess selbst war iterativ: sammeln, sortieren, verwerfen, neu suchen. Langsamer, aber alles bewusst gewählt.
 - **Scheitern:** Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).
-- **Ästhetik:** Nicht relevant.
+- **Ästhetik:** Noch nicht direkt – das war Vorarbeit. Aber beim Sammeln sind mir wiederkehrende Ästhetiken aufgefallen, die zu Kepler passen: dunkel, strukturiert, maskenhaft. Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung.
 
 ### Synthese
 
-- **Zentrale Erkenntnis:** Das Sammeln von Referenzen ist ein rein menschlicher, kurativer Prozess – auch wenn manche der gesammelten Bilder selbst KI-generiert sein könnten.
+- **Zentrale Erkenntnis:** Das Sammeln von Referenzen hat gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle – aber für die Weiterverwendung als Trainingsdaten schon.
 - **Offene Frage:** Was bedeutet es für Urheberrechte, wenn man fremde Bilder als Stilreferenz für KI-Generierung nutzt?
 
 **Keywords:** #Pinterest #Kollaboration #Referenzen #Vorbereitung #CharacterDesign
@@ -89,7 +89,7 @@ Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlic
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Kollaboration.</p></div>
+  <div class="chat-bubble"><p>Kollaboration mit Gavin. Wir haben parallel gearbeitet, jeder an seinem Rechner. Ich habe die Struktur vorgegeben, also Ordner und Boards, er hat Material beigesteuert. Keine KI involviert, rein menschliche Kuration und Abstimmung.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -97,7 +97,7 @@ Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlic
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Keine KI verwendet.</p></div>
+  <div class="chat-bubble"><p>Keine KI verwendet, daher keine KI-Iteration. Aber der Prozess selbst war iterativ: Wir haben gesammelt, sortiert, verworfen, neu gesucht. Der Unterschied: Es war langsamer, aber alles war bewusst gewählt.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
@@ -113,7 +113,7 @@ Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlic
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Nicht relevant.</p></div>
+  <div class="chat-bubble"><p>Noch nicht direkt, das war Vorarbeit. Aber beim Sammeln sind mir bestimmte wiederkehrende Ästhetiken aufgefallen, die zu Kepler passen: dunkel, strukturiert, maskenhaft. Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung.</p></div>
 </div>
 <div class="transcript-section-header">Synthese</div>
 <div class="chat-message claude">
@@ -122,6 +122,6 @@ Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlic
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>Ich weiß nicht ganz, was mit der Frage gemeint ist.</p></div>
+  <div class="chat-bubble"><p>Das Sammeln von Referenzen hat mir gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle. Aber für die Weiterverwendung als Trainingsdaten schon.</p></div>
 </div>
 </div>
