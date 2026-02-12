@@ -34,13 +34,8 @@
                     <button id="contents-toggle" class="nav-link dropdown-toggle active" aria-haspopup="true">Inhalt</button>
                     <div id="dropdown-menu" class="dropdown-menu" role="menu">
                         <button class="dropdown-item active" data-page="overview" role="menuitem">Projektübersicht</button>
-                        <button class="dropdown-item" data-page="framework" role="menuitem">Forschungsrahmen</button>
                         <button class="dropdown-item" data-page="logbook" role="menuitem">Prozess-Logbuch</button>
-                        <button class="dropdown-item" data-page="dialogues" role="menuitem">Künstler-Dialoge</button>
                         <button class="dropdown-item" data-page="about" role="menuitem">Über mich</button>
-                        <a href="testing/test-3d-viewer.html" class="dropdown-item" role="menuitem" style="font-style: italic; opacity: 0.5;">3D Viewer (Test)</a>
-                        <a href="testing/test-splat-viewer.html" class="dropdown-item" role="menuitem" style="font-style: italic; opacity: 0.5;">Splat Viewer (Test)</a>
-                        <a href="testing/test-pointcloud-viewer.html" class="dropdown-item" role="menuitem" style="font-style: italic; opacity: 0.5;">Point Cloud (Test)</a>
                     </div>
                 </div>
 
@@ -192,18 +187,18 @@
                     <div id="3d-viewer-container" class="viewer-container" style="height: 280px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
                 </div>
 
+                <!-- Point Cloud Viewer Section -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Point Cloud</h3>
+                    <p class="text-gray-300 mb-4">Interaktive 3D-Punktwolke. Bewege die Maus, um die Darstellung zu drehen.</p>
+                    <div id="point-cloud-viewer-container" class="viewer-container"
+                         style="height: 350px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;">
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- ===== SEITE: FORSCHUNGSRAHMEN ===== -->
-        <section id="page-framework" class="page-content">
-            <div class="space-y-8 max-w-4xl mx-auto">
-                <div class="prose prose-invert max-w-none" id="framework-content">
-                    <!-- Inhalt wird aus FORSCHUNGSRAHMEN.md geladen -->
-                    <p class="text-gray-400">Lade Forschungsrahmen...</p>
-                </div>
-            </div>
-        </section>
 
 
         <!-- ===== SEITE 2: PROZESS-LOGBUCH (Die fließenden Blöcke) ===== -->
@@ -225,38 +220,6 @@
             </div>
         </section>
 
-        <!-- ===== SEITE 3: KÜNSTLER-DIALOGE (Gesonderte Seite) ===== -->
-        <section id="page-dialogues" class="page-content">
-            <h2 class="text-3xl font-bold mb-8 uppercase tracking-wider">Künstler-Klienten-Dialoge</h2>
-            <div class="logbook-grid">
-                <!-- Dialog 1 -->
-                <div class="logbook-item dialog-item">
-                    <span class="text-sm text-green-300">Dialog 1 (Audio-Transkript)</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-white">"Das fühlt sich schon nach Kepler an."</h3>
-                    <p class="mb-4 italic">J.M: "Hier sind die ersten generierten Bilder, basierend auf unserem Pinterest-Board und den alten Covern. Erkennst du den Stil wieder?"</p>
-                    <p class="mb-4 italic">G.J: "Ja, krass. Besonders Bild 3 und 5. Das ist genau die Farbstimmung. Die Voxel-Animation war immer so ein Krampf... wenn wir das umgehen könnten, wäre das mega. Lass uns versuchen, den Charakter damit konsistenter zu machen."</p>
-                    <p class="text-sm text-green-300">Abschluss von Block 1. Nächster Schritt: Charakter-Kohärenz testen.</p>
-                </div>
-
-                <!-- Dialog 2 -->
-                <div class="logbook-item dialog-item">
-                    <span class="text-sm text-green-300">Dialog 2 (Zoom-Mitschrift)</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-white">"Der Hintergrund ja, der Charakter nein."</h3>
-                    <p class="mb-4 italic">G.J: "Die Hintergründe (Log 4) sind perfekt. Das können wir sofort für das nächste Cover nutzen. Aber die generierten Charaktere (Log 3)... das ist nicht Kepler. Die Maske ist falsch. Das Voxel-Modell hat mehr Charakter."</p>
-                    <p class="mb-4 italic">J.M: "Okay, das bestätigt meine Vermutung. Das Produktionsproblem der Voxel-Animation lösen wir so nicht direkt. Wir umgehen es, indem wir den Voxel-Charakter in die KI-Welten setzen."</p>
-                    <p class="text-sm text-green-300">Abschluss von Block 2. Nächster Schritt: Animation (Dynamische Welten).</p>
-                </div>
-
-                <!-- Dialog 3 -->
-                <div class="logbook-item dialog-item">
-                    <span class="text-sm text-green-300">Dialog 3 (Finale)</span>
-                    <h3 class="text-xl font-bold mt-2 mb-4 text-white">"Der beste Workflow: Hybrid"</h3>
-                    <p class="mb-4 italic">J.M: "Nach allen Tests, was ist dein Fazit?"</p>
-                    <p class="mb-4 italic">G.J: "Der Hybrid-Ansatz ist der Weg. Die KI ist eine 'Everything Machine' für die Welt, die Hintergründe, den Vibe (Log 5). Den Charakter selbst (das Voxel-Modell) behalten wir aber 'in-house', um die Kontrolle zu wahren. Die KI löst unser Voxel-Problem nicht, indem sie den Charakter ersetzt, sondern indem sie ihm eine Welt gibt, in der er existieren kann."</p>
-                    <p class="text-sm text-green-300">Abschluss von Block 3. Nächster Schritt: Evaluation.</p>
-                </div>
-            </div> <!-- Ende .logbook-grid -->
-        </section>
 
         <!-- ===== SEITE 4: ÜBER MICH (About Page) ===== -->
         <section id="page-about" class="page-content">
@@ -265,7 +228,7 @@
                 <div class="about-header">
                     <div class="about-profile-grid">
                         <div class="about-image-container">
-                            <img src="https://placehold.co/300x300/1f2937/4ade80?text=Jennifer+Meier" alt="Jennifer Meier" class="about-profile-image">
+                            <img src="assets/icons/user.png" alt="Jennifer Meier" class="about-profile-image">
                         </div>
                         <div class="about-info">
                             <h1 class="about-name">Jennifer Meier</h1>

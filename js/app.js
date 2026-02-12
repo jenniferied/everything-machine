@@ -588,7 +588,6 @@ class Application {
     
     // Define pages to load
     const pages = [
-      { id: 'framework', file: 'content/forschungsrahmen.md', container: 'framework-content' },
       { id: 'references', file: 'content/referenzen.md', container: 'references-content' }
     ];
     
