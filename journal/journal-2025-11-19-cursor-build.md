@@ -94,7 +94,7 @@ Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer an
 
 - **Workflow:** Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht. Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.
 - **Autorschaft:** I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.
-- **Iteration:** (nicht im Interview abgedeckt)
+- **Iteration:** Die KI-Ausgabe war sofort da – Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, aber manchmal habe ich zu schnell akzeptiert, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.
 - **Scheitern:** Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.
 - **Ästhetik:** Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.
 
@@ -152,7 +152,7 @@ Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehende
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p><em>(Nicht im Interview abgedeckt)</em></p></div>
+  <div class="chat-bubble"><p>Die KI-Ausgabe war sofort da. Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, weil ich nicht mehr googeln und Stack Overflow durchforsten musste. Aber es hat auch dazu geführt, dass ich manchmal zu schnell akzeptiert habe, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
