@@ -18,12 +18,14 @@ ENGINE := lualatex
 OUTDIR := output
 DOCSDIR := docs
 BIBFILE := references/bibliography.bib
+CSLFILE := references/apa.csl
 
 # Common Pandoc flags
 PANDOC_FLAGS := --template=$(TEMPLATE) \
                 --pdf-engine=$(ENGINE) \
                 --citeproc \
-                --bibliography=$(BIBFILE)
+                --bibliography=$(BIBFILE) \
+                --csl=$(CSLFILE)
 
 # === DEFAULT TARGET ===
 help:

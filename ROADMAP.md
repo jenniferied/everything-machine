@@ -18,11 +18,11 @@
 **Tag 2 (13.02.): Synthese + Schreiben**
 | # | Task | Agent | Status |
 |---|------|-------|--------|
-| 6 | Section 4 "Meine Forschung" schreiben (~1.500 Wörter) | Subagent: Writer + Jennifer Review | ⬜ |
-| 7 | Section 5 "Diskussion" schreiben (~800 Wörter) | Subagent: Writer + Jennifer Review | ⬜ |
-| 8 | Abstract vervollständigen | Subagent: Writer | ⬜ |
-| 9 | Ethische Überlegungen einfügen | Subagent: Writer | ⬜ |
-| 10 | Finales Review + PDF bauen | Subagent: Reviewer | ⬜ |
+| 6 | Section 4 "Meine Forschung" schreiben (~1.500 Wörter) | Subagent: Writer + Jennifer Review | ✅ |
+| 7 | Section 5 "Diskussion" schreiben (~800 Wörter) | Subagent: Writer + Jennifer Review | ✅ |
+| 8 | Abstract vervollständigen | Subagent: Writer | ✅ |
+| 9 | Ethische Überlegungen einfügen | Subagent: Writer | ✅ |
+| 10 | Finales Review + PDF bauen | Subagent: Reviewer | 🔄 (formatting iterations) |
 
 ### Agent-Orchestrierung (Opus 4.6)
 
@@ -118,6 +118,12 @@
 
 ## 📝 Retrospektiven
 
+### 2026-02-12: Thesis Sections Written + PDF Pipeline Fixed
+- Sections 4+5, Abstract, Ethik geschrieben via 3 parallele Writer-Agents + Reviewer
+- 7 Runden PDF-Formatting: Überschriften, Light/Dark Theme, Zitate, Indent
+- biblatex/citeproc Konflikt gelöst: biblatex entfernt, APA CSL heruntergeladen
+- Noch offen: Experimente 7+8, Journal-Einträge, [N]-Platzhalter ersetzen
+
 ### 2026-01-13: Roadmap Skill & Session Management
 - Created `/roadmap` skill for interactive task selection
 - Learning: Interactive tasks (interviews) work better in dedicated sessions, not sub-agents
@@ -146,6 +152,7 @@
 - [x] Reflection Interview Skill
 
 ### Website
+- [x] Repo-Root aufgeräumt: Test-HTMLs → testing/, style.css → dist/, manifest → journal/
 - [x] EventBus-Architektur
 - [x] Journal-System
 - [x] Music Player

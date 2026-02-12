@@ -3,7 +3,7 @@
 % Configured for LuaLaTeX with dark background matching website aesthetic
 
 \documentclass[
-  10pt,
+  9pt,
   a4paper,
   oneside
 ]{article}
@@ -43,9 +43,11 @@
 % Color definitions matching style.css
 \definecolor{darkbg}{HTML}{111111}      % background-color: #111
 \definecolor{lighttext}{HTML}{d1d5db}   % color: #d1d5db (text-gray-300)
-\definecolor{accentgreen}{HTML}{3cb371} % slightly desaturated/darker green
+\definecolor{accentgreen}{HTML}{1a6b40} % dark green for light bg readability
 \definecolor{mutedtext}{HTML}{9ca3af}   % color: #9ca3af (text-gray-400)
 \definecolor{darkborder}{HTML}{1f2937}  % background: #1f2937 (bg-gray-800)
+\definecolor{contentbg}{HTML}{e0e0e0}  % light gray for content pages
+\definecolor{darktext}{HTML}{111111}    % near-black for body text on light bg
 
 % === GLOW EFFECT FOR TITLE ===
 \usepackage{shadowtext}
@@ -57,21 +59,7 @@
 \color{lighttext}
 
 % === BIBLIOGRAPHY ===
-\usepackage[
-  backend=biber,
-  style=apa,
-  sorting=nyt,
-  maxbibnames=99,
-  maxcitenames=2,
-  uniquelist=false
-]{biblatex}
-
-$if(bibliography)$
-\addbibresource{$bibliography$}
-$endif$
-
-% Bibliography font size (one point smaller than body)
-\renewcommand*{\bibfont}{\small}
+% Citations handled by Pandoc --citeproc + CSL file (no biblatex)
 
 % === PAGE LAYOUT ===
 % APA 7 standard: 1 inch (2.54cm) margins
@@ -83,8 +71,8 @@ $endif$
 ]{geometry}
 
 % === PARAGRAPH FORMATTING ===
-\usepackage{indentfirst}
-\setlength{\parindent}{1cm}    % Slightly less than APA for dark theme readability
+% No paragraph indent
+\setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5em}    % Small gap between paragraphs
 
 % === LINE SPACING ===
@@ -97,32 +85,32 @@ $endif$
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[C]{\color{mutedtext}\thepage}
+\fancyfoot[C]{\color{mutedtext!60!darktext}\thepage}
 
 % === SECTION FORMATTING ===
 \usepackage{titlesec}
 \setcounter{secnumdepth}{0}  % No numbering for headings
 \setcounter{tocdepth}{3}
 
-% Level 1: Centered, Pixel Font (VT323 larger), Accent Color
+% Level 1: Left-aligned, Pixel Font, Accent Color (compact)
 \titleformat{\section}
-  {\pixelheading\fontsize{20}{26}\selectfont\centering\color{accentgreen}}
-  {\thesection}{1em}{}
+  {\pixelheading\fontsize{14}{18}\selectfont\raggedright\color{accentgreen}}
+  {\thesection}{0.5em}{}
 
-% Level 2: Left-aligned, Pixel Font (VT323 larger), Accent Color
+% Level 2: Left-aligned, Pixel Font, Accent Color (compact)
 \titleformat{\subsection}
-  {\pixelheading\fontsize{17}{22}\selectfont\raggedright\color{accentgreen}}
-  {\thesubsection}{1em}{}
+  {\pixelheading\fontsize{12}{16}\selectfont\raggedright\color{accentgreen}}
+  {\thesubsection}{0.5em}{}
 
-% Level 3: Left-aligned, Pixel Font (VT323), Light Text
+% Level 3: Left-aligned, Pixel Font, Light Text (compact)
 \titleformat{\subsubsection}
-  {\pixelheading\fontsize{14}{18}\selectfont\raggedright\color{lighttext}}
-  {\thesubsubsection}{1em}{}
+  {\pixelheading\fontsize{11}{14}\selectfont\raggedright\color{darktext}}
+  {\thesubsubsection}{0.5em}{}
 
-% Spacing around headings
-\titlespacing*{\section}{0pt}{2em}{1em}
-\titlespacing*{\subsection}{0pt}{1.5em}{0.75em}
-\titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
+% Spacing around headings (compact)
+\titlespacing*{\section}{0pt}{1.2em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
+\titlespacing*{\subsubsection}{0pt}{0.6em}{0.2em}
 
 % === HYPERLINKS ===
 \usepackage[
@@ -251,7 +239,7 @@ $endif$
     \topsep=0.5em
     \parsep=0pt
     \itshape
-    \color{mutedtext}
+    \color{darktext!70}
   }%
   \item\relax
 }{\endlist}
@@ -370,6 +358,10 @@ $if(title)$
 \clearpage
 $endif$
 
+% Switch to light theme for content pages
+\pagecolor{contentbg}
+\color{darktext}
+
 $if(abstract)$
 \begin{abstract}
 \noindent $abstract$
@@ -378,7 +370,7 @@ $if(abstract)$
 $endif$
 
 $if(toc)$
-{\color{accentgreen}\tableofcontents}
+{\color{darktext}\tableofcontents}
 \clearpage
 $endif$
 

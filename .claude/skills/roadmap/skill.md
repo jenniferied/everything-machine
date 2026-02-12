@@ -3,6 +3,7 @@ name: roadmap
 version: "1.0.0"
 triggers: ["/roadmap", "what should I work on", "show tasks", "what's next"]
 description: Display ROADMAP.md tasks and offer interactive task selection with sub-agent suggestions.
+last_validated: "2026-02-12"
 ---
 
 # Roadmap Skill
