@@ -7,7 +7,7 @@ export class JournalLoader {
   /**
    * @param {string} manifestPath - Path to journal manifest JSON
    */
-  constructor(manifestPath = 'journal-manifest.json') {
+  constructor(manifestPath = 'journal/manifest.json') {
     this.manifestPath = manifestPath;
     this.manifest = null;
   }
