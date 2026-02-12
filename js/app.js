@@ -22,9 +22,6 @@ import { FloatingAnimation } from './animations/FloatingAnimation.js';
 import { LazyLoader } from './media/LazyLoader.js';
 import { ImageGallery } from './media/ImageGallery.js';
 
-// Import UI
-import { AIAttribution } from './ui/AIAttribution.js';
-
 // Import audio
 import { MusicPlayer } from './audio/MusicPlayer.js';
 
@@ -37,7 +34,6 @@ import { NavigationState } from './navigation/NavigationState.js';
 import { JournalManager } from './journal/JournalManager.js';
 
 // Import pages
-import { MarkdownPageLoader } from './pages/MarkdownPageLoader.js';
 
 /**
  * Application class
@@ -107,10 +103,7 @@ class Application {
     // Phase 9: Setup journal
     await this.setupJournal();
     
-    // Phase 10: Setup markdown pages
-    await this.setupMarkdownPages();
-    
-    // Phase 11: Initialize media lazy loading
+    // Phase 10: Initialize media lazy loading
     await this.setupMediaLazyLoading();
     
     // Phase 12: Start the application
@@ -387,27 +380,6 @@ class Application {
   }
 
   /**
-   * Setup UI components (AI Attribution, etc.)
-   * @returns {Promise<void>}
-   */
-  async setupUI() {
-    // AI Attribution footer
-    const footerContainer = document.querySelector('footer') || document.querySelector('.ai-attribution-container');
-    
-    if (footerContainer) {
-      const aiAttribution = AIAttribution.createCursorAttribution(
-        footerContainer,
-        this.eventBus
-      );
-      
-      aiAttribution.render();
-      this.uiComponents.set('ai-attribution', aiAttribution);
-      
-      console.log('[App] AI Attribution component rendered');
-    }
-  }
-
-  /**
    * Setup audio player
    * @returns {Promise<void>}
    */
@@ -577,34 +549,6 @@ class Application {
     
     this.uiComponents.set('journal-manager', journalManager);
     console.log('[App] Journal system initialized');
-  }
-
-  /**
-   * Setup markdown pages (Forschungsrahmen, Referenzen)
-   * @returns {Promise<void>}
-   */
-  async setupMarkdownPages() {
-    const markdownPageLoader = new MarkdownPageLoader(this.eventBus);
-    
-    // Define pages to load
-    const pages = [
-      { id: 'references', file: 'content/referenzen.md', container: 'references-content' }
-    ];
-    
-    // Listen for page changes to lazy-load content
-    this.eventBus.on('nav:pageChanged', async (data) => {
-      const page = pages.find(p => p.id === data.pageId);
-      if (page) {
-        const container = document.getElementById(page.container);
-        if (container && !container.dataset.loaded) {
-          await markdownPageLoader.loadPage(page.file, container);
-          container.dataset.loaded = 'true';
-        }
-      }
-    });
-    
-    this.uiComponents.set('markdown-page-loader', markdownPageLoader);
-    console.log('[App] Markdown pages setup');
   }
 
   /**
