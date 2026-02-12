@@ -624,12 +624,6 @@ main.container {
     margin: 0;
 }
 
-/* Utility für Dialog-Blöcke */
-.dialog-item {
-    background-color: #0c2a1e; /* Dunkles Grün */
-    border: 1px solid #4ade80; /* border-accent */
-}
-
 /* --- Mini Audio Player (Neu) --- */
 .mini-player-container {
     display: flex;
@@ -1023,6 +1017,7 @@ main.container {
 .reflection-widget {
     margin: 2rem 0;
     padding: 0;
+    font-size: 0.9rem;
     background: linear-gradient(135deg, #0a0f1a 0%, #111827 50%, #0a1628 100%);
     border: 1px solid #374151;
     border-radius: 0.5rem;
@@ -1074,7 +1069,7 @@ main.container {
     background-color: rgba(74, 222, 128, 0.1);
     border: 1px solid rgba(74, 222, 128, 0.3);
     border-radius: 0.25rem;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #4ade80;
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -1107,7 +1102,7 @@ main.container {
 
 .reflection-section-title {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #9ca3af;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -1125,7 +1120,7 @@ main.container {
 }
 
 .reflection-question {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #4ade80;
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -1168,7 +1163,7 @@ main.container {
 }
 
 .reflection-reference {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #6b7280;
     font-style: italic;
 }
@@ -1242,7 +1237,7 @@ main.container {
 
 .reflection-info-content h4 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #4ade80;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -1641,172 +1636,6 @@ main.container {
 .control-icon {
     display: inline-block;
     line-height: 1;
-}
-
-/* --- AI Attribution Component --- */
-.ai-attribution {
-    max-width: 800px;
-    margin: 2rem auto;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-/* Simple, low-key one-liner style */
-.ai-attribution-simple {
-    text-align: center;
-    padding: 0.5rem 0;
-}
-
-.ai-attribution-simple .ai-attribution-text {
-    font-size: 0.75rem;
-    color: #6b7280;
-    font-weight: 400;
-}
-
-/* Legacy badge styles (kept for backwards compatibility) */
-.ai-attribution-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(31, 41, 55, 0.5);
-    border: 1px solid #4ade80;
-    border-radius: 9999px;
-    color: #4ade80;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.ai-attribution-badge:hover {
-    background: rgba(74, 222, 128, 0.1);
-    box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
-}
-
-.ai-attribution-icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-}
-
-.ai-attribution-text {
-    font-weight: 500;
-}
-
-.ai-attribution-toggle {
-    background: none;
-    border: none;
-    color: #4ade80;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-}
-
-.ai-attribution-toggle:hover {
-    transform: scale(1.1);
-}
-
-.ai-attribution-toggle[aria-expanded="true"] .ai-attribution-toggle-icon {
-    transform: rotate(180deg);
-}
-
-.ai-attribution-toggle-icon {
-    transition: transform 0.2s ease;
-}
-
-.ai-attribution-details {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
-    margin-top: 0;
-}
-
-.ai-attribution-details.expanded {
-    max-height: 1000px;
-    opacity: 1;
-    margin-top: 1rem;
-}
-
-.ai-attribution-section {
-    background: rgba(31, 41, 55, 0.3);
-    border: 1px solid #374151;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.ai-attribution-section:last-child {
-    margin-bottom: 0;
-}
-
-.ai-attribution-section-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #4ade80;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.ai-attribution-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.ai-attribution-list-item {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #374151;
-    color: #d1d5db;
-}
-
-.ai-attribution-list-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.ai-attribution-list-item strong {
-    color: #f3f4f6;
-    font-weight: 500;
-}
-
-.ai-attribution-provider {
-    color: #9ca3af;
-    font-size: 0.85rem;
-    margin-left: 0.5rem;
-}
-
-.ai-attribution-usage {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    font-size: 0.85rem;
-    color: #9ca3af;
-    line-height: 1.5;
-}
-
-.ai-attribution-workflow {
-    margin: 0;
-    line-height: 1.6;
-    color: #d1d5db;
-}
-
-.ai-attribution-note {
-    background: rgba(74, 222, 128, 0.05);
-    border-left: 3px solid #4ade80;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    margin-top: 1rem;
-}
-
-.ai-attribution-note p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: #9ca3af;
-    font-style: italic;
-    line-height: 1.6;
 }
 
 /* --- Floating Animation Elements --- */
@@ -2271,7 +2100,7 @@ main.container {
 .chat-bubble {
     padding: 0.75rem 1rem;
     line-height: 1.5;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -2631,6 +2460,7 @@ main.container {
     border-radius: 0.5rem;
     padding: 1.5rem;
     margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
 .reflection-header {
@@ -2670,11 +2500,12 @@ main.container {
     color: #4ade80;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 }
 
 .reflection-summary {
     margin-bottom: 1.25rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #d1d5db;
 }
@@ -2699,7 +2530,7 @@ main.container {
 }
 
 .reflection-question {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #6b7280;
     margin-bottom: 0.25rem;
 }
@@ -2717,7 +2548,7 @@ main.container {
 }
 
 .reflection-reference {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #6b7280;
 }
 
@@ -2778,7 +2609,7 @@ main.container {
     max-width: 80%;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.4;
 }
 

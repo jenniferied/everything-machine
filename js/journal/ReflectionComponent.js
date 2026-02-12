@@ -326,9 +326,6 @@ export class ReflectionComponent {
           ${sectionsHTML}
         </div>
         ${transcriptHTML}
-        <div class="reflection-footer">
-          <span class="reflection-reference">Basierend auf der Forschungsfrage und 5 Unterfragen · Interview via Claude Code</span>
-        </div>
       </div>
     `;
   }
