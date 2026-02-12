@@ -22,7 +22,7 @@ Nach Candy (2006) ist mein Ansatz "Practice-led Research": Die ästhetischen Zie
 
 # Forschungsfrage
 
-> Wie dokumentiere und reflektiere ich den iterativen Prozess der Mensch-KI-Kollaboration bei der Erschaffung der digitalen Persona "Kepler"?
+> Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?
 
 Mit Unterfragen: Welche Rollen übernehmen KI-Tools im kreativen Workflow? Wie verändert sich meine kreative Praxis durch die kontinuierliche KI-Nutzung? Welche "Fehler" oder unerwarteten Outputs werden ästhetisch produktiv?
 

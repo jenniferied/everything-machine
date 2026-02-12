@@ -12,24 +12,26 @@ bibliography: references/bibliography.bib
 toc: true
 abstract: |
   Die vorliegende Arbeit untersucht im Rahmen einer Practice-Based Research mit
-  autoethnografischem Ansatz, welche ästhetischen Qualitäten durch die iterative
-  Kollaboration zwischen Künstlerin und generativer KI bei der Konstruktion eines
-  virtuellen Alter Egos entstehen. Am Beispiel von Kepler -- einer maskierten,
-  voxelisierten Musiker-Persona -- dokumentiert die Autorin [N] Experimente mit
-  KI-Tools aus den Bereichen Bildgenerierung, Musikproduktion, Webentwicklung und
-  Texterstellung. Die Analyse identifiziert drei emergente ästhetische Qualitäten:
-  (1) das Uncanny als bewusst eingesetzte ästhetische Ressource, die durch
-  KI-Halluzinationen und Verfremdungseffekte entsteht; (2) eine produktive Lücke
-  zwischen sprachlicher Beschreibung und generiertem Output, in der Prompts selbst
-  ästhetischen Eigenwert entwickeln; (3) hybride Autorschaft als ästhetische Praxis,
-  in der die Künstlerin zwischen Rollen wie Kuratorin, Dirigentin und Experimentatorin
-  wechselt. Die Arbeit zeigt, dass ästhetisch relevante Ergebnisse in der
-  Mensch-KI-Kollaboration nicht trotz, sondern wegen der Spannung zwischen
-  künstlerischer Intention und maschineller Eigenlogik entstehen. Damit leistet sie
-  einen Beitrag zur Artistic-Research-Diskussion um Kreativität, Autorschaft und
-  implizites Wissen im Kontext generativer KI-Systeme.
+  autoethnografischem Ansatz, wie der Einsatz multimodaler KI-Systeme den kreativen
+  Prozess bei der Entwicklung einer digitalen Künstleridentität verändert. Am Beispiel
+  von Kepler -- einer maskierten, voxelisierten Musiker-Persona -- dokumentiert die
+  Autorin [N] Experimente mit KI-Tools aus den Bereichen Bildgenerierung,
+  Musikproduktion, Webentwicklung und Texterstellung. Die Analyse identifiziert vier
+  zentrale Prozessveränderungen: (1) Flow entsteht unvorhersehbar -- der Website-Build
+  mit KI gelang produktiv, während die Bildgenerierung für Kepler an der
+  Nischen-Ästhetik scheiterte; (2) KI beschleunigt und begrenzt gleichzeitig --
+  Exploration und Prototyping werden schneller, aber die Kontrolle über ästhetische
+  Details geht verloren; (3) die Autorschaft verschiebt sich fundamental -- von der
+  Ausführenden zur Kuratorin, Dirigentin, Lernenden; (4) der emotionale Zyklus
+  zwischen KI-Enthusiasmus und KI-Burnout erweist sich als reale Belastung im
+  kreativen Prozess -- der ständige Zwang, neue Tools zu evaluieren und mit
+  Limitierungen zu kämpfen, kostet kreative Energie. Die Arbeit zeigt, dass die
+  Veränderungen des kreativen Prozesses durch KI nicht linear und nicht planbar sind,
+  sondern im iterativen Arbeiten emergent entstehen. Damit leistet sie einen Beitrag
+  zur Artistic-Research-Diskussion um Kreativität, Autorschaft und implizites Wissen
+  im Kontext generativer KI-Systeme.
 
-  **Keywords:** Artistic Research, generative KI, Mensch-KI-Kollaboration, digitale Identität, Autoethnografie, ästhetische Qualitäten, Practice-Based Research
+  **Keywords:** Artistic Research, generative KI, Mensch-KI-Kollaboration, digitale Identität, Autoethnografie, kreativer Prozess, Practice-Based Research
 ---
 
 # Einleitung
@@ -66,12 +68,14 @@ Der Name enthält auch eine Ironie: Je mehr ich mit generativer KI arbeite, dest
 
 Die zentrale Forschungsfrage lautet:
 
-> **Welche ästhetischen Qualitäten entstehen durch die iterative Kollaboration zwischen Künstler\*in und generativer KI bei der Konstruktion eines virtuellen Alter Egos?**
+> **Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?**
+
+Im Laufe der Praxis verschob sich der Fokus zeitweise in Richtung einer Ästhetik-Frage -- selbst ein Ergebnis des iterativen Forschungsprozesses. Die vorliegende Arbeit kehrt zur Prozessfrage zurück, weil die Praxis zeigte, dass die Veränderung des kreativen Prozesses die eigentliche Erkenntnis ist.
 
 Zur Beantwortung dieser Frage verbindet die Arbeit:
 
-1. **Praktische Experimente:** Iterative Entwicklung von Kepler durch verschiedene KI-Tools
-2. **Theoretische Reflexion:** Einordnung in Diskurse zu Kreativität, Ästhetik und Human-AI Interaction
+1. **Praktische Experimente:** Iterative Entwicklung von Kepler durch verschiedene KI-Tools, beobachtet auf Prozessveränderungen
+2. **Theoretische Reflexion:** Einordnung in Diskurse zu Kreativität, Autorschaft und Human-AI Interaction
 3. **Methodische Transparenz:** Öffentliche Dokumentation des gesamten Prozesses
 
 Die Arbeit gliedert sich in fünf Abschnitte: Nach der Einleitung folgt eine Darstellung des Forschungsstands (Abschnitt 2), dann die methodische Beschreibung (Abschnitt 3), die Darstellung meiner Forschung (Abschnitt 4) und schließlich die Diskussion (Abschnitt 5).
@@ -90,13 +94,13 @@ Margaret Bodens [-@boden2004creative] Unterscheidung zwischen explorativer, komb
 
 Die Frage, ob diese Systeme zu "echter" Kreativität fähig sind, bleibt umstritten. Für das vorliegende Projekt ist diese Frage jedoch weniger relevant als die praktische Beobachtung: In der Kollaboration entstehen Ergebnisse, die weder ich allein noch das KI-System allein hervorgebracht hätte.
 
-## Ästhetische Kategorien für hybride Werke
+## Herausforderungen KI-generierter Medien
 
-Zwei Konzepte aus der Literatur sind für die Bewertung ästhetischer Qualitäten besonders relevant:
+Zwei bekannte Phänomene treten beim praktischen Arbeiten mit generativer KI wiederholt auf:
 
-**Suspension of Disbelief** [@coleridge1817biographia]: Die Bereitschaft des Publikums, Unglauben auszusetzen und sich auf eine fiktionale Welt einzulassen. Für Kepler als virtuelle Persona ist dies zentral: Akzeptieren Rezipient\*innen ihn als "authentischen" Künstler?
+**Uncanny Valley** [@mori2012uncanny]: KI-generierte Darstellungen von Menschen lösen häufig Unbehagen aus, weil sie menschenähnlich, aber nicht perfekt realistisch sind. In der Praxis zeigt sich das als konkretes Hindernis -- etwa wenn Bildmodelle Gesichtszüge in Keplers Maske halluzinieren, weil das Modell die Abwesenheit eines Gesichts nicht akzeptiert.
 
-**Uncanny Valley** [@mori2012uncanny]: Der negative Affekt gegenüber Darstellungen, die menschenähnlich, aber nicht perfekt realistisch sind. KI-generierte Bilder von Menschen bewegen sich oft in diesem Bereich -- eine Qualität, die sowohl Risiko als auch ästhetisches Potenzial birgt.
+**Suspension of Disbelief** [@coleridge1817biographia]: Die Bereitschaft des Publikums, sich auf eine fiktionale Welt einzulassen, wird durch solche Artefakte immer wieder gestört. Für Kepler als virtuelle Persona stellt sich die Frage, ob Rezipient\*innen ihn als "authentischen" Künstler akzeptieren -- eine Frage, die im kreativen Prozess ständig mitverhandelt wird.
 
 ## Forschungslücke
 
@@ -215,47 +219,55 @@ Ein unkonventionelleres Experiment: Auf einer 30-minütigen Autofahrt führte ic
 
 Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sich an wie tiefes Verstehen, aber ob ich die Konzepte tatsächlich internalisiert hatte, war unklar. Claude selbst wies mich darauf hin, dass es einen Unterschied gibt zwischen deklarativem Wissen ("wissen, dass") und prozeduralem Wissen ("wissen, wie"). Die Theorie wird erst real, wenn ich sie anwende -- eine Beobachtung, die auf Schöns [-@schoen1983practitioner] Konzept des "Reflection-in-Action" zurückführt: Erkenntnis entsteht nicht im Hören oder Lesen, sondern im Tun.
 
-## Emergente ästhetische Qualitäten
+## Zentrale Beobachtungen aus dem Prozess
 
-Aus der vergleichenden Analyse der Journal-Einträge und der systematischen Reflexion nach dem autoethnografischen Modell [@ellis2011autoethnography] lassen sich drei wiederkehrende Muster identifizieren, die ich als emergente ästhetische Qualitäten der Mensch-KI-Kollaboration beschreibe. Sie sind "emergent" im Sinne von Borgdorff [-@borgdorff2012conflict]: nicht vorab theoretisch abgeleitet, sondern durch die Praxis selbst hervorgebracht.
+Aus der vergleichenden Analyse der Journal-Einträge und der systematischen Reflexion nach dem autoethnografischen Modell [@ellis2011autoethnography] lassen sich vier wiederkehrende Muster identifizieren, die beschreiben, wie KI meinen kreativen Prozess verändert hat. Sie sind "emergent" im Sinne von Borgdorff [-@borgdorff2012conflict]: nicht vorab theoretisch abgeleitet, sondern durch die Praxis selbst hervorgebracht.
 
-### 1. Das Uncanny als ästhetische Ressource
+### 1. Unvorhersehbarer Flow
 
-Über alle Experimente hinweg manifestierte sich das Uncanny Valley [@mori2012uncanny] nicht nur als Problem, sondern als wiederkehrendes ästhetisches Phänomen. Die Face Hallucination bei ComfyUI -- Gesichter, die in Keplers Maske projiziert werden -- ist zugleich technischer Fehler und ästhetische Aussage: Das Modell kann die Abwesenheit eines Gesichts nicht akzeptieren, so wie ein Publikum Schwierigkeiten hat, eine Figur ohne Gesicht als "echt" zu empfinden. Die verzerrten Personen in den Marble-Welten, die gruseligen Spiegelungen -- all das sind Manifestationen einer Ästhetik, die genau dort entsteht, wo die KI an die Grenzen ihres Trainings stößt. In der Reflexion zu Marble notierte ich: "Man könnte mit diesen Fehlern absichtlich als ästhetisches Mittel spielen." Das Uncanny wird zur Ressource, wenn es nicht als Mangel, sondern als Material begriffen wird.
+Flow entstand dort, wo ich ihn nicht geplant hatte -- und blieb aus, wo ich ihn erwartet hatte. Der Website-Build mit Cursor funktionierte überraschend produktiv: Ich fühlte mich "wie eine Managerin mit Junior Developer", die KI übernahm repetitive Aufgaben, während ich die ästhetische Vision steuerte. Umgekehrt scheiterte die Bildgenerierung für Kepler trotz intensiver Bemühungen: ComfyUI halluzinierte Gesichter in Keplers Maske -- das Modell konnte die Abwesenheit eines Gesichts nicht akzeptieren, ein konkreter Fall des Uncanny Valley [@mori2012uncanny]. Suno produzierte zu kommerzielle Ergebnisse, weil das Modell auf Mainstream-Ästhetik trainiert ist. Die Erkenntnis: KI-gestützte Kreativität ist nicht planbar. Die produktivsten Momente entstanden in Domänen und Konstellationen, die ich vorher nicht als Kernbereich identifiziert hatte.
 
-### 2. Die Lücke zwischen Beschreibung und Output
+### 2. Speed vs. Control
 
-Das Suno-Experiment offenbarte eine Qualität, die ich in keiner Literatur vorbeschrieben fand: Die generierten Beschreibungen waren besser als der generierte Output. "Bitcrushed chiptune pads over a sparse, detuned synth choir" -- das ist nicht nur ein Prompt, das ist eine eigenständige ästhetische Form: eine textuelle Evokation, die reicher ist als ihre klangliche Realisierung. Bodens [-@boden2004creative] Konzept der explorativen Kreativität hilft hier: Das Modell erkundet den konzeptuellen Raum von "sowjetisch-dystopischer Pixel-Musik" auf der Beschreibungsebene adäquat, scheitert aber an der Übersetzung in klangliche Materie. Die Lücke selbst -- der Raum zwischen dem, was beschrieben wird, und dem, was erklingt -- ist eine ästhetische Qualität dieser Kollaboration. Sie zeigt, dass KI-Systeme Nischen-Ästhetiken durchaus "verstehen" können, allerdings nur sprachlich, nicht immer produktiv.
+KI beschleunigt und begrenzt den kreativen Prozess gleichzeitig. Exploration und Prototyping werden drastisch schneller -- beim Website-Build, bei der Generierung von Marble-Welten, im KI-Dialog als Lernwerkzeug. Aber die Kontrolle über ästhetische Details geht verloren. Das Suno-Experiment illustriert das: Das Modell generiert zu jedem Track eine detaillierte Beschreibung -- "bitcrushed chiptune pads over a sparse, detuned synth choir" -- die exakt das trifft, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell. Bodens [-@boden2004creative] Konzept der explorativen Kreativität hilft hier: Das Modell erkundet den konzeptuellen Raum von "sowjetisch-dystopischer Pixel-Musik" auf der Beschreibungsebene adäquat, scheitert aber an der Übersetzung in klangliche Materie. Die Diskrepanz zwischen Beschreibung und Output ist ein konkretes Symptom des Speed-vs-Control-Tradeoffs: Generierung ist schnell, aber Feinsteuerung ist nicht gegeben.
 
-### 3. Hybride Autorschaft als ästhetische Praxis
+### 3. Verschiebung der Autorschaft
 
 Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin -- ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Beim Website-Build war ich Dirigentin mit Gesamtvision. Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
 
-Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer hybriden Autorschaft, die nicht dem Modell der alleinigen Urheberschaft folgt und nicht dem Modell der vollständigen Delegation. Die ästhetischen Qualitäten von Kepler entstehen genau in diesem Dazwischen: in der Entscheidung, welchen Output ich akzeptiere, welchen ich verwerfe, welchen ich umdeute.
+Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Und: "Garbage in, garbage out" -- Domänenwissen ist die Voraussetzung für produktive Kollaboration, nicht KI-Kompetenz. Wer nicht weiß, was gut ist, kann nicht kuratieren.
+
+### 4. KI-Burnout und KI-Enthusiasmus
+
+Die emotionale Dimension der KI-Arbeit erwies sich als eigenständige Prozessveränderung, die ich nicht erwartet hatte. Es gibt einen Zyklus: Begeisterung, wenn etwas unerwartet gut funktioniert -- der Website-Build, die ersten Marble-Welten, ein Claude-Dialog, der mich wirklich weiterbringt. Und dann Frustration und Erschöpfung: wenn ComfyUI stundenlang installiert werden muss und die Ergebnisse enttäuschen, wenn Suno Mainstream produziert statt Nische, wenn Tools sich schneller ändern als man sie lernen kann.
+
+Dieses Pendeln ist nicht Nebensache, sondern reale Belastung im kreativen Prozess. Der ständige Zwang, neue Tools zu evaluieren, Workflows umzubauen, mit Limitierungen zu kämpfen, kostet kreative Energie, die eigentlich in die Kunst fließen sollte. Man muss sich aktiv davor schützen, in diesem Zyklus aufgerieben zu werden. Die Versprechen der Technologie -- schneller, besser, alles möglich -- stehen in Spannung zur Realität einer Praxis, die oft mühsamer ist als die analoge Alternative.
 
 ## Rückbezug auf die Forschungsfrage
 
-Welche ästhetischen Qualitäten entstehen durch die iterative Kollaboration zwischen Künstlerin und generativer KI bei der Konstruktion eines virtuellen Alter Egos?
+Wie verändert der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?
 
-Drei Antworten kristallisieren sich heraus: Erstens das Uncanny als produktive ästhetische Kategorie, die dort entsteht, wo das Modell seine Trainingsgrenzen offenbart. Zweitens die Diskrepanz zwischen sprachlicher Beschreibung und medialem Output als eigenständige ästhetische Dimension -- ein Raum, in dem Coleridges [-@coleridge1817biographia] "willing suspension of disbelief" nicht gegenüber dem Endergebnis greift, sondern gegenüber dem Prompt selbst. Drittens die hybride Autorschaft als Praxis, in der die Rolle der Künstlerin zwischen Kuration, Direktion, Kollaboration und Lernen oszilliert -- und genau diese Oszillation den ästhetischen Charakter des Ergebnisses prägt. Die Qualitäten sind nicht menschlich, nicht maschinell. Sie sind emergent -- sie entstehen im iterativen Prozess zwischen beiden [@borgdorff2012conflict; @schoen1983practitioner].
+Vier Antworten kristallisieren sich heraus: Erstens entsteht Flow unvorhersehbar -- dort, wo ich ihn nicht geplant habe (Website-Build), und nicht dort, wo ich ihn erwartet habe (Bildgenerierung, Musik). Zweitens macht KI den Prozess gleichzeitig schneller und begrenzter: Exploration und Prototyping beschleunigen sich drastisch, aber die Kontrolle über ästhetische Details -- das, was Keplers Nische ausmacht -- geht verloren. Drittens hat sich meine Rolle fundamental verschoben: von der Ausführenden zur Kuratorin, Dirigentin, Lernenden, und diese Verschiebung ist nicht stabil, sondern oszilliert je nach Tool und Kontext. Viertens ist der emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout selbst Teil der Prozessveränderung -- eine Belastung, die in den Versprechen der Technologie nicht vorkommt, aber in der Praxis allgegenwärtig ist.
+
+Die Veränderungen sind nicht linear, nicht planbar. Sie entstehen im iterativen Prozess [@borgdorff2012conflict; @schoen1983practitioner] -- und sie kosten mehr Energie, als die Versprechen der Technologie vermuten lassen.
 
 # Diskussion und Interpretation
 
 ## Zusammenfassung der Ergebnisse
 
-Die vorliegende Arbeit ging der Frage nach, welche ästhetischen Qualitäten durch die iterative Kollaboration zwischen Künstlerin und generativer KI bei der Konstruktion des virtuellen Alter Egos Kepler entstehen. Die Practice-Based Research, dokumentiert über [N] Experimente mit unterschiedlichen KI-Tools, legt drei emergente ästhetische Qualitäten offen.
+Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Based Research, dokumentiert über [N] Experimente mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
 
-Erstens erweist sich das *Uncanny* als ästhetische Ressource: Wo KI-Modelle halluzinieren, Gesichter in Masken projizieren oder Spiegelungen verzerren, entsteht nicht bloß ein technischer Fehler, sondern ein produktiver Verfremdungseffekt, der Keplers Identität zwischen Mensch und Maschine verhandelt. Zweitens zeigt sich eine *Lücke zwischen Beschreibung und Output*, in der die Textprompts selbst -- etwa "bitcrushed chiptune pads over sparse, detuned synth choir" -- eine eigenständige ästhetische Qualität entwickeln, die über den tatsächlich generierten Sound hinausgeht. Drittens kristallisiert sich *hybride Autorschaft* als ästhetische Praxis heraus: Ich wechselte über die Experimente hinweg zwischen den Rollen der Kuratorin, Dirigentin, Experimentatorin und Lernenden, wobei die ästhetische Qualität des Ergebnisses unmittelbar von meiner Fähigkeit abhing, zwischen Kontrolle und Kontrollverlust zu navigieren.
+Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik -- Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens zeigt sich ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren -- das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle fundamental verschoben*: von der Ausführenden zur Kuratorin, Dirigentin, Lernenden, wobei Domänenwissen sich als entscheidende Voraussetzung erwies, nicht KI-Kompetenz. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
 
-Diese drei Qualitäten sind keine isolierten Phänomene. Sie verbindet ein gemeinsames Prinzip: Die produktivsten ästhetischen Momente entstanden dort, wo meine künstlerische Intention und die Eigenlogik der KI-Systeme in Spannung zueinander traten -- nicht wo sie sich deckten.
+Diese vier Beobachtungen sind keine isolierten Phänomene. Sie verbindet ein gemeinsames Prinzip: Die produktivsten Momente entstanden dort, wo Intention und KI-Eigenlogik in Spannung zueinander traten -- nicht wo sie sich deckten.
 
 ## Theoretische Implikationen
 
-Die Ergebnisse legen nahe, dass bestehende Kreativitätstheorien im Kontext der Mensch-KI-Kollaboration neu betrachtet werden sollten. Boden [-@boden2004creative] unterscheidet kombinatorische, explorative und transformative Kreativität. Meine Praxis zeigt, dass generative KI primär als Katalysator für *explorative* Kreativität fungiert: Die Systeme eröffnen einen konzeptuellen Raum, den ich als Künstlerin navigiere, kuratiere und bewerte. Transformative Kreativität -- das Sprengen der Regeln eines konzeptuellen Raums -- ging hingegen durchgehend von meinen Entscheidungen aus, nicht von den Modellen. Die KI generiert Variationen; die Künstlerin entscheidet, welche Variation die Grenzen verschiebt.
+Die Ergebnisse legen nahe, dass bestehende Kreativitätstheorien im Kontext der Mensch-KI-Kollaboration neu betrachtet werden sollten. Boden [-@boden2004creative] unterscheidet kombinatorische, explorative und transformative Kreativität. Meine Praxis zeigt, dass generative KI primär als Katalysator für *explorative* Kreativität fungiert: Die Systeme eröffnen einen konzeptuellen Raum, den ich als Künstlerin navigiere, kuratiere und bewerte. Transformative Kreativität -- das Sprengen der Regeln eines konzeptuellen Raums -- ging hingegen durchgehend von meinen Entscheidungen aus, nicht von den Modellen. Die KI generiert Variationen; die Künstlerin entscheidet, welche Variation die Grenzen verschiebt. Der unvorhersehbare Flow, den ich beschreibe, ist letztlich eine Konsequenz dieser Asymmetrie: Exploration ist schnell, aber Transformation erfordert menschliches Urteil.
 
-Borgdorff [-@borgdorff2012conflict] argumentiert, dass künstlerische Forschung implizites Wissen freilegt, das sich nur durch die Praxis selbst artikuliert. Diese These bestätigt sich in meiner Arbeit konkret: Mein Vorwissen über Keplers Ästhetik -- die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem -- war als explizites Briefing an KI-Systeme nur begrenzt übertragbar. Das Prinzip "garbage in, garbage out" erwies sich als ästhetische Grundregel: Ohne implizites Domänenwissen produziert die Kollaboration generische Ergebnisse. Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
+Borgdorff [-@borgdorff2012conflict] argumentiert, dass künstlerische Forschung implizites Wissen freilegt, das sich nur durch die Praxis selbst artikuliert. Diese These bestätigt sich in meiner Arbeit konkret: Mein Vorwissen über Keplers Ästhetik -- die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem -- war als explizites Briefing an KI-Systeme nur begrenzt übertragbar. Das Prinzip "garbage in, garbage out" erwies sich als Grundregel der Prozessveränderung: Ohne implizites Domänenwissen produziert die Kollaboration generische Ergebnisse. Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
 
-Besonders aufschlussreich ist die Verbindung zu Schön [-@schoen1983practitioner]: Reflection-in-Action, das spontane Reagieren auf unerwartete Situationen in der Praxis, beschreibt präzise den Modus, in dem ich auf KI-Halluzinationen, unerwartete Outputs und produktive Fehler reagierte. Das Scheitern eines Prompts war kein Abbruchkriterium, sondern Auslöser für reflektierte Anpassung. Diese Beobachtung erweitert Schöns Konzept um eine neue Dimension: In der Mensch-KI-Kollaboration ist die "Situation, die zurückspricht" kein physisches Material, sondern ein probabilistisches System mit eigener Handlungslogik.
+Besonders aufschlussreich ist die Verbindung zu Schön [-@schoen1983practitioner]: Reflection-in-Action, das spontane Reagieren auf unerwartete Situationen in der Praxis, beschreibt präzise den Modus, in dem ich auf KI-Halluzinationen, unerwartete Outputs und produktive Fehler reagierte. Das Scheitern eines Prompts war kein Abbruchkriterium, sondern Auslöser für reflektierte Anpassung. Diese Beobachtung erweitert Schöns Konzept um eine neue Dimension: In der Mensch-KI-Kollaboration ist die "Situation, die zurückspricht" kein physisches Material, sondern ein probabilistisches System mit eigener Handlungslogik. Der emotionale Zyklus zwischen Enthusiasmus und Burnout lässt sich als Konsequenz dieser permanenten Reflection-in-Action lesen: Die Situation spricht ständig zurück, und das kostet Kraft.
 
 ## Praktische Implikationen
 
@@ -275,8 +287,8 @@ Als autoethnografische Einzelfallstudie ist die Generalisierbarkeit der Ergebnis
 
 ## Ausblick
 
-Die Arbeit wirft Fragen auf, die über ihren Rahmen hinausgehen. Wie verändern sich die beschriebenen ästhetischen Qualitäten, wenn KI-Modelle präziser und kontrollierbarer werden? Verliert das Uncanny seinen produktiven Charakter, wenn Halluzinationen seltener auftreten? Und wie entwickelt sich hybride Autorschaft, wenn die Grenze zwischen menschlicher und maschineller Kreativität weiter verschwimmt?
+Die Arbeit wirft Fragen auf, die über ihren Rahmen hinausgehen. Wie verändert sich die Kollaboration, wenn KI-Modelle präziser und kontrollierbarer werden? Wird der Speed-vs-Control-Tradeoff sich auflösen, wenn Modelle Nischen-Ästhetiken besser umsetzen können? Und vor allem: Wie nachhaltig ist kreatives Arbeiten mit KI, wenn der Burnout-Zyklus anhält -- wenn Tools sich schneller ändern als man sie lernen kann?
 
-Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. Das Alter Ego existiert nun in einem dokumentierten ästhetischen Raum, der weiter bespielt werden kann -- mit zukünftigen Tools, in anderen Medien, mit neuen Kollaborationsmodellen. Die Forschungsfrage bleibt dabei offen, weil die Technologie, auf die sie sich bezieht, selbst in Bewegung ist. Artistic Research, die sich mit generativer KI beschäftigt, muss diesen Zustand der Vorläufigkeit nicht als Schwäche begreifen, sondern als methodische Grundbedingung akzeptieren.
+Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. Das Alter Ego existiert nun in einem dokumentierten Prozessraum, der weiter bespielt werden kann -- mit zukünftigen Tools, in anderen Medien, mit neuen Kollaborationsmodellen. Die Forschungsfrage bleibt dabei offen, weil die Technologie, auf die sie sich bezieht, selbst in Bewegung ist. Artistic Research, die sich mit generativer KI beschäftigt, muss diesen Zustand der Vorläufigkeit nicht als Schwäche begreifen, sondern als methodische Grundbedingung akzeptieren.
 
 # Literaturverzeichnis

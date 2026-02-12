@@ -21,7 +21,7 @@ Das Projekt verfolgt einen Practice-Based Research Ansatz, bei dem die künstler
 
 Die tägliche Arbeit mit multimodalen KI-Systemen (Text, Bild, Audio) zur Entwicklung von Kepler bildet den Kern des Forschungsprozesses. Jede kreative Session produziert sowohl künstlerische Outputs (Bilder, Texte, Sounds) als auch prozessbezogene Daten (Prompts, Iterationen, Entscheidungen).
 
-Diese Methode ist geeignet, weil die Forschungsfrage nach ästhetischen Qualitäten nur durch praktisches Experimentieren beantwortet werden kann. Die Wechselwirkungen zwischen Mensch und KI werden erst im Tun sichtbar, und die künstlerischen Artefakte selbst dienen als Evidenz.
+Diese Methode ist geeignet, weil die Forschungsfrage nach der Veränderung des kreativen Prozesses nur durch praktisches Experimentieren beantwortet werden kann. Die Wechselwirkungen zwischen Mensch und KI werden erst im Tun sichtbar, und die künstlerischen Artefakte selbst dienen als Evidenz.
 
 Erwarteter Erkenntnisgewinn: Identifikation von Mustern und Qualitäten aus der Mensch-KI-Kollaboration, Entwicklung eines Vokabulars zur Beschreibung hybrider Ästhetiken, konkrete Beispiele für emergente kreative Phänomene.
 
@@ -67,7 +67,7 @@ Das Projekt folgt einer vier-phasigen Struktur nach Schöns "Reflection-in-Actio
 
 **Phase 2 – Exploration:** Systematisches Experimentieren, Workflow-Entwicklung. Multimodale KI-Experimente, Prompting-Strategien entwickeln, Kepler-Identität durch Iterationen schärfen. Reflexionsfragen: Was funktioniert, was nicht? Welche unerwarteten Qualitäten entstehen?
 
-**Phase 3 – Vertiefung:** Konzentration auf vielversprechende Ansätze, theoretische Vertiefung. Fokus auf identifizierte ästhetische Qualitäten, Verbindung zu theoretischen Konzepten, kritische Reflexion. Reflexionsfragen: Welche Erkenntnisse haben sich verfestigt? Was überrascht im Rückblick?
+**Phase 3 – Vertiefung:** Konzentration auf vielversprechende Ansätze, theoretische Vertiefung. Fokus auf identifizierte Prozessveränderungen, Verbindung zu theoretischen Konzepten, kritische Reflexion. Reflexionsfragen: Welche Erkenntnisse haben sich verfestigt? Was überrascht im Rückblick?
 
 **Phase 4 – Synthese:** Integration der Erkenntnisse, finale Dokumentation. Retrospektive Analyse, Identifikation von Mustern und Themen, Schreiben der Dokumentation. Reflexionsfragen: Was wurde gelernt? Was bleibt offen?
 

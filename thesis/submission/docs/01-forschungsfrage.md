@@ -42,22 +42,16 @@ Ich wähle **Frage 1** als Hauptfrage:
 
 # Begründung
 
-Diese Frage bietet das größte Potenzial für mein Projekt. Sie stellt die ästhetische Dimension in den Mittelpunkt, was dem Charakter eines Artistic Research Projekts entspricht. Es geht nicht primär um technische Machbarkeit, sondern um die künstlerischen Qualitäten des Ergebnisses und des Prozesses.
+Diese Frage bietet das größte Potenzial für mein Projekt. Sie stellt den kreativen Prozess in den Mittelpunkt, was dem Charakter eines Artistic Research Projekts entspricht. Es geht nicht primär um technische Machbarkeit, sondern um die Veränderungen, die KI im kreativen Arbeiten auslöst.
 
-Die Frage lässt sich ideal durch Practice-Based Research und autoethnografische Methoden beantworten. Mein iterativer Workflow – Experimente durchführen, dokumentieren, reflektieren, anpassen – generiert genau die Daten, die zur Beantwortung benötigt werden.
+Die Frage lässt sich ideal durch Practice-Based Research und autoethnografische Methoden beantworten. Mein iterativer Workflow -- Experimente durchführen, dokumentieren, reflektieren, anpassen -- generiert genau die Daten, die zur Beantwortung benötigt werden.
 
-Im Gegensatz zu breiteren Fragen fokussiert diese auf ein konkretes, dokumentierbares Phänomen: die ästhetischen Eigenschaften von Kepler als hybridem Kunstwerk.
+Im Gegensatz zu breiteren Fragen fokussiert diese auf ein konkretes, dokumentierbares Phänomen: wie sich mein kreativer Prozess durch die Arbeit mit KI verändert.
 
 
-# Weiterentwickelte Forschungsfrage
+# Zwischenzeitliche Weiterentwicklung
 
-Basierend auf der Literaturrecherche wurde die Forschungsfrage weiterentwickelt:
-
-> Welche ästhetischen Qualitäten entstehen durch die iterative Kollaboration zwischen Künstlerin und generativer KI bei der Konstruktion des virtuellen Alter Egos "Kepler"?
-
-(Uncanny Valley / Suspension of Disbelief als theoretischer Rahmen? muss ich nochmal drüber nachdenken)
-
-(Gespräch mit Hadjakos? Feedback einholen?)
+Basierend auf der Literaturrecherche wurde die Forschungsfrage zeitweise in Richtung einer Ästhetik-Frage weiterentwickelt ("Welche ästhetischen Qualitäten entstehen...?"). Die Praxis zeigte jedoch, dass die Veränderung des kreativen Prozesses die eigentliche Erkenntnis ist -- die Arbeit kehrt daher zur ursprünglichen Prozessfrage zurück.
 
 
 # Alternative Formulierungen
