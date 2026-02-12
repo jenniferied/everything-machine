@@ -616,6 +616,27 @@ main.container {
     min-height: calc(100vh - 80px);
     min-height: -webkit-calc(100vh - 80px); /* Safari-spezifisch */
 }
+
+/* Overview page typography — matched to logbook */
+#page-overview {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+#page-overview h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4ade80;
+    margin-bottom: 1rem;
+}
+
+#page-overview p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
 .page-content.active {
     display: block; /* Wird per JS eingeblendet */
 }

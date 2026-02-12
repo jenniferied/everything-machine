@@ -90,11 +90,8 @@ class Application {
     
     // Phase 5: Setup animations
     await this.setupAnimations();
-    
-    // Phase 6: Setup UI components
-    await this.setupUI();
-    
-    // Phase 7: Setup audio player
+
+    // Phase 6: Setup audio player
     await this.setupAudioPlayer();
     
     // Phase 8: Setup navigation
