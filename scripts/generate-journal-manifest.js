@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 const JOURNAL_DIR = path.join(__dirname, '..', 'journal');
-const OUTPUT_FILE = path.join(__dirname, '..', 'journal-manifest.json');
+const OUTPUT_FILE = path.join(__dirname, '..', 'journal', 'manifest.json');
 
 // Lese alle .md Dateien aus dem journal/ Ordner
 try {
