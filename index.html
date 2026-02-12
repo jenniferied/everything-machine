@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Artistic Research: Everything Machine (Kepler)</title>
     
     <!-- Tailwind CSS (pre-built) -->
@@ -104,11 +101,10 @@
             <div class="space-y-12 max-w-4xl mx-auto"> <!-- Zentriert für Lesbarkeit -->
                 <!-- Abstract -->
                 <div class="p-6 bg-gray-800 rounded-sm border border-gray-700">
-                    <h3 class="text-lg font-bold mb-4 text-accent uppercase tracking-wider">I / O (Abstract)</h3>
-                    <p class="text-lg italic">
+                    <h3>I / O (Abstract)</h3>
+                    <p class="italic">
                         Künstler verfügen über eine Fülle von "Inputs" – nicht nur Bilder, sondern auch Musik, Texte und einen schwer fassbaren "Vibe". Generative KI bietet neue "Output"-Werkzeuge, doch es fehlt an etablierten Prozessen, diese Inputs zur Erweiterung einer bestehenden digitalen Identität zu nutzen. Diese Arbeit untersucht dies in einem explorativen Artistic Research-Prozess am Fallbeispiel des Alter Egos "Kepler". In iterativen Zyklen und Künstler-Klienten-Dialogen wird ein Workflow entwickelt, der nicht nur neue Artefakte (Cover, Animationen) generiert, sondern auch dessen Auswirkung auf stilistische Kohärenz und künstlerische Autorschaft reflektiert.
                     </p>
-                    <p class="mt-4 text-sm text-gray-500">Keywords: Generative AI, Multimodale Generierung, Artistic Research, Digitale Identität, Alter Ego, Cover Art, Animation</p>
                 </div>
 
                 <!-- Keplers bestehende Arbeiten -->
@@ -126,8 +122,8 @@
 
                 <!-- Einleitung -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase">Einleitung</h3>
-                    <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <h3>Einleitung</h3>
+                    <div class="space-y-4">
                         <p>Die rasante Entwicklung generativer KI eröffnet neue Möglichkeiten in der künstlerischen Praxis. Für etablierte Künstler, die diese Werkzeuge in ihre bestehenden Workflows integrieren möchten, bedeutet dies eine Phase des Experimentierens, da etablierte "Best Practices" oft noch fehlen.</p>
                         <p>Dieses Artistic Research-Projekt knüpft an eine solche bestehende künstlerische Kollaboration an: die digitale Identität "Kepler" des Musikers Gavin Just. Aufbauend auf einer gemeinsamen Praxis, in der bereits digitale Album-/Song Cover und "Shorts" (Animationen) entstanden sind, stellt sich eine zentrale Herausforderung: Die visuelle Welt von Kepler entwickelt sich oft langsamer als die musikalische oder performative Ebene des Künstlers. Diese Diskrepanz steht in einem besonderen Spannungsfeld zu Keplers eigenem Narrativ – einer geplanten Transformation von einer 2D-Figur über eine 3D-Voxel-Gestalt bis hin zu einer realen und schließlich "hyperrealen" Existenz.</p>
                         
@@ -154,7 +150,7 @@
                 <!-- Forschungsfragen & Methodologie -->
                 <div class="grid md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-2xl font-bold mb-4 uppercase">Forschungsfragen</h3>
+                        <h3>Forschungsfragen</h3>
                         <ul class="list-disc list-inside space-y-3">
                             <li>Wie kann generative KI genutzt werden, um die stilistische Kohärenz einer bestehenden künstlerischen Identität zu wahren oder sinnvoll zu erweitern?</li>
                             <li>Inweit können bestehende Produktionsprobleme (z. B. die komplexe Animation von Voxel-Modellen) durch KI-Workflows gelöst oder kreativ umgangen werden?</li>
@@ -163,7 +159,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-4 uppercase">Methodologie</h3>
+                        <h3>Methodologie</h3>
                         <p class="mb-4">Diese Arbeit folgt keinem starren technischen Plan, sondern einer Methodik des explorativen Artistic Research. Der Prozess wird in vier iterative Zeitblöcke aufgeteilt, die jeweils unterschiedliche Aspekte der KI-gestützten Produktion untersuchen.</p>
                         <p>Parallel wird ein reflexives Prozess-Tagebuch ("Logbuch") geführt. Jeder Block schließt mit einem semi-strukturierten "Künstler-Klienten-Dialog" mit Gavin Just, um die subjektive Wahrnehmung des Prozesses zu dokumentieren.</p>
                         <!-- Platzhalter für das Zeitplan-Diagramm -->
@@ -182,14 +178,14 @@
 
                 <!-- 3D Viewer Section (Kepler Model) -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase">Kepler in 3D</h3>
+                    <h3>Kepler in 3D</h3>
                     <p class="text-gray-300 mb-4">Interaktive 3D-Visualisierung der Kepler-Figur. Bewege die Maus oder berühre den Bildschirm, um das Modell zu drehen.</p>
                     <div id="3d-viewer-container" class="viewer-container" style="height: 280px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;"></div>
                 </div>
 
                 <!-- Point Cloud Viewer Section -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase">Point Cloud</h3>
+                    <h3>Point Cloud</h3>
                     <p class="text-gray-300 mb-4">Interaktive 3D-Punktwolke. Bewege die Maus, um die Darstellung zu drehen.</p>
                     <div id="point-cloud-viewer-container" class="viewer-container"
                          style="height: 350px; background: #1f2937; border: 1px solid #374151; border-radius: 0.25rem;">
@@ -244,40 +240,6 @@
                     </div>
                 </div>
 
-                <!-- Interests Section -->
-                <div class="about-section">
-                    <h2 class="about-section-title">Interessen & Schwerpunkte</h2>
-                    <div class="about-interests-grid">
-                        <div class="about-interest-card">
-                            <div class="about-interest-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
-                                </svg>
-                            </div>
-                            <h3 class="about-interest-title">Virtual Production</h3>
-                            <p class="about-interest-desc">LED Walls, Real-Time Rendering, Unreal Engine für Film- und Fernsehproduktion</p>
-                        </div>
-                        <div class="about-interest-card">
-                            <div class="about-interest-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M8 1a.5.5 0 0 1 .5.5V6h-1V1.5A.5.5 0 0 1 8 1Zm0 14a.5.5 0 0 1-.5-.5V10h1v4.5a.5.5 0 0 1-.5.5ZM2 7a1 1 0 0 0-1 1v.5H.5a.5.5 0 0 0 0 1h.5V10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2Zm.5 1.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM13 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-.5h.5a.5.5 0 0 0 0-1H15V8a1 1 0 0 0-1-1h-1Zm.5 1.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM5 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z"/>
-                                </svg>
-                            </div>
-                            <h3 class="about-interest-title">3D</h3>
-                            <p class="about-interest-desc">3D-Modellierung, Animation, Voxel-Art und immersive Erlebnisse</p>
-                        </div>
-                        <div class="about-interest-card">
-                            <div class="about-interest-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/>
-                                    <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/>
-                                </svg>
-                            </div>
-                            <h3 class="about-interest-title">AI</h3>
-                            <p class="about-interest-desc">Generative KI, Machine Learning für kreative Workflows und Artistic Research</p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </section>
