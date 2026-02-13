@@ -23,3 +23,6 @@ package-lock.json
 
 # PDF output - tracked for easy access
 _img_cache/
+
+# External thesis submissions
+thesis/academic/thilos-straightA-submission/
