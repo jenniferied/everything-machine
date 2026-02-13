@@ -8,9 +8,9 @@ import { FeatureDetector } from './core/FeatureDetector.js';
 import { ScriptLoader } from './core/ScriptLoader.js';
 import { EventBus } from './core/EventBus.js';
 
-// Import viewers (cache-bust: v20241223d)
-import { ThreeDViewer } from './viewers/ThreeDViewer.js?v=20260112';
-import { PointCloudViewer } from './viewers/PointCloudViewer.js?v=20260112';
+// Import viewers (cache-bust: v20260213b)
+import { ThreeDViewer } from './viewers/ThreeDViewer.js?v=20260213b';
+import { PointCloudViewer } from './viewers/PointCloudViewer.js?v=20260213b';
 import { GaussianSplatViewer } from './viewers/GaussianSplatViewer.js?v=20260112';
 import { VideoViewer } from './viewers/VideoViewer.js?v=20260112';
 
@@ -34,6 +34,7 @@ import { NavigationState } from './navigation/NavigationState.js';
 import { JournalManager } from './journal/JournalManager.js';
 
 // Import pages
+import { InterestGraph } from './pages/InterestGraph.js';
 
 /**
  * Application class
@@ -100,7 +101,10 @@ class Application {
     // Phase 9: Setup journal
     await this.setupJournal();
     
-    // Phase 10: Initialize media lazy loading
+    // Phase 10: Setup interest graph (about page)
+    await this.setupInterestGraph();
+
+    // Phase 11: Initialize media lazy loading
     await this.setupMediaLazyLoading();
     
     // Phase 12: Start the application
@@ -546,6 +550,40 @@ class Application {
     
     this.uiComponents.set('journal-manager', journalManager);
     console.log('[App] Journal system initialized');
+  }
+
+  /**
+   * Setup interest graph on about page (lazy-loaded)
+   * @returns {Promise<void>}
+   */
+  async setupInterestGraph() {
+    const container = document.getElementById('interest-graph-container');
+    if (!container) return;
+
+    let graph = null;
+
+    const initGraph = () => {
+      if (graph) return;
+      const canvas = document.getElementById('interest-graph-canvas');
+      const detail = document.getElementById('interest-graph-detail');
+      if (!canvas) return;
+      graph = new InterestGraph(container, canvas, detail);
+      this.uiComponents.set('interest-graph', graph);
+      console.log('[App] Interest graph initialized');
+    };
+
+    // Check if already on about page
+    const aboutPage = document.getElementById('page-about');
+    if (aboutPage && aboutPage.classList.contains('active')) {
+      initGraph();
+    }
+
+    // Lazy-load when navigating to about page
+    this.eventBus.on('nav:pageChanged', (data) => {
+      if (data.pageId === 'about') {
+        initGraph();
+      }
+    });
   }
 
   /**

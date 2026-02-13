@@ -28,10 +28,7 @@ export class PointCloudViewer extends ViewerBase {
     this.targetFPS = 24;
     this.frameInterval = 1000 / this.targetFPS;
 
-    // Mouse interaction state
-    this.isDragging = false;
-    this.lastMouseX = 0;
-    this.lastMouseY = 0;
+    // No user interaction — auto-rotate only
   }
 
   async checkSupport() {
@@ -45,7 +42,22 @@ export class PointCloudViewer extends ViewerBase {
   }
 
   async loadDependencies() {
-    console.log('[PointCloudViewer] No external dependencies needed');
+    if (!this.scriptLoader) {
+      throw new Error('ScriptLoader required for PointCloudViewer');
+    }
+
+    // Load Three.js + GLTFLoader for GLB parsing (cached if already loaded by ThreeDViewer)
+    if (typeof THREE === 'undefined') {
+      await this.scriptLoader.loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js');
+    }
+    if (!window.THREE.GLTFLoader) {
+      try {
+        await this.scriptLoader.loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js');
+      } catch (e) {
+        console.warn('[PointCloudViewer] GLTFLoader failed to load:', e);
+      }
+    }
+    console.log('[PointCloudViewer] Three.js dependencies loaded');
   }
 
   async initialize() {
@@ -70,13 +82,14 @@ export class PointCloudViewer extends ViewerBase {
     // Create canvas
     this.canvas = document.createElement('canvas');
     this.canvas.width = width;
-    this.canvas.height = height - 32; // Leave room for controls
+    this.canvas.height = height;
     this.canvas.style.cssText = 'display: block; width: 100%; flex: 1;';
 
-    // Get WebGL2 context
+    // Get WebGL2 context (alpha: true for transparent background)
     this.gl = this.canvas.getContext('webgl2', {
       antialias: true,
-      alpha: false
+      alpha: true,
+      premultipliedAlpha: false
     });
 
     if (!this.gl) {
@@ -92,14 +105,10 @@ export class PointCloudViewer extends ViewerBase {
     // Show loading indicator
     this.showLoadingIndicator();
 
-    // Load real PLY data
-    await this.loadPLYData();
+    // Load model as point cloud
+    await this.loadGLBData();
 
-    // Create control panel (under canvas)
-    this.createControlPanel();
-
-    // Setup mouse interaction
-    this.setupMouseControls();
+    // No control panel, no mouse interaction — clean, auto-rotate only
 
     // Resize handler
     this.resizeHandler = () => this.onResize();
@@ -108,69 +117,7 @@ export class PointCloudViewer extends ViewerBase {
     console.log('[PointCloudViewer] Initialized successfully');
   }
 
-  setupMouseControls() {
-    this.canvas.addEventListener('mousedown', (e) => {
-      this.isDragging = true;
-      this.lastMouseX = e.clientX;
-      this.lastMouseY = e.clientY;
-      this.canvas.style.cursor = 'grabbing';
-    });
-
-    this.canvas.addEventListener('mousemove', (e) => {
-      if (!this.isDragging) return;
-
-      const deltaX = e.clientX - this.lastMouseX;
-      const deltaY = e.clientY - this.lastMouseY;
-
-      this.rotationY += deltaX * 0.01;
-      this.rotationX += deltaY * 0.01;
-      this.rotationX = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, this.rotationX));
-
-      this.lastMouseX = e.clientX;
-      this.lastMouseY = e.clientY;
-    });
-
-    window.addEventListener('mouseup', () => {
-      this.isDragging = false;
-      this.canvas.style.cursor = 'grab';
-    });
-
-    this.canvas.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      this.zoom += e.deltaY * 0.01;
-      this.zoom = Math.max(3, Math.min(20, this.zoom));
-    }, { passive: false });
-
-    // Touch support
-    this.canvas.addEventListener('touchstart', (e) => {
-      if (e.touches.length === 1) {
-        this.isDragging = true;
-        this.lastMouseX = e.touches[0].clientX;
-        this.lastMouseY = e.touches[0].clientY;
-      }
-    });
-
-    this.canvas.addEventListener('touchmove', (e) => {
-      if (!this.isDragging || e.touches.length !== 1) return;
-      e.preventDefault();
-
-      const deltaX = e.touches[0].clientX - this.lastMouseX;
-      const deltaY = e.touches[0].clientY - this.lastMouseY;
-
-      this.rotationY += deltaX * 0.01;
-      this.rotationX += deltaY * 0.01;
-      this.rotationX = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, this.rotationX));
-
-      this.lastMouseX = e.touches[0].clientX;
-      this.lastMouseY = e.touches[0].clientY;
-    }, { passive: false });
-
-    this.canvas.addEventListener('touchend', () => {
-      this.isDragging = false;
-    });
-
-    this.canvas.style.cursor = 'grab';
-  }
+  // No mouse/touch controls — viewer is display-only with auto-rotate
 
   setupShaders() {
     const gl = this.gl;
@@ -297,24 +244,102 @@ export class PointCloudViewer extends ViewerBase {
     this.container.appendChild(this.loadingEl);
   }
 
-  async loadPLYData() {
+  async loadGLBData() {
     const gl = this.gl;
-    // Stanford Bunny PLY (not gzipped, much smaller than Dragon)
-    const plyUrl = 'https://raw.githubusercontent.com/naucoin/VTKData/master/Data/bunny.ply';
+    const glbUrl = 'assets/models/kepler.glb';
 
     try {
-      console.log('[PointCloudViewer] Fetching Stanford Bunny PLY:', plyUrl);
-      const response = await fetch(plyUrl);
+      console.log('[PointCloudViewer] Loading GLB as point cloud:', glbUrl);
 
-      // No decompression needed for this PLY
-      const arrayBuffer = await response.arrayBuffer();
+      if (!window.THREE?.GLTFLoader) {
+        throw new Error('GLTFLoader not available');
+      }
 
-      const { positions, colors, count } = this.parsePLY(arrayBuffer);
+      const loader = new THREE.GLTFLoader();
+      const gltf = await new Promise((resolve, reject) => {
+        loader.load(glbUrl, resolve, undefined, reject);
+      });
+
+      // Extract vertex positions and colors from all meshes
+      const positions = [];
+      const colors = [];
+
+      gltf.scene.traverse((child) => {
+        if (!child.isMesh || !child.geometry) return;
+
+        // Get world-space positions
+        child.updateMatrixWorld(true);
+        const geo = child.geometry;
+        const posAttr = geo.attributes.position;
+        if (!posAttr) return;
+
+        // Get vertex colors if available
+        const colorAttr = geo.attributes.color;
+
+        // Get material base color as fallback
+        const mat = child.material;
+        const baseColor = mat?.color || { r: 0.8, g: 0.8, b: 0.8 };
+
+        const vertex = new THREE.Vector3();
+
+        // Sample every Nth vertex to reduce density
+        const sampleRate = 10; // keep 1 out of every 10 vertices
+        for (let i = 0; i < posAttr.count; i += sampleRate) {
+          vertex.set(posAttr.getX(i), posAttr.getY(i), posAttr.getZ(i));
+          vertex.applyMatrix4(child.matrixWorld);
+          positions.push(vertex.x, vertex.y, vertex.z);
+
+          // Matrix green with slight brightness variation per vertex
+          const brightness = 0.6 + Math.random() * 0.4;
+          colors.push(0.1 * brightness, 0.85 * brightness, 0.3 * brightness);
+        }
+      });
+
+      // Dispose Three.js scene (we only needed the vertex data)
+      gltf.scene.traverse((child) => {
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) {
+          const mats = Array.isArray(child.material) ? child.material : [child.material];
+          mats.forEach(m => m.dispose());
+        }
+      });
+
+      const count = positions.length / 3;
+      console.log('[PointCloudViewer] Extracted', count, 'vertices from GLB');
+
+      // Center and scale
+      let minX = Infinity, maxX = -Infinity;
+      let minY = Infinity, maxY = -Infinity;
+      let minZ = Infinity, maxZ = -Infinity;
+
+      for (let i = 0; i < positions.length; i += 3) {
+        minX = Math.min(minX, positions[i]);     maxX = Math.max(maxX, positions[i]);
+        minY = Math.min(minY, positions[i + 1]); maxY = Math.max(maxY, positions[i + 1]);
+        minZ = Math.min(minZ, positions[i + 2]); maxZ = Math.max(maxZ, positions[i + 2]);
+      }
+
+      const centerX = (minX + maxX) / 2;
+      const centerY = (minY + maxY) / 2;
+      const centerZ = (minZ + maxZ) / 2;
+      const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
+      const scale = 5 / maxDim;
+
+      for (let i = 0; i < positions.length; i += 3) {
+        const x = (positions[i]     - centerX) * scale;
+        const y = (positions[i + 1] - centerY) * scale;
+        const z = (positions[i + 2] - centerZ) * scale;
+
+        // Rotate -90° around X axis to stand upright
+        positions[i]     = x;
+        positions[i + 1] = -z;
+        positions[i + 2] = y;
+      }
 
       if (this.loadingEl) {
         this.loadingEl.remove();
       }
 
+      // Upload to WebGL buffers
       this.vao = gl.createVertexArray();
       gl.bindVertexArray(this.vao);
 
@@ -332,246 +357,20 @@ export class PointCloudViewer extends ViewerBase {
 
       gl.bindVertexArray(null);
       this.pointCount = count;
-
-      console.log('[PointCloudViewer] Loaded', count, 'points from PLY');
-      this.modelName = 'Stanford Bunny';
+      this.modelName = 'Kepler';
 
       // Update label after control panel is created
       setTimeout(() => {
         const label = this.controlPanel?.querySelector('.model-label');
         if (label) {
-          label.textContent = `Stanford Bunny (${(count / 1000).toFixed(0)}K pts)`;
+          label.textContent = `Kepler (${(count / 1000).toFixed(0)}K pts)`;
         }
       }, 100);
 
     } catch (error) {
-      console.error('[PointCloudViewer] Failed to load PLY:', error);
+      console.error('[PointCloudViewer] Failed to load GLB:', error);
       this.createFallbackPointCloud();
     }
-  }
-
-  parsePLY(arrayBuffer) {
-    const textDecoder = new TextDecoder();
-    const text = textDecoder.decode(arrayBuffer);
-
-    // Parse PLY header
-    const headerEndIndex = text.indexOf('end_header');
-    if (headerEndIndex === -1) {
-      throw new Error('Invalid PLY: no end_header');
-    }
-
-    const header = text.substring(0, headerEndIndex);
-    const vertexMatch = header.match(/element vertex (\d+)/);
-    const vertexCount = vertexMatch ? parseInt(vertexMatch[1]) : 0;
-
-    // Check format
-    const isBinary = header.includes('format binary');
-    const isAscii = header.includes('format ascii');
-
-    console.log('[PointCloudViewer] PLY format:', isBinary ? 'binary' : 'ascii', 'vertices:', vertexCount);
-
-    if (isBinary) {
-      return this.parseBinaryPLY(arrayBuffer, header, vertexCount);
-    } else {
-      return this.parseAsciiPLY(text, headerEndIndex, vertexCount);
-    }
-  }
-
-  parseBinaryPLY(arrayBuffer, header, vertexCount) {
-    // Find data start (after "end_header\n")
-    const uint8 = new Uint8Array(arrayBuffer);
-    let dataStart = 0;
-    for (let i = 0; i < Math.min(2000, uint8.length - 10); i++) {
-      if (uint8[i] === 101 && uint8[i+1] === 110 && uint8[i+2] === 100 &&
-          uint8[i+3] === 95 && uint8[i+4] === 104) { // "end_h"
-        // Find newline after end_header
-        for (let j = i; j < i + 20; j++) {
-          if (uint8[j] === 10) {
-            dataStart = j + 1;
-            break;
-          }
-        }
-        break;
-      }
-    }
-
-    const dataView = new DataView(arrayBuffer, dataStart);
-    const positions = [];
-    const colors = [];
-
-    // Bounds for normalization
-    let minX = Infinity, maxX = -Infinity;
-    let minY = Infinity, maxY = -Infinity;
-    let minZ = Infinity, maxZ = -Infinity;
-
-    const rawPoints = [];
-
-    // Read vertices (assuming x, y, z as float32)
-    for (let i = 0; i < vertexCount; i++) {
-      const offset = i * 12; // 3 floats * 4 bytes
-      if (offset + 12 > dataView.byteLength) break;
-
-      const x = dataView.getFloat32(offset, true);
-      const y = dataView.getFloat32(offset + 4, true);
-      const z = dataView.getFloat32(offset + 8, true);
-
-      if (isFinite(x) && isFinite(y) && isFinite(z)) {
-        rawPoints.push({ x, y, z });
-        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
-        minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
-      }
-    }
-
-    // Center and scale
-    const centerX = (minX + maxX) / 2;
-    const centerY = (minY + maxY) / 2;
-    const centerZ = (minZ + maxZ) / 2;
-    const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
-    const scale = 5 / maxDim;
-
-    for (const { x, y, z } of rawPoints) {
-      positions.push(
-        (x - centerX) * scale,
-        (y - centerY) * scale,
-        (z - centerZ) * scale
-      );
-
-      // Golden/bronze color for dragon (no RGB in file)
-      const brightness = 0.4 + Math.random() * 0.2;
-      colors.push(0.85 * brightness, 0.65 * brightness, 0.35 * brightness);
-    }
-
-    return { positions, colors, count: rawPoints.length };
-  }
-
-  parseAsciiPLY(text, headerEndIndex, vertexCount) {
-    const dataStart = headerEndIndex + 11; // "end_header\n"
-    const lines = text.substring(dataStart).trim().split('\n');
-
-    const positions = [];
-    const colors = [];
-
-    let minX = Infinity, maxX = -Infinity;
-    let minY = Infinity, maxY = -Infinity;
-    let minZ = Infinity, maxZ = -Infinity;
-
-    const rawPoints = [];
-
-    for (let i = 0; i < Math.min(vertexCount, lines.length); i++) {
-      const parts = lines[i].trim().split(/\s+/);
-      if (parts.length >= 3) {
-        const x = parseFloat(parts[0]);
-        const y = parseFloat(parts[1]);
-        const z = parseFloat(parts[2]);
-
-        if (isFinite(x) && isFinite(y) && isFinite(z)) {
-          rawPoints.push({ x, y, z });
-          minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-          minY = Math.min(minY, y); maxY = Math.max(maxY, y);
-          minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
-        }
-      }
-    }
-
-    const centerX = (minX + maxX) / 2;
-    const centerY = (minY + maxY) / 2;
-    const centerZ = (minZ + maxZ) / 2;
-    const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
-    const scale = 5 / maxDim;
-
-    for (const { x, y, z } of rawPoints) {
-      positions.push(
-        (x - centerX) * scale,
-        (y - centerY) * scale,
-        (z - centerZ) * scale
-      );
-
-      // Golden/bronze color for dragon
-      const brightness = 0.4 + Math.random() * 0.2;
-      colors.push(0.85 * brightness, 0.65 * brightness, 0.35 * brightness);
-    }
-
-    return { positions, colors, count: rawPoints.length };
-  }
-
-  parsePCD(arrayBuffer) {
-    const textDecoder = new TextDecoder();
-    const uint8View = new Uint8Array(arrayBuffer);
-
-    let headerEnd = 0;
-    for (let i = 0; i < Math.min(1000, uint8View.length - 5); i++) {
-      if (uint8View[i] === 68 && uint8View[i+1] === 65 && uint8View[i+2] === 84 && uint8View[i+3] === 65) {
-        for (let j = i; j < i + 20; j++) {
-          if (uint8View[j] === 10) {
-            headerEnd = j + 1;
-            break;
-          }
-        }
-        break;
-      }
-    }
-
-    const headerText = textDecoder.decode(uint8View.slice(0, headerEnd));
-    const pointsMatch = headerText.match(/POINTS\s+(\d+)/);
-    const pointCount = pointsMatch ? parseInt(pointsMatch[1]) : 0;
-
-    console.log('[PointCloudViewer] PCD header parsed, points:', pointCount);
-
-    const dataView = new DataView(arrayBuffer, headerEnd);
-    const positions = [];
-    const colors = [];
-
-    let minX = Infinity, maxX = -Infinity;
-    let minY = Infinity, maxY = -Infinity;
-    let minZ = Infinity, maxZ = -Infinity;
-
-    const rawPoints = [];
-
-    for (let i = 0; i < pointCount; i++) {
-      const offset = i * 12;
-      if (offset + 12 <= dataView.byteLength) {
-        const x = dataView.getFloat32(offset, true);
-        const y = dataView.getFloat32(offset + 4, true);
-        const z = dataView.getFloat32(offset + 8, true);
-
-        if (isFinite(x) && isFinite(y) && isFinite(z)) {
-          rawPoints.push({ x, y, z });
-          minX = Math.min(minX, x); maxX = Math.max(maxX, x);
-          minY = Math.min(minY, y); maxY = Math.max(maxY, y);
-          minZ = Math.min(minZ, z); maxZ = Math.max(maxZ, z);
-        }
-      }
-    }
-
-    const centerX = (minX + maxX) / 2;
-    const centerY = (minY + maxY) / 2;
-    const centerZ = (minZ + maxZ) / 2;
-    const maxDim = Math.max(maxX - minX, maxY - minY, maxZ - minZ);
-    const scale = 5 / maxDim;
-
-    for (const { x, y, z } of rawPoints) {
-      const nx = (x - centerX) * scale;
-      const ny = (z - centerZ) * scale;
-      const nz = (y - centerY) * scale;
-
-      positions.push(nx, ny, nz);
-
-      // Multi-color gradient based on 3D position (rainbow effect)
-      const normalizedX = (x - minX) / (maxX - minX);
-      const normalizedY = (y - minY) / (maxY - minY);
-      const normalizedZ = (z - minZ) / (maxZ - minZ);
-
-      // Combine position into hue for rainbow coloring
-      const hue = (normalizedX * 0.3 + normalizedY * 0.4 + normalizedZ * 0.3) * 0.8;
-      const sat = 0.7;
-      const light = 0.45 + normalizedZ * 0.2;
-
-      const rgb = this.hslToRgb(hue, sat, light);
-      colors.push(rgb.r, rgb.g, rgb.b);
-    }
-
-    return { positions, colors, count: rawPoints.length };
   }
 
   createFallbackPointCloud() {
@@ -637,7 +436,7 @@ export class PointCloudViewer extends ViewerBase {
     const height = this.canvas.height;
 
     gl.viewport(0, 0, width, height);
-    gl.clearColor(0.067, 0.067, 0.067, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     gl.enable(gl.BLEND);
@@ -668,7 +467,7 @@ export class PointCloudViewer extends ViewerBase {
     gl.uniformMatrix4fv(this.uProjection, false, projection);
     gl.uniformMatrix4fv(this.uView, false, view);
 
-    if (this.isAnimating && !this.isDragging) {
+    if (this.isAnimating) {
       this.autoRotation += 0.004;
     }
 
@@ -702,7 +501,7 @@ export class PointCloudViewer extends ViewerBase {
       ">${this.isAnimating ? '⏸' : '▶'}</button>
       <div style="width: 1px; height: 16px; background: #374151;"></div>
       <span class="model-label" style="color: #9ca3af; font-size: 9px; text-transform: uppercase;">
-        Stanford Bunny
+        Kepler
       </span>
     `;
 
@@ -721,7 +520,7 @@ export class PointCloudViewer extends ViewerBase {
   onResize() {
     if (!this.canvas || !this.container) return;
     this.canvas.width = this.container.clientWidth;
-    this.canvas.height = (this.container.clientHeight || 280) - 32;
+    this.canvas.height = this.container.clientHeight || 600;
   }
 
   showFallback() {

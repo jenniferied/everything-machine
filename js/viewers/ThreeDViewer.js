@@ -53,47 +53,19 @@ export class ThreeDViewer extends ViewerBase {
     this.isAnimating = true;
     this.shadingMode = options.shadingMode || 'studio';
     this.textureViewMode = 'combined'; // 'combined', 'diffuse', 'normal', 'roughness', 'metalness', 'ao'
-    this.currentModelKey = options.initialModel || 'damagedHelmet';
+    this.currentModelKey = options.initialModel || 'kepler';
 
     // Configuration
     this.autoRotate = options.autoRotate !== false;
     this.initialCameraPosition = null;
 
-    // Model catalog - using Three.js examples server (reliable CORS)
+    // Model catalog
     this.modelCatalog = {
-      damagedHelmet: {
-        name: 'Damaged Helmet',
-        url: 'https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf',
+      kepler: {
+        name: 'Kepler',
+        url: 'assets/models/kepler.glb',
         scale: 1,
         position: [0, 0, 0],
-        cameraDistance: 3
-      },
-      horse: {
-        name: 'Horse',
-        url: 'https://threejs.org/examples/models/gltf/Horse.glb',
-        scale: 0.01,
-        position: [0, -1, 0],
-        cameraDistance: 3
-      },
-      flamingo: {
-        name: 'Flamingo',
-        url: 'https://threejs.org/examples/models/gltf/Flamingo.glb',
-        scale: 0.01,
-        position: [0, 0, 0],
-        cameraDistance: 3
-      },
-      parrot: {
-        name: 'Parrot',
-        url: 'https://threejs.org/examples/models/gltf/Parrot.glb',
-        scale: 0.01,
-        position: [0, 0, 0],
-        cameraDistance: 3
-      },
-      soldier: {
-        name: 'Soldier',
-        url: 'https://threejs.org/examples/models/gltf/Soldier.glb',
-        scale: 1,
-        position: [0, -1, 0],
         cameraDistance: 3
       }
     };
@@ -137,16 +109,6 @@ export class ThreeDViewer extends ViewerBase {
       throw new Error('Three.js failed to load');
     }
 
-    // Load OrbitControls
-    if (!window.THREE.OrbitControls) {
-      try {
-        await this.scriptLoader.loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js');
-        console.log('[ThreeDViewer] OrbitControls loaded');
-      } catch (e) {
-        console.warn('[ThreeDViewer] OrbitControls failed to load:', e);
-      }
-    }
-
     // Load GLTFLoader
     if (!window.THREE.GLTFLoader) {
       try {
@@ -181,9 +143,9 @@ export class ThreeDViewer extends ViewerBase {
     // Create clock for animations
     this.clock = new THREE.Clock();
 
-    // Create scene
+    // Create scene (transparent background)
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x111111);
+    this.scene.background = null;
 
     // Create camera (position will be set by loadModel based on model config)
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
@@ -211,14 +173,7 @@ export class ThreeDViewer extends ViewerBase {
     this.container.style.position = 'relative';
     this.container.appendChild(this.renderer.domElement);
 
-    // Setup OrbitControls
-    if (window.THREE.OrbitControls) {
-      this.orbitControls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
-      this.orbitControls.enableDamping = true;
-      this.orbitControls.dampingFactor = 0.05;
-      this.orbitControls.minDistance = 1;
-      this.orbitControls.maxDistance = 10;
-    }
+    // OrbitControls disabled — display-only with auto-rotate
 
     // Initialize PMREM Generator for environment maps
     this.pmremGenerator = new THREE.PMREMGenerator(this.renderer);
@@ -233,9 +188,6 @@ export class ThreeDViewer extends ViewerBase {
     this.debugCube = new THREE.Mesh(debugGeo, debugMat);
     this.scene.add(this.debugCube);
     console.log('[ThreeDViewer] Debug cube added to scene');
-
-    // Create control panel
-    this.createControlPanel();
 
     // Handle resize
     this.resizeHandler = () => this.onWindowResize();
@@ -296,35 +248,46 @@ export class ThreeDViewer extends ViewerBase {
       loader.load(
         modelConfig.url,
         (gltf) => {
-          this.model = gltf.scene;
+          const inner = gltf.scene;
 
-          // Apply model-specific transforms
-          const scale = modelConfig.scale || 1;
-          this.model.scale.set(scale, scale, scale);
+          // Debug: log scene hierarchy
+          let meshCount = 0;
+          inner.traverse((child) => {
+            if (child.isMesh) {
+              meshCount++;
+              console.log(`[ThreeDViewer] Mesh: "${child.name}", vertices: ${child.geometry?.attributes?.position?.count}`);
+            }
+          });
+          console.log(`[ThreeDViewer] Total meshes: ${meshCount}`);
 
-          const pos = modelConfig.position || [0, 0, 0];
-          this.model.position.set(pos[0], pos[1], pos[2]);
+          // Auto-center and scale
+          const box = new THREE.Box3().setFromObject(inner);
+          const center = box.getCenter(new THREE.Vector3());
+          const size = box.getSize(new THREE.Vector3());
+          const maxDim = Math.max(size.x, size.y, size.z);
+          const fitScale = 2 / maxDim;
 
-          // Update camera distance
-          const camDist = modelConfig.cameraDistance || 3;
-          this.camera.position.set(0, 0, camDist);
+          inner.scale.multiplyScalar(fitScale);
+          center.multiplyScalar(fitScale);
+          inner.position.sub(center);
+
+          this.model = new THREE.Group();
+          this.model.add(inner);
+
+          // Set camera
+          this.camera.position.set(0, 0, 3.5);
           this.initialCameraPosition = this.camera.position.clone();
-          if (this.orbitControls) {
-            this.orbitControls.update();
-          }
 
           // Extract and store textures from all materials
-          this.model.traverse((child) => {
+          inner.traverse((child) => {
             if (child.isMesh && child.material) {
               const materials = Array.isArray(child.material) ? child.material : [child.material];
 
               materials.forEach((mat) => {
-                // Store first valid material as original
                 if (!this.originalMaterial && mat.isMeshStandardMaterial) {
                   this.originalMaterial = mat.clone();
                 }
 
-                // Extract texture references (take first found)
                 if (mat.map && !this.textures.diffuse) this.textures.diffuse = mat.map;
                 if (mat.normalMap && !this.textures.normal) this.textures.normal = mat.normalMap;
                 if (mat.roughnessMap && !this.textures.roughness) this.textures.roughness = mat.roughnessMap;
@@ -332,7 +295,6 @@ export class ThreeDViewer extends ViewerBase {
                 if (mat.aoMap && !this.textures.ao) this.textures.ao = mat.aoMap;
                 if (mat.emissiveMap && !this.textures.emissive) this.textures.emissive = mat.emissiveMap;
 
-                // Apply environment map if available
                 if (this.envTexture) {
                   mat.envMap = this.envTexture;
                   mat.envMapIntensity = 1.0;
@@ -342,15 +304,22 @@ export class ThreeDViewer extends ViewerBase {
             }
           });
 
-          this.scene.add(this.model);
+          // Clear scene of any previous models
+          const toRemove = [];
+          this.scene.traverse((child) => {
+            if (child.isMesh) toRemove.push(child);
+          });
+          toRemove.forEach((mesh) => {
+            mesh.parent.remove(mesh);
+            mesh.geometry?.dispose();
+            if (mesh.material) {
+              const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+              mats.forEach(m => m.dispose());
+            }
+          });
 
-          // Remove debug cube if it exists
-          if (this.debugCube) {
-            this.scene.remove(this.debugCube);
-            this.debugCube.geometry.dispose();
-            this.debugCube.material.dispose();
-            this.debugCube = null;
-          }
+          this.scene.add(this.model);
+          this.debugCube = null;
 
           const loadedTextures = Object.keys(this.textures).filter(k => this.textures[k]);
           console.log(`[ThreeDViewer] ${modelConfig.name} loaded with textures:`, loadedTextures);
@@ -486,7 +455,7 @@ export class ThreeDViewer extends ViewerBase {
 
     // Clear environment and HDRI
     this.scene.environment = null;
-    this.scene.background = new THREE.Color(0x111111);
+    this.scene.background = null;
 
     // Dispose and clear HDRI texture if switching away from HDRI
     if (mode !== 'hdri' && this.envTexture) {
@@ -506,7 +475,7 @@ export class ThreeDViewer extends ViewerBase {
 
     switch (mode) {
       case 'studio':
-        this.scene.background = new THREE.Color(0x111111);
+        this.scene.background = null;
         this.addLight(new THREE.AmbientLight(0xffffff, 0.3));
         const key = new THREE.DirectionalLight(0xffffff, 1.0);
         key.position.set(5, 5, 5);
@@ -764,10 +733,6 @@ export class ThreeDViewer extends ViewerBase {
 
     const delta = this.clock.getDelta();
 
-    if (this.orbitControls) {
-      this.orbitControls.update();
-    }
-
     // Auto-rotate
     if (this.model && this.autoRotate && this.isAnimating) {
       this.model.rotation.y += 0.001;
@@ -871,18 +836,14 @@ export class ThreeDViewer extends ViewerBase {
     ];
 
     // Create selects and store references
-    this.controls.modelSelect = createSelect(modelOptions, this.currentModelKey, 'model-select', 'Select Model');
     this.controls.shadingSelect = createSelect(shadingOptions, this.shadingMode, 'shading-mode', 'Lighting');
-    this.controls.textureSelect = createSelect(textureOptions, this.textureViewMode, 'texture-view', 'View Texture Map');
 
     // Append all controls
     this.controlPanel.appendChild(animBtn);
     this.controlPanel.appendChild(wireBtn);
     this.controlPanel.appendChild(resetBtn);
     this.controlPanel.appendChild(divider);
-    this.controlPanel.appendChild(this.controls.modelSelect);
     this.controlPanel.appendChild(this.controls.shadingSelect);
-    this.controlPanel.appendChild(this.controls.textureSelect);
 
     wrapper.appendChild(this.controlPanel);
     this.container.appendChild(wrapper);
@@ -937,9 +898,6 @@ export class ThreeDViewer extends ViewerBase {
       this.camera.position.copy(this.initialCameraPosition);
       this.camera.lookAt(0, 0, 0);
     }
-    if (this.orbitControls) {
-      this.orbitControls.reset();
-    }
     if (this.model) {
       this.model.rotation.set(0, 0, 0);
     }
@@ -968,9 +926,6 @@ export class ThreeDViewer extends ViewerBase {
     }
     if (this.resizeHandler) {
       window.removeEventListener('resize', this.resizeHandler);
-    }
-    if (this.orbitControls) {
-      this.orbitControls.dispose();
     }
     if (this.pmremGenerator) {
       this.pmremGenerator.dispose();
