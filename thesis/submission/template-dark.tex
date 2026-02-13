@@ -324,7 +324,16 @@ $endif$
       \includegraphics[height=1.8cm]{mp-logo.png}
     \end{minipage}
 
-    \vspace{6cm}
+    \vspace{1cm}
+
+    % === KEPLER POINT CLOUD (background visual) ===
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[opacity=0.4] at (current page.center) {%
+        \includegraphics[height=0.75\paperheight]{kepler-cover.png}%
+      };
+    \end{tikzpicture}
+
+    \vspace{4cm}
 
     % === TITLE (pixel font with glow effect) ===
     \centering
@@ -387,9 +396,10 @@ $endif$
 \color{darktext}
 
 $if(abstract)$
-\begin{abstract}
+\begingroup
+\section*{Abstract}
 \noindent $abstract$
-\end{abstract}
+\endgroup
 $endif$
 
 \clearpage
