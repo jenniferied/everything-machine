@@ -27,7 +27,7 @@ abstract: |
   kreativen Prozess -- der ständige Zwang, neue Tools zu evaluieren und mit
   Limitierungen zu kämpfen, kostet kreative Energie.
 
-  **Keywords:** Artistic Research, generative KI, Mensch-KI-Kollaboration, digitale Identität, Autoethnografie, kreativer Prozess, Practice-Based Research
+  *Keywords: Artistic Research, generative KI, Mensch-KI-Kollaboration, digitale Identität, Autoethnografie, kreativer Prozess, Practice-Based Research*
 ---
 
 # Einleitung
