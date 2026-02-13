@@ -24,7 +24,7 @@ Die Ergebnisse waren gemischt. Einige Bilder sahen wirklich gut aus – der Char
 
 ![Generiertes Kepler-Bild 6](assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-006.png)
 
-## Die Technologie dahinter
+## ComfyUI und Flux
 
 Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die zusammenarbeiten, um konsistente Charakterdarstellungen zu ermöglichen. ComfyUI selbst ist eine grafische Benutzeroberfläche für Stable Diffusion, die es ermöglicht, komplexe Bildgenerierungsprozesse durch modulare Workflows zu steuern. Statt Code zu schreiben, verbindet man Nodes miteinander, die verschiedene Funktionen repräsentieren – von der Bildladung über die Prompt-Verarbeitung bis hin zur finalen Ausgabe.
 
@@ -34,11 +34,15 @@ Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die
 
 Der Consistent Character Workflow nutzt dabei hauptsächlich das Flux-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
 
+## IP-Adapter und ControlNet
+
 Ein wichtiger Teil des Workflows ist die Verwendung von IP-Adapter oder ähnlichen Technologien, die es ermöglichen, Referenzbilder in den Generierungsprozess einzubinden. Diese Adapter analysieren das Referenzbild und extrahieren bestimmte Merkmale – Gesichtszüge, Kleidung, Stil – und versuchen dann, diese Merkmale in neuen Generierungen beizubehalten. Das funktioniert durch sogenannte Attention-Mechanismen, bei denen das Modell lernt, welche Teile des Referenzbilds wichtig sind und welche ignoriert werden können.
 
 ControlNet ist ein weiteres wichtiges Werkzeug in diesem Workflow. Es ermöglicht es, bestimmte Aspekte der Generierung zu kontrollieren – zum Beispiel die Pose eines Charakters oder die Tiefenstruktur einer Szene. ControlNet funktioniert, indem es zusätzliche Informationen aus einem Kontrollbild extrahiert und diese Informationen dann in den Generierungsprozess einfließen lässt. Wenn ich zum Beispiel ein Bild mit einer bestimmten Pose habe, kann ControlNet diese Pose erkennen und sicherstellen, dass der generierte Charakter in derselben Pose erscheint.
 
 Das Problem, das ich mit dem Basketball hatte, liegt wahrscheinlich daran, dass das System nicht wirklich "versteht", was es generiert. Es erkennt Muster und Merkmale, aber es hat kein semantisches Verständnis davon, dass ein Basketball und eine Maske möglicherweise nicht gleichzeitig vorhanden sein sollten. Das Modell sieht einfach verschiedene visuelle Elemente und versucht, sie zu kombinieren, ohne die logischen Zusammenhänge zu berücksichtigen.
+
+## Face Detailer — und das Problem
 
 Face Detailer ist ein zusätzliches Tool, das speziell darauf ausgelegt ist, Gesichter zu verbessern. Es funktioniert, indem es das generierte Bild analysiert, Gesichter erkennt und dann diese Bereiche mit einem speziell trainierten Modell nachbearbeitet. Das kann helfen, Details zu schärfen und realistischere Gesichtszüge zu erzeugen, aber es kann auch zu Problemen führen, wenn das System Gesichter erkennt, wo keine sein sollten, oder wenn es versucht, Gesichter zu "reparieren", die eigentlich korrekt waren.
 
