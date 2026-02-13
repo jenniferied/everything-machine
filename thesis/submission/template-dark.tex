@@ -44,6 +44,7 @@
 \definecolor{darkbg}{HTML}{111111}      % background-color: #111
 \definecolor{lighttext}{HTML}{d1d5db}   % color: #d1d5db (text-gray-300)
 \definecolor{accentgreen}{HTML}{1a6b40} % dark green for light bg readability
+\definecolor{titlegreen}{HTML}{3cb371}  % brighter green for title on dark bg
 \definecolor{mutedtext}{HTML}{9ca3af}   % color: #9ca3af (text-gray-400)
 \definecolor{darkborder}{HTML}{1f2937}  % background: #1f2937 (bg-gray-800)
 \definecolor{contentbg}{HTML}{e0e0e0}  % light gray for content pages
@@ -121,9 +122,32 @@
   pdfusetitle
 ]{hyperref}
 
+% === CHAT BUBBLES (Anhang) ===
+\usepackage{tcolorbox}
+
+\newtcolorbox{claudemsg}{
+  colback=accentgreen!8!contentbg, colframe=accentgreen!30,
+  arc=3mm, boxrule=0.4pt,
+  left=3mm, right=3mm, top=2mm, bottom=2mm,
+  fontupper=\small, before skip=2mm, after skip=2mm,
+  before upper={\textbf{\color{accentgreen}Claude}\hspace{0.5em}}
+}
+
+\newtcolorbox{usermsg}{
+  colback=darkborder!15!contentbg, colframe=darkborder!40,
+  arc=3mm, boxrule=0.4pt,
+  left=3mm, right=3mm, top=2mm, bottom=2mm,
+  fontupper=\small, before skip=2mm, after skip=2mm,
+  before upper={\textbf{\color{darktext}Jennifer}\hspace{0.5em}}
+}
+
+\newcommand{\chatsection}[1]{%
+  \vspace{0.5em}{\pixelheading\fontsize{10}{12}\selectfont\color{accentgreen}#1}\vspace{0.3em}}
+
 % === GRAPHICS ===
 \usepackage{graphicx}
 \usepackage{float}
+\floatplacement{figure}{H}  % keep figures exactly where placed in text
 
 % === TIKZ FOR GRADIENT TEXT ===
 \usepackage{tikz}
@@ -155,7 +179,7 @@
 \makeatother
 
 % Graphics path for assets
-\graphicspath{{assets/}}
+\graphicspath{{assets/}{../../}}
 
 % === TABLES ===
 \usepackage{longtable}
@@ -202,7 +226,7 @@
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
+\setlength{\csllabelwidth}{0em}
 \newenvironment{CSLReferences}[2]
  {\begin{list}{}{%
   \setlength{\itemindent}{0pt}
@@ -215,8 +239,8 @@
   \setlength{\itemsep}{#2\baselineskip}}}
  {\end{list}}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLLeftMargin}[1]{}
+\newcommand{\CSLRightInline}[1]{#1\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \newcommand{\citeproctext}{}
 \newcommand{\citeproc}[2]{#2}
@@ -224,7 +248,7 @@
 % === CAPTIONS ===
 \usepackage{caption}
 \captionsetup{
-  font={small,color=mutedtext},
+  font={small,color=darktext!70},
   labelfont={bf,color=accentgreen},
   format=plain,
   justification=raggedright,
@@ -304,11 +328,11 @@ $endif$
 
     % === TITLE (pixel font with glow effect) ===
     \centering
-    \parbox{0.9\textwidth}{\centering\pixeltitle\fontsize{24}{32}\selectfont\color{accentgreen}\shadowtext{\@title}}
+    \parbox{0.9\textwidth}{\centering\pixeltitle\fontsize{24}{32}\selectfont\color{titlegreen}\shadowtext{\@title}}
 
     $if(subtitle)$
     \vspace{0.5cm}
-    {\pixelsubtitle\fontsize{16}{20}\selectfont\color{accentgreen} $subtitle$ \par}
+    {\pixelsubtitle\fontsize{16}{20}\selectfont\color{titlegreen} $subtitle$ \par}
     $endif$
 
     \vspace{1.5cm}
@@ -366,8 +390,9 @@ $if(abstract)$
 \begin{abstract}
 \noindent $abstract$
 \end{abstract}
-\clearpage
 $endif$
+
+\clearpage
 
 $if(toc)$
 {\color{darktext}\tableofcontents}

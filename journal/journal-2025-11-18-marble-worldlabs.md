@@ -64,7 +64,9 @@ Dieser Ansatz – Vibes statt konkretes Referenzbild – hat interessantere Erge
 
 ---
 
-**Fazit zu den Experimenten:** Marble orientiert sich stark am Input-Bild. Für kreativere Ergebnisse funktioniert es besser, nur Text-Prompts zu verwenden oder abstrakte Inputs. Der Workaround über Claude zur Prompt-Generierung aus mehreren Bildern ist eine interessante Methode, um die Einbild-Limitierung zu umgehen.
+## Fazit zu den Experimenten
+
+Marble orientiert sich stark am Input-Bild. Für kreativere Ergebnisse funktioniert es besser, nur Text-Prompts zu verwenden oder abstrakte Inputs. Der Workaround über Claude zur Prompt-Generierung aus mehreren Bildern ist eine interessante Methode, um die Einbild-Limitierung zu umgehen.
 
 ## Die Technologie dahinter
 

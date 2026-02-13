@@ -19,6 +19,8 @@ OUTDIR := output
 DOCSDIR := docs
 BIBFILE := references/bibliography.bib
 CSLFILE := references/apa.csl
+GENERATED_ANHANG := generated-anhang.md
+JOURNAL_FILES := $(wildcard ../../journal/journal-*.md)
 
 # Common Pandoc flags
 PANDOC_FLAGS := --template=$(TEMPLATE) \
@@ -74,9 +76,13 @@ $(OUTDIR)/03-methodologie.pdf: $(DOCSDIR)/03-methodologie.md $(TEMPLATE) $(BIBFI
 	@echo "Building Methodologie..."
 	@$(PANDOC) $< -o $@ $(PANDOC_FLAGS)
 
-$(OUTDIR)/04-dokumentation.pdf: $(DOCSDIR)/04-dokumentation.md $(TEMPLATE) $(BIBFILE)
+$(GENERATED_ANHANG): $(JOURNAL_FILES) scripts/generate-anhang.py
+	@echo "Generating Anhang from journal files..."
+	@python3 scripts/generate-anhang.py > $(GENERATED_ANHANG) 2>/dev/null
+
+$(OUTDIR)/04-dokumentation.pdf: $(DOCSDIR)/04-dokumentation.md $(GENERATED_ANHANG) $(TEMPLATE) $(BIBFILE)
 	@echo "Building Dokumentation..."
-	@$(PANDOC) $< -o $@ $(PANDOC_FLAGS)
+	@$(PANDOC) $< $(GENERATED_ANHANG) -o $@ $(PANDOC_FLAGS) --resource-path=.:../..
 
 # === COMBINED TARGETS ===
 
@@ -101,6 +107,7 @@ clean:
 	@rm -f $(OUTDIR)/*.aux $(OUTDIR)/*.log $(OUTDIR)/*.out
 	@rm -f $(OUTDIR)/*.toc $(OUTDIR)/*.bbl $(OUTDIR)/*.bcf
 	@rm -f $(OUTDIR)/*.blg $(OUTDIR)/*.run.xml
+	@rm -f $(GENERATED_ANHANG)
 	@echo "Done."
 
 # === UTILITIES ===
