@@ -67,15 +67,48 @@ export class MarkdownParser {
     let hasSections = false;
     let introText = [];
     
+    let inTable = false;
+    let tableLines = [];
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       const trimmed = line.trim();
-      
+      const isTableLine = trimmed.startsWith('|') && trimmed.endsWith('|');
+
+      // Table handling: collect consecutive table lines as one block
+      if (isTableLine) {
+        if (!inTable) {
+          // Flush current paragraph before starting table
+          if (currentParagraph.length > 0) {
+            if (currentSection.heading) {
+              currentSection.content.push(currentParagraph.join(' '));
+            } else {
+              introText.push(currentParagraph.join(' '));
+            }
+            currentParagraph = [];
+          }
+          inTable = true;
+          tableLines = [];
+        }
+        tableLines.push(trimmed);
+        continue;
+      } else if (inTable) {
+        // End of table block — push joined with newlines
+        const tableBlock = tableLines.join('\n');
+        if (currentSection.heading) {
+          currentSection.content.push(tableBlock);
+        } else {
+          introText.push(tableBlock);
+        }
+        inTable = false;
+        tableLines = [];
+      }
+
       // Detect heading (#, ##, ###)
       const headingMatch = trimmed.match(/^(#{1,3})\s+(.+)$/);
       if (headingMatch) {
         hasSections = true;
-        
+
         // Close current paragraph
         if (currentParagraph.length > 0) {
           if (currentSection.heading) {
@@ -85,16 +118,16 @@ export class MarkdownParser {
           }
           currentParagraph = [];
         }
-        
+
         // Close current section
         if (currentSection.heading || currentSection.content.length > 0) {
           sections.push(currentSection);
         }
-        
+
         // Start new section
         const headingLevel = headingMatch[1].length;
         let headingText = headingMatch[2].trim().replace(/^#+\s*/, '');
-        
+
         currentSection = {
           heading: headingText,
           headingLevel: headingLevel,
@@ -102,13 +135,13 @@ export class MarkdownParser {
         };
         continue;
       }
-      
+
       // Handle lines that start with # but aren't valid headings
       if (trimmed.startsWith('#') && !trimmed.match(/^#{1,3}\s+/)) {
         currentParagraph.push(trimmed.replace(/^#+\s*/, ''));
         continue;
       }
-      
+
       // Empty line - end paragraph
       if (trimmed === '') {
         if (currentParagraph.length > 0) {
@@ -121,9 +154,19 @@ export class MarkdownParser {
         }
         continue;
       }
-      
+
       // Normal line - add to current paragraph
       currentParagraph.push(trimmed);
+    }
+
+    // Flush trailing table
+    if (inTable && tableLines.length > 0) {
+      const tableBlock = tableLines.join('\n');
+      if (currentSection.heading) {
+        currentSection.content.push(tableBlock);
+      } else {
+        introText.push(tableBlock);
+      }
     }
     
     // Close last paragraph and section
@@ -142,6 +185,38 @@ export class MarkdownParser {
   }
 
   /**
+   * Convert markdown table lines to HTML table
+   * @param {string} tableBlock - Newline-joined markdown table lines
+   * @returns {string} HTML table string
+   */
+  formatTable(tableBlock) {
+    const lines = tableBlock.split('\n').filter(l => l.trim());
+    if (lines.length < 2) return `<p class="mb-4">${tableBlock}</p>`;
+
+    const parseRow = (line) =>
+      line.split('|').map(c => c.trim()).filter((_, i, arr) => i > 0 && i < arr.length);
+
+    const headers = parseRow(lines[0]);
+    const dataRows = lines.slice(2); // skip header + separator
+
+    let html = '<div class="table-scroll"><table class="bubble-table"><thead><tr>';
+    headers.forEach(h => {
+      html += `<th>${h.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</th>`;
+    });
+    html += '</tr></thead><tbody>';
+    dataRows.forEach(line => {
+      const cells = parseRow(line);
+      html += '<tr>';
+      cells.forEach(c => {
+        html += `<td>${c.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</td>`;
+      });
+      html += '</tr>';
+    });
+    html += '</tbody></table></div>';
+    return html;
+  }
+
+  /**
    * Format paragraphs with inline markdown
    * @param {Array} paragraphs - Array of paragraph strings
    * @param {boolean} useFullWidthImages - Use full width for images
@@ -151,8 +226,13 @@ export class MarkdownParser {
   formatParagraphs(paragraphs, useFullWidthImages = false, worldInfoMap = new Map()) {
     return paragraphs.map(para => {
       if (!para || !para.trim()) return '';
-      
+
       let processed = para.trim();
+
+      // Markdown table block (lines joined with \n containing |)
+      if (processed.includes('\n') && processed.split('\n')[0].includes('|') && processed.split('\n')[1]?.match(/^\|?[\s:-]+\|/)) {
+        return this.formatTable(processed);
+      }
       
       // Restore world info blocks
       processed = WorldInfoComponent.restoreWorldInfo(processed, worldInfoMap);

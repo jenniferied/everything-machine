@@ -332,6 +332,42 @@ main.container {
     border-radius: 0.25rem;
 }
 
+/* Tables in bubbles */
+.table-scroll {
+    overflow-x: auto;
+    margin: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bubble-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.bubble-table th,
+.bubble-table td {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.bubble-table th {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.bubble-table td {
+    color: #d1d5db;
+}
+
+.bubble-table tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
 /* Journal Header (Titel mit Datum/Zeit) */
 .journal-header {
     margin-bottom: 1.5rem;
