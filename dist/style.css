@@ -2134,6 +2134,21 @@ main.container {
     margin: 0;
 }
 
+.interest-detail-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #4ade80;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+}
+
+.interest-detail-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
 .interest-graph-hint {
     text-align: center;
     font-size: 0.75rem;
