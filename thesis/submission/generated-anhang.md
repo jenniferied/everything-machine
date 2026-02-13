@@ -1115,6 +1115,127 @@ Das ist keine Limitierung meines Prompts. Das ist eine Limitierung der Repräsen
 
 Bei der Recherche bin ich auf [ComfyUI-NanoBanano](https://github.com/ShmuelRonen/ComfyUI-NanoBanano) gestoßen, das Google Gemini 2.5 Flash Image in ComfyUI integriert. Klingt vielversprechend, ist aber ein 2D-Bildgenerator — kein 3D-Tool. Für Kepler-Konzeptbilder potenziell nützlich, aber nicht für das eigentliche Problem: einen voxelisierten 3D-Charakter konsistent zu generieren.
 
+Ich habe es trotzdem ausprobiert — nicht über das ComfyUI-Plugin, sondern über NanoBanano Pro direkt im Gemini Chat, mit dem Kepler-Referenzbild aus dem ersten ComfyUI-Experiment.
+
+##### Chat 1: Pool-Szene
+
+> **"Can you based on this reference generate an image where the voxel character is relaxing by a pool."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/dda81306258033e3a01ca26b66ac2620.png}
+\caption{Gemini hält die 3D-Voxel-Ästhetik und fügt kein Gesicht hinzu.}
+\end{figure}
+```
+> **"Now him in the pool on a pool float."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/67dbfe6571955e4f4bacc0e374f3ea5d.png}
+\caption{Die Szene wurde erweitert, aber der zweite Kepler am Beckenrand blieb stehen.}
+\end{figure}
+```
+> **"Just the pool float with him but from the top."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/82091700a73863f160e66e258823862f.png}
+\caption{Gemini hat die Draufsicht umgesetzt, aber den liegenden Kepler am Rand nicht entfernt.}
+\end{figure}
+```
+Beeindruckend: Gemini behält die geometrische Voxel-Form bei und fügt keine Gesichter hinzu. Aber jeder neue Prompt baut auf dem vorherigen Bild auf, statt es zu ersetzen — für einen wirklich neuen Stil müsste ich jeweils einen neuen Chat starten.
+
+##### Chat 2: Treppe im Nachthimmel
+
+> **"Show this character walking up a set of endless glowing stairs in the night sky. Make it a Portrait image."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/05da7686419814c073b75c3ad0f95c38.png}
+\caption{Beeindruckende Atmosphäre, aber kein Hochformat trotz explizitem Wunsch.}
+\end{figure}
+```
+> **"You did not end up making it a portrait, and I want him to be walking up, not down, and the staircase is a spiral staircase."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/744b7d49ce7828d0621a150c2ebace76.png}
+\caption{Die Spiraltreppe wurde umgesetzt, aber immer noch kein Portrait-Format. Und die Sterne liegen vor dem Planeten — physikalisch unmöglich.}
+\end{figure}
+```
+Die Voxel-Ästhetik bleibt konsistent, kein Gesicht hinzugefügt. Aber Gemini ignoriert die Portrait-Anweisung zweimal, und die Sterne vor dem Planeten zeigen, dass das Modell kein räumliches Verständnis der Szene hat — es komponiert visuell, nicht physikalisch.
+
+##### Chat 3: Brücke bei Nacht
+
+> **"Das hier sind ein paar Beispielbilder von Kepler. Behalte seine Voxel-Ästhetik bei und generiere mir ein hochkant ästhetisches Cover. Wie er über eine Brücke in der Nacht fährt in einem Retro-Auto."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/d78e7d3093dd19983a745c1e7eb11aaf.png}
+\caption{Gemini generiert ungefragt ein Album-Cover mit Titel "NIGHT DRIVE / KEPLER" — es interpretiert "Cover" als Musikcover und fügt selbstständig Text hinzu.}
+\end{figure}
+```
+Ich hatte nur "Cover" geschrieben, nicht "Album-Cover" — Gemini hat den Kontext selbst erschlossen und "NIGHT DRIVE / KEPLER" als Titel gesetzt.
+
+> **"Sorge dafür, dass der Brückenzaun nicht leuchtet. Wähle eine andere Perspektive und entferne den Text. Die Planeten sollten keine Sterne vor ihnen haben."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/f19fe7aa8a1a9a3d33f6fbb9fb6930e4.png}
+\caption{Text entfernt, andere Perspektive — aber der Brückenzaun leuchtet weiterhin, und die Sterne-vor-Planeten-Problematik bleibt.}
+\end{figure}
+```
+> **"Die Barrikaden der Brücke leuchten immer noch."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/19e3f3c465d3cd0b4cd697e1732a4a32.png}
+\caption{Dritter Versuch — die leuchtenden Barrikaden lassen sich nicht abschalten.}
+\end{figure}
+```
+##### Chat 4: Typografie auf bestehendem Cover
+
+> **"Kannst du mir auf dieses Bild einen Album title geben: 'es tut mir leid' in liquid metal cyber tribal aesthetic geben."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/648ab3a4218cf36fb7e517d6680d90c9.png}
+\caption{Gemini setzt den Text in einer generischen Blackletter-Schrift mit leichtem Metallic-Effekt — weit entfernt von "liquid metal cyber tribal".}
+\end{figure}
+```
+> **"Jetzt soll er nur metallisch grau sein und etwas weiter oben eine andere Schriftart, die noch etwas mehr slanted ist. In den Farben des Covers selbst."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/f75cb7e42e76aa5dbaed485e0de590e2.png}
+\caption{Kaum Veränderung — die Schrift ist minimal anders positioniert, aber weder slanted noch in den Cover-Farben.}
+\end{figure}
+```
+> **"Ok, bitte ändert es noch mal komplett um und verschiebt den Text nach oben."**
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{_img_cache/6fee02d695141707982b63347201a05a.png}
+\caption{Dritte Iteration — wieder fast identisch. "Komplett um" wurde ignoriert.}
+\end{figure}
+```
+Besonders frustrierend: Drei Iterationen, kaum Unterschied. Keine der Anweisungen — liquid metal, cyber tribal, slanted, Cover-Farben, komplett anders — wurde wirklich umgesetzt. Typografie ist offensichtlich eine Schwachstelle: Gemini kann Text auf Bilder setzen, aber die ästhetische Kontrolle über Schriftart, Stil und Platzierung fehlt fast vollständig.
+
+##### Zwischenfazit Gemini
+
+Die vier Chats zeigen ein klares Bild: Gemini ist beeindruckend darin, die Voxel-Ästhetik beizubehalten und Szenen zu generieren — als Inspirationsquelle funktioniert es. Aber für Art Direction ist das Chat-Fenster unbrauchbar. Manche Anweisungen werden präzise befolgt (Szenen-Änderungen, Text entfernen), andere hartnäckig ignoriert (Hochformat, Leuchteffekte, Typografie-Stil, Sterne-vor-Planeten-Physik). Für jeden neuen Anlauf muss man einen frischen Chat öffnen, und selbst dann ist die Kontrolle zu grob. Für feinere Steuerung bräuchte man die API oder spezialisierte Tools wie NanoBanano in ComfyUI. Das Potenzial ist da — aber Spaß macht es nicht.
+
 #### 2D-Workaround: ControlNet Depth + Inpainting
 
 Ein vielversprechender Ansatz: Statt Face-Tools zu nutzen, kann ich über Depth Maps arbeiten. [Flux.1-dev-Controlnet-Depth](https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth) extrahiert die räumliche Struktur eines Bildes und nutzt sie als Kontrollsignal — ohne das Gesicht interpretieren zu müssen. Kombiniert mit Inpainting könnte ich Kepler-Referenzen mit Tiefenkarte einspeisen und die KI nur den Stil und die Umgebung generieren lassen, während die Silhouette erhalten bleibt.
