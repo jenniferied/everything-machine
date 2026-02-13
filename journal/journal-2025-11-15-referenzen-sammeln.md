@@ -4,11 +4,15 @@
 
 ## Der Start
 
-Heute haben wir angefangen, Referenzen für Kepler zu sammeln. Das Ziel war, eine solide Grundlage zu schaffen, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
+Im Rahmen der Artistic Research-Vorlesung bei Prof. Dr. Aristotelis Hadjakos an der TH OWL bin ich zum ersten Mal mit dem Konzept der Artistic Research in Berührung gekommen. Borgdorffs Idee – Forschung *in* und *durch* die Kunst, bei der die künstlerische Praxis selbst die Forschungsmethode ist – klang faszinierend, aber auch einschüchternd. Was ist AR überhaupt? Ist das, was ich mache, Kunst? Ich war unsicher, aber das Interesse war da.
+
+Kepler ist Gavins Musikprojekt – eine digitale Künstleridentität, ein Charakter mit Voxel-Maske, der zwischen Mensch und Avatar existiert. KI-Tools interessieren mich gerade, und die Idee lag nahe: Was passiert, wenn ich generative KI-Systeme nutze, um Kepler weiterzuentwickeln? Wie verändert das den kreativen Prozess?
+
+Hadjakos hat betont, dass Artistic Research frei sein soll – der Versuch, sich von starren Strukturen zu lösen und erstmal zu machen. Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
 
 ## Pinterest-Recherche
 
-Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angelegt – von Cover-Inspiration über Kleidung bis hin zu Vibes für spezifische Songs. Es ist erstaunlich, wie viele coole "Ästhetiken" sich auf Pinterest wiederfinden. Manche Looks sind hyperrealistisch, andere eher stilisiert. Wir haben versucht, eine gute Mischung zu finden, die zu der Vision von Kepler passt.
+Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angelegt – von Cover-Inspiration über Kleidung bis hin zu Vibes für spezifische Songs. Es ist erstaunlich, wie viele coole "Ästhetiken" sich auf Pinterest wiederfinden. Manche Looks sind hyperrealistisch, andere eher stilisiert. Wir haben versucht, eine gute Mischung zu finden, die zu der Vision von Kepler passt. Dabei sind uns bestimmte wiederkehrende Muster aufgefallen: dunkel, strukturiert, maskenhaft – eine visuelle Sprache, die schon durch die Auswahl entsteht, nicht erst durch Generierung.
 
 **Mein Pinterest-Board:** [Kepler x Me](https://uk.pinterest.com/jennifer_ied/kepler-x-me/)
 
@@ -18,15 +22,11 @@ Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angel
 
 ## Google Ordner
 
-Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavin zu teilen. Wir beide arbeiten an Kepler-bezogenen Projekten, und es macht Sinn, unsere Ressourcen zu bündeln. Ich habe die gesammelten Referenzbilder, bereits erstellte Cover und 3D Daten hochgeladen. Gavin hat ebenfalls Material beigesteuert – Fotos, existierende Medien die von Anderen für Kepler erstellt worden sind (Cover, Artwork) und Konzeptideen, die ich noch nicht hatte.
+Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavin zu teilen. Wir beide arbeiten an Kepler-bezogenen Projekten, und es macht Sinn, unsere Ressourcen zu bündeln. Ich habe die gesammelten Referenzbilder, bereits erstellte Cover und 3D-Daten hochgeladen. Gavin hat ebenfalls Material beigesteuert – Fotos, existierende Medien die von Anderen für Kepler erstellt worden sind (Cover, Artwork) und Konzeptideen, die ich noch nicht hatte. Der Ordner wurde zum zentralen Archiv für alles, was es zu Kepler bisher gibt: was wir selbst gemacht haben, was andere beigetragen haben, und was wir als Referenz nutzen wollen.
 
 ![Google Drive Ordner](assets/journal/2025-11-15-referenzen-sammeln/google-ordner.png)
 
 ![Google Drive Referenzen](assets/journal/2025-11-15-referenzen-sammeln/google-order-referenzen.png)
-
-## Nächste Schritte
-
-Morgen plane ich, erste Versuche mit ComfyUI zu machen. Ich habe schon ein bisschen über den Consistent Character Workflow gelesen und bin gespannt, wie gut das funktioniert.
 
 ---
 

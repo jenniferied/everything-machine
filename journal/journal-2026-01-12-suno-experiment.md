@@ -61,7 +61,7 @@ Was auffällt: Suno generiert wunderbar detaillierte Beschreibungen. "Bitcrushed
 
 Das ist dasselbe Muster wie bei meinen ComfyUI-Experimenten mit Kepler: Ich wollte einen voxelisierten, pixeligen Charakter ohne erkennbares Gesicht. Die KI lieferte typisch KI-generiert aussehende Ergebnisse mit Uncanny-Valley-Gesichtern, obwohl der Prompt explizit "voxel", "blocky", "no face" enthielt.
 
-**Die Erkenntnis:** Generalistische KI-Tools sind wahrscheinlich einfach auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder sehr viele Iterationen, sezialisierte Fine-Tunes oder manuelle Nachbearbeitung
+**Die Erkenntnis:** Generalistische KI-Tools sind wahrscheinlich einfach auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder sehr viele Iterationen, spezialisierte Fine-Tunes oder manuelle Nachbearbeitung
 
 In diesem Fall hat das Tool die Anforderungen nicht erfüllt – der Output schien für mich "handwerklich solide", aber stilistisch daneben, "too much". Für kommerzielle Mainstream-Musik mag das funktionieren, für spezialisierte Nischen braucht es nach wie vor menschliche Expertise oder zumindest erhebliche Nachbearbeitung.
 

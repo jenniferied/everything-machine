@@ -65,17 +65,7 @@ Keine Node-Modules, keine Build-Steps – alles läuft direkt im Browser. Das ma
 
 Die Website ist jetzt in Version 1.0 – Player funktioniert, Journal lädt automatisch, Design ist konsistent. Cursor hat den Prozess deutlich beschleunigt, besonders bei repetitiven Aufgaben wie dem Markdown-Parsing oder dem Grid-Layout. Die Git-Versionierung gibt mir Sicherheit, dass ich jederzeit zurückkehren kann, wenn etwas schiefgeht.
 
-Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, und das macht einen großen Unterschied, wenn man mit KI programmiert. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen oder anpassen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen – es beschleunigt den Workflow enorm, wenn man weiß, was man will.
-
-Die nächsten Schritte werden sein, mehr Journal-Einträge hinzuzufügen und vielleicht noch ein paar kleine Features zu polishen. Aber die Basis steht, und das war das Ziel.
-
-## Screenshot-Platzhalter
-
-_Screenshot Placeholder 01 – Cursor mit geöffnetem Projekt-Workspace, zeigt die Dateistruktur und den Code-Editor._
-
-_Screenshot Placeholder 02 – Player-Preview im Browserfenster, zeigt den Mini-Player in der Navigation mit Marquee-Text._
-
-_Screenshot Placeholder 03 – Journal-Layout-Test, zeigt einen Eintrag im Bubble-Grid mit Pixel-Headings und Timeline oben._
+Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, und das macht einen großen Unterschied, wenn man mit KI programmiert. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen oder anpassen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen – es beschleunigt den Workflow enorm, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
 
 ---
 
@@ -93,7 +83,7 @@ Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer an
 ### Die 5 Forschungsfragen
 
 - **Workflow:** Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht. Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.
-- **Autorschaft:** I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.
+- **Autorschaft:** Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen. Ich habe viel reviewed – und dabei auch gelernt, weil ich in den Thinking-Prozess reinschauen konnte.
 - **Iteration:** Die KI-Ausgabe war sofort da – Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, aber manchmal habe ich zu schnell akzeptiert, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.
 - **Scheitern:** Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.
 - **Ästhetik:** Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.
