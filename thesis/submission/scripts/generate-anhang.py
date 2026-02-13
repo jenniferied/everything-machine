@@ -8,9 +8,59 @@ outputs Pandoc markdown with LaTeX raw blocks for chat bubbles.
 import re
 import os
 import sys
+import hashlib
+import subprocess
 from html.parser import HTMLParser
 
-JOURNAL_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "journal")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SUBMISSION_DIR = os.path.join(SCRIPT_DIR, "..")
+REPO_ROOT = os.path.normpath(os.path.join(SUBMISSION_DIR, "..", ".."))
+JOURNAL_DIR = os.path.join(REPO_ROOT, "journal")
+IMG_CACHE_DIR = os.path.join(SUBMISSION_DIR, "_img_cache")
+
+# Max pixel width for optimized images.
+# 1200px covers 60% of A4 text width at ~200 DPI — sharp enough for print.
+MAX_IMG_WIDTH = 1200
+
+
+def optimize_image(src_rel_path):
+    """Resize image for print and cache the result. Returns path usable by LaTeX."""
+    abs_src = os.path.normpath(os.path.join(REPO_ROOT, src_rel_path))
+    if not os.path.exists(abs_src):
+        return src_rel_path  # fallback to original
+
+    os.makedirs(IMG_CACHE_DIR, exist_ok=True)
+
+    ext = os.path.splitext(src_rel_path)[1].lower()
+    # Use content hash for cache filename
+    cache_name = hashlib.md5(src_rel_path.encode()).hexdigest() + ext
+    cache_path = os.path.join(IMG_CACHE_DIR, cache_name)
+
+    # Skip if cache is newer than source
+    if os.path.exists(cache_path) and os.path.getmtime(cache_path) >= os.path.getmtime(abs_src):
+        return f"_img_cache/{cache_name}"
+
+    # Get current width
+    try:
+        result = subprocess.run(
+            ["sips", "-g", "pixelWidth", abs_src],
+            capture_output=True, text=True,
+        )
+        width = int(result.stdout.strip().split()[-1])
+    except (ValueError, IndexError):
+        return src_rel_path
+
+    if width <= MAX_IMG_WIDTH:
+        # Already small enough — just copy
+        subprocess.run(["cp", abs_src, cache_path], capture_output=True)
+    else:
+        # Resize with sips (nearest-neighbor not available, but lanczos is fine for photos)
+        subprocess.run(
+            ["sips", "--resampleWidth", str(MAX_IMG_WIDTH), abs_src, "--out", cache_path],
+            capture_output=True,
+        )
+
+    return f"_img_cache/{cache_name}"
 
 # Journal files in chronological order with metadata
 JOURNALS = [
@@ -291,10 +341,11 @@ def _flush_images(img_buffer, cleaned):
         return
     if len(img_buffer) == 1:
         path, alt = img_buffer[0]
+        opt = optimize_image(path)
         caption = f"\\caption{{{escape_latex(alt)}}}\n" if alt else ""
         cleaned.append(
             f"```{{=latex}}\n\\begin{{figure}}[H]\n\\centering\n"
-            f"\\includegraphics[width=0.6\\textwidth]{{{path}}}\n"
+            f"\\includegraphics[width=0.6\\textwidth]{{{opt}}}\n"
             f"{caption}\\end{{figure}}\n```"
         )
     else:
@@ -306,10 +357,11 @@ def _flush_images(img_buffer, cleaned):
             w = "0.45" if n == 2 else "0.3"
             cells = []
             for path, alt in row:
+                opt = optimize_image(path)
                 cap = f"\\\\[2pt]{{\\small\\color{{darktext!70}} {escape_latex(alt)}}}" if alt else ""
                 cells.append(
                     f"\\begin{{minipage}}{{{w}\\textwidth}}\n\\centering\n"
-                    f"\\includegraphics[width=\\textwidth]{{{path}}}"
+                    f"\\includegraphics[width=\\textwidth]{{{opt}}}"
                     f"{cap}\n\\end{{minipage}}"
                 )
             row_strs.append("\\hfill\n".join(cells))
