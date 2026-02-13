@@ -22,3 +22,4 @@ package-lock.json
 .playwright-mcp/
 
 # PDF output - tracked for easy access
+_img_cache/

@@ -108,6 +108,7 @@ clean:
 	@rm -f $(OUTDIR)/*.toc $(OUTDIR)/*.bbl $(OUTDIR)/*.bcf
 	@rm -f $(OUTDIR)/*.blg $(OUTDIR)/*.run.xml
 	@rm -f $(GENERATED_ANHANG)
+	@rm -rf _img_cache
 	@echo "Done."
 
 # === UTILITIES ===

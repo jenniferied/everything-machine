@@ -45,11 +45,11 @@ Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angel
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-15-referenzen-sammeln/pinterest-board.png}\\[2pt]{\small\color{darktext!70} Pinterest Board Übersicht}
+\includegraphics[width=\textwidth]{_img_cache/f42e1939dd3ca4b90215ee26aa5fc4d1.png}\\[2pt]{\small\color{darktext!70} Pinterest Board Übersicht}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-15-referenzen-sammeln/pinterest-song-bescheid.png}\\[2pt]{\small\color{darktext!70} Pinterest Song Bescheid}
+\includegraphics[width=\textwidth]{_img_cache/fa078f5b6ef517de7983afb72f39af67.png}\\[2pt]{\small\color{darktext!70} Pinterest Song Bescheid}
 \end{minipage}
 \end{figure}
 ```
@@ -62,11 +62,11 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-15-referenzen-sammeln/google-ordner.png}\\[2pt]{\small\color{darktext!70} Google Drive Ordner}
+\includegraphics[width=\textwidth]{_img_cache/36e8d354d95f492b91d361ee29356672.png}\\[2pt]{\small\color{darktext!70} Google Drive Ordner}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-15-referenzen-sammeln/google-order-referenzen.png}\\[2pt]{\small\color{darktext!70} Google Drive Referenzen}
+\includegraphics[width=\textwidth]{_img_cache/d5cd0df2bd312f3b74a58f89a096ab35.png}\\[2pt]{\small\color{darktext!70} Google Drive Referenzen}
 \end{minipage}
 \end{figure}
 ```
@@ -140,7 +140,7 @@ Nach ein paar frustrierenden Versuchen habe ich beschlossen, eine eigene Referen
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/reference-kepler.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/c6e839bfe070ba830bca79a350ec9bc7.png}
 \caption{Referenzbild von Kepler auf neutralem Hintergrund}
 \end{figure}
 ```
@@ -151,30 +151,30 @@ Die Ergebnisse waren gemischt. Einige Bilder sahen wirklich gut aus – der Char
 \centering
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-001.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 1}
+\includegraphics[width=\textwidth]{_img_cache/9f1a00b4e8ba9570474e67aa8d6eea69.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 1}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-002.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 2}
+\includegraphics[width=\textwidth]{_img_cache/0f9d67c6e8f86bffe86e39d4a0126789.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 2}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-003.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 3}
+\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 3}
 \end{minipage}
 
 \vspace{4pt}
 
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-004.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 4}
+\includegraphics[width=\textwidth]{_img_cache/4a391f5ed852bbfb5b178acbf1da3d82.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 4}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-005.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 5}
+\includegraphics[width=\textwidth]{_img_cache/c84deeec050394a8d474582135b56a28.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 5}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-006.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 6}
+\includegraphics[width=\textwidth]{_img_cache/21582a866de77f4d824d9656f1c93842.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 6}
 \end{minipage}
 \end{figure}
 ```
@@ -187,11 +187,11 @@ Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/workflow-screenshot-001.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 1}
+\includegraphics[width=\textwidth]{_img_cache/eb6462d57cd5ce87c783b7b30a443d01.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 1}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/workflow-screenshot-002.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 2}
+\includegraphics[width=\textwidth]{_img_cache/1ad179a3e7df5b7d4000c4acb6de4bf9.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 2}
 \end{minipage}
 \end{figure}
 ```
@@ -293,11 +293,11 @@ Die erste Welt war meine erste Welt, die ich erstellt habe. Sie basiert auf eine
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/source-photo-soviet-cafe.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Soviet-inspiriertes Café Badezimmer}
+\includegraphics[width=\textwidth]{_img_cache/3fc19bebc0f08301c261b88c556c709a.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Soviet-inspiriertes Café Badezimmer}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/generated-world-screenshot.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt basierend auf dem Foto}
+\includegraphics[width=\textwidth]{_img_cache/7e077b58c543b81770e4c4808bce59bb.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt basierend auf dem Foto}
 \end{minipage}
 \end{figure}
 ```
@@ -311,11 +311,11 @@ Für die zweite Welt habe ich ein Foto von Kepler verwendet – ohne zusätzlich
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-kepler-real-photo.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Kepler}
+\includegraphics[width=\textwidth]{_img_cache/cde09f49816153b36b870a7b7e935bce.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Kepler}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-kepler-result.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Kepler in Spiegelscherben}
+\includegraphics[width=\textwidth]{_img_cache/b33c5185c43cbde36c24935907d5c8fc.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Kepler in Spiegelscherben}
 \end{minipage}
 \end{figure}
 ```
@@ -333,11 +333,11 @@ Hier habe ich ein Pinterest-Bild aus dem Board für den Song verwendet und eine 
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-pool.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Pool}
+\includegraphics[width=\textwidth]{_img_cache/c3c49f49c472deef21161f2b9ed77cd6.jpg}\\[2pt]{\small\color{darktext!70} Originalfoto: Pool}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-pool-result.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Unterwasser-Pool}
+\includegraphics[width=\textwidth]{_img_cache/340cb65e0d98e558a1cf7aa5a085fb57.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Unterwasser-Pool}
 \end{minipage}
 \end{figure}
 ```
@@ -353,15 +353,15 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 \centering
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude1.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 1}
+\includegraphics[width=\textwidth]{_img_cache/a9a9fe3afbf560425fea7c87772a0ba9.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 1}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude2.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 2}
+\includegraphics[width=\textwidth]{_img_cache/6f951e096bb71849bc027b782a7e7f59.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 2}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude3.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 3}
+\includegraphics[width=\textwidth]{_img_cache/65c5e75f269ab3f231f0ddd31e8c0e1d.jpg}\\[2pt]{\small\color{darktext!70} Claude-Input: Pinterest-Bilder 3}
 \end{minipage}
 \end{figure}
 ```
@@ -372,11 +372,11 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-bescheid-resultat1.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 1}
+\includegraphics[width=\textwidth]{_img_cache/0b5376968691affa6849c19ca19e84a2.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 1}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-18-marble-worldlabs/marble-input-bescheid-resultat2.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 2}
+\includegraphics[width=\textwidth]{_img_cache/8f1f22d8f8cc0adc0290bde5a183206d.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 2}
 \end{minipage}
 \end{figure}
 ```
@@ -482,7 +482,7 @@ Cursor ist im Grunde ein Fork von VS Code, der mit KI-Features erweitert wurde. 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2025-11-19-cursor-build/cursor-interface-screenshot.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/6f4dbdbae82aec3155e053d33a69551f.png}
 \caption{Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.}
 \end{figure}
 ```
@@ -495,7 +495,7 @@ Als Inspiration diente mir die [Research Catalogue](https://www.researchcatalogu
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2025-11-19-cursor-build/research-catalogue-layout-screenshot.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/58b21aeac66392aec4c62d430da85c08.png}
 \caption{Research Catalogue Layout-Beispiel. Ein cooler Artikel auf researchcatalogue.net, der das Layout demonstriert – cleanes Design mit klarer Navigation und guter Lesbarkeit.}
 \end{figure}
 ```
@@ -957,7 +957,7 @@ Heute ein kleines Experiment außerhalb des Kepler-Kontexts. Ich arbeite an eine
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2026-01-12-suno-experiment/houdini-generators.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/933d23ad747ee06683a4acb4eb305f8d.png}
 \caption{Houdini-Workflow mit den drei prozeduralen Generatoren: terrain\_generator, building\_generator und street\_generator für die sowjetisch inspirierte Spielwelt.}
 \end{figure}
 ```
@@ -974,7 +974,7 @@ Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Ti
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2026-01-12-suno-experiment/concept-wolf-streetlamp.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/60c01a9ba2c3a21ee20c7cd7e1eed892.png}
 \caption{Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (Nano Banana Pro).}
 \end{figure}
 ```
@@ -1000,7 +1000,7 @@ Das Video hatte mich inspiriert: ich brauchte Hintergrundmusik für meine Welt, 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2026-01-12-suno-experiment/concept-sheep-pixel.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/66958d2a115e32fe38d093d0dd9da472.png}
 \caption{Pixel-Art-Ästhetik: Das Schaf auf sowjetischer Straße – genau dieser Stil bräuchte passende Musik. Konzeptbild erstellt mit Midjourney v7.}
 \end{figure}
 ```
@@ -1087,15 +1087,15 @@ Im November hatte ich mit ComfyUI versucht, konsistente Bilder von Kepler zu gen
 \centering
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/images/kepler-voxel.png}\\[2pt]{\small\color{darktext!70} Kepler in seiner Voxel-Form — kein Gesicht, das ist Absicht.}
+\includegraphics[width=\textwidth]{_img_cache/c14f431db7abee98fdf3de87d5d9412c.png}\\[2pt]{\small\color{darktext!70} Kepler in seiner Voxel-Form — kein Gesicht, das ist Absicht.}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-003.png}\\[2pt]{\small\color{darktext!70} Generiertes Bild aus dem ComfyUI-Experiment: Die KI hat ein Gesicht in die Maske interpretiert.}
+\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.png}\\[2pt]{\small\color{darktext!70} Generiertes Bild aus dem ComfyUI-Experiment: Die KI hat ein Gesicht in die Maske interpretiert.}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-007.png}\\[2pt]{\small\color{darktext!70} Noch ein Versuch — wieder ein Gesicht, wo keines sein sollte.}
+\includegraphics[width=\textwidth]{_img_cache/db4e1c875de041157bca5d4dbbc99f58.png}\\[2pt]{\small\color{darktext!70} Noch ein Versuch — wieder ein Gesicht, wo keines sein sollte.}
 \end{minipage}
 \end{figure}
 ```
@@ -1130,7 +1130,7 @@ Was mich wirklich überrascht hat: Es gibt inzwischen Modelle, die nativ in 3D a
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/trellis2-example.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/24c838c2058dd1fe25e9b14df82018db.png}
 \caption{TRELLIS 2 generiert 3D-Modelle nativ aus Voxel-Repräsentationen — genau die Datenstruktur, in der Kepler existiert.}
 \end{figure}
 ```
@@ -1141,7 +1141,7 @@ Was mich wirklich überrascht hat: Es gibt inzwischen Modelle, die nativ in 3D a
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/hunyuan3d-example.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/664b4f3daeeff10d13a29bc889ea4850.png}
 \caption{Hunyuan3D-2 (HY3D) — Tencents Open-Source 3D-Generierungsmodell.}
 \end{figure}
 ```
