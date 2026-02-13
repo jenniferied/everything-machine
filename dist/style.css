@@ -658,6 +658,7 @@ main.container {
     font-size: 1rem;
     line-height: 1.6;
     color: #d1d5db;
+    padding: 2rem 1.5rem;
 }
 
 #page-overview h3 {
@@ -672,6 +673,75 @@ main.container {
 #page-overview p {
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* --- Magazine Grid Layout (Overview Page) --- */
+.mag {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: dense;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.mag-span3  { grid-column: span 3; }
+.mag-span4  { grid-column: span 4; }
+.mag-span5  { grid-column: span 5; }
+.mag-span6  { grid-column: span 6; }
+.mag-span7  { grid-column: span 7; }
+.mag-span8  { grid-column: span 8; }
+.mag-span12 { grid-column: span 12; }
+
+.mag-text {
+    padding: 1rem 1.5rem;
+    align-self: start;
+}
+
+.mag-text p {
+    margin-bottom: 0.75em;
+}
+
+.mag-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.mag-img-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.mag-img-row img {
+    flex: 1;
+    min-width: 0;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.mag-caption {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: italic;
+    padding: 0 0.25rem;
+    align-self: start;
+}
+
+@media (max-width: 768px) {
+    .mag {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .mag-span3, .mag-span4, .mag-span5,
+    .mag-span6, .mag-span7, .mag-span8,
+    .mag-span12 {
+        grid-column: span 1;
+    }
 }
 .page-content.active {
     display: block; /* Wird per JS eingeblendet */
@@ -1805,9 +1875,23 @@ main.container {
 
 .about-profile-grid {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr 1fr;
     gap: 2rem;
     align-items: center;
+}
+
+.about-graph-col {
+    min-height: 0;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .about-profile-grid {
+        grid-template-columns: auto 1fr;
+    }
+    .about-graph-col {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1969,6 +2053,93 @@ main.container {
     color: #9ca3af;
     line-height: 1.6;
     margin: 0;
+}
+
+/* --- Interest Graph Styles --- */
+.interest-graph-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: visible;
+    background: radial-gradient(ellipse at center, rgba(74,222,128,0.03) 0%, transparent 70%);
+}
+
+.interest-graph-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.interest-detail-card {
+    position: absolute;
+    right: calc(100% + 1rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    width: 240px;
+    background: rgba(5, 10, 19, 0.95);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.interest-detail-card.visible {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+    .interest-detail-card {
+        right: auto;
+        left: 0;
+        top: auto;
+        bottom: calc(100% + 0.5rem);
+        transform: translateY(8px);
+        width: 100%;
+    }
+    .interest-detail-card.visible {
+        transform: translateY(0);
+    }
+}
+
+.interest-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.interest-detail-header strong {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    color: #4ade80;
+    line-height: 1.4;
+}
+
+.interest-detail-badge {
+    font-size: 0.65rem;
+    color: #9ca3af;
+    border: 1px solid #374151;
+    border-radius: 9999px;
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+}
+
+.interest-detail-card p {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.interest-graph-hint {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #4b5563;
+    margin: 0.75rem 0 0;
+    font-style: italic;
 }
 
 /* --- Contact Form Styles --- */
