@@ -14,7 +14,7 @@ abstract: |
   Die vorliegende Arbeit untersucht im Rahmen einer Practice-Based Research mit
   autoethnografischem Ansatz, wie der Einsatz multimodaler KI-Systeme den kreativen
   Prozess bei der Entwicklung einer digitalen Künstleridentität verändert. Am Beispiel
-  von Kepler -- einer maskierten, voxelisierten Musiker-Persona -- werden [N]
+  von Kepler -- einer maskierten, voxelisierten Musiker-Persona -- werden fünf
   Experimente mit KI-Tools aus den Bereichen Bildgenerierung,
   Musikproduktion, Webentwicklung und Texterstellung dokumentiert. Die Analyse identifiziert vier
   zentrale Prozessveränderungen: (1) Flow entsteht unvorhersehbar -- der Website-Build
@@ -198,6 +198,757 @@ Ein unkonventionelleres Experiment: Auf einer 30-minütigen Autofahrt führte ic
 
 Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sich an wie tiefes Verstehen, aber ob ich die Konzepte tatsächlich internalisiert hatte, war unklar. Claude selbst wies mich darauf hin, dass es einen Unterschied gibt zwischen deklarativem Wissen ("wissen, dass") und prozeduralem Wissen ("wissen, wie"). Die Theorie wird erst real, wenn ich sie anwende, eine Beobachtung, die auf Schöns [-@schoen1983practitioner] Konzept des "Reflection-in-Action" zurückführt: Erkenntnis entsteht nicht im Hören oder Lesen, sondern im Tun.
 
+
+### Experiment 5: Automatisierte Bildpipeline (fal.ai API + Claude Code)
+
+Nach vier Einzelexperimenten stellte sich eine methodische Frage: Was passiert, wenn ich den Prozess systematisiere? Gemeinsam mit Claude Code baute ich eine automatisierte Pipeline, die über die fal.ai API neun verschiedene Bildgenerierungsmodelle mit denselben Prompts und Referenzbildern ansteuerte. Die Kollaboration war dreistufig: Ich definierte die ästhetische Vision und die Evaluationskriterien, Claude Code schrieb den Pipeline-Code und orchestrierte die API-Aufrufe, die Bildmodelle generierten die Outputs -- eine neue Konstellation, in der ich als Auftraggeberin eines KI-Agenten fungierte, der seinerseits KI-Modelle steuert.
+
+Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Signature Scenes systematisch absteckten. Insgesamt entstanden 134 Bilder in 24 Output-Ordnern, evaluiert nach "Gefällt mir", "Halluzinationen" und Kommentar.
+
+```{=latex}
+\clearpage
+```
+
+#### Phase 1: Modell-Screening (5 Modelle, A-Pose)
+
+Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/inputs/kepler-a-pose-1024.jpg}
+\caption{Input: Kepler A-Pose (1024\texttimes1024)}
+\end{figure}
+```
+
+Fünf Modelle wurden getestet. Depth-basierte Steuerung erwies sich als überlegen gegenüber Canny-Edges; FLUX Canny reproduzierte das Face-Hallucination-Phänomen aus Experiment 1 systematisch.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/01_minimax_subject/01_minimax_subject_000.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/01_minimax_subject/01_minimax_subject_010.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/01_minimax_subject/01_minimax_subject_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} MiniMax Subject Reference}
+
+\vspace{4pt}
+
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/02_zimage_controlnet/02_zimage_controlnet_000.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/02_zimage_controlnet/02_zimage_controlnet_010.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/02_zimage_controlnet/02_zimage_controlnet_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} Z-Image Turbo ControlNet}
+
+\vspace{4pt}
+
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/03_flux_depth/03_flux_depth_000.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/03_flux_depth/03_flux_depth_010.jpg}\hfill
+\includegraphics[width=0.25\textwidth]{experiments/fal-pipeline/outputs/03_flux_depth/03_flux_depth_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} FLUX Depth LoRA}
+
+\vspace{4pt}
+
+\includegraphics[width=0.35\textwidth]{experiments/fal-pipeline/outputs/04_flux_canny/04_flux_canny_010.jpg}\hfill
+\includegraphics[width=0.35\textwidth]{experiments/fal-pipeline/outputs/04_flux_canny/04_flux_canny_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} FLUX Canny LoRA}
+
+\caption{Phase 1: Modell-Screening -- MiniMax, Z-Image, FLUX Depth, FLUX Canny}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_000.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_001.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_002.jpg}
+
+\vspace{2pt}
+
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_003.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_004.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_005.jpg}
+
+\caption{Phase 1: Era3D Multiview -- nutzlos im Vergleich zu eigenen Renders}
+\end{figure}
+```
+
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phase 1: Modell-Screening (A-Pose, quadratisch)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+MiniMax Subject & \textcolor{evalred}{nein} & ja & Minecraft-Stil, Gesichtszüge \\
+Z-Image ControlNet & bedingt & \textcolor{evalgreen}{nein} & A-Pose erhalten, clean \\
+FLUX Depth LoRA & \textcolor{evalred}{nein} & -- & Körper wird humanoid \\
+FLUX Canny LoRA & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
+Era3D & \textcolor{evalred}{nein} & -- & Nutzlos -- eigene Renders besser \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
+```{=latex}
+\clearpage
+```
+
+#### Phase 2: Top-Modelle in Szenen (A-Pose)
+
+Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jeweils drei Varianten mit demselben A-Pose-Input.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/06_flux_kontext/06_flux_kontext_000.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/06_flux_kontext/06_flux_kontext_010.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/06_flux_kontext/06_flux_kontext_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} FLUX Kontext Pro}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/07_gpt_image_15/07_gpt_image_15_000.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/07_gpt_image_15/07_gpt_image_15_010.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/07_gpt_image_15/07_gpt_image_15_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-Image-1.5}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/08_seeddream/08_seeddream_000.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/08_seeddream/08_seeddream_010.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/08_seeddream/08_seeddream_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} SeedDream v4.5}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_000.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_010.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_020.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Pro}
+
+\caption{Phase 2: Top-Modelle in Szenen (A-Pose)}
+\end{figure}
+```
+
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phase 2: Top-Modelle in Szenen (A-Pose)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+FLUX Kontext Pro & bedingt & -- & Wird besser \\
+GPT-Image-1.5 & bedingt & teilweise & Solide, aber Halluzinationen \\
+SeedDream v4.5 & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
+NanoBanana Pro & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
+SeedDream schied wegen Gesichtshalluzinationen aus. Drei Finalisten blieben: FLUX Kontext Pro, GPT-Image-1.5 und NanoBanana Pro.
+
+```{=latex}
+\clearpage
+```
+
+#### Phase 2b: Der Posed-Input-Durchbruch
+
+Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Render, in dem Kepler natürlich steht. Die A-Pose führte zu einem Overfitting-Effekt: Das Modell übernahm die starre Haltung wörtlich.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-a-pose-1024.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-1024.jpg}
+\caption{A-Pose (links) vs. Posed Input (rechts): Natürliche Haltung statt T-Pose}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/10_flux_kontext_posed/10_flux_kontext_posed_000.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/10_flux_kontext_posed/10_flux_kontext_posed_010.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/10_flux_kontext_posed/10_flux_kontext_posed_020.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/10_flux_kontext_posed/10_flux_kontext_posed_030.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/10_flux_kontext_posed/10_flux_kontext_posed_040.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} FLUX Kontext Posed}
+
+\vspace{4pt}
+
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/11_gpt15_posed/11_gpt15_posed_000.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/11_gpt15_posed/11_gpt15_posed_010.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/11_gpt15_posed/11_gpt15_posed_020.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/11_gpt15_posed/11_gpt15_posed_030.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/11_gpt15_posed/11_gpt15_posed_040.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-Image-1.5 Posed}
+
+\vspace{4pt}
+
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_000.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_010.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_020.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_030.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_040.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed}
+
+\caption{Phase 2b: Drei Finalisten mit Posed Input (je 5 Varianten)}
+\end{figure}
+```
+
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phase 2b: Posed Input (3 Finalisten)}
+\begin{tabular}{llll}
+\toprule
+\textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+FLUX Kontext Posed & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesichter halluziniert \\
+GPT-Image-1.5 Posed & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
+NanoBanana Posed & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
+FLUX Kontext schied aus -- Posed Input verstärkte die Gesichtshalluzinationen. Zwei Finalisten mit komplementären Stärken: GPT-Image-1.5 (atmosphärischer) und NanoBanana Pro (stilistisch konsistenter).
+
+```{=latex}
+\clearpage
+```
+
+#### Phasen 3--3d: Iterative Verfeinerung
+
+Ab Phase 3 wurden beide Modelle parallel in "Signature Scenes" getestet, jeweils in Portrait und Landscape. Die Input-Bilder durchliefen dabei eigene Iterationen: Zunächst wurden die Referenzbilder naiv auf Portrait- bzw. Landscape-Format skaliert, was zu verzerrten Proportionen führte. Erst ab Phase 3c kamen korrekt gepaddete Versionen zum Einsatz.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait-padded.jpg}\hfill
+\includegraphics[width=0.27\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-landscape.jpg}\hfill
+\includegraphics[width=0.27\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-landscape-padded.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} Portrait: gestretcht \textrightarrow{} gepaddet\hfill Landscape: gestretcht \textrightarrow{} gepaddet}
+\caption{Input-Evolution: Gestretchte Referenzbilder (Phasen 3--3b) vs. korrekt gepaddete (Phase 3c)}
+\end{figure}
+```
+
+```{=latex}
+\clearpage
+```
+
+**Phase 3 (Ordner 13/14):** Signature Scenes v1 -- Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug produzierte 1:1-Output statt Portrait/Landscape.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_portrait/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_portrait/retro_car_bridge.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (13)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/retro_car_bridge.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (14)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_landscape/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_landscape/retro_car_bridge.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/13_gpt15_scenes_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Landscape (13)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/retro_car_bridge.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (14)}
+
+\caption{Phase 3: Signature Scenes v1 -- 1:1 Ratio-Bug sichtbar}
+\end{figure}
+```
+
+```{=latex}
+\clearpage
+```
+
+**Phase 3a (Ordner 15/16):** Tokyo Rain ersetzte Bridge, Ratio-Bug behoben. Die Input-Bilder waren jedoch gestretcht -- das quadratische Referenzbild wurde auf Portrait/Landscape-Format verzerrt statt mit schwarzen Balken gepaddet, was zu verzerrten Proportionen in den Outputs führte.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/tokyo_rain.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (15)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/tokyo_rain.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (16)}
+
+\caption{Phase 3a: Fixed -- Stretching durch fehlerhafte Referenzbilder}
+\end{figure}
+```
+
+```{=latex}
+\clearpage
+```
+
+**Phase 3b (Ordner 17/18):** Voxel-Treppen statt Marmor. Input-Stretching noch nicht behoben.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/tokyo_rain.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (17)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/tokyo_rain.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (18)}
+
+\caption{Phase 3b: V2 -- Voxel-Treppen, Input-Stretching}
+\end{figure}
+```
+
+```{=latex}
+\clearpage
+```
+
+**Phase 3c (Ordner 19/20):** Night Drive ersetzte Tokyo Rain, korrekt gepaddete Inputs. Die Szenen-Auswahl stabilisierte sich.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/pool_floaty.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/studio.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/tokyo_rain.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (19)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/pool_floaty.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/studio.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (20)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_landscape/pool_floaty.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_landscape/studio.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Landscape (19)}
+
+\vspace{4pt}
+
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/pool_floaty.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/studio.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (20)}
+
+\caption{Phase 3c: Final -- korrekt gepaddete Inputs, stabilisierte Szenen}
+\end{figure}
+```
+
+Die vier Iterationen zeigen ein Bug-Narrative: Vom 1:1-Ratio-Bug über gestretchte Inputs bis zu korrekt gepaddeten Referenzbildern. Jede Phase löste ein Problem und offenbarte das nächste -- Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" im Zeitraffer.
+
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phasen 3--3d: Iterative Verfeinerung (GPT-Image-1.5 \& NanoBanana Pro)}
+\begin{tabular}{lllll}
+\toprule
+\textbf{Phase/Ordner} & \textbf{Modell} & \textbf{Format} & \textbf{Bewertung} & \textbf{Kommentar} \\
+\midrule
+13 Scenes & GPT-1.5 & portrait & gemischt & 1:1 Ratio-Bug \\
+13 Scenes & GPT-1.5 & landscape & gemischt & Auch 1:1 leider \\
+14 Scenes & NanoBanana & portrait & gemischt & Halb cool, halb Halluz. \\
+14 Scenes & NanoBanana & landscape & gemischt & Ohne Halluz. stark \\
+\midrule
+15 Fixed & GPT-1.5 & portrait & gemischt & Gestretchte Referenz \\
+15 Fixed & GPT-1.5 & landscape & gemischt & Stretching + Cap fehlt \\
+16 Fixed & NanoBanana & portrait & gemischt & Stretching stark, keine Halluz. \\
+16 Fixed & NanoBanana & landscape & gemischt & Weniger Stretching, gut \\
+\midrule
+17 V2 & GPT-1.5 & portrait & gemischt & 1:1 + leichte Halluz. \\
+17 V2 & GPT-1.5 & landscape & gemischt & Dasselbe \\
+18 V2 & NanoBanana & portrait & gemischt & -- \\
+18 V2 & NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- \\
+\midrule
+19 Final & GPT-1.5 & portrait & gemischt & -- \\
+19 Final & GPT-1.5 & landscape & gemischt & -- \\
+20 Final & NanoBanana & portrait & gemischt & -- \\
+20 Final & NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
+```{=latex}
+\clearpage
+```
+
+#### Phase 3e + 3f: Posed vs. A-Pose Vergleich
+
+Dieselben drei Signature Scenes -- Night Drive, Spiral Staircase, Pool Floaty -- wurden mit Posed (Ordner 21/22) und A-Pose (Ordner 23/24) Input parallel generiert.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait-padded.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-a-pose-portrait-padded.jpg}\hfill
+\includegraphics[width=0.35\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-landscape-padded.jpg}
+\caption{Inputs Phase 3e/3f: Posed Portrait-padded, A-Pose Portrait-padded, Posed Landscape-padded}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Portrait}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Portrait}
+\end{minipage}
+
+\vspace{6pt}
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Landscape}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Landscape}
+\end{minipage}
+
+\vspace{6pt}
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Portrait}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Portrait}
+\end{minipage}
+
+\vspace{6pt}
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Landscape}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Landscape}
+\end{minipage}
+
+\caption{Phase 3e/3f: Posed (links) vs. A-Pose (rechts) -- systematischer Vergleich}
+\end{figure}
+```
+
+Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überlegen. GPT-Image-1.5 produzierte die atmosphärischsten Ergebnisse, halluzinierte aber häufiger Details. NanoBanana Pro war konsistenter, aber weniger ausdrucksstark.
+
+```{=latex}
+\begin{table}[H]
+\centering\footnotesize
+\caption{Phase 3e/3f: Posed vs. A-Pose Vergleich (detailliert)}
+\begin{tabular}{lllllll}
+\toprule
+\textbf{Ordner} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Szene} & \textbf{Bew.} & \textbf{Halluz.} \\
+\midrule
+21 & GPT-1.5 & posed & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+21 & GPT-1.5 & posed & portrait & staircase & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+21 & GPT-1.5 & posed & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+21 & GPT-1.5 & posed & landscape & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+21 & GPT-1.5 & posed & landscape & staircase & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+21 & GPT-1.5 & posed & landscape & pool & neutral & \textcolor{evalred}{ja} \\
+\midrule
+22 & NanoBanana & posed & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+22 & NanoBanana & posed & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} \\
+22 & NanoBanana & posed & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+22 & NanoBanana & posed & landscape & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+22 & NanoBanana & posed & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+22 & NanoBanana & posed & landscape & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+\midrule
+23 & GPT-1.5 & a-pose & portrait & night\_drive & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+23 & GPT-1.5 & a-pose & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+23 & GPT-1.5 & a-pose & portrait & pool & neutral & \textcolor{evalred}{ja} \\
+23 & GPT-1.5 & a-pose & landscape & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+23 & GPT-1.5 & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} \\
+23 & GPT-1.5 & a-pose & landscape & pool & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+\midrule
+24 & NanoBanana & a-pose & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+24 & NanoBanana & a-pose & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+24 & NanoBanana & a-pose & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+24 & NanoBanana & a-pose & landscape & night\_drive & neutral & \textcolor{evalred}{ja} \\
+24 & NanoBanana & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+24 & NanoBanana & a-pose & landscape & pool & neutral & \textcolor{evalred}{ja} \\
+\bottomrule
+\end{tabular}
+\end{table}
+```
+
+```{=latex}
+\clearpage
+```
+
+#### Video-Test
+
+Ergänzend wurden sechs Video-Modelle getestet (Kling, LTX-2, MiniMax Video, PixVerse, Wan, Veo 3.1, Seedance). Die Ergebnisse waren durchgehend enttäuschend: Die Modelle konnten Keplers Voxel-Ästhetik nicht beibehalten, produzierten unnatürliche Bewegungen und halluzierten Gesichtszüge. Die Kosten lagen bei etwa 0,50--2,00 USD pro Clip bei einer Laufzeit von 5--10 Sekunden. Video-Generierung erwies sich als zum Zeitpunkt der Forschung (Januar 2026) nicht ausgereift genug für den Einsatz mit Nischen-Charakteren.
+
+```{=latex}
+\clearpage
+```
+
+#### Gesamtbewertung
+
+Die folgende Tabelle fasst alle 53 Einzelbewertungen aus der Pipeline zusammen:
+
+```{=latex}
+{\footnotesize
+\begin{longtable}{lllllp{4cm}}
+\caption{Gesamtbewertung: Alle 53 Evaluationen der fal.ai-Pipeline} \\
+\toprule
+\textbf{Ordner} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Ordner} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+01 & MiniMax & a-pose & sq. & \textcolor{evalred}{nein} & Minecraft, Gesichtszüge \\
+02 & Z-Image & a-pose & sq. & bedingt & A-Pose erhalten, clean \\
+03 & FLUX Depth & a-pose & sq. & \textcolor{evalred}{nein} & Körper humanoid \\
+04 & FLUX Canny & a-pose & sq. & \textcolor{evalred}{nein} & Gesicht halluziniert \\
+05 & Era3D & a-pose & sq. & \textcolor{evalred}{nein} & Nutzlos \\
+\midrule
+06 & FLUX Kontext & a-pose & sq. & bedingt & Wird besser \\
+07 & GPT-1.5 & a-pose & sq. & bedingt & Solide, Halluz. \\
+08 & SeedDream & a-pose & sq. & \textcolor{evalred}{nein} & Gesicht halluziniert \\
+09 & NanoBanana & a-pose & sq. & \textcolor{evalgreen}{gut} & Beste Phase-2 \\
+\midrule
+10 & FLUX Kont. & posed & sq. & \textcolor{evalred}{nein} & Gesichter halluz. \\
+11 & GPT-1.5 & posed & sq. & \textcolor{evalgreen}{ja} & Solideste Ergebnisse \\
+12 & NanoBanana & posed & sq. & \textcolor{evalgreen}{ja} & Stärkste Voxel-Ästhetik \\
+\midrule
+13 & GPT-1.5 & posed & portrait & gemischt & 1:1 Ratio-Bug \\
+13 & GPT-1.5 & posed & landsc. & gemischt & Auch 1:1 \\
+14 & NanoBanana & posed & portrait & gemischt & Halb halb \\
+14 & NanoBanana & posed & landsc. & gemischt & Ohne Halluz. stark \\
+\midrule
+15 & GPT-1.5 & posed & portrait & gemischt & Gestretchte Ref. \\
+15 & GPT-1.5 & posed & landsc. & gemischt & Stretching + Cap fehlt \\
+16 & NanoBanana & posed & portrait & gemischt & Stretching, keine Halluz. \\
+16 & NanoBanana & posed & landsc. & gemischt & Weniger Stretching \\
+\midrule
+17 & GPT-1.5 & posed & portrait & gemischt & 1:1 + Halluz. \\
+17 & GPT-1.5 & posed & landsc. & gemischt & Dasselbe \\
+18 & NanoBanana & posed & portrait & gemischt & -- \\
+18 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{stark} & -- \\
+\midrule
+19 & GPT-1.5 & posed & portrait & gemischt & -- \\
+19 & GPT-1.5 & posed & landsc. & gemischt & -- \\
+20 & NanoBanana & posed & portrait & gemischt & -- \\
+20 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{stark} & -- \\
+\midrule
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & Scheibe fehlt (ND) \\
+21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & Teil des Autos fehlt \\
+22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & Pool sehr cool \\
+22 & NanoBanana & posed & landsc. & gemischt & Cockpit falsch (ND) \\
+\midrule
+23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & A-Pose overfitted \\
+23 & GPT-1.5 & a-pose & landsc. & gemischt & Cap fehlt, Pose starr \\
+24 & NanoBanana & a-pose & portrait & gemischt & ND ja, Treppen nein \\
+24 & NanoBanana & a-pose & landsc. & neutral & Halluz. stören \\
+\end{longtable}
+}
+```
+
+```{=latex}
+\clearpage
+```
+
+#### Zusammenfassung und theoretische Einordnung
+
+Theoretisch markiert dieses Experiment eine Verschiebung auf Deterdings [-@deterding2017mixed] Spektrum: Meine Rolle war nicht mehr die der Experimentierenden, die direkt mit einem Tool interagiert, sondern die einer Orchestratorin -- ich definierte das "Was" und "Warum", während Claude Code das "Wie" implementierte. Schöns [-@schoen1983practitioner] Reflection-in-Action fand im Zeitraffer statt: Wo ich in Experiment 1 stundenlang an ComfyUI-Parametern drehte, durchlief die Pipeline denselben explorativen Prozess in Minuten. Galanters [-@galanter2003generative] Konzept des systematischen Mappings eines generativen Raums wurde hier buchstäblich umgesetzt -- sieben Phasen, die den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Szenen systematisch absteckten.
+
+Das Fazit war ambivalent. Einerseits gelang hier zum ersten Mal eine visuell überzeugende Kepler-Generierung ohne Fine-Tuning -- die besten Bilder aus den Posed-Phasen waren die ersten, die ich mir als Album-Cover vorstellen konnte. Andererseits blieben die Halluzinationen: fehlende Caps, falsche Cockpit-Details, gelegentlich angedeutete Gesichtszüge unter der Maske. Die Pipeline machte den Prozess skalierbar, aber nicht kontrollierbar. Und eine neue Frage drängte sich auf: Wenn ich nicht mehr selbst prompte, sondern einen KI-Agenten beauftrage, der für mich promptet -- wo endet dann meine Autorschaft?
+
+### Experiment 6: Video-Generierung (fal.ai API + Claude Code)
+
+Die automatisierte Bildpipeline aus Experiment 5 warf eine naheliegende Frage auf: Wenn statische Bilder von Kepler überzeugend gelingen -- lässt sich derselbe Ansatz auf Bewegtbild übertragen? Image-to-Video-Modelle versprechen, aus Einzelbildern kurze Clips zu generieren. Doch wo Bildgenerierung mit Halluzinationen kämpft, potenziert Video die Herausforderung: Jedes halluzinierte Detail muss über mehrere Sekunden konsistent bleiben.
+
+#### Setup und Methodik
+
+Sieben Modelle wurden systematisch verglichen: PixVerse v5.5, LTX-2, Wan 2.6, Seedance 1.0 Pro, Veo 3.1, Kling O3 und Kling 3.0 V3. Die Kosten reichten von \$0.20 (PixVerse) bis \$0.84 (Kling) pro Video. Als Testbilder dienten vier Szenen aus den besten Ergebnissen der Bildpipeline -- zwei bewusst unterschiedliche Herausforderungen:
+
+- **Studio** (Landscape, 1376×768): Kepler am Mischpult -- kontrollierte Innenszene, wenig Bewegung
+- **Pool** (Portrait, 768×1376): Kepler auf dem Pool-Ring, Vogelperspektive -- Wasser, ungewöhnlicher Blickwinkel
+- **Night Drive** (Portrait, 768×1376): Kepler im Retro-Auto auf Wüstenhighway -- Nachtszene, Fahrtbewegung
+- **Spiral Staircase** (Portrait, 768×1376): Kepler auf kosmischer Wendeltreppe -- Prompt forderte blaues Leuchten statt Marmor
+
+Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_studio.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} PixVerse v5.5 \hfill LTX-2 \hfill Wan 2.6 \hfill Seedance Pro}
+\vspace{4pt}
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_studio.jpg}\hfill
+\includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_studio.jpg}\hfill
+\hspace{0.22\textwidth}
+\\[1pt]{\scriptsize\color{darktext!60} Veo 3.1 \hfill Kling O3 \hfill Kling 3.0 V3 \hfill \hspace{0.22\textwidth}}
+\caption{Mittlere Frames, Studio-Szene (7 Modelle). Die Studio-Szene war die einfachste Aufgabe -- vier Modelle erzielten ein gutes Ergebnis.}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_pool.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_pool.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_pool.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_pool.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} PixVerse v5.5 \hfill LTX-2 \hfill Wan 2.6 \hfill Seedance Pro}
+\vspace{4pt}
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_pool.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_pool.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_pool.jpg}\hfill
+\hspace{2.25cm}
+\\[1pt]{\scriptsize\color{darktext!60} Veo 3.1 \hfill Kling O3 \hfill Kling 3.0 V3 \hfill \hspace{2.25cm}}
+\caption{Mittlere Frames, Pool-Szene. Hier zeigt sich das Gesichts-Halluzinationsproblem: Mehrere Modelle erzeugten realistische Gesichtszüge auf Keplers faceless Voxel-Kopf. LTX-2 (2. v.l.) wechselte das Seitenverhältnis auf Landscape.}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_night_drive.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_night_drive.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_night_drive.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_night_drive.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} PixVerse v5.5 \hfill LTX-2 \hfill Wan 2.6 \hfill Seedance Pro}
+\vspace{4pt}
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_night_drive.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_night_drive.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_night_drive.jpg}\hfill
+\hspace{2.25cm}
+\\[1pt]{\scriptsize\color{darktext!60} Veo 3.1 \hfill Kling O3 \hfill Kling 3.0 V3 \hfill \hspace{2.25cm}}
+\caption{Mittlere Frames, Night-Drive-Szene. Die schwierigste Szene: Nur Seedance Pro bewahrte Keplers Charakter überzeugend.}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_spiral_staircase.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_spiral_staircase.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_spiral_staircase.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_spiral_staircase.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} PixVerse v5.5 \hfill LTX-2 \hfill Wan 2.6 \hfill Seedance Pro}
+\vspace{4pt}
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_spiral_staircase.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_spiral_staircase.jpg}\hfill
+\includegraphics[height=4cm]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_spiral_staircase.jpg}\hfill
+\hspace{2.25cm}
+\\[1pt]{\scriptsize\color{darktext!60} Veo 3.1 \hfill Kling O3 \hfill Kling 3.0 V3 \hfill \hspace{2.25cm}}
+\caption{Mittlere Frames, Spiral-Staircase-Szene. Der Prompt forderte blaues Leuchten statt Marmor -- nur Kling O3 setzte dies überzeugend um.}
+\end{figure}
+```
+
+#### Ergebnisse
+
+```{=latex}
+{\footnotesize
+\begin{longtable}{p{2.8cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.2cm}p{0.8cm}p{0.8cm}}
+\textbf{Modell} & \textbf{Studio} & \textbf{Pool} & \textbf{Night Dr.} & \textbf{Staircase} & \textbf{Kosten} & \textbf{Gut} & \textbf{Schl.} \\
+\midrule
+\endhead
+Kling O3 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{gut} & \textcolor{evalred}{schlecht} & \textcolor{evalgreen}{gut} & \$0.84 & 3 & 1 \\
+Kling 3.0 V3 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{gut} & okay & \textcolor{evalred}{schlecht} & \$0.84 & 2 & 1 \\
+Veo 3.1 & \textcolor{evalred}{schlecht} & \textcolor{evalgreen}{gut} & okay & okay & \$0.80 & 1 & 1 \\
+Seedance Pro & okay & \textcolor{evalred}{schlecht} & \textcolor{evalgreen}{gut} & okay & \$0.62 & 1 & 1 \\
+Wan 2.6 & \textcolor{evalgreen}{gut} & \textcolor{evalred}{schlecht} & \textcolor{evalred}{schlecht} & okay & \$0.50 & 1 & 2 \\
+PixVerse v5.5 & okay & \textcolor{evalred}{schlecht} & \textcolor{evalred}{schlecht} & okay & \$0.20 & 0 & 2 \\
+LTX-2 & \textcolor{evalgreen}{gut} & \textcolor{evalred}{schlecht} & \textcolor{evalred}{schlecht} & \textcolor{evalred}{schlecht} & \$0.36 & 1 & 3 \\
+\end{longtable}
+}
+```
+
+#### Analyse und Reflexion
+
+Die Ergebnisse zeigen ein klares Muster: **Preis korreliert mit Qualität, aber nicht linear.** Kling O3 (\$0.84) war mit drei von vier guten Ergebnissen der zuverlässigste Kandidat. LTX-2 (\$0.36) scheiterte an drei von vier Szenen, primär durch ein technisches Problem -- das Modell erzwingt ein 16:9-Seitenverhältnis und beschneidet Portrait-Inputs.
+
+Das auffälligste Phänomen war die **Gesichts-Halluzination bei Portrait-Szenen**. Keplers bewusst gesichtsloser Voxel-Kopf wurde von mehreren Modellen (Wan, Seedance, PixVerse) mit realistischen Gesichtszügen versehen -- ein Problem, das bei der Landscape-Studio-Szene nicht auftrat. Die Modelle scheinen auf menschliche Gesichter als Default trainiert zu sein und können die bewusste Abwesenheit eines Gesichts nicht beibehalten. Dieses Phänomen spiegelt die Erfahrung aus Experiment 1 wider: Auch ComfyUI halluzinierte Gesichter in Keplers Maske.
+
+Überraschend war die **Inkonsistenz innerhalb einzelner Modelle**. Seedance Pro war bei Studio und Pool schlecht bis mittelmäßig, lieferte aber beim Night Drive das überzeugendste Ergebnis aller Modelle -- ein Befund, der gegen simple Rankings spricht. Veo 3.1 scheiterte beim Studio, glänzte aber beim Pool. Diese Szenenabhängigkeit zeigt, dass kein Modell universal überlegen ist -- die Wahl muss pro Szene getroffen werden.
+
+Methodisch erweiterte dieses Experiment die Orchestrator-Rolle aus Experiment 5: Dieselbe Pipeline, dasselbe Interview-basierte Evaluationsformat, nun auf Video angewandt. Die Bewertungskriterien -- "Gefällt mir", "Halluzination", "Kommentar" -- erwiesen sich als robust über Medientypen hinweg. Die zentrale Erkenntnis für die Praxis: Video-Generierung mit Kepler ist möglich, aber nur mit den teuersten Modellen zuverlässig. Der kreative Prozess bleibt ein iteratives Auswählen aus einem unvorhersehbaren Möglichkeitsraum -- Galanters [-@galanter2003generative] generativer Ansatz, nun in Bewegtbild übersetzt.
+
 ## Zentrale Beobachtungen aus dem Prozess
 
 Aus der vergleichenden Analyse der Journal-Einträge und der systematischen Reflexion nach dem autoethnografischen Modell [@ellis2011autoethnography] lassen sich vier wiederkehrende Muster identifizieren, die beschreiben, wie KI meinen kreativen Prozess verändert hat. Sie sind "emergent" im Sinne von Borgdorff [-@borgdorff2012conflict]: nicht vorab theoretisch abgeleitet, sondern durch die Praxis selbst hervorgebracht.
@@ -208,19 +959,19 @@ Flow entstand dort, wo ich ihn nicht geplant hatte, und blieb aus, wo ich ihn er
 
 ### 2. Speed vs. Control
 
-KI beschleunigt und begrenzt den kreativen Prozess gleichzeitig. Exploration und Prototyping werden drastisch schneller -- beim Website-Build, bei der Generierung von Marble-Welten, im KI-Dialog als Lernwerkzeug. Aber die Kontrolle über ästhetische Details geht verloren. „Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte", reflektierte ich nach dem Suno-Experiment (Eintrag 6). Das Suno-Experiment illustriert das: Das Modell generiert zu jedem Track eine detaillierte Beschreibung -- "bitcrushed chiptune pads over a sparse, detuned synth choir" -- die exakt das trifft, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell. Bodens [-@boden2004creative] Konzept der explorativen Kreativität hilft hier: Das Modell erkundet den konzeptuellen Raum von "sowjetisch-dystopischer Pixel-Musik" auf der Beschreibungsebene adäquat, scheitert aber an der Übersetzung in klangliche Materie. Die Diskrepanz zwischen Beschreibung und Output ist ein konkretes Symptom des Speed-vs-Control-Tradeoffs: Generierung ist schnell, aber Feinsteuerung ist nicht gegeben.
+KI beschleunigt und begrenzt den kreativen Prozess gleichzeitig. Exploration und Prototyping werden drastisch schneller -- beim Website-Build, bei der Generierung von Marble-Welten, im KI-Dialog als Lernwerkzeug. Aber die Kontrolle über ästhetische Details geht verloren. „Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte", reflektierte ich nach dem Suno-Experiment (Eintrag 6). Das Suno-Experiment illustriert das: Das Modell generiert zu jedem Track eine detaillierte Beschreibung -- "bitcrushed chiptune pads over a sparse, detuned synth choir" -- die exakt das trifft, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell. Bodens [-@boden2004creative] Konzept der explorativen Kreativität hilft hier: Das Modell erkundet den konzeptuellen Raum von "sowjetisch-dystopischer Pixel-Musik" auf der Beschreibungsebene adäquat, scheitert aber an der Übersetzung in klangliche Materie. Die Diskrepanz zwischen Beschreibung und Output ist ein konkretes Symptom des Speed-vs-Control-Tradeoffs: Generierung ist schnell, aber Feinsteuerung ist nicht gegeben. Die automatisierte Pipeline aus Experiment 5 illustriert beide Seiten: 24 evaluierbare Bilder entstanden in Minuten, aber Details wie Keplers Cap oder die Cockpit-Perspektive blieben unkontrollierbar.
 
 ### 3. Verschiebung der Autorschaft
 
 Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin, ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
 
-Die wechselnden Rollen lassen sich als Wanderung auf Deterdings [-@deterding2017mixed] Spektrum lesen — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Und: "Garbage in, garbage out": Domänenwissen ist die Voraussetzung für produktive Kollaboration, nicht KI-Kompetenz. Wer nicht weiß, was gut ist, kann nicht kuratieren.
+Die wechselnden Rollen lassen sich als Wanderung auf Deterdings [-@deterding2017mixed] Spektrum lesen — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Und: "Garbage in, garbage out": Domänenwissen ist die Voraussetzung für produktive Kollaboration, nicht KI-Kompetenz. Wer nicht weiß, was gut ist, kann nicht kuratieren. In Experiment 5 kam eine weitere Rolle hinzu: die der Orchestratorin, die nicht mehr direkt promptet, sondern einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert -- eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
 
 ### 4. KI-Burnout und KI-Enthusiasmus
 
 Die emotionale Dimension der KI-Arbeit erwies sich als eigenständige Prozessveränderung, die ich nicht erwartet hatte. Es gibt einen Zyklus: Begeisterung, wenn etwas unerwartet gut funktioniert -- der Website-Build, die ersten Marble-Welten, ein Claude-Dialog, der mich wirklich weiterbringt. Und dann Frustration und Erschöpfung, wie nach dem ComfyUI-Experiment: „Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen. Aber es sind halt keine magischen Tools, so wie es sich anfühlt" (Eintrag 2).
 
-Dieses Pendeln ist nicht Nebensache, sondern reale Belastung im kreativen Prozess. Der ständige Zwang, neue Tools zu evaluieren, Workflows umzubauen, mit Limitierungen zu kämpfen, kostet kreative Energie, die eigentlich in die Kunst fließen sollte. Man muss sich aktiv davor schützen, in diesem Zyklus aufgerieben zu werden. Die Versprechen der Technologie, schneller, besser, alles möglich, stehen in Spannung zur Realität einer Praxis, die oft mühsamer ist als die analoge Alternative.
+Dieses Pendeln ist nicht Nebensache, sondern reale Belastung im kreativen Prozess. Der ständige Zwang, neue Tools zu evaluieren, Workflows umzubauen, mit Limitierungen zu kämpfen, kostet kreative Energie, die eigentlich in die Kunst fließen sollte. Man muss sich aktiv davor schützen, in diesem Zyklus aufgerieben zu werden. Die Versprechen der Technologie, schneller, besser, alles möglich, stehen in Spannung zur Realität einer Praxis, die oft mühsamer ist als die analoge Alternative. Der systematische Pipeline-Ansatz in Experiment 5 wirkte dem entgegen: Sieben strukturierte Phasen mit klaren Evaluationskriterien reduzierten die Frustration gegenüber den Einzelversuchen erheblich.
 
 ## Rückbezug auf die Forschungsfrage
 
@@ -230,11 +981,11 @@ Die vier vorangehenden Beobachtungen -- unvorhersehbarer Flow, Speed vs. Control
 
 ## Zusammenfassung der Ergebnisse
 
-Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Based Research, dokumentiert über [N] Experimente mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
+Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Based Research, dokumentiert über fünf Experimente mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
 
 Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik; Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens zeigt sich ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren; das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle fundamental verschoben*: von der Ausführenden zur Kuratorin, Dirigentin, Lernenden, wobei Domänenwissen sich als entscheidende Voraussetzung erwies, nicht KI-Kompetenz. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
 
-Diese vier Beobachtungen sind keine isolierten Phänomene. Sie verbindet ein gemeinsames Prinzip: Die produktivsten Momente entstanden dort, wo Intention und KI-Eigenlogik in Spannung zueinander traten, nicht wo sie sich deckten.
+Diese vier Beobachtungen sind keine isolierten Phänomene. Sie verbindet ein gemeinsames Prinzip: Die produktivsten Momente entstanden dort, wo Intention und KI-Eigenlogik in Spannung zueinander traten, nicht wo sie sich deckten. Experiment 5 belegt zudem die Skalierbarkeit des Ansatzes: Eine automatisierte Pipeline kann den explorativen Raum systematisch abstecken, ohne dass die zentrale Spannung zwischen Kontrolle und Generierung aufgelöst wird.
 
 ## Theoretische Implikationen
 
