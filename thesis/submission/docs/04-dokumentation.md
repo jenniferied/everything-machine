@@ -38,7 +38,7 @@ Die vorliegende Arbeit versteht Artistic Research im Sinne von Henk Borgdorff [-
 
 Diese Arbeit entsteht in einem Moment, in dem generative KI nahezu alle kreativen Domänen erfasst hat: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Entwicklung Fragen auf, die nicht abstrakt-philosophisch sind, sondern die konkrete Praxis von Künstler\*innen und Medienproduzent\*innen betreffen: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren?
 
-Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „Kepler" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
+Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „[Kepler](https://www.instagram.com/kepler.mp3/)" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
 
 Das Projekt „Everything Machine" dokumentiert diesen Prozess transparent auf einer öffentlichen [Website](https://jenniferied.github.io/everything-machine/), der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar. Der Name verweist auf die Idee einer Maschine, die „alles" produzieren kann -- und fragt zugleich, was dieses „alles" wert ist. Denn je mehr ich mit generativer KI arbeitete, desto deutlicher wurde: Sie kann vieles schnell, aber nicht alles gut. Die „Everything Machine" ist zugleich mächtig und begrenzt, und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.
 
@@ -66,35 +66,27 @@ Die theoretische Grundlage für dieses Projekt bildet das Feld des Artistic Rese
 
 Candy unterscheidet in ihrem einflussreichen Report am Creativity & Cognition Studios der University of Technology Sydney zwischen *practice-based* und *practice-led* Research. Practice-based Research bedeutet, dass die kreative Praxis zentral für die Forschung ist und das Kunstwerk selbst Teil des Forschungsergebnisses wird; practice-led Research hingegen nutzt die Praxis, um neues Wissen über Praxis zu generieren, ohne dass das Kunstwerk notwendigerweise Ergebnis ist. Die vorliegende Arbeit ist practice-led: Die Praxis (KI-Experimente, Website-Bau, Musikgenerierung) führt zu neuem Wissen über den kreativen Prozess. Die Artefakte belegen die Erkenntnisse, sind aber nicht selbst das primäre Forschungsergebnis.
 
-## Kreativität und künstliche Intelligenz
+## Kreativität und Mensch-KI-Kollaboration
 
-Margaret Bodens [-@boden2004creative] Unterscheidung zwischen explorativer, kombinatorischer und transformativer Kreativität bietet einen Rahmen für die Analyse von KI-generierter Kunst. Boden, Kognitionswissenschaftlerin und Philosophin an der University of Sussex, entwickelt in der zweiten Auflage ihrer einflussreichen Monografie ein computergestütztes Modell menschlicher Kreativität und argumentiert, dass kreative Prozesse prinzipiell als Operationen in konzeptuellen Räumen formalisierbar sind. Generative KI-Systeme operieren primär im Modus der explorativen und kombinatorischen Kreativität: Sie erkunden einen „conceptual space" und kombinieren erlernte Muster auf neue Weise.
+Boden [-@boden2004creative] unterscheidet drei Formen von Kreativität: explorative, kombinatorische und transformative. Generative KI-Systeme operieren primär explorativ und kombinatorisch — sie erkunden einen „conceptual space" und kombinieren erlernte Muster auf neue Weise. Ob sie zu transformativer Kreativität fähig sind, bleibt umstritten. Für diese Arbeit ist die Frage weniger relevant als die praktische Beobachtung: In der Kollaboration mit KI entstehen Ergebnisse, die weder ich allein noch das System allein hervorgebracht hätte.
 
-Die Frage, ob diese Systeme zu "echter" Kreativität fähig sind, bleibt umstritten. Für das vorliegende Projekt ist diese Frage jedoch weniger relevant als die praktische Beobachtung: In der Kollaboration entstehen Ergebnisse, die weder ich allein noch das KI-System allein hervorgebracht hätte.
+Galanter [-@galanter2003generative] definiert generative Kunst als jede Praxis, bei der ein autonomes System zum Produktionsprozess beiträgt — vom Computerprogramm über physikalische Prozesse bis zu Regelwerken. KI-gestützte Kunstproduktion steht damit in einer langen Tradition. Gleichzeitig ist der aktuelle Moment qualitativ anders: Multimodale KI-Systeme operieren in Text, Bild und Audio gleichzeitig, mit historisch beispielloser Geschwindigkeit und Zugänglichkeit. Galanter ordnet generative Systeme auf einer Ordnung-Chaos-Skala an, wobei „effektive Komplexität" — die Zone zwischen perfekter Ordnung und totalem Chaos — den ästhetisch interessantesten Bereich markiert. Dieses Konzept wird in den Experimenten dieser Arbeit mehrfach aufgegriffen.
 
-Deterding et al. [-@deterding2017mixed] beschreiben in ihrem Workshop-Beitrag zur ACM CHI-Konferenz 2017 ein Spektrum kreativer Mensch-Computer-Interaktion: von „Mensch als Schöpfer, Computer als Werkzeug" über „Mixed-Initiative" -- beide Seiten kollaborieren in einem engen Feedback-Loop -- bis „Computer als Schöpfer, Mensch als Publikum". Für das vorliegende Projekt ist die mittlere Position zentral: Die Entwicklung von Kepler findet genau in diesem Mixed-Initiative-Raum statt, in dem weder ich noch das KI-System die volle Kontrolle hat.
+Deterding et al. [-@deterding2017mixed] beschreiben ein Spektrum kreativer Mensch-Computer-Interaktion: von „Mensch als Schöpfer, Computer als Werkzeug" über „Mixed-Initiative" — beide Seiten kollaborieren in einem engen Feedback-Loop — bis „Computer als Schöpfer, Mensch als Publikum". Die Entwicklung von Kepler findet genau in diesem Mixed-Initiative-Raum statt, in dem weder ich noch das KI-System die volle Kontrolle hat.
 
-## Generative Kunst als historischer Kontext
+Franceschelli und Musolesi [-@franceschelli2024creativity] identifizieren in ihrem systematischen Überblick eine zentrale Unterscheidung: Kreativität *des* Systems versus Kreativität *mit* dem System. In dieser Arbeit geht es um Letzteres — nicht ob die KI kreativ „ist", sondern wie sich der kreative Prozess in der Kollaboration verändert.
 
-Galanter [-@galanter2003generative] definiert in seinem auf der International Conference on Generative Art vorgestellten Beitrag generative Kunst als jede Praxis, bei der ein autonomes System zum Produktionsprozess beiträgt -- vom Computerprogramm über physikalische Prozesse bis zu Regelwerken. Damit steht KI-gestützte Kunstproduktion in einer Tradition, die bis zu islamischen Kachelmustern und Mozarts Würfelkompositionen zurückreicht. Gleichzeitig — und hier liegt die Spannung — ist der aktuelle Moment qualitativ anders: Multimodale KI-Systeme operieren in Text, Bild und Audio gleichzeitig, mit einer Geschwindigkeit und Zugänglichkeit, die historisch beispiellos ist. Galanter ordnet generative Systeme auf einer Ordnung-Chaos-Skala an, wobei "effektive Komplexität" — die Zone zwischen perfekter Ordnung und totalem Chaos — den ästhetisch interessantesten Bereich markiert.
+Mazzone und Elgammal [-@mazzone2019artcreativity] argumentieren, dass KI-Systeme sowohl als Werkzeug als auch als kreativer Partner fungieren können, betonen aber die Grenzen rein generativer Ansätze: Ohne menschliche Intention, Kontextwissen und ästhetisches Urteil bleibt der Output generisch. Diese Beobachtung deckt sich mit dem „Garbage in, garbage out"-Prinzip, das sich durch meine Experimente zieht: Domänenwissen erweist sich als Voraussetzung für ästhetisch relevante Ergebnisse.
 
-## Multimodale KI und kreative Praxis
+Suh et al. [-@suh2021aiglue] untersuchen, wie generative KI in kollaborativen Kompositionsprozessen wirkt. Ihre Ergebnisse zeigen, dass KI nicht nur als technisches Werkzeug, sondern als „sozialer Klebstoff" fungieren kann, der Kommunikation und kreative Aushandlung zwischen menschlichen Beteiligten verändert. Dieser Befund resoniert mit meinem Suno-Experiment, bei dem die KI-generierten Beschreibungen — obwohl die Musik selbst enttäuschte — ein gemeinsames ästhetisches Vokabular lieferten, das für die Weiterarbeit produktiv wurde.
 
-Die Schnittstelle von maschinellem Lernen und Kreativität hat in den letzten Jahren erhebliche Aufmerksamkeit erfahren. Franceschelli und Musolesi [-@franceschelli2024creativity] bieten in ihrem in den ACM Computing Surveys publizierten Survey einen systematischen Überblick über die Forschung an dieser Schnittstelle und identifizieren zentrale Dimensionen: die Fähigkeit von ML-Systemen zur Generierung neuartiger Artefakte, die Rolle menschlicher Bewertung bei der Einschätzung kreativer Qualität und die Unterscheidung zwischen Kreativität *des* Systems und Kreativität *mit* dem System. Für das vorliegende Projekt ist besonders die letzte Dimension relevant: Es geht nicht darum, ob die KI kreativ "ist", sondern wie sich der kreative Prozess in der Kollaboration verändert.
-
-Mazzone und Elgammal [-@mazzone2019artcreativity] -- sie Kunsthistorikerin, er Informatiker und Entwickler des Creative Adversarial Network an der Rutgers University -- argumentieren, dass KI-Systeme das Potenzial haben, sowohl als Werkzeug als auch als kreativer Partner zu fungieren, betonen aber die Grenzen rein generativer Ansätze: Ohne menschliche Intention, Kontextwissen und ästhetisches Urteil bleibt der Output generisch. Diese Beobachtung deckt sich mit dem in dieser Arbeit beschriebenen "Garbage in, garbage out"-Prinzip: Domänenwissen erweist sich als Voraussetzung für ästhetisch relevante Ergebnisse.
-
-Im Bereich der Musikproduktion untersuchen Suh et al. [-@suh2021aiglue], wie generative KI-Systeme in kollaborativen Kompositionsprozessen wirken. In ihrer auf der ACM CHI-Konferenz 2021 vorgestellten qualitativen Studie beobachteten die Autor\*innen 30 Teilnehmende beim gemeinsamen Komponieren mit und ohne KI-Unterstützung. Ihre Ergebnisse zeigen, dass KI nicht nur als technisches Werkzeug, sondern als „sozialer Klebstoff" fungieren kann, der Kommunikation und kreative Aushandlung zwischen menschlichen Beteiligten verändert. Dieser Befund resoniert mit meinem Suno-Experiment, bei dem die KI-generierten Beschreibungen, obwohl die Musik selbst enttäuschte, ein gemeinsames ästhetisches Vokabular lieferten, das für die Weiterarbeit produktiv wurde.
-
-## Herausforderungen KI-generierter Medien
-
-Zwei bekannte Phänomene treten beim praktischen Arbeiten mit generativer KI wiederholt auf. Das *Uncanny Valley* [@mori2012uncanny], erstmals 1970 vom japanischen Robotiker Masahiro Mori formuliert und 2012 in autorisierter englischer Übersetzung im IEEE Robotics & Automation Magazine publiziert, beschreibt das Unbehagen, das entsteht, wenn KI-generierte Darstellungen menschenähnlich, aber nicht perfekt realistisch sind -- in der Praxis zeigt sich das als konkretes Hindernis, etwa wenn Bildmodelle Gesichtszüge in Keplers Maske halluzinieren, weil das Modell die Abwesenheit eines Gesichts nicht akzeptiert. Eng damit verbunden ist Coleridges Konzept der *Suspension of Disbelief* [@coleridge1817biographia], das der englische Romantiker 1817 in seiner *Biographia Literaria* als „willing suspension of disbelief for the moment, which constitutes poetic faith" formulierte: Die Bereitschaft des Publikums, sich auf eine fiktionale Welt einzulassen, wird durch solche Artefakte immer wieder gestört. Für Kepler als virtuelle Persona stellt sich die Frage, ob Rezipient\*innen ihn als „authentischen" Künstler akzeptieren -- eine Frage, die im kreativen Prozess ständig mitverhandelt wird.
+Zwei bekannte Phänomene treten beim praktischen Arbeiten mit generativer KI wiederholt auf. Das *Uncanny Valley* [@mori2012uncanny] beschreibt das Unbehagen, das entsteht, wenn künstliche Darstellungen menschenähnlich, aber nicht perfekt realistisch sind. In der Arbeit mit Kepler zeigt sich dieses Phänomen als konkretes Hindernis — Bildmodelle halluzinieren Gesichtszüge in seine Maske, weil sie die Abwesenheit eines Gesichts nicht akzeptieren. Eng damit verbunden ist Coleridges Konzept der *Suspension of Disbelief* [@coleridge1817biographia]: die Bereitschaft des Publikums, sich auf eine fiktionale Welt einzulassen. Für Kepler als virtuelle Persona stellt sich die Frage, ob Rezipient\*innen ihn als „authentischen" Künstler akzeptieren — eine Frage, die im kreativen Prozess ständig mitverhandelt wird und durch KI-Artefakte immer wieder gestört wird.
 
 ## Artistic Research mit generativer KI
 
-Neben der theoretisch-empirischen Forschung gibt es eine wachsende Zahl von Artist-Practitioner-Projekten, die generative KI aus der Praxis heraus untersuchen. Monin und Sadokierski [-@monin2025prompting], beide Designforscherinnen, beschreiben in der Sonderausgabe „AI (and) Art: Poetics of Prompting" des Journals *ArteActa* Prompting als „Thinking-With" -- einen Denkprozess, bei dem die Formulierung von Prompts für Bildgenerierungsmodelle selbst zur Erkenntnismethode wird. Ihr Projekt zur Visualisierung eines ausgestorbenen Zwerg-Emus auf King Island verbindet Collagepraktiken mit KI-Bildgenerierung und zeigt, wie die iterative Auseinandersetzung mit KI-generierten Bildern das Verständnis des Forschungsgegenstands vertieft -- insbesondere dort, wo historische Bildarchive lückenhaft sind.
+Neben der theoretisch-empirischen Forschung gibt es eine wachsende Zahl von Artist-Practitioner-Projekten, die generative KI aus der Praxis heraus untersuchen. Monin und Sadokierski [-@monin2025prompting] beschreiben Prompting als „Thinking-With" — einen Denkprozess, bei dem die Formulierung von Prompts selbst zur Erkenntnismethode wird. Ihr Projekt zur Visualisierung eines ausgestorbenen Zwerg-Emus verbindet Collagepraktiken mit KI-Bildgenerierung und zeigt, wie die iterative Auseinandersetzung mit KI-generierten Bildern das Verständnis des Forschungsgegenstands vertieft.
 
-Hansen [-@hansen2023designers] entwickelt in seinem im *HUB -- Journal of Research in Art, Design and Society* erschienenen Beitrag ein Modell für die sich verändernde Rolle von Grafikdesigner\*innen im KI-Zeitalter. Gestützt auf die Trias von Deduktion, Induktion und Abduktion argumentiert er, dass deduktive und induktive Designaufgaben effektiv an KI delegierbar sind, während abduktive Aufgaben weiterhin menschliche Kompetenz erfordern -- die Kernkompetenz verschiebt sich von der Ausführung zur Kuration und kritischen Bewertung, eine Beobachtung, die sich mit meinem Befund der Autorschaftsverschiebung deckt. Torres Núñez del Prado [-@torresnunez2025encoding], eine peruanisch-schwedische Künstlerin an der Schnittstelle von Code, KI und textilbasierten Technologien, untersucht in ihrem im *PARSE Journal* erschienenen Beitrag „Encoding Culture", wie kulturelle Kodierungen in KI-Trainingsdaten eingebettet sind und wie Künstler\*innen diese sichtbar machen und unterlaufen können -- eine Perspektive, die für Keplers Konfrontation mit normativen Gesichtsmodellen direkt relevant ist.
+Hansen [-@hansen2023designers] entwickelt ein Modell für die sich verändernde Rolle von Grafikdesigner\*innen im KI-Zeitalter. Gestützt auf die Trias von Deduktion, Induktion und Abduktion argumentiert er, dass deduktive und induktive Designaufgaben effektiv an KI delegierbar sind, während abduktive Aufgaben weiterhin menschliche Kompetenz erfordern — die Kernkompetenz verschiebt sich von der Ausführung zur Kuration und kritischen Bewertung, eine Beobachtung, die sich mit meinem Befund der Autorschaftsverschiebung deckt. Torres Núñez del Prado [-@torresnunez2025encoding] untersucht in „Encoding Culture", wie kulturelle Kodierungen in KI-Trainingsdaten eingebettet sind und wie Künstler\*innen diese sichtbar machen und unterlaufen können — eine Perspektive, die für Keplers Konfrontation mit normativen Gesichtsmodellen direkt relevant ist.
 
 Diese Projekte teilen den reflexiven Ansatz der vorliegenden Arbeit, arbeiten aber primär in einer einzelnen Modalität (Bild oder Text). Die vorliegende Arbeit unterscheidet sich durch ihren multimodalen Ansatz: Die Experimente erstrecken sich über Bild, Audio, 3D und Code und ermöglichen so eine domänenübergreifende Analyse der Prozessveränderungen.
 
@@ -256,7 +248,7 @@ Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Re
 \begin{table}[H]
 \centering\small
 \caption{Phase 1: Modell-Screening (A-Pose, quadratisch)}
-\begin{tabular}{llll}
+\begin{tabularx}{\textwidth}{lll>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
 \midrule
@@ -266,7 +258,7 @@ FLUX Depth LoRA & \textcolor{evalred}{nein} & -- & Körper wird humanoid \\
 FLUX Canny LoRA & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
 Era3D & \textcolor{evalred}{nein} & -- & Nutzlos -- eigene Renders besser \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 ```
 
@@ -319,7 +311,7 @@ Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jew
 \begin{table}[H]
 \centering\small
 \caption{Phase 2: Top-Modelle in Szenen (A-Pose)}
-\begin{tabular}{llll}
+\begin{tabularx}{\textwidth}{lll>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
 \midrule
@@ -328,7 +320,7 @@ GPT-Image-1.5 & bedingt & teilweise & Solide, aber Halluzinationen \\
 SeedDream v4.5 & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
 NanoBanana Pro & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 ```
 
@@ -388,7 +380,7 @@ Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Rend
 \begin{table}[H]
 \centering\small
 \caption{Phase 2b: Posed Input (3 Finalisten)}
-\begin{tabular}{llll}
+\begin{tabularx}{\textwidth}{lll>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Modell} & \textbf{Bewertung} & \textbf{Halluz.} & \textbf{Kommentar} \\
 \midrule
@@ -396,7 +388,7 @@ FLUX Kontext Posed & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesic
 GPT-Image-1.5 Posed & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
 NanoBanana Posed & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 ```
 
@@ -406,9 +398,9 @@ FLUX Kontext schied aus -- Posed Input verstärkte die Gesichtshalluzinationen. 
 \clearpage
 ```
 
-#### Phase 3: Signature Scenes v1 -- Ratio-Bug
+#### Phase 3a: Signature Scenes v1 -- Ratio-Bug
 
-Ab Phase 3 wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
+Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
 
 ```{=latex}
 \begin{figure}[H]
@@ -443,15 +435,15 @@ Ab Phase 3 wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/pool_floaty.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (14) -- korrektes Format}
 
-\caption{Phase 3: GPT-1.5 mit Ratio-Bug (oben, quadratisch), NanoBanana korrekt (unten)}
+\caption{Phase 3a: GPT-1.5 mit Ratio-Bug (oben, quadratisch), NanoBanana korrekt (unten)}
 \end{figure}
 ```
 
 ```{=latex}
 \begin{table}[H]
 \centering\small
-\caption{Phase 3: Signature Scenes v1}
-\begin{tabular}{lllll}
+\caption{Phase 3a: Signature Scenes v1}
+\begin{tabularx}{\textwidth}{llll>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Modell} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
 \midrule
@@ -460,7 +452,7 @@ GPT-1.5 & landscape \textcolor{evalred}{(sq.)} & gemischt & -- & Auch 1:1 leider
 NanoBanana & portrait & gemischt & teilweise & Halb cool, halb Halluz. \\
 NanoBanana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 ```
 
@@ -468,9 +460,11 @@ NanoBanana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 \clearpage
 ```
 
-#### Phase 3a + 3b: Gestretchte Inputs
+#### Phase 3b: Gestretchte Inputs
 
-Der Ratio-Bug wurde in Phase 3a behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. In Phase 3b wurden die Prompts verfeinert (Voxel-Treppen statt Marmor), das Stretching blieb jedoch bestehen.
+Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte NanoBanana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
+
+In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. NanoBanana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" im Zeitraffer: Jede Iteration löste ein Problem und offenbarte das nächste.
 
 ```{=latex}
 \begin{figure}[H]
@@ -478,14 +472,42 @@ Der Ratio-Bug wurde in Phase 3a behoben, Tokyo Rain ersetzte Bridge. Doch ein ne
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait.jpg}\hfill
 \includegraphics[width=0.27\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-landscape.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} Gestretchte Inputs: Portrait (links), Landscape (rechts)}
+\caption{Phase 3b: Fehlerhafte Referenzbilder (gestretcht statt gepaddet)}
+\end{figure}
+```
 
-\vspace{6pt}
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phase 3b: Gestretchte Inputs}
+\begin{tabularx}{\textwidth}{lllll>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Ordner} & \textbf{Modell} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+15/16 & GPT-1.5 & portrait & gemischt & -- & Gestretchte Referenz \\
+15/16 & GPT-1.5 & landscape & gemischt & teilweise & Stretching + Cap fehlt \\
+15/16 & NanoBanana & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
+15/16 & NanoBanana & landscape & gemischt & teilweise & Weniger Stretching, gut \\
+\midrule
+17/18 & GPT-1.5 & portrait & gemischt & teilweise & 1:1 + leichte Halluz. \\
+17/18 & GPT-1.5 & landscape & gemischt & teilweise & Dasselbe \\
+17/18 & NanoBanana & portrait & gemischt & -- & -- \\
+17/18 & NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
+\clearpage
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/studio.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/15_gpt15_fixed_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (15) -- Phase 3a}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (15)}
 
 \vspace{4pt}
 
@@ -493,7 +515,7 @@ Der Ratio-Bug wurde in Phase 3a behoben, Tokyo Rain ersetzte Bridge. Doch ein ne
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (16) -- Phase 3a}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (16)}
 
 \vspace{6pt}
 
@@ -501,7 +523,7 @@ Der Ratio-Bug wurde in Phase 3a behoben, Tokyo Rain ersetzte Bridge. Doch ein ne
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/17_gpt15_v2_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (17) -- Phase 3b}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Portrait (17)}
 
 \vspace{4pt}
 
@@ -509,35 +531,11 @@ Der Ratio-Bug wurde in Phase 3a behoben, Tokyo Rain ersetzte Bridge. Doch ein ne
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (18) -- Phase 3b}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (18)}
 
-\caption{Phase 3a + 3b: Gestretchte Inputs verzerren die Outputs über zwei Iterationen}
+\caption{Phase 3b: Outputs mit gestretchten Referenzbildern}
 \end{figure}
 ```
-
-```{=latex}
-\begin{table}[H]
-\centering\small
-\caption{Phasen 3a + 3b: Gestretchte Inputs}
-\begin{tabular}{llllll}
-\toprule
-\textbf{Phase} & \textbf{Modell} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
-\midrule
-3a & GPT-1.5 & portrait & gemischt & -- & Gestretchte Referenz \\
-3a & GPT-1.5 & landscape & gemischt & teilweise & Stretching + Cap fehlt \\
-3a & NanoBanana & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
-3a & NanoBanana & landscape & gemischt & teilweise & Weniger Stretching, gut \\
-\midrule
-3b & GPT-1.5 & portrait & gemischt & teilweise & 1:1 + leichte Halluz. \\
-3b & GPT-1.5 & landscape & gemischt & teilweise & Dasselbe \\
-3b & NanoBanana & portrait & gemischt & -- & -- \\
-3b & NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
-\bottomrule
-\end{tabular}
-\end{table}
-```
-
-Die Phasen 3--3b zeigen Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" im Zeitraffer: Jede Iteration löste ein Problem und offenbarte das nächste.
 
 ```{=latex}
 \clearpage
@@ -545,7 +543,9 @@ Die Phasen 3--3b zeigen Schöns [-@schoen1983practitioner] "Situation, die zurü
 
 #### Phase 3c: Korrigierte Pipeline
 
-Mit korrekt gepaddeten Inputs lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain, die Szenen-Auswahl stabilisierte sich.
+Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio.
+
+Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. NanoBanana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen.
 
 ```{=latex}
 \begin{figure}[H]
@@ -553,9 +553,32 @@ Mit korrekt gepaddeten Inputs lieferte die Pipeline erstmals konsistente Ergebni
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait-padded.jpg}\hfill
 \includegraphics[width=0.27\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-landscape-padded.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} Korrekt gepaddete Inputs: Portrait (links), Landscape (rechts)}
+\caption{Phase 3c: Korrekt gepaddete Referenzbilder}
+\end{figure}
+```
 
-\vspace{6pt}
+```{=latex}
+\begin{table}[H]
+\centering\small
+\caption{Phase 3c: Korrigierte Pipeline}
+\begin{tabularx}{\textwidth}{llll>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Modell} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+GPT-1.5 & portrait & gemischt & -- & -- \\
+GPT-1.5 & landscape & gemischt & -- & -- \\
+NanoBanana & portrait & gemischt & -- & -- \\
+NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
+\clearpage
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/night_drive.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/19_gpt15_final_portrait/pool_floaty.jpg}\hfill
@@ -586,32 +609,15 @@ Mit korrekt gepaddeten Inputs lieferte die Pipeline erstmals konsistente Ergebni
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/studio.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (20)}
 
-\caption{Phase 3c: Korrekt gepaddete Inputs, stabilisierte Szenen}
+\caption{Phase 3c: Outputs mit korrekt gepaddeten Inputs}
 \end{figure}
-```
-
-```{=latex}
-\begin{table}[H]
-\centering\small
-\caption{Phase 3c: Korrigierte Pipeline}
-\begin{tabular}{lllll}
-\toprule
-\textbf{Modell} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
-\midrule
-GPT-1.5 & portrait & gemischt & -- & -- \\
-GPT-1.5 & landscape & gemischt & -- & -- \\
-NanoBanana & portrait & gemischt & -- & -- \\
-NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
-\bottomrule
-\end{tabular}
-\end{table}
 ```
 
 ```{=latex}
 \clearpage
 ```
 
-#### Phase 3e + 3f: Posed vs. A-Pose Vergleich
+#### Phase 3d: Posed vs. A-Pose Vergleich
 
 Dieselben drei Signature Scenes -- Night Drive, Spiral Staircase, Pool Floaty -- wurden mit Posed (Ordner 21/22) und A-Pose (Ordner 23/24) Input parallel generiert.
 
@@ -621,80 +627,7 @@ Dieselben drei Signature Scenes -- Night Drive, Spiral Staircase, Pool Floaty --
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-posed-portrait-padded.jpg}\hfill
 {\Large\color{accentgreen}$\rightarrow$}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/inputs/kepler-a-pose-portrait-padded.jpg}
-\caption{Input-Vergleich: Posed (links) vs. A-Pose (rechts)}
-\end{figure}
-```
-
-```{=latex}
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Portrait}
-\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Portrait}
-\end{minipage}
-
-\vspace{6pt}
-
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Landscape}
-\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Landscape}
-\end{minipage}
-
-\vspace{6pt}
-
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Portrait}
-\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Portrait}
-\end{minipage}
-
-\vspace{6pt}
-
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Landscape}
-\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}
-\centering
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/night_drive.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/spiral_staircase.jpg}\hfill
-\includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Landscape}
-\end{minipage}
-
-\caption{Phase 3e/3f: Posed (links) vs. A-Pose (rechts) -- systematischer Vergleich}
+\caption{Input-Vergleich Phase 3d: Posed (links) vs. A-Pose (rechts)}
 \end{figure}
 ```
 
@@ -703,8 +636,8 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 ```{=latex}
 \begin{table}[H]
 \centering\footnotesize
-\caption{Phase 3e/3f: Posed vs. A-Pose Vergleich (detailliert)}
-\begin{tabular}{lllllll}
+\caption{Phase 3d: Posed vs. A-Pose Vergleich (detailliert)}
+\begin{tabularx}{\textwidth}{llllll>{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Ordner} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Szene} & \textbf{Bew.} & \textbf{Halluz.} \\
 \midrule
@@ -736,8 +669,76 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 24 & NanoBanana & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
 24 & NanoBanana & a-pose & landscape & pool & neutral & \textcolor{evalred}{ja} \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
+
+\clearpage
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Portrait (21)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Portrait (23)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Portrait (22)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/night_drive.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Portrait (24)}
+
+\caption{Phase 3d: Portrait-Vergleich -- Posed (21/22) vs. A-Pose (23/24)}
+\end{figure}
+```
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/21_gpt15_refined_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 Posed Landscape (21)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/23_gpt15_apose_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} GPT-1.5 A-Pose Landscape (23)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Landscape (22)}
+
+\vspace{3pt}
+
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/night_drive.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/spiral_staircase.jpg}\hfill
+\includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/pool_floaty.jpg}
+\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Landscape (24)}
+
+\caption{Phase 3d: Landscape-Vergleich -- Posed (21/22) vs. A-Pose (23/24)}
+\end{figure}
 ```
 
 ```{=latex}

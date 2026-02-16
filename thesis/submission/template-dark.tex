@@ -191,6 +191,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{tabularx}
 \usepackage{calc}
 
 % Fix Pandoc longtable caption issue - define dummy counter 'none'
@@ -209,6 +210,7 @@
 
 % Force darktext in all tables (prevents color-stack issues across pages)
 \AtBeginEnvironment{tabular}{\color{darktext}}
+\AtBeginEnvironment{tabularx}{\color{darktext}}
 \AtBeginEnvironment{longtable}{\color{darktext}}
 
 % === LISTS ===
