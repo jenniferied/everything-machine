@@ -3073,3 +3073,230 @@ main.container {
     line-height: 1.4;
     margin: 0;
 }
+
+/* ==============================
+   Image Gallery (Experiment 5)
+   ============================== */
+
+.ig-phase {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 2rem;
+}
+
+.ig-phase:last-child {
+    border-bottom: none;
+}
+
+.ig-phase-header {
+    margin-bottom: 1.5rem;
+}
+
+.ig-phase-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    color: #f3f4f6;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.ig-phase-desc {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.ig-prompt {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: italic;
+    border-left: 2px solid #4ade80;
+    padding-left: 0.75rem;
+    margin: 0.75rem 0;
+    line-height: 1.5;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.ig-prompt strong {
+    color: #9ca3af;
+    font-style: normal;
+}
+
+.ig-prompt ul {
+    margin: 0.25rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+}
+
+.ig-prompt li {
+    margin: 0.15rem 0;
+}
+
+/* Input reference images */
+.ig-input-ref,
+.ig-input-compare {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.ig-input-ref img,
+.ig-input-compare img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    border: 1px solid #374151;
+}
+
+.ig-input-label {
+    font-size: 0.7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ig-arrow {
+    color: #4ade80;
+    font-size: 1.2rem;
+}
+
+/* Model section within a phase */
+.ig-model-section {
+    margin-bottom: 1.5rem;
+}
+
+.ig-model-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #f3f4f6;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.ig-model-badges {
+    margin-bottom: 0.25rem;
+}
+
+.ig-comment {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.4;
+    margin: 0.25rem 0 0.5rem;
+}
+
+/* Image Grid */
+.ig-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+}
+
+@media (max-width: 1200px) {
+    .ig-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 1024px) {
+    .ig-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .ig-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .ig-grid { grid-template-columns: 1fr; }
+}
+
+.ig-grid-scene {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .ig-grid-scene { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .ig-grid-scene { grid-template-columns: 1fr; }
+}
+
+/* Image Card */
+.ig-card {
+    background: #0a0f18;
+    border: 1px solid #1f2937;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.ig-card:hover {
+    border-color: #374151;
+    box-shadow: 0 0 16px rgba(74, 222, 128, 0.1);
+}
+
+.ig-card-highlight {
+    border-color: #4ade80 !important;
+    box-shadow: 0 0 24px rgba(74, 222, 128, 0.3) !important;
+}
+
+.ig-img-wrap {
+    position: relative;
+    background: #000;
+    cursor: pointer;
+}
+
+.ig-img-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ig-card-info {
+    padding: 0.5rem;
+}
+
+.ig-scene-label {
+    font-size: 0.65rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.ig-scene-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #d1d5db;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ig-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+/* Subgroup titles for Phase 3d */
+.ig-subgroup-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #1f2937;
+}

@@ -185,7 +185,13 @@ Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Mo
 
 #### Phase 1: Modell-Screening (5 Modelle, A-Pose)
 
-Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen. Fünf Modelle wurden getestet:
+Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen. Der Base-Prompt für alle fünf Modelle lautete:
+
+```{=latex}
+\begin{quote}\small\textit{``A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark pants, standing in a dramatic cinematic environment, volumetric lighting, no face, blocky pixel art style 3D character''}\end{quote}
+```
+
+Ergänzt durch drei Szenen-Varianten: ``...in a neon-lit cyberpunk city at night'', ``...in a foggy forest with golden light rays'' und ``...on a concert stage with dramatic spotlights''. Fünf Modelle wurden getestet:
 
 ```{=latex}
 \begin{figure}[H]
@@ -223,7 +229,7 @@ Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Re
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/04_flux_canny/04_flux_canny_020.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} FLUX Canny LoRA}
 
-\caption{Phase 1: Modell-Screening -- MiniMax, Z-Image, FLUX Depth, FLUX Canny}
+\caption{Phase 1: Modell-Screening -- MiniMax, Z-Image, FLUX Depth, FLUX Canny. Bilder in der \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie} vergrößerbar.}
 \end{figure}
 ```
 
@@ -240,7 +246,7 @@ Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Re
 \includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_004.jpg}\hfill
 \includegraphics[width=0.3\textwidth]{experiments/fal-pipeline/outputs/05_era3d/05_era3d_005.jpg}
 
-\caption{Phase 1: Era3D Multiview -- nutzlos im Vergleich zu eigenen Renders}
+\caption{Phase 1: Era3D Multiview -- nutzlos im Vergleich zu eigenen Renders. \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -272,7 +278,11 @@ Era3D & \textcolor{evalred}{nein} & -- & Nutzlos -- eigene Renders besser \\
 
 #### Phase 2: Top-Modelle in Szenen (A-Pose)
 
-Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jeweils drei Varianten mit demselben A-Pose-Input.
+Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jeweils drei Varianten mit demselben A-Pose-Input. Der Prompt folgte dem Schema:
+
+```{=latex}
+\begin{quote}\small\textit{``Place this voxel character in [Szene], [Aktion], cinematic lighting''}\end{quote}
+```
 
 ```{=latex}
 \begin{figure}[H]
@@ -303,7 +313,7 @@ Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jew
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_020.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Pro}
 
-\caption{Phase 2: Top-Modelle in Szenen (A-Pose)}
+\caption{Phase 2: Top-Modelle in Szenen (A-Pose). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -372,7 +382,7 @@ Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Rend
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_040.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed}
 
-\caption{Phase 2b: Drei Finalisten mit Posed Input (je 5 Varianten)}
+\caption{Phase 2b: Drei Finalisten mit Posed Input (je 5 Varianten). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -400,7 +410,13 @@ FLUX Kontext schied aus -- Posed Input verstärkte die Gesichtshalluzinationen. 
 
 #### Phase 3a: Signature Scenes v1 -- Ratio-Bug
 
-Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
+Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Die vier Szenen-Prompts waren deutlich detaillierter als die vorherigen Phasen, z.\,B. für die Studio-Szene:
+
+```{=latex}
+\begin{quote}\small\textit{``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting, acoustic foam panels on walls, DAW software visible on screens behind him, intimate atmosphere''}\end{quote}
+```
+
+Für NanoBanana wurde der Prompt umformuliert: *``Show this voxel character in a cozy recording studio... IMPORTANT: The character must remain completely faceless.''* Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
 
 ```{=latex}
 \begin{figure}[H]
@@ -435,7 +451,7 @@ Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scene
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/pool_floaty.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (14) -- korrektes Format}
 
-\caption{Phase 3a: GPT-1.5 mit Ratio-Bug (oben, quadratisch), NanoBanana korrekt (unten)}
+\caption{Phase 3a: GPT-1.5 mit Ratio-Bug (oben, quadratisch), NanoBanana korrekt (unten). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -461,10 +477,6 @@ NanoBanana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 ```
 
 #### Phase 3b: Gestretchte Inputs
-
-Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte NanoBanana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
-
-In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. NanoBanana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" im Zeitraffer: Jede Iteration löste ein Problem und offenbarte das nächste.
 
 ```{=latex}
 \begin{figure}[H]
@@ -496,7 +508,13 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 \bottomrule
 \end{tabularx}
 \end{table}
+```
 
+Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte NanoBanana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
+
+In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. NanoBanana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" im Zeitraffer: Jede Iteration löste ein Problem und offenbarte das nächste. Die Bewertung erfolgte in diesen Phasen noch pauschal pro Modell und Format, da die Outputs insgesamt zu fehlerbehaftet waren, um sinnvoll zwischen einzelnen Szenen zu differenzieren.
+
+```{=latex}
 \clearpage
 ```
 
@@ -533,7 +551,7 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/pool_floaty.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (18)}
 
-\caption{Phase 3b: Outputs mit gestretchten Referenzbildern}
+\caption{Phase 3b: Outputs mit gestretchten Referenzbildern. \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -542,10 +560,6 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 ```
 
 #### Phase 3c: Korrigierte Pipeline
-
-Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio.
-
-Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. NanoBanana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen.
 
 ```{=latex}
 \begin{figure}[H]
@@ -572,7 +586,17 @@ NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \bottomrule
 \end{tabularx}
 \end{table}
+```
 
+Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch, z.\,B. für Night Drive:
+
+```{=latex}
+\begin{quote}\small\textit{``This voxel character is cruising down a night road in a sleek retro 1980s sports car with pop-up headlights. Behind him a glowing city skyline fades into the distance. Ahead, dark mountains rise on the horizon. Full moon in the sky, stars visible. Dashboard glowing softly, headlights cutting through mist. [...] IMPORTANT: The character must remain completely faceless --- no eyes, no nose, no mouth, no sunglasses.''}\end{quote}
+```
+
+Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. NanoBanana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen. Ab dieser Phase wurde jede Szene einzeln bewertet, da die Qualität nun hoch genug war, um szenenbezogene Unterschiede sinnvoll zu differenzieren.
+
+```{=latex}
 \clearpage
 ```
 
@@ -609,7 +633,7 @@ NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/studio.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (20)}
 
-\caption{Phase 3c: Outputs mit korrekt gepaddeten Inputs}
+\caption{Phase 3c: Outputs mit korrekt gepaddeten Inputs. \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -704,7 +728,7 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/pool_floaty.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Portrait (24)}
 
-\caption{Phase 3d: Portrait-Vergleich -- Posed (21/22) vs. A-Pose (23/24)}
+\caption{Phase 3d: Portrait-Vergleich -- Posed (21/22) vs. A-Pose (23/24). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -737,7 +761,7 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/pool_floaty.jpg}
 \\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Landscape (24)}
 
-\caption{Phase 3d: Landscape-Vergleich -- Posed (21/22) vs. A-Pose (23/24)}
+\caption{Phase 3d: Landscape-Vergleich -- Posed (21/22) vs. A-Pose (23/24). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -747,7 +771,7 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 
 #### Gesamtbewertung
 
-Die folgende Tabelle fasst alle 53 Einzelbewertungen aus der Pipeline zusammen:
+Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen:
 
 ```{=latex}
 {\footnotesize
@@ -798,15 +822,33 @@ Die folgende Tabelle fasst alle 53 Einzelbewertungen aus der Pipeline zusammen:
 20 & NanoBanana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
 20 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
 \midrule
-21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & teilweise & Scheibe fehlt (ND) \\
-21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & teilweise & Teil des Autos fehlt \\
-22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Pool sehr cool \\
-22 & NanoBanana & posed & landsc. & gemischt & teilweise & Cockpit falsch (ND) \\
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Scheibe fehlt \\
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF \\
+21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Teil d. Autos fehlt \\
+21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
+21 & GPT-1.5 & posed & landsc. & neutral & \textcolor{evalred}{ja} & PF: Cap/Haare fehlen \\
 \midrule
-23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & A-Pose overfitted \\
-23 & GPT-1.5 & a-pose & landsc. & gemischt & teilweise & Cap fehlt, Pose starr \\
-24 & NanoBanana & a-pose & portrait & gemischt & teilweise & ND ja, Treppen nein \\
-24 & NanoBanana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & Halluz. stören \\
+22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+22 & NanoBanana & posed & portrait & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Stufen nicht schön \\
+22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Sehr cool \\
+22 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cockpit falsch \\
+22 & NanoBanana & posed & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Doppelte Treppe \\
+22 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Transparent, gefällt \\
+\midrule
+23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & ND: Scheinwerfer falsch \\
+23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: A-Pose overfitted \\
+23 & GPT-1.5 & a-pose & portrait & neutral & \textcolor{evalred}{ja} & PF: Cap fehlt \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cap fehlt \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Pose zu starr \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
+\midrule
+24 & NanoBanana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+24 & NanoBanana & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppe nicht schön \\
+24 & NanoBanana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Super \\
+24 & NanoBanana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & ND: Halluz. stören \\
+24 & NanoBanana & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppen nicht schön \\
+24 & NanoBanana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
 \end{longtable}
 }
 ```
@@ -834,7 +876,18 @@ Sieben Modelle wurden systematisch verglichen: PixVerse v5.5, LTX-2, Wan 2.6, Se
 - **Night Drive** (Portrait, 768×1376): Kepler im Retro-Auto auf Wüstenhighway -- Nachtszene, Fahrtbewegung
 - **Spiral Staircase** (Portrait, 768×1376): Kepler auf kosmischer Wendeltreppe -- Prompt forderte blaues Leuchten statt Marmor
 
-Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
+Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." Die vier verwendeten Video-Prompts:
+
+```{=latex}
+\begin{quote}\small
+\textbf{Studio:} \textit{``The voxel character nods gently to the beat, fingers resting on the mixing console. Monitor screens glow steadily. Camera holds still.''}\\[4pt]
+\textbf{Pool:} \textit{``The voxel character drifts slowly on the pool ring. Water ripples gently around the float. Camera holds still from above.''}\\[4pt]
+\textbf{Night Drive:} \textit{``The voxel character drives steadily down the desert highway. Headlights illuminate the road ahead. Camera holds still from behind.''}\\[4pt]
+\textbf{Spiral Staircase:} \textit{``The white marble staircase begins to glow with a deep blue light. The voxel character slowly ascends the steps. Camera holds still.''}
+\end{quote}
+```
+
+Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
 
 ```{=latex}
 \newpage
@@ -873,6 +926,21 @@ Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Ca
 \end{minipage}
 \caption{Mittlere Frames, Studio-Szene (Landscape, 7 Modelle). Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
+
+\vspace{-4pt}
+{\scriptsize
+\begin{tabularx}{\textwidth}{l c c X}
+\textbf{Modell} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+PixVerse v5.5 & okay & leicht & Kamerabewegung gefällt, aber Bewegung unpassend. Schwarzer Kasten entsteht. \\
+LTX-2 & \textcolor{evalgreen}{gut} & leicht & Schwer zu beurteilen ob halluziniert (Audio). \\
+Wan 2.6 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Bild wirkt leicht überzeichnet, Audio wurde trotzdem generiert. \\
+Seedance Pro & okay & \textcolor{evalgreen}{nein} & Bewegt sich zwar nicht, aber okay. \\
+Veo 3.1 & \textcolor{evalred}{schlecht} & leicht & Slider bewegen sich. Bewegung gefällt nicht. \\
+Kling O3 & \textcolor{evalgreen}{gut} & leicht & Audio Meter unscharf. Bewegung gefällt sehr. \\
+Kling 3.0 V3 & \textcolor{evalgreen}{gut} & leicht & Audio Meter schwammig. Bewegung ruckartig aber cool. \\
+\end{tabularx}
+}
 ```
 
 ```{=latex}
@@ -914,6 +982,21 @@ Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Ca
 \end{minipage}
 \caption{Mittlere Frames, Pool-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
+
+\vspace{-4pt}
+{\scriptsize
+\begin{tabularx}{\textwidth}{l c c X}
+\textbf{Modell} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+PixVerse v5.5 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Voxel-Gesicht verändert sich. Bewegung zu schnell. \\
+LTX-2 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Aspect Ratio geändert, Kamera bewegt sich zu sehr. \\
+Wan 2.6 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht entsteht mit der Zeit. Pool-Floaty-Bewegung gelungen. \\
+Seedance Pro & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht entsteht, Zehen zeichnen sich in Schuhen ab. \\
+Veo 3.1 & \textcolor{evalgreen}{gut} & leicht & Voxel-Gesicht verändert sich leicht. Floaty-Bewegung cool. \\
+Kling O3 & \textcolor{evalgreen}{gut} & leicht & Ripples an falscher Stelle. Wassersimulation top. \\
+Kling 3.0 V3 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Das beste! \\
+\end{tabularx}
+}
 ```
 
 ```{=latex}
@@ -955,6 +1038,21 @@ Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Ca
 \end{minipage}
 \caption{Mittlere Frames, Night-Drive-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
+
+\vspace{-4pt}
+{\scriptsize
+\begin{tabularx}{\textwidth}{l c c X}
+\textbf{Modell} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+PixVerse v5.5 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht wird zu Lego-Figur. Autofahrt unnatürlich. \\
+LTX-2 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Auto fährt rückwärts, Licht hinten, Aspect Ratio geändert. \\
+Wan 2.6 & \textcolor{evalred}{schlecht} & leicht & Gesicht wird dazu generiert, Animation sonst gut. \\
+Seedance Pro & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Überraschenderweise gut. \\
+Veo 3.1 & okay & leicht & Funktioniert gut, fährt aber rückwärts -- könnte man umkehren. \\
+Kling O3 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Okay, aber halluziniert am Rand und zoomt zu sehr heraus. \\
+Kling 3.0 V3 & okay & leicht & Etwas besser als Kling O3. \\
+\end{tabularx}
+}
 ```
 
 ```{=latex}
@@ -996,6 +1094,21 @@ Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Ca
 \end{minipage}
 \caption{Mittlere Frames, Spiral-Staircase-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
+
+\vspace{-4pt}
+{\scriptsize
+\begin{tabularx}{\textwidth}{l c c X}
+\textbf{Modell} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+PixVerse v5.5 & okay & leicht & Stufen etwas unnatürlich, aber interessanter Glow. \\
+LTX-2 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Er läuft fast von der Stufe, Aspect Ratio ändert sich. \\
+Wan 2.6 & okay & leicht & Bewegung leicht unnatürlich. \\
+Seedance Pro & okay & leicht & Kopf verändert sich. Treppenanimation und Glow in Ordnung. \\
+Veo 3.1 & okay & leicht & Er überspringt Stufen, Animation wirkt aber relativ okay. \\
+Kling O3 & \textcolor{evalgreen}{gut} & leicht & Eine Stufe funktioniert nicht, aber Bewegung okay. Leuchten gefällt. \\
+Kling 3.0 V3 & \textcolor{evalred}{schlecht} & leicht & Stufen funktionieren nicht, Leuchten komisch, Kamerabewegung unerwartet. \\
+\end{tabularx}
+}
 ```
 
 #### Ergebnisse
@@ -1053,7 +1166,21 @@ Dieses Pendeln ist nicht Nebensache, sondern reale Belastung im kreativen Prozes
 
 ## Rückbezug auf die Forschungsfrage
 
-Die vier vorangehenden Beobachtungen -- unvorhersehbarer Flow, Speed vs. Control, Autorschaftsverschiebung, KI-Burnout -- beschreiben zusammen, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess verändert hat. Diese Veränderungen sind nicht linear und nicht planbar; sie entstehen im iterativen Prozess [@schoen1983practitioner] und kosten mehr Energie, als die Versprechen der Technologie vermuten lassen. Die folgende Diskussion ordnet diese Befunde theoretisch ein.
+Am Ausgangspunkt dieser Arbeit stand eine praktische Frage: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Die Antwort ist: nicht zuverlässig. Bildgenerierungsmodelle scheitern an Keplers Nischen-Ästhetik — sie halluzinieren Gesichter in seine Maske, driften in Mainstream-Ästhetiken ab, und die Kontrolle über Details bleibt begrenzt. Aber genau dieses Scheitern wurde produktiv: Es offenbarte, wie fundamental sich der kreative Prozess durch die Kollaboration mit KI verändert — und damit die zweite, tiefere Frage der Einleitung: Was passiert, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
+
+Die zentrale Forschungsfrage — wie verändert der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität? — lässt sich anhand der vier Beobachtungen und der fünf Subfragen beantworten, die die strukturierten Reflexionsinterviews geleitet haben:
+
+**Wie verändert sich der Workflow?** KI-Tools verschieben den kreativen Prozess von der linearen Ausführung zur iterativen Navigation. Flow entsteht unvorhersehbar (Beobachtung 1), und die Geschwindigkeit der Generierung steht in permanenter Spannung zur fehlenden Kontrolle über Details (Beobachtung 2). Der Workflow wird nicht einfach schneller — er wird anders: explorativer, weniger planbar, abhängiger von der Fähigkeit, Ergebnisse zu kuratieren statt zu produzieren.
+
+**Wie verschiebt sich die Autorschaft?** Von der alleinigen Urheberschaft zu einem Spektrum wechselnder Rollen — Kuratorin, Dirigentin, Lernende, Orchestratorin. Domänenwissen, nicht KI-Kompetenz, erweist sich als entscheidende Voraussetzung (Beobachtung 3). Wer nicht weiß, was gut ist, kann nicht kuratieren.
+
+**Welche Rolle spielt Iteration?** Iteration ist nicht Optimierung, sondern Erkenntnismethode. Jeder gescheiterte Prompt, jede unerwartete Halluzination wurde zum Ausgangspunkt für reflektierte Anpassung — Schöns [-@schoen1983practitioner] „Situation, die zurückspricht" in digitaler Form. Die automatisierte Pipeline in Experiment 5 zeigt, dass systematische Iteration den explorativen Raum erweitert, ohne die zentrale Spannung zwischen Kontrolle und Generierung aufzulösen.
+
+**Wie wird mit Scheitern umgegangen?** Scheitern ist Dauerzustand und produktive Kraft zugleich. Der emotionale Zyklus zwischen Enthusiasmus und Burnout (Beobachtung 4) zeigt, dass der Umgang mit Scheitern nicht nur eine technische, sondern eine psychologische Herausforderung ist. ComfyUI scheiterte an Keplers Gesicht, Suno an seiner Klangwelt — aber beide Erfahrungen schärften das Verständnis dafür, wo die Grenzen aktueller Modelle liegen und wie man mit ihnen arbeiten kann.
+
+**Wie entwickelt sich die Ästhetik im Prozess?** Die Ästhetik entsteht nicht trotz, sondern durch die Einschränkungen der KI. Keplers Nischen-Ästhetik ließ sich nicht direkt generieren, aber die Auseinandersetzung mit den Grenzen der Modelle — Halluzinationen, Mainstream-Drift, fehlende Feinsteuerung — schärfte das ästhetische Urteil und führte zur bewussten Integration von „Fehlern" als Gestaltungsmittel. In Galanters [-@galanter2003generative] Terminologie: Die Suche nach „effektiver Komplexität" wurde zum ästhetischen Kompass.
+
+Diese Veränderungen sind nicht linear und nicht planbar; sie entstehen im iterativen Prozess und kosten mehr Energie, als die Versprechen der Technologie vermuten lassen. Die folgende Diskussion ordnet diese Befunde theoretisch ein.
 
 # Diskussion und Interpretation
 

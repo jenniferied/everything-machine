@@ -36,6 +36,7 @@ import { JournalManager } from './journal/JournalManager.js';
 // Import pages
 import { InterestGraph } from './pages/InterestGraph.js';
 import { VideoGallery } from './pages/VideoGallery.js';
+import { ImageGalleryPage } from './pages/ImageGalleryPage.js';
 
 /**
  * Application class
@@ -105,7 +106,10 @@ class Application {
     // Phase 10: Setup interest graph (about page)
     await this.setupInterestGraph();
 
-    // Phase 10b: Setup video gallery (generations page)
+    // Phase 10b: Setup image gallery (images page)
+    await this.setupImageGallery();
+
+    // Phase 10c: Setup video gallery (generations page)
     await this.setupVideoGallery();
 
     // Phase 11: Initialize media lazy loading
@@ -586,6 +590,47 @@ class Application {
     this.eventBus.on('nav:pageChanged', (data) => {
       if (data.pageId === 'about') {
         initGraph();
+      }
+    });
+  }
+
+  /**
+   * Setup image gallery on images page (lazy-loaded)
+   * @returns {Promise<void>}
+   */
+  async setupImageGallery() {
+    const container = document.getElementById('image-gallery-container');
+    if (!container) return;
+
+    let gallery = null;
+
+    const initGallery = () => {
+      if (gallery) return;
+      gallery = new ImageGalleryPage(container, this.eventBus);
+      gallery.initialize();
+      this.uiComponents.set('image-gallery-page', gallery);
+
+      // Register images with the existing lightbox system
+      const imgs = gallery.getGalleryImages();
+      if (imgs.length && this.imageGallery) {
+        this.imageGallery.registerGallery('exp05', imgs);
+      }
+      console.log('[App] Image gallery initialized');
+    };
+
+    const hash = location.hash;
+    if (hash.startsWith('#image/') || hash === '#images') {
+      const pageNavigator = this.uiComponents.get('page-navigator');
+      if (pageNavigator) {
+        const btn = document.querySelector('[data-page="images"]');
+        pageNavigator.showPage('images', btn, false);
+      }
+      initGallery();
+    }
+
+    this.eventBus.on('nav:pageChanged', (data) => {
+      if (data.pageId === 'images') {
+        initGallery();
       }
     });
   }
