@@ -224,48 +224,75 @@ export class MarkdownParser {
    * @returns {string} HTML string
    */
   formatParagraphs(paragraphs, useFullWidthImages = false, worldInfoMap = new Map()) {
-    return paragraphs.map(para => {
-      if (!para || !para.trim()) return '';
+    const results = [];
+    let imageGroup = [];
+
+    const flushImageGroup = () => {
+      if (imageGroup.length === 0) return;
+      if (imageGroup.length === 1) {
+        results.push(imageGroup[0]);
+      } else {
+        // Consecutive images → side-by-side row
+        results.push(`<div class="image-row image-row-${imageGroup.length}">${imageGroup.join('\n')}</div>`);
+      }
+      imageGroup = [];
+    };
+
+    const makeFigure = (src, caption) => {
+      return `<figure class="image-figure my-4">
+          <img src="${src}" alt="${caption}" class="img-100 rounded-sm h-auto" />
+          ${caption ? `<figcaption class="image-caption">${caption}</figcaption>` : ''}
+        </figure>`;
+    };
+
+    paragraphs.forEach(para => {
+      if (!para || !para.trim()) return;
 
       let processed = para.trim();
 
       // Markdown table block (lines joined with \n containing |)
       if (processed.includes('\n') && processed.split('\n')[0].includes('|') && processed.split('\n')[1]?.match(/^\|?[\s:-]+\|/)) {
-        return this.formatTable(processed);
+        flushImageGroup();
+        results.push(this.formatTable(processed));
+        return;
       }
-      
+
       // Restore world info blocks
       processed = WorldInfoComponent.restoreWorldInfo(processed, worldInfoMap);
-      
+
       // Bold and italic
       processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
       processed = processed.replace(/\*(.*?)\*/g, '<em>$1</em>');
-      
+
       // Check if paragraph is only an image
       const imageOnlyMatch = processed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
       if (imageOnlyMatch) {
-        // Standalone image - render as figure with caption
         const caption = imageOnlyMatch[1] || '';
-        return `<figure class="image-figure my-4">
-          <img src="${imageOnlyMatch[2]}" alt="${caption}" class="img-100 rounded-sm h-auto" />
-          ${caption ? `<figcaption class="image-caption">${caption}</figcaption>` : ''}
-        </figure>`;
+        imageGroup.push(makeFigure(imageOnlyMatch[2], caption));
+        return;
       }
-      
+
+      // Not an image — flush any accumulated image group first
+      flushImageGroup();
+
       // Images within text
       const imageClass = useFullWidthImages ? 'img-100' : 'img-50';
-      processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, 
+      processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g,
         `<img src="$2" alt="$1" class="${imageClass} my-4 rounded-sm h-auto" />`);
-      
+
       // Markdown links [text](url)
       processed = this.convertMarkdownLinks(processed);
-      
+
       // Wrap in paragraph tag (unless it's a figure)
       if (processed.match(/^<figure/)) {
-        return processed;
+        results.push(processed);
+      } else {
+        results.push('<p class="mb-4">' + processed + '</p>');
       }
-      return '<p class="mb-4">' + processed + '</p>';
-    }).filter(Boolean).join('\n');
+    });
+
+    flushImageGroup();
+    return results.filter(Boolean).join('\n');
   }
 
   /**

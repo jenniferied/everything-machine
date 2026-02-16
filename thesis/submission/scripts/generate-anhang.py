@@ -19,21 +19,21 @@ JOURNAL_DIR = os.path.join(REPO_ROOT, "journal")
 IMG_CACHE_DIR = os.path.join(SUBMISSION_DIR, "_img_cache")
 
 # Max pixel width for optimized images.
-# 1200px covers 60% of A4 text width at ~200 DPI — sharp enough for print.
-MAX_IMG_WIDTH = 1200
+# 800px covers 60% of A4 text width at ~200 DPI — sharp enough for print.
+MAX_IMG_WIDTH = 800
+JPEG_QUALITY = 75  # Good quality, much smaller than PNG
 
 
 def optimize_image(src_rel_path):
-    """Resize image for print and cache the result. Returns path usable by LaTeX."""
+    """Resize + convert to JPEG for print. Source files are NEVER modified."""
     abs_src = os.path.normpath(os.path.join(REPO_ROOT, src_rel_path))
     if not os.path.exists(abs_src):
         return src_rel_path  # fallback to original
 
     os.makedirs(IMG_CACHE_DIR, exist_ok=True)
 
-    ext = os.path.splitext(src_rel_path)[1].lower()
-    # Use content hash for cache filename
-    cache_name = hashlib.md5(src_rel_path.encode()).hexdigest() + ext
+    # Always output as JPEG for compression
+    cache_name = hashlib.md5(src_rel_path.encode()).hexdigest() + ".jpg"
     cache_path = os.path.join(IMG_CACHE_DIR, cache_name)
 
     # Skip if cache is newer than source
@@ -50,16 +50,12 @@ def optimize_image(src_rel_path):
     except (ValueError, IndexError):
         return src_rel_path
 
-    if width <= MAX_IMG_WIDTH:
-        # Already small enough — just copy
-        subprocess.run(["cp", abs_src, cache_path], capture_output=True)
-    else:
-        # Resize with sips (nearest-neighbor not available, but lanczos is fine for photos)
-        subprocess.run(
-            ["sips", "--resampleWidth", str(MAX_IMG_WIDTH), abs_src, "--out", cache_path],
-            capture_output=True,
-        )
+    cmds = ["sips", "-s", "format", "jpeg", "-s", "formatOptions", str(JPEG_QUALITY)]
+    if width > MAX_IMG_WIDTH:
+        cmds += ["--resampleWidth", str(MAX_IMG_WIDTH)]
+    cmds += [abs_src, "--out", cache_path]
 
+    subprocess.run(cmds, capture_output=True)
     return f"_img_cache/{cache_name}"
 
 # Journal files in chronological order with metadata
@@ -451,6 +447,9 @@ def clean_article_text(text, journal_nr):
 
     # Remove empty </div> that might be left over
     result = re.sub(r"^\s*</div>\s*$", "", result, flags=re.MULTILINE)
+
+    # Replace → with LaTeX arrow (not in Open Sans)
+    result = result.replace("→", "$\\rightarrow$")
 
     return result.strip()
 

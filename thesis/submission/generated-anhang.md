@@ -45,11 +45,11 @@ Ich habe zusammen mit Gavin Pinterest durchforstet und verschiedene Boards angel
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/f42e1939dd3ca4b90215ee26aa5fc4d1.png}\\[2pt]{\small\color{darktext!70} Pinterest Board Übersicht}
+\includegraphics[width=\textwidth]{_img_cache/f42e1939dd3ca4b90215ee26aa5fc4d1.jpg}\\[2pt]{\small\color{darktext!70} Pinterest Board Übersicht}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/fa078f5b6ef517de7983afb72f39af67.png}\\[2pt]{\small\color{darktext!70} Pinterest Song Bescheid}
+\includegraphics[width=\textwidth]{_img_cache/fa078f5b6ef517de7983afb72f39af67.jpg}\\[2pt]{\small\color{darktext!70} Pinterest Song Bescheid}
 \end{minipage}
 \end{figure}
 ```
@@ -62,11 +62,11 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/36e8d354d95f492b91d361ee29356672.png}\\[2pt]{\small\color{darktext!70} Google Drive Ordner}
+\includegraphics[width=\textwidth]{_img_cache/36e8d354d95f492b91d361ee29356672.jpg}\\[2pt]{\small\color{darktext!70} Google Drive Ordner}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/d5cd0df2bd312f3b74a58f89a096ab35.png}\\[2pt]{\small\color{darktext!70} Google Drive Referenzen}
+\includegraphics[width=\textwidth]{_img_cache/d5cd0df2bd312f3b74a58f89a096ab35.jpg}\\[2pt]{\small\color{darktext!70} Google Drive Referenzen}
 \end{minipage}
 \end{figure}
 ```
@@ -140,7 +140,7 @@ Nach ein paar frustrierenden Versuchen habe ich beschlossen, eine eigene Referen
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/c6e839bfe070ba830bca79a350ec9bc7.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/c6e839bfe070ba830bca79a350ec9bc7.jpg}
 \caption{Referenzbild von Kepler auf neutralem Hintergrund}
 \end{figure}
 ```
@@ -151,30 +151,30 @@ Die Ergebnisse waren gemischt. Einige Bilder sahen wirklich gut aus – der Char
 \centering
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/9f1a00b4e8ba9570474e67aa8d6eea69.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 1}
+\includegraphics[width=\textwidth]{_img_cache/9f1a00b4e8ba9570474e67aa8d6eea69.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 1}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/0f9d67c6e8f86bffe86e39d4a0126789.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 2}
+\includegraphics[width=\textwidth]{_img_cache/0f9d67c6e8f86bffe86e39d4a0126789.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 2}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 3}
+\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 3}
 \end{minipage}
 
 \vspace{4pt}
 
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/4a391f5ed852bbfb5b178acbf1da3d82.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 4}
+\includegraphics[width=\textwidth]{_img_cache/4a391f5ed852bbfb5b178acbf1da3d82.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 4}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/c84deeec050394a8d474582135b56a28.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 5}
+\includegraphics[width=\textwidth]{_img_cache/c84deeec050394a8d474582135b56a28.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 5}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/21582a866de77f4d824d9656f1c93842.png}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 6}
+\includegraphics[width=\textwidth]{_img_cache/21582a866de77f4d824d9656f1c93842.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Kepler-Bild 6}
 \end{minipage}
 \end{figure}
 ```
@@ -187,11 +187,11 @@ Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/eb6462d57cd5ce87c783b7b30a443d01.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 1}
+\includegraphics[width=\textwidth]{_img_cache/eb6462d57cd5ce87c783b7b30a443d01.jpg}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 1}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/1ad179a3e7df5b7d4000c4acb6de4bf9.png}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 2}
+\includegraphics[width=\textwidth]{_img_cache/1ad179a3e7df5b7d4000c4acb6de4bf9.jpg}\\[2pt]{\small\color{darktext!70} ComfyUI Workflow Screenshot 2}
 \end{minipage}
 \end{figure}
 ```
@@ -297,7 +297,7 @@ Die erste Welt war meine erste Welt, die ich erstellt habe. Sie basiert auf eine
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/7e077b58c543b81770e4c4808bce59bb.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt basierend auf dem Foto}
+\includegraphics[width=\textwidth]{_img_cache/7e077b58c543b81770e4c4808bce59bb.jpg}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt basierend auf dem Foto}
 \end{minipage}
 \end{figure}
 ```
@@ -315,7 +315,7 @@ Für die zweite Welt habe ich ein Foto von Kepler verwendet – ohne zusätzlich
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/b33c5185c43cbde36c24935907d5c8fc.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Kepler in Spiegelscherben}
+\includegraphics[width=\textwidth]{_img_cache/b33c5185c43cbde36c24935907d5c8fc.jpg}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Kepler in Spiegelscherben}
 \end{minipage}
 \end{figure}
 ```
@@ -337,7 +337,7 @@ Hier habe ich ein Pinterest-Bild aus dem Board für den Song verwendet und eine 
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/340cb65e0d98e558a1cf7aa5a085fb57.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Unterwasser-Pool}
+\includegraphics[width=\textwidth]{_img_cache/340cb65e0d98e558a1cf7aa5a085fb57.jpg}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Unterwasser-Pool}
 \end{minipage}
 \end{figure}
 ```
@@ -372,11 +372,11 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/0b5376968691affa6849c19ca19e84a2.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 1}
+\includegraphics[width=\textwidth]{_img_cache/0b5376968691affa6849c19ca19e84a2.jpg}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 1}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/8f1f22d8f8cc0adc0290bde5a183206d.png}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 2}
+\includegraphics[width=\textwidth]{_img_cache/8f1f22d8f8cc0adc0290bde5a183206d.jpg}\\[2pt]{\small\color{darktext!70} Generierte 3D-Welt: Botanischer Garten 2}
 \end{minipage}
 \end{figure}
 ```
@@ -482,7 +482,7 @@ Cursor ist im Grunde ein Fork von VS Code, der mit KI-Features erweitert wurde. 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/6f4dbdbae82aec3155e053d33a69551f.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/6f4dbdbae82aec3155e053d33a69551f.jpg}
 \caption{Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.}
 \end{figure}
 ```
@@ -495,7 +495,7 @@ Als Inspiration diente mir die [Research Catalogue](https://www.researchcatalogu
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/58b21aeac66392aec4c62d430da85c08.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/58b21aeac66392aec4c62d430da85c08.jpg}
 \caption{Research Catalogue Layout-Beispiel. Ein cooler Artikel auf researchcatalogue.net, der das Layout demonstriert – cleanes Design mit klarer Navigation und guter Lesbarkeit.}
 \end{figure}
 ```
@@ -957,7 +957,7 @@ Heute ein kleines Experiment außerhalb des Kepler-Kontexts. Ich arbeite an eine
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/933d23ad747ee06683a4acb4eb305f8d.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/933d23ad747ee06683a4acb4eb305f8d.jpg}
 \caption{Houdini-Workflow mit den drei prozeduralen Generatoren: terrain\_generator, building\_generator und street\_generator für die sowjetisch inspirierte Spielwelt.}
 \end{figure}
 ```
@@ -974,7 +974,7 @@ Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Ti
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/60c01a9ba2c3a21ee20c7cd7e1eed892.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/60c01a9ba2c3a21ee20c7cd7e1eed892.jpg}
 \caption{Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (Nano Banana Pro).}
 \end{figure}
 ```
@@ -1000,7 +1000,7 @@ Das Video hatte mich inspiriert: ich brauchte Hintergrundmusik für meine Welt, 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/66958d2a115e32fe38d093d0dd9da472.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/66958d2a115e32fe38d093d0dd9da472.jpg}
 \caption{Pixel-Art-Ästhetik: Das Schaf auf sowjetischer Straße – genau dieser Stil bräuchte passende Musik. Konzeptbild erstellt mit Midjourney v7.}
 \end{figure}
 ```
@@ -1087,15 +1087,15 @@ Im November hatte ich mit ComfyUI versucht, konsistente Bilder von Kepler zu gen
 \centering
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/c14f431db7abee98fdf3de87d5d9412c.png}\\[2pt]{\small\color{darktext!70} Kepler in seiner Voxel-Form — kein Gesicht, das ist Absicht.}
+\includegraphics[width=\textwidth]{_img_cache/c14f431db7abee98fdf3de87d5d9412c.jpg}\\[2pt]{\small\color{darktext!70} Kepler in seiner Voxel-Form — kein Gesicht, das ist Absicht.}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.png}\\[2pt]{\small\color{darktext!70} Generiertes Bild aus dem ComfyUI-Experiment: Die KI hat ein Gesicht in die Maske interpretiert.}
+\includegraphics[width=\textwidth]{_img_cache/cf06af54acd2340a567091d4c11d91f3.jpg}\\[2pt]{\small\color{darktext!70} Generiertes Bild aus dem ComfyUI-Experiment: Die KI hat ein Gesicht in die Maske interpretiert.}
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=\textwidth]{_img_cache/db4e1c875de041157bca5d4dbbc99f58.png}\\[2pt]{\small\color{darktext!70} Noch ein Versuch — wieder ein Gesicht, wo keines sein sollte.}
+\includegraphics[width=\textwidth]{_img_cache/db4e1c875de041157bca5d4dbbc99f58.jpg}\\[2pt]{\small\color{darktext!70} Noch ein Versuch — wieder ein Gesicht, wo keines sein sollte.}
 \end{minipage}
 \end{figure}
 ```
@@ -1119,115 +1119,88 @@ Ich habe es trotzdem ausprobiert — nicht über das ComfyUI-Plugin, sondern üb
 
 ##### Chat 1: Pool-Szene
 
-> **"Can you based on this reference generate an image where the voxel character is relaxing by a pool."**
+> **"Can you based on this reference generate an image where the voxel character is relaxing by a pool."** $\rightarrow$ **"Now him in the pool on a pool float."** $\rightarrow$ **"Just the pool float with him but from the top."**
 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/dda81306258033e3a01ca26b66ac2620.png}
-\caption{Gemini hält die 3D-Voxel-Ästhetik und fügt kein Gesicht hinzu.}
-\end{figure}
-```
-> **"Now him in the pool on a pool float."**
-
-```{=latex}
-\begin{figure}[H]
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/67dbfe6571955e4f4bacc0e374f3ea5d.png}
-\caption{Die Szene wurde erweitert, aber der zweite Kepler am Beckenrand blieb stehen.}
-\end{figure}
-```
-> **"Just the pool float with him but from the top."**
-
-```{=latex}
-\begin{figure}[H]
+\includegraphics[width=\textwidth]{_img_cache/dda81306258033e3a01ca26b66ac2620.jpg}\\[2pt]{\small\color{darktext!70} Gemini hält die 3D-Voxel-Ästhetik und fügt kein Gesicht hinzu.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/82091700a73863f160e66e258823862f.png}
-\caption{Gemini hat die Draufsicht umgesetzt, aber den liegenden Kepler am Rand nicht entfernt.}
+\includegraphics[width=\textwidth]{_img_cache/67dbfe6571955e4f4bacc0e374f3ea5d.jpg}\\[2pt]{\small\color{darktext!70} Die Szene wurde erweitert, aber der zweite Kepler am Beckenrand blieb stehen.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/82091700a73863f160e66e258823862f.jpg}\\[2pt]{\small\color{darktext!70} Gemini hat die Draufsicht umgesetzt, aber den liegenden Kepler am Rand nicht entfernt.}
+\end{minipage}
 \end{figure}
 ```
 Beeindruckend: Gemini behält die geometrische Voxel-Form bei und fügt keine Gesichter hinzu. Aber jeder neue Prompt baut auf dem vorherigen Bild auf, statt es zu ersetzen — für einen wirklich neuen Stil müsste ich jeweils einen neuen Chat starten.
 
 ##### Chat 2: Treppe im Nachthimmel
 
-> **"Show this character walking up a set of endless glowing stairs in the night sky. Make it a Portrait image."**
+> **"Show this character walking up a set of endless glowing stairs in the night sky. Make it a Portrait image."** $\rightarrow$ **"You did not end up making it a portrait, and I want him to be walking up, not down, and the staircase is a spiral staircase."**
 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/05da7686419814c073b75c3ad0f95c38.png}
-\caption{Beeindruckende Atmosphäre, aber kein Hochformat trotz explizitem Wunsch.}
-\end{figure}
-```
-> **"You did not end up making it a portrait, and I want him to be walking up, not down, and the staircase is a spiral staircase."**
-
-```{=latex}
-\begin{figure}[H]
+\begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/744b7d49ce7828d0621a150c2ebace76.png}
-\caption{Die Spiraltreppe wurde umgesetzt, aber immer noch kein Portrait-Format. Und die Sterne liegen vor dem Planeten — physikalisch unmöglich.}
+\includegraphics[width=\textwidth]{_img_cache/05da7686419814c073b75c3ad0f95c38.jpg}\\[2pt]{\small\color{darktext!70} Beeindruckende Atmosphäre, aber kein Hochformat trotz explizitem Wunsch.}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/744b7d49ce7828d0621a150c2ebace76.jpg}\\[2pt]{\small\color{darktext!70} Die Spiraltreppe wurde umgesetzt, aber immer noch kein Portrait-Format. Und die Sterne liegen vor dem Planeten — physikalisch unmöglich.}
+\end{minipage}
 \end{figure}
 ```
 Die Voxel-Ästhetik bleibt konsistent, kein Gesicht hinzugefügt. Aber Gemini ignoriert die Portrait-Anweisung zweimal, und die Sterne vor dem Planeten zeigen, dass das Modell kein räumliches Verständnis der Szene hat — es komponiert visuell, nicht physikalisch.
 
 ##### Chat 3: Brücke bei Nacht
 
-> **"Das hier sind ein paar Beispielbilder von Kepler. Behalte seine Voxel-Ästhetik bei und generiere mir ein hochkant ästhetisches Cover. Wie er über eine Brücke in der Nacht fährt in einem Retro-Auto."**
+> **"Das hier sind ein paar Beispielbilder von Kepler. Behalte seine Voxel-Ästhetik bei und generiere mir ein hochkant ästhetisches Cover. Wie er über eine Brücke in der Nacht fährt in einem Retro-Auto."** $\rightarrow$ **"Sorge dafür, dass der Brückenzaun nicht leuchtet. Wähle eine andere Perspektive und entferne den Text."** $\rightarrow$ **"Die Barrikaden der Brücke leuchten immer noch."**
 
-```{=latex}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{_img_cache/d78e7d3093dd19983a745c1e7eb11aaf.png}
-\caption{Gemini generiert ungefragt ein Album-Cover mit Titel "NIGHT DRIVE / KEPLER" — es interpretiert "Cover" als Musikcover und fügt selbstständig Text hinzu.}
-\end{figure}
-```
 Ich hatte nur "Cover" geschrieben, nicht "Album-Cover" — Gemini hat den Kontext selbst erschlossen und "NIGHT DRIVE / KEPLER" als Titel gesetzt.
 
-> **"Sorge dafür, dass der Brückenzaun nicht leuchtet. Wähle eine andere Perspektive und entferne den Text. Die Planeten sollten keine Sterne vor ihnen haben."**
-
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/f19fe7aa8a1a9a3d33f6fbb9fb6930e4.png}
-\caption{Text entfernt, andere Perspektive — aber der Brückenzaun leuchtet weiterhin, und die Sterne-vor-Planeten-Problematik bleibt.}
-\end{figure}
-```
-> **"Die Barrikaden der Brücke leuchten immer noch."**
-
-```{=latex}
-\begin{figure}[H]
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/19e3f3c465d3cd0b4cd697e1732a4a32.png}
-\caption{Dritter Versuch — die leuchtenden Barrikaden lassen sich nicht abschalten.}
+\includegraphics[width=\textwidth]{_img_cache/d78e7d3093dd19983a745c1e7eb11aaf.jpg}\\[2pt]{\small\color{darktext!70} Gemini generiert ungefragt ein Album-Cover mit Titel "NIGHT DRIVE / KEPLER" — es interpretiert "Cover" als Musikcover und fügt selbstständig Text hinzu.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/f19fe7aa8a1a9a3d33f6fbb9fb6930e4.jpg}\\[2pt]{\small\color{darktext!70} Text entfernt, andere Perspektive — aber der Brückenzaun leuchtet weiterhin, und die Sterne-vor-Planeten-Problematik bleibt.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/19e3f3c465d3cd0b4cd697e1732a4a32.jpg}\\[2pt]{\small\color{darktext!70} Dritter Versuch — die leuchtenden Barrikaden lassen sich nicht abschalten.}
+\end{minipage}
 \end{figure}
 ```
 ##### Chat 4: Typografie auf bestehendem Cover
 
-> **"Kannst du mir auf dieses Bild einen Album title geben: 'es tut mir leid' in liquid metal cyber tribal aesthetic geben."**
+> **"Kannst du mir auf dieses Bild einen Album title geben: 'es tut mir leid' in liquid metal cyber tribal aesthetic geben."** $\rightarrow$ **"Jetzt soll er nur metallisch grau sein und etwas weiter oben eine andere Schriftart, die noch etwas mehr slanted ist. In den Farben des Covers selbst."** $\rightarrow$ **"Ok, bitte ändert es noch mal komplett um und verschiebt den Text nach oben."**
 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/648ab3a4218cf36fb7e517d6680d90c9.png}
-\caption{Gemini setzt den Text in einer generischen Blackletter-Schrift mit leichtem Metallic-Effekt — weit entfernt von "liquid metal cyber tribal".}
-\end{figure}
-```
-> **"Jetzt soll er nur metallisch grau sein und etwas weiter oben eine andere Schriftart, die noch etwas mehr slanted ist. In den Farben des Covers selbst."**
-
-```{=latex}
-\begin{figure}[H]
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/f75cb7e42e76aa5dbaed485e0de590e2.png}
-\caption{Kaum Veränderung — die Schrift ist minimal anders positioniert, aber weder slanted noch in den Cover-Farben.}
-\end{figure}
-```
-> **"Ok, bitte ändert es noch mal komplett um und verschiebt den Text nach oben."**
-
-```{=latex}
-\begin{figure}[H]
+\includegraphics[width=\textwidth]{_img_cache/648ab3a4218cf36fb7e517d6680d90c9.jpg}\\[2pt]{\small\color{darktext!70} Gemini setzt den Text in einer generischen Blackletter-Schrift mit leichtem Metallic-Effekt — weit entfernt von "liquid metal cyber tribal".}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/6fee02d695141707982b63347201a05a.png}
-\caption{Dritte Iteration — wieder fast identisch. "Komplett um" wurde ignoriert.}
+\includegraphics[width=\textwidth]{_img_cache/f75cb7e42e76aa5dbaed485e0de590e2.jpg}\\[2pt]{\small\color{darktext!70} Kaum Veränderung — die Schrift ist minimal anders positioniert, aber weder slanted noch in den Cover-Farben.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/6fee02d695141707982b63347201a05a.jpg}\\[2pt]{\small\color{darktext!70} Dritte Iteration — wieder fast identisch. "Komplett um" wurde ignoriert.}
+\end{minipage}
 \end{figure}
 ```
 Besonders frustrierend: Drei Iterationen, kaum Unterschied. Keine der Anweisungen — liquid metal, cyber tribal, slanted, Cover-Farben, komplett anders — wurde wirklich umgesetzt. Typografie ist offensichtlich eine Schwachstelle: Gemini kann Text auf Bilder setzen, aber die ästhetische Kontrolle über Schriftart, Stil und Platzierung fehlt fast vollständig.
@@ -1251,7 +1224,7 @@ Was mich wirklich überrascht hat: Es gibt inzwischen Modelle, die nativ in 3D a
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/24c838c2058dd1fe25e9b14df82018db.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/24c838c2058dd1fe25e9b14df82018db.jpg}
 \caption{TRELLIS 2 generiert 3D-Modelle nativ aus Voxel-Repräsentationen — genau die Datenstruktur, in der Kepler existiert.}
 \end{figure}
 ```
@@ -1262,7 +1235,7 @@ Was mich wirklich überrascht hat: Es gibt inzwischen Modelle, die nativ in 3D a
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/664b4f3daeeff10d13a29bc889ea4850.png}
+\includegraphics[width=0.6\textwidth]{_img_cache/664b4f3daeeff10d13a29bc889ea4850.jpg}
 \caption{Hunyuan3D-2 (HY3D) — Tencents Open-Source 3D-Generierungsmodell.}
 \end{figure}
 ```
@@ -1293,11 +1266,95 @@ Das bedeutet: Nicht die KI als solche ist das Problem. Die Repräsentationsebene
 | Hunyuan3D-2 | 3D | Nein | Niedrig | Open Source | Ausprobieren |
 | VoxAI | 3D | **Ja** | Keiner | Kommerziell | Beobachten |
 
+#### Fal.ai — API-Zugang zu gesichtsfreien Pipelines
+
+*Nachtrag, 15. Februar 2026*
+
+Nach der Recherche zu lokalen Tools (ComfyUI, TRELLIS 2) habe ich systematisch untersucht, welche Modelle über [fal.ai](https://fal.ai) als API verfügbar sind und für Kepler in Frage kommen. Fal.ai bietet gehostete Inferenz für dutzende Bildmodelle — kein lokales Setup, keine GPU nötig. Die Frage: Gibt es Modelle, die Keplers Voxel-Ästhetik respektieren, ohne ein Gesicht hineinzuinterpretieren?
+
+##### Strategie 1: Depth Maps & Edge Detection (Face-Bias umgehen)
+
+Die vielversprechendste Kategorie. Diese Modelle arbeiten mit Struktursignalen statt Gesichtserkennung:
+
+| Modell | Input | Was es tut | Preis |
+|--------|-------|-----------|-------|
+| [FLUX.1 Control LoRA Depth](https://fal.ai/models/fal-ai/flux-control-lora-depth) | Depth Map + Text | Überträgt räumliche Struktur via Tiefenkarte auf generiertes Bild | $0,04/MP |
+| [FLUX.1 Control LoRA Depth (i2i)](https://fal.ai/models/fal-ai/flux-control-lora-depth/image-to-image) | Bild + Depth Map + Text | Wie oben, aber mit zusätzlichem Referenzbild | $0,04/MP |
+| [FLUX.1 Control LoRA Canny](https://fal.ai/models/fal-ai/flux-control-lora-canny) | Canny Edge Map + Text | Überträgt Kantenstruktur — perfekt für Keplers blockige Silhouette | $0,04/MP |
+| [Z-Image Turbo ControlNet](https://fal.ai/models/fal-ai/z-image/turbo/controlnet) | Edge, Depth oder Pose + Text | Schnelles 6B-Modell mit ControlNet-Support | $0,007/MP |
+| [FLUX.1 General](https://fal.ai/models/fal-ai/flux-general) | ControlNet + LoRA + IP-Adapter | Alles kombinierbar: Depth, Canny, LoRA, IP-Adapter | $0,075/MP |
+
+**Warum das für Kepler funktioniert:** Eine Depth Map von Kepler im A-Pose enthält nur Geometrie — Voxel-Blöcke, Silhouette, räumliche Tiefe. Kein Modell wird versuchen, Augen in eine Tiefenkarte zu halluzinieren. Der Canny-Ansatz ist noch robuster: Kantenlinien einer Voxel-Figur sind geometrisch eindeutig und lassen keinen Raum für Gesichtsinterpretation.
+
+**Workflow-Idee:** Kepler-Referenzbild $\rightarrow$ Depth Map extrahieren (lokal oder via API) $\rightarrow$ Depth Map + Prompt an FLUX Control LoRA $\rightarrow$ Kepler in neuer Szene, Silhouette erhalten.
+
+##### Strategie 2: Referenzbild-basierte Konsistenz
+
+Diese Modelle nehmen ein oder mehrere Referenzbilder und generieren neue Bilder, die den Charakter beibehalten:
+
+| Modell | Input | Was es tut | Preis |
+|--------|-------|-----------|-------|
+| [MiniMax Subject Reference](https://fal.ai/models/fal-ai/minimax/image-01/subject-reference) | Referenzbild + Text | Konsistente Charakterdarstellung aus Referenz | $0,01/Bild |
+| [InstantCharacter](https://fal.ai/models/fal-ai/instant-character) | Referenzbild + Text | Charakter in neuen Posen und Stilen | $0,10/MP |
+| [USO](https://fal.ai/models/fal-ai/uso) | Referenzbild + Text | Subject-driven Generation | $0,10/MP |
+| [UNO](https://fal.ai/models/fal-ai/uno) | Referenzbild(er) + Text | Transformiert Referenz via Textprompt | $0,05/MP |
+| [Vidu Reference-to-Image](https://fal.ai/models/fal-ai/vidu/q2/reference-to-image) | Referenzbild + Text | Neue Bilder aus Referenz + Prompt | $0,05/Bild |
+| [Kling O1 Image](https://fal.ai/models/fal-ai/kling-image/o1) | Referenzbild + Text | Starke Referenzkontrolle für Edits | $0,03/Bild |
+
+**Risiko:** Diese Modelle sind oft auf Gesichtskonsistenz trainiert (Porträts, Produktfotos). Ob sie einen gesichtslosen Voxel-Charakter als "Subjekt" akzeptieren, muss getestet werden. MiniMax Subject Reference ist mit $0,01 pro Bild billig genug für schnelle Tests. InstantCharacter klingt vielversprechend, aber der Name ("Character") impliziert möglicherweise menschliche Figuren.
+
+##### Strategie 3: Image Editing (Kepler-Foto als Ausgangspunkt)
+
+Statt von Null zu generieren: Ein existierendes Kepler-Bild als Input nehmen und per Textanweisung modifizieren.
+
+| Modell | Input | Was es tut | Preis |
+|--------|-------|-----------|-------|
+| [FLUX 2 Edit](https://fal.ai/models/fal-ai/flux-2/edit) | Bild + Text | Natürlichsprachliche Bildbearbeitung | $0,012/MP |
+| [FLUX 2 Pro](https://fal.ai/models/fal-ai/flux-2-pro) | Bild + Text | Höhere Qualität, Stiltransfer | $0,03/MP |
+| [FLUX Kontext Pro](https://fal.ai/models/fal-ai/flux-pro/kontext) | Referenz + Text | Lokale Edits + komplexe Transformationen | $0,04/Bild |
+| [FLUX Kontext Pro Multi](https://fal.ai/models/fal-ai/flux-pro/kontext/multi) | Mehrere Referenzen + Text | Mehrere Referenzbilder kombinierbar | $0,04/Bild |
+| [Bria Reimagine](https://fal.ai/models/bria/reimagine/3.2) | Strukturbild + Text | Struktur erhalten, neuer Stil | $0,04/Bild |
+
+**Bester Kandidat:** FLUX Kontext Pro Multi — ich kann Kepler im A-Pose *und* in der Casual-Pose als Referenz einspeisen und per Text eine neue Szene beschreiben. Das Modell sieht die Voxel-Ästhetik aus mehreren Blickwinkeln und muss sie nicht "erraten".
+
+##### Strategie 4: 3D & Multiview
+
+| Modell | Input | Was es tut | Preis |
+|--------|-------|-----------|-------|
+| [Era 3D](https://fal.ai/models/fal-ai/era-3d) | Einzelbild | Generiert Multiview + Normalen aus einem Bild | $0,001/Sek |
+| [Hunyuan World](https://fal.ai/models/fal-ai/hunyuan_world) | Einzelbild | Einzelbild $\rightarrow$ Panorama / 3D-Welt | — |
+
+**Era 3D ist besonders interessant:** Aus einem einzigen Kepler-Foto könnte ich automatisiert Multiviews generieren — verschiedene Blickwinkel *mit* Normal Maps. Die Normalen könnten dann wiederum als ControlNet-Input für weitere Generierungen dienen. Quasi ein 2D$\rightarrow$3D$\rightarrow$2D-Pipeline, die Keplers Geometrie über mehrere Stufen konsistent hält. Und das für weniger als einen Cent pro Durchlauf.
+
+##### Strategie 5: Video (Kepler animieren)
+
+| Modell | Input | Was es tut | Preis |
+|--------|-------|-----------|-------|
+| [Wan 2.1 Image-to-Video](https://fal.ai/models/fal-ai/wan-i2v) | Bild + Text | Kepler-Bild $\rightarrow$ animiertes Video | $0,40/Video |
+| [DreamActor v2](https://fal.ai/models/fal-ai/bytedance/dreamactor/v2) | Bild + Motion-Video | Motion Transfer — **explizit für nicht-menschliche Charaktere** | $0,05/Sek |
+| [Kling O3 Reference-to-Video](https://fal.ai/models/fal-ai/kling-video/o3/pro/reference-to-video) | Referenzbild + Text | Charakter-konsistentes Video | $0,28/Sek |
+| [Wan 2.6 Reference-to-Video](https://fal.ai/models/wan/v2.6/reference-to-video/flash) | Referenzbild + Text | Referenz$\rightarrow$Video, extrem günstig | ~$0,0001/Sek |
+
+**DreamActor v2 ist der Gamechanger:** ByteDance bewirbt es explizit mit "Great performance for non-human and multiple characters". Das ist exakt Keplers Anwendungsfall — ein nicht-menschlicher Charakter, dessen Bewegungen von einem Motion-Referenzvideo übertragen werden. Ich könnte mich selbst filmen und die Bewegung auf Kepler übertragen, ohne dass das Modell nach einem Gesicht sucht.
+
+##### Zwischenfazit fal.ai
+
+Die API-Landschaft hat sich seit meinem ComfyUI-Experiment im November fundamental verändert. Statt lokal mit Face-Tools zu kämpfen, kann ich über fal.ai auf Modelle zugreifen, die das Face-Problem gar nicht erst haben:
+
+1. **Depth/Canny ControlNets** umgehen Face-Bias, weil sie nur Geometrie sehen
+2. **Era 3D** ermöglicht einen 2D$\rightarrow$Multiview$\rightarrow$2D-Loop für geometrische Konsistenz
+3. **DreamActor v2** ist das erste Modell, das *explizit* nicht-menschliche Charaktere unterstützt
+4. **FLUX Kontext Multi** kann mehrere Kepler-Referenzen gleichzeitig verarbeiten
+
+Die Preise sind niedrig genug für systematisches Experimentieren: Ein Batch von 100 Depth-Control-Bildern kostet ~$4. Das macht eine *agentic pipeline* realistisch — Claude Code könnte systematisch Prompts variieren, Referenzbilder kombinieren und die Ergebnisse evaluieren. Genau das Experiment 8 aus dem Roadmap, nur mit API statt lokalem ComfyUI.
+
 #### Ausblick
 
 Mein nächstes Experiment wird ein Hybrid-Ansatz: TRELLIS 2 für 3D-Generierung von Kepler-ähnlichen Voxel-Formen, kombiniert mit dem ControlNet-Depth-Inpainting-Workflow für 2D-Konzeptbilder. Statt das Face-Problem zu lösen, umgehe ich es — indem ich Tools wähle, die gar nicht erst nach Gesichtern suchen.
 
-Ob das funktioniert, weiß ich nicht. Vielleicht scheitert TRELLIS 2 auf eine völlig andere Weise. Aber zum ersten Mal habe ich eine Hypothese, die ich testen kann — statt blind in Workflows zu stolpern, die nicht für Kepler gemacht sind.
+Zusätzlich werde ich die fal.ai-Modelle systematisch testen — beginnend mit den günstigsten (Z-Image ControlNet, MiniMax Subject Reference, Era 3D) und aufsteigend zu den leistungsstärkeren (FLUX Kontext Multi, DreamActor v2). Jedes Modell wird mit demselben Kepler-Referenzset getestet: Casual-Pose, A-Pose und — falls Era 3D funktioniert — automatisch generierte Multiviews.
+
+Ob das funktioniert, weiß ich nicht. Vielleicht scheitert TRELLIS 2 auf eine völlig andere Weise. Aber zum ersten Mal habe ich nicht nur eine Hypothese, sondern ein konkretes Arsenal an Tools, die ich testen kann — und eine API, die systematisches Experimentieren erschwinglich macht.
 
 \newpage
 
