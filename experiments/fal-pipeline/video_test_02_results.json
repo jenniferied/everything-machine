@@ -1,0 +1,282 @@
+[
+  {
+    "test": "pixverse_v55_studio",
+    "model": "fal-ai/pixverse/v5.5/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 36.7,
+    "cost_est": "$0.20",
+    "video": "https://v3b.fal.media/files/b/0a8eb941/3VGHE8tZSapu19acs8ck1_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:49:33.822652"
+  },
+  {
+    "test": "ltx2_studio",
+    "model": "fal-ai/ltx-2/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 78.9,
+    "cost_est": "$0.36",
+    "video": "https://v3b.fal.media/files/b/0a8eb941/5KWCv1z5GX2_5MIQTe_5J_5Lah97du.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:50:54.613806"
+  },
+  {
+    "test": "wan_v26_studio",
+    "model": "wan/v2.6/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 67.7,
+    "cost_est": "$0.50",
+    "video": "https://v3b.fal.media/files/b/0a8eb950/DewEmD6hK7l32_UMl6g6m_1PC42LJT.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:52:04.811202"
+  },
+  {
+    "test": "seedance_pro_studio",
+    "model": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 53.4,
+    "cost_est": "$0.62",
+    "video": "https://v3b.fal.media/files/b/0a8eb955/MXXXIs0RWnAvPi2m83MwQ_video.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:53:01.314660"
+  },
+  {
+    "test": "veo31_studio",
+    "model": "fal-ai/veo3/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 49.3,
+    "cost_est": "$0.80",
+    "video": "https://v3b.fal.media/files/b/0a8eb95a/1KeLhZDrBj7NewiE8ywFd_5ddee97f463548e880d8b8b6f6a0aa1c.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:53:52.094988"
+  },
+  {
+    "test": "kling_o3_studio",
+    "model": "fal-ai/kling-video/o3/standard/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 165.2,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eb96b/jxnQ90IWQ6iZJCt8MGVDn_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:56:39.316514"
+  },
+  {
+    "test": "kling_v3_studio",
+    "model": "fal-ai/kling-video/v3/standard/image-to-video",
+    "prompt": "The voxel character nods gently to the beat, fingers resting on the mixing conso",
+    "elapsed_s": 105.1,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eb976/QVonKG9emh2yaIPMsCd_T_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:58:26.434905"
+  },
+  {
+    "test": "pixverse_v55_pool",
+    "model": "fal-ai/pixverse/v5.5/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 33.3,
+    "cost_est": "$0.20",
+    "video": "https://v3b.fal.media/files/b/0a8eb979/Wis_pPM3dJyd12ZlOaiwE_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T16:59:01.518620"
+  },
+  {
+    "test": "ltx2_pool",
+    "model": "fal-ai/ltx-2/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 78.2,
+    "cost_est": "$0.36",
+    "video": "https://v3b.fal.media/files/b/0a8eb97a/c5nBXD8nq7nI8RO2py5wp_neIbdA2Q.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:00:21.790588"
+  },
+  {
+    "test": "wan_v26_pool",
+    "model": "wan/v2.6/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 59.3,
+    "cost_est": "$0.50",
+    "video": "https://v3b.fal.media/files/b/0a8eb988/-YczFoyBLv2w1LUMyci5q_eU4vRpC4.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:01:24.434892"
+  },
+  {
+    "test": "seedance_pro_pool",
+    "model": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 56.6,
+    "cost_est": "$0.62",
+    "video": "https://v3b.fal.media/files/b/0a8eb98e/38r7sOrAGrX1DjK2u7wxE_video.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:02:25.844095"
+  },
+  {
+    "test": "veo31_pool",
+    "model": "fal-ai/veo3/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 63.7,
+    "cost_est": "$0.80",
+    "video": "https://v3b.fal.media/files/b/0a8eb994/YTtZDh5nxB91oOEwHvt31_75b2f6db81f24b1995a003b356f86141.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:03:31.165692"
+  },
+  {
+    "test": "kling_o3_pool",
+    "model": "fal-ai/kling-video/o3/standard/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 129.1,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eb9a1/wT-qP7SU84Z7YakFVYM9J_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:05:42.613758"
+  },
+  {
+    "test": "kling_v3_pool",
+    "model": "fal-ai/kling-video/v3/standard/image-to-video",
+    "prompt": "The voxel character drifts slowly on the pool ring. Water ripples gently around ",
+    "elapsed_s": 107.7,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eb9ac/efnZmFsgUEV6EHu2HWIg2_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:07:32.710208"
+  },
+  {
+    "test": "ltx2_night_drive",
+    "model": "fal-ai/ltx-2/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 88.9,
+    "cost_est": "$0.36",
+    "video": "https://v3b.fal.media/files/b/0a8eba6d/6g61S3FXTt6xdHavfYrDl_PzggFsBU.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:40:59.345922"
+  },
+  {
+    "test": "wan_v26_night_drive",
+    "model": "wan/v2.6/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 59.8,
+    "cost_est": "$0.50",
+    "video": "https://v3b.fal.media/files/b/0a8eba7b/AsvvSa43q2Ay7rYAtz0bO_xLVWfStE.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:42:02.048176"
+  },
+  {
+    "test": "veo31_night_drive",
+    "model": "fal-ai/veo3/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 65.4,
+    "cost_est": "$0.80",
+    "video": "https://v3b.fal.media/files/b/0a8eba82/KILg8XijhqIAMa7zC8UEO_a3d6e82ba4ff4f80894f3960def3b9a8.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:43:09.364018"
+  },
+  {
+    "test": "kling_o3_night_drive",
+    "model": "fal-ai/kling-video/o3/standard/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 113.0,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eba8e/58LqhopHMY8fKKMMG4hc1_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:45:05.108619"
+  },
+  {
+    "test": "kling_v3_night_drive",
+    "model": "fal-ai/kling-video/v3/standard/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 138.1,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8eba9c/BaiRFN1Yh8M35IMr3UBTc_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:47:25.744812"
+  },
+  {
+    "test": "ltx2_spiral_staircase",
+    "model": "fal-ai/ltx-2/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 78.1,
+    "cost_est": "$0.36",
+    "video": "https://v3b.fal.media/files/b/0a8eba9c/jPT8c1vy6p1ToxVny9NOg_UsnZ4HkQ.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:48:45.691420"
+  },
+  {
+    "test": "wan_v26_spiral_staircase",
+    "model": "wan/v2.6/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 58.2,
+    "cost_est": "$0.50",
+    "video": "https://v3b.fal.media/files/b/0a8ebaaa/SGe96wKMDQ0DDiyL1WY7x_FyZMP2CJ.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:49:46.928030"
+  },
+  {
+    "test": "veo31_spiral_staircase",
+    "model": "fal-ai/veo3/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 69.7,
+    "cost_est": "$0.80",
+    "video": "https://v3b.fal.media/files/b/0a8ebab1/ljW2v2g-YfBMoO8QB68ZD_70c36661b2154ee5aa8e4af4690647ee.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:50:58.060802"
+  },
+  {
+    "test": "kling_o3_spiral_staircase",
+    "model": "fal-ai/kling-video/o3/standard/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 106.7,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8ebabc/cjykYud3RPLebnLnIwcEc_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:52:47.271938"
+  },
+  {
+    "test": "kling_v3_spiral_staircase",
+    "model": "fal-ai/kling-video/v3/standard/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 122.7,
+    "cost_est": "$0.84",
+    "video": "https://v3b.fal.media/files/b/0a8ebac8/O_wNtjrNgN36UBC3oOFUU_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T17:54:52.595876"
+  },
+  {
+    "test": "pixverse_v55_night_drive",
+    "model": "fal-ai/pixverse/v5.5/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 29.9,
+    "cost_est": "$0.20",
+    "video": "https://v3b.fal.media/files/b/0a8ebb3a/CRlk1ih5bQABYoajQO-9w_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T18:13:51.489365"
+  },
+  {
+    "test": "seedance_pro_night_drive",
+    "model": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "prompt": "The voxel character drives steadily down the desert highway. Headlights illumina",
+    "elapsed_s": 54.5,
+    "cost_est": "$0.62",
+    "video": "https://v3b.fal.media/files/b/0a8ebb40/1uPzVpAnZ4L2K9l0Q1soP_video.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T18:14:52.984985"
+  },
+  {
+    "test": "pixverse_v55_spiral_staircase",
+    "model": "fal-ai/pixverse/v5.5/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 37.4,
+    "cost_est": "$0.20",
+    "video": "https://v3b.fal.media/files/b/0a8ebb44/vyDGJh9epyUWXUHTBn-DF_output.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T18:15:31.593731"
+  },
+  {
+    "test": "seedance_pro_spiral_staircase",
+    "model": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "prompt": "The white marble staircase begins to glow with a deep blue light. The voxel char",
+    "elapsed_s": 51.7,
+    "cost_est": "$0.62",
+    "video": "https://v3b.fal.media/files/b/0a8ebb4a/U0ZvdgQtLRR-5C79-B5NX_video.mp4",
+    "error": null,
+    "timestamp": "2026-02-16T18:16:26.559388"
+  }
+]
