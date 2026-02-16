@@ -1,0 +1,210 @@
+[
+  {
+    "test": "gpt15_studio_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a professional recording studio, sitting at a larg",
+    "format": "portrait",
+    "elapsed_s": 48.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9694/Zzy6Vl7r6F-7oLkvcvkZi_UZ1QRPcA.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:10:58.900003"
+  },
+  {
+    "test": "nb_studio_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a professional recording studio, sitting at a larg",
+    "format": "portrait",
+    "elapsed_s": 22.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e969a/EZclgptfzTUJYQ02U2yqp_XLgeDZZC.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:11:32.932506"
+  },
+  {
+    "test": "gpt15_studio_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a professional recording studio, sitting at a larg",
+    "format": "landscape",
+    "elapsed_s": 47.3,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e969d/_ej1j45clChWCof88Gs0s_1xj72Y4o.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:12:24.081521"
+  },
+  {
+    "test": "nb_studio_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a professional recording studio, sitting at a larg",
+    "format": "landscape",
+    "elapsed_s": 21.8,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96a2/bw3lhbEKRzaJCTcoSHMuf_uoQjzLbd.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:12:48.112557"
+  },
+  {
+    "test": "gpt15_retro_car_bridge_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character driving a vintage 1970s convertible car across a long",
+    "format": "portrait",
+    "elapsed_s": 47.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96a4/AYwbtMDOlepznhtqsqhmA_siFrhJrh.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:13:46.151927"
+  },
+  {
+    "test": "nb_retro_car_bridge_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character driving a vintage 1970s convertible car across a long",
+    "format": "portrait",
+    "elapsed_s": 23.1,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96aa/N7POrzzI_wzIVi4YxamLg_Q8DEgOqc.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:14:12.601003"
+  },
+  {
+    "test": "gpt15_retro_car_bridge_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character driving a vintage 1970s convertible car across a long",
+    "format": "landscape",
+    "elapsed_s": 44.5,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96ad/ZbVshjynjdiBcmUi5VueI_WX9rwpiv.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:15:01.344123"
+  },
+  {
+    "test": "nb_retro_car_bridge_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character driving a vintage 1970s convertible car across a long",
+    "format": "landscape",
+    "elapsed_s": 21.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96b2/VqDevdw_Un_abVQ86yHjy_jInLqa2B.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:15:25.199043"
+  },
+  {
+    "test": "gpt15_spiral_staircase_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character walking up an endless spiral staircase that extends i",
+    "format": "portrait",
+    "elapsed_s": 43.7,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96b4/aYeYct3UE3uCYn4QUgzIF_XOYx3QYe.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:16:11.370215"
+  },
+  {
+    "test": "nb_spiral_staircase_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character walking up an endless spiral staircase that extends i",
+    "format": "portrait",
+    "elapsed_s": 25.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96b9/-8bzmTutjsQG9ClcsPEwD_V3QdkiFB.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:16:39.636715"
+  },
+  {
+    "test": "gpt15_spiral_staircase_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character walking up an endless spiral staircase that extends i",
+    "format": "landscape",
+    "elapsed_s": 46.7,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96bc/Hvw9TEYPgKSpdLWio2zIS_jgp1kOuf.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:17:31.164061"
+  },
+  {
+    "test": "nb_spiral_staircase_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character walking up an endless spiral staircase that extends i",
+    "format": "landscape",
+    "elapsed_s": 15.1,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96c1/D7pTeycudcbb_UH5Nplq2_mAJ1bO7X.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:17:52.501028"
+  },
+  {
+    "test": "gpt15_pool_floaty_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character lying on a pink flamingo pool float in a turquoise sw",
+    "format": "portrait",
+    "elapsed_s": 43.0,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96c3/vcyegCUEry_jq3UlY1CzD_iYbs9vsI.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:18:38.171039"
+  },
+  {
+    "test": "nb_pool_floaty_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character lying on a pink flamingo pool float in a turquoise sw",
+    "format": "portrait",
+    "elapsed_s": 20.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96c7/2gTCO8uYS_K2BRDph7shW_4kF99DMu.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:19:14.159072"
+  },
+  {
+    "test": "gpt15_pool_floaty_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character lying on a pink flamingo pool float in a turquoise sw",
+    "format": "landscape",
+    "elapsed_s": 45.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96cb/YTtctGiOe-0rwT1oPkuX__T2YpKdEb.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:20:01.714653"
+  },
+  {
+    "test": "nb_pool_floaty_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character lying on a pink flamingo pool float in a turquoise sw",
+    "format": "landscape",
+    "elapsed_s": 21.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e96d0/7k94H4AVVEIivvbBeeW5m_XUMIs9Cv.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:20:25.052794"
+  }
+]

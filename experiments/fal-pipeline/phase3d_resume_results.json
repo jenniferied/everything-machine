@@ -1,0 +1,171 @@
+[
+  {
+    "test": "gpt15_night_drive_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A long empty night road stretching into the distance, full moon and ",
+    "format": "portrait",
+    "elapsed_s": 55.0,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e99ef/cOHEtksjOMKEbqxRvdXdk_hz3Q522B.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T18:34:11.918916"
+  },
+  {
+    "test": "nb_night_drive_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is driving a vintage 1970s convertible down a long empty ro",
+    "format": "portrait",
+    "elapsed_s": 21.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e99f5/4k0Bkk3D9LXDthqAkXHjw_y40cVTL7.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T18:34:34.962829"
+  },
+  {
+    "test": "gpt15_spiral_staircase_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "portrait",
+    "elapsed_s": 92.2,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e99f7/hFUhvhMQ0V4NFvOVgM6rM_AjeILHy3.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T18:36:09.252508"
+  },
+  {
+    "test": "nb_spiral_staircase_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through deep ",
+    "format": "portrait",
+    "elapsed_s": 22.3,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9a00/edRbx3LnhFcHCiVDyXuJb_SiWZswJH.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T18:36:32.936555"
+  },
+  {
+    "test": "nb_pool_floaty_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "portrait",
+    "elapsed_s": 26.7,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9a03/s3TdjVg1nfVQZMSXOACsd_0ZpZDmKC.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T18:37:01.217637"
+  },
+  {
+    "test": "gpt15_studio_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A professional recording studio with acoustic foam walls, warm amber",
+    "format": "landscape",
+    "elapsed_s": 1515.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9a06/ValgbmcVWGK9Vw1jwla74_73onhQVl.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:02:22.837129"
+  },
+  {
+    "test": "nb_studio_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Show this voxel character in a cozy recording studio. He's sitting at a big mixi",
+    "format": "landscape",
+    "elapsed_s": 64.7,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9a9e/W_-00Olq0pO3VK1p74Ww8_LgO0KrSM.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:03:41.057669"
+  },
+  {
+    "test": "gpt15_night_drive_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A long empty night road stretching into the distance, full moon and ",
+    "format": "landscape",
+    "elapsed_s": 58.0,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9aa6/8WM6YJ-OjZHr84QYDQAZe_E4wY2XoG.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:04:46.052818"
+  },
+  {
+    "test": "nb_night_drive_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is driving a vintage 1970s convertible down a long empty ro",
+    "format": "landscape",
+    "elapsed_s": 22.8,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9aac/CyUTKIyo7yxbb3_dbuyKS_TJ4vgIuU.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:05:12.451831"
+  },
+  {
+    "test": "gpt15_spiral_staircase_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "landscape",
+    "elapsed_s": 59.2,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9aaf/kiMExszVvGTK5MWnW9XQZ_x8PSzt3y.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:06:16.675351"
+  },
+  {
+    "test": "nb_spiral_staircase_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through deep ",
+    "format": "landscape",
+    "elapsed_s": 24.2,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9ab5/1RGf3z8XQRoAZLdWFC15X_ToDAUlok.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:06:44.427608"
+  },
+  {
+    "test": "gpt15_pool_floaty_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "landscape",
+    "elapsed_s": 59.6,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9ab8/GU4p_Tdlq_eWWMHdL0g4A_u1g7bRHa.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:07:46.770072"
+  },
+  {
+    "test": "nb_pool_floaty_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "landscape",
+    "elapsed_s": 15.2,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9abe/nhL5rgMwXJtiu37QvWKyG_ZHrKhd2U.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:08:07.121073"
+  }
+]

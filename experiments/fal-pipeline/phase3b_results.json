@@ -1,0 +1,210 @@
+[
+  {
+    "test": "gpt15_studio_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A professional recording studio with acoustic foam walls, warm amber",
+    "format": "portrait",
+    "elapsed_s": 65.6,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9708/IBxq0QKShKwFnBn7ncmTs_Mg6OU78c.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:30:30.254822"
+  },
+  {
+    "test": "nb_studio_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Show this voxel character in a cozy recording studio. He's sitting at a big mixi",
+    "format": "portrait",
+    "elapsed_s": 20.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e970f/qqzhPEZHvg3QgazcwWOd-_BXmvXaC6.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:30:54.750837"
+  },
+  {
+    "test": "gpt15_tokyo_rain_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A rain-soaked Tokyo alley at night, dense with neon signs in Japanes",
+    "format": "portrait",
+    "elapsed_s": 60.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9711/UAv3Dq1Gk_mqxHlls4qyW_bwsP94Gu.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:32:07.671522"
+  },
+  {
+    "test": "nb_tokyo_rain_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is walking through a rainy Tokyo alley at night. Neon signs",
+    "format": "portrait",
+    "elapsed_s": 18.4,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9718/anAyRsfxSNTRGZLQ4pa4g_EJHZk0hw.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:32:28.280753"
+  },
+  {
+    "test": "gpt15_spiral_staircase_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "portrait",
+    "elapsed_s": 62.7,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e971a/ZCFkbFdRCKUFne3lu4Kvy_TUeKbs7v.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:33:33.613575"
+  },
+  {
+    "test": "nb_spiral_staircase_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase made of white marble, ",
+    "format": "portrait",
+    "elapsed_s": 21.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9721/PNvP-lQ9XDRC9vzBhiEdN_wkmkJgZB.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:33:57.832414"
+  },
+  {
+    "test": "gpt15_pool_floaty_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "portrait",
+    "elapsed_s": 57.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9723/S0z0tc2-9Vb8u6bbx7-A__Jlg0p0Vz.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:34:57.774106"
+  },
+  {
+    "test": "nb_pool_floaty_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "portrait",
+    "elapsed_s": 22.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9729/3o66-RY2tWo5dtpc3XEMe_7zkKtGjx.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:35:22.698368"
+  },
+  {
+    "test": "gpt15_studio_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A professional recording studio with acoustic foam walls, warm amber",
+    "format": "landscape",
+    "elapsed_s": 60.3,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e972c/miLyZLkv00dtR5CnoV_QR_Dplta33o.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:36:30.663523"
+  },
+  {
+    "test": "nb_studio_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Show this voxel character in a cozy recording studio. He's sitting at a big mixi",
+    "format": "landscape",
+    "elapsed_s": 17.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9733/2zYiHMo_HnGKhe8G0_UaL_LFLgaZb4.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:36:51.055064"
+  },
+  {
+    "test": "gpt15_tokyo_rain_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A rain-soaked Tokyo alley at night, dense with neon signs in Japanes",
+    "format": "landscape",
+    "elapsed_s": 59.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9735/3NO3mez4g6qx7rMSiRX7z_76rRhEJr.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:37:55.338777"
+  },
+  {
+    "test": "nb_tokyo_rain_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is walking through a rainy Tokyo alley at night. Neon signs",
+    "format": "landscape",
+    "elapsed_s": 15.4,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e973b/D3OvhM6XOyQ3IB5end_1b_PoHcWoE3.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:38:13.051627"
+  },
+  {
+    "test": "gpt15_spiral_staircase_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "landscape",
+    "elapsed_s": 57.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e973d/c4DkKmAci5mFEgdxCQ7QJ_qgb1laSU.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:39:22.804956"
+  },
+  {
+    "test": "nb_spiral_staircase_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase made of white marble, ",
+    "format": "landscape",
+    "elapsed_s": 22.8,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9744/5YwM1EdO9B_Xy9EPthtNG_KLjWJYsU.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:39:47.759991"
+  },
+  {
+    "test": "gpt15_pool_floaty_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "landscape",
+    "elapsed_s": 59.9,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9746/orkBqz9l-pubhO9araqA__chkS1uzN.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:40:52.476306"
+  },
+  {
+    "test": "nb_pool_floaty_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "landscape",
+    "elapsed_s": 25.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e974d/kS9dleuvYRtfsGOuQ_xec_9JF5rmf3.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:41:20.354035"
+  }
+]

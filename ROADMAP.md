@@ -82,6 +82,295 @@
 | suno-experiment | ✅ |
 | flux2-character-consistency | ⬜ |
 | agentic-creative-pipeline | ⬜ |
+| fal-ai-kepler-pipeline | ⬜ |
+
+---
+
+## 🎨 Experiment 9: Fal.ai Agentic Kepler Pipeline
+
+> *Systematisches Testen von fal.ai-Modellen mit Kepler-Referenzbildern — automatisiert via Claude Code*
+
+### Verfügbare Inputs
+
+| Input | Datei | Beschreibung |
+|-------|-------|-------------|
+| **Posed (1024)** | `experiments/fal-pipeline/inputs/kepler-posed-1024.png` | **★ Bester Input** — casual Pose, 1024×1024 |
+| Posed (Original) | `~/Desktop/KeplerPosed.png` | 1920×1080, aus Unreal exportiert |
+| A-Pose | `assets/journal/2025-11-16-comfyui-consistent-character/reference-kepler.png` | 3840×3840 |
+| A-Pose (1024) | `experiments/fal-pipeline/inputs/kepler-a-pose-1024.png` | Resized für API |
+| Casual Pose | `assets/images/kepler-squatting.png` | Kepler squatting |
+
+### Phase 1: Schnelle Tests — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget verbraucht: ~$0,50** | **Laufzeit: ~8 Min** | **Script:** `experiments/fal-pipeline/run_phase1.py`
+
+| # | Task | Modell | Status | Ergebnis |
+|---|------|--------|--------|----------|
+| 1 | Era 3D Multiview | `fal-ai/era-3d` (GRATIS) | ✅ | **6 Multiviews + Normalen, Voxel-Ästhetik erhalten, kein Gesicht** |
+| 2 | Z-Image ControlNet Depth | `fal-ai/z-image/turbo/controlnet` ($0,007/MP) | ✅ | **BESTES ERGEBNIS — A-Pose erhalten, kein Gesicht, gute Szenenintegration** |
+| 3 | FLUX Depth Control | `fal-ai/flux-control-lora-depth` ($0,04/MP) | ✅ | Gut — A-Pose erhalten, kein Gesicht, aber Voxel-Textur teils geglättet |
+| 4 | MiniMax Subject Reference | `fal-ai/minimax/image-01/subject-reference` ($0,01/Bild) | ⚠️ | Minecraft-Stil, halluziniert quadratische Augen, Pose geändert |
+| 5 | FLUX Canny Control | `fal-ai/flux-control-lora-canny` ($0,04/MP) | ❌ | **FAIL — halluziniert volles menschliches Gesicht** |
+
+#### Phase 1 Erkenntnisse
+
+- **Depth-basierte Modelle** sind der Schlüssel: Tiefenkarten enthalten nur Geometrie, kein Face-Signal
+- **Canny/Kanten** reichen NICHT: Genug Struktur für das Modell, ein Gesicht hineinzuinterpretieren
+- **Subject-Reference** (MiniMax) "Minecraft-ifiziert" Kepler — behält blockigen Stil, fügt aber Gesichtszüge hinzu
+- **Z-Image Turbo ControlNet** ist 6x günstiger als FLUX und liefert bessere Ergebnisse
+- **Era 3D** funktioniert, aber unnötig — Multiviews können manuell in Unreal generiert werden
+
+#### Korrekte API-Parameter (verifiziert)
+
+```python
+# Z-Image: image_url + preprocess="depth"
+# FLUX Depth/Canny: control_lora_image_url
+# MiniMax Subject: image_url + aspect_ratio
+# Era 3D: image_url
+```
+
+### Phase 2: Thesis-Top-Modelle — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget verbraucht: ~$0,80** | **Laufzeit: ~4 Min** | **Script:** `experiments/fal-pipeline/run_phase2.py`
+
+| # | Task | Modell | Status | Ergebnis |
+|---|------|--------|--------|----------|
+| 6 | **FLUX Kontext [pro]** | `fal-ai/flux-pro/kontext` ($0,04) | ✅ | **★ GESAMTSIEGER — Voxel perfekt, kein Gesicht, neue Posen (sitzen, laufen, performen)** |
+| 7 | **GPT-Image-1.5 edit** | `fal-ai/gpt-image-1.5/edit` (~$0,04) | ✅ | **★ #2 — Voxel erhalten, kein Gesicht, neue Posen, Publikum auf Bühne** |
+| 8 | **SeedDream v4.5 edit** | `fal-ai/bytedance/seedream/v4.5/edit` ($0,04) | ⚠️ | Stärkste Voxel-Ästhetik, aber halluziniert volles Gesicht (Augen, Nase, Mund) |
+| 9 | **NanoBanana Pro edit** | `fal-ai/nano-banana-pro/edit` ($0,15) | ⚠️ | Gemischt — Voxel teils verwässert, Gesichtszüge teils sichtbar, teuer |
+
+#### Phase 2 Erkenntnisse
+
+- **FLUX Kontext [pro]** ist der beste Ansatz für Kepler→neue Szene: explizit für Character Consistency ohne Fine-Tuning gebaut
+- **GPT-Image-1.5** überraschend stark — als "Editor" positioniert, aber generiert Kepler zuverlässig in komplett neuen Szenen
+- **SeedDream v4.5** hat die kantigste/blockigste Voxel-Ästhetik, kann aber Face-Bias nicht unterdrücken
+- **NanoBanana Pro** lohnt sich zum 3,75-fachen Preis nicht — FLUX Kontext liefert bessere Ergebnisse
+- Alle 4 Modelle generieren erfolgreich **neue Posen** (sitzen, laufen, Arme hoch) — das war die Kernfrage
+
+#### API-Parameter Phase 2 (verifiziert)
+
+```python
+# FLUX Kontext: image_url (1 Bild) + prompt + guidance_scale
+# GPT-Image-1.5: image_urls (Liste) + prompt + quality + size
+# SeedDream v4.5: image_urls (Liste) + prompt ("Using character from image 1: ...")
+# NanoBanana Pro: image_urls (Liste) + prompt + aspect_ratio
+```
+
+### Phase 2b: Top-3 mit KeplerPosed — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget: ~$1,15** | **15/15 Tests erfolgreich** | **Script:** `experiments/fal-pipeline/run_phase2b.py`
+> **Erkenntnis: KeplerPosed (casual) ist besserer Input als A-Pose**
+
+| # | Modell | Cyberpunk | Park/Herbst | Concert | Rooftop | Studio | Gesamt |
+|---|--------|-----------|-------------|---------|---------|--------|--------|
+| 10 | **FLUX Kontext** | ✅ Regen | ✅ Herbstlaub | ✅ Mic+Crowd | ✅ Skyline | ✅ Mixing-Desk | **★ Top-Tier** |
+| 11 | **GPT-Image-1.5** | ✅ Neon | ✅ Parkbank | ✅ Mic+Fog | ✅ Sunset | ✅ **DAW** (schärfste Voxel) | **★ Top-Tier** |
+| 12 | **NanoBanana Pro** | ✅ Neo Tokyo | ✅ Wald | ✅ Crowd | ✅ Skyline | ✅ Akustikpanels | **★ Brauchbar** |
+
+#### Phase 2b Erkenntnisse
+
+- **KeplerPosed > A-Pose**: Casual Pose liefert natürlichere Szenenintegration + Modelle verändern die Pose leichter
+- **NanoBanana Pro jetzt brauchbar**: Mit KeplerPosed kein Face-Bias mehr (A-Pose hatte Gesichtszüge)
+- **Alle 3 Modelle generieren 5 komplett unterschiedliche Szenen** ohne Fehler
+- **FLUX Kontext + GPT-Image-1.5 gleichauf**: Kontext schneller (10s vs 23s), GPT schärfere Voxel-Textur
+- **Empfohlene Modelle:** FLUX Kontext ($0,04, schnell), GPT-Image-1.5 ($0,04, schärfere Voxel), NanoBanana ($0,15, cinematische Szenen)
+
+### Phase 3: Signature Scenes (Portrait 9:16 + Landscape 16:9) — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget: ~$1,84** | **16/16 erfolgreich** | **Script:** `experiments/fal-pipeline/run_phase3_scenes.py`
+> **Modelle:** GPT-Image-1.5 (high quality) + NanoBanana Pro | **Input:** KeplerPosed
+
+| Szene | GPT Portrait | GPT Landscape | NB Portrait | NB Landscape |
+|-------|-------------|---------------|-------------|--------------|
+| **Studio** (Mixing-Desk) | ✅ Voxel scharf, DAW | ✅ Warm, Kopfhörer | ✅ Akustikpanels | ✅ Breit, atmospheric |
+| **Retro Car Bridge** (Nacht) | ✅ Mond + Berge | ✅ Convertible, Film-Grain | ✅ Dramatisch | ✅ Brücke + Stadt |
+| **Spiral Staircase** (Endlos) | ✅ Träumerisch, Wolken | ✅ Galaxien | ✅ **Stärkste Voxel** | ✅ Surreal, Nebel |
+| **Pool Floaty** (Vogelperspektive) | ✅ Flamingo, Caustics | ✅ Top-Down perfekt | ✅ **Bester Reel-Shot** | ✅ Palmen-Schatten |
+
+#### Phase 3 Erkenntnisse (buggy — Phase 3b behebt)
+
+- GPT-Sizes `1024x1792` / `1792x1024` existieren NICHT → Output war heimlich 1:1
+- NanoBanana ignoriert `aspect_ratio` auf Edit-Endpoint → Input vorher resizen
+- Bridge-Szene war inkonsistent, einige Bilder hatten Nasen/Sonnenbrillen
+
+### Phase 3b: Fixed Signature Scenes — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget: ~$1,84** | **16/16 erfolgreich** | **Script:** `experiments/fal-pipeline/run_phase3b_fixed.py`
+
+**Fixes angewandt:**
+- GPT-Sizes: `1024x1536` (portrait) / `1536x1024` (landscape) — korrekte Werte
+- NanoBanana: Pre-resized Inputs statt `aspect_ratio` Parameter
+- Model-spezifische Prompts: Strukturiert (GPT) vs. konversationell (NanoBanana) per Chapter 4
+- Stärkere Face-Negation: "NO face, NO eyes, NO nose, NO mouth, NO sunglasses"
+- Bridge ersetzt durch Tokyo Rain, Pool Floaty: Donut-Ring mit Loch explizit beschrieben
+
+| Szene | GPT Portrait | GPT Landscape | NB Portrait | NB Landscape |
+|-------|-------------|---------------|-------------|--------------|
+| **Studio** | ✅ DAW, Voxel scharf | ✅ Cinematic 16:9 | ✅ Akustikpanels | ✅ Warm, breit |
+| **Tokyo Rain** (neu) | ✅ ラーメン-Schilder, Regen | ✅ Neon-Gasse | ✅ Neon, atmospheric | ✅ Cinematisch |
+| **Spiral Staircase** | ✅ Wolken + Galaxien | ✅ Endlos-Treppe | ✅ Surreal | ✅ Space + Wolken |
+| **Pool Floaty** | ✅ **Donut-Ring mit Loch** | ✅ Top-Down, Caustics | ✅ Ring-Shape | ✅ Palmenschatten |
+
+#### Phase 3b Erkenntnisse
+
+- **Aspect Ratios NICHT korrekt**: GPT `size` wird auf Edit-Endpoint ignoriert → Phase 3d behebt das mit padded Inputs
+- **NanoBanana Input gestretcht** statt gepaddet (`sips -z` stretcht!) → Phase 3d behebt mit PIL-Padding
+- **Kein Gesicht, keine Nase, keine Sonnenbrille** in allen 16 Bildern
+- **GPT-Image-1.5**: Strukturierte Prompts (Background→Center→Details→Constraints) = bestes Ergebnis
+- **NanoBanana Pro**: Konversationeller Stil + "IMPORTANT:" Prefix für Constraints
+- **Pool Floaty Donut-Loch**: Explizit "donut shape with hole in center" nötig, sonst solide Disc
+- **→ Superseded by Phase 3d** — alle Fixes dort konsolidiert
+
+### Phase 3d: Final Signature Scenes (Padded Inputs) — TEILWEISE (15.02.2026)
+
+> **Budget: ~$1,50 (von ~$3,70 geplant)** | **7/16 erfolgreich, 9 ausstehend (Balance leer)** | **Script:** `experiments/fal-pipeline/run_phase3d_final.py`
+
+**Finale Fixes (alle Probleme behoben):**
+- **Padded Inputs** für BEIDE Modelle (kein Stretchen mehr) — `kepler-posed-portrait-padded.png` (1024×1536), `kepler-posed-landscape-padded.png` (1536×1024)
+- **GPT `size: "auto"`** — matched Input-Dimensionen, Output jetzt korrekt 1024×1536 / 1536×1024
+- **NanoBanana: Padded Input + `aspect_ratio`** als Belt-and-Suspenders
+- **Voxel-Treppe** statt Marmor — "blocky geometric steps, not smooth marble"
+- **Donut-Ring mit Loch** — explizit "donut shape with hole in center, not solid disc"
+- **Pixel-Dimensionen im Log** — `save_image()` prüft jetzt tatsächliche Output-Größe
+
+| Szene | GPT Portrait | GPT Landscape | NB Portrait | NB Landscape |
+|-------|-------------|---------------|-------------|--------------|
+| **Studio** | ✅ 1024×1536 | ⬜ Balance leer | ✅ 768×1376 | ⬜ Balance leer |
+| **Tokyo Rain** | ✅ 1024×1536 | ⬜ Balance leer | ✅ 768×1376 | ⬜ Balance leer |
+| **Spiral Staircase** | ✅ 1024×1536 Voxel-Stufen | ⬜ Balance leer | ✅ 768×1376 | ⬜ Balance leer |
+| **Pool Floaty** | ✅ 1024×1536 Donut-Loch | ⬜ Balance leer | ⬜ Balance leer | ⬜ Balance leer |
+
+#### Phase 3d Erkenntnisse
+
+- **GPT `size` wird auf Edit-Endpoint IGNORIERT** — `size: "auto"` + vorformatierter Input ist die einzige Lösung
+- **NanoBanana `aspect_ratio` unzuverlässig** auf Edit-Endpoint — Padded Input ist Pflicht
+- **`sips -z` STRETCHT** statt zu padden — PIL/Pillow mit Letterboxing verwenden
+- **Voxel-Ästhetik in Prompts**: "voxel blocks", "blocky geometric" statt "marble", "smooth"
+- **Alle 7 Portraits bestätigen**: Kein Gesicht, korrekte Ratio, Voxel-Stil erhalten
+
+#### Nächster Schritt: fal.ai Balance aufladen → `run_phase3d_final.py` erneut starten (überspringt vorhandene Bilder nicht — manuell die fehlenden 9 starten oder Resume-Script nutzen)
+
+### Phase 3e: Refined Signature Scenes (Posed Input) — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget: ~$1,50** | **24/24 erfolgreich** | **Script:** `experiments/fal-pipeline/run_phase3e_refined.py`
+> **Modelle:** GPT-Image-1.5 + NanoBanana Pro | **Input:** KeplerPosed (padded)
+
+**Verbesserungen gegenüber Phase 3d:**
+- Bridge/Tokyo Rain → Night Drive (Retro-Auto, Film-Grain)
+- "galaxies" → "clouds" (Spiral Staircase)
+- Pool Floaty: Enriched poolside details (drink, sunscreen, magazine)
+- Studio entfernt → 3 Signature Scenes final
+
+| Szene | GPT Portrait | GPT Landscape | NB Portrait | NB Landscape |
+|-------|-------------|---------------|-------------|--------------|
+| **Night Drive** | ✅ Retro-Auto, Mond | ✅ Film-Grain, Highway | ✅ Neon, atmospheric | ✅ Cinematic |
+| **Spiral Staircase** | ✅ Wolken, Voxel-Stufen | ✅ Endlos, surreal | ✅ Dramatic | ✅ Nebel |
+| **Pool Floaty** | ✅ Donut-Ring, Drink | ✅ Top-Down, Caustics | ✅ Palmenschatten | ✅ Details |
+
+### Phase 3f: A-Pose Vergleich — ABGESCHLOSSEN (15.02.2026)
+
+> **Budget: ~$1,50** | **24/24 erfolgreich** | **Script:** `experiments/fal-pipeline/run_phase3f_apose.py`
+> **Gleiche Prompts wie Phase 3e, aber mit A-Pose Input statt KeplerPosed**
+
+| Szene | GPT Portrait | GPT Landscape | NB Portrait | NB Landscape |
+|-------|-------------|---------------|-------------|--------------|
+| **Night Drive** | ✅ | ✅ | ✅ | ✅ |
+| **Spiral Staircase** | ✅ | ✅ | ✅ | ✅ |
+| **Pool Floaty** | ✅ | ✅ | ✅ | ✅ |
+
+#### Phase 3e + 3f Erkenntnisse
+
+- **Alle 24 Bilder korrekte Dimensionen** — Padded Input + size=auto funktioniert zuverlässig
+- **A-Pose vs. Posed**: Evaluierung ausstehend (→ Bewertungstabelle)
+- **3 Signature Scenes final**: Night Drive, Spiral Staircase, Pool Floaty
+
+### Phase 5: Hallucination Cleanup (~$2-4)
+
+| # | Task | Status |
+|---|------|--------|
+| 1 | Favorites aus Bewertung auswählen | ⬜ |
+| 2 | GPT-Image-1.5 edit: Halluzinationen gezielt korrigieren | ⬜ |
+| 3 | NanoBanana edit: Alternative Korrekturen | ⬜ |
+| 4 | Clean Versions für Website + Thesis | ⬜ |
+
+### Phase 6: Video Generation (~$5-15)
+
+| # | Task | Modell | Status |
+|---|------|--------|--------|
+| 1 | DreamActor v2 Motion Transfer | `fal-ai/bytedance/dreamactor/v2` | ⬜ |
+| 2 | Wan 2.1 Image-to-Video | `fal-ai/wan-i2v` | ⬜ |
+| 3 | Wan 2.6 Ref-to-Video | `wan/v2.6/reference-to-video/flash` | ⬜ |
+
+### Phase 7: Documentation & Thesis Integration
+
+| # | Task | Status |
+|---|------|--------|
+| 1 | Thesis-Text: Experiment 5 in 04-dokumentation.md | ⬜ |
+| 2 | Journal-Eintrag #8 schreiben | ⬜ |
+| 3 | Bewertungstabelle (CSV) erstellen | ⬜ |
+| 4 | [N]-Platzhalter ersetzen | ⬜ |
+
+### Erfolgskriterien
+
+- ✅ Kepler behält Voxel-Ästhetik ohne hinzugefügtes Gesicht (FLUX Kontext, GPT-Image-1.5, Z-Image)
+- ✅ Neue Posen generierbar (sitzen, laufen, performen) — FLUX Kontext + GPT-Image-1.5
+- ✅ Mindestens 1 Modell liefert konsistente Ergebnisse über 10+ Variationen — Phase 3e: 24/24 erfolgreich
+- ✅ Pipeline ist automatisierbar (API-basiert, Python-Script funktioniert)
+
+### Output-Verzeichnis
+
+```
+experiments/fal-pipeline/
+├── inputs/
+│   ├── kepler-a-pose-1024.png
+│   └── kepler-posed-1024.png       (★ bester Input)
+├── outputs/
+│   ├── 01_minimax_subject/          (3 — Minecraft-Stil, Gesichtszüge)
+│   ├── 02_zimage_controlnet/        (3 — ControlNet depth)
+│   ├── 03_flux_depth/               (3 — FLUX depth)
+│   ├── 04_flux_canny/               (2 — FAIL, Gesichtshalluzination)
+│   ├── 05_era3d/                    (6 — Multiviews)
+│   ├── 06_flux_kontext/             (3 — A-Pose, ★ Kontext)
+│   ├── 07_gpt_image_15/             (3 — A-Pose, GPT)
+│   ├── 08_seeddream/                (3 — Face-Bias)
+│   ├── 09_nanobanana_pro/           (3 — A-Pose, gemischt)
+│   ├── 10_flux_kontext_posed/       (5 — ★★ KeplerPosed, BEST)
+│   ├── 11_gpt15_posed/             (5 — ★★ KeplerPosed, schärfste Voxel)
+│   ├── 12_nanobanana_posed/         (5 — ★ KeplerPosed, cinematisch)
+│   ├── 13_gpt15_scenes_portrait/   (4 — ★★ Signature Scenes 9:16)
+│   ├── 13_gpt15_scenes_landscape/  (4 — ★★ Signature Scenes 16:9)
+│   ├── 14_nanobanana_scenes_portrait/ (4 — ★★ Signature Scenes 9:16)
+│   ├── 14_nanobanana_scenes_landscape/ (4 — Signature Scenes 16:9, buggy ratios)
+│   ├── 15_gpt15_fixed_portrait/     (4 — Fixed Portrait 1024×1536)
+│   ├── 15_gpt15_fixed_landscape/    (4 — Fixed Landscape 1536×1024)
+│   ├── 16_nanobanana_fixed_portrait/ (4 — Fixed Portrait, pre-resized)
+│   ├── 16_nanobanana_fixed_landscape/ (4 — Fixed Landscape, pre-resized)
+│   ├── 19_gpt15_final_portrait/     (4 — ★★★ Finale Portraits 1024×1536, padded)
+│   ├── 19_gpt15_final_landscape/    (⬜ ausstehend — Balance leer)
+│   ├── 20_nanobanana_final_portrait/ (3 — ★★★ Finale Portraits 768×1376, padded)
+│   ├── 20_nanobanana_final_landscape/ (⬜ ausstehend — Balance leer)
+│   ├── 21_gpt15_refined_portrait/     (3 — ★★★ Refined Posed 9:16)
+│   ├── 21_gpt15_refined_landscape/    (3 — ★★★ Refined Posed 16:9)
+│   ├── 22_nanobanana_refined_portrait/ (3 — ★★★ Refined Posed 9:16)
+│   ├── 22_nanobanana_refined_landscape/ (3 — ★★★ Refined Posed 16:9)
+│   ├── 23_gpt15_apose_portrait/       (3 — A-Pose Vergleich 9:16)
+│   ├── 23_gpt15_apose_landscape/      (3 — A-Pose Vergleich 16:9)
+│   ├── 24_nanobanana_apose_portrait/   (3 — A-Pose Vergleich 9:16)
+│   └── 24_nanobanana_apose_landscape/  (3 — A-Pose Vergleich 16:9)
+├── inputs/
+│   ├── kepler-posed-portrait-padded.png  (1024×1536, gray padding)
+│   └── kepler-posed-landscape-padded.png (1536×1024, gray padding)
+├── run_phase1.py
+├── run_phase1_retry.py
+├── run_phase2.py
+├── run_phase2b.py
+├── run_phase3_scenes.py          (buggy ratios)
+├── run_phase3b_fixed.py          (stretched inputs)
+├── run_phase3d_final.py          (★ production-ready)
+├── run_phase3e_refined.py        (★ Phase 3e — refined scenes, posed input)
+└── run_phase3f_apose.py          (Phase 3f — a-pose comparison)
+```
 
 ---
 

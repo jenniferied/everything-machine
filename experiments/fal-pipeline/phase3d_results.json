@@ -1,0 +1,192 @@
+[
+  {
+    "test": "gpt15_studio_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A professional recording studio with acoustic foam walls, warm amber",
+    "format": "portrait",
+    "elapsed_s": 63.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e97e7/2UT61qgd0bg2LQqr03HIo_um5K7iml.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:07:36.902040"
+  },
+  {
+    "test": "nb_studio_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Show this voxel character in a cozy recording studio. He's sitting at a big mixi",
+    "format": "portrait",
+    "elapsed_s": 23.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e97ed/h_FRUFT2vru0ediupXVYP_9qQ63iOi.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:08:02.410870"
+  },
+  {
+    "test": "gpt15_tokyo_rain_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A rain-soaked Tokyo alley at night, dense with neon signs in Japanes",
+    "format": "portrait",
+    "elapsed_s": 61.3,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e97f0/PPSdKauNJD6mARfUac58J_BLLPKspm.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:09:15.957281"
+  },
+  {
+    "test": "nb_tokyo_rain_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is walking through a rainy Tokyo alley at night. Neon signs",
+    "format": "portrait",
+    "elapsed_s": 31.8,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e97f7/ZHRV0YoJeE9sLt1yj-pdc_qhGel8WQ.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:09:51.135073"
+  },
+  {
+    "test": "gpt15_spiral_staircase_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "portrait",
+    "elapsed_s": 68.2,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e97fb/RtQEJGmmZnTSz8FbFvf1N_YC1l3cIZ.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:11:16.244067"
+  },
+  {
+    "test": "nb_spiral_staircase_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through deep ",
+    "format": "portrait",
+    "elapsed_s": 29.0,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9803/vbIxTUD60g_yvOmJWhzsC_BFVdmARe.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:11:48.616704"
+  },
+  {
+    "test": "gpt15_pool_floaty_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "portrait",
+    "elapsed_s": 62.3,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9806/bmbgKnM5uXOHozO_TNhz5_5dVZnyDt.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T17:12:53.264661"
+  },
+  {
+    "test": "nb_pool_floaty_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "portrait",
+    "elapsed_s": 15.5,
+    "cost_est": "$0.15",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:08.777189"
+  },
+  {
+    "test": "gpt15_studio_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A professional recording studio with acoustic foam walls, warm amber",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.08",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:11.360826"
+  },
+  {
+    "test": "nb_studio_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Show this voxel character in a cozy recording studio. He's sitting at a big mixi",
+    "format": "landscape",
+    "elapsed_s": 0.4,
+    "cost_est": "$0.15",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:11.748145"
+  },
+  {
+    "test": "gpt15_tokyo_rain_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A rain-soaked Tokyo alley at night, dense with neon signs in Japanes",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.08",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:11.925074"
+  },
+  {
+    "test": "nb_tokyo_rain_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is walking through a rainy Tokyo alley at night. Neon signs",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.15",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:12.099789"
+  },
+  {
+    "test": "gpt15_spiral_staircase_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: Infinite deep space filled with galaxies, nebulae, and scattered sta",
+    "format": "landscape",
+    "elapsed_s": 0.4,
+    "cost_est": "$0.08",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:12.463186"
+  },
+  {
+    "test": "nb_spiral_staircase_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through deep ",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.15",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:12.667581"
+  },
+  {
+    "test": "gpt15_pool_floaty_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.08",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:12.831322"
+  },
+  {
+    "test": "nb_pool_floaty_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool. This voxel character is l",
+    "format": "landscape",
+    "elapsed_s": 0.2,
+    "cost_est": "$0.15",
+    "images": [],
+    "error": "User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing.",
+    "timestamp": "2026-02-15T17:13:12.991226"
+  }
+]

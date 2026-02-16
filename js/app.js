@@ -35,6 +35,7 @@ import { JournalManager } from './journal/JournalManager.js';
 
 // Import pages
 import { InterestGraph } from './pages/InterestGraph.js';
+import { VideoGallery } from './pages/VideoGallery.js';
 
 /**
  * Application class
@@ -103,6 +104,9 @@ class Application {
     
     // Phase 10: Setup interest graph (about page)
     await this.setupInterestGraph();
+
+    // Phase 10b: Setup video gallery (generations page)
+    await this.setupVideoGallery();
 
     // Phase 11: Initialize media lazy loading
     await this.setupMediaLazyLoading();
@@ -582,6 +586,43 @@ class Application {
     this.eventBus.on('nav:pageChanged', (data) => {
       if (data.pageId === 'about') {
         initGraph();
+      }
+    });
+  }
+
+  /**
+   * Setup video gallery on generations page (lazy-loaded)
+   * @returns {Promise<void>}
+   */
+  async setupVideoGallery() {
+    const container = document.getElementById('video-gallery-container');
+    if (!container) return;
+
+    let gallery = null;
+
+    const initGallery = () => {
+      if (gallery) return;
+      gallery = new VideoGallery(container, this.eventBus);
+      gallery.initialize();
+      this.uiComponents.set('video-gallery', gallery);
+      console.log('[App] Video gallery initialized');
+    };
+
+    // Check if we need to auto-navigate for deep links
+    const hash = location.hash;
+    if (hash.startsWith('#video/') || hash === '#generations') {
+      const pageNavigator = this.uiComponents.get('page-navigator');
+      if (pageNavigator) {
+        const btn = document.querySelector('[data-page="generations"]');
+        pageNavigator.showPage('generations', btn, false);
+      }
+      initGallery();
+    }
+
+    // Lazy-load when navigating to generations page
+    this.eventBus.on('nav:pageChanged', (data) => {
+      if (data.pageId === 'generations') {
+        initGallery();
       }
     });
   }

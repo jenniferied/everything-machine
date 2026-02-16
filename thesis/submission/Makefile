@@ -9,7 +9,7 @@
 #   make doku         - Build Final Dokumentation PDF
 #   make clean        - Remove generated files
 
-.PHONY: help all clean forschung literatur methodik doku watch
+.PHONY: help all clean forschung literatur methodik doku watch optimize-images
 
 # === CONFIGURATION ===
 PANDOC := pandoc
@@ -80,7 +80,11 @@ $(GENERATED_ANHANG): $(JOURNAL_FILES) scripts/generate-anhang.py
 	@echo "Generating Anhang from journal files..."
 	@python3 scripts/generate-anhang.py > $(GENERATED_ANHANG) 2>/dev/null
 
-$(OUTDIR)/04-dokumentation.pdf: $(DOCSDIR)/04-dokumentation.md $(GENERATED_ANHANG) $(TEMPLATE) $(BIBFILE)
+optimize-images:
+	@echo "Optimizing experiment images..."
+	@python3 scripts/optimize-experiment-images.py
+
+$(OUTDIR)/04-dokumentation.pdf: $(DOCSDIR)/04-dokumentation.md $(GENERATED_ANHANG) $(TEMPLATE) $(BIBFILE) | optimize-images
 	@echo "Building Dokumentation..."
 	@$(PANDOC) $< $(GENERATED_ANHANG) -o $@ $(PANDOC_FLAGS) --resource-path=.:../..
 

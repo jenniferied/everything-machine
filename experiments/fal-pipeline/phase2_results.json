@@ -1,0 +1,146 @@
+[
+  {
+    "test": "06_flux_kontext",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands",
+    "elapsed_s": 11.5,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95e4/a4tX8cwkDcfgbKtWbQeLU_cf6b75374d4e44528e213032d32dba8a.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:40:51.093265"
+  },
+  {
+    "test": "06_flux_kontext",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character in a foggy forest clearing, sitting on a fallen tree, golden light rays f",
+    "elapsed_s": 9.9,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95e5/g_CW3ENQObH8aS6jtvxPE_de41f54293e54baeb6d84e2f8cfbe9b4.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:41:02.403234"
+  },
+  {
+    "test": "06_flux_kontext",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character on a concert stage, performing with arms raised, dramatic spotlights and ",
+    "elapsed_s": 12.0,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95e7/_oqnUioPULI9kDNFvgCE__f454b658b10e4c66b8326dc698daac9e.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:41:15.569651"
+  },
+  {
+    "test": "07_gpt_image_15",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands",
+    "elapsed_s": 24.9,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95e7/p6xfAXGXAMl_xwQGjeUTV_Vap0X78c.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:41:52.112920"
+  },
+  {
+    "test": "07_gpt_image_15",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a foggy forest clearing, sitting on a fallen tree, golden light rays f",
+    "elapsed_s": 23.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95eb/G0TOwjLY1IV0KMN5HwKCe_i8KV9vuD.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:42:19.466067"
+  },
+  {
+    "test": "07_gpt_image_15",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character on a concert stage, performing with arms raised, dramatic spotlights and ",
+    "elapsed_s": 21.9,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95ee/KY39QBqauwGkZPXPc9gCh_4OvR06LL.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:42:45.039083"
+  },
+  {
+    "test": "08_seeddream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands",
+    "elapsed_s": 19.2,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95f2/lExWr4vyaGEDKW8RmV5YY_d5d6633abcd149f29e603f9d391d9752.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:43:09.106125"
+  },
+  {
+    "test": "08_seeddream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "prompt": "Place this voxel character in a foggy forest clearing, sitting on a fallen tree, golden light rays f",
+    "elapsed_s": 27.2,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95f5/113wVQ4bXXAbneCuEn6Sv_76ac044934e845d1b22cbd5b21c38c1e.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:43:42.561068"
+  },
+  {
+    "test": "08_seeddream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "prompt": "Place this voxel character on a concert stage, performing with arms raised, dramatic spotlights and ",
+    "elapsed_s": 22.6,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95f8/3axkMmI1pwNEozMRwcISQ_5bd2554f9b584fc89ebb171fe2193664.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:44:15.960017"
+  },
+  {
+    "test": "09_nanobanana_pro",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands",
+    "elapsed_s": 23.7,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95f9/3T7Ql-oC0O0acaTzgj-QV_tjMYRlpy.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:44:59.801192"
+  },
+  {
+    "test": "09_nanobanana_pro",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a foggy forest clearing, sitting on a fallen tree, golden light rays f",
+    "elapsed_s": 28.3,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95fe/TLLmwRteFjhh_cGIB-5ei_sEKs41t6.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:45:31.462924"
+  },
+  {
+    "test": "09_nanobanana_pro",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character on a concert stage, performing with arms raised, dramatic spotlights and ",
+    "elapsed_s": 20.6,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9601/f_uGWWuHD1atpPRKsTUFp_xJmTph5q.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:45:54.687192"
+  }
+]

@@ -178,8 +178,14 @@
 }
 \makeatother
 
-% Graphics path for assets
-\graphicspath{{assets/}{../../}}
+% Graphics path for assets (optimized experiment images first, then fallback)
+\graphicspath{{_img_cache/}{assets/}{../../}}
+
+% === EVALUATION COLORS (farbcodierte Tabellen) ===
+\usepackage{colortbl}
+\definecolor{evalgreen}{HTML}{2E7D32}   % positiv (ja, gut, stark)
+\definecolor{evalred}{HTML}{C62828}     % negativ (nein, schwach)
+% neutral = standard darktext
 
 % === TABLES ===
 \usepackage{longtable}
@@ -198,10 +204,12 @@
 \setlength{\arrayrulewidth}{0.05em}
 \setlength{\tabcolsep}{6pt}
 
-% Table rules - invisible/transparent
-\setlength{\heavyrulewidth}{0pt}
-\setlength{\lightrulewidth}{0pt}
-\setlength{\arrayrulewidth}{0pt}
+% Table rules - subtle on light bg
+\arrayrulecolor{darktext!30}
+
+% Force darktext in all tables (prevents color-stack issues across pages)
+\AtBeginEnvironment{tabular}{\color{darktext}}
+\AtBeginEnvironment{longtable}{\color{darktext}}
 
 % === LISTS ===
 \usepackage{enumitem}
@@ -248,7 +256,7 @@
 % === CAPTIONS ===
 \usepackage{caption}
 \captionsetup{
-  font={small,color=darktext!70},
+  font={small,color=darktext},
   labelfont={bf,color=accentgreen},
   format=plain,
   justification=raggedright,

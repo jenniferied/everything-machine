@@ -1,0 +1,53 @@
+folder,model,input_type,format,scene,bewertung,halluzinationen,kommentar
+01_minimax_subject,MiniMax Subject Ref.,a-pose,square,alle,nein,,Minecraft-Stil — halluzinierte Gesichtszüge (Augen/Mund)
+02_zimage_controlnet,Z-Image Turbo ControlNet,a-pose,square,alle,bedingt,nein,A-Pose erhalten — kein Gesicht — clean
+03_flux_depth,FLUX Depth LoRA,a-pose,square,alle,nein,,Körper wird humanoid/geglättet
+04_flux_canny,FLUX Canny LoRA,a-pose,square,alle,nein,ja,Volles menschliches Gesicht halluziniert
+05_era3d,Era 3D,a-pose,square,multiview,nein,,Multiviews nutzlos — kann ich selber erstellen in viel besserer Qualität
+06_flux_kontext,FLUX Kontext Pro,a-pose,square,alle,bedingt,,Es fängt an gut zu werden!
+07_gpt_image_15,GPT-Image-1.5,a-pose,square,alle,bedingt,teilweise,Teilweise Halluzinationen — aber sehr solide
+08_seeddream,SeedDream v4.5,a-pose,square,alle,nein,ja,Volles Gesicht halluziniert (Augen/Nase/Mund)
+09_nanobanana_pro,NanoBanana Pro,a-pose,square,alle,gut,teilweise,Keine Gesichtszüge sichtbar — kleinere Halluzinationen (fehlende Cap) — aber gut
+10_flux_kontext_posed,FLUX Kontext Pro,posed,square,alle,nein,ja,Gesichter werden reinhalluziniert
+11_gpt15_posed,GPT-Image-1.5,posed,square,alle,ja,teilweise,Solideste Ergebnisse — nur ein Bild Halluzinationen — enthält Lieblingsbild
+12_nanobanana_posed,NanoBanana Pro,posed,square,alle,ja,nein,Stärkste Voxel-Ästhetik — auch Umgebung voxelisiert
+13_gpt15_scenes,GPT-Image-1.5,posed,portrait,alle,gemischt,,Buggy 1:1 Ratio
+13_gpt15_scenes,GPT-Image-1.5,posed,landscape,alle,gemischt,,Etwas weniger buggy — teilweise ähnliche Halluzinationen — auch 1:1 leider
+14_nanobanana_scenes,NanoBanana Pro,posed,portrait,alle,gemischt,teilweise,Halb halb — Hälfte sehr cool — andere hat Halluzinationen
+14_nanobanana_scenes,NanoBanana Pro,posed,landscape,alle,gemischt,teilweise,Dasselbe — halb halb — ohne Halluzinationen eigentlich stark
+15_gpt15_fixed,GPT-Image-1.5,posed,portrait,alle,gemischt,,Besser — aber verzerrt aufgrund fehlerhafter gestretchter Referenzbilder
+15_gpt15_fixed,GPT-Image-1.5,posed,landscape,alle,gemischt,teilweise,Stretching und einmal Cap und Haare fehlen
+16_nanobanana_fixed,NanoBanana Pro,posed,portrait,alle,gemischt,nein,Stretching sehr stark — aber gut gelungen: keine Halluzinationen
+16_nanobanana_fixed,NanoBanana Pro,posed,landscape,alle,gemischt,teilweise,Stretching weniger offensichtlich — gute Outputs — ein paar Haar/Cap Halluzinationen
+17_gpt15_v2,GPT-Image-1.5,posed,portrait,alle,gemischt,teilweise,Szenen gut — aber 1:1 nervig und leichte Halluzinationen im Kopfbereich
+17_gpt15_v2,GPT-Image-1.5,posed,landscape,alle,gemischt,teilweise,Dasselbe wie davor
+18_nanobanana_v2,NanoBanana Pro,posed,portrait,alle,gemischt,,
+18_nanobanana_v2,NanoBanana Pro,posed,landscape,alle,stark,,
+19_gpt15_final,GPT-Image-1.5,posed,portrait,alle,gemischt,,
+19_gpt15_final,GPT-Image-1.5,posed,landscape,alle,gemischt,,Dasselbe
+20_nanobanana_final,NanoBanana Pro,posed,portrait,alle,gemischt,,
+20_nanobanana_final,NanoBanana Pro,posed,landscape,alle,stark,,
+21_gpt15_refined,GPT-Image-1.5,posed,portrait,night_drive,ja,ja,Scheibe fehlt
+21_gpt15_refined,GPT-Image-1.5,posed,portrait,spiral_staircase,ja,nein,
+21_gpt15_refined,GPT-Image-1.5,posed,portrait,pool_floaty,ja,nein,
+21_gpt15_refined,GPT-Image-1.5,posed,landscape,night_drive,ja,ja,Teil des Autos fehlt
+21_gpt15_refined,GPT-Image-1.5,posed,landscape,spiral_staircase,ja,nein,
+21_gpt15_refined,GPT-Image-1.5,posed,landscape,pool_floaty,neutral,ja,Cap und Haare fehlen
+22_nanobanana_refined,NanoBanana Pro,posed,portrait,night_drive,ja,nein,
+22_nanobanana_refined,NanoBanana Pro,posed,portrait,spiral_staircase,nein,nein,Stufen sehen nicht schön aus
+22_nanobanana_refined,NanoBanana Pro,posed,portrait,pool_floaty,ja,nein,Sehr cool!
+22_nanobanana_refined,NanoBanana Pro,posed,landscape,night_drive,ja,ja,Cockpit an falscher Stelle — Fehler enttäuschen
+22_nanobanana_refined,NanoBanana Pro,posed,landscape,spiral_staircase,nein,ja,Doppelte Treppe halluziniert
+22_nanobanana_refined,NanoBanana Pro,posed,landscape,pool_floaty,ja,nein,Transparenter Pool Float gefällt sehr
+23_gpt15_apose,GPT-Image-1.5,a-pose,portrait,night_drive,nein,ja,Scheinwerfer falsch + Haare/Cap fehlen
+23_gpt15_apose,GPT-Image-1.5,a-pose,portrait,spiral_staircase,nein,ja,A-Pose wird overfitted
+23_gpt15_apose,GPT-Image-1.5,a-pose,portrait,pool_floaty,neutral,ja,Ring nicht wie gewollt + Cap fehlt
+23_gpt15_apose,GPT-Image-1.5,a-pose,landscape,night_drive,ja,ja,Haare/Cap fehlen — Scheinwerfer OK
+23_gpt15_apose,GPT-Image-1.5,a-pose,landscape,spiral_staircase,nein,nein,Pose zu starr (A-Pose overfitting)
+23_gpt15_apose,GPT-Image-1.5,a-pose,landscape,pool_floaty,ja,ja,Cap fehlt + Pool Floaty falsch
+24_nanobanana_apose,NanoBanana Pro,a-pose,portrait,night_drive,ja,nein,
+24_nanobanana_apose,NanoBanana Pro,a-pose,portrait,spiral_staircase,nein,ja,Treppe sieht nicht gut aus
+24_nanobanana_apose,NanoBanana Pro,a-pose,portrait,pool_floaty,ja,nein,Super
+24_nanobanana_apose,NanoBanana Pro,a-pose,landscape,night_drive,neutral,ja,Ganz okay aber Halluzinationen stören
+24_nanobanana_apose,NanoBanana Pro,a-pose,landscape,spiral_staircase,nein,ja,Treppen nicht schön
+24_nanobanana_apose,NanoBanana Pro,a-pose,landscape,pool_floaty,neutral,ja,Cool aber Pool Floaty falsch

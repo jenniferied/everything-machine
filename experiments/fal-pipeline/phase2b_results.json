@@ -1,0 +1,182 @@
+[
+  {
+    "test": "10_flux_kontext_posed",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street ",
+    "elapsed_s": 12.2,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e964b/uH31838jvwqb1qXTYA6B4_e70ecd4022264bf1a7e41020dd8a610d.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:57:59.488476"
+  },
+  {
+    "test": "10_flux_kontext_posed",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character sitting on a park bench in autumn, golden leaves falling around him, soft",
+    "elapsed_s": 10.7,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e964c/XFF8tETJSkTK3BZRMkA5T_be5fe6c477574248a282033bc740787f.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:58:11.810018"
+  },
+  {
+    "test": "10_flux_kontext_posed",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character on a dark concert stage, performing with a microphone, dramatic red and b",
+    "elapsed_s": 9.1,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e964d/xfHXts8vblAJ6i3J3qPez_bb6437756f294f7aba8285fa0b21f938.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:58:23.368524"
+  },
+  {
+    "test": "10_flux_kontext_posed",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character standing on a rooftop at sunset, looking over a vast city skyline, wind b",
+    "elapsed_s": 10.6,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e964f/JliZDqhv3QVLkPs9NK09N_1eabc6ce113f456c9821527afb8215a1.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:58:35.291091"
+  },
+  {
+    "test": "10_flux_kontext_posed",
+    "model": "fal-ai/flux-pro/kontext",
+    "prompt": "Place this voxel character in a recording studio, sitting at a mixing desk with headphones around ne",
+    "elapsed_s": 11.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9650/xwraKGxIRKciRMJDm98fY_e64a68afd03f4f98b65a2274d2e4acd6.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:58:48.588400"
+  },
+  {
+    "test": "11_gpt15_posed",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street ",
+    "elapsed_s": 23.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9650/7fZSZv_UFfP2riMcVX_FC_fjoTYRAo.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:59:17.079503"
+  },
+  {
+    "test": "11_gpt15_posed",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character sitting on a park bench in autumn, golden leaves falling around him, soft",
+    "elapsed_s": 23.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9653/W5Uz3-UkB35xFWwbgi6WV_GhsBaz6n.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:59:43.513160"
+  },
+  {
+    "test": "11_gpt15_posed",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character on a dark concert stage, performing with a microphone, dramatic red and b",
+    "elapsed_s": 21.8,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9656/wg24nXRIo9oUXwIpcjgY8_u7mi6pb1.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:00:09.166519"
+  },
+  {
+    "test": "11_gpt15_posed",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character standing on a rooftop at sunset, looking over a vast city skyline, wind b",
+    "elapsed_s": 26.2,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9659/oHRSdOv42yYOSZjbn9QQQ_UUS8PaJn.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:00:38.590082"
+  },
+  {
+    "test": "11_gpt15_posed",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Place this voxel character in a recording studio, sitting at a mixing desk with headphones around ne",
+    "elapsed_s": 22.6,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e965b/QmugaBlROz9FnApcwcknY_nNiC5V33.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:01:04.143343"
+  },
+  {
+    "test": "12_nanobanana_posed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street ",
+    "elapsed_s": 14.9,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e965e/WcW0h7I4moDbs-1rA6HUi_0cgOc9MR.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:01:21.038141"
+  },
+  {
+    "test": "12_nanobanana_posed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character sitting on a park bench in autumn, golden leaves falling around him, soft",
+    "elapsed_s": 22.9,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9660/uib0oxKSgWfSh66VpgM3u_i4t8KDrR.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:01:47.237360"
+  },
+  {
+    "test": "12_nanobanana_posed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character on a dark concert stage, performing with a microphone, dramatic red and b",
+    "elapsed_s": 22.9,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9662/e1t8EePPOqbfyAldcgfUA_iM2oTMFc.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:02:12.091671"
+  },
+  {
+    "test": "12_nanobanana_posed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character standing on a rooftop at sunset, looking over a vast city skyline, wind b",
+    "elapsed_s": 25.9,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9665/EZOPKAq0JTNrpTBccCxHg_tmRvoKyn.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:02:43.047527"
+  },
+  {
+    "test": "12_nanobanana_posed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Place this voxel character in a recording studio, sitting at a mixing desk with headphones around ne",
+    "elapsed_s": 26.2,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9668/gSvTz6OxmjiuTT3o3goo4_jvt4VYjv.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T16:03:12.656857"
+  }
+]

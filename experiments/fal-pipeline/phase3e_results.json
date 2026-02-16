@@ -1,0 +1,158 @@
+[
+  {
+    "test": "gpt15_night_drive_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A wide night road cutting through a valley, a glowing city skyline r",
+    "format": "portrait",
+    "elapsed_s": 61.1,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9ae7/apwr_AwnWccwMFoOf05lH_ncAV2vpe.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:15:40.225408"
+  },
+  {
+    "test": "nb_night_drive_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is cruising down a night road in a sleek retro 1980s sports",
+    "format": "portrait",
+    "elapsed_s": 19.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9aee/fXW73CYLjGtFF6VUytwpm_800mxKxd.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:16:02.775640"
+  },
+  {
+    "test": "gpt15_spiral_staircase_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A dreamy sky filled with soft layered clouds in pastel blue and lave",
+    "format": "portrait",
+    "elapsed_s": 60.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9af0/yA7mJSgHhZq6aoQJussmu_EvhMe1jA.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:17:07.666488"
+  },
+  {
+    "test": "nb_spiral_staircase_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through a dre",
+    "format": "portrait",
+    "elapsed_s": 23.1,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9af6/5illBwrCwkVEGG52byIl8_15WoTo3R.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:17:32.362873"
+  },
+  {
+    "test": "gpt15_pool_floaty_portrait",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "portrait",
+    "elapsed_s": 60.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9af9/arlxFwNP3MFb23YiWmega_Lb82TZu5.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:18:34.792830"
+  },
+  {
+    "test": "nb_pool_floaty_portrait",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool at a luxurious summer reso",
+    "format": "portrait",
+    "elapsed_s": 16.4,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9aff/8taoGMzAH6CBsbhc_saEn_SGqHxOKJ.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:18:53.329080"
+  },
+  {
+    "test": "gpt15_night_drive_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A wide night road cutting through a valley, a glowing city skyline r",
+    "format": "landscape",
+    "elapsed_s": 58.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b01/hTwA78oeVuM22Ae6z60t8_SLC6Qrwo.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:19:56.020586"
+  },
+  {
+    "test": "nb_night_drive_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character is cruising down a night road in a sleek retro 1980s sports",
+    "format": "landscape",
+    "elapsed_s": 15.7,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b07/stVIHeSDMrs5GIZf0YpI7_Fc046nUr.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:20:13.534899"
+  },
+  {
+    "test": "gpt15_spiral_staircase_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Background: A dreamy sky filled with soft layered clouds in pastel blue and lave",
+    "format": "landscape",
+    "elapsed_s": 60.6,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b09/DAlxqX4urye0C5AafqB04_BZVnAqTn.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:21:25.590612"
+  },
+  {
+    "test": "nb_spiral_staircase_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This voxel character walks up an endless spiral staircase floating through a dre",
+    "format": "landscape",
+    "elapsed_s": 25.9,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b10/cOr-emzWSd3AFj1rwBm8l_X2mkCc3a.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:21:54.832295"
+  },
+  {
+    "test": "gpt15_pool_floaty_landscape",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "prompt": "Camera: Directly overhead, bird's eye view looking straight down at a turquoise ",
+    "format": "landscape",
+    "elapsed_s": 54.4,
+    "cost_est": "$0.08",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b13/TN11vFQa-C1akVFSeMGP__jorGBFtO.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:22:58.592445"
+  },
+  {
+    "test": "nb_pool_floaty_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Top-down bird's eye view of a turquoise swimming pool at a luxurious summer reso",
+    "format": "landscape",
+    "elapsed_s": 23.5,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9b19/jEhwqbkaYLp4Jn47vUd42_ysSkn6Kj.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T19:23:23.968966"
+  }
+]

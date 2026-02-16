@@ -1,0 +1,62 @@
+[
+  {
+    "test": "pixverse_v55",
+    "model": "fal-ai/pixverse/v5.5/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 61.6,
+    "cost_est": "$0.20",
+    "file_size_kb": 2782,
+    "error": null,
+    "timestamp": "2026-02-16T03:04:25"
+  },
+  {
+    "test": "minimax_hailuo02",
+    "model": "fal-ai/minimax/hailuo-02/standard/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 61.5,
+    "cost_est": "$0.27",
+    "file_size_kb": 420,
+    "error": null,
+    "timestamp": "2026-02-16T03:05:27"
+  },
+  {
+    "test": "kling_v26_pro",
+    "model": "fal-ai/kling-video/v2.6/pro/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 53.4,
+    "cost_est": "$0.35",
+    "file_size_kb": 6089,
+    "error": null,
+    "timestamp": "2026-02-16T03:06:20"
+  },
+  {
+    "test": "ltx2",
+    "model": "fal-ai/ltx-2/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 76.8,
+    "cost_est": "$0.36",
+    "file_size_kb": 3417,
+    "error": null,
+    "timestamp": "2026-02-16T03:07:37"
+  },
+  {
+    "test": "wan_v26",
+    "model": "wan/v2.6/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 68.9,
+    "cost_est": "$0.50",
+    "file_size_kb": 4473,
+    "error": null,
+    "timestamp": "2026-02-16T03:10:18"
+  },
+  {
+    "test": "kling_o3",
+    "model": "fal-ai/kling-video/o3/standard/image-to-video",
+    "prompt": "The voxel character makes small adjustments on the mixing console, fingers movin",
+    "elapsed_s": 95.8,
+    "cost_est": "$0.84",
+    "file_size_kb": 4218,
+    "error": null,
+    "timestamp": "2026-02-16T03:11:57"
+  }
+]

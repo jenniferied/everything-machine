@@ -1,0 +1,281 @@
+[
+  {
+    "test": "05_era3d",
+    "model": "fal-ai/era-3d",
+    "prompt": "multiview from A-pose",
+    "elapsed_s": 80.4,
+    "cost_est": "FREE",
+    "images": [
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/f5173d7553f2419a90ff3bac84b557cd_cbdc92d2e6514bf789a0d34e43acbc0d.png",
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/f6471e4e43364d7db75abd65a31b84ca_e3ff519e13b0421ea14350d8d312f10f.png",
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/d93552020b354674b1ecd734f3842fd7_2e0320e66a584f5a814314deec49de98.png",
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/2673f02ab3cc4778bba5ff609b9f94e2_995f2d1bdffe4549ad81a6a6fa844c1c.png",
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/0972b30257b842299ea764da568e8f29_a19c79e2b93341fb8cd03b6c54f32bb9.png",
+      "https://storage.googleapis.com/isolate-dev-hot-rooster_toolkit_public_bucket/github_110602490/bf3cbacae7b24d35a01c93b074423516_48f1f85b50e24de2a831fa2ef7acfb10.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:17:46.663170"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 2.6,
+    "cost_est": "$0.01",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:49.219629"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.0,
+    "cost_est": "$0.01",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:50.186667"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.0,
+    "cost_est": "$0.01",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:51.215735"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 0.9,
+    "cost_est": "$0.007",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:52.115325"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 0.8,
+    "cost_est": "$0.007",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:52.876136"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 0.7,
+    "cost_est": "$0.007",
+    "images": [],
+    "error": "[{'loc': ['body', 'image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:17:53.576453"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 129.2,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "[{'loc': ['body', 'control_lora_image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:20:02.801203"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.2,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "[{'loc': ['body', 'control_lora_image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:20:04.000776"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.1,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "[{'loc': ['body', 'control_lora_image_url'], 'msg': 'field required', 'type': 'value_error.missing'}]",
+    "timestamp": "2026-02-15T15:20:05.081894"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 138.0,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "Could not load image from url: None",
+    "timestamp": "2026-02-15T15:22:23.064659"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.0,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "Could not load image from url: None",
+    "timestamp": "2026-02-15T15:22:24.066965"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 1.5,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "Could not load image from url: None",
+    "timestamp": "2026-02-15T15:22:25.543149"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 21.2,
+    "cost_est": "$0.01",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9584/MUY-1vyVGbZUjjVBGWOPB_image.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:24:48.834032"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 20.9,
+    "cost_est": "$0.01",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9586/tdjLtCMdQWpM8Waf7RuXu_image.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:25:11.217937"
+  },
+  {
+    "test": "01_minimax_subject",
+    "model": "fal-ai/minimax/image-01/subject-reference",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 19.1,
+    "cost_est": "$0.01",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9588/CuZyHH7FBvzfFDziIGQtJ_image.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:25:32.818458"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 71.4,
+    "cost_est": "$0.007",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e958f/fn3p4m3qxbsykk3bCryKP_aPwC4qYY.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:26:47.942074"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 19.8,
+    "cost_est": "$0.007",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9592/ukcDAIWudn4F9ndjUWJ1x_DFiaHwcY.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:27:09.170301"
+  },
+  {
+    "test": "02_zimage_controlnet",
+    "model": "fal-ai/z-image/turbo/controlnet",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 10.4,
+    "cost_est": "$0.007",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e9593/JZY5GoVkv4yXz-LMxouLB_Wz1t1swc.png"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:27:23.675385"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 131.8,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95a1/jjdftIm6rk_kTyepnFl3X_9ea1dcbcbfb941699d49bf8ba7d6a5be.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:29:36.969242"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 6.0,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95a2/1qWuelFEp29zdBRgMeq8n_97a07a2fe6ba4796993b6cb48c289d7d.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:29:44.187552"
+  },
+  {
+    "test": "03_flux_depth",
+    "model": "fal-ai/flux-control-lora-depth",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 4.8,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95a2/tVo2tv8PyztIok7Ln9fQH_123f921c4fc84e1fbfec92a865bfb70a.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:29:50.008702"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 156.0,
+    "cost_est": "$0.04",
+    "images": [],
+    "error": "The read operation timed out",
+    "timestamp": "2026-02-15T15:32:25.975743"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 5.1,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95b3/IMr_t9r63KtGLv-JFD4xU_d8a02bc5097b456bbc511e5e76d4bede.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:32:32.738737"
+  },
+  {
+    "test": "04_flux_canny",
+    "model": "fal-ai/flux-control-lora-canny",
+    "prompt": "A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark p",
+    "elapsed_s": 4.8,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a8e95b3/zwS1VNbjKxZohnrglBs41_99a85515a1e44d9f94e16ef20093d1b5.jpg"
+    ],
+    "error": null,
+    "timestamp": "2026-02-15T15:32:39.014321"
+  }
+]
