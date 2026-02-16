@@ -34,31 +34,13 @@ abstract: |
 
 ## Hintergrund und Motivation
 
-### Artistic Research
-
 Die vorliegende Arbeit versteht Artistic Research im Sinne von Henk Borgdorff [-@borgdorff2012conflict] als künstlerische Praxis, die sich als Forschung qualifiziert: Man macht etwas, findet dabei etwas heraus und dokumentiert es so, dass andere davon lernen können. Zentral ist die Absicht, über die rein persönliche Entwicklung hinaus Wissen zu erzeugen -- durch die Praxis selbst, nicht nur über sie.
 
-Diese Arbeit positioniert sich im Bereich der praxisgeleiteten Forschung (practice-led research), bei der die künstlerische Praxis Erkenntnisse über den kreativen Prozess generiert [@candy2006practice]. Konkret werden kleine KI-Experimente anhand eines realen Projekts durchgeführt: der Entwicklung visueller Inhalte wie Albumcover und kurzer Reels für ein musikalisches Alter Ego namens [Kepler](https://www.instagram.com/kepler.mp3/). Die Forschungsergebnisse werden auf einer vom Research Catalogue inspirierten [Website](https://jenniferied.github.io/everything-machine/) mit Journaleinträgen dokumentiert und der Forschungsgemeinschaft sowie der Öffentlichkeit zugänglich gemacht. Der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar.
+Diese Arbeit entsteht in einem Moment, in dem generative KI nahezu alle kreativen Domänen erfasst hat: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Entwicklung Fragen auf, die nicht abstrakt-philosophisch sind, sondern die konkrete Praxis von Künstler\*innen und Medienproduzent\*innen betreffen: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren?
 
-### Der Moment der generativen KI
+Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „Kepler" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
 
-Wir erleben einen historischen Umbruch in der kreativen Produktion. Zwischen 2022 und 2025 hat sich eine Expansion generativer KI-Tools ereignet, die nahezu alle kreativen Domänen erfasst: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Was vor wenigen Jahren noch Gegenstand von Science-Fiction-Spekulationen war, ist heute alltägliches Werkzeug.
-
-Diese Entwicklung demokratisiert kreative Produktion auf beispiellose Weise. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Demokratisierung fundamentale Fragen auf: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren? Was ist ästhetischer Wert, wenn "alles" auf Knopfdruck möglich scheint?
-
-Diese Fragen sind nicht abstrakt-philosophisch, sondern berühren die konkrete Praxis von Medienproduzent\*innen, Künstler\*innen und Kreativen weltweit.
-
-### Kepler: Ein digitales Alter Ego
-
-Im Kontext meiner eigenen künstlerischen Praxis bietet sich ein konkretes Projekt als Forschungsgegenstand an: „Kepler" -- das musikalische Alter Ego meines Kollaborateurs Gavin, das als maskierte, voxelisierte Musiker-Persona existiert. Kepler steht selbst in einer Transformation: von einer 2D-Figur mit Illustrationen und Artworks hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt, die perspektivisch auch in gefilmte und immersive Formate übergeht -- ein früheres Medienprojekt realisierte bereits ein Live-VR-Konzert. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Spielgrund für meine Artistic Research-Experimente mit generativer KI.
-
-Das Projekt begann mit einer praktischen Frage: Kann generative KI die visuelle Konsistenz liefern, die Kepler für seinen Übergang in die dritte Dimension braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite? Kepler wurde so zum Spiegel meiner Auseinandersetzung mit dieser neuen kreativen Landschaft.
-
-### "Everything Machine": Der Projektname
-
-Das Projekt "Everything Machine" dokumentiert diesen Entwicklungsprozess transparent auf einer öffentlichen Website. Der Name verweist auf die Idee einer Maschine, die "alles" produzieren kann: Text, Bild, Audio, Video, Code. Gleichzeitig fragt er kritisch, was dieses "alles" wert ist. Wenn eine Maschine alles kann, was bedeutet das für die Dinge, die wir wertschätzen?
-
-Der Name enthält auch eine Ironie: Je mehr ich mit generativer KI arbeite, desto deutlicher wird, dass sie eben nicht "alles" kann. Sie kann keine echten Erfahrungen machen, keine authentischen Emotionen empfinden, keine wirklichen Beziehungen aufbauen. Die "Everything Machine" ist zugleich mächtig und begrenzt, und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.
+Das Projekt „Everything Machine" dokumentiert diesen Prozess transparent auf einer öffentlichen [Website](https://jenniferied.github.io/everything-machine/), der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar. Der Name verweist auf die Idee einer Maschine, die „alles" produzieren kann -- und fragt zugleich, was dieses „alles" wert ist. Denn je mehr ich mit generativer KI arbeitete, desto deutlicher wurde: Sie kann vieles schnell, aber nicht alles gut. Die „Everything Machine" ist zugleich mächtig und begrenzt, und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.
 
 ## Forschungsfrage und Überblick
 
@@ -857,38 +839,37 @@ Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Ca
 \newpage
 \begin{figure}[H]
 \centering
-% Row 1: 4 landscape images
-\begin{minipage}[t]{0.235\textwidth}\centering
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/pixverse_v55_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}PixVerse v5.5}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\centering
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/ltx2_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}LTX-2}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\centering
+\end{minipage}
+\vspace{6pt}
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/wan_v26_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Wan 2.6}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\centering
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/seedance_pro_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Seedance Pro}
 \end{minipage}
 \vspace{6pt}
-% Row 2: 3 landscape images + empty slot
-\begin{minipage}[t]{0.235\textwidth}\centering
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/veo31_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Veo 3.1}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\centering
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_o3_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling O3}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\centering
+\end{minipage}
+\vspace{6pt}
+\begin{minipage}[t]{0.47\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_v3_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling 3.0 V3}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.235\textwidth}\end{minipage}
+\end{minipage}
 \caption{Mittlere Frames, Studio-Szene (Landscape, 7 Modelle). Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
 ```
