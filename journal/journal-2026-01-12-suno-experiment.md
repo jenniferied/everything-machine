@@ -77,9 +77,11 @@ Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen R
 
 ## Reflexion
 
-Das war frustrierend. Ich wollte Musik für meine sowjetisch-dystopische Spielwelt: minimal, loopbar, atmosphärisch. Suno lieferte Stock-Music-Qualität – handwerklich solide, aber austauschbar.
-
-Das Interessante: Die generierten *Beschreibungen* waren besser als die Musik. "Bitcrushed chiptune pads over a sparse, detuned synth choir" – genau das wollte ich. Der Output? Zu poliert, zu kommerziell.
+- **Tools:** Suno AI, v4.5 + v5 im Browser
+- **Workflow:** Prompt rein, Ergebnis in Sekunden — aber keine Kontrolle
+- **Autorschaft:** nur Kurator:in, keine Parameter zum Drehen
+- **Scheitern:** zu kommerziell, generischer Sound statt minimal-dystopisch
+- **Erkenntnis:** Beschreibungen besser als Output — als Briefing nutzbar
 
 ### Kontext
 

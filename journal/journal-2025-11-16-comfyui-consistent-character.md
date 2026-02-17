@@ -56,9 +56,11 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 
 ## Reflexion
 
-Das war frustrierend. ComfyUI lokal auf meinem M1 MacBook Pro Max 64 GB zu installieren hat ewig gedauert und viele Gigabyte verschlungen. Die Ergebnisse haben nicht das geliefert, was ich wollte – sehr inkonsistent, Prompts haben nicht das erfüllt, was sie sollten.
-
-Das Hauptproblem war Kepler selbst. Er hat kein sichtbares Gesicht – das ist Teil seines Designs. Aber das System interpretiert hartnäckig Gesichter in seine Maske hinein, selbst mit negativen Prompts. Ich glaube, das wird ein größeres Problem: Die Trainingsdaten enthalten vor allem Gesichter, und das Modell "will" ein Gesicht sehen, wo keines sein soll.
+- **Tools:** ComfyUI lokal, M1 MacBook — aufwendige Installation
+- **Scheitern:** Gesichter in Keplers Maske halluziniert, negative Prompts helfen nicht
+- **Erkenntnis:** keine magischen Tools — Art Directability fehlt noch
+- **Ästhetik:** generisch KI-mäßig, nicht weit gekommen
+- **Offene Frage:** eigenes Modell trainieren oder anderen Workflow?
 
 ### Kontext
 

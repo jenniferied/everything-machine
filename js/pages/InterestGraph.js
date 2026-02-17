@@ -24,6 +24,8 @@ export class InterestGraph {
     this.selectedNode = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    this.time = 0; // for vortex animation
+
     this._initData();
     this._bindEvents();
     this.resize();
@@ -160,6 +162,19 @@ export class InterestGraph {
       n.vy += (0.5 - n.y) * centerPull;
     });
 
+    // Gentle vortex — tangential force around center, each node slightly different
+    this.time += 0.001;
+    const vortexStrength = 0.00008;
+    this.nodes.forEach((n, i) => {
+      const dx = n.x - 0.5, dy = n.y - 0.5;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 0.001;
+      // Tangential direction (perpendicular to radius), alternating CW/CCW
+      const dir = (i % 3 === 0) ? -1 : 1;
+      const speed = vortexStrength * (0.7 + 0.6 * Math.sin(i * 2.17 + this.time * 3));
+      n.vx += (-dy / dist) * speed * dir;
+      n.vy += (dx / dist) * speed * dir;
+    });
+
     let totalV = 0;
     this.nodes.forEach(n => {
       if (n === this.dragging) return;
@@ -294,20 +309,11 @@ export class InterestGraph {
       const totalV = this._tick();
       this._draw();
 
-      if (totalV < 0.001 && !this.dragging) {
-        this.settled = true;
-        if (!this.settleTimer) {
-          this.settleTimer = setTimeout(() => {
-            cancelAnimationFrame(this.animFrameId);
-            this.animFrameId = null;
-          }, 500);
-        }
-      } else {
-        this.settled = false;
-        if (this.settleTimer) {
-          clearTimeout(this.settleTimer);
-          this.settleTimer = null;
-        }
+      // Never fully settle — vortex keeps gentle motion alive
+      this.settled = false;
+      if (this.settleTimer) {
+        clearTimeout(this.settleTimer);
+        this.settleTimer = null;
       }
 
       this.animFrameId = requestAnimationFrame(loop);

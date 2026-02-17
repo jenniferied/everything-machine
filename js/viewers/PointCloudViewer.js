@@ -114,6 +114,16 @@ export class PointCloudViewer extends ViewerBase {
     this.resizeHandler = () => this.onResize();
     window.addEventListener('resize', this.resizeHandler);
 
+    // Re-trigger resize when navigating back to overview page
+    if (this.eventBus) {
+      this._onPageChanged = ({ pageId }) => {
+        if (pageId === 'overview') {
+          requestAnimationFrame(() => this.onResize());
+        }
+      };
+      this.eventBus.on('nav:pageChanged', this._onPageChanged);
+    }
+
     console.log('[PointCloudViewer] Initialized successfully');
   }
 
@@ -519,8 +529,12 @@ export class PointCloudViewer extends ViewerBase {
 
   onResize() {
     if (!this.canvas || !this.container) return;
-    this.canvas.width = this.container.clientWidth;
-    this.canvas.height = this.container.clientHeight || 600;
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
+    // Skip resize when container is hidden (display: none → 0 dimensions)
+    if (width === 0 || height === 0) return;
+    this.canvas.width = width;
+    this.canvas.height = height;
   }
 
   showFallback() {
@@ -538,6 +552,9 @@ export class PointCloudViewer extends ViewerBase {
     }
     if (this.resizeHandler) {
       window.removeEventListener('resize', this.resizeHandler);
+    }
+    if (this._onPageChanged && this.eventBus) {
+      this.eventBus.off('nav:pageChanged', this._onPageChanged);
     }
     if (this.gl) {
       if (this.posBuffer) this.gl.deleteBuffer(this.posBuffer);

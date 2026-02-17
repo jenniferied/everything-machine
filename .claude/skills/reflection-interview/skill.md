@@ -96,33 +96,46 @@ Example: "Du hast erwähnt, dass ComfyUI abstürzte — hat das Warten deine Ide
 
 ### Phase 4: Output
 
-Write reflection in conversational German (du-Form), structured as:
-1. Opening paragraph — Gefühl/Kontext
-2. Process observations — Was ist passiert
-3. Key insight — Eine zentrale Erkenntnis
-4. Open question — Was bleibt offen
+Generate the reflection section with THREE parts:
 
-**Format:** Use `chat-intro` div for narrative sections if using chat format.
+1. **Bullet-Point Summary** — 5-6 Stichpunkte mit Aspekt-Labels, je max. 1 kurzer Satz
+2. **Keywords** — 3-5 Hashtags
+3. **Interview-Transkript** — HTML chat format with all Q&A from Phases 1-3
+
+**NO** Kontext/Forschungsfragen/Synthese sections — the bullets replace those.
 
 ## Example Output
 
 ```markdown
 ## Reflexion
 
-Das war ein produktiver Tag, auch wenn nicht alles funktioniert hat. Ich habe hauptsächlich mit ComfyUI und Claude gearbeitet...
+- **Tools:** ComfyUI lokal, M1 MacBook — aufwendige Installation
+- **Workflow:** neuer Workflow, Ergebnisse inkonsistent
+- **Autorschaft:** Lernende — an fremdem Netzwerk orientiert
+- **Scheitern:** Gesichter in Keplers Maske halluziniert, negative Prompts helfen nicht
+- **Erkenntnis:** keine magischen Tools — Art Directability fehlt noch
+- **Offene Frage:** eigenes Modell trainieren oder anderen Workflow?
 
-[Process observations based on interview answers]
+**Keywords:** #ComfyUI #Frustration #Kepler #ArtDirectability
 
-Was mich überrascht hat: [Key insight from Scheitern/Ästhetik answers]
-
-Offen bleibt: [From generated question or interview]
-
-**Keywords:** #ComfyUI #Workflow #[relevant tags]
+<div class="interview-transcript">
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>ComfyUI mit einem Network von Mickmumpitz.</p></div>
+</div>
+<!-- ... all Q&A from interview ... -->
+</div>
 ```
 
 ## Notes
 
 - Always conduct the interview before writing — don't assume
-- Keep reflection authentic to user's voice
-- Max 200 words for reflection text
+- Keep bullet labels from: Tools, Workflow, Autorschaft, Iteration, Scheitern, Ästhetik, Erkenntnis, Offene Frage
+- Pick 5-6 most relevant labels per entry — not all are required every time
+- Each bullet max. 1 short sentence — no flowing text
 - Include 3-5 relevant keywords
+- Interview transcript includes ALL questions and answers from Phases 1-3

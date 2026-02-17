@@ -22,11 +22,19 @@
 - [x] PDF-Pipeline: Pandoc + LuaLaTeX, APA CSL
 
 ### Offen — HOCH
-- [ ] **Leerer Journaleintrag** — "KI wirklich verstehen – Teil 2" (nur Intro)
-  - Option A: `/reflection-interview` | Option B: Aus Anhang entfernen
+- [ ] **3 Reflexions-Interviews** — via `/reflection-interview`
+  - [ ] `recherche-kepler-zweiter-versuch` (2026-01-25)
+  - [ ] `video-generierung` (2026-02-15)
+  - [ ] `ki-verstehen-teil-2` (2026-02-13) — erst Inhalt schreiben oder entfernen
+- [ ] **Proofread Thesis** — 04-dokumentation.md Korrekturlesen
+- [ ] **Proofread Website** — index.html Texte + Journal-Einträge Korrekturlesen
+- [ ] **Teil-1-Dokumente prüfen** — 01-forschungsfrage, 02-literaturrecherche, 03-methodologie
+- [ ] **Abgabe-Kriterien checken** — gegen `thesis/academic/Abgabe.md` abgleichen
+  - ~10 Seiten inkl. Literatur, exkl. Anhänge
+  - Gliederung: Einleitung, Stand der Forschung, Methodologie, Forschung, Diskussion
+  - APA-Bibliographie, Anhänge optional
 
 ### Offen — NIEDRIG
-- [ ] Teil-1-Dokumente auf Konsistenz prüfen (Exposé, Forschungsfrage, Lit, Methodo)
 - [ ] GLB-Dateigröße optimieren (49MB)
 - [ ] Präsentation weiter bearbeiten (`presentation/index.html`)
 
@@ -85,15 +93,17 @@
 
 ## Reflexionen
 
-| Journal | Status |
-|---------|--------|
-| referenzen-sammeln | ✅ |
-| comfyui-consistent-character | ✅ |
-| marble-worldlabs | ✅ |
-| cursor-build | ✅ |
-| ki-verstehen | ✅ |
-| suno-experiment | ✅ |
-| ki-verstehen-teil-2 | ⬜ nur Intro |
+| Journal | Inhalt | Reflexion |
+|---------|--------|-----------|
+| referenzen-sammeln | ✅ | ✅ |
+| comfyui-consistent-character | ✅ | ✅ |
+| marble-worldlabs | ✅ | ✅ |
+| cursor-build | ✅ | ✅ |
+| ki-verstehen | ✅ | ✅ |
+| suno-experiment | ✅ | ✅ |
+| recherche-kepler-zweiter-versuch | ✅ | ⬜ |
+| video-generierung | ✅ | ⬜ |
+| ki-verstehen-teil-2 | ⬜ nur Intro | ⬜ |
 
 ---
 

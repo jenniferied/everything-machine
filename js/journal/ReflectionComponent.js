@@ -269,42 +269,12 @@ export class ReflectionComponent {
         </div>`
       : '';
 
-    // Build summary HTML (narrative text)
+    // Build summary HTML (bullet-point overview)
     const summaryHTML = reflectionData.summary
-      ? `<div class="reflection-summary">${this.formatAnswer(reflectionData.summary)}</div>`
+      ? `<div class="reflection-summary">${this.formatSummary(reflectionData.summary)}</div>`
       : '';
 
-    // Build sections HTML
-    const sectionsHTML = Object.entries(this.SECTIONS).map(([sectionKey, sectionTitle]) => {
-      const sectionData = reflectionData[sectionKey];
-      if (!sectionData) return '';
-
-      const questions = this.QUESTIONS[sectionKey];
-      if (!questions) return '';
-
-      const fieldsHTML = Object.entries(questions).map(([fieldKey, fieldLabel]) => {
-        const value = sectionData[fieldKey] || '';
-        if (!value) return '';
-
-        return `
-          <div class="reflection-field">
-            <div class="reflection-question">${fieldLabel}</div>
-            <div class="reflection-answer">${this.formatAnswer(value)}</div>
-          </div>
-        `;
-      }).filter(Boolean).join('');
-
-      if (!fieldsHTML) return '';
-
-      return `
-        <div class="reflection-section">
-          <div class="reflection-section-title">${sectionTitle}</div>
-          ${fieldsHTML}
-        </div>
-      `;
-    }).filter(Boolean).join('');
-
-    // Build transcript dropdown HTML
+    // Build transcript HTML
     const transcriptHTML = reflectionData.transcript && reflectionData.transcript.length > 0
       ? this.createTranscriptDropdown(reflectionData.transcript, transcriptId)
       : '';
@@ -322,9 +292,6 @@ export class ReflectionComponent {
         ${infoBoxHTML}
         ${keywordsHTML}
         ${summaryHTML}
-        <div class="reflection-content">
-          ${sectionsHTML}
-        </div>
         ${transcriptHTML}
       </div>
     `;
@@ -348,16 +315,41 @@ export class ReflectionComponent {
     }).join('');
 
     return `
-      <details class="reflection-transcript" id="${id}">
+      <details class="reflection-transcript" id="${id}" open>
         <summary class="transcript-toggle">
           <span class="transcript-icon">💬</span>
-          <span>Interview-Transkript anzeigen</span>
+          <span>Interview-Transkript</span>
         </summary>
         <div class="transcript-content">
           ${messagesHTML}
         </div>
       </details>
     `;
+  }
+
+  /**
+   * Format summary as bullet-point list
+   */
+  static formatSummary(text) {
+    if (!text) return '';
+
+    const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+    const bulletLines = lines.filter(l => l.startsWith('- '));
+
+    if (bulletLines.length > 0) {
+      const items = bulletLines.map(l => {
+        const content = l.substring(2);
+        // Match **Label:** value pattern
+        const labelMatch = content.match(/^\*\*([^*]+):\*\*\s*(.*)$/);
+        if (labelMatch) {
+          return `<span class="summary-item"><span class="summary-label">${labelMatch[1]}</span><span class="summary-value">${this.formatAnswer(labelMatch[2])}</span></span>`;
+        }
+        return `<span class="summary-item"><span class="summary-value">${this.formatAnswer(content)}</span></span>`;
+      }).join('');
+      return `<div class="reflection-summary-flow">${items}</div>`;
+    }
+
+    return this.formatAnswer(text);
   }
 
   /**

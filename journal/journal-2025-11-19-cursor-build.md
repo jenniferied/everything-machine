@@ -71,9 +71,11 @@ Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, 
 
 ## Reflexion
 
-Das war einfach krass. Das Aufsetzen dieser Website ging tausendfach schneller als ohne KI. Ich konnte mein bestehendes Wissen einbringen, musste aber bei Kleinigkeiten nicht selbst googeln und bugfixen – Cursor und Claude haben das erledigt. Ich konnte quasi meine kreative Vision umsetzen.
-
-Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Manchmal war es Kollaboration, wenn wir zusammen nicht weiterkamen. Ich habe viel reviewed – und dabei auch gelernt, weil ich in den Thinking-Prozess reinschauen konnte. Die Debugging-Schleifen waren nervig, aber ich habe gelernt, wie man die KI besser anleitet: den Chat öfter erneuern, weil zu viel Kontext die KI verschlechtert, und falsche Ansätze ablehnen statt weiterzumachen.
+- **Tools:** Cursor, GitHub, Anthropic-Modelle
+- **Workflow:** tausendfach schneller — kreative Vision umsetzen statt googeln
+- **Autorschaft:** Manager mit Gesamtvision → Junior Developer anleiten
+- **Scheitern:** Debugging-Schleifen, zu viel Kontext verschlechtert KI
+- **Erkenntnis:** Garbage in, garbage out — Vorwissen entscheidend
 
 ### Kontext
 

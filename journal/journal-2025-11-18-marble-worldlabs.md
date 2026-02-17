@@ -90,9 +90,11 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 
 ## Reflexion
 
-Marble hat Spaß gemacht. Es ging schnell, war browserbasiert. Ich wollte zum einen das Tool testen – nachdem die Gesichter ja nicht funktioniert haben, also Kepler als Charakter nicht funktioniert hat im ComfyUI-Workflow, hatte mich interessiert, ob wir vielleicht Hintergrundwelten generieren könnten.
-
-Das Interessante war, wie schnell das jetzt ging, aus einem einzigen Bild einen übereinstimmenden Splat zu erzeugen. Ich war aber jetzt nicht so überzeugt davon, dass ich es sicher verwenden werde. Das freiere Ergebnis war nicht hundertprozentig überzeugend – und als ich Personen drin hatte mit Spiegelungen, waren die Personen gruselig und Uncanny-Valley-mäßig verzerrt.
+- **Tools:** Marble (browserbasiert) — schnelles Prototyping
+- **Workflow:** ein Bild → Gaussian Splat in Sekunden
+- **Scheitern:** Personen/Spiegelungen verzerrt (Uncanny Valley)
+- **Erkenntnis:** "Fehler" als ästhetisches Mittel nutzen
+- **Offene Frage:** 3D-Renders in Splat Generator eingeben?
 
 ### Kontext
 

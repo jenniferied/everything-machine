@@ -628,6 +628,12 @@ class Application {
       initGallery();
     }
 
+    // If page was restored from localStorage, the nav:pageChanged event already fired
+    const pageNavigator = this.uiComponents.get('page-navigator');
+    if (pageNavigator && pageNavigator.getCurrentPage() === 'images') {
+      initGallery();
+    }
+
     this.eventBus.on('nav:pageChanged', (data) => {
       if (data.pageId === 'images') {
         initGallery();
@@ -661,6 +667,12 @@ class Application {
         const btn = document.querySelector('[data-page="generations"]');
         pageNavigator.showPage('generations', btn, false);
       }
+      initGallery();
+    }
+
+    // If page was restored from localStorage, the nav:pageChanged event already fired
+    const pageNavigator = this.uiComponents.get('page-navigator');
+    if (pageNavigator && pageNavigator.getCurrentPage() === 'generations') {
       initGallery();
     }
 

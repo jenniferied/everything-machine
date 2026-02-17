@@ -2018,6 +2018,62 @@ main.container {
     }
 }
 
+/* Speech Bubble */
+.about-speech-bubble {
+    position: relative;
+    background: #0a1020;
+    border: 1px solid #1f2937;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0 0;
+    max-width: 520px;
+}
+
+.about-speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 28px;
+    width: 14px;
+    height: 14px;
+    background: #0a1020;
+    border-left: 1px solid #1f2937;
+    border-top: 1px solid #1f2937;
+    transform: rotate(45deg);
+}
+
+.about-speech-bubble p {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-cc-link {
+    background: rgba(251, 146, 60, 0.15);
+    color: #fb923c;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.about-cc-link:hover {
+    background: rgba(251, 146, 60, 0.3);
+}
+
+@media (max-width: 640px) {
+    .about-speech-bubble {
+        max-width: 100%;
+        text-align: left;
+    }
+    .about-speech-bubble::before {
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
 .about-section {
     margin-bottom: 3rem;
 }
@@ -2773,9 +2829,41 @@ main.container {
 
 .reflection-summary {
     margin-bottom: 1.25rem;
-    font-size: 0.9rem;
-    line-height: 1.6;
+}
+
+.reflection-summary-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    align-items: baseline;
+}
+
+.summary-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.summary-label {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.5rem;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.summary-value {
+    font-size: 0.85rem;
     color: #d1d5db;
+    line-height: 1.4;
+}
+
+.summary-item + .summary-item::before {
+    content: '·';
+    color: #374151;
+    margin-right: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .reflection-section {
@@ -2907,7 +2995,8 @@ main.container {
     margin-bottom: 1rem;
 }
 
-#page-generations p {
+#page-generations p,
+#page-images p {
     font-size: 1rem;
     line-height: 1.6;
     color: #9ca3af;
@@ -2938,6 +3027,7 @@ main.container {
     border-left: 2px solid #4ade80;
     padding-left: 0.75rem;
     margin: 0;
+    line-height: 1.6;
 }
 
 /* Video Grid */
@@ -3070,6 +3160,12 @@ main.container {
     margin: 0;
 }
 
+/* Hide gallery page content until JS has populated the container */
+#page-images:has(#image-gallery-container:empty) > div,
+#page-generations:has(#video-gallery-container:empty) > div {
+    visibility: hidden;
+}
+
 /* ==============================
    Image Gallery (Experiment 5)
    ============================== */
@@ -3105,14 +3201,13 @@ main.container {
 }
 
 .ig-prompt {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #6b7280;
     font-style: italic;
     border-left: 2px solid #4ade80;
     padding-left: 0.75rem;
     margin: 0.75rem 0;
-    line-height: 1.5;
-    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.6;
 }
 
 .ig-prompt strong {
@@ -3185,23 +3280,12 @@ main.container {
     margin: 0.25rem 0 0.5rem;
 }
 
-/* Image Grid */
+/* Image Grid — auto-fit centers incomplete rows */
 .ig-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 190px));
     gap: 0.75rem;
-}
-
-@media (max-width: 1200px) {
-    .ig-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-@media (max-width: 1024px) {
-    .ig-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 768px) {
-    .ig-grid { grid-template-columns: repeat(2, 1fr); }
+    justify-content: center;
 }
 
 @media (max-width: 480px) {
@@ -3209,7 +3293,8 @@ main.container {
 }
 
 .ig-grid-scene {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 250px));
+    justify-content: center;
 }
 
 @media (max-width: 768px) {

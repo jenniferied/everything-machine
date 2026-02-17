@@ -334,9 +334,11 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 
 ## Reflexion
 
-Ich bin zu Hause angekommen und fühle mich... neugierig und etwas gesicherter in meinem Wissen. Das Gespräch hat mein vorhandenes Wissen gefestigt – ich habe mich an Konzepte und historische Ereignisse erinnert, die ich vergessen hatte.
-
-Aber gleichzeitig: Es könnte die Gefahr geben, dass ich der Illusion unterliege, etwas zu verstehen, obwohl ich es vielleicht nicht tue. Die Fluency Illusion – du hast das Gefühl, etwas verstanden zu haben, weil du es gehört hast. Trügerisch.
+- **Tools:** Claude App, Spracheingabe im Auto (30 Min.)
+- **Workflow:** personalisierter Dialog statt Podcast/YouTube
+- **Autorschaft:** die Fragende — Richtung und Tiefe bestimmt
+- **Scheitern:** Spracheingabe-Bugs, Ablenkung durch Autofahrt
+- **Erkenntnis:** Gefahr der Fluency Illusion — verstehen ≠ gehört haben
 
 ### Kontext
 

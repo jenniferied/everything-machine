@@ -32,9 +32,11 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 
 ## Reflexion
 
-Das hier war ein guter Tag. Gavin und ich haben parallel gearbeitet – remote, jeder an seinem Rechner. Pinterest macht Spaß: Man scrollt, sieht coole Bilder, speichert sie. Was mir dabei bewusst geworden ist – das hat erstmal nichts mit KI zu tun. Es war reine menschliche Kuration.
-
-Eine interessante Erkenntnis: Während wir Referenzen sammelten, waren vermutlich einige der Bilder selbst KI-generiert. Die Unterscheidung wird zunehmend schwieriger. Aber der Prozess des Sammelns, Sortierens und Kuratierens bleibt ein zutiefst menschlicher.
+- **Tools:** Pinterest, Google Drive — keine KI
+- **Workflow:** gewohnte Kollaboration mit Gavin, digital
+- **Autorschaft:** Kuration — ich gab Struktur vor, Gavin steuerte Material bei
+- **Erkenntnis:** Kreativprozess beginnt beim Kuratieren, nicht beim Generieren
+- **Offene Frage:** Urheberrecht bei KI-generierten Stilreferenzen?
 
 ### Kontext
 

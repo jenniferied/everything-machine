@@ -193,6 +193,16 @@ export class ThreeDViewer extends ViewerBase {
     this.resizeHandler = () => this.onWindowResize();
     window.addEventListener('resize', this.resizeHandler);
 
+    // Re-trigger resize when navigating back to overview page
+    if (this.eventBus) {
+      this._onPageChanged = ({ pageId }) => {
+        if (pageId === 'overview') {
+          requestAnimationFrame(() => this.onWindowResize());
+        }
+      };
+      this.eventBus.on('nav:pageChanged', this._onPageChanged);
+    }
+
     console.log('[ThreeDViewer] Initialized');
   }
 
@@ -905,7 +915,9 @@ export class ThreeDViewer extends ViewerBase {
 
   onWindowResize() {
     const width = this.container.clientWidth;
-    const height = this.container.clientHeight || 280;
+    const height = this.container.clientHeight;
+    // Skip resize when container is hidden (display: none → 0 dimensions)
+    if (width === 0 || height === 0) return;
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
@@ -926,6 +938,9 @@ export class ThreeDViewer extends ViewerBase {
     }
     if (this.resizeHandler) {
       window.removeEventListener('resize', this.resizeHandler);
+    }
+    if (this._onPageChanged && this.eventBus) {
+      this.eventBus.off('nav:pageChanged', this._onPageChanged);
     }
     if (this.pmremGenerator) {
       this.pmremGenerator.dispose();
