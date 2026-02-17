@@ -22,21 +22,16 @@
 - [x] PDF-Pipeline: Pandoc + LuaLaTeX, APA CSL
 
 ### Offen — HOCH
-- [ ] **3 Reflexions-Interviews** — via `/reflection-interview`
+- [ ] **2 Reflexions-Interviews** — via `/reflection-interview`
   - [ ] `recherche-kepler-zweiter-versuch` (2026-01-25)
   - [ ] `video-generierung` (2026-02-15)
-  - [ ] `ki-verstehen-teil-2` (2026-02-13) — erst Inhalt schreiben oder entfernen
 - [ ] **Proofread Thesis** — 04-dokumentation.md Korrekturlesen
 - [ ] **Proofread Website** — index.html Texte + Journal-Einträge Korrekturlesen
-- [ ] **Teil-1-Dokumente prüfen** — 01-forschungsfrage, 02-literaturrecherche, 03-methodologie
+- [x] **Teil-1-Dokumente prüfen** — Konsistenz-Audit mit 5 Agenten, 33 Fixes
 - [ ] **Abgabe-Kriterien checken** — gegen `thesis/academic/Abgabe.md` abgleichen
   - ~10 Seiten inkl. Literatur, exkl. Anhänge
   - Gliederung: Einleitung, Stand der Forschung, Methodologie, Forschung, Diskussion
   - APA-Bibliographie, Anhänge optional
-
-### Offen — NIEDRIG
-- [ ] GLB-Dateigröße optimieren (49MB)
-- [ ] Präsentation weiter bearbeiten (`presentation/index.html`)
 
 ---
 
@@ -86,9 +81,6 @@
 - [x] Chat-Bubble-Format, Matrix-Ästhetik
 - [x] Bugs: AudioViewer Resize, Gallery Nav, Refresh Glitch
 
-### Offen
-- [ ] GLB 49MB optimieren
-
 ---
 
 ## Reflexionen
@@ -103,7 +95,7 @@
 | suno-experiment | ✅ | ✅ |
 | recherche-kepler-zweiter-versuch | ✅ | ⬜ |
 | video-generierung | ✅ | ⬜ |
-| ki-verstehen-teil-2 | ⬜ nur Intro | ⬜ |
+| ~~ki-verstehen-teil-2~~ | gelöscht | — |
 
 ---
 
