@@ -73,7 +73,6 @@ Suno bietet zwei Modelle:
 
 Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen Relay) sind mit v5 (beta) generiert – im Free Trial allerdings auf eine Minute begrenzt. Red Snow Protocol und Iron Frost Protocol stammen aus v4.5 und sind länger, gefallen mir aber weniger – **warum genau, kann ich nicht sagen**.
 
----
 
 ## Reflexion
 
@@ -101,7 +100,7 @@ Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen R
 - **Zentrale Erkenntnis:** Die generierten Beschreibungen zeigen mir: Für meine Vision gibt es Begriffe. Ich könnte damit existierende Musik suchen, ein anderes Tool probieren, oder einem echten Musiker ein Briefing geben.
 - **Offene Frage:** Sind generalistische KI-Tools für spezialisierte Nischen überhaupt geeignet – oder braucht es immer Fine-Tunes oder menschliche Expertise?
 
-**Keywords:** #Suno #Musik #GameAudio #Frustration #Beschreibung≠Output
+**Keywords:** #Suno #MusikGenerierung #GameAudio #PromptVsOutput #Kontrollverlust
 
 <div class="interview-transcript">
 <h4>Kontext</h4>

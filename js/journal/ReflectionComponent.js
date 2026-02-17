@@ -315,10 +315,10 @@ export class ReflectionComponent {
     }).join('');
 
     return `
-      <details class="reflection-transcript" id="${id}" open>
+      <details class="reflection-transcript" id="${id}">
         <summary class="transcript-toggle">
-          <span class="transcript-icon">💬</span>
           <span>Interview-Transkript</span>
+          <span class="transcript-chevron">&#9662;</span>
         </summary>
         <div class="transcript-content">
           ${messagesHTML}

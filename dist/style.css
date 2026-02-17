@@ -1573,6 +1573,8 @@ main.container {
 .image-figure img {
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    max-height: 450px;
+    object-fit: contain;
 }
 
 .bubble-content img:hover,
@@ -2422,9 +2424,9 @@ main.container {
 
 /* The chat bubble itself - smaller text */
 .chat-bubble {
-    padding: 0.75rem 1rem;
-    line-height: 1.5;
-    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.4;
+    font-size: 0.8rem;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -2919,21 +2921,31 @@ main.container {
 .transcript-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
     padding: 0.75rem 1rem;
     background: rgba(55, 65, 81, 0.3);
     cursor: pointer;
     font-size: 0.8rem;
     color: #9ca3af;
     transition: background 0.2s;
+    list-style: none;
+}
+
+.transcript-toggle::-webkit-details-marker {
+    display: none;
 }
 
 .transcript-toggle:hover {
     background: rgba(55, 65, 81, 0.5);
 }
 
-.transcript-icon {
-    font-size: 1rem;
+.transcript-chevron {
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+}
+
+.reflection-transcript[open] .transcript-chevron {
+    transform: rotate(180deg);
 }
 
 .transcript-content {

@@ -52,7 +52,6 @@ Das Problem ist, dass jeder dieser Schritte Fehler einführen kann. Wenn die Ref
 
 Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hintergrund – funktioniert, weil sie dem System weniger Raum für Fehlinterpretationen lässt. Wenn nur der Charakter zu sehen ist, ohne störende Elemente, kann das Modell sich auf die wichtigen Merkmale konzentrieren. Aber selbst dann ist die Konsistenz nicht garantiert, besonders wenn man versucht, den Charakter in verschiedenen Posen oder Kontexten zu zeigen.
 
----
 
 ## Reflexion
 
@@ -80,7 +79,7 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 - **Zentrale Erkenntnis:** Es ist frustrierend, aber am Ende ein technisches Problem. Die Art Directability ist noch nicht da. Es sind keine magischen Tools – für viele fühlt es sich beim ersten Mal mit ChatGPT so an, aber es sind einfach Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Mit einer realistischen, Anime- oder Cartoon-Figur hätte es besser funktioniert. Aber Kepler hat kein sichtbares Gesicht, und die Trainingsdaten enthalten Gesichter – deswegen bleiben sie hartnäckig dort.
 - **Offene Frage:** Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
 
-**Keywords:** #ComfyUI #Flux #Konsistenz #Frustration #Kepler #ArtDirectability
+**Keywords:** #ComfyUI #Flux #CharacterConsistency #TrainingBias #ArtDirectability
 
 <div class="interview-transcript">
 

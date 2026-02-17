@@ -28,7 +28,6 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 
 ![Google Drive Referenzen](assets/journal/2025-11-15-referenzen-sammeln/google-order-referenzen.png)
 
----
 
 ## Reflexion
 
@@ -56,7 +55,7 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 - **Zentrale Erkenntnis:** Das Sammeln von Referenzen hat gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle – aber für die Weiterverwendung als Trainingsdaten schon.
 - **Offene Frage:** Was bedeutet es für Urheberrechte, wenn man fremde Bilder als Stilreferenz für KI-Generierung nutzt?
 
-**Keywords:** #Pinterest #Kollaboration #Referenzen #Vorbereitung #CharacterDesign
+**Keywords:** #Pinterest #Kuration #Moodboard #Kollaboration #CharacterDesign
 
 <div class="interview-transcript">
 <div class="transcript-section-header">Kontext</div>

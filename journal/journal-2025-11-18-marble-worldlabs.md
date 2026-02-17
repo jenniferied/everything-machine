@@ -49,7 +49,9 @@ Mir fällt auf, dass sich das Modell sehr nah am Input-Bild orientiert. Das ist 
 Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workaround versucht: Mehrere Pinterest-Bilder in den Claude-Chat hochgeladen und mir eine Marble-Prompt generieren lassen.
 
 ![Claude-Input: Pinterest-Bilder 1](assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude1.jpg)
+
 ![Claude-Input: Pinterest-Bilder 2](assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude2.jpg)
+
 ![Claude-Input: Pinterest-Bilder 3](assets/journal/2025-11-18-marble-worldlabs/marble-input-toclaude3.jpg)
 
 **Claude-generierte Prompt:** "Translucent glass botanical sculpture, iridescent resin figure with embedded flowers, ethereal bioluminescent flora, soft pastel gradients of lavender, mint, coral and gold, delicate organic forms suspended in crystalline transparency, surreal dreamlike atmosphere, intricate internal structures visible through glossy surfaces, dewdrops and light refractions, alien botanical specimens with thorny stems and luminous petals, macro photography aesthetic, soft bokeh backgrounds, hyperdetailed textures mixing smooth glass with organic growth, otherworldly garden specimens caught between organic and synthetic, studio lighting with rim light highlights, volumetric light rays, 8k cinematic quality"
@@ -62,7 +64,6 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 
 Dieser Ansatz – Vibes statt konkretes Referenzbild – hat interessantere Ergebnisse gebracht. Die Welt fühlt sich weniger wie eine Rekonstruktion und mehr wie eine Interpretation an.
 
----
 
 ## Fazit zu den Experimenten
 
@@ -86,7 +87,6 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 
 *Quellen: [World Labs Blog](https://www.worldlabs.ai/blog/marble-world-model), [TechCrunch](https://techcrunch.com/2025/11/12/fei-fei-lis-world-labs-speeds-up-the-world-model-race-with-marble-its-first-commercial-product/)*
 
----
 
 ## Reflexion
 
@@ -114,7 +114,7 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 - **Zentrale Erkenntnis:** Man könnte mit diesen "Fehlern" absichtlich als ästhetisches Mittel spielen. Auch 3D gerenderte Bilder in einen Gaussian Splat Generator eingeben – das wäre ein interessanter Workflow.
 - **Offene Frage:** Wie einfach ist es, das wirklich im 3D-Raum umzusetzen? Ich bin eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.
 
-**Keywords:** #Marble #GaussianSplats #3D #Prototyping #UncannyValley #Weltenbau
+**Keywords:** #Marble #GaussianSplats #WorldGeneration #UncannyValley #Weltenbau
 
 <div class="interview-transcript">
 

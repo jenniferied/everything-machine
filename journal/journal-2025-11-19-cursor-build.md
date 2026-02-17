@@ -67,7 +67,6 @@ Die Website ist jetzt in Version 1.0 – Player funktioniert, Journal lädt auto
 
 Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, und das macht einen großen Unterschied, wenn man mit KI programmiert. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen oder anpassen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen – es beschleunigt den Workflow enorm, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
 
----
 
 ## Reflexion
 
@@ -95,7 +94,7 @@ Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, 
 - **Zentrale Erkenntnis:** Garbage in, garbage out. Vorwissen macht einen großen Unterschied – einfache Sachen funktionieren schnell, aber je spezifischer die Anforderungen und je größer die Codebase, desto schwieriger wird es für Laien zu managen.
 - **Offene Frage:** Glaubst du, jemand ohne deine Web-Erfahrung hätte ein ähnliches Ergebnis erreichen können?
 
-**Keywords:** #Cursor #KI-Programmierung #WebDevelopment #Workflow #Lernen
+**Keywords:** #Cursor #KI-Programmierung #GarbageInGarbageOut #Pair-Programming #WebDevelopment
 
 <div class="interview-transcript">
 

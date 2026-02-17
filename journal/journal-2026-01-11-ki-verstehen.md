@@ -2,19 +2,13 @@
 
 **11. Januar 2026**
 
-<div class="chat-intro">
 Ich wollte Künstliche Intelligenz besser für mich selbst verstehen, auch außerhalb des Artistic Research Contexts, bevor ich dort weiter eintauchte. Ich wollte nicht nur die Tools benutzen, die aufkommen, sondern wirklich verstehen, was dort gerade vor sich geht.
-</div>
 
-<div class="chat-intro">
 Eigentlich wollte ich auf der Autofahrt einen Podcast hören. Aber die meisten, die ich gefunden habe, waren für sehr einfache Anwendungsfälle – wie können normale Menschen ChatGPT nutzen, um E-Mails zu schreiben. Ich wollte in die tieferen Themen rein. Ich hatte das Gefühl, dass manche Leute viel weiter sind als ich, und ich wollte genau die Lücken aufholen, wo ich durchfalle.
-</div>
 
-<div class="chat-intro">
 Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügbar ist. Also Freisprechanlage an, Claude im Chat-Interface, das meine Stimme in Text transkribierte. Zugegebenermaßen etwas gefährlich am Anfang – das System stockte manchmal, ich musste Sätze wiederholen, war abgelenkt. Aber dann hatten wir uns eingespielt, und es wurde zu einem echten Gespräch über 30 Minuten Fahrtzeit.
-</div>
 
----
+## Von der Mathematik zur KI
 
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
@@ -75,12 +69,7 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
   </div>
 </div>
 
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>Ja. Das wurde ja im letzten Jahrhundert ein Ding... Das basiert auf Mathe.</p>
-  </div>
-</div>
+## KI-Geschichte: Dartmouth 1956
 
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
@@ -160,24 +149,12 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
   </div>
 </div>
 
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>Okay. Wie realistisch ist es für mich, das zu verstehen?</p>
-  </div>
-</div>
+## Von Filtern zu GPT-2
 
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
-    <p>Ich glaub nicht, dass es so sehr vom Anwendungsfall abhängt... Ich meine, Large Language Models sind ja was anderes als, sagen wir, Blur-Filter in Photoshop, oder?</p>
-  </div>
-</div>
-
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>Ich meine, wir hatten ja schon Noise Reduction und Color Grading. Wieso fühlt sich jetzt alles gleichzeitig an?</p>
+    <p>Large Language Models sind ja was anderes als Blur-Filter in Photoshop. Wir hatten ja schon Noise Reduction und Color Grading. Wieso fühlt sich jetzt alles gleichzeitig an?</p>
   </div>
 </div>
 
@@ -191,10 +168,12 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
   </div>
 </div>
 
+## Transformer, RAG und Agents
+
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble">
-    <p>Und ja. Und dann, je nachdem... GPT-2 kam raus...</p>
+    <p>Ich nutze KI ja nicht nur für Text. Auch für Bilder, 3D, Video... MCP, Skills versus Agents. Können wir noch eine Sekunde auf dieser Ebene bleiben?</p>
   </div>
 </div>
 
@@ -204,27 +183,6 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
     <p>GPT-2 war der Moment, in dem Forscher realisierten, dass Skalierung qualitativ neue Fähigkeiten erschafft – nicht nur bessere Leistung bei denselben Aufgaben.</p>
     <p>Vor GPT-2 dachte jeder, dass spezifische KI-Systeme für jede Aufgabe trainiert werden müssen. Will man Übersetzung? Trainiere ein Übersetzungsmodell. Will man Zusammenfassung? Trainiere ein Zusammenfassungsmodell. GPT-2 zeigte, dass ein genügend großes Sprachmodell, das einfach trainiert wurde, das nächste Wort vorherzusagen, plötzlich all diese Aufgaben erledigen konnte, ohne jemals explizit dafür trainiert worden zu sein.</p>
     <p>Das schockierte die Forscher. Sie erwarteten, dass größere Modelle besser darin werden, Text vorherzusagen, aber sie erwarteten nicht, dass sie spontan Reasoning-Fähigkeiten entwickeln würden, grundlegende Arithmetik oder die Fähigkeit, Code zu schreiben. Diese Fähigkeiten entstanden rein durch Skalierung.</p>
-  </div>
-</div>
-
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>Ja. Jetzt ist es ja nicht mehr nur das Training der Modelle...</p>
-  </div>
-</div>
-
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>Also ich nutze KI ja nicht nur für Text. Auch für Bilder, 3D, Video...</p>
-  </div>
-</div>
-
-<div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble">
-    <p>MCP, und jetzt Skills versus Agents und so. Können wir noch eine Sekunde auf dieser Ebene bleiben?</p>
   </div>
 </div>
 
@@ -239,13 +197,9 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
   </div>
 </div>
 
----
-
 ## Wie lerne ich das wirklich?
 
-<div class="chat-intro">
 Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen gehört – aber habe ich sie wirklich gelernt?
-</div>
 
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
@@ -330,8 +284,6 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
   </div>
 </div>
 
----
-
 ## Reflexion
 
 - **Tools:** Claude App, Spracheingabe im Auto (30 Min.)
@@ -358,7 +310,7 @@ Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen geh
 - **Zentrale Erkenntnis:** Die Theorie ist jetzt da, irgendwo im Hinterkopf. Sie wird erst real, wenn ich sie anwende. Das Suno-Experiment war der direkte nächste Schritt – Claude hatte vorgeschlagen, KI-Verständnis an konkreten Projekten zu verankern.
 - **Offene Frage:** Wie kann ich testen, ob ich wirklich verstanden habe – und nicht nur der Fluency Illusion unterliege?
 
-**Keywords:** #Lernen #Dialog #FluencyIllusion #KI-Geschichte #Autofahrt
+**Keywords:** #FluencyIllusion #Transformer #KI-Geschichte #DialogischesLernen #Informationstheorie
 
 <div class="interview-transcript">
 
