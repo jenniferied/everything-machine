@@ -80,6 +80,9 @@
 | cursor-build | ✅ |
 | ki-verstehen | ✅ |
 | suno-experiment | ✅ |
+| recherche-kepler-zweiter-versuch | ⬜ |
+| ki-verstehen-teil-2 | ⬜ |
+| video-generierung | ⬜ |
 | flux2-character-consistency | ⬜ |
 | agentic-creative-pipeline | ⬜ |
 | fal-ai-kepler-pipeline | ⬜ |

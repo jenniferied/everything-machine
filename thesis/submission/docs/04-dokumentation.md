@@ -14,7 +14,7 @@ abstract: |
   Die vorliegende Arbeit untersucht im Rahmen einer Practice-Led Research mit
   autoethnografischem Ansatz, wie der Einsatz multimodaler KI-Systeme den kreativen
   Prozess bei der Entwicklung einer digitalen Künstleridentität verändert. Am Beispiel
-  von Kepler -- einer maskierten, voxelisierten Musiker-Persona -- werden fünf
+  von Kepler -- einer maskierten, voxelisierten Musiker-Persona -- werden sechs
   Experimente mit KI-Tools aus den Bereichen Bildgenerierung,
   Musikproduktion, Webentwicklung und Texterstellung dokumentiert. Die Analyse identifiziert vier
   zentrale Prozessveränderungen: (1) Flow entsteht unvorhersehbar -- der Website-Build
@@ -38,7 +38,9 @@ Die vorliegende Arbeit versteht Artistic Research im Sinne von Henk Borgdorff [-
 
 Diese Arbeit entsteht in einem Moment, in dem generative KI nahezu alle kreativen Domänen erfasst hat: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Entwicklung Fragen auf, die nicht abstrakt-philosophisch sind, sondern die konkrete Praxis von Künstler\*innen und Medienproduzent\*innen betreffen: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren?
 
-Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „[Kepler](https://www.instagram.com/kepler.mp3/)" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
+Dass diese Werkzeuge nahezu gleichzeitig verfügbar wurden, ist kein Zufall, sondern Folge konvergierender Durchbrüche: Goodfellow et al. [-@goodfellow2014generative] führten 2014 mit Generative Adversarial Networks (GANs) das Prinzip ein, dass zwei konkurrierende Netzwerke lernen, realistische Daten zu erzeugen -- die Grundlage für alle nachfolgenden Bildgenerierungsmodelle. Die Transformer-Architektur von Vaswani et al. [-@vaswani2017attention] ersetzte 2017 rekurrente Netzwerke durch einen Attention-Mechanismus, der parallele Verarbeitung ermöglichte und die Skalierung auf Milliarden von Parametern erlaubte -- die technische Voraussetzung für GPT, DALL-E und die multimodalen Systeme, mit denen diese Arbeit operiert. Rombach et al. [-@rombach2022ldm] verschoben 2022 den Diffusionsprozess in einen komprimierten latenten Raum und machten hochauflösende Bildgenerierung erstmals auf Consumer-Hardware möglich -- Stable Diffusion, das direkte Fundament von ComfyUI, dem zentralen Tool in Experiment 1.
+
+Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „[Kepler](https://www.instagram.com/kepler.mp3/)" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Turkle [-@turkle1995life] zeigte bereits 1995, dass digitale Identitäten nicht bloße Abbilder physischer Personen sind, sondern eigenständige Konstruktionen, die in der Interaktion mit digitalen Umgebungen entstehen und sich verändern. Kepler ist ein solcher Fall: Seine Identität wird nicht abgebildet, sondern durch die Wahl von Maske, Voxel-Stil und visueller Welt aktiv konstruiert -- und genau dieser Konstruktionsprozess wird durch generative KI fundamental verändert. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
 
 Das Projekt „Everything Machine" dokumentiert diesen Prozess transparent auf einer öffentlichen [Website](https://jenniferied.github.io/everything-machine/), der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar. Der Name verweist auf die Idee einer Maschine, die „alles" produzieren kann -- und fragt zugleich, was dieses „alles" wert ist. Denn je mehr ich mit generativer KI arbeitete, desto deutlicher wurde: Sie kann vieles schnell, aber nicht alles gut. Die „Everything Machine" ist zugleich mächtig und begrenzt, und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.
 
@@ -185,13 +187,7 @@ Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Mo
 
 #### Phase 1: Modell-Screening (5 Modelle, A-Pose)
 
-Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen. Der Base-Prompt für alle fünf Modelle lautete:
-
-```{=latex}
-\begin{quote}\small\textit{``A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark pants, standing in a dramatic cinematic environment, volumetric lighting, no face, blocky pixel art style 3D character''}\end{quote}
-```
-
-Ergänzt durch drei Szenen-Varianten: ``...in a neon-lit cyberpunk city at night'', ``...in a foggy forest with golden light rays'' und ``...on a concert stage with dramatic spotlights''. Fünf Modelle wurden getestet:
+Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen. Fünf Modelle wurden getestet:
 
 ```{=latex}
 \begin{figure}[H]
@@ -278,11 +274,7 @@ Era3D & \textcolor{evalred}{nein} & -- & Nutzlos -- eigene Renders besser \\
 
 #### Phase 2: Top-Modelle in Szenen (A-Pose)
 
-Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jeweils drei Varianten mit demselben A-Pose-Input. Der Prompt folgte dem Schema:
-
-```{=latex}
-\begin{quote}\small\textit{``Place this voxel character in [Szene], [Aktion], cinematic lighting''}\end{quote}
-```
+Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jeweils drei Varianten mit demselben A-Pose-Input.
 
 ```{=latex}
 \begin{figure}[H]
@@ -410,13 +402,7 @@ FLUX Kontext schied aus -- Posed Input verstärkte die Gesichtshalluzinationen. 
 
 #### Phase 3a: Signature Scenes v1 -- Ratio-Bug
 
-Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Die vier Szenen-Prompts waren deutlich detaillierter als die vorherigen Phasen, z.\,B. für die Studio-Szene:
-
-```{=latex}
-\begin{quote}\small\textit{``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting, acoustic foam panels on walls, DAW software visible on screens behind him, intimate atmosphere''}\end{quote}
-```
-
-Für NanoBanana wurde der Prompt umformuliert: *``Show this voxel character in a cozy recording studio... IMPORTANT: The character must remain completely faceless.''* Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
+Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT -- alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
 
 ```{=latex}
 \begin{figure}[H]
@@ -588,11 +574,7 @@ NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \end{table}
 ```
 
-Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch, z.\,B. für Night Drive:
-
-```{=latex}
-\begin{quote}\small\textit{``This voxel character is cruising down a night road in a sleek retro 1980s sports car with pop-up headlights. Behind him a glowing city skyline fades into the distance. Ahead, dark mountains rise on the horizon. Full moon in the sky, stars visible. Dashboard glowing softly, headlights cutting through mist. [...] IMPORTANT: The character must remain completely faceless --- no eyes, no nose, no mouth, no sunglasses.''}\end{quote}
-```
+Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch (siehe Prompt-Verzeichnis).
 
 Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. NanoBanana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen. Ab dieser Phase wurde jede Szene einzeln bewertet, da die Qualität nun hoch genug war, um szenenbezogene Unterschiede sinnvoll zu differenzieren.
 
@@ -771,7 +753,7 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 
 #### Gesamtbewertung
 
-Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen:
+Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen. Die verwendeten Prompts sind im Prompt-Verzeichnis nach der Tabelle dokumentiert.
 
 ```{=latex}
 {\footnotesize
@@ -853,6 +835,67 @@ Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen:
 }
 ```
 
+#### Prompt-Verzeichnis
+
+Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, gruppiert nach Phase. Ab Phase 3b wurden für GPT-Image-1.5 und NanoBanana Pro unterschiedliche Prompt-Varianten verwendet -- GPT erhielt strukturierte Prompts (Background/Center/Details/Constraints), NanoBanana natürlichsprachliche. Hier ist jeweils die NanoBanana-Variante dokumentiert; die GPT-Variante beschrieb dieselbe Szene in strukturierter Form.
+
+```{=latex}
+{\scriptsize
+
+\textbf{Phase 1 -- Modell-Screening} (alle Modelle, identischer Prompt)\\[2pt]
+\textit{Base:} ``A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark pants, standing in a dramatic cinematic environment, volumetric lighting, no face, blocky pixel art style 3D character''\\
+\textit{+ Szenen:} ``...in a neon-lit cyberpunk city at night'' / ``...in a foggy forest with golden light rays'' / ``...on a concert stage with dramatic spotlights''
+
+\vspace{6pt}
+
+\textbf{Phase 2 -- Top-Modelle in Szenen} (alle Modelle, identischer Prompt)\\[2pt]
+\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands in pockets, cinematic lighting''\\
+\textit{Forest:} ``...in a foggy forest clearing, sitting on a fallen tree, golden light rays filtering through the canopy''\\
+\textit{Concert:} ``...on a concert stage, performing with arms raised, dramatic spotlights and fog machine effects''
+
+\vspace{6pt}
+
+\textbf{Phase 2b -- Posed-Input-Test} (5 Szenen, identischer Prompt)\\[2pt]
+\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street with hands in pockets, cinematic lighting, reflections on wet ground''\\
+\textit{Park:} ``...sitting on a park bench in autumn, golden leaves falling around him, soft warm afternoon light''\\
+\textit{Concert:} ``...on a dark concert stage, performing with a microphone, dramatic red and blue spotlights, fog machine, crowd silhouettes''\\
+\textit{Rooftop:} ``...standing on a rooftop at sunset, looking over a vast city skyline, wind blowing, golden hour lighting''\\
+\textit{Studio:} ``...in a recording studio, sitting at a mixing desk with headphones around neck, warm ambient lighting, monitors glowing''
+
+\vspace{6pt}
+
+\textbf{Phase 3a -- Signature Scenes v1} (GPT + NanoBanana, identischer Prompt)\\[2pt]
+\textit{Studio:} ``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting [...]''\\
+\textit{Retro Car:} ``...driving a vintage 1970s convertible car across a long suspension bridge at night, city lights reflecting on the water below [...]''\\
+\textit{Spiral Staircase:} ``...walking up an endless spiral staircase that extends infinitely into the sky, passing through layers of clouds and stars, surreal dreamlike atmosphere, the staircase is white marble [...]''\\
+\textit{Pool Floaty:} ``...lying on a pink flamingo pool float in a turquoise swimming pool, seen from directly above as a top-down bird's eye view [...]''
+
+\vspace{6pt}
+
+\textbf{Phase 3b -- Fixed Scenes} (separate GPT/NB-Prompts, hier NB)\\[2pt]
+\textit{Studio:} ``Show this voxel character in a cozy recording studio. He's sitting at a big mixing desk with his hands on the faders, wearing headphones. Warm amber lighting [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Tokyo Rain:} ``This voxel character is walking through a rainy Tokyo alley at night. Neon signs everywhere in Japanese, steam rising from street vents [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase:} ``...walks up an endless spiral staircase made of white marble, floating through deep space. Stars and galaxies surround the staircase [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Pool Floaty:} ``Top-down bird's eye view of a turquoise swimming pool. This voxel character is lying on an inflatable pool ring (donut shape with a hole in the middle) [...] IMPORTANT: The character must remain completely faceless [...]''
+
+\vspace{6pt}
+
+\textbf{Phase 3c -- Final Scenes} (hier NB-Variante)\\[2pt]
+\textit{Studio:} wie Phase 3b\\
+\textit{Night Drive} (neu, ersetzt Tokyo): ``This voxel character is driving a vintage 1970s convertible down a long empty road at night. A big full moon and stars fill the dark sky [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase} (update): ``...walks up an endless spiral staircase [...] The staircase is built from the same voxel cubes as the character --- blocky geometric steps that glow with soft blue light. [...] NOT marble, NOT stone.''\\
+\textit{Pool Floaty:} wie Phase 3b, erweitert um Poolside-Details (Liegen, Cocktails, Pflanzen)
+
+\vspace{6pt}
+
+\textbf{Phase 3d -- Refined + A-Pose-Vergleich} (hier NB-Variante)\\[2pt]
+\textit{Night Drive} (refined): ``This voxel character is cruising down a night road in a sleek retro 1980s sports car with pop-up headlights. Behind him a glowing city skyline fades into the distance. Ahead, dark mountains rise on the horizon. [...] Retro synthwave vibes with teal and magenta tones. IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase} (refined): ``...walks up an endless spiral staircase floating through a dreamy cloudy sky. The sky is soft pastel blue and lavender with layered clouds [...] NOT intense galaxies, just a calm dreamy twilight atmosphere. [...] blocky geometric steps that glow with soft blue neon light. [...]''\\
+\textit{Pool Floaty} (enriched): ``Top-down bird's eye view of a turquoise swimming pool at a luxurious summer resort. [...] Around the pool edge: white sun loungers, a small table with a cocktail and sunscreen, tropical potted plants, neatly folded towels, flip-flops on the tiles. [...]''
+
+}
+```
+
 ```{=latex}
 \clearpage
 ```
@@ -876,18 +919,7 @@ Sieben Modelle wurden systematisch verglichen: PixVerse v5.5, LTX-2, Wan 2.6, Se
 - **Night Drive** (Portrait, 768×1376): Kepler im Retro-Auto auf Wüstenhighway -- Nachtszene, Fahrtbewegung
 - **Spiral Staircase** (Portrait, 768×1376): Kepler auf kosmischer Wendeltreppe -- Prompt forderte blaues Leuchten statt Marmor
 
-Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." Die vier verwendeten Video-Prompts:
-
-```{=latex}
-\begin{quote}\small
-\textbf{Studio:} \textit{``The voxel character nods gently to the beat, fingers resting on the mixing console. Monitor screens glow steadily. Camera holds still.''}\\[4pt]
-\textbf{Pool:} \textit{``The voxel character drifts slowly on the pool ring. Water ripples gently around the float. Camera holds still from above.''}\\[4pt]
-\textbf{Night Drive:} \textit{``The voxel character drives steadily down the desert highway. Headlights illuminate the road ahead. Camera holds still from behind.''}\\[4pt]
-\textbf{Spiral Staircase:} \textit{``The white marble staircase begins to glow with a deep blue light. The voxel character slowly ascends the steps. Camera holds still.''}
-\end{quote}
-```
-
-Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
+Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." (siehe Ergebnisse). Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
 
 ```{=latex}
 \newpage
@@ -924,7 +956,7 @@ Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modell
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_v3_studio}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_studio.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling 3.0 V3}
 \end{minipage}
-\caption{Mittlere Frames, Studio-Szene (Landscape, 7 Modelle). Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
+\caption{Mittlere Frames, Studio-Szene (Landscape, 7 Modelle). Verlinkt auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
 
 \vspace{-4pt}
@@ -948,39 +980,39 @@ Kling 3.0 V3 & \textcolor{evalgreen}{gut} & leicht & Audio Meter schwammig. Bewe
 \begin{figure}[H]
 \centering
 % Row 1: 3 portrait images
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/pixverse_v55_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}PixVerse v5.5}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/wan_v26_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Wan 2.6}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/seedance_pro_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Seedance Pro}
 \end{minipage}
-\vspace{6pt}
+\vspace{3pt}
 % Row 2: 3 portrait images
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/veo31_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Veo 3.1}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_o3_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling O3}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_v3_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling 3.0 V3}
 \end{minipage}
-\vspace{6pt}
+\vspace{3pt}
 % Row 3: LTX-2 landscape (separate — changes aspect ratio)
-\begin{minipage}[t]{0.38\textwidth}\centering
+\begin{minipage}[t]{0.34\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/ltx2_pool}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_pool.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}LTX-2 (Landscape-Output)}
 \end{minipage}
-\caption{Mittlere Frames, Pool-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
+\caption{Mittlere Frames, Pool-Szene (Portrait, 7 Modelle). Verlinkt auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
 
 \vspace{-4pt}
@@ -1004,39 +1036,39 @@ Kling 3.0 V3 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Das be
 \begin{figure}[H]
 \centering
 % Row 1: 3 portrait images
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/pixverse_v55_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/pixverse_v55_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}PixVerse v5.5}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/wan_v26_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/wan_v26_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Wan 2.6}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/seedance_pro_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/seedance_pro_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Seedance Pro}
 \end{minipage}
-\vspace{6pt}
+\vspace{3pt}
 % Row 2: 3 portrait images
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/veo31_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/veo31_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Veo 3.1}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_o3_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_o3_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling O3}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.28\textwidth}\centering
+\begin{minipage}[t]{0.26\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/kling_v3_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/kling_v3_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}Kling 3.0 V3}
 \end{minipage}
-\vspace{6pt}
+\vspace{3pt}
 % Row 3: LTX-2 landscape (separate — changes aspect ratio)
-\begin{minipage}[t]{0.38\textwidth}\centering
+\begin{minipage}[t]{0.34\textwidth}\centering
 \href{https://jennifer-meier.github.io/everything-machine/\#video/ltx2_night_drive}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_night_drive.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}LTX-2 (Landscape-Output)}
 \end{minipage}
-\caption{Mittlere Frames, Night-Drive-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
+\caption{Mittlere Frames, Night-Drive-Szene (Portrait, 7 Modelle). Verlinkt auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
 
 \vspace{-4pt}
@@ -1092,7 +1124,7 @@ Kling 3.0 V3 & okay & leicht & Etwas besser als Kling O3. \\
 \href{https://jennifer-meier.github.io/everything-machine/\#video/ltx2_spiral_staircase}{\includegraphics[width=\linewidth]{experiments/fal-pipeline/outputs/video_test_02_frames/ltx2_spiral_staircase.jpg}}\\[1pt]
 {\scriptsize\color{darktext!60}LTX-2 (Landscape-Output)}
 \end{minipage}
-\caption{Mittlere Frames, Spiral-Staircase-Szene (Portrait, 7 Modelle). LTX-2 ändert das Seitenverhältnis zu Landscape. Poster-Frames verlinken auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
+\caption{Mittlere Frames, Spiral-Staircase-Szene (Portrait, 7 Modelle). Verlinkt auf die \href{https://jennifer-meier.github.io/everything-machine/\#generations}{Video-Galerie}.}
 \end{figure}
 
 \vspace{-4pt}
@@ -1134,7 +1166,7 @@ LTX-2 & \textcolor{evalgreen}{gut} & \textcolor{evalred}{schlecht} & \textcolor{
 
 Die Ergebnisse zeigen ein klares Muster: **Preis korreliert mit Qualität, aber nicht linear.** Kling O3 (\$0.84) war mit drei von vier guten Ergebnissen der zuverlässigste Kandidat. LTX-2 (\$0.36) scheiterte an drei von vier Szenen, primär durch ein technisches Problem -- das Modell erzwingt ein 16:9-Seitenverhältnis und beschneidet Portrait-Inputs.
 
-Das auffälligste Phänomen war die **Gesichts-Halluzination bei Portrait-Szenen**. Keplers bewusst gesichtsloser Voxel-Kopf wurde von mehreren Modellen (Wan, Seedance, PixVerse) mit realistischen Gesichtszügen versehen -- ein Problem, das bei der Landscape-Studio-Szene nicht auftrat. Die Modelle scheinen auf menschliche Gesichter als Default trainiert zu sein und können die bewusste Abwesenheit eines Gesichts nicht beibehalten. Dieses Phänomen spiegelt die Erfahrung aus Experiment 1 wider: Auch ComfyUI halluzinierte Gesichter in Keplers Maske.
+Das auffälligste Phänomen war die **Gesichts-Halluzination bei Portrait-Szenen**. Keplers bewusst gesichtsloser Voxel-Kopf wurde von mehreren Modellen (Wan, Seedance, PixVerse) mit realistischen Gesichtszügen versehen -- ein Problem, das bei der Landscape-Studio-Szene nicht auftrat. Die Modelle scheinen auf menschliche Gesichter als Default trainiert zu sein und können die bewusste Abwesenheit eines Gesichts nicht beibehalten. Dieses Phänomen spiegelt die Erfahrung aus Experiment 1 wider: Auch ComfyUI halluzinierte Gesichter in Keplers Maske. Hámošová und Rusnák [-@hamosova2023troublinggan] zeigen in ihrem Projekt *TroublingGAN*, dass das Scheitern generativer Modelle ästhetisch produktiv sein kann -- visuelle Ambiguität als bewusstes Gestaltungsmittel statt als Fehler. Keplers Gesichts-Halluzinationen sind ein konkreter Fall dieser Spannung: Was das Modell als Defizit behandelt (die Abwesenheit eines Gesichts), ist für die Künstleridentität konstitutiv.
 
 Überraschend war die **Inkonsistenz innerhalb einzelner Modelle**. Seedance Pro war bei Studio und Pool schlecht bis mittelmäßig, lieferte aber beim Night Drive das überzeugendste Ergebnis aller Modelle -- ein Befund, der gegen simple Rankings spricht. Veo 3.1 scheiterte beim Studio, glänzte aber beim Pool. Diese Szenenabhängigkeit zeigt, dass kein Modell universal überlegen ist -- die Wahl muss pro Szene getroffen werden.
 
@@ -1156,7 +1188,7 @@ KI beschleunigt und begrenzt den kreativen Prozess gleichzeitig. Exploration und
 
 Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin, ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
 
-Die wechselnden Rollen lassen sich als Wanderung auf Deterdings [-@deterding2017mixed] Spektrum lesen — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Und: "Garbage in, garbage out": Domänenwissen ist die Voraussetzung für produktive Kollaboration, nicht KI-Kompetenz. Wer nicht weiß, was gut ist, kann nicht kuratieren. In Experiment 5 kam eine weitere Rolle hinzu: die der Orchestratorin, die nicht mehr direkt promptet, sondern einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert -- eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
+Die wechselnden Rollen lassen sich als Wanderung auf Deterdings [-@deterding2017mixed] Spektrum lesen — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist nicht Unschärfe, sondern Qualität. Ellis, Adams und Bochner [-@ellis2011autoethnography] beschreiben autoethnografische Forschung als Methode, die persönliche Erfahrung mit kultureller Analyse verbindet. Die wechselnden Rollen -- Kuratorin, Dirigentin, Kollaborateurin, Lernende -- sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Domänenwissen erweist sich erneut als Voraussetzung für produktive Kollaboration. Wer nicht weiß, was gut ist, kann nicht kuratieren. In Experiment 5 kam eine weitere Rolle hinzu: die der Orchestratorin, die nicht mehr direkt promptet, sondern einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert -- eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
 
 ### 4. KI-Burnout und KI-Enthusiasmus
 
@@ -1186,7 +1218,7 @@ Diese Veränderungen sind nicht linear und nicht planbar; sie entstehen im itera
 
 ## Zusammenfassung der Ergebnisse
 
-Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Led Research, dokumentiert über fünf Experimente mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
+Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Led Research, dokumentiert über sechs Experimente mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
 
 Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik; Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens zeigt sich ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren; das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle fundamental verschoben*: von der Ausführenden zur Kuratorin, Dirigentin, Lernenden, wobei Domänenwissen sich als entscheidende Voraussetzung erwies, nicht KI-Kompetenz. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
 
@@ -1198,7 +1230,7 @@ Die Ergebnisse legen nahe, dass bestehende Kreativitätstheorien im Kontext der 
 
 Galanter [-@galanter2003generative] zeigt, dass generative Kunst als Methode verstanden werden muss — es geht um das *Wie* der Produktion, nicht um das *Was* des Ergebnisses. Diese Perspektive verschiebt die Bewertung: Die Frage ist nicht, ob KI-generierte Bilder "authentisch" sind, sondern wie sich der kreative Prozess verändert, wenn ein autonomes System beteiligt ist. Der Speed-vs-Control-Tradeoff lässt sich als Navigation auf Galanters Ordnung-Chaos-Skala beschreiben: KI-Tools beschleunigen die Exploration des konzeptuellen Raums, aber die Kontrolle über die Zone effektiver Komplexität — das ästhetisch Interessante — bleibt beim Menschen.
 
-Borgdorff [-@borgdorff2012conflict] argumentiert, dass künstlerische Forschung Wissen freilegt, das sich nur durch die Praxis selbst zeigt. Das bestätigt sich hier konkret: Mein Vorwissen über Keplers Ästhetik -- die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem -- ließ sich als Prompt-Anweisung an KI-Systeme nur begrenzt übertragen. "Garbage in, garbage out" erwies sich als Grundregel: Ohne Domänenwissen produziert die Kollaboration generische Ergebnisse. Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
+Borgdorff [-@borgdorff2012conflict] argumentiert, dass künstlerische Forschung Wissen freilegt, das sich nur durch die Praxis selbst zeigt. Das bestätigt sich hier konkret: Mein Vorwissen über Keplers Ästhetik -- die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem -- ließ sich als Prompt-Anweisung an KI-Systeme nur begrenzt übertragen. Ohne Domänenwissen produziert die Kollaboration generische Ergebnisse — das bestätigt den in Abschnitt 2 eingeführten Zusammenhang zwischen Expertise und Outputqualität. Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
 
 Besonders aufschlussreich ist die Verbindung zu Schön [-@schoen1983practitioner]: Reflection-in-Action, das spontane Reagieren auf unerwartete Situationen in der Praxis, beschreibt präzise den Modus, in dem ich auf KI-Halluzinationen, unerwartete Outputs und produktive Fehler reagierte. Das Scheitern eines Prompts war kein Abbruchkriterium, sondern Auslöser für reflektierte Anpassung. Diese Beobachtung erweitert Schöns Konzept um eine neue Dimension: In der Mensch-KI-Kollaboration ist die "Situation, die zurückspricht" kein physisches Material, sondern ein probabilistisches System mit eigener Handlungslogik. Der emotionale Zyklus zwischen Enthusiasmus und Burnout lässt sich als Konsequenz dieser permanenten Reflection-in-Action lesen: Die Situation spricht ständig zurück, und das kostet Kraft.
 

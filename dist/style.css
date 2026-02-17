@@ -114,17 +114,12 @@ main.container {
     }
 }
 
+.timeline-horizontal {
+    scrollbar-width: none; /* Firefox */
+}
+
 .timeline-horizontal::-webkit-scrollbar {
-    height: 4px;
-}
-
-.timeline-horizontal::-webkit-scrollbar-track {
-    background: #1f2937;
-}
-
-.timeline-horizontal::-webkit-scrollbar-thumb {
-    background: #4ade80;
-    border-radius: 2px;
+    display: none; /* Chrome/Safari */
 }
 
 .timeline-list {
@@ -152,8 +147,8 @@ main.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 110px;
-    max-width: 200px;
+    min-width: 80px;
+    max-width: 140px;
     height: auto; /* auto statt 100% für Safari */
     max-height: 100%;
     justify-content: center;

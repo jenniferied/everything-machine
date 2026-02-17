@@ -56,17 +56,17 @@ export class JournalManager {
    */
   async initialize() {
     console.log('[JournalManager] Initializing...');
-    
-    // Show loading state
-    this.showLoadingState();
-    
+
     // Listen to page navigation events
     this.eventBus.on('nav:pageChanged', this.handlePageChanged);
-    
+
     // Setup resize handler
     window.addEventListener('resize', this.handleResize);
-    
-    console.log('[JournalManager] Initialized (not loaded yet)');
+
+    // Load entries immediately (9 small markdown files — no performance concern)
+    this.load();
+
+    console.log('[JournalManager] Initialized');
   }
 
   /**

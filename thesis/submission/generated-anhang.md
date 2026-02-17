@@ -1215,146 +1215,65 @@ Ein vielversprechender Ansatz: Statt Face-Tools zu nutzen, kann ich über Depth 
 
 Das umgeht das Face-Problem elegant: Die Depth Map sieht nur Geometrie, keine Gesichtszüge.
 
-#### 3D-native Modelle — der eigentliche Hoffnungsschimmer
+#### Von der Frustration zum System
 
-Was mich wirklich überrascht hat: Es gibt inzwischen Modelle, die nativ in 3D arbeiten und teilweise explizit mit Voxel-Repräsentationen.
+Die Gemini-Chats haben gezeigt: Das Potenzial ist da, aber die Steuerung über ein Chat-Fenster ist zu grob. Manche Anweisungen werden befolgt, andere ignoriert — und bei jedem neuen Versuch muss ich einen frischen Chat öffnen. Das skaliert nicht.
 
-**[TRELLIS 2](https://github.com/microsoft/TRELLIS.2)** (Microsoft, MIT-Lizenz) arbeitet mit einer voxel-nativen Repräsentation — sogenannten *O-Voxels* (field-free sparse voxels). Das Modell generiert 3D-Assets aus Text oder Bildern und denkt dabei nativ in Voxeln. Keine 2D-Projektion, keine Face Detection, keine implizite Annahme über Gesichter.
+Parallel hatte ich [fal.ai](https://fal.ai) entdeckt — eine Plattform, die gehostete Inferenz für dutzende Bildmodelle anbietet. Kein lokales Setup, keine GPU, alles über API. Die Idee: Statt manuell in Chat-Fenstern zu experimentieren, ein Python-Skript schreiben, das systematisch verschiedene Modelle mit denselben Prompts und Referenzbildern aufruft. Cursor und Claude Code als Entwicklungsumgebung, fal.ai als Inferenz-Backend.
+
+Der Workflow-Shift war fundamental: Nicht mehr "wie überrede ich ein einzelnes Modell?" — sondern "wie vergleiche ich neun Modelle systematisch miteinander?". Ein Automatisierungs-Problem statt eines Überredungs-Problems. Und das erste Mal, dass Claude Code nicht nur bei der Recherche half, sondern den gesamten Experiment-Workflow ermöglichte: Skript schreiben, API-Calls strukturieren, Ergebnisse sortieren.
+
+#### 9 Modelle, 7 Phasen
+
+Das Experiment (Experiment 05) wuchs über mehrere Wochen in sieben Phasen:
+
+**Phase 1 — Screening:** Neun Modelle mit demselben Kepler-A-Pose-Referenzbild testen. Erste Sortierung: Welche respektieren die Voxel-Ästhetik, welche halluzinieren Gesichter?
+
+**Phase 2 — Szenen:** Die besten Modelle in vier Signature Scenes testen (Studio, Pool, Night Drive, Spiral Staircase) — jeweils in Quer- und Hochformat.
+
+**Phase 2b — Der Durchbruch:** Wechsel vom A-Pose- zum Posed-Referenzbild. Sofort bessere Ergebnisse — die dynamischere Pose gibt den Modellen mehr Kontext über Keplers Körpersprache.
+
+**Phase 3 — Signature Scenes:** Verfeinerte Prompts, optimierte Parameter. Die finalen Bilder sind die, die auf der Bild-Generationen-Seite zu sehen sind.
+
+**Ergebnis:** Zwei klare Gewinner — *GPT Image 1.5* (OpenAI, über fal.ai) und *NanoBanana Pro* (Gemini 2.5 Flash). Beide respektieren Keplers gesichtslose Voxel-Ästhetik konsistent, beide produzieren in verschiedenen Szenen und Formaten brauchbare Ergebnisse. Die günstigeren Modelle (MiniMax, Z-Image) scheiterten am Face-Bias — genau das Problem, das schon ComfyUI hatte.
+
+#### Highlights
+
+Ein paar der stärksten Ergebnisse aus 134 generierten Bildern:
 
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/24c838c2058dd1fe25e9b14df82018db.jpg}
-\caption{TRELLIS 2 generiert 3D-Modelle nativ aus Voxel-Repräsentationen — genau die Datenstruktur, in der Kepler existiert.}
-\end{figure}
-```
-**[XCube](https://github.com/nv-tlabs/XCube)** (NVIDIA) nutzt hierarchische Voxel-Strukturen für hochauflösende 3D-Generierung. Ein Forschungsprojekt, kein Produkt — aber der Ansatz, über Voxel-Hierarchien zu arbeiten, ist für Kepler natürlicher als jede 2D-basierte Methode.
-
-**[Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2)** (Tencent, Open Source) ist ein vollständiges 3D-Generierungs-Ökosystem mit Text-to-3D und Image-to-3D. Weniger voxel-spezifisch, aber als offenes Modell experimentierfreundlich.
-
-```{=latex}
-\begin{figure}[H]
+\begin{minipage}{0.3\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{_img_cache/664b4f3daeeff10d13a29bc889ea4850.jpg}
-\caption{Hunyuan3D-2 (HY3D) — Tencents Open-Source 3D-Generierungsmodell.}
+\includegraphics[width=\textwidth]{_img_cache/afdb4a693d30adc451d56283d3cfa3bf.jpg}\\[2pt]{\small\color{darktext!70} GPT Image 1.5 — Kepler im Studio, posed. Mein Lieblingsbild aus dem gesamten Experiment.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/8ff2109cf1ac44dd7d27cfb5a337962b.jpg}\\[2pt]{\small\color{darktext!70} NanoBanana — Studio-Szene, Querformat. Atmosphärisch stark.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/53270ebe57e96b3588ecddddd48b5760.jpg}\\[2pt]{\small\color{darktext!70} NanoBanana — Night Drive, Querformat.}
+\end{minipage}
+
+\vspace{4pt}
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/b5f2aebff0e72d5a49487ad5a700829d.jpg}\\[2pt]{\small\color{darktext!70} GPT Image 1.5 — Pool-Szene, Querformat.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/26d444b34bed576ed82a73626413cc5f.jpg}\\[2pt]{\small\color{darktext!70} NanoBanana — Spiral Staircase, Querformat.}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{_img_cache/333d12345ed1bbedb56dfaeca2854d88.jpg}\\[2pt]{\small\color{darktext!70} GPT Image 1.5 — Night Drive, Querformat.}
+\end{minipage}
 \end{figure}
 ```
-**[VoxAI](https://www.voxelai.ai/)** positioniert sich explizit als voxel-spezifisches KI-Tool. Noch sehr früh und wenig dokumentiert, aber allein die Existenz eines Tools, das sich auf Voxel-Generierung spezialisiert, zeigt: Es gibt Nachfrage für genau diesen Anwendungsfall.
-
-#### TroublingGAN — ein verwandtes Artistic-Research-Projekt
-
-Bei der Recherche bin ich auf ein Projekt gestoßen, das mein eigenes Thema spiegelt: **[TroublingGAN](https://www.researchcatalogue.net/view/1486468/1586300)** von Lenka Hámošová und Pavol Rusnák (JAR 31). Sie haben GANs bewusst an nicht-standardisierten Körpern scheitern lassen und das Scheitern selbst als ästhetische Strategie dokumentiert.
-
-Ich habe fast aufgehört zu scrollen, als ich das gefunden habe. Jemand anderes hatte dasselbe Problem — und hat daraus Kunst gemacht, statt es als Bug abzutun. Das ist exakt mein Thema: Was passiert, wenn generative KI auf einen Charakter trifft, der die impliziten Normen der Trainingsdaten bricht? Bei mir ist es das fehlende Gesicht. Bei Hámošová & Rusnák waren es nicht-normative Körper. Das Ergebnis ist dasselbe: Das Modell *normalisiert*, weil es auf Normalität trainiert wurde.
-
-#### Die Kern-Erkenntnis
-
-Die Repräsentationsform bestimmt, ob nicht-normative Ästhetik überlebt.
-
-2D-Bildgeneratoren arbeiten mit Pixeln und impliziten Annahmen über Gesichter, Körper, Proportionen. Sie *wollen* normalisieren, weil ihre Trainingsdaten normativ sind. 3D-native Modelle arbeiten mit Geometrie — Voxel, Meshes, Point Clouds. Sie haben keine implizite Erwartung, dass an einer bestimmten Stelle ein Gesicht sein muss.
-
-Das bedeutet: Nicht die KI als solche ist das Problem. Die Repräsentationsebene ist es. Und die kann ich wählen.
-
-#### Tool-Vergleich
-
-| Tool | Typ | Voxel-nativ | Face-Bias | Lizenz | Status |
-|------|-----|:-----------:|:---------:|--------|--------|
-| ComfyUI + Face Tools | 2D | Nein | Hoch | Open Source | Gescheitert |
-| ControlNet Depth | 2D | Nein | Niedrig | Open Source | Vielversprechend |
-| TRELLIS 2 | 3D | **Ja** | Keiner | MIT | Nächster Test |
-| XCube | 3D | **Ja** | Keiner | Research | Beobachten |
-| Hunyuan3D-2 | 3D | Nein | Niedrig | Open Source | Ausprobieren |
-| VoxAI | 3D | **Ja** | Keiner | Kommerziell | Beobachten |
-
-#### Fal.ai — API-Zugang zu gesichtsfreien Pipelines
-
-*Nachtrag, 15. Februar 2026*
-
-Nach der Recherche zu lokalen Tools (ComfyUI, TRELLIS 2) habe ich systematisch untersucht, welche Modelle über [fal.ai](https://fal.ai) als API verfügbar sind und für Kepler in Frage kommen. Fal.ai bietet gehostete Inferenz für dutzende Bildmodelle — kein lokales Setup, keine GPU nötig. Die Frage: Gibt es Modelle, die Keplers Voxel-Ästhetik respektieren, ohne ein Gesicht hineinzuinterpretieren?
-
-##### Strategie 1: Depth Maps & Edge Detection (Face-Bias umgehen)
-
-Die vielversprechendste Kategorie. Diese Modelle arbeiten mit Struktursignalen statt Gesichtserkennung:
-
-| Modell | Input | Was es tut | Preis |
-|--------|-------|-----------|-------|
-| [FLUX.1 Control LoRA Depth](https://fal.ai/models/fal-ai/flux-control-lora-depth) | Depth Map + Text | Überträgt räumliche Struktur via Tiefenkarte auf generiertes Bild | $0,04/MP |
-| [FLUX.1 Control LoRA Depth (i2i)](https://fal.ai/models/fal-ai/flux-control-lora-depth/image-to-image) | Bild + Depth Map + Text | Wie oben, aber mit zusätzlichem Referenzbild | $0,04/MP |
-| [FLUX.1 Control LoRA Canny](https://fal.ai/models/fal-ai/flux-control-lora-canny) | Canny Edge Map + Text | Überträgt Kantenstruktur — perfekt für Keplers blockige Silhouette | $0,04/MP |
-| [Z-Image Turbo ControlNet](https://fal.ai/models/fal-ai/z-image/turbo/controlnet) | Edge, Depth oder Pose + Text | Schnelles 6B-Modell mit ControlNet-Support | $0,007/MP |
-| [FLUX.1 General](https://fal.ai/models/fal-ai/flux-general) | ControlNet + LoRA + IP-Adapter | Alles kombinierbar: Depth, Canny, LoRA, IP-Adapter | $0,075/MP |
-
-**Warum das für Kepler funktioniert:** Eine Depth Map von Kepler im A-Pose enthält nur Geometrie — Voxel-Blöcke, Silhouette, räumliche Tiefe. Kein Modell wird versuchen, Augen in eine Tiefenkarte zu halluzinieren. Der Canny-Ansatz ist noch robuster: Kantenlinien einer Voxel-Figur sind geometrisch eindeutig und lassen keinen Raum für Gesichtsinterpretation.
-
-**Workflow-Idee:** Kepler-Referenzbild $\rightarrow$ Depth Map extrahieren (lokal oder via API) $\rightarrow$ Depth Map + Prompt an FLUX Control LoRA $\rightarrow$ Kepler in neuer Szene, Silhouette erhalten.
-
-##### Strategie 2: Referenzbild-basierte Konsistenz
-
-Diese Modelle nehmen ein oder mehrere Referenzbilder und generieren neue Bilder, die den Charakter beibehalten:
-
-| Modell | Input | Was es tut | Preis |
-|--------|-------|-----------|-------|
-| [MiniMax Subject Reference](https://fal.ai/models/fal-ai/minimax/image-01/subject-reference) | Referenzbild + Text | Konsistente Charakterdarstellung aus Referenz | $0,01/Bild |
-| [InstantCharacter](https://fal.ai/models/fal-ai/instant-character) | Referenzbild + Text | Charakter in neuen Posen und Stilen | $0,10/MP |
-| [USO](https://fal.ai/models/fal-ai/uso) | Referenzbild + Text | Subject-driven Generation | $0,10/MP |
-| [UNO](https://fal.ai/models/fal-ai/uno) | Referenzbild(er) + Text | Transformiert Referenz via Textprompt | $0,05/MP |
-| [Vidu Reference-to-Image](https://fal.ai/models/fal-ai/vidu/q2/reference-to-image) | Referenzbild + Text | Neue Bilder aus Referenz + Prompt | $0,05/Bild |
-| [Kling O1 Image](https://fal.ai/models/fal-ai/kling-image/o1) | Referenzbild + Text | Starke Referenzkontrolle für Edits | $0,03/Bild |
-
-**Risiko:** Diese Modelle sind oft auf Gesichtskonsistenz trainiert (Porträts, Produktfotos). Ob sie einen gesichtslosen Voxel-Charakter als "Subjekt" akzeptieren, muss getestet werden. MiniMax Subject Reference ist mit $0,01 pro Bild billig genug für schnelle Tests. InstantCharacter klingt vielversprechend, aber der Name ("Character") impliziert möglicherweise menschliche Figuren.
-
-##### Strategie 3: Image Editing (Kepler-Foto als Ausgangspunkt)
-
-Statt von Null zu generieren: Ein existierendes Kepler-Bild als Input nehmen und per Textanweisung modifizieren.
-
-| Modell | Input | Was es tut | Preis |
-|--------|-------|-----------|-------|
-| [FLUX 2 Edit](https://fal.ai/models/fal-ai/flux-2/edit) | Bild + Text | Natürlichsprachliche Bildbearbeitung | $0,012/MP |
-| [FLUX 2 Pro](https://fal.ai/models/fal-ai/flux-2-pro) | Bild + Text | Höhere Qualität, Stiltransfer | $0,03/MP |
-| [FLUX Kontext Pro](https://fal.ai/models/fal-ai/flux-pro/kontext) | Referenz + Text | Lokale Edits + komplexe Transformationen | $0,04/Bild |
-| [FLUX Kontext Pro Multi](https://fal.ai/models/fal-ai/flux-pro/kontext/multi) | Mehrere Referenzen + Text | Mehrere Referenzbilder kombinierbar | $0,04/Bild |
-| [Bria Reimagine](https://fal.ai/models/bria/reimagine/3.2) | Strukturbild + Text | Struktur erhalten, neuer Stil | $0,04/Bild |
-
-**Bester Kandidat:** FLUX Kontext Pro Multi — ich kann Kepler im A-Pose *und* in der Casual-Pose als Referenz einspeisen und per Text eine neue Szene beschreiben. Das Modell sieht die Voxel-Ästhetik aus mehreren Blickwinkeln und muss sie nicht "erraten".
-
-##### Strategie 4: 3D & Multiview
-
-| Modell | Input | Was es tut | Preis |
-|--------|-------|-----------|-------|
-| [Era 3D](https://fal.ai/models/fal-ai/era-3d) | Einzelbild | Generiert Multiview + Normalen aus einem Bild | $0,001/Sek |
-| [Hunyuan World](https://fal.ai/models/fal-ai/hunyuan_world) | Einzelbild | Einzelbild $\rightarrow$ Panorama / 3D-Welt | — |
-
-**Era 3D ist besonders interessant:** Aus einem einzigen Kepler-Foto könnte ich automatisiert Multiviews generieren — verschiedene Blickwinkel *mit* Normal Maps. Die Normalen könnten dann wiederum als ControlNet-Input für weitere Generierungen dienen. Quasi ein 2D$\rightarrow$3D$\rightarrow$2D-Pipeline, die Keplers Geometrie über mehrere Stufen konsistent hält. Und das für weniger als einen Cent pro Durchlauf.
-
-##### Strategie 5: Video (Kepler animieren)
-
-| Modell | Input | Was es tut | Preis |
-|--------|-------|-----------|-------|
-| [Wan 2.1 Image-to-Video](https://fal.ai/models/fal-ai/wan-i2v) | Bild + Text | Kepler-Bild $\rightarrow$ animiertes Video | $0,40/Video |
-| [DreamActor v2](https://fal.ai/models/fal-ai/bytedance/dreamactor/v2) | Bild + Motion-Video | Motion Transfer — **explizit für nicht-menschliche Charaktere** | $0,05/Sek |
-| [Kling O3 Reference-to-Video](https://fal.ai/models/fal-ai/kling-video/o3/pro/reference-to-video) | Referenzbild + Text | Charakter-konsistentes Video | $0,28/Sek |
-| [Wan 2.6 Reference-to-Video](https://fal.ai/models/wan/v2.6/reference-to-video/flash) | Referenzbild + Text | Referenz$\rightarrow$Video, extrem günstig | ~$0,0001/Sek |
-
-**DreamActor v2 ist der Gamechanger:** ByteDance bewirbt es explizit mit "Great performance for non-human and multiple characters". Das ist exakt Keplers Anwendungsfall — ein nicht-menschlicher Charakter, dessen Bewegungen von einem Motion-Referenzvideo übertragen werden. Ich könnte mich selbst filmen und die Bewegung auf Kepler übertragen, ohne dass das Modell nach einem Gesicht sucht.
-
-##### Zwischenfazit fal.ai
-
-Die API-Landschaft hat sich seit meinem ComfyUI-Experiment im November fundamental verändert. Statt lokal mit Face-Tools zu kämpfen, kann ich über fal.ai auf Modelle zugreifen, die das Face-Problem gar nicht erst haben:
-
-1. **Depth/Canny ControlNets** umgehen Face-Bias, weil sie nur Geometrie sehen
-2. **Era 3D** ermöglicht einen 2D$\rightarrow$Multiview$\rightarrow$2D-Loop für geometrische Konsistenz
-3. **DreamActor v2** ist das erste Modell, das *explizit* nicht-menschliche Charaktere unterstützt
-4. **FLUX Kontext Multi** kann mehrere Kepler-Referenzen gleichzeitig verarbeiten
-
-Die Preise sind niedrig genug für systematisches Experimentieren: Ein Batch von 100 Depth-Control-Bildern kostet ~$4. Das macht eine *agentic pipeline* realistisch — Claude Code könnte systematisch Prompts variieren, Referenzbilder kombinieren und die Ergebnisse evaluieren. Genau das Experiment 8 aus dem Roadmap, nur mit API statt lokalem ComfyUI.
-
-#### Ausblick
-
-Mein nächstes Experiment wird ein Hybrid-Ansatz: TRELLIS 2 für 3D-Generierung von Kepler-ähnlichen Voxel-Formen, kombiniert mit dem ControlNet-Depth-Inpainting-Workflow für 2D-Konzeptbilder. Statt das Face-Problem zu lösen, umgehe ich es — indem ich Tools wähle, die gar nicht erst nach Gesichtern suchen.
-
-Zusätzlich werde ich die fal.ai-Modelle systematisch testen — beginnend mit den günstigsten (Z-Image ControlNet, MiniMax Subject Reference, Era 3D) und aufsteigend zu den leistungsstärkeren (FLUX Kontext Multi, DreamActor v2). Jedes Modell wird mit demselben Kepler-Referenzset getestet: Casual-Pose, A-Pose und — falls Era 3D funktioniert — automatisch generierte Multiviews.
-
-Ob das funktioniert, weiß ich nicht. Vielleicht scheitert TRELLIS 2 auf eine völlig andere Weise. Aber zum ersten Mal habe ich nicht nur eine Hypothese, sondern ein konkretes Arsenal an Tools, die ich testen kann — und eine API, die systematisches Experimentieren erschwinglich macht.
+Alle 134 Ergebnisse sind auf der Bild-Generationen-Seite zu sehen.
 
 \newpage
 

@@ -237,7 +237,7 @@ export class ReflectionComponent {
           um kulturelle Praktiken zu verstehen. Die Struktur basiert auf <em>Reflection-in-Action</em> (Schön, 1983).</p>
 
           <p><strong>Die Forschungsfrage</strong></p>
-          <p><em>„Wie verändert der Einsatz generativer KI-Werkzeuge meinen kreativen Arbeitsprozess?"</em></p>
+          <p><em>„Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?"</em></p>
 
           <p><strong>Interview-Prozess</strong></p>
           <p>Nach jeder dokumentierten Session wird ein strukturiertes Interview mit Claude Code durchgeführt.

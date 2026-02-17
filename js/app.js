@@ -410,7 +410,7 @@ class Application {
         title: "MEIN BABE",
         album: "BLUE EDITION (EP)",
         year: "2023",
-        src: "assets/audio/PLATZHALTER_02.mp3",
+        src: "assets/audio/02_Mein_Babe.mp3",
         cover: "https://i.scdn.co/image/ab67616d00001e02fbf8a6a5cfd2baf88ce2599b",
         spotifyID: "7BRwvMOzuYk57CNlOjctAL"
       },
@@ -419,7 +419,7 @@ class Application {
         title: "Für mich",
         album: "Für mich (Single)",
         year: "2023",
-        src: "assets/audio/PLATZHALTER_03.mp3",
+        src: "assets/audio/03_Fuer_Mich.mp3",
         cover: "https://i.scdn.co/image/ab67616d00001e02576df0829caf083b089f9e32",
         spotifyID: "4BnGlg3l5KcRVADo5pPymE"
       },
@@ -428,7 +428,7 @@ class Application {
         title: "Status",
         album: "Status (Album)",
         year: "2021",
-        src: "assets/audio/PLATZHALTER_04.mp3",
+        src: "assets/audio/04_Status.mp3",
         cover: "https://i.scdn.co/image/ab67616d00001e02cd3b41e206e39be67db3e727",
         spotifyID: "5grxrbIDjr0EAvnHJaom5w"
       },
@@ -437,7 +437,7 @@ class Application {
         title: "BLANCA",
         album: "RED EDITION (EP)",
         year: "2022",
-        src: "assets/audio/PLATZHALTER_05.mp3",
+        src: "assets/audio/05_Blanca.mp3",
         cover: "https://i.scdn.co/image/ab67616d00001e02b564493bcfb28734944bde34",
         spotifyID: "2rNoHEeDoW5ZuRsLVV5lRf"
       },
@@ -446,7 +446,7 @@ class Application {
         title: "DOSIS",
         album: "RED EDITION (EP)",
         year: "2022",
-        src: "assets/audio/PLATZHALTER_06.mp3",
+        src: "assets/audio/06_Dosis.mp3",
         cover: "https://i.scdn.co/image/ab67616d00001e02b564493bcfb28734944bde34",
         spotifyID: "5kdxgteCgC78DquVqeKeB"
       }
