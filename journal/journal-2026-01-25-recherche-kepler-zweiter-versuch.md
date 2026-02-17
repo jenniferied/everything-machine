@@ -124,3 +124,81 @@ Ein paar der stärksten Ergebnisse aus 134 generierten Bildern:
 
 Alle 134 Ergebnisse sind auf der Bild-Generationen-Seite zu sehen.
 
+## Reflexion
+
+- **Tools:** Gemini/NanoBanano Pro, fal.ai API, Claude Code, VS Code, Blender (Referenzrender)
+- **Workflow:** fundamental verändert — vom manuellen Überreden eines Modells zum automatisierten Vergleich von neun Modellen über API, mit strukturierter Bewertung per Interview
+- **Autorschaft:** technische Problemlöserin und Kuratorin — Claude Code gab Instruktionen, ich setzte auf, bezahlte, bewertete; Autorschaft war schon vor KI-Einsatz verteilt (Keplers 3D-Modell stammt von Gavin und anderen Artists)
+- **Iteration:** reproduzierbarer Workflow für zukünftige Modellvergleiche entstanden; schnelle Ergebnisse ermöglichten breites Screening, aber ungenaue Instruktionen führten zu verschwendeten Runs (z.B. Bild gestretcht statt erweitert)
+- **Scheitern:** Gemini ignoriert Anweisungen selektiv (Hochformat, Leuchteffekte, Typografie-Stil) — Chat-basierte Art Direction skaliert nicht; Claude Code stretchte Bild statt es zu erweitern, weil Instruktion zu vage war
+- **Erkenntnis:** "Ich fühle mich nicht wie eine Künstlerin — macht mir aber nichts aus." Autorschaft ist in diesem Projekt von Anfang an verteilt, nicht erst durch KI
+
+**Keywords:** #fal.ai #Automatisierung #Kuratorin #FaceBias #Autorschaft
+
+<div class="interview-transcript">
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich habe erstmal meine Referenz, die ich in Blender gerendert habe, in Gemini gepackt. Die hat sich dann NanoBanano Pro bedient. Das war mir dann aber zu tricky, deswegen habe ich fal.ai benutzt. Ich benutze mittlerweile gar nicht mehr Cursor, sondern VS Code, weil das kostenlos ist, und ich bin komplett auf Claude Code umgestiegen.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte endlich erfolgreiche Generationen machen und visuell cool aussehende Bilder erstellen, die nahe an finaler Qualität sind. Und ich wollte die neuen Modelle ausprobieren, ohne extremen Aufwand zu betreiben — es sind ständig neue da und es ist schwer zu wissen, was das Beste ist. Ich wollte auch mit Automatisierung und agentischen Workflows in Claude Code spielen.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Der gesamte Workflow hat sich fundamental verändert. Anstatt dieses schwierigen Arbeitens mit ComfyUI hatte ich plötzlich dieses total automatisierte Setup mit Claude, wo ich zu den einzelnen Bildern interviewt wurde. Ich konnte mir durch die verschiedenen Ergebnisse ein besseres Bild machen. Durch die objektive Bewertung per Interview und die Erstellung der Tabelle konnte ich am Ende wirklich sagen: das funktioniert oft gut und das nicht. Dadurch habe ich mit Hilfe der KI recherchiert, was Best Practices sind. Die Ergebnisse wurden dadurch teilweise besser — zum Beispiel das quadratische Aspect Ratio, welches ich dann ins Portrait- oder Landschaftsformat bringen konnte.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle in diesem Prozess erlebt?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich war technische Problemlöserin. Instruktionsbefolgerin. Claude Code hat mir wirklich detaillierte Instruktionen gegeben, wie ich das Ganze aufsetzen soll. Aber ich bin selber auf die Idee gekommen, habe mich auf der Seite registriert, den API Key geholt, das Ganze bezahlt. Es war eigentlich genau Kuratorin: Ich habe etwas Technisches ausprobiert und dann bewertet. Davor habe ich die technischen Komponenten nach Anleitung von Claude Code zusammengestellt. Ich fühle mich nicht wirklich wie eine Künstlerin gerade. Macht mir aber auch nicht unbedingt was aus. Ich fand es einfach erleichternd und cool, mal interessante Ergebnisse zu kriegen.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich habe viel mehr Modelle ausprobiert, als es ohne KI jemals möglich gewesen wäre. Es ist ein reproduzierbarer Workflow — das werde ich in der Zukunft wieder benutzen. Da es immer wieder neue Modelle geben wird, und ich jetzt weiß, dass ich in dieser Domäne zu Ergebnissen kommen kann, werde ich es weiterhin so automatisiert mit Claude Code über einen API Key machen.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen und was hast du daraus gelernt?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Da ich das Bild nicht selber breiter oder höher gemacht habe, sondern die KI gesagt hat, sie soll es machen, hat sie mich missverstanden und hat das Bild gestretcht. Dadurch habe ich Geld und Zeit verloren mit verzerrten Ergebnissen. Genauso schnell wurde es behoben, aber manchmal ist es frustrierend, die KI zu korrigieren. Da hilft es natürlich, sich präzise auszudrücken. Ich tendiere dazu, schnell die Instruktion zu geben und schnell das Ergebnis haben zu wollen — dann gebe ich mir nicht so viel Mühe, genau zu beschreiben, was ich will.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nicht unbedingt eine eigene Sprache, denn die Ästhetik wurde durch Kepler selbst — das 3D-Modell, welches wir erstellt haben, und das, was die KI dazu gedacht hat — erstellt. Ich habe da noch nicht viel mit dem Prompting rumgespielt, ob man etwas Stil reinbringen kann.</p></div>
+</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du beschreibst den Shift vom „Überredungs-Problem" zum „Automatisierungs-Problem". Gleichzeitig sagst du, du fühlst dich nicht wie eine Künstlerin, sondern wie eine Kuratorin. Hat dieser Wechsel etwas an deiner Beziehung zu den Ergebnissen verändert?</p></div>
+</div>
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Die Bilder fühlen sich von Anfang an nicht nach etwas an, das ich selber gemacht habe. Klar, ich habe das Modell gerendert und ein bisschen daran gearbeitet, aber das Grund-3D-Modell wurde von jemand anderem erzeugt — von Gavin. Er hat mit anderen 3D Artists den Voxel-Kepler entworfen, und ich habe ihn nur modifiziert. Also sehe ich die 3D-Figur nicht als meine Kreation. Hätte ich das Charakterdesign, den Charakter selber und die komplette 3D-Modellierung von Anfang an erstellt, dann hätte ich wahrscheinlich ein viel höheres Gefühl der Autorschaft. So hält es sich in Grenzen. Aber allgemein ist es in diesem Projekt so, dass ich nicht die einzige Autorin bin. Das fällt mir übrigens gerade erst ein, wie du mir diese Frage stellst.</p></div>
+</div>
+</div>
+

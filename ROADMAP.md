@@ -4,7 +4,7 @@
 
 ## Thesis-Abschluss (Stand 2026-02-17)
 
-**Status: Haupttext fertig. 4 Experimente + 2 Exkurse. 21 Zitate. Anhang mit 8 Interviews.**
+**Status: Haupttext fertig. 4 Experimente + 2 Exkurse. 21 Zitate + Interview-Integration. Alle 8 Reflexionen abgeschlossen.**
 
 ### Erledigt
 - [x] Sections 4 (Dokumentation) + 5 (Diskussion) geschrieben
@@ -96,8 +96,8 @@
 | cursor-build | ✅ | ✅ |
 | ki-verstehen | ✅ | ✅ |
 | suno-experiment | ✅ | ✅ |
-| recherche-kepler-zweiter-versuch | ✅ | ⬜ |
-| video-generierung | ✅ | ⬜ |
+| recherche-kepler-zweiter-versuch | ✅ | ✅ |
+| video-generierung | ✅ | ✅ |
 | ~~ki-verstehen-teil-2~~ | gelöscht | — |
 
 ---
