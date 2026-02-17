@@ -112,7 +112,14 @@ Ein zentrales methodisches Element ist der KI-gestützte Reflexionsprozess: Nach
 
 Da es sich um ein autoethnografisches Projekt handelt, werden keine personenbezogenen Daten Dritter erhoben. Die verwendeten KI-Modelle wurden auf Datensätzen trainiert, deren Zusammensetzung nicht vollständig transparent ist und deren urheberrechtlicher Status Gegenstand laufender Debatten bleibt. Dieses Spannungsfeld wird als Teil der Forschung reflektiert, nicht verschwiegen.
 
-Generative KI kam in dieser Arbeit auf vier Ebenen zum Einsatz: (1) als **Experimentgrundlage**, Stable Diffusion, DALL-E, Suno AI und Marble bildeten den Forschungsgegenstand; (2) als **Reflexionspartner**, nach jedem Experiment wurde eine strukturierte Reflexion im Dialog mit Claude durchgeführt (vollständige Transkripte auf der Projektwebsite); (3) als **Schreibassistenz**, Claude unterstützte bei Strukturierung und Formulierung dieser Dokumentation; (4) als **Entwicklungstool**, die Projektwebsite wurde mit Cursor gebaut. Argumentation, Quellenauswahl und alle inhaltlichen Entscheidungen liegen bei der Autorin. Der gesamte Prozess ist auf der Website und im GitHub-Repository öffentlich dokumentiert.
+Generative KI kam in dieser Arbeit auf vier Ebenen zum Einsatz:
+
+1. Als **Experimentgrundlage**: Stable Diffusion, DALL-E, Suno AI und Marble bildeten den Forschungsgegenstand.
+2. Als **Reflexionspartner**: Nach jedem Experiment wurde eine strukturierte Reflexion im Dialog mit Claude durchgeführt (vollständige Transkripte auf der Projektwebsite).
+3. Als **Schreibassistenz**: Claude unterstützte bei Strukturierung und Formulierung dieser Dokumentation.
+4. Als **Entwicklungstool**: Die Projektwebsite wurde zunächst mit [Cursor](https://www.cursor.com/) gebaut, einer KI-gestützten Entwicklungsumgebung. Cursor ist ein Fork -- eine eigenständige Abspaltung -- von [Visual Studio Code](https://code.visualstudio.com/) (VS Code), dem verbreiteten Open-Source-Editor von Microsoft. Im Laufe der Arbeit stieg ich auf [Claude Code](https://docs.anthropic.com/en/docs/claude-code) um, ein terminalbasiertes KI-Werkzeug von Anthropic, das direkt in der Kommandozeile arbeitet statt in einer grafischen Oberfläche. Claude Code lässt sich mit dem kostenlosen VS Code kombinieren; der Wechsel von Cursor machte damit auch eine kostenpflichtige Lizenz überflüssig. Für die automatisierte Bild- und Videogenerierung in Experiment 3 und 4 nutzte ich die API (Application Programming Interface, eine Programmierschnittstelle) von [fal.ai](https://fal.ai/) -- einem Anbieter, bei dem man Guthaben einzahlt und darüber verschiedene Generierungsmodelle ansprechen kann, ohne jedes einzeln installieren oder konfigurieren zu müssen.
+
+Argumentation, Quellenauswahl und alle inhaltlichen Entscheidungen liegen bei der Autorin. Der gesamte Prozess ist auf der [Website](https://jenniferied.github.io/everything-machine/) und im [GitHub-Repository](https://github.com/jenniferied/everything-machine/) öffentlich dokumentiert.
 
 # Meine Forschung: Der Weg zu Kepler
 
@@ -167,7 +174,7 @@ Nachdem Kepler als Charakter in der Bildgenerierung an Grenzen gestoßen war, ve
 
 Der aufschlussreichste Kontrast lag zwischen den letzten beiden Ansätzen. Das direkte Foto ergab eine technisch korrekte, aber kreativ uninteressante Rekonstruktion: Das Modell orientierte sich zu nah am Input. Die Claude-generierte Prompt hingegen produzierte eine Welt, die sich weniger wie eine Rekonstruktion und mehr wie eine Interpretation anfühlte. Vibes statt Referenzbilder: ein Workaround, der ästhetisch produktiver war als der intendierte Workflow. Monin und Sadokierski [-@monin2025prompting] beschreiben genau diese Dynamik als „Prompting as Thinking-With": Die Formulierung des Prompts ist nicht bloß Instruktion, sondern ein eigenständiger Denkprozess, bei dem die Auseinandersetzung mit der KI das Verständnis des Gegenstands vertieft.
 
-Bei Personen und Spiegelungen zeigte sich erneut das Uncanny Valley: verzerrte Proportionen, gruselige Doppelgänger. In der Reflexion entstand die Idee, genau diese "Fehler" als ästhetisches Mittel einzusetzen, eine Perspektive, die sich durch alle folgenden Experimente ziehen sollte.
+Bei Personen und Spiegelungen zeigte sich erneut das Uncanny Valley: verzerrte Proportionen, gruselige Doppelgänger. In der Reflexion entstand die Idee, genau diese "Fehler" als ästhetisches Mittel einzusetzen: „Man könnte tatsächlich wirklich damit visuell spielen. [...] Ich könnte auch 3D gerenderte Bilder in einen Gaussian Splat Generator eingeben" (Eintrag 3). Diese Perspektive -- Scheitern nicht als Defekt, sondern als Ausgangspunkt -- zog sich durch alle folgenden Experimente.
 
 ### Exkurs: Musik-Generierung (Suno AI)
 
@@ -179,7 +186,7 @@ Zwei Prompt-Ansätze: "Lo-fi" produzierte zu kommerziell klingende Ergebnisse; "
 
 Auf einer 30-minütigen Autofahrt führte ich ein Voice-Gespräch mit Claude über KI-Grundlagen -- von Shannons Informationstheorie über die Dartmouth Conference bis zur Transformer-Architektur. Das war kein Experiment im engeren Sinne, sondern eine Erkundung der KI als personalisiertem Lernpartner.
 
-Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sich an wie tiefes Verstehen, aber ob ich die Konzepte tatsächlich internalisiert hatte, war unklar. Claude selbst wies mich darauf hin, dass es einen Unterschied gibt zwischen deklarativem Wissen ("wissen, dass") und prozeduralem Wissen ("wissen, wie"). Die Theorie wird erst real, wenn ich sie anwende. Dieses Phänomen (flüssige Erklärung ohne echtes Verständnis) ist relevant für jeden, der KI als Lernwerkzeug einsetzt.
+Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sich an wie tiefes Verstehen, aber ob ich die Konzepte tatsächlich internalisiert hatte, war unklar. „Ich glaube aber, es könnte die Gefahr geben, dass ich der Illusion unterliege, dass ich es verstehe, obwohl ich es vielleicht nicht tue. Aber das Gleiche gilt ja auch, wenn ich mir ein Video anschaue" (Eintrag 5). Claude selbst wies mich darauf hin, dass es einen Unterschied gibt zwischen deklarativem Wissen ("wissen, dass") und prozeduralem Wissen ("wissen, wie"). Die Theorie wird erst real, wenn ich sie anwende. Dieses Phänomen ist relevant für jeden, der KI als Lernwerkzeug einsetzt.
 
 
 ### Experiment 3: Automatisierte Bildpipeline (fal.ai API + Claude Code)
@@ -401,7 +408,7 @@ Nano Banana Posed & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & St
 \end{table}
 ```
 
-FLUX Kontext schied aus, weil Posed Input die Gesichtshalluzinationen. Zwei Finalisten mit komplementären Stärken: GPT-Image-1.5 (atmosphärischer) und Nano Banana Pro (stilistisch konsistenter).
+FLUX Kontext schied aus, weil Posed Input die Gesichtshalluzinationen verstärkte. Zwei Finalisten mit komplementären Stärken: GPT-Image-1.5 (atmosphärischer) und Nano Banana Pro (stilistisch konsistenter).
 
 ```{=latex}
 \clearpage
@@ -1205,7 +1212,7 @@ Iteration wird in diesem Kontext zur Erkenntnismethode: Jeder gescheiterte Promp
 
 ### 3. Verschiebung der Autorschaft
 
-Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin, ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
+Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin, ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Bei Marble war ich „einfach nur jemand, der experimentiert und ein Produkt ausprobiert" (Eintrag 3) -- die flachste Autorschaftsrolle im ganzen Projekt. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
 
 Die wechselnden Rollen bewegen sich auf einem Spektrum — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist eine Qualität des Prozesses. Die wechselnden Rollen (Kuratorin, Dirigentin, Kollaborateurin, Lernende) sind Ausdruck einer Autorschaft, die sich fundamental verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Domänenwissen erweist sich erneut als Voraussetzung für produktive Kollaboration. Wer nicht weiß, was gut ist, kann nicht kuratieren. In Experiment 3 kam eine weitere Rolle hinzu: die der Orchestratorin, die einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert. Eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
 
@@ -1276,6 +1283,10 @@ Nebenbei entstand ein wiederverwendbarer Workflow: Die Kombination aus Claude Co
 Die Arbeit wirft Fragen auf, die über ihren Rahmen hinausgehen. Wie verändert sich die Kollaboration, wenn KI-Modelle präziser und kontrollierbarer werden? Wird der Speed-vs-Control-Tradeoff sich auflösen, wenn Modelle Nischen-Ästhetiken besser umsetzen können? Und vor allem: Wie nachhaltig ist kreatives Arbeiten mit KI, wenn der Burnout-Zyklus anhält, wenn Tools sich schneller ändern als man sie lernen kann?
 
 Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. Das Alter Ego existiert nun in einem dokumentierten Prozessraum, der weiter bespielt werden kann, mit zukünftigen Tools, in anderen Medien, mit neuen Kollaborationsmodellen. Die Forschungsfrage bleibt dabei offen, weil die Technologie, auf die sie sich bezieht, selbst in Bewegung ist. Artistic Research, die sich mit generativer KI beschäftigt, muss diesen Zustand der Vorläufigkeit als methodische Grundbedingung akzeptieren.
+
+```{=latex}
+\clearpage
+```
 
 # Literaturverzeichnis
 
@@ -1855,3 +1866,27 @@ Die Gesichtshalluzination passiert im Video progressiv --- Frame für Frame wäc
 \begin{usermsg}
 Ich bin gar nicht die Schöpferin von Kepler --- ich setze seine Vision um. Seine ästhetischen Qualitäten sind in unserem Pinterest Board zu finden. Ich bin noch gar nicht an dem Punkt, wo ich unsere Inputs verwende oder ihn mit reinbringe. Jetzt, wo die Modelle funktionieren --- und das ist relativ neu, diese Prompt Adherence, wahrscheinlich durch die Kombination von Large Language Models mit bildgenerierenden Modellen --- ist der Moment, wo ich zum Künstler gehe und mit ihm zusammen iteriere. Oder erstmal in unsere Referenzen gehe und versuche, genau diesen Stil nachzubilden.
 \end{usermsg}
+
+```{=latex}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+```
+
+```{=latex}
+\clearpage
+```
+
+# Eidesstattliche Erklärung
+
+Ich versichere, die vorliegende Arbeit selbstständig und ohne fremde Hilfe angefertigt und mich anderer als der im Schriftenverzeichnis angegebenen Hilfsmittel nicht bedient zu haben. Alle Stellen, die wörtlich oder sinngemäß aus Veröffentlichungen entnommen wurden, sind als solche kenntlich gemacht. Im Rahmen dieser Arbeit wurden KI-gestützte Werkzeuge (u. a. Large Language Models und Bildgenerierungsmodelle) als Recherche-, Formatierungs- und Produktionshilfen eingesetzt. Sämtliche Inhalte wurden von der Autorin geprüft, kuratiert und verantwortet. Die eingesetzten Werkzeuge und Methoden sind in Abschnitt „Ethische Überlegungen und KI-Offenlegung" dokumentiert.
+
+```{=latex}
+\vspace{3em}
+\noindent Detmold, den 17. Februar 2026
+
+\vspace{3em}
+\noindent\rule{6cm}{0.4pt}\\[2pt]
+Jennifer Meier
+```
