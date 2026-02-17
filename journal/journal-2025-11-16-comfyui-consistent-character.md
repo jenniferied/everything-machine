@@ -32,7 +32,7 @@ Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die
 
 ![ComfyUI Workflow Screenshot 2](assets/journal/2025-11-16-comfyui-consistent-character/workflow-screenshot-002.png)
 
-Der Consistent Character Workflow nutzt dabei hauptsächlich das Flux-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
+Der Consistent Character Workflow nutzt dabei hauptsächlich das FLUX-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
 
 ## IP-Adapter und ControlNet
 
@@ -46,7 +46,7 @@ Das Problem, das ich mit dem Basketball hatte, liegt wahrscheinlich daran, dass 
 
 Face Detailer ist ein zusätzliches Tool, das speziell darauf ausgelegt ist, Gesichter zu verbessern. Es funktioniert, indem es das generierte Bild analysiert, Gesichter erkennt und dann diese Bereiche mit einem speziell trainierten Modell nachbearbeitet. Das kann helfen, Details zu schärfen und realistischere Gesichtszüge zu erzeugen, aber es kann auch zu Problemen führen, wenn das System Gesichter erkennt, wo keine sein sollten, oder wenn es versucht, Gesichter zu "reparieren", die eigentlich korrekt waren.
 
-Der gesamte Workflow ist im Grunde eine Kette von Transformationen. Zuerst wird das Referenzbild analysiert und seine Merkmale werden extrahiert. Dann wird ein Text-Prompt verarbeitet, der beschreibt, was generiert werden soll. Diese Informationen werden kombiniert und durch das Flux-Modell geleitet, das Schritt für Schritt ein neues Bild generiert. ControlNet kann dabei zusätzliche Kontrolle bieten, und Face Detailer kann am Ende noch einmal über die Gesichter gehen, um sie zu verbessern.
+Der gesamte Workflow ist im Grunde eine Kette von Transformationen. Zuerst wird das Referenzbild analysiert und seine Merkmale werden extrahiert. Dann wird ein Text-Prompt verarbeitet, der beschreibt, was generiert werden soll. Diese Informationen werden kombiniert und durch das FLUX-Modell geleitet, das Schritt für Schritt ein neues Bild generiert. ControlNet kann dabei zusätzliche Kontrolle bieten, und Face Detailer kann am Ende noch einmal über die Gesichter gehen, um sie zu verbessern.
 
 Das Problem ist, dass jeder dieser Schritte Fehler einführen kann. Wenn die Referenz nicht klar genug ist, werden die extrahierten Merkmale ungenau. Wenn der Prompt zu komplex ist, kann das Modell verschiedene Interpretationen haben. Und wenn ControlNet oder Face Detailer falsch interpretieren, was sie sehen sollen, entstehen Artefakte wie zusätzliche Gesichter oder nicht entfernte Objekte.
 
@@ -79,7 +79,7 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 - **Zentrale Erkenntnis:** Es ist frustrierend, aber am Ende ein technisches Problem. Die Art Directability ist noch nicht da. Es sind keine magischen Tools – für viele fühlt es sich beim ersten Mal mit ChatGPT so an, aber es sind einfach Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Mit einer realistischen, Anime- oder Cartoon-Figur hätte es besser funktioniert. Aber Kepler hat kein sichtbares Gesicht, und die Trainingsdaten enthalten Gesichter – deswegen bleiben sie hartnäckig dort.
 - **Offene Frage:** Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
 
-**Keywords:** #ComfyUI #Flux #CharacterConsistency #TrainingBias #ArtDirectability
+**Keywords:** #ComfyUI #FLUX #CharacterConsistency #TrainingBias #ArtDirectability
 
 <div class="interview-transcript">
 

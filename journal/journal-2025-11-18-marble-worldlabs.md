@@ -1,8 +1,8 @@
-# Marble von Worldlabs ausprobieren
+# Marble von World Labs ausprobieren
 
 **18. November 2025** *(aktualisiert 12. Januar 2026)*
 
-Heute habe ich Marble von Worldlabs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
+Heute habe ich Marble von World Labs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
 
 Marble ist im Grunde eine browserbasierte Plattform, die es ermöglicht, interaktive 3D-Welten zu erstellen und zu erkunden. Das Besondere daran ist, dass man keine komplexe Software installieren muss – alles läuft im Browser, was den Einstieg deutlich erleichtert. Die Oberfläche ist relativ intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
 

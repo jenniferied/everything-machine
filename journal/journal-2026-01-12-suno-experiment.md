@@ -16,7 +16,7 @@ Das Projekt "ПАНЕЛЬКИ" (Panelki) entsteht im Rahmen des Masterkurses üb
 
 Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Tierfiguren im Stil sowjetischer Zeichentrickfilme.
 
-![Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (Nano Banana Pro).](assets/journal/2026-01-12-suno-experiment/concept-wolf-streetlamp.png)
+![Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (NanoBanana Pro).](assets/journal/2026-01-12-suno-experiment/concept-wolf-streetlamp.png)
 
 ## KI-Musik
 

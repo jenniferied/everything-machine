@@ -32,7 +32,7 @@ Im Rahmen der Artistic Research-Vorlesung bei Prof. Dr. Aristotelis Hadjakos an 
 
 Kepler ist Gavins Musikprojekt – eine digitale Künstleridentität, ein Charakter mit Voxel-Maske, der zwischen Mensch und Avatar existiert. KI-Tools interessieren mich gerade, und die Idee lag nahe: Was passiert, wenn ich generative KI-Systeme nutze, um Kepler weiterzuentwickeln? Wie verändert das den kreativen Prozess?
 
-Hadjakos hat betont, dass Artistic Research frei sein soll – der Versuch, sich von starren Strukturen zu lösen und erstmal zu machen. Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
+Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
 
 #### Pinterest-Recherche
 
@@ -70,6 +70,100 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 \end{minipage}
 \end{figure}
 ```
+#### Reflexion
+
+- **Tools:** Pinterest, Google Drive — keine KI
+- **Workflow:** gewohnte Kollaboration mit Gavin, digital
+- **Autorschaft:** Kuration — ich gab Struktur vor, Gavin steuerte Material bei
+- **Erkenntnis:** Kreativprozess beginnt beim Kuratieren, nicht beim Generieren
+- **Offene Frage:** Urheberrecht bei KI-generierten Stilreferenzen?
+
+##### Kontext
+
+- **Tools:** Pinterest, Google Drive und keine KI-Tools so far.
+- **Intention:** Alle drei (Referenzen sammeln, Zusammenarbeit starten, Inspiration finden).
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.
+- **Autorschaft:** Kollaboration mit Gavin – ich habe die Struktur vorgegeben (Ordner, Boards), er hat Material beigesteuert. Keine KI, rein menschliche Kuration.
+- **Iteration:** Keine KI verwendet, daher keine KI-Iteration. Aber der Prozess selbst war iterativ: sammeln, sortieren, verwerfen, neu suchen. Langsamer, aber alles bewusst gewählt.
+- **Scheitern:** Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).
+- **Ästhetik:** Noch nicht direkt – das war Vorarbeit. Aber beim Sammeln sind mir wiederkehrende Ästhetiken aufgefallen, die zu Kepler passen: dunkel, strukturiert, maskenhaft. Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Das Sammeln von Referenzen hat gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle – aber für die Weiterverwendung als Trainingsdaten schon.
+- **Offene Frage:** Was bedeutet es für Urheberrechte, wenn man fremde Bilder als Stilreferenz für KI-Generierung nutzt?
+
+
+<div class="interview-transcript">
+<div class="transcript-section-header">Kontext</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Pinterest, Google Drive und keine KI-Tools so far.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Alle drei (Referenzen sammeln, Zusammenarbeit starten, Inspiration finden).</p></div>
+
+<div class="transcript-section-header">Die 5 Forschungsfragen</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? Was war neu, was ist weggefallen? <em>(Workflow)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle in diesem Prozess erlebt? <em>(Autorschaft)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Kollaboration mit Gavin. Wir haben parallel gearbeitet, jeder an seinem Rechner. Ich habe die Struktur vorgegeben, also Ordner und Boards, er hat Material beigesteuert. Keine KI involviert, rein menschliche Kuration und Abstimmung.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Keine KI verwendet, daher keine KI-Iteration. Aber der Prozess selbst war iterativ: Wir haben gesammelt, sortiert, verworfen, neu gesucht. Der Unterschied: Es war langsamer, aber alles war bewusst gewählt.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen und was hast du daraus gelernt? <em>(Scheitern)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich durch die Arbeit eine eigene visuelle/stilistische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Noch nicht direkt, das war Vorarbeit. Aber beim Sammeln sind mir bestimmte wiederkehrende Ästhetiken aufgefallen, die zu Kepler passen: dunkel, strukturiert, maskenhaft. Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung.</p></div>
+
+<div class="transcript-section-header">Synthese</div>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast erwähnt, dass du dir Gedanken über Urheberrechte machst – wenn man fremde Bilder als Stilreferenz nutzt. Hat das Sammeln der Referenzen dein Verhältnis zu 'originalem' versus 'inspiriertem' Schaffen verändert?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Das Sammeln von Referenzen hat mir gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle. Aber für die Weiterverwendung als Trainingsdaten schon.</p></div>
 
 #### Reflexionsinterview
 
@@ -195,7 +289,7 @@ Der ComfyUI Consistent Character Workflow basiert auf mehreren Technologien, die
 \end{minipage}
 \end{figure}
 ```
-Der Consistent Character Workflow nutzt dabei hauptsächlich das Flux-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
+Der Consistent Character Workflow nutzt dabei hauptsächlich das FLUX-Modell, ein von Black Forest Labs entwickeltes Bildgenerierungsmodell, das besonders gut darin ist, konsistente Darstellungen zu erzeugen. Flux funktioniert ähnlich wie Stable Diffusion, verwendet aber eine andere Architektur, die es ermöglicht, feinere Details und bessere Konsistenz über mehrere Bilder hinweg zu erreichen.
 
 #### IP-Adapter und ControlNet
 
@@ -209,11 +303,114 @@ Das Problem, das ich mit dem Basketball hatte, liegt wahrscheinlich daran, dass 
 
 Face Detailer ist ein zusätzliches Tool, das speziell darauf ausgelegt ist, Gesichter zu verbessern. Es funktioniert, indem es das generierte Bild analysiert, Gesichter erkennt und dann diese Bereiche mit einem speziell trainierten Modell nachbearbeitet. Das kann helfen, Details zu schärfen und realistischere Gesichtszüge zu erzeugen, aber es kann auch zu Problemen führen, wenn das System Gesichter erkennt, wo keine sein sollten, oder wenn es versucht, Gesichter zu "reparieren", die eigentlich korrekt waren.
 
-Der gesamte Workflow ist im Grunde eine Kette von Transformationen. Zuerst wird das Referenzbild analysiert und seine Merkmale werden extrahiert. Dann wird ein Text-Prompt verarbeitet, der beschreibt, was generiert werden soll. Diese Informationen werden kombiniert und durch das Flux-Modell geleitet, das Schritt für Schritt ein neues Bild generiert. ControlNet kann dabei zusätzliche Kontrolle bieten, und Face Detailer kann am Ende noch einmal über die Gesichter gehen, um sie zu verbessern.
+Der gesamte Workflow ist im Grunde eine Kette von Transformationen. Zuerst wird das Referenzbild analysiert und seine Merkmale werden extrahiert. Dann wird ein Text-Prompt verarbeitet, der beschreibt, was generiert werden soll. Diese Informationen werden kombiniert und durch das FLUX-Modell geleitet, das Schritt für Schritt ein neues Bild generiert. ControlNet kann dabei zusätzliche Kontrolle bieten, und Face Detailer kann am Ende noch einmal über die Gesichter gehen, um sie zu verbessern.
 
 Das Problem ist, dass jeder dieser Schritte Fehler einführen kann. Wenn die Referenz nicht klar genug ist, werden die extrahierten Merkmale ungenau. Wenn der Prompt zu komplex ist, kann das Modell verschiedene Interpretationen haben. Und wenn ControlNet oder Face Detailer falsch interpretieren, was sie sehen sollen, entstehen Artefakte wie zusätzliche Gesichter oder nicht entfernte Objekte.
 
 Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hintergrund – funktioniert, weil sie dem System weniger Raum für Fehlinterpretationen lässt. Wenn nur der Charakter zu sehen ist, ohne störende Elemente, kann das Modell sich auf die wichtigen Merkmale konzentrieren. Aber selbst dann ist die Konsistenz nicht garantiert, besonders wenn man versucht, den Charakter in verschiedenen Posen oder Kontexten zu zeigen.
+
+
+#### Reflexion
+
+- **Tools:** ComfyUI lokal, M1 MacBook — aufwendige Installation
+- **Scheitern:** Gesichter in Keplers Maske halluziniert, negative Prompts helfen nicht
+- **Erkenntnis:** keine magischen Tools — Art Directability fehlt noch
+- **Ästhetik:** generisch KI-mäßig, nicht weit gekommen
+- **Offene Frage:** eigenes Modell trainieren oder anderen Workflow?
+
+##### Kontext
+
+- **Tools:** ComfyUI mit einem Network von Mickmumpitz (lokal auf M1 MacBook Pro Max 64 GB)
+- **Intention:** Album-Cover und Konzeptbilder für Kepler erstellen, Konsistenz erreichen, ComfyUI als Plattform lernen
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Komplett neuer Workflow mit ComfyUI. Muss wiederkommen, um es besser zu verstehen – vielleicht nicht mit Kepler als Charakter. Er ist besonders schwierig: kein Mensch per se, Maske statt Gesicht, voxelisiert.
+- **Autorschaft:** Lernende und Experimentierende – ich habe mich an dem Netzwerk einer anderen Person orientiert.
+- **Iteration:** Gar nicht so schnell – lokale Installation auf M1 MacBook, langer Installationsprozess, viele Gigabyte. Frustrierend.
+- **Scheitern:** Sehr inkonsistente Ergebnisse. Der Basketball wurde nicht entfernt. Besonders frustrierend: Gesichter wurden in Keplers Maske interpretiert, auch mit negativen Prompts.
+- **Ästhetik:** Nicht so weit gekommen – die Ergebnisse sahen generisch KI-mäßig aus.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Es ist frustrierend, aber am Ende ein technisches Problem. Die Art Directability ist noch nicht da. Es sind keine magischen Tools – für viele fühlt es sich beim ersten Mal mit ChatGPT so an, aber es sind einfach Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Mit einer realistischen, Anime- oder Cartoon-Figur hätte es besser funktioniert. Aber Kepler hat kein sichtbares Gesicht, und die Trainingsdaten enthalten Gesichter – deswegen bleiben sie hartnäckig dort.
+- **Offene Frage:** Muss ich ein eigenes Modell trainieren? Oder gibt es einen Workflow, der mit maskierten Charakteren besser umgeht?
+
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>ComfyUI mit einem Network von <a href="https://www.youtube.com/@mickmumpitz" target="_blank">Mickmumpitz</a>.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte schauen, ob ich Album-Cover- oder Konzeptbilder erstellen konnte von Kepler. Mir war aber wichtig, dass eine Konsistenz besteht und es ästhetisch aussieht. Ich war auch etwas von dem ComfyUI Workflow und dem Konzept überfordert, deswegen wollte ich das als Plattform nutzen, um das Ganze zu lernen.</p></div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? (Workflow)</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es ist ein komplett neuer Workflow mit ComfyUI zu arbeiten. Ich glaube, ich muss wiederkehren, um das Ganze besser zu verstehen, und vielleicht nicht mit Kepler als Charakter. Denn ich habe gleich gesehen, dass er besonders schwierig ist. Er ist jetzt kein Mensch per se, und sein Stil könnte schwierig zu replizieren sein, da er kein Gesicht hat, eine Maske trägt und in der Version, in der ich sie ihnen zeigen möchte, auch noch voxelized ist.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? (Autorschaft)</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich war Lernende und experimentierte eher als ich das Tool wirklich verwendete. Ich hatte mich ja an dem Netzwerk einer anderen Person orientiert.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? (Iteration)</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war gar nicht so schnell, da ich es tatsächlich lokal auf meinem M1-MacBook Pro Max 64 GB ausprobiert habe. Auch der Prozess, das Ganze zu installieren, hat länger gedauert und hat viele Gigabyte benötigt. Also war es etwas frustrierend.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? (Scheitern)</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war sehr inkonsistent. Die Prompts haben nicht das erfüllt, was sie erfüllen sollten. Der Basketball wurde nicht entfernt, als ich ein Bild mit Basketball eingefügt habe. Besonders frustrierend war, dass Gesichter in Keplers Maske rein interpretiert worden sind. Auch als ich negative Prompts dafür eingefügt habe. Ich glaube, das wird ein größeres Problem.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? (Ästhetik)</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nein, denn so weit bin ich gar nicht erst gekommen in diesem Anlauf. Denn es haben Sachen ja auch nicht funktioniert, und das, was herauskam, sah schon sehr generisch KI-mäßig aus.</p></div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast erwähnt, dass das System Gesichter in Keplers Maske interpretiert hat – obwohl er bewusst kein Gesicht haben soll. Wie fühlt es sich an, wenn die KI deine künstlerische Intention so grundlegend 'missversteht'?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es ist einfach frustrierend. Am Ende des Tages ist es ein technisches Problem.</p>
+<p>Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen und auch Zeit einsparen, um Dinge zu kreieren, ohne jetzt mir ganz die Arbeit abzunehmen.</p>
+<p>Aber es zeigt halt, dass wir noch nicht ganz da sind und die Art Directability noch nicht da ist. Und das würde ich mir eben wünschen. Aber es sind halt keine magischen Tools, so wie es sich anfühlt.</p>
+<p>Für viele, wenn sie das erste Mal ChatGPT benutzen, sind es einfach nur Werkzeuge, die mehr oder weniger gut für den Anwendungsfall funktionieren. Es hätte zufällig gut funktionieren können. Es würde viel besser funktionieren, wenn es sich um eine realistische, oder Anime-style, oder Cartoon-style Figur handeln würde. Aber dem ist nicht so. Kepler hat eben kein sichtbares Gesicht, aber viele der Trainingsdaten enthalten Gesichter und deswegen bleiben sie hartnäckig dort.</p></div>
 
 #### Reflexionsinterview
 
@@ -223,7 +420,7 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 Welche Tools hast du in dieser Session verwendet?
 \end{claudemsg}
 \begin{usermsg}
-ComfyUI mit einem Network von Mickmumpitz (Füge einen Link zu seinem YT Channel hinzu).
+ComfyUI mit einem Network von Mickmumpitz.
 \end{usermsg}
 \begin{claudemsg}
 Was wolltest du erreichen?
@@ -278,7 +475,7 @@ Für viele, wenn sie das erste Mal ChatGPT benutzen, sind es einfach nur Werkzeu
 
 ### Journal-Eintrag 3: Marble von Worldlabs (18. November 2025)
 
-Heute habe ich Marble von Worldlabs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
+Heute habe ich Marble von World Labs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
 
 Marble ist im Grunde eine browserbasierte Plattform, die es ermöglicht, interaktive 3D-Welten zu erstellen und zu erkunden. Das Besondere daran ist, dass man keine komplexe Software installieren muss – alles läuft im Browser, was den Einstieg deutlich erleichtert. Die Oberfläche ist relativ intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
 
@@ -383,7 +580,6 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 
 Dieser Ansatz – Vibes statt konkretes Referenzbild – hat interessantere Ergebnisse gebracht. Die Welt fühlt sich weniger wie eine Rekonstruktion und mehr wie eine Interpretation an.
 
----
 
 #### Fazit zu den Experimenten
 
@@ -406,6 +602,118 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 - 12. November 2025: Public Release mit Freemium-Modell
 
 *Quellen: [World Labs Blog](https://www.worldlabs.ai/blog/marble-world-model), [TechCrunch](https://techcrunch.com/2025/11/12/fei-fei-lis-world-labs-speeds-up-the-world-model-race-with-marble-its-first-commercial-product/)*
+
+
+#### Reflexion
+
+- **Tools:** Marble (browserbasiert) — schnelles Prototyping
+- **Workflow:** ein Bild $\rightarrow$ Gaussian Splat in Sekunden
+- **Scheitern:** Personen/Spiegelungen verzerrt (Uncanny Valley)
+- **Erkenntnis:** "Fehler" als ästhetisches Mittel nutzen
+- **Offene Frage:** 3D-Renders in Splat Generator eingeben?
+
+##### Kontext
+
+- **Tools:** Marble (marble.worldlabs.ai)
+- **Intention:** Tool testen – Alternative für Hintergründe/Welten, nachdem Kepler als Charakter in ComfyUI nicht funktionierte
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Experimentell mit Marble. Gaussian Splats waren mir als Konzept bekannt – beeindruckt von der Geschwindigkeit, aber nicht überzeugt genug für sicheren Einsatz.
+- **Autorschaft:** Einfach nur jemand, der experimentiert und ein Produkt ausprobiert.
+- **Iteration:** Das Ausprobieren machte Spaß, es ging schnell, und das könnte für die Zukunft interessant sein. Aber eher die generativen Möglichkeiten – sich komplette Welten ausdenken anstatt existierende Welten 3D zu machen.
+- **Scheitern:** Das freiere Ergebnis war nicht hundertprozentig überzeugend. Personen mit Spiegelungen waren gruselig und Uncanny-Valley-mäßig verzerrt. Aber keine großen Ansprüche – nächstes Mal Input-Bilder ohne Personen oder komplexe Spiegelungen.
+- **Ästhetik:** Noch nicht entwickelt – neues Tool im Hinterkopf behalten. Aber ja, man könnte tatsächlich visuell damit spielen.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Man könnte mit diesen "Fehlern" absichtlich als ästhetisches Mittel spielen. Auch 3D gerenderte Bilder in einen Gaussian Splat Generator eingeben – das wäre ein interessanter Workflow.
+- **Offene Frage:** Wie einfach ist es, das wirklich im 3D-Raum umzusetzen? Ich bin eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.
+
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Marble (marble.worldlabs.ai).</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte zum einen das Tool testen, ich hatte es gerade gesehen und da die Gesichter ja nicht funktioniert haben, also Kepler als Charakter nicht funktioniert hat im Comp-V-Wire-Workflow, hatte mich interessiert, ob wir vielleicht Hintergrundwelten generieren könnten.</p></div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich habe hier mit Marble erstmal experimentiert. Ich kannte bereits Gaussian Splats als Konzept und ich fand es interessant, wie schnell das jetzt ging, aus einem einzigen Bild einen übereinstimmenden Splat zu erzeugen.
+
+Ich war aber jetzt nicht so überzeugt davon, dass ich es sicher verwenden werde.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Einfach nur jemand, der experimentiert und ein Produkt ausprobiert.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Das Ausprobieren machte Spaß, es ging schnell, und das könnte für die Zukunft interessant sein.
+
+Aber mich interessieren dann eher die generativen Möglichkeiten. Also, wirklich, sich komplette Welten ausdenken anstatt existierende Welten 3D zu machen. Obwohl ich, wenn ich jetzt darüber nachdenke, mir gar nicht mehr so sicher bin. Es kann schon interessante Use Cases haben...</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nicht unbedingt, außer dass das freiere, letzte Ergebnis nicht hundertprozentig überzeugend ist, aber schon mal interessant.
+
+Und dass, als ich Personen drin hatte mit Spiegelungen und so, dass die Personen gruselig und Uncanny-Valley-mäßig verzerrt waren.
+
+Aber ich hatte jetzt gar keine Ansprüche an das Tool und würde Input-Bilder ohne Personen oder komplexe Spiegelungen nehmen das nächste Mal.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Noch nicht, also ich habe nur im Hinterkopf ein neues Tool, das ich verwenden könnte.</p></div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Im Eintrag steht, dass das System das Spiegelbild als Spiegel erkannt und die gespiegelten Personen in den 3D-Raum gebracht hat – faszinierend und gruselig zugleich. Könntest du dir vorstellen, solche 'Fehler' absichtlich als ästhetisches Mittel zu nutzen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Jetzt, wo du es sagst, ja, also man könnte tatsächlich wirklich damit visuell spielen. Ich weiß nur nicht, wie einfach es ist, das wirklich jetzt im 3D-Raum umzusetzen.
+
+Klar, wenn ich ein reales Bild von ihm nehme und dann ein Gaussian-Splat erzeuge, könnte das interessant sein. Aber ich bin ja eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.
+
+Aber es ist auf jeden Fall ein cooler Ansatz. Wobei, da fällt mir gerade ein, ich könnte auch 3D gerenderte Bilder in ein Gaussian Splat Generator eingeben.</p></div>
 
 #### Reflexionsinterview
 
@@ -548,6 +856,110 @@ Die Website ist jetzt in Version 1.0 – Player funktioniert, Journal lädt auto
 
 Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, und das macht einen großen Unterschied, wenn man mit KI programmiert. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen oder anpassen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen – es beschleunigt den Workflow enorm, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
 
+
+#### Reflexion
+
+- **Tools:** Cursor, GitHub, Anthropic-Modelle
+- **Workflow:** tausendfach schneller — kreative Vision umsetzen statt googeln
+- **Autorschaft:** Manager mit Gesamtvision $\rightarrow$ Junior Developer anleiten
+- **Scheitern:** Debugging-Schleifen, zu viel Kontext verschlechtert KI
+- **Erkenntnis:** Garbage in, garbage out — Vorwissen entscheidend
+
+##### Kontext
+
+- **Tools:** Cursor, Version Control via Github, und größtenteils die Modelle von Anthropic
+- **Intention:** Ich wollte sowohl die Website erstellen als auch Cursor ausprobieren, da es sich interessant für mich anhörte und ich bereits Webentwicklungserfahrung habe, aber nur sehr limitiert und es würde sehr lange dauern, wenn ich es ganz alleine mache.
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht. Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.
+- **Autorschaft:** Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen. Ich habe viel reviewed – und dabei auch gelernt, weil ich in den Thinking-Prozess reinschauen konnte.
+- **Iteration:** Die KI-Ausgabe war sofort da – Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, aber manchmal habe ich zu schnell akzeptiert, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.
+- **Scheitern:** Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.
+- **Ästhetik:** Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Garbage in, garbage out. Vorwissen macht einen großen Unterschied – einfache Sachen funktionieren schnell, aber je spezifischer die Anforderungen und je größer die Codebase, desto schwieriger wird es für Laien zu managen.
+- **Offene Frage:** Glaubst du, jemand ohne deine Web-Erfahrung hätte ein ähnliches Ergebnis erreichen können?
+
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Cursor, Version Control via Github, und größtenteils die Modelle von Anthropic.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ich wollte sowohl die Website erstellen als auch Cursor ausprobieren, da es sich interessant für mich anhörte und ich bereits Webentwicklungserfahrung habe, aber nur sehr limitiert und es würde sehr lange dauern, wenn ich es ganz alleine mache.</p></div>
+
+<h4>Die 5 Forschungsfragen</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht.
+
+Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Die KI-Ausgabe war sofort da. Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, weil ich nicht mehr googeln und Stack Overflow durchforsten musste. Aber es hat auch dazu geführt, dass ich manchmal zu schnell akzeptiert habe, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.</p></div>
+
+<h4>Synthese</h4>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Du hast geschrieben, dass deine bestehende Web-Erfahrung entscheidend war, um KI-Vorschläge einzuschätzen. Glaubst du, jemand ohne diese Erfahrung hätte ein ähnliches Ergebnis erreichen können?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also ich glaube, es hängt sehr stark von der Person ab. Ich glaube, Leute, die gar keinen Hintergrund haben und auch nicht so viel Geduld, würden schnell an ihre Grenzen kommen. Also, es ist nicht so, dass man einfach alles an die KI geben kann. Garbage in, garbage out. Man muss schon ein bisschen mitlernen, obwohl es schon Ergebnisse gibt, die mit relativ viel wenig Arbeit gut sein können. Ich denke, wenn jemand einfach nur sagt: "Hey, kannst du mir einen Taschenrechner programmieren? Vielleicht in einer bestimmten Farbe, die mir gefällt?" – dann würde das schnell funktionieren, einfach nur weil es so viel vorhandener Code für das Programmieren von Taschenrechnern gibt.
+
+Aber umso spezifischer die Anforderungen werden, umso länger der Chat und umso größer die codebase, desto schwieriger wird es das ganze für einen Laien zu managen.</p></div>
+
 #### Reflexionsinterview
 
 ```{=latex}
@@ -610,13 +1022,13 @@ Aber umso spezifischer die Anforderungen werden, umso länger der Chat und umso 
 
 ### Journal-Eintrag 5: KI wirklich verstehen -- Teil 1 (11. Januar 2026)
 
-*Ich wollte Künstliche Intelligenz besser für mich selbst verstehen, auch außerhalb des Artistic Research Contexts, bevor ich dort weiter eintauchte. Ich wollte nicht nur die Tools benutzen, die aufkommen, sondern wirklich verstehen, was dort gerade vor sich geht.*
+Ich wollte Künstliche Intelligenz besser für mich selbst verstehen, auch außerhalb des Artistic Research Contexts, bevor ich dort weiter eintauchte. Ich wollte nicht nur die Tools benutzen, die aufkommen, sondern wirklich verstehen, was dort gerade vor sich geht.
 
-*Eigentlich wollte ich auf der Autofahrt einen Podcast hören. Aber die meisten, die ich gefunden habe, waren für sehr einfache Anwendungsfälle – wie können normale Menschen ChatGPT nutzen, um E-Mails zu schreiben. Ich wollte in die tieferen Themen rein. Ich hatte das Gefühl, dass manche Leute viel weiter sind als ich, und ich wollte genau die Lücken aufholen, wo ich durchfalle.*
+Eigentlich wollte ich auf der Autofahrt einen Podcast hören. Aber die meisten, die ich gefunden habe, waren für sehr einfache Anwendungsfälle – wie können normale Menschen ChatGPT nutzen, um E-Mails zu schreiben. Ich wollte in die tieferen Themen rein. Ich hatte das Gefühl, dass manche Leute viel weiter sind als ich, und ich wollte genau die Lücken aufholen, wo ich durchfalle.
 
-*Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügbar ist. Also Freisprechanlage an, Claude im Chat-Interface, das meine Stimme in Text transkribierte. Zugegebenermaßen etwas gefährlich am Anfang – das System stockte manchmal, ich musste Sätze wiederholen, war abgelenkt. Aber dann hatten wir uns eingespielt, und es wurde zu einem echten Gespräch über 30 Minuten Fahrtzeit.*
+Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügbar ist. Also Freisprechanlage an, Claude im Chat-Interface, das meine Stimme in Text transkribierte. Zugegebenermaßen etwas gefährlich am Anfang – das System stockte manchmal, ich musste Sätze wiederholen, war abgelenkt. Aber dann hatten wir uns eingespielt, und es wurde zu einem echten Gespräch über 30 Minuten Fahrtzeit.
 
----
+#### Von der Mathematik zur KI
 
 ```{=latex}
 \begin{usermsg}
@@ -669,11 +1081,7 @@ Mathematik ist die Sprache, die KI spricht, weil Computer nur Zahlen verstehen. 
 \end{claudemsg}
 ```
 
-```{=latex}
-\begin{usermsg}
-Ja. Das wurde ja im letzten Jahrhundert ein Ding... Das basiert auf Mathe.
-\end{usermsg}
-```
+#### KI-Geschichte: Dartmouth 1956
 
 ```{=latex}
 \begin{usermsg}
@@ -743,21 +1151,11 @@ Symbolische KI und moderne neuronale Netze mit Gewichten und Bias sind fundament
 \end{claudemsg}
 ```
 
-```{=latex}
-\begin{usermsg}
-Okay. Wie realistisch ist es für mich, das zu verstehen?
-\end{usermsg}
-```
+#### Von Filtern zu GPT-2
 
 ```{=latex}
 \begin{usermsg}
-Ich glaub nicht, dass es so sehr vom Anwendungsfall abhängt... Ich meine, Large Language Models sind ja was anderes als, sagen wir, Blur-Filter in Photoshop, oder?
-\end{usermsg}
-```
-
-```{=latex}
-\begin{usermsg}
-Ich meine, wir hatten ja schon Noise Reduction und Color Grading. Wieso fühlt sich jetzt alles gleichzeitig an?
+Large Language Models sind ja was anderes als Blur-Filter in Photoshop. Wir hatten ja schon Noise Reduction und Color Grading. Wieso fühlt sich jetzt alles gleichzeitig an?
 \end{usermsg}
 ```
 
@@ -770,9 +1168,11 @@ Es gibt tatsächlich ein Spektrum von einfachen deterministischen Filtern bis zu
 \end{claudemsg}
 ```
 
+#### Transformer, RAG und Agents
+
 ```{=latex}
 \begin{usermsg}
-Und ja. Und dann, je nachdem... GPT-2 kam raus...
+Ich nutze KI ja nicht nur für Text. Auch für Bilder, 3D, Video... MCP, Skills versus Agents. Können wir noch eine Sekunde auf dieser Ebene bleiben?
 \end{usermsg}
 ```
 
@@ -785,24 +1185,6 @@ GPT-2 war der Moment, in dem Forscher realisierten, dass Skalierung qualitativ n
 ```
 
 ```{=latex}
-\begin{usermsg}
-Ja. Jetzt ist es ja nicht mehr nur das Training der Modelle...
-\end{usermsg}
-```
-
-```{=latex}
-\begin{usermsg}
-Also ich nutze KI ja nicht nur für Text. Auch für Bilder, 3D, Video...
-\end{usermsg}
-```
-
-```{=latex}
-\begin{usermsg}
-MCP, und jetzt Skills versus Agents und so. Können wir noch eine Sekunde auf dieser Ebene bleiben?
-\end{usermsg}
-```
-
-```{=latex}
 \begin{claudemsg}
 Die zentrale Einsicht ist, dass Transformer – die Architektur, die Sprachmodelle antreibt – jeden Datentyp verarbeiten können, sobald er in Tokens umgewandelt ist. Text wird in Wort-Teile tokenisiert, Bilder werden in Patches unterteilt, Audio wird zu Spektrogrammen. Einmal alles in Tokens, kann dieselbe mathematische Maschinerie alles verarbeiten.\par
     Retrieval Augmented Generation (RAG), wie es Tools wie Claude Code nutzen, löst das Problem des Wissens-Cutoffs. Statt zu versuchen, alles während des Trainings zu memorieren, durchsuchen RAG-Systeme externe Datenbanken in Echtzeit und injizieren diese Information in den Kontext des Modells.\par
@@ -812,11 +1194,9 @@ Die zentrale Einsicht ist, dass Transformer – die Architektur, die Sprachmodel
 \end{claudemsg}
 ```
 
----
-
 #### Wie lerne ich das wirklich?
 
-*Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen gehört – aber habe ich sie wirklich gelernt?*
+Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen gehört – aber habe ich sie wirklich gelernt?
 
 ```{=latex}
 \begin{usermsg}
@@ -888,6 +1268,139 @@ Ich will eigentlich einen Lo-Fi Soviet Dystopian Winter Soundtrack mit KI erstel
 Das ist ein großartiger Einstiegspunkt – spezifisch, kreativ, und persönlich interessant. Du wirst mehr lernen, wenn du dem nachjagst, als wenn du dich zwingst, Image Diffusion zu verstehen, das dich nicht interessiert.\par
     Was weißt du bisher über KI-Musikgenerierung? Hast du dir schon Tools angeschaut, oder ist das noch im Ideenstadium?
 \end{claudemsg}
+```
+
+#### Reflexion
+
+- **Tools:** Claude App, Spracheingabe im Auto (30 Min.)
+- **Workflow:** personalisierter Dialog statt Podcast/YouTube
+- **Autorschaft:** die Fragende — Richtung und Tiefe bestimmt
+- **Scheitern:** Spracheingabe-Bugs, Ablenkung durch Autofahrt
+- **Erkenntnis:** Gefahr der Fluency Illusion — verstehen ≠ gehört haben
+
+##### Kontext
+
+- **Tools:** Claude über die mobile App mit Spracheingabe, während einer 30-minütigen Autofahrt (Freisprechanlage)
+- **Intention:** KI wirklich verstehen – nicht nur die Tools benutzen, sondern die mathematischen Grundlagen, Transformer, Diffusion Models und den Zusammenhang zu meinen Tools
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Komplett neuer Lernmodus – statt Podcast oder YouTube ein personalisiertes Gespräch. Die KI hat sich an mein Level angepasst, ich konnte jederzeit nachfragen. Dialog statt passives Konsumieren.
+- **Autorschaft:** Die Fragende – ich habe die Richtung bestimmt, welche Themen, wie tief, welche Beispiele. Ohne meine Fragen wäre das Gespräch nirgendwohin gegangen.
+- **Iteration:** Wissen gefestigt, an vergessene Konzepte erinnert – aber die Gefahr der Fluency Illusion bleibt.
+- **Scheitern:** Nicht ganz flüssig (Bugs bei der Spracheingabe), von der Autofahrt abgelenkt, würde es so nicht wiederholen.
+- **Ästhetik:** Würde öfter im Dialog mit KI lernen – das Format hat funktioniert.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Die Theorie ist jetzt da, irgendwo im Hinterkopf. Sie wird erst real, wenn ich sie anwende. Das Suno-Experiment war der direkte nächste Schritt – Claude hatte vorgeschlagen, KI-Verständnis an konkreten Projekten zu verankern.
+- **Offene Frage:** Wie kann ich testen, ob ich wirklich verstanden habe – und nicht nur der Fluency Illusion unterliege?
+
+
+<div class="interview-transcript">
+
+<h4>Kontext</h4>
+
+```{=latex}
+\begin{claudemsg}
+Welche Tools hast du verwendet?
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Claude über die mobile App mit Spracheingabe, während einer 30-minütigen Autofahrt. Freisprechanlage an, quasi wie ein Telefonat.
+\end{usermsg}
+```
+
+```{=latex}
+\begin{claudemsg}
+Was wolltest du erreichen?
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Ich wollte KI wirklich verstehen, nicht nur die Tools benutzen, sondern die Grundlagen. Was passiert mathematisch? Wie hängen Transformer, Diffusion Models und die Tools, die ich benutze, zusammen? Und wie lerne ich das am besten?
+\end{usermsg}
+```
+
+<h4>Die 5 Forschungsfragen</h4>
+
+```{=latex}
+\begin{claudemsg}
+Hat sich dein Arbeitsablauf verändert? \emph{(Workflow)}
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Ein komplett neuer Lernmodus. Statt Podcast oder YouTube-Video hatte ich ein personalisiertes Gespräch. Die KI hat sich an mein Level angepasst, ich konnte jederzeit nachfragen. Dialog statt passives Konsumieren.
+\end{usermsg}
+```
+
+```{=latex}
+\begin{claudemsg}
+Wie hast du deine Rolle erlebt? \emph{(Autorschaft)}
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Die Fragende. Ich habe die Richtung bestimmt, welche Themen, wie tief, welche Beispiele. Claude hat erklärt, aber ohne meine Fragen wäre das Gespräch nirgendwohin gegangen.
+\end{usermsg}
+```
+
+```{=latex}
+\begin{claudemsg}
+Wie hat die KI-Ausgabe deinen Prozess beeinflusst? \emph{(Iteration)}
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Zum einen denke ich, dass ich mein bereits bekanntes Wissen noch einmal gestärkt habe und mich an ein paar Konzepte und historische Ereignisse erinnert habe, die ich schon vergessen hatte.\par
+  Ich glaube aber, es könnte die Gefahr geben, dass ich der Illusion unterliege, dass ich es verstehe, obwohl ich es vielleicht nicht tue. Aber das Gleiche gilt ja auch, wenn ich mir ein Video anschaue.
+\end{usermsg}
+```
+
+```{=latex}
+\begin{claudemsg}
+Was ist schiefgelaufen? \emph{(Scheitern)}
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Es lief noch nicht ganz so flüssig. Ich glaube, die Implementation von ChatGPT ist ein bisschen besser.\par
+  Da wurde ich ein bisschen von der Autofahrt abgelenkt, ich würde das vielleicht nicht unbedingt noch einmal wiederholen. Wäre es jetzt wie ein Telefonat, dann ja, aber durch die Bugs lieber nicht. Aber sicherlich wird sich noch einiges tun in den nächsten Monaten.
+\end{usermsg}
+```
+
+```{=latex}
+\begin{claudemsg}
+Hat sich eine eigene 'Lern-Sprache' oder Methode entwickelt? \emph{(Ästhetik)}
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Ich denke ich würde jetzt öfters im Dialog mit der KI versuchen Dinge zu lernen.
+\end{usermsg}
+```
+
+<h4>Synthese</h4>
+
+```{=latex}
+\begin{claudemsg}
+Am Ende des Eintrags hast du geschrieben: 'Die Theorie wird erst real, wenn ich sie anwende. Nächster Schritt: Der Lo-Fi Soundtrack.' – Hast du das inzwischen gemacht?
+\end{claudemsg}
+```
+
+```{=latex}
+\begin{usermsg}
+Ja, das Suno-Experiment war der direkte nächste Schritt. Claude hatte vorgeschlagen, KI-Verständnis an konkreten Projekten zu verankern statt abstrakt zu lernen, und genau das habe ich dann gemacht.
+\end{usermsg}
 ```
 
 #### Reflexionsinterview
@@ -975,7 +1488,7 @@ Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Ti
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{_img_cache/60c01a9ba2c3a21ee20c7cd7e1eed892.jpg}
-\caption{Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (Nano Banana Pro).}
+\caption{Konzeptkunst: Wolf unter einer Straßenlaterne im ewigen Winter. Konzeptbild erstellt mit Google Gemini (NanoBanana Pro).}
 \end{figure}
 ```
 #### KI-Musik
@@ -1019,6 +1532,102 @@ Suno bietet zwei Modelle:
 - **v5**: $30/Monat (Pro), noch höhere Qualität, v5-Samples werden parallel angeboten
 
 Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen Relay) sind mit v5 (beta) generiert – im Free Trial allerdings auf eine Minute begrenzt. Red Snow Protocol und Iron Frost Protocol stammen aus v4.5 und sind länger, gefallen mir aber weniger – **warum genau, kann ich nicht sagen**.
+
+
+#### Reflexion
+
+- **Tools:** Suno AI, v4.5 + v5 im Browser
+- **Workflow:** Prompt rein, Ergebnis in Sekunden — aber keine Kontrolle
+- **Autorschaft:** nur Kurator:in, keine Parameter zum Drehen
+- **Scheitern:** zu kommerziell, generischer Sound statt minimal-dystopisch
+- **Erkenntnis:** Beschreibungen besser als Output — als Briefing nutzbar
+
+##### Kontext
+
+- **Tools:** Suno AI im Browser, v4.5 (kostenlos) und v5 (beta, im Free Trial)
+- **Intention:** Loopbarer, atmosphärischer Soundtrack für die sowjetisch-dystopische Spielwelt Panelki – minimal, kalt, pixelig, keine Vocals
+
+##### Die 5 Forschungsfragen
+
+- **Workflow:** Schneller Prototyp – Ideen testen ohne selbst Musik produzieren zu können. Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte.
+- **Autorschaft:** Enttäuschend – ich war nur Kurator:in. Kein Regler, kein Parameter zum Drehen. Nur der Prompt, und der wurde anders interpretiert als gemeint.
+- **Iteration:** Verworfen – vermute, mit diesem Modell nicht weit zu kommen.
+- **Scheitern:** Zu kommerziell, zu poliert, wie Stock-Music. Die generierten *Beschreibungen* trafen genau meinen Geschmack, aber die Musik selbst klang völlig anders.
+- **Ästhetik:** Komplett verfehlt. Ich wollte minimal-dystopisch, bekommen habe ich generischen Indie-Game-Sound. Suno ist auf kommerzielle Mehrheitsästhetik trainiert – meine Nische liegt außerhalb dessen, was das Modell liefern kann.
+
+##### Synthese
+
+- **Zentrale Erkenntnis:** Die generierten Beschreibungen zeigen mir: Für meine Vision gibt es Begriffe. Ich könnte damit existierende Musik suchen, ein anderes Tool probieren, oder einem echten Musiker ein Briefing geben.
+- **Offene Frage:** Sind generalistische KI-Tools für spezialisierte Nischen überhaupt geeignet – oder braucht es immer Fine-Tunes oder menschliche Expertise?
+
+
+<div class="interview-transcript">
+<h4>Kontext</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Suno AI, im Browser. Ich habe sowohl v4.5 (kostenlos) als auch v5 (beta, im Free Trial) getestet.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Einen loopbaren, atmosphärischen Soundtrack für meine sowjetisch-dystopische Spielwelt Panelki. Minimal, kalt, pixelig. Keine Vocals, eher Hintergrundmusik zum Explorieren.</p></div>
+
+<h4>Die 5 Forschungsfragen</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Es war ein schneller Prototyp. Ich konnte Ideen testen, ohne selbst Musik produzieren zu können. Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Enttäuschend. Ich war nur Kurator:in, ich konnte auswählen, aber nicht gestalten. Kein Regler, kein Parameter, den ich hätte drehen können. Nur der Prompt, und der wurde offensichtlich anders interpretiert als gemeint.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>In dem Fall habe ich das Ganze ja verworfen, weil ich vermute, dass ich mit dem Modell nicht sonderlich weit komme.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Der Output klang zu kommerziell, zu poliert, wie Stock-Music. Das Frustrierende: Die generierten <em>Beschreibungen</em> trafen genau meinen Geschmack ('Bitcrushed chiptune pads over a sparse, detuned synth choir'), aber die Musik selbst klang völlig anders.</p></div>
+
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Hat sich eine eigene musikalische/ästhetische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Nein, komplett verfehlt. Ich wollte minimal-dystopisch, bekommen habe ich generischen Indie-Game-Sound. Das zeigt mir, dass Suno auf kommerzielle Mehrheitsästhetik trainiert ist. Meine Nische liegt einfach außerhalb dessen, was das Modell liefern kann.</p></div>
+
+<h4>Synthese</h4>
+<div class="chat-message claude">
+  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-bubble"><p>Im Eintrag schreibst du, dass Sunos generierte Beschreibungen ('Bitcrushed chiptune pads over a sparse, detuned synth choir') besser klingen als die Musik selbst. Ist das frustrierend – oder zeigt es, dass du die KI vielleicht als Text-Generator für Briefings an echte Musiker nutzen könntest?</p></div>
+
+<div class="chat-message user">
+  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-bubble"><p>Also zeigt mir, dass für die Vision, die ich hatte, gibt es Begriffe, und es gibt mir Hoffnung, dass ich entweder bereits existierende Musik mit diesen Begriffen finden kann, ein anderes Tool verwenden könnte, um so etwas zu generieren, oder es einem echten Musiker geben könnte. Es ist sehr frustrierend.</p></div>
 
 #### Reflexionsinterview
 
@@ -1111,7 +1720,7 @@ Mein erster Fehler im November war nicht die Wahl von ComfyUI — es war die Wah
 
 Das ist keine Limitierung meines Prompts. Das ist eine Limitierung der Repräsentation in den Trainingsdaten.
 
-#### Nano Banana — nicht was ich dachte
+#### NanoBanano — nicht was ich dachte
 
 Bei der Recherche bin ich auf [ComfyUI-NanoBanano](https://github.com/ShmuelRonen/ComfyUI-NanoBanano) gestoßen, das Google Gemini 2.5 Flash Image in ComfyUI integriert. Klingt vielversprechend, ist aber ein 2D-Bildgenerator — kein 3D-Tool. Für Kepler-Konzeptbilder potenziell nützlich, aber nicht für das eigentliche Problem: einen voxelisierten 3D-Charakter konsistent zu generieren.
 

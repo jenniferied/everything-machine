@@ -4,7 +4,7 @@ subtitle: "Everything Machine"
 author: "Jennifer Meier"
 date: "Dezember 2025"
 institute: "Technische Hochschule Ostwestfalen-Lippe"
-department: "Fachbereich Medienproduktion, Master Medienproduktion"
+department: "Fachbereich Medien und Kultur, Master Medienproduktion"
 course: "Artistic Research"
 instructor: "Prof. Dr. Aristotelis Hadjakos"
 lang: de-DE
@@ -12,12 +12,14 @@ lang: de-DE
 
 # Methodologischer Rahmen
 
-Das Projekt verfolgt einen Practice-Based Research Ansatz, bei dem die künstlerische Praxis selbst als primäre Forschungsmethode dient. Die Entwicklung des digitalen Alter Egos "Kepler" durch iterative KI-Experimente generiert dabei sowohl künstlerische Artefakte als auch Forschungserkenntnisse.
+Die zentrale Forschungsfrage lautet: *Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?*
+
+Das Projekt verfolgt einen Practice-Led Research Ansatz, bei dem die künstlerische Praxis selbst als primäre Forschungsmethode dient. Die Entwicklung des digitalen Alter Egos "Kepler" durch iterative KI-Experimente generiert dabei sowohl künstlerische Artefakte als auch Forschungserkenntnisse.
 
 
 # Gewählte Methoden
 
-## Practice-Based Research
+## Practice-Led Research
 
 Die tägliche Arbeit mit multimodalen KI-Systemen (Text, Bild, Audio) zur Entwicklung von Kepler bildet den Kern des Forschungsprozesses. Jede kreative Session produziert sowohl künstlerische Outputs (Bilder, Texte, Sounds) als auch prozessbezogene Daten (Prompts, Iterationen, Entscheidungen).
 
@@ -47,11 +49,20 @@ Die iterative Methode ist notwendig, weil generative KI-Systeme nicht-determinis
 Die Website "Everything Machine" ist nicht nur Dokumentationsplattform, sondern selbst ein Forschungsartefakt. Sie macht den Entwicklungsprozess von Kepler öffentlich sichtbar. Transparenz ist ein Kernwert des Projekts, und die technische Implementierung gehört ebenfalls zum Forschungsmaterial.
 
 
+### KI-gestützter Reflexionsprozess
+
+Nach jedem Experiment führe ich ein strukturiertes Reflexionsgespräch mit Claude (Anthropic), basierend auf den fünf Subfragen. Diese KI-gestützte Reflexion verbindet autoethnografische Praxis mit Schöns Konzept der *Reflection-in-Action* und bildet den dritten methodischen Strang neben Journaling und Website.
+
+
 # Praktische Leitfragen
 
-Diese Fragen dienen als Orientierung für die Journal-Dokumentation:
+Diese fünf Subfragen dienen als Orientierung für die Journal-Dokumentation und die strukturierten Reflexionsinterviews:
 
-Wie sieht der konkrete Workflow bei der KI-gestützten Erstellung aus, und welche Entscheidungen treffe ich dabei? Wie verändert sich das Ergebnis durch wiederholte Anpassung von Prompts, Parametern und Input-Daten? Wie beeinflusst die kontinuierliche Arbeit mit KI-Tools meine eigene kreative Praxis? Welche unerwarteten oder "fehlerhaften" KI-Outputs werden ästhetisch produktiv? Wie kann ich den Entstehungsprozess so dokumentieren, dass er für andere nachvollziehbar wird?
+1. Wie verändert sich der konkrete Workflow bei der KI-gestützten Erstellung?
+2. Wie verschiebt sich die Autorschaft zwischen Mensch und KI?
+3. Welche Rolle spielt Iteration im kreativen Prozess?
+4. Wie wird mit Scheitern und unerwarteten Ergebnissen umgegangen?
+5. Wie entwickelt sich die Ästhetik im Prozess?
 
 
 # Ethische Überlegungen
@@ -71,7 +82,9 @@ Das Projekt folgt einer vier-phasigen Struktur nach Schöns "Reflection-in-Actio
 
 **Phase 4 – Synthese:** Integration der Erkenntnisse, finale Dokumentation. Retrospektive Analyse, Identifikation von Mustern und Themen, Schreiben der Dokumentation. Reflexionsfragen: Was wurde gelernt? Was bleibt offen?
 
+*In der Praxis verliefen diese Phasen nicht streng sequenziell, sondern überlagerten sich — ein Charakteristikum von Practice-Led Research, bei dem sich die Methodik im Prozess entwickelt.*
+
 
 # Zusammenfassung
 
-Die Praxis generiert das Material, die Reflexion erschließt die Bedeutung, die Iteration verfeinert die Erkenntnisse, die Dokumentation macht alles nachvollziehbar. Die künstlerische Arbeit ist nicht Illustration einer vorgefassten Theorie, sondern selbst der Ort, an dem Erkenntnis entsteht.
+Die Praxis liefert das Material, die Reflexion erschließt, was es bedeutet -- und die Dokumentation hält beides fest. Die künstlerische Arbeit ist nicht Illustration einer vorgefassten Theorie, sondern selbst der Ort, an dem Erkenntnis entsteht.

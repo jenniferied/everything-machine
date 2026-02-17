@@ -1,4 +1,4 @@
-# KI wirklich verstehen – Teil 1
+# KI wirklich verstehen
 
 **11. Januar 2026**
 

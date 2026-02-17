@@ -4,7 +4,7 @@ subtitle: "Everything Machine"
 author: "Jennifer Meier"
 date: "Dezember 2025"
 institute: "Technische Hochschule Ostwestfalen-Lippe"
-department: "Fachbereich Medienproduktion, Master Medienproduktion"
+department: "Fachbereich Medien und Kultur, Master Medienproduktion"
 course: "Artistic Research"
 instructor: "Prof. Dr. Aristotelis Hadjakos"
 lang: de-DE
@@ -13,7 +13,7 @@ bibliography: references/bibliography.bib
 
 # Selbsteinordnung
 
-Das Projekt "Everything Machine" dokumentiert den iterativen Prozess der Entwicklung einer digitalen Persona namens "Kepler" unter Verwendung verschiedener generativer KI-Tools. Meine künstlerische Praxis umfasst Bildgenerierung (Midjourney, ComfyUI, DALL-E), 3D-Visualisierung (Unreal Engine, Worldlabs), und die Website als lebendes Forschungsartefakt mit Journal-Einträgen.
+Das Projekt "Everything Machine" dokumentiert den iterativen Prozess der Entwicklung einer digitalen Persona namens "Kepler" unter Verwendung verschiedener generativer KI-Tools. Meine künstlerische Praxis umfasst Bildgenerierung (Midjourney, ComfyUI, DALL-E), 3D-Visualisierung (Unreal Engine, World Labs), und die Website als lebendes Forschungsartefakt mit Journal-Einträgen.
 
 Nach Fraylings Kategorisierung (1993) ist mein Projekt primär "Research THROUGH Art" – die iterative Arbeit mit KI-Tools bei der Konstruktion von Kepler generiert Wissen über Mensch-KI-Kollaboration, das nicht durch rein theoretische Analyse zugänglich wäre.
 
@@ -44,7 +44,7 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 ## Digitale Identität
 
-**Turkle (1999) – Cyberspace and Identity** untersucht, wie digitale Umgebungen neue Formen der Identitätskonstruktion ermöglichen. Online-Räume fungieren als "identity workshops". Das Konzept ist direkt anwendbar auf Kepler – die digitale Persona ist ein experimenteller Raum für Identitätsarbeit.
+**Turkle (1995) – Life on the Screen** untersucht, wie digitale Umgebungen neue Formen der Identitätskonstruktion ermöglichen. Online-Räume fungieren als "identity workshops". Das Konzept ist direkt anwendbar auf Kepler – die digitale Persona ist ein experimenteller Raum für Identitätsarbeit.
 
 **Mori (2012) – The Uncanny Valley** beschreibt den Effekt, dass fast-menschliche Darstellungen Unbehagen auslösen können. Relevant als Evaluationskriterium für Kepler: Welcher Abstraktionsgrad ist ästhetisch produktiv? (muss ich noch vertiefen, bin mir nicht sicher ob das zentral wird)
 
