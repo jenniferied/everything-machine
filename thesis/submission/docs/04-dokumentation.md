@@ -273,7 +273,7 @@ Era3D & \textcolor{evalred}{nein} & -- & Nutzlos -- eigene Renders besser \\
 
 **Verworfene Modelle.** Keines der fünf Modelle lieferte überzeugende Ergebnisse. MiniMax Subject Reference interpretierte Keplers Voxel-Ästhetik als Minecraft-Welt und halluzinierte menschliche Gesichtszüge, obwohl der Prompt "faceless" explizit vorgab. FLUX Depth LoRA bewahrte zwar die Körperhaltung über eine Tiefenkarte, glättete aber die blockige Geometrie zu einem humanoid wirkenden Körper. FLUX Canny LoRA produzierte das gravierendste Problem: Ein vollständiges menschliches Gesicht erschien auf Keplers faceless Kopf -- dasselbe Halluzinationsphänomen wie in Experiment 1. Era3D generierte Multiview-Ansichten, die in besserer Qualität direkt in Unreal Engine gerendert werden können. Einzig Z-Image Turbo ControlNet vermied Halluzinationen und bewahrte die A-Pose, blieb aber insgesamt zu limitiert für Szenen-Kontexte.
 
-**Methodisches Ergebnis.** Depth-basierte Steuerung erwies sich als überlegen gegenüber Canny-Edges, und die Halluzinationsanfälligkeit variierte erheblich zwischen Modellen, die nominell dieselbe Aufgabe lösten. Für Phase 2 recherchierte ich gezielt leistungsstärkere Modelle (FLUX Kontext Pro, GPT-Image-1.5, SeedDream und NanoBanana Pro), die sich in Benchmarks als State-of-the-Art für Charakter-Konsistenz erwiesen hatten.
+**Methodisches Ergebnis.** Depth-basierte Steuerung erwies sich als überlegen gegenüber Canny-Edges, und die Halluzinationsanfälligkeit variierte erheblich zwischen Modellen, die nominell dieselbe Aufgabe lösten. Für Phase 2 recherchierte ich gezielt leistungsstärkere Modelle (FLUX Kontext Pro, GPT-Image-1.5, SeedDream und Nano Banana Pro), die sich in Benchmarks als State-of-the-Art für Charakter-Konsistenz erwiesen hatten.
 
 ```{=latex}
 \clearpage
@@ -310,7 +310,7 @@ Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jew
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_000.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_010.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/09_nanobanana_pro/09_nanobanana_pro_020.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Pro}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Pro}
 
 \caption{Phase 2: Top-Modelle in Szenen (A-Pose). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -327,13 +327,13 @@ Die vier vielversprechendsten Modelle wurden in Szenen-Kontexte eingeführt, jew
 FLUX Kontext Pro & bedingt & -- & Wird besser \\
 GPT-Image-1.5 & bedingt & teilweise & Solide, aber Halluzinationen \\
 SeedDream v4.5 & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
-NanoBanana Pro & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
+Nano Banana Pro & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
 \bottomrule
 \end{tabularx}
 \end{table}
 ```
 
-SeedDream schied wegen Gesichtshalluzinationen aus. Drei Finalisten blieben: FLUX Kontext Pro, GPT-Image-1.5 und NanoBanana Pro.
+SeedDream schied wegen Gesichtshalluzinationen aus. Drei Finalisten blieben: FLUX Kontext Pro, GPT-Image-1.5 und Nano Banana Pro.
 
 ```{=latex}
 \clearpage
@@ -379,7 +379,7 @@ Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Rend
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_020.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_030.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/12_nanobanana_posed/12_nanobanana_posed_040.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Posed}
 
 \caption{Phase 2b: Drei Finalisten mit Posed Input (je 5 Varianten). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -395,13 +395,13 @@ Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Rend
 \midrule
 FLUX Kontext Posed & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesichter halluziniert \\
 GPT-Image-1.5 Posed & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
-NanoBanana Posed & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
+Nano Banana Posed & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
 \bottomrule
 \end{tabularx}
 \end{table}
 ```
 
-FLUX Kontext schied aus, weil Posed Input die Gesichtshalluzinationen. Zwei Finalisten mit komplementären Stärken: GPT-Image-1.5 (atmosphärischer) und NanoBanana Pro (stilistisch konsistenter).
+FLUX Kontext schied aus, weil Posed Input die Gesichtshalluzinationen. Zwei Finalisten mit komplementären Stärken: GPT-Image-1.5 (atmosphärischer) und Nano Banana Pro (stilistisch konsistenter).
 
 ```{=latex}
 \clearpage
@@ -409,7 +409,7 @@ FLUX Kontext schied aus, weil Posed Input die Gesichtshalluzinationen. Zwei Fina
 
 #### Phase 3a: Signature Scenes v1 -- Ratio-Bug
 
-Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT: Alle Outputs kamen quadratisch statt im gewünschten Format. NanoBanana Pro lieferte korrekte Portrait- und Landscape-Formate.
+Ab Phase 3a wurden GPT-Image-1.5 und Nano Banana Pro parallel in "Signature Scenes" getestet: Studio, Retro Car Bridge, Spiral Staircase, Pool Floaty. Ein Ratio-Bug in der Pipeline betraf GPT: Alle Outputs kamen quadratisch statt im gewünschten Format. Nano Banana Pro lieferte korrekte Portrait- und Landscape-Formate.
 
 ```{=latex}
 \begin{figure}[H]
@@ -434,7 +434,7 @@ Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scene
 \includegraphics[width=0.14\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/retro_car_bridge.jpg}\hfill
 \includegraphics[width=0.14\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.14\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (14) -- korrektes Format}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Portrait (14) -- korrektes Format}
 
 \vspace{4pt}
 
@@ -442,9 +442,9 @@ Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scene
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/retro_car_bridge.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/14_nanobanana_scenes_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (14) -- korrektes Format}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Landscape (14) -- korrektes Format}
 
-\caption{Phase 3a: GPT-1.5 mit Ratio-Bug (oben, quadratisch), NanoBanana korrekt (unten). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
+\caption{Phase 3a: GPT-1.5 mit Ratio-Bug (oben, quadratisch), Nano Banana korrekt (unten). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
 ```
 
@@ -458,8 +458,8 @@ Ab Phase 3a wurden GPT-Image-1.5 und NanoBanana Pro parallel in "Signature Scene
 \midrule
 GPT-1.5 & portrait \textcolor{evalred}{(sq.)} & gemischt & -- & Buggy 1:1 Ratio \\
 GPT-1.5 & landscape \textcolor{evalred}{(sq.)} & gemischt & -- & Auch 1:1 leider \\
-NanoBanana & portrait & gemischt & teilweise & Halb cool, halb Halluz. \\
-NanoBanana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
+Nano Banana & portrait & gemischt & teilweise & Halb cool, halb Halluz. \\
+Nano Banana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -491,21 +491,21 @@ NanoBanana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 \midrule
 15/16 & GPT-1.5 & portrait & gemischt & -- & Gestretchte Referenz \\
 15/16 & GPT-1.5 & landscape & gemischt & teilweise & Stretching + Cap fehlt \\
-15/16 & NanoBanana & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
-15/16 & NanoBanana & landscape & gemischt & teilweise & Weniger Stretching, gut \\
+15/16 & Nano Banana & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
+15/16 & Nano Banana & landscape & gemischt & teilweise & Weniger Stretching, gut \\
 \midrule
 17/18 & GPT-1.5 & portrait & gemischt & teilweise & 1:1 + leichte Halluz. \\
 17/18 & GPT-1.5 & landscape & gemischt & teilweise & Dasselbe \\
-17/18 & NanoBanana & portrait & gemischt & -- & -- \\
-17/18 & NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
+17/18 & Nano Banana & portrait & gemischt & -- & -- \\
+17/18 & Nano Banana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \bottomrule
 \end{tabularx}
 \end{table}
 ```
 
-Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte NanoBanana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
+Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte Nano Banana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
 
-In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. NanoBanana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen eine wiederkehrende Dynamik: Jede Iteration löste ein Problem und offenbarte das nächste. Die Bewertung erfolgte in diesen Phasen noch pauschal pro Modell und Format, da die Outputs insgesamt zu fehlerbehaftet waren, um sinnvoll zwischen einzelnen Szenen zu differenzieren.
+In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. Nano Banana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen eine wiederkehrende Dynamik: Jede Iteration löste ein Problem und offenbarte das nächste. Die Bewertung erfolgte in diesen Phasen noch pauschal pro Modell und Format, da die Outputs insgesamt zu fehlerbehaftet waren, um sinnvoll zwischen einzelnen Szenen zu differenzieren.
 
 ```{=latex}
 \clearpage
@@ -526,7 +526,7 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.15\textwidth]{experiments/fal-pipeline/outputs/16_nanobanana_fixed_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (16)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Portrait (16)}
 
 \vspace{6pt}
 
@@ -542,7 +542,7 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/tokyo_rain.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/18_nanobanana_v2_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (18)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Landscape (18)}
 
 \caption{Phase 3b: Outputs mit gestretchten Referenzbildern. \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -574,8 +574,8 @@ In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Tre
 \midrule
 GPT-1.5 & portrait & gemischt & -- & -- \\
 GPT-1.5 & landscape & gemischt & -- & -- \\
-NanoBanana & portrait & gemischt & -- & -- \\
-NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
+Nano Banana & portrait & gemischt & -- & -- \\
+Nano Banana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -583,7 +583,7 @@ NanoBanana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 
 Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch (siehe Prompt-Verzeichnis).
 
-Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. NanoBanana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen. Ab dieser Phase wurde jede Szene einzeln bewertet, da die Qualität nun hoch genug war, um szenenbezogene Unterschiede sinnvoll zu differenzieren.
+Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. Nano Banana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen. Ab dieser Phase wurde jede Szene einzeln bewertet, da die Qualität nun hoch genug war, um szenenbezogene Unterschiede sinnvoll zu differenzieren.
 
 ```{=latex}
 \clearpage
@@ -604,7 +604,7 @@ Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Vox
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/pool_floaty.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_portrait/studio.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Portrait (20)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Portrait (20)}
 
 \vspace{4pt}
 
@@ -620,7 +620,7 @@ Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Vox
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/pool_floaty.jpg}\hfill
 \includegraphics[width=0.22\textwidth]{experiments/fal-pipeline/outputs/20_nanobanana_final_landscape/studio.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Landscape (20)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Landscape (20)}
 
 \caption{Phase 3c: Outputs mit korrekt gepaddeten Inputs. \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -644,7 +644,7 @@ Dieselben drei Signature Scenes -- Night Drive, Spiral Staircase, Pool Floaty --
 \end{figure}
 ```
 
-Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überlegen. GPT-Image-1.5 produzierte die atmosphärischsten Ergebnisse, halluzinierte aber häufiger Details. NanoBanana Pro war konsistenter, aber weniger ausdrucksstark.
+Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überlegen. GPT-Image-1.5 produzierte die atmosphärischsten Ergebnisse, halluzinierte aber häufiger Details. Nano Banana Pro war konsistenter, aber weniger ausdrucksstark.
 
 ```{=latex}
 \begin{table}[H]
@@ -661,12 +661,12 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 21 & GPT-1.5 & posed & landscape & staircase & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
 21 & GPT-1.5 & posed & landscape & pool & neutral & \textcolor{evalred}{ja} \\
 \midrule
-22 & NanoBanana & posed & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
-22 & NanoBanana & posed & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} \\
-22 & NanoBanana & posed & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
-22 & NanoBanana & posed & landscape & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
-22 & NanoBanana & posed & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
-22 & NanoBanana & posed & landscape & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+22 & Nano Banana & posed & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+22 & Nano Banana & posed & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} \\
+22 & Nano Banana & posed & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+22 & Nano Banana & posed & landscape & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
+22 & Nano Banana & posed & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+22 & Nano Banana & posed & landscape & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
 \midrule
 23 & GPT-1.5 & a-pose & portrait & night\_drive & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
 23 & GPT-1.5 & a-pose & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
@@ -675,12 +675,12 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 23 & GPT-1.5 & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} \\
 23 & GPT-1.5 & a-pose & landscape & pool & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} \\
 \midrule
-24 & NanoBanana & a-pose & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
-24 & NanoBanana & a-pose & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
-24 & NanoBanana & a-pose & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
-24 & NanoBanana & a-pose & landscape & night\_drive & neutral & \textcolor{evalred}{ja} \\
-24 & NanoBanana & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
-24 & NanoBanana & a-pose & landscape & pool & neutral & \textcolor{evalred}{ja} \\
+24 & Nano Banana & a-pose & portrait & night\_drive & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+24 & Nano Banana & a-pose & portrait & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+24 & Nano Banana & a-pose & portrait & pool & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} \\
+24 & Nano Banana & a-pose & landscape & night\_drive & neutral & \textcolor{evalred}{ja} \\
+24 & Nano Banana & a-pose & landscape & staircase & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} \\
+24 & Nano Banana & a-pose & landscape & pool & neutral & \textcolor{evalred}{ja} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -708,14 +708,14 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/night_drive.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Portrait (22)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Posed Portrait (22)}
 
 \vspace{3pt}
 
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/night_drive.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.18\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_portrait/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Portrait (24)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana A-Pose Portrait (24)}
 
 \caption{Phase 3d: Portrait-Vergleich -- Posed (21/22) vs. A-Pose (23/24). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -741,14 +741,14 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/night_drive.jpg}\hfill
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/22_nanobanana_refined_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana Posed Landscape (22)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana Posed Landscape (22)}
 
 \vspace{3pt}
 
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/night_drive.jpg}\hfill
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/spiral_staircase.jpg}\hfill
 \includegraphics[width=0.28\textwidth]{experiments/fal-pipeline/outputs/24_nanobanana_apose_landscape/pool_floaty.jpg}
-\\[1pt]{\scriptsize\color{darktext!60} NanoBanana A-Pose Landscape (24)}
+\\[1pt]{\scriptsize\color{darktext!60} Nano Banana A-Pose Landscape (24)}
 
 \caption{Phase 3d: Landscape-Vergleich -- Posed (21/22) vs. A-Pose (23/24). \href{https://jennifer-meier.github.io/everything-machine/\#images}{Bild-Galerie}}
 \end{figure}
@@ -785,31 +785,31 @@ Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen. 
 06 & FLUX Kontext & a-pose & sq. & bedingt & -- & Wird besser \\
 07 & GPT-1.5 & a-pose & sq. & bedingt & teilweise & Solide, leichte Halluz. \\
 08 & SeedDream & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
-09 & NanoBanana & a-pose & sq. & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
+09 & Nano Banana & a-pose & sq. & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
 \midrule
 10 & FLUX Kont. & posed & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesichter halluziniert \\
 11 & GPT-1.5 & posed & sq. & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
-12 & NanoBanana & posed & sq. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
+12 & Nano Banana & posed & sq. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
 \midrule
 13 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & teilweise & 1:1 Ratio-Bug \\
 13 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & teilweise & Auch 1:1 \\
-14 & NanoBanana & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Halb cool, halb Halluz. \\
-14 & NanoBanana & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalgreen}{nein} & Ohne Halluz. stark \\
+14 & Nano Banana & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Halb cool, halb Halluz. \\
+14 & Nano Banana & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalgreen}{nein} & Ohne Halluz. stark \\
 \midrule
 15 & GPT-1.5 & posed & portrait & gemischt & teilweise & Gestretchte Referenz \\
 15 & GPT-1.5 & posed & landsc. & gemischt & \textcolor{evalred}{ja} & Stretching + Cap fehlt \\
-16 & NanoBanana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
-16 & NanoBanana & posed & landsc. & gemischt & \textcolor{evalgreen}{nein} & Weniger Stretching \\
+16 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
+16 & Nano Banana & posed & landsc. & gemischt & \textcolor{evalgreen}{nein} & Weniger Stretching \\
 \midrule
 17 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & 1:1 Bug + Halluz. \\
 17 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Dasselbe \\
-18 & NanoBanana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
-18 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
+18 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
+18 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
 \midrule
 19 & GPT-1.5 & posed & portrait & gemischt & teilweise & -- \\
 19 & GPT-1.5 & posed & landsc. & gemischt & teilweise & -- \\
-20 & NanoBanana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
-20 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
+20 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
+20 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
 \midrule
 21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Scheibe fehlt \\
 21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
@@ -818,12 +818,12 @@ Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen. 
 21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
 21 & GPT-1.5 & posed & landsc. & neutral & \textcolor{evalred}{ja} & PF: Cap/Haare fehlen \\
 \midrule
-22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
-22 & NanoBanana & posed & portrait & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Stufen nicht schön \\
-22 & NanoBanana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Sehr cool \\
-22 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cockpit falsch \\
-22 & NanoBanana & posed & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Doppelte Treppe \\
-22 & NanoBanana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Transparent, gefällt \\
+22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+22 & Nano Banana & posed & portrait & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Stufen nicht schön \\
+22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Sehr cool \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cockpit falsch \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Doppelte Treppe \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Transparent, gefällt \\
 \midrule
 23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & ND: Scheinwerfer falsch \\
 23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: A-Pose overfitted \\
@@ -832,19 +832,19 @@ Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen. 
 23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Pose zu starr \\
 23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
 \midrule
-24 & NanoBanana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
-24 & NanoBanana & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppe nicht schön \\
-24 & NanoBanana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Super \\
-24 & NanoBanana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & ND: Halluz. stören \\
-24 & NanoBanana & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppen nicht schön \\
-24 & NanoBanana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
+24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+24 & Nano Banana & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppe nicht schön \\
+24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Super \\
+24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & ND: Halluz. stören \\
+24 & Nano Banana & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppen nicht schön \\
+24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
 \end{longtable}
 }
 ```
 
 #### Prompt-Verzeichnis
 
-Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, gruppiert nach Phase. Ab Phase 3b wurden für GPT-Image-1.5 und NanoBanana Pro unterschiedliche Prompt-Varianten verwendet: GPT erhielt strukturierte Prompts (Background/Center/Details/Constraints), NanoBanana natürlichsprachliche. Hier ist jeweils die NanoBanana-Variante dokumentiert; die GPT-Variante beschrieb dieselbe Szene in strukturierter Form.
+Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, gruppiert nach Phase. Ab Phase 3b wurden für GPT-Image-1.5 und Nano Banana Pro unterschiedliche Prompt-Varianten verwendet: GPT erhielt strukturierte Prompts (Background/Center/Details/Constraints), Nano Banana natürlichsprachliche. Hier ist jeweils die Nano Banana-Variante dokumentiert; die GPT-Variante beschrieb dieselbe Szene in strukturierter Form.
 
 ```{=latex}
 {\scriptsize
@@ -871,7 +871,7 @@ Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, g
 
 \vspace{6pt}
 
-\textbf{Phase 3a -- Signature Scenes v1} (GPT + NanoBanana, identischer Prompt)\\[2pt]
+\textbf{Phase 3a -- Signature Scenes v1} (GPT + Nano Banana, identischer Prompt)\\[2pt]
 \textit{Studio:} ``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting [...]''\\
 \textit{Retro Car:} ``...driving a vintage 1970s convertible car across a long suspension bridge at night, city lights reflecting on the water below [...]''\\
 \textit{Spiral Staircase:} ``...walking up an endless spiral staircase that extends infinitely into the sky, passing through layers of clouds and stars, surreal dreamlike atmosphere, the staircase is white marble [...]''\\
