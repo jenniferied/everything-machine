@@ -339,12 +339,14 @@ $endif$
 
     \vspace{1cm}
 
-    % === KEPLER POINT CLOUD (background visual) ===
+    % === KEPLER POINT CLOUD (background visual, opt-in via titleimage) ===
+    $if(titleimage)$
     \begin{tikzpicture}[remember picture, overlay]
       \node[opacity=0.4] at (current page.center) {%
         \includegraphics[height=0.75\paperheight]{kepler-cover.png}%
       };
     \end{tikzpicture}
+    $endif$
 
     \vspace{4cm}
 

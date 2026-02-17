@@ -8,6 +8,7 @@ department: "Fachbereich Medien und Kultur, Master Medienproduktion"
 course: "Artistic Research"
 instructor: "Prof. Dr. Aristotelis Hadjakos"
 lang: de-DE
+titleimage: true
 bibliography: references/bibliography.bib
 toc: true
 abstract: |
@@ -187,6 +188,8 @@ Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sic
 
 
 ### Experiment 3: Automatisierte Bildpipeline (fal.ai API + Claude Code)
+
+An dieser Stelle nimmt die Autoethnografie unweigerlich einen sehr technischen Charakter an. Der Bau einer Pipeline aus APIs und Skripten war kein kreativer Befreiungsschlag im klassischen Sinne, sondern entsprang der schieren Frustration über die manuelle Bedienung von Chatbots und node-basierter Software. Um KI heute für solche spezifischen Nischen künstlerisch zu nutzen, muss man vorübergehend zum Engineer werden -- ob man will oder nicht. Doch genau in dieser technischen Orchestrierung, dem gemeinsamen Debuggen und Iterieren mit Claude Code, entstand ein unerwarteter Flow. Ob das Errichten einer solchen Architektur noch klassische "künstlerische Praxis" ist oder reines Engineering, trat im Prozess in den Hintergrund: Es war der pragmatische Weg, um in einem extrem schnelllebigen Technologie-Umfeld handlungsfähig zu bleiben und die Skalierung der Experimente überhaupt erst zu ermöglichen.
 
 Nach den Einzelexperimenten und Exkursen stellte sich eine methodische Frage: Was passiert, wenn ich den Prozess systematisiere? Gemeinsam mit Claude Code baute ich eine automatisierte Pipeline, die über die fal.ai API neun verschiedene Bildgenerierungsmodelle mit denselben Prompts und Referenzbildern ansteuerte. Die Kollaboration war dreistufig: Ich definierte die ästhetische Vision und die Evaluationskriterien, Claude Code schrieb den Pipeline-Code und orchestrierte die API-Aufrufe, die Bildmodelle generierten die Outputs -- eine neue Konstellation, in der ich als Auftraggeberin eines KI-Agenten fungierte, der seinerseits KI-Modelle steuert.
 
@@ -1229,7 +1232,7 @@ Diese vier Veränderungen sind weder linear noch planbar. Sie entstehen im itera
 
 Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Led Research, dokumentiert über vier Experimente und zwei Exkurse mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
 
-Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik; Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens durchzog ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren; das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle merklich verschoben*: von der Ausführenden zur Kuratorin, Dirigentin, Lernenden, wobei Domänenwissen sich als entscheidende Voraussetzung erwies, nicht KI-Kompetenz. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
+Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik; Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens durchzog ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren; das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle merklich verschoben*: von der manuell Ausführenden zur Kuratorin und technischen Orchestratorin. Während Domänenwissen für die ästhetische Bewertung unerlässlich blieb, erzwang die Praxis paradoxerweise den vorübergehenden Wechsel in die Rolle der Software-Ingenieurin; um die Werkzeuge überhaupt auf die eigenen Nischen-Bedürfnisse zuschneiden zu können, wurde ein hohes Maß an technischer KI- und Automatisierungs-Kompetenz unumgänglich. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
 
 Die vier Beobachtungen verbindet ein Prinzip: Die produktivsten Momente entstanden dort, wo Intention und KI-Eigenlogik in Spannung zueinander traten, nicht wo sie sich deckten. Experiment 3 belegt zudem die Skalierbarkeit des Ansatzes: Eine automatisierte Pipeline kann den explorativen Raum systematisch abstecken, ohne dass die zentrale Spannung zwischen Kontrolle und Generierung aufgelöst wird.
 
@@ -1274,6 +1277,12 @@ Der dritte betrifft die Artefakte selbst. Die KI-generierten Bilder fühlen sich
 Diese Verschiebung von practice-based zu practice-led ist kein Scheitern der ursprünglichen Intention, sondern selbst ein Ergebnis der Forschung. Sie spiegelt das Spannungsfeld, in dem sich viele Kreative befinden, die zum ersten Mal mit generativer KI arbeiten: Die Unsicherheit, ob das hier Kunst oder Technikerprobung ist, lässt sich nicht vorab klären. Sie zeigt sich erst im Prozess.
 
 Nebenbei entstand ein wiederverwendbarer Workflow: Die Kombination aus Claude Code als Orchestrator und der fal.ai API als Modell-Backend erwies sich als reproduzierbare Methode für systematisches Modell-Screening. Dieser methodische Beitrag war nicht geplant, entspricht aber dem Charakter von Practice-Led Research [@candy2006practice]: Die Praxis generiert Erkenntnisse, die über das einzelne Projekt hinaus nutzbar sind — in diesem Fall einen reproduzierbaren Workflow für systematisches Modell-Screening.
+
+### Abschließende autoethnografische Synthese: Die Maschine als Werkbank
+
+Die Automatisierung des Prozesses hat mich der Figur Kepler weder nähergebracht noch weiter von ihr entfremdet. Da das grundlegende 3D-Design nicht meine alleinige Kreation ist, betrachte ich die massenhaft generierten Bilder nicht als emotional aufgeladenes Endprodukt, sondern als hart erarbeitetes Fundament. Der monatelange Prozess war letztlich der Prolog: Erst jetzt, da die Pipeline steht und die Grenzen der Modelle verstanden sind, kann die eigentliche Arbeit beginnen. Die nächsten Schritte führen zurück zu mehr Kontrolle – sei es das Extrahieren spezifischer Stile aus unseren Pinterest-Boards, die gezielte Steuerung durch ControlNet oder das Erstellen von groben Blockouts in einer Game Engine, meiner eigentlichen technologischen Heimat.
+
+Der im Prozess identifizierte emotionale Zyklus aus KI-Burnout und Erschöpfung hat sich durch den automatisierten Workflow vorerst wieder in Richtung KI-Enthusiasmus und Neugier verschoben. Diese ständige Oszillation scheint der Normalzustand in der Arbeit mit einer Technologie zu sein, die nie stillsteht. Als jemand mit starkem technischen Hintergrund fühle ich mich in diesem experimentellen Raum wohl. Doch diese Autoethnografie zeigt auch deutlich: Für Medienschaffende, die nicht bereit sind, sich tief in Code, API-Dokumentationen und technische Frustrationstoleranz einzuarbeiten, bleibt die vermeintliche 'Everything Machine' vorerst ein starres Werkzeug, das den kreativen Prozess eher diktiert als befreit.
 
 ## Ausblick
 
