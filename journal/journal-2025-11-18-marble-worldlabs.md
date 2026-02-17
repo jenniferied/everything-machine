@@ -4,7 +4,7 @@
 
 Heute habe ich Marble von World Labs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
 
-Marble ist eine browserbasierte Plattform zum Erstellen und Erkunden interaktiver 3D-Welten. Keine komplexe Software nötig — alles läuft im Browser. Die Oberfläche ist intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
+Marble ist eine browserbasierte Plattform zum Erstellen und Erkunden interaktiver 3D-Welten. Keine komplexe Software nötig, alles läuft im Browser. Die Oberfläche ist intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
 
 Ich habe vier verschiedene Welten erstellt, um zu testen, wie das Tool mit unterschiedlichen Input-Strategien umgeht – von konkreten Fotos bis zu abstrakten Vibes.
 

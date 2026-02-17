@@ -2,11 +2,11 @@
 
 **19. November 2025**
 
-Für mein Artistic Research-Projekt "Everything Machine (Kepler)" brauchte ich eine Website, die sowohl den wissenschaftlichen Anspruch erfüllt als auch die künstlerische Identität von Kepler widerspiegelt. Statt mit einem fertigen CMS zu arbeiten, habe ich die Seite von Grund auf mit [Cursor](https://cursor.sh) gebaut — einem KI-gestützten Code-Editor, der beim Entwickeln hilft und den Code sauber hält.
+Für mein Artistic Research-Projekt "Everything Machine (Kepler)" brauchte ich eine Website, die sowohl den wissenschaftlichen Anspruch erfüllt als auch die künstlerische Identität von Kepler widerspiegelt. Statt mit einem fertigen CMS zu arbeiten, habe ich die Seite von Grund auf mit [Cursor](https://cursor.sh) gebaut, einem KI-gestützten Code-Editor, der beim Entwickeln hilft und den Code sauber hält.
 
 ## Technical Setup: Cursor und GitHub
 
-Cursor ist ein Fork von VS Code mit KI-Features. Man kann direkt im Editor mit der KI chatten, Code generieren lassen oder bestehenden Code refactoren. Ich musste nicht ständig zwischen Browser und Dokumentation wechseln — die KI kennt den Kontext meines Projekts und kann direkt helfen.
+Cursor ist ein Fork von VS Code mit KI-Features. Man kann direkt im Editor mit der KI chatten, Code generieren lassen oder bestehenden Code refactoren. Ich musste nicht ständig zwischen Browser und Dokumentation wechseln. Die KI kennt den Kontext meines Projekts und kann direkt helfen.
 
 ![Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.](assets/journal/2025-11-19-cursor-build/cursor-interface-screenshot.png)
 
@@ -65,7 +65,7 @@ Keine Node-Modules, keine Build-Steps – alles läuft direkt im Browser. Das ma
 
 Die Website ist jetzt in Version 1.0 – Player funktioniert, Journal lädt automatisch, Design ist konsistent. Cursor hat den Prozess deutlich beschleunigt, besonders bei repetitiven Aufgaben wie dem Markdown-Parsing oder dem Grid-Layout. Die Git-Versionierung gibt mir Sicherheit, dass ich jederzeit zurückkehren kann, wenn etwas schiefgeht.
 
-Was mir geholfen hat: Meine Erfahrung mit Web-Entwicklung. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen — es beschleunigt den Workflow, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
+Was mir geholfen hat: Meine Erfahrung mit Web-Entwicklung. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen. Es beschleunigt den Workflow, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
 
 
 ## Reflexion
