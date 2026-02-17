@@ -49,6 +49,7 @@
 \definecolor{darkborder}{HTML}{1f2937}  % background: #1f2937 (bg-gray-800)
 \definecolor{contentbg}{HTML}{e0e0e0}  % light gray for content pages
 \definecolor{darktext}{HTML}{111111}    % near-black for body text on light bg
+\definecolor{claudeorange}{HTML}{D77655}
 
 % === GLOW EFFECT FOR TITLE ===
 \usepackage{shadowtext}
@@ -126,19 +127,19 @@
 \usepackage{tcolorbox}
 
 \newtcolorbox{claudemsg}{
-  colback=accentgreen!8!contentbg, colframe=accentgreen!30,
-  arc=3mm, boxrule=0.4pt,
+  colback=claudeorange!6!white, colframe=claudeorange!40,
+  arc=3mm, boxrule=0.5pt,
   left=3mm, right=3mm, top=2mm, bottom=2mm,
-  fontupper=\small, before skip=2mm, after skip=2mm,
-  before upper={\textbf{\color{accentgreen}Claude}\hspace{0.5em}}
+  fontupper=\normalsize, before skip=2mm, after skip=2mm,
+  before upper={\raisebox{-1.5pt}{\includegraphics[height=10pt]{claude-icon.png}}\hspace{3pt}\textbf{\color{claudeorange}Claude}\hspace{0.5em}}
 }
 
 \newtcolorbox{usermsg}{
-  colback=darkborder!15!contentbg, colframe=darkborder!40,
-  arc=3mm, boxrule=0.4pt,
+  colback=accentgreen!5!white, colframe=accentgreen!25,
+  arc=3mm, boxrule=0.5pt,
   left=3mm, right=3mm, top=2mm, bottom=2mm,
-  fontupper=\small, before skip=2mm, after skip=2mm,
-  before upper={\textbf{\color{darktext}Jennifer}\hspace{0.5em}}
+  fontupper=\normalsize, before skip=2mm, after skip=2mm,
+  before upper={\raisebox{-1.5pt}{\includegraphics[height=10pt]{user-icon.png}}\hspace{3pt}\textbf{\color{accentgreen}Jennifer}\hspace{0.5em}}
 }
 
 \newcommand{\chatsection}[1]{%
