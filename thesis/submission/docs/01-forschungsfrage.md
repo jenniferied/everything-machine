@@ -32,6 +32,16 @@ Inwiefern ermöglicht die transparente Dokumentation des KI-gestützten Kreativp
 
 Diese Frage verbindet die autoethnografische Methodik mit der technischen Praxis und untersucht, wie das "Journaling" des Prozesses selbst zum Erkenntnismittel wird.
 
+**Frage 4:**
+Wie funktioniert die KI-gestützte Konstruktion eines digitalen Alter Egos als "identity workshop" (Turkle, 1995) für künstlerische Praxis?
+
+Verankert in Turkles Theorie digitaler Identitätskonstruktion. Der Fokus liegt auf der Frage, wie die Arbeit an einer virtuellen Persona gleichzeitig ein Raum für künstlerische Selbstverhandlung wird.
+
+**Frage 5:**
+Wie kann autoethnografische Reflexion den iterativen Human-AI-Kollaborationsprozess bei der Konstruktion eines digitalen Alter Egos strukturieren und dokumentieren?
+
+Methodologie-fokussierte Frage, die den Dokumentationsprozess selbst ins Zentrum stellt. Entspricht Schöns Reflection-in-Action und macht die Forschungsmethode zum Gegenstand.
+
 
 # Ausgewählte Forschungsfrage
 
@@ -51,19 +61,13 @@ Im Gegensatz zu breiteren Fragen fokussiert diese auf ein konkretes, dokumentier
 
 # Zwischenzeitliche Weiterentwicklung
 
-Basierend auf der Literaturrecherche wurde die Forschungsfrage zeitweise in Richtung einer Ästhetik-Frage weiterentwickelt ("Welche ästhetischen Qualitäten entstehen...?"). Die Praxis zeigte jedoch, dass die Veränderung des kreativen Prozesses die eigentliche Erkenntnis ist -- die Arbeit kehrt daher zur ursprünglichen Prozessfrage zurück.
+Basierend auf der Literaturrecherche wurde die Forschungsfrage zeitweise in Richtung der Ästhetik-Frage (Frage 2) weiterentwickelt. In der praktischen Arbeit zeigte sich jedoch, dass die Prozessfrage ergiebiger ist: Die Experimente generierten vor allem Erkenntnisse darüber, *wie* sich der kreative Workflow durch KI-Einsatz verändert -- weniger darüber, welche ästhetischen Qualitäten dabei entstehen. Die Arbeit kehrt daher bewusst zu Frage 1 zurück.
 
 
-# Alternative Formulierungen
+# Weitere Überlegungen
 
-Ein paar andere Ansätze, die ich auch spannend finde:
+Zwei weitere Ansätze wurden im Prozess erwogen, aber nicht als eigenständige Forschungsfragen verfolgt:
 
-Option A wäre eine Methodologie-fokussierte Frage: Wie kann autoethnografische Reflexion den iterativen Human-AI-Kollaborationsprozess bei der Konstruktion eines digitalen Alter Egos strukturieren und dokumentieren? Das wäre sehr prozess-fokussiert und entspricht Schöns Reflection-in-Action.
+Suspension of Disbelief als Rahmen: Wie kann das Prinzip der "suspension of disbelief" als produktiver Rahmen für die künstlerische Arbeit mit generativen KI-Tools dienen? Theoretisch interessant, aber mit nur einem Anker (Coleridge) zu schmal für eine Hauptfrage.
 
-Option B fokussiert auf Suspension of Disbelief: Wie kann das Prinzip der "suspension of disbelief" als produktiver Rahmen für die künstlerische Arbeit mit generativen KI-Tools dienen? Hat nur einen theoretischen Anker, dafür breitere Anwendbarkeit.
-
-Option C nimmt Turkles Identity Workshop als Ausgangspunkt: Wie funktioniert die KI-gestützte Konstruktion eines digitalen Alter Egos als "identity workshop" für künstlerische Praxis? Verankert in etablierter Theorie, spezifisch für digitale Identität.
-
-Option D ist sehr offen und praxis-basiert: Was zeigt sich im dokumentierten Prozess der iterativen Mensch-KI-Kollaboration bei der Erschaffung einer virtuellen Persona? Betont Zeigen über Beweisen, entspricht Henkes AR-Verständnis.
-
-(Vielleicht ist eine Kombination aus Option A oder D als Hauptfrage sinnvoll, und die aktuelle präzisierte Frage als Unterfrage?)
+Offene Prozessfrage: Was zeigt sich im dokumentierten Prozess der iterativen Mensch-KI-Kollaboration bei der Erschaffung einer virtuellen Persona? Betont Zeigen über Beweisen und entspricht Henkes AR-Verständnis, ist aber zu offen für eine fokussierte Untersuchung.

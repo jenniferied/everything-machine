@@ -46,7 +46,7 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 **Turkle (1995) – Life on the Screen** untersucht, wie digitale Umgebungen neue Formen der Identitätskonstruktion ermöglichen. Online-Räume fungieren als "identity workshops". Das Konzept ist direkt anwendbar auf Kepler – die digitale Persona ist ein experimenteller Raum für Identitätsarbeit.
 
-**Mori (2012) – The Uncanny Valley** beschreibt den Effekt, dass fast-menschliche Darstellungen Unbehagen auslösen können. Relevant als Evaluationskriterium für Kepler: Welcher Abstraktionsgrad ist ästhetisch produktiv? (muss ich noch vertiefen, bin mir nicht sicher ob das zentral wird)
+**Mori (2012) – The Uncanny Valley** beschreibt den Effekt, dass fast-menschliche Darstellungen Unbehagen auslösen können. Relevant als Evaluationskriterium für Kepler: Welcher Abstraktionsgrad ist ästhetisch produktiv? Im Projektverlauf zeigte sich, dass der Uncanny Valley-Effekt weniger zentral wurde als erwartet -- Kepler bewegt sich bewusst im stilisierten Bereich.
 
 **Coleridge (1817) – Biographia Literaria** prägt den Begriff "willing suspension of disbelief". Theoretischer Rahmen für die Rezeption von Kepler als virtueller Persona – warum bauen Menschen Beziehungen zu digitalen Charakteren auf?
 
@@ -73,8 +73,6 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 **Ellis, Adams & Bochner (2011) – Autoethnography: An Overview** systematisiert die Methode und unterscheidet zwischen evocative, analytic und critical autoethnography. Definitiver methodischer Rahmen für meine Herangehensweise.
 
-**Ellis (2004) – The Ethnographic I** entwickelt Autoethnografie als Ansatz, der persönliche Erfahrung mit kultureller Analyse verbindet. Legitimiert die Ich-Perspektive als Forschungsinstrument.
-
 
 ## Human-AI Collaboration
 
@@ -87,4 +85,4 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 # Weitere Quellen
 
-Für die vollständige Bibliographie siehe `references/bibliography.bib`. Die Literaturrecherche umfasst insgesamt 25+ Quellen, davon etwa die Hälfte aus AR-spezifischen Venues (JAR, PARSE, VIS, Research Catalogue, ArteActa).
+Für die vollständige Bibliographie siehe `references/bibliography.bib`. Die Literaturrecherche umfasst über 15 Quellen, davon etwa die Hälfte aus AR-spezifischen Venues (JAR, PARSE, VIS, Research Catalogue, ArteActa).
