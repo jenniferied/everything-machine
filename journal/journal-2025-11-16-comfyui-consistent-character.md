@@ -91,7 +91,7 @@ Die Lösung, die ich gefunden habe – eine klare Referenz auf neutralem Hinterg
 </div>
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
-  <div class="chat-bubble"><p>ComfyUI mit einem Network von Mickmumpitz (Füge einen Link zu seinem YT Channel hinzu).</p></div>
+  <div class="chat-bubble"><p>ComfyUI mit einem Network von <a href="https://www.youtube.com/@mickmumpitz" target="_blank">Mickmumpitz</a>.</p></div>
 </div>
 <div class="chat-message claude">
   <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>

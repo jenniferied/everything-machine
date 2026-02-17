@@ -8,7 +8,7 @@ Im Rahmen der Artistic Research-Vorlesung bei Prof. Dr. Aristotelis Hadjakos an 
 
 Kepler ist Gavins Musikprojekt – eine digitale Künstleridentität, ein Charakter mit Voxel-Maske, der zwischen Mensch und Avatar existiert. KI-Tools interessieren mich gerade, und die Idee lag nahe: Was passiert, wenn ich generative KI-Systeme nutze, um Kepler weiterzuentwickeln? Wie verändert das den kreativen Prozess?
 
-Hadjakos hat betont, dass Artistic Research frei sein soll – der Versuch, sich von starren Strukturen zu lösen und erstmal zu machen. Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
+Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
 
 ## Pinterest-Recherche
 
