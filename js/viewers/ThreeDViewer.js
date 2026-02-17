@@ -119,6 +119,16 @@ export class ThreeDViewer extends ViewerBase {
       }
     }
 
+    // Load DRACOLoader for compressed GLB
+    if (!window.THREE.DRACOLoader) {
+      try {
+        await this.scriptLoader.loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js');
+        console.log('[ThreeDViewer] DRACOLoader loaded');
+      } catch (e) {
+        console.warn('[ThreeDViewer] DRACOLoader failed to load:', e);
+      }
+    }
+
     // Load RGBELoader for HDRI
     if (!window.THREE.RGBELoader) {
       try {
@@ -250,6 +260,11 @@ export class ThreeDViewer extends ViewerBase {
     this.originalMaterial = null;
 
     const loader = new THREE.GLTFLoader();
+    if (window.THREE.DRACOLoader) {
+      const dracoLoader = new THREE.DRACOLoader();
+      dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/draco/');
+      loader.setDRACOLoader(dracoLoader);
+    }
     this.currentModelKey = modelKey;
 
     console.log(`[ThreeDViewer] Loading ${modelConfig.name}...`);

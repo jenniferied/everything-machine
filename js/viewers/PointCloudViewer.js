@@ -57,6 +57,13 @@ export class PointCloudViewer extends ViewerBase {
         console.warn('[PointCloudViewer] GLTFLoader failed to load:', e);
       }
     }
+    if (!window.THREE.DRACOLoader) {
+      try {
+        await this.scriptLoader.loadScript('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js');
+      } catch (e) {
+        console.warn('[PointCloudViewer] DRACOLoader failed to load:', e);
+      }
+    }
     console.log('[PointCloudViewer] Three.js dependencies loaded');
   }
 
@@ -266,6 +273,11 @@ export class PointCloudViewer extends ViewerBase {
       }
 
       const loader = new THREE.GLTFLoader();
+      if (window.THREE.DRACOLoader) {
+        const dracoLoader = new THREE.DRACOLoader();
+        dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/draco/');
+        loader.setDRACOLoader(dracoLoader);
+      }
       const gltf = await new Promise((resolve, reject) => {
         loader.load(glbUrl, resolve, undefined, reject);
       });
