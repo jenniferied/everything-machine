@@ -2,19 +2,19 @@
 
 **19. November 2025**
 
-Für mein Artistic Research-Projekt "Everything Machine (Kepler)" brauchte ich eine Website, die sowohl den wissenschaftlichen Anspruch erfüllt als auch die künstlerische Identität von Kepler widerspiegelt. Statt mit einem fertigen CMS zu arbeiten, habe ich mich entschieden, die Seite von Grund auf mit [Cursor](https://cursor.sh) zu bauen – einem AI-gestützten Code-Editor, der mir dabei hilft, schneller zu entwickeln und gleichzeitig den Code sauber zu halten.
+Für mein Artistic Research-Projekt "Everything Machine (Kepler)" brauchte ich eine Website, die sowohl den wissenschaftlichen Anspruch erfüllt als auch die künstlerische Identität von Kepler widerspiegelt. Statt mit einem fertigen CMS zu arbeiten, habe ich die Seite von Grund auf mit [Cursor](https://cursor.sh) gebaut — einem KI-gestützten Code-Editor, der beim Entwickeln hilft und den Code sauber hält.
 
 ## Technical Setup: Cursor und GitHub
 
-Cursor ist im Grunde ein Fork von VS Code, der mit KI-Features erweitert wurde. Man kann direkt im Editor mit der KI chatten, Code generieren lassen oder bestehenden Code refactoren. Für mich war das perfekt, weil ich so nicht ständig zwischen Browser und Dokumentation wechseln musste – die KI kennt den Kontext meines Projekts und kann direkt helfen.
+Cursor ist ein Fork von VS Code mit KI-Features. Man kann direkt im Editor mit der KI chatten, Code generieren lassen oder bestehenden Code refactoren. Ich musste nicht ständig zwischen Browser und Dokumentation wechseln — die KI kennt den Kontext meines Projekts und kann direkt helfen.
 
 ![Cursor Oberfläche. Links die Liste der Dateien im GitHub Repository, in der Mitte eine Datei mit Changes, die die KI gemacht hat (die accepted werden können – in diesem Fall ein Prompt um das Layout zu fixen), rechts der Agent View, der ein Modell (in diesem Fall GPT 5.1 Codex) nutzt, um Prompts umzusetzen.](assets/journal/2025-11-19-cursor-build/cursor-interface-screenshot.png)
 
-Das Projekt ist komplett in Git versioniert. Jede größere Änderung wurde als Commit festgehalten, was es mir ermöglicht, den Entwicklungsprozess nachzuvollziehen. Die Struktur ist simpel: `index.html` für die Hauptseite, `scripts.js` für die Logik, `style.css` für das Styling, und ein `journal/` Ordner für alle Markdown-Einträge. Keine komplexen Build-Tools, keine Dependencies außer Tailwind CSS über CDN – alles läuft direkt im Browser.
+Das Projekt ist in Git versioniert. Jede größere Änderung wurde als Commit festgehalten, sodass sich der Entwicklungsprozess nachvollziehen lässt. Die Struktur ist simpel: `index.html` für die Hauptseite, `scripts.js` für die Logik, `style.css` für das Styling, und ein `journal/` Ordner für alle Markdown-Einträge. Keine komplexen Build-Tools, keine Dependencies außer Tailwind CSS über CDN – alles läuft direkt im Browser.
 
 ## Design: Research Catalogue inspiriert, aber dunkel
 
-Als Inspiration diente mir die [Research Catalogue](https://www.researchcatalogue.net/) – eine Plattform für Artistic Research, die ich während meines Studiums kennengelernt habe. Die hat diesen cleanen, wissenschaftlichen Look mit klarer Navigation und guter Lesbarkeit. Ich habe mir das Konzept geliehen, aber es für Kepler angepasst.
+Als Inspiration diente mir die [Research Catalogue](https://www.researchcatalogue.net/) – eine Plattform für Artistic Research, die ich während meines Studiums kennengelernt habe. Die hat einen wissenschaftlichen Look mit klarer Navigation und guter Lesbarkeit. Ich habe das Konzept übernommen, aber für Kepler angepasst.
 
 ![Research Catalogue Layout-Beispiel. Ein cooler Artikel auf researchcatalogue.net, der das Layout demonstriert – cleanes Design mit klarer Navigation und guter Lesbarkeit.](assets/journal/2025-11-19-cursor-build/research-catalogue-layout-screenshot.png)
 
@@ -44,7 +44,7 @@ Das Herzstück der Website ist das Prozess-Logbuch. Hier werden alle Journal-Ein
 
 Die Timeline oben ist horizontal scrollbar und zeigt alle verfügbaren Einträge mit Datum und Titel. Klickt man auf einen Eintrag, wird er im Hauptbereich angezeigt. Die Einträge selbst werden in "Bubbles" dargestellt – jeder Abschnitt (überschrieben mit ## oder ###) wird zu einer eigenen Karte im Grid.
 
-Der Pixel-Effekt kommt beim Titel zum Tragen: Wenn ein Eintrag geladen wird, erscheint der Titel mit einem Typing-Effekt, Buchstabe für Buchstabe, als würde jemand tippen. Dazu gibt es einen blinkenden Cursor. Die Font ist "Press Start 2P", und der Titel hat einen animierten Gradient, der von grün zu weiß übergeht.
+Der Pixel-Effekt kommt beim Titel zum Tragen: Wenn ein Eintrag geladen wird, erscheint der Titel Buchstabe für Buchstabe, als würde jemand tippen. Dazu gibt es einen blinkenden Cursor. Die Font ist "Press Start 2P", und der Titel hat einen animierten Gradient, der von grün zu weiß übergeht.
 
 Technisch wird das so umgesetzt: Der Markdown-Parser (`parseMarkdown` Funktion) teilt jeden Eintrag in Abschnitte auf. Überschriften werden zu Bubble-Titeln, der Rest wird als HTML formatiert. Bilder, Links und spezielle Komponenten (wie die WORLD_INFO Dropdowns für Marble-Welten) werden dabei berücksichtigt. Das Grid passt sich automatisch an die Bildschirmgröße an – 3 Spalten auf Desktop, 2 auf Tablet, 1 auf Mobile.
 
@@ -65,7 +65,7 @@ Keine Node-Modules, keine Build-Steps – alles läuft direkt im Browser. Das ma
 
 Die Website ist jetzt in Version 1.0 – Player funktioniert, Journal lädt automatisch, Design ist konsistent. Cursor hat den Prozess deutlich beschleunigt, besonders bei repetitiven Aufgaben wie dem Markdown-Parsing oder dem Grid-Layout. Die Git-Versionierung gibt mir Sicherheit, dass ich jederzeit zurückkehren kann, wenn etwas schiefgeht.
 
-Was mir besonders geholfen hat: Ich habe bereits Erfahrung mit Web-Entwicklung, und das macht einen großen Unterschied, wenn man mit KI programmiert. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen oder anpassen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen – es beschleunigt den Workflow enorm, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
+Was mir geholfen hat: Meine Erfahrung mit Web-Entwicklung. Man kann die Vorschläge der KI besser einschätzen, weiß, was funktioniert und was nicht, und kann gezielt nachfragen. Cursor ist ein mächtiges Tool, aber es ersetzt nicht das Verständnis für die Grundlagen — es beschleunigt den Workflow, wenn man weiß, was man will. Die Basis steht, und das war das Ziel.
 
 
 ## Reflexion

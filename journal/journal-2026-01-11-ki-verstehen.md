@@ -2,9 +2,9 @@
 
 **11. Januar 2026**
 
-Ich wollte Künstliche Intelligenz besser für mich selbst verstehen, auch außerhalb des Artistic Research Contexts, bevor ich dort weiter eintauchte. Ich wollte nicht nur die Tools benutzen, die aufkommen, sondern wirklich verstehen, was dort gerade vor sich geht.
+Ich wollte Künstliche Intelligenz für mich selbst verstehen, auch außerhalb des Artistic Research-Kontexts, bevor ich dort weiter eintauchte. Nicht nur die Tools benutzen, die aufkommen, sondern verstehen, was gerade vor sich geht.
 
-Eigentlich wollte ich auf der Autofahrt einen Podcast hören. Aber die meisten, die ich gefunden habe, waren für sehr einfache Anwendungsfälle – wie können normale Menschen ChatGPT nutzen, um E-Mails zu schreiben. Ich wollte in die tieferen Themen rein. Ich hatte das Gefühl, dass manche Leute viel weiter sind als ich, und ich wollte genau die Lücken aufholen, wo ich durchfalle.
+Eigentlich wollte ich auf der Autofahrt einen Podcast hören. Aber die meisten waren für einfache Anwendungsfälle — wie nutze ich ChatGPT, um E-Mails zu schreiben. Ich wollte tiefer rein. Ich hatte das Gefühl, dass manche Leute weiter sind als ich, und ich wollte genau die Lücken füllen.
 
 Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügbar ist. Also Freisprechanlage an, Claude im Chat-Interface, das meine Stimme in Text transkribierte. Zugegebenermaßen etwas gefährlich am Anfang – das System stockte manchmal, ich musste Sätze wiederholen, war abgelenkt. Aber dann hatten wir uns eingespielt, und es wurde zu einem echten Gespräch über 30 Minuten Fahrtzeit.
 
@@ -199,7 +199,7 @@ Dann dachte ich: Perfekt wäre eigentlich KI selbst, weil die ja immer verfügba
 
 ## Wie lerne ich das wirklich?
 
-Gegen Ende der Fahrt wurde mir klar: Ich hatte jetzt all diese Informationen gehört – aber habe ich sie wirklich gelernt?
+Gegen Ende der Fahrt wurde mir klar: Ich hatte all das gehört — aber habe ich es wirklich gelernt?
 
 <div class="chat-message user">
   <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>

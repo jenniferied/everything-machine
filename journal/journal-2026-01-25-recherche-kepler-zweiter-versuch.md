@@ -2,7 +2,7 @@
 
 **25. Januar 2026**
 
-Im November hatte ich mit ComfyUI versucht, konsistente Bilder von Kepler zu generieren. Es war frustrierend. Die KI interpretierte hartnäckig Gesichter in seine Voxel-Maske hinein — egal, was ich promptete. Face Detailer, PuLID, InstantID: alle auf menschliche Gesichter trainiert, alle unfähig, einen Charakter ohne Gesicht zu respektieren.
+Im November hatte ich mit ComfyUI versucht, konsistente Bilder von Kepler zu generieren. Es war frustrierend. Die KI interpretierte hartnäckig Gesichter in seine Voxel-Maske hinein, egal, was ich promptete. Face Detailer, PuLID, InstantID: alle auf menschliche Gesichter trainiert, alle unfähig, einen Charakter ohne Gesicht zu respektieren.
 
 ![Kepler in seiner Voxel-Form — kein Gesicht, das ist Absicht.](assets/images/kepler-voxel.png)
 
@@ -10,7 +10,7 @@ Im November hatte ich mit ComfyUI versucht, konsistente Bilder von Kepler zu gen
 
 ![Noch ein Versuch — wieder ein Gesicht, wo keines sein sollte.](assets/journal/2025-11-16-comfyui-consistent-character/generated-kepler-007.png)
 
-Seitdem habe ich das Thema nicht losgelassen. In den Wochen dazwischen habe ich andere Dinge gemacht — Suno ausprobiert, mit Claude über KI-Grundlagen geredet, die Thesis-Struktur weitergedacht. Aber im Hinterkopf blieb dieses Bild: Kepler mit einem fremden Gesicht. Es fühlte sich an, als hätte das System meinen Charakter nicht nur falsch dargestellt, sondern ihn *korrigiert*. Als wäre ein gesichtsloses Wesen ein Fehler, den die KI beheben muss.
+Seitdem habe ich das Thema nicht losgelassen. In den Wochen dazwischen habe ich andere Dinge gemacht: Suno ausprobiert, mit Claude über KI-Grundlagen geredet, die Thesis-Struktur weitergedacht. Aber im Hinterkopf blieb dieses Bild: Kepler mit einem fremden Gesicht. Es fühlte sich an, als hätte das System meinen Charakter nicht nur falsch dargestellt, sondern ihn *korrigiert*. Als wäre ein gesichtsloses Wesen ein Fehler, den die KI beheben muss.
 
 Ich wollte wissen: Liegt es an meinem Workflow? An den Tools? Oder ist das ein grundsätzliches Problem, das alle generativen KI-Modelle betrifft, wenn man nicht-normative Charaktere abbilden will?
 
@@ -38,7 +38,7 @@ Ich habe es trotzdem ausprobiert — nicht über das ComfyUI-Plugin, sondern üb
 
 ![Gemini hat die Draufsicht umgesetzt, aber den liegenden Kepler am Rand nicht entfernt.](assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/gemini-nanobanana-pool-topdown.png)
 
-Beeindruckend: Gemini behält die geometrische Voxel-Form bei und fügt keine Gesichter hinzu. Aber jeder neue Prompt baut auf dem vorherigen Bild auf, statt es zu ersetzen — für einen wirklich neuen Stil müsste ich jeweils einen neuen Chat starten.
+Beeindruckend: Gemini behält die geometrische Voxel-Form bei und fügt keine Gesichter hinzu. Aber jeder neue Prompt baut auf dem vorherigen Bild auf, statt es zu ersetzen. Für einen neuen Stil müsste ich jeweils einen neuen Chat starten.
 
 ### Chat 2: Treppe im Nachthimmel
 
@@ -48,13 +48,13 @@ Beeindruckend: Gemini behält die geometrische Voxel-Form bei und fügt keine Ge
 
 ![Die Spiraltreppe wurde umgesetzt, aber immer noch kein Portrait-Format. Und die Sterne liegen vor dem Planeten — physikalisch unmöglich.](assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/gemini-nanobanana-stairs-spiral.png)
 
-Die Voxel-Ästhetik bleibt konsistent, kein Gesicht hinzugefügt. Aber Gemini ignoriert die Portrait-Anweisung zweimal, und die Sterne vor dem Planeten zeigen, dass das Modell kein räumliches Verständnis der Szene hat — es komponiert visuell, nicht physikalisch.
+Die Voxel-Ästhetik bleibt konsistent, kein Gesicht hinzugefügt. Aber Gemini ignoriert die Portrait-Anweisung zweimal, und die Sterne vor dem Planeten zeigen, dass das Modell kein räumliches Verständnis der Szene hat. Es komponiert visuell, nicht physikalisch.
 
 ### Chat 3: Brücke bei Nacht
 
 > **"Das hier sind ein paar Beispielbilder von Kepler. Behalte seine Voxel-Ästhetik bei und generiere mir ein hochkant ästhetisches Cover. Wie er über eine Brücke in der Nacht fährt in einem Retro-Auto."** → **"Sorge dafür, dass der Brückenzaun nicht leuchtet. Wähle eine andere Perspektive und entferne den Text."** → **"Die Barrikaden der Brücke leuchten immer noch."**
 
-Ich hatte nur "Cover" geschrieben, nicht "Album-Cover" — Gemini hat den Kontext selbst erschlossen und "NIGHT DRIVE / KEPLER" als Titel gesetzt.
+Ich hatte nur "Cover" geschrieben, nicht "Album-Cover". Gemini hat den Kontext selbst erschlossen und "NIGHT DRIVE / KEPLER" als Titel gesetzt.
 
 ![Gemini generiert ungefragt ein Album-Cover mit Titel "NIGHT DRIVE / KEPLER" — es interpretiert "Cover" als Musikcover und fügt selbstständig Text hinzu.](assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/gemini-nanobanana-bridge-cover.png)
 
@@ -72,25 +72,25 @@ Ich hatte nur "Cover" geschrieben, nicht "Album-Cover" — Gemini hat den Kontex
 
 ![Dritte Iteration — wieder fast identisch. "Komplett um" wurde ignoriert.](assets/journal/2026-01-25-recherche-kepler-zweiter-versuch/gemini-nanobanana-typo-moved.png)
 
-Besonders frustrierend: Drei Iterationen, kaum Unterschied. Keine der Anweisungen — liquid metal, cyber tribal, slanted, Cover-Farben, komplett anders — wurde wirklich umgesetzt. Typografie ist offensichtlich eine Schwachstelle: Gemini kann Text auf Bilder setzen, aber die ästhetische Kontrolle über Schriftart, Stil und Platzierung fehlt fast vollständig.
+Drei Iterationen, kaum Unterschied. Keine der Anweisungen — liquid metal, cyber tribal, slanted, Cover-Farben, komplett anders — wurde umgesetzt. Typografie ist offensichtlich eine Schwachstelle: Gemini kann Text auf Bilder setzen, aber die ästhetische Kontrolle über Schriftart, Stil und Platzierung fehlt fast vollständig.
 
 ### Zwischenfazit Gemini
 
-Die vier Chats zeigen ein klares Bild: Gemini ist beeindruckend darin, die Voxel-Ästhetik beizubehalten und Szenen zu generieren — als Inspirationsquelle funktioniert es. Aber für Art Direction ist das Chat-Fenster unbrauchbar. Manche Anweisungen werden präzise befolgt (Szenen-Änderungen, Text entfernen), andere hartnäckig ignoriert (Hochformat, Leuchteffekte, Typografie-Stil, Sterne-vor-Planeten-Physik). Für jeden neuen Anlauf muss man einen frischen Chat öffnen, und selbst dann ist die Kontrolle zu grob. Für feinere Steuerung bräuchte man die API oder spezialisierte Tools wie NanoBanano in ComfyUI. Das Potenzial ist da — aber Spaß macht es nicht.
+Die vier Chats zeigen ein klares Bild: Gemini ist beeindruckend darin, die Voxel-Ästhetik beizubehalten und Szenen zu generieren. Als Inspirationsquelle funktioniert es. Aber für Art Direction ist das Chat-Fenster unbrauchbar. Manche Anweisungen werden präzise befolgt (Szenen-Änderungen, Text entfernen), andere hartnäckig ignoriert (Hochformat, Leuchteffekte, Typografie-Stil, Sterne-vor-Planeten-Physik). Für jeden neuen Anlauf muss man einen frischen Chat öffnen, und selbst dann ist die Kontrolle zu grob. Für feinere Steuerung bräuchte man die API oder spezialisierte Tools wie NanoBanano in ComfyUI. Das Potenzial ist da — aber Spaß macht es nicht.
 
 ## 2D-Workaround: ControlNet Depth + Inpainting
 
-Ein vielversprechender Ansatz: Statt Face-Tools zu nutzen, kann ich über Depth Maps arbeiten. [Flux.1-dev-Controlnet-Depth](https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth) extrahiert die räumliche Struktur eines Bildes und nutzt sie als Kontrollsignal — ohne das Gesicht interpretieren zu müssen. Kombiniert mit Inpainting könnte ich Kepler-Referenzen mit Tiefenkarte einspeisen und die KI nur den Stil und die Umgebung generieren lassen, während die Silhouette erhalten bleibt.
+Ein vielversprechender Ansatz: Statt Face-Tools zu nutzen, kann ich über Depth Maps arbeiten. [Flux.1-dev-Controlnet-Depth](https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth) extrahiert die räumliche Struktur eines Bildes und nutzt sie als Kontrollsignal, ohne das Gesicht interpretieren zu müssen. Kombiniert mit Inpainting könnte ich Kepler-Referenzen mit Tiefenkarte einspeisen und die KI nur den Stil und die Umgebung generieren lassen, während die Silhouette erhalten bleibt.
 
 Das umgeht das Face-Problem elegant: Die Depth Map sieht nur Geometrie, keine Gesichtszüge.
 
 ## Von der Frustration zum System
 
-Die Gemini-Chats haben gezeigt: Das Potenzial ist da, aber die Steuerung über ein Chat-Fenster ist zu grob. Manche Anweisungen werden befolgt, andere ignoriert — und bei jedem neuen Versuch muss ich einen frischen Chat öffnen. Das skaliert nicht.
+Die Gemini-Chats haben gezeigt: Das Potenzial ist da, aber die Steuerung über ein Chat-Fenster ist zu grob. Manche Anweisungen werden befolgt, andere ignoriert. Bei jedem neuen Versuch muss ich einen frischen Chat öffnen. Das skaliert nicht.
 
-Parallel hatte ich [fal.ai](https://fal.ai) entdeckt — eine Plattform, die gehostete Inferenz für dutzende Bildmodelle anbietet. Kein lokales Setup, keine GPU, alles über API. Die Idee: Statt manuell in Chat-Fenstern zu experimentieren, ein Python-Skript schreiben, das systematisch verschiedene Modelle mit denselben Prompts und Referenzbildern aufruft. Cursor und Claude Code als Entwicklungsumgebung, fal.ai als Inferenz-Backend.
+Parallel hatte ich [fal.ai](https://fal.ai) entdeckt, eine Plattform, die gehostete Inferenz für dutzende Bildmodelle anbietet. Kein lokales Setup, keine GPU, alles über API. Die Idee: Statt manuell in Chat-Fenstern zu experimentieren, ein Python-Skript schreiben, das systematisch verschiedene Modelle mit denselben Prompts und Referenzbildern aufruft. Cursor und Claude Code als Entwicklungsumgebung, fal.ai als Inferenz-Backend.
 
-Der Workflow-Shift war fundamental: Nicht mehr "wie überrede ich ein einzelnes Modell?" — sondern "wie vergleiche ich neun Modelle systematisch miteinander?". Ein Automatisierungs-Problem statt eines Überredungs-Problems. Und das erste Mal, dass Claude Code nicht nur bei der Recherche half, sondern den gesamten Experiment-Workflow ermöglichte: Skript schreiben, API-Calls strukturieren, Ergebnisse sortieren.
+Der Workflow-Shift war fundamental: Nicht mehr "wie überrede ich ein einzelnes Modell?" — sondern "wie vergleiche ich neun Modelle systematisch miteinander?". Ein Automatisierungs-Problem statt eines Überredungs-Problems. Das erste Mal, dass Claude Code nicht nur bei der Recherche half, sondern den gesamten Experiment-Workflow ermöglichte: Skript schreiben, API-Calls strukturieren, Ergebnisse sortieren.
 
 ## 9 Modelle, 7 Phasen
 

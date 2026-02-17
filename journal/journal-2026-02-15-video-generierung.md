@@ -2,15 +2,15 @@
 
 **15. Februar 2026**
 
-Nach dem Bildgenerierungs-Experiment war die Frage unvermeidlich: Können die Bilder in Bewegung kommen? Kepler im Studio sitzend — beeindruckend als Standbild. Aber was, wenn er nickt? Wenn das Wasser im Pool kräuselt? Wenn das Auto tatsächlich fährt?
+Nach dem Bildgenerierungs-Experiment war die Frage unvermeidlich: Können die Bilder in Bewegung kommen? Kepler im Studio sitzend, beeindruckend als Standbild. Aber was, wenn er nickt? Wenn das Wasser im Pool kräuselt? Wenn das Auto tatsächlich fährt?
 
-Die fal.ai-Pipeline war bereits aufgesetzt, also lag der nächste Schritt nahe: Image-to-Video. Sieben Modelle, vier Szenen, 28 generierte Videos — ein systematischer Vergleich nach demselben Prinzip wie beim Bildexperiment. Dieselbe Frage, eine Dimension weiter: Respektieren die Modelle Keplers gesichtslose Voxel-Ästhetik auch, wenn die Bilder anfangen, sich zu bewegen?
+Die fal.ai-Pipeline war bereits aufgesetzt, also lag der nächste Schritt nahe: Image-to-Video. Sieben Modelle, vier Szenen, 28 generierte Videos. Ein systematischer Vergleich nach demselben Prinzip wie beim Bildexperiment. Dieselbe Frage, eine Dimension weiter: Respektieren die Modelle Keplers gesichtslose Voxel-Ästhetik, wenn die Bilder sich bewegen?
 
-Das Setup: Ein Python-Skript, das vier Szenen-Bilder aus Experiment 05 nimmt und sie über fal.ai an sieben Image-to-Video-Modelle schickt. Jedes Modell bekommt dasselbe Bild und denselben Prompt — die einzige Variable ist das Modell selbst. Die Ergebnisse: ein CSV mit 28 Bewertungen und 28 MP4-Dateien.
+Das Setup: Ein Python-Skript, das vier Szenen-Bilder aus Experiment 05 nimmt und sie über fal.ai an sieben Image-to-Video-Modelle schickt. Jedes Modell bekommt dasselbe Bild und denselben Prompt. Die einzige Variable ist das Modell selbst. Die Ergebnisse: ein CSV mit 28 Bewertungen und 28 MP4-Dateien.
 
 ## Die Input-Bilder
 
-Vier Szenen aus dem Bildexperiment — alle generiert mit NanoBanana Pro (Gemini 2.5 Flash) — bewusst gewählt für unterschiedliche Herausforderungen:
+Vier Szenen aus dem Bildexperiment, alle generiert mit NanoBanana Pro (Gemini 2.5 Flash), bewusst gewählt für unterschiedliche Herausforderungen:
 
 ![Studio (Querformat) — Kepler am Mischpult. Die einfachste Szene: klare Geometrie, kontrollierte Beleuchtung.](assets/images/experiment-05/14_nanobanana_scenes_landscape/studio.jpg)
 
@@ -20,7 +20,7 @@ Vier Szenen aus dem Bildexperiment — alle generiert mit NanoBanana Pro (Gemini
 
 ![Spiral Staircase (Hochformat) — Kepler auf einer leuchtenden Wendeltreppe. Komplexe Geometrie und Glow.](assets/images/experiment-05/18_nanobanana_v2_portrait/spiral_staircase.jpg)
 
-Eine Querformat-Szene, drei Hochformat-Szenen. Das war Absicht: Das Bildexperiment hatte gezeigt, dass Hochformat für die Modelle schwieriger ist — und beim Video wollte ich wissen, ob sich das bestätigt.
+Eine Querformat-Szene, drei Hochformat-Szenen. Das war Absicht: Das Bildexperiment hatte gezeigt, dass Hochformat für die Modelle schwieriger ist. Beim Video wollte ich wissen, ob sich das bestätigt.
 
 ## Die Modelle
 
@@ -34,7 +34,7 @@ Eine Querformat-Szene, drei Hochformat-Szenen. Das war Absicht: Das Bildexperime
 | PixVerse v5.5 | $0,20 | Okay | Schlecht | Schlecht | Okay | Zu billig |
 | LTX-2 | $0,36 | Gut | Schlecht | Schlecht | Schlecht | **Verlierer** |
 
-Die Preise reichen von $0,20 (PixVerse) bis $0,84 (Kling) pro Video — und die Kosten-Qualitäts-Korrelation ist stärker als bei Bildern: Günstige Modelle scheitern fast durchgehend.
+Die Preise reichen von $0,20 (PixVerse) bis $0,84 (Kling) pro Video, und die Kosten-Qualitäts-Korrelation ist stärker als bei Bildern: Günstige Modelle scheitern fast durchgehend.
 
 ## Highlights
 
@@ -52,7 +52,7 @@ Die Preise reichen von $0,20 (PixVerse) bis $0,84 (Kling) pro Video — und die 
 
 ## Lowlights
 
-**PixVerse v5.5 — Night Drive:** Das Gesicht verändert sich zu einer Art Lego-Figur. Der Face-Bias wird hier am deutlichsten sichtbar — das Modell "korrigiert" Keplers gesichtslose Maske Frame für Frame.
+**PixVerse v5.5 — Night Drive:** Das Gesicht verändert sich zu einer Art Lego-Figur. Der Face-Bias wird hier am deutlichsten sichtbar. Das Modell "korrigiert" Keplers gesichtslose Maske Frame für Frame.
 
 <figure class="image-figure my-4"><video src="assets/videos/experiment-06/pixverse_v55_night_drive.mp4" controls muted loop playsinline class="img-100 rounded-sm"></video><figcaption class="image-caption">PixVerse v5.5 — Night Drive. Gesichtshalluzination: Kepler wird zur Lego-Figur.</figcaption></figure>
 
@@ -66,9 +66,9 @@ Die Preise reichen von $0,20 (PixVerse) bis $0,84 (Kling) pro Video — und die 
 
 ## Portrait vs. Landscape
 
-Die überraschendste Erkenntnis: Hochformat-Bilder sind für Video-Modelle *deutlich* schwieriger als Querformat.
+Die überraschendste Erkenntnis: Hochformat-Bilder sind für Video-Modelle schwieriger als Querformat.
 
-Im Studio (Querformat) lieferten fast alle Modelle brauchbare Ergebnisse. Sobald es ins Hochformat ging — Pool, Night Drive, Spiral Staircase — brach die Qualität bei den günstigeren Modellen ein. Das Hauptproblem: **Gesichtshalluzination**. Keplers gesichtslose Voxel-Maske wird im Video nach und nach mit Augen, Nase, Mund gefüllt — als ob das Modell "korrigieren" will, was es für einen Fehler hält.
+Im Studio (Querformat) lieferten fast alle Modelle brauchbare Ergebnisse. Sobald es ins Hochformat ging (Pool, Night Drive, Spiral Staircase), brach die Qualität bei den günstigeren Modellen ein. Das Hauptproblem: **Gesichtshalluzination**. Keplers gesichtslose Voxel-Maske wird im Video nach und nach mit Augen, Nase, Mund gefüllt, als wolle das Modell "korrigieren", was es für einen Fehler hält.
 
 Die Gesichtshalluzination im Video ist schlimmer als im Standbild: Sie passiert *progressiv*. Das erste Frame sieht noch richtig aus, aber über die Sekunden hinweg "wächst" ein Gesicht in die Maske hinein. Das Face-Bias-Problem aus dem Bildexperiment multipliziert sich über die Zeit.
 
@@ -76,13 +76,13 @@ Die Gesichtshalluzination im Video ist schlimmer als im Standbild: Sie passiert 
 
 ## Überraschungen und Gotchas
 
-**Wan 2.6 generiert Audio** — auch wenn man es nicht anfordert. Es gibt keinen zuverlässigen Parameter, um die Audio-Generierung zu deaktivieren. Ein Gotcha, das in der API-Dokumentation nicht erwähnt wird.
+**Wan 2.6 generiert Audio**, auch wenn man es nicht anfordert. Es gibt keinen zuverlässigen Parameter, um die Audio-Generierung zu deaktivieren. Ein Gotcha, das in der API-Dokumentation nicht erwähnt wird.
 
 **LTX-2 ändert das Seitenverhältnis** bei Portrait-Input. Aus 9:16 wird etwas, das weder 9:16 noch 16:9 ist. Für eine Pipeline, die mit gemischten Orientierungen arbeitet, ein Ausschlusskriterium.
 
 **"Camera holds still"** im Prompt verhindert Kamerabewegung nicht zuverlässig. Manche Modelle interpretieren es als Vorschlag, nicht als Anweisung. Kling O3 und Veo 3.1 halten sich am ehesten daran.
 
-**Zwei Modelle ließen das Auto rückwärts fahren** — LTX-2 und Veo 3.1 interpretierten die Fahrtrichtung falsch in der Night-Drive-Szene.
+**Zwei Modelle ließen das Auto rückwärts fahren**: LTX-2 und Veo 3.1 interpretierten die Fahrtrichtung falsch in der Night-Drive-Szene.
 
 Alle 28 Videos sind auf der Video-Generationen-Seite zu sehen.
 

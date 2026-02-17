@@ -2,7 +2,7 @@
 
 **12. Januar 2026**
 
-Heute ein kleines Experiment außerhalb des Kepler-Kontexts. Ich arbeite an einem anderen Projekt – einer prozedural generierten Spielwelt mit sowjetischer Ästhetik – und wollte testen, wie gut KI-Musikgenerierung für spezifische Game-Audio-Anforderungen funktioniert.
+Ein Experiment außerhalb des Kepler-Kontexts. Ich arbeite an einem anderen Projekt – einer prozedural generierten Spielwelt mit sowjetischer Ästhetik – und wollte testen, wie gut KI-Musikgenerierung für spezifische Game-Audio-Anforderungen funktioniert.
 
 ![Houdini-Workflow mit den drei prozeduralen Generatoren: terrain_generator, building_generator und street_generator für die sowjetisch inspirierte Spielwelt.](assets/journal/2026-01-12-suno-experiment/houdini-generators.png)
 
@@ -20,12 +20,12 @@ Das Ergebnis ist eine dystopische Winterstadt, bevölkert von anthropomorphen Ti
 
 ## KI-Musik
 
-Was mich zu diesem Experiment gebracht hat: Ich sah ein Video eines Musikproduzenten in meinem YouTube Feed: viele kommerzielle Musik wird inzwischen KI-generiert – ohne dass es auffällt. Bei Bildern und Videos sehe ich noch deutliche Artefakte und Inkonsistenzen, KI-Werbespots werden regelmäßig "außeinandergenommen" und kritisiert. Bei Audio liegt es anscheinend für einen Laien nah am professionellen Standard. Suno ist wohl aktuell der Marktführer.
+Was mich zu diesem Experiment gebracht hat: Ich sah ein Video eines Musikproduzenten in meinem YouTube Feed: viel kommerzielle Musik wird inzwischen KI-generiert – ohne dass es auffällt. Bei Bildern und Videos sehe ich noch deutliche Artefakte und Inkonsistenzen, KI-Werbespots werden regelmäßig "auseinandergenommen" und kritisiert. Bei Audio liegt es anscheinend für einen Laien nah am professionellen Standard. Suno ist wohl aktuell der Marktführer.
 
 
 ## Das Experiment: Zwei Prompts
 
-Das Video hatte mich inspiriert: ich brauchte Hintergrundmusik für meine Welt, die einen Pixel-look haben sollte: loopbar, atmosphärisch, sowjetisch-dystopisch. Keine Vocals. Also habe ich mich angemeldet und zwei Ansätze auf Suno getestet.
+Das Video hatte mich inspiriert: Ich brauchte Hintergrundmusik für meine Welt, die einen Pixel-Look haben sollte: loopbar, atmosphärisch, sowjetisch-dystopisch. Keine Vocals. Also habe ich mich angemeldet und zwei Ansätze auf Suno getestet.
 
 ### Versuch 1: "Lo-fi"
 
@@ -61,9 +61,9 @@ Was auffällt: Suno generiert wunderbar detaillierte Beschreibungen. "Bitcrushed
 
 Das ist dasselbe Muster wie bei meinen ComfyUI-Experimenten mit Kepler: Ich wollte einen voxelisierten, pixeligen Charakter ohne erkennbares Gesicht. Die KI lieferte typisch KI-generiert aussehende Ergebnisse mit Uncanny-Valley-Gesichtern, obwohl der Prompt explizit "voxel", "blocky", "no face" enthielt.
 
-**Die Erkenntnis:** Generalistische KI-Tools sind wahrscheinlich einfach auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder sehr viele Iterationen, spezialisierte Fine-Tunes oder manuelle Nachbearbeitung
+**Die Erkenntnis:** Generalistische KI-Tools sind auf kommerzielle Mehrheitsästhetik trainiert. Spezialisierte Nischen – Pixel-Game-Soundtracks, voxelisierte Charaktere – erfordern entweder sehr viele Iterationen, spezialisierte Fine-Tunes oder manuelle Nachbearbeitung
 
-In diesem Fall hat das Tool die Anforderungen nicht erfüllt – der Output schien für mich "handwerklich solide", aber stilistisch daneben, "too much". Für kommerzielle Mainstream-Musik mag das funktionieren, für spezialisierte Nischen braucht es nach wie vor menschliche Expertise oder zumindest erhebliche Nachbearbeitung.
+In diesem Fall hat das Tool die Anforderungen nicht erfüllt – der Output war handwerklich solide, aber stilistisch daneben. Für kommerzielle Mainstream-Musik mag das funktionieren, für spezialisierte Nischen braucht es menschliche Expertise oder erhebliche Nachbearbeitung.
 
 ## Technische Notizen
 

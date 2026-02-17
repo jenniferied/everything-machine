@@ -4,13 +4,13 @@
 
 Heute habe ich Marble von World Labs getestet, ein neues Tool, das unter [marble.worldlabs.ai](https://marble.worldlabs.ai) verfügbar ist. Ich hatte davon gehört, dass es sich um ein Tool zur Erstellung von 3D-Welten handelt, und war neugierig, wie es sich von anderen Tools unterscheidet, die ich bisher verwendet habe.
 
-Marble ist im Grunde eine browserbasierte Plattform, die es ermöglicht, interaktive 3D-Welten zu erstellen und zu erkunden. Das Besondere daran ist, dass man keine komplexe Software installieren muss – alles läuft im Browser, was den Einstieg deutlich erleichtert. Die Oberfläche ist relativ intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
+Marble ist eine browserbasierte Plattform zum Erstellen und Erkunden interaktiver 3D-Welten. Keine komplexe Software nötig — alles läuft im Browser. Die Oberfläche ist intuitiv gestaltet, auch wenn es am Anfang etwas dauert, bis man sich zurechtfindet.
 
 Ich habe vier verschiedene Welten erstellt, um zu testen, wie das Tool mit unterschiedlichen Input-Strategien umgeht – von konkreten Fotos bis zu abstrakten Vibes.
 
 ## Welt 1
 
-Die erste Welt war meine erste Welt, die ich erstellt habe. Sie basiert auf einem Bild von meiner Freundin und mir in dem Badezimmer eines Soviet-inspirierten Cafés, mit alten Artefakten aus der Soviet-Zeit. Die Welt ist sehr creepy und verzerrt – man kann nur noch eine Person erkennen, die fast gruselige Proportionen hat. Das sehr interessante ist, dass das System das Bild, welches ein Spiegelbild ist, als Spiegel erkannt hat und quasi die gespiegelten Personen in den Raum gebracht hat. Es hat viele Artefakte übernommen, was sehr interessant ist.
+Die erste Welt, die ich erstellt habe. Sie basiert auf einem Bild von meiner Freundin und mir im Badezimmer eines sowjetisch inspirierten Cafés, mit Artefakten aus der Sowjetzeit. Die Welt ist creepy und verzerrt – man kann nur noch eine Person erkennen, die fast gruselige Proportionen hat. Interessant ist, dass das System das Spiegelbild als Spiegel erkannt und die gespiegelten Personen in den Raum gebracht hat. Es hat viele Artefakte übernommen.
 
 ![Originalfoto: Soviet-inspiriertes Café Badezimmer](assets/journal/2025-11-18-marble-worldlabs/source-photo-soviet-cafe.jpg)
 
@@ -62,12 +62,12 @@ Da ich als Free-User nur ein einziges Bild hochladen kann, habe ich einen Workar
 
 [WORLD_INFO:Etherealer Botanischer Garten|Marble 0.1-plus|0|true||https://marble.worldlabs.ai/world/bc4438d1-6f56-4a75-83de-83dbec50f94f|https://marble.worldlabs.ai/worldvr/bc4438d1-6f56-4a75-83de-83dbec50f94f|The scene is an ethereal botanical garden, rendered with hyperrealistic detail and a dreamlike, surreal atmosphere. The overall tone is one of delicate wonder and otherworldly beauty, emphasizing intricate forms and luminous qualities. The garden is filled with translucent glass botanical sculptures, each an iridescent resin figure with embedded flowers. These sculptures showcase ethereal bioluminescent flora, their forms suspended within crystalline transparency. Soft pastel gradients of lavender, mint, coral, and gold emanate from the flora, creating a gentle, luminous glow. Delicate organic forms are visible, with intricate internal structures discernible through glossy surfaces. Dewdrops cling to the surfaces, catching and refracting light, enhancing the sense of delicate beauty. Alien botanical specimens with thorny stems and luminous petals are scattered throughout the garden, presenting a fascinating blend of the familiar and the unknown. The textures are hyperdetailed, mixing the smooth sheen of glass with the organic growth of the embedded flora. These otherworldly garden specimens appear caught between organic and synthetic states. Studio lighting with rim light highlights accentuates the contours of each sculpture, while volumetric light rays pierce through the scene, adding depth and a sense of magical illumination. The background features a soft bokeh effect, drawing focus to the intricate details of the botanical forms.]
 
-Dieser Ansatz – Vibes statt konkretes Referenzbild – hat interessantere Ergebnisse gebracht. Die Welt fühlt sich weniger wie eine Rekonstruktion und mehr wie eine Interpretation an.
+Dieser Ansatz – Stimmung statt konkretes Referenzbild – hat interessantere Ergebnisse gebracht. Die Welt fühlt sich weniger wie eine Rekonstruktion und mehr wie eine Interpretation an.
 
 
 ## Fazit zu den Experimenten
 
-Marble orientiert sich stark am Input-Bild. Für kreativere Ergebnisse funktioniert es besser, nur Text-Prompts zu verwenden oder abstrakte Inputs. Der Workaround über Claude zur Prompt-Generierung aus mehreren Bildern ist eine interessante Methode, um die Einbild-Limitierung zu umgehen.
+Marble orientiert sich stark am Input-Bild. Für kreativere Ergebnisse funktionieren reine Text-Prompts oder abstrakte Inputs besser. Der Workaround über Claude zur Prompt-Generierung aus mehreren Bildern umgeht die Einbild-Limitierung.
 
 ## Die Technologie dahinter
 
