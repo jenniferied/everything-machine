@@ -17,7 +17,7 @@ Das Projekt "Everything Machine" dokumentiert den iterativen Prozess der Entwick
 
 Nach Fraylings Kategorisierung (1993) ist mein Projekt primär "Research THROUGH Art" – die iterative Arbeit mit KI-Tools bei der Konstruktion von Kepler generiert Wissen über Mensch-KI-Kollaboration, das nicht durch rein theoretische Analyse zugänglich wäre.
 
-Nach Candy (2006) ist mein Ansatz "Practice-led Research": Die ästhetischen Ziele von Kepler bestimmen den Weg, der Prozess generiert Erkenntnisse, und es gibt einen iterativen Zyklus aus Workflow entwickeln, kreativ umsetzen, reflektieren und überarbeiten.
+Nach Candy (2006) ist mein Ansatz "Practice-Based Research": Die ästhetischen Ziele von Kepler bestimmen den Weg, der Prozess generiert Erkenntnisse, und es gibt einen iterativen Zyklus aus Workflow entwickeln, kreativ umsetzen, reflektieren und überarbeiten.
 
 
 # Forschungsfrage
