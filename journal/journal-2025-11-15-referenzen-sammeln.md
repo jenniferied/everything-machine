@@ -6,7 +6,7 @@
 
 Im Rahmen der Artistic Research-Vorlesung bei Prof. Dr. Aristotelis Hadjakos an der TH OWL bin ich zum ersten Mal mit dem Konzept der Artistic Research in Berührung gekommen. Borgdorffs Idee – Forschung *in* und *durch* die Kunst, bei der die Praxis selbst die Methode ist – klang faszinierend, aber auch einschüchternd. Was ist AR überhaupt? Ist das, was ich mache, Kunst? Ich war unsicher, aber das Interesse war da.
 
-Kepler ist Gavins Musikprojekt – eine digitale Künstleridentität, ein Charakter mit Voxel-Maske, der zwischen Mensch und Avatar existiert. KI-Tools interessieren mich gerade, und die Idee lag nahe: Was passiert, wenn ich generative KI-Systeme nutze, um Kepler weiterzuentwickeln? Wie verändert das den kreativen Prozess?
+Kepler ist Gavins Musikprojekt – eine digitale Künstleridentität, ein Charakter mit Voxel-Maske, der zwischen Mensch und Avatar existiert. Kepler hat bereits ein gewachsenes visuelles Fundament: 2D-Pixel-Art, verschiedene 3D-Modelle, zwei Alben (Blue Edition und Yellow Edition) und Fotos mit echtem Kostüm und Maske. Ich arbeite mit der Blue Edition von Kepler. KI-Tools interessieren mich gerade, und die Idee lag nahe: Was passiert, wenn ich generative KI-Systeme nutze, um Kepler weiterzuentwickeln? Wie verändert das den kreativen Prozess?
 
 Also haben wir heute angefangen: Referenzen sammeln, bevor ich mit der tatsächlichen Bildgenerierung beginne. Ich wollte verstehen, welche visuellen Stile und Darstellungen Gavin gefallen und gut funktionieren könnten.
 
