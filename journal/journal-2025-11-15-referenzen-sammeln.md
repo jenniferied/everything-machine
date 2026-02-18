@@ -60,69 +60,69 @@ Parallel dazu habe ich einen Google Drive-Ordner eingerichtet, um Daten mit Gavi
 <div class="interview-transcript">
 <div class="transcript-section-header">Kontext</div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Pinterest, Google Drive und keine KI-Tools so far.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Alle drei (Referenzen sammeln, Zusammenarbeit starten, Inspiration finden).</p></div>
 </div>
 <div class="transcript-section-header">Die 5 Forschungsfragen</div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? Was war neu, was ist weggefallen? <em>(Workflow)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war ganz wie gewohnt, wir haben einfach angefangen zu kollaborieren, in diesem Fall digital, und unsere Ressourcen zu sammeln.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle in diesem Prozess erlebt? <em>(Autorschaft)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Kollaboration mit Gavin. Wir haben parallel gearbeitet, jeder an seinem Rechner. Ich habe die Struktur vorgegeben, also Ordner und Boards, er hat Material beigesteuert. Keine KI involviert, rein menschliche Kuration und Abstimmung.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Keine KI verwendet, daher keine KI-Iteration. Aber der Prozess selbst war iterativ: Wir haben gesammelt, sortiert, verworfen, neu gesucht. Der Unterschied: Es war langsamer, aber alles war bewusst gewählt.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen und was hast du daraus gelernt? <em>(Scheitern)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war relativ reibungslos auf meiner Seite, aber Gavin wurde etwas ungeduldig, da ich aus Erfahrung mehr Struktur wollte (es fehlen immer noch ein paar Sachen, die er hochladen wollte, naja...).</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich durch die Arbeit eine eigene visuelle/stilistische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Noch nicht direkt, das war Vorarbeit. Aber beim Sammeln sind mir bestimmte wiederkehrende Ästhetiken aufgefallen, die zu Kepler passen: dunkel, strukturiert, maskenhaft. Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung.</p></div>
 </div>
 <div class="transcript-section-header">Synthese</div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Du hast erwähnt, dass du dir Gedanken über Urheberrechte machst – wenn man fremde Bilder als Stilreferenz nutzt. Hat das Sammeln der Referenzen dein Verhältnis zu 'originalem' versus 'inspiriertem' Schaffen verändert?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Das Sammeln von Referenzen hat mir gezeigt, dass der kreative Prozess schon beim Kuratieren beginnt, nicht erst beim Generieren. Ob die Bilder, die mich inspirieren, selbst KI-generiert sind, spielt für die Inspiration keine Rolle. Aber für die Weiterverwendung als Trainingsdaten schon.</p></div>
 </div>
 </div>

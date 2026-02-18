@@ -99,67 +99,67 @@ Alle 28 Videos sind auf der Video-Generationen-Seite zu sehen.
 
 <div class="interview-transcript">
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich habe wieder fal.ai API und Claude Code verwendet. Claude Code hat für mich ein Python-Skript geschrieben, in dem ich sieben verschiedene Video-Modelle ansprechen konnte.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich wollte diesen Workflow noch mal an Videos testen. Ich war endlich zufrieden mit den Bildergebnissen und dachte, ich könnte diese als Ausgangsbilder für Image-to-Video-Modelle benutzen. Das bringt mich näher an mein Endziel: Cover-Grafiken und Spotify-Reels für Kepler. Ich wollte schauen, wie nah ich an ein brauchbares Ergebnis kommen kann.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert im Vergleich zum Bild-Experiment?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war einfacher durch die bestehende Pipeline als zuvor. Ansonsten war es sehr ähnlich und auch sehr interessant. Die Halluzinationen waren besonders interessant — es sind einfach viel mehr Elemente, die schiefgehen können oder interessant sein könnten.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle in diesem Prozess erlebt?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Wieder Kuratorin — Anweisungen geben und dann kuratieren. Vielleicht war ich hier auch ein bisschen mehr Erforscherin. Ich habe mich neugierig gefühlt, was die Ergebnisse angeht. Ich hatte mich in dieses systematische Bewerten eingegroovt und war gespannt auf die quantitativen und qualitativen Ergebnisse.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich konnte mehr Experimente machen, genauso wie bei den Bildern. Ich habe jetzt einen reproduzierbaren Workflow und kann jedes neue Modell einfach ausprobieren, ohne Burnout. Ich sage der KI einfach: „Recherchiere die neuesten Modelle und generiere mir fünf Beispielbilder" — und dann habe ich ein Resultat. Es hat mir Confidence gegeben, dass KI auch coole, schnelle Ergebnisse liefern kann, bei denen man schnell iterieren kann. Es ist viel aufwändiger, alles in einen Chatbot zu schreiben und rein- und rauszukopieren — durch den agentischen Workflow mit Claude Code wird das automatisiert.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen und was hast du daraus gelernt?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>[Keine spezifischen Probleme über die im Journal dokumentierten hinaus.]</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es ist gar nicht meine eigene visuelle Sprache! Ich habe in den Prompts gar nicht mit dem Stil experimentiert — das ist eine Frage für weitere Experimente. An sich finde ich den Style cool, aber er ist nicht meiner. Oder der von Kepler. Auch wenn Kepler dort teilweise gut drin aussieht.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Die Gesichtshalluzination passiert im Video progressiv — Frame für Frame wächst ein Gesicht in die Maske. Siehst du darin etwas über Keplers Identität, oder ist das eher ein technisches Problem?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich bin gar nicht die Schöpferin von Kepler — ich setze seine Vision um. Seine ästhetischen Qualitäten sind in unserem Pinterest Board zu finden. Ich bin noch gar nicht an dem Punkt, wo ich unsere Inputs verwende oder ihn mit reinbringe. Jetzt, wo die Modelle funktionieren — und das ist relativ neu, diese Prompt Adherence, wahrscheinlich durch die Kombination von Large Language Models mit bildgenerierenden Modellen — ist der Moment, wo ich zum Künstler gehe und mit ihm zusammen iteriere. Oder erstmal in unsere Referenzen gehe und versuche, genau diesen Stil nachzubilden.</p></div>
 </div>
 </div>

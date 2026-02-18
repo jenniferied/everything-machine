@@ -121,58 +121,58 @@ Marble ist das erste kommerzielle Produkt von [World Labs](https://www.worldlabs
 <h4>Kontext</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Marble (marble.worldlabs.ai).</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich wollte zum einen das Tool testen, ich hatte es gerade gesehen und da die Gesichter ja nicht funktioniert haben, also Kepler als Charakter nicht funktioniert hat im Comp-V-Wire-Workflow, hatte mich interessiert, ob wir vielleicht Hintergrundwelten generieren könnten.</p></div>
 </div>
 
 <h4>Die 5 Forschungsfragen</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich habe hier mit Marble erstmal experimentiert. Ich kannte bereits Gaussian Splats als Konzept und ich fand es interessant, wie schnell das jetzt ging, aus einem einzigen Bild einen übereinstimmenden Splat zu erzeugen.
 
 Ich war aber jetzt nicht so überzeugt davon, dass ich es sicher verwenden werde.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Einfach nur jemand, der experimentiert und ein Produkt ausprobiert.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Das Ausprobieren machte Spaß, es ging schnell, und das könnte für die Zukunft interessant sein.
 
 Aber mich interessieren dann eher die generativen Möglichkeiten. Also, wirklich, sich komplette Welten ausdenken anstatt existierende Welten 3D zu machen. Obwohl ich, wenn ich jetzt darüber nachdenke, mir gar nicht mehr so sicher bin. Es kann schon interessante Use Cases haben...</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Nicht unbedingt, außer dass das freiere, letzte Ergebnis nicht hundertprozentig überzeugend ist, aber schon mal interessant.
 
 Und dass, als ich Personen drin hatte mit Spiegelungen und so, dass die Personen gruselig und Uncanny-Valley-mäßig verzerrt waren.
@@ -180,22 +180,22 @@ Und dass, als ich Personen drin hatte mit Spiegelungen und so, dass die Personen
 Aber ich hatte jetzt gar keine Ansprüche an das Tool und würde Input-Bilder ohne Personen oder komplexe Spiegelungen nehmen das nächste Mal.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Noch nicht, also ich habe nur im Hinterkopf ein neues Tool, das ich verwenden könnte.</p></div>
 </div>
 
 <h4>Synthese</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Im Eintrag steht, dass das System das Spiegelbild als Spiegel erkannt und die gespiegelten Personen in den 3D-Raum gebracht hat – faszinierend und gruselig zugleich. Könntest du dir vorstellen, solche 'Fehler' absichtlich als ästhetisches Mittel zu nutzen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Jetzt, wo du es sagst, ja, also man könnte tatsächlich wirklich damit visuell spielen. Ich weiß nur nicht, wie einfach es ist, das wirklich jetzt im 3D-Raum umzusetzen.
 
 Klar, wenn ich ein reales Bild von ihm nehme und dann ein Gaussian-Splat erzeuge, könnte das interessant sein. Aber ich bin ja eher in der 3D/Computergrafik-Welt verankert und arbeite nicht viel mit Fotos.

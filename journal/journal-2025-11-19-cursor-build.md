@@ -101,75 +101,75 @@ Was mir geholfen hat: Meine Erfahrung mit Web-Entwicklung. Man kann die Vorschl�
 <h4>Kontext</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Cursor, Version Control via Github, und größtenteils die Modelle von Anthropic.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich wollte sowohl die Website erstellen als auch Cursor ausprobieren, da es sich interessant für mich anhörte und ich bereits Webentwicklungserfahrung habe, aber nur sehr limitiert und es würde sehr lange dauern, wenn ich es ganz alleine mache.</p></div>
 </div>
 
 <h4>Die 5 Forschungsfragen</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht.
 
 Also, hier war der größte Unterschied zu merken, wo ich konnte mein bestehendes Wissen einbringen. Aber musste bei Kleinigkeiten nicht selber googeln und bug fixen, sondern Cursor. Die KI-Modelle haben das für mich erledigt. Ich konnte schnell experimentieren und ich hatte zwar Probleme beim Debugging, aber ich wäre gar nicht so weit gekommen ohne Cursor und Claude. Ich konnte quasi meine kreative Vision umsetzen.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>I felt like a manager with the overall vision asking a junior developer to code for me. At some point, I felt like I was collaborating a bit when it couldn't figure out where it was going wrong. And I was reviewing a lot what I was doing. At the same time, I was learning because when I was doing things I couldn't have done myself, I asked it, or I could see its thinking process too. So I also learned a lot.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Die KI-Ausgabe war sofort da. Code, Layouts, Fixes. Das hat meinen Workflow massiv beschleunigt, weil ich nicht mehr googeln und Stack Overflow durchforsten musste. Aber es hat auch dazu geführt, dass ich manchmal zu schnell akzeptiert habe, ohne den Code richtig zu verstehen. Das Tempo verleitet zur Oberflächlichkeit.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Also, wir kamen ab und zu in Debugging-Schleifen. Das war schon sehr nervig, aber ich habe dann besser gelernt, wie man die KI anleiten kann. Zum Beispiel, dass man öfter den Chat erneuern sollte, damit umso mehr Informationen im Kontext sind, desto schlechter die KI funktioniert. Es wurden auch falsche Ansätze gewählt, welche ich dann ablehnen musste bzw. zurückrudern musste.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? <em>(Ästhetik)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ja, ein bisschen Kepler-DNA und der Matrix-Look. Ich mag dunkle Websites, und ich hatte mich ja vom Research Catalogue inspirieren lassen. Da waren die Artikel, die mich inspiriert haben, aber weiß, und ich wollte einen dunklen Look für dieses Projekt.</p></div>
 </div>
 
 <h4>Synthese</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Du hast geschrieben, dass deine bestehende Web-Erfahrung entscheidend war, um KI-Vorschläge einzuschätzen. Glaubst du, jemand ohne diese Erfahrung hätte ein ähnliches Ergebnis erreichen können?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Also ich glaube, es hängt sehr stark von der Person ab. Ich glaube, Leute, die gar keinen Hintergrund haben und auch nicht so viel Geduld, würden schnell an ihre Grenzen kommen. Also, es ist nicht so, dass man einfach alles an die KI geben kann. Garbage in, garbage out. Man muss schon ein bisschen mitlernen, obwohl es schon Ergebnisse gibt, die mit relativ viel wenig Arbeit gut sein können. Ich denke, wenn jemand einfach nur sagt: "Hey, kannst du mir einen Taschenrechner programmieren? Vielleicht in einer bestimmten Farbe, die mir gefällt?" – dann würde das schnell funktionieren, einfach nur weil es so viel vorhandener Code für das Programmieren von Taschenrechnern gibt.
 
 Aber umso spezifischer die Anforderungen werden, umso länger der Chat und umso größer die codebase, desto schwieriger wird es das ganze für einen Laien zu managen.</p></div>

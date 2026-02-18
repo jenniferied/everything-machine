@@ -105,69 +105,69 @@ Ich habe beide Modelle getestet: Die "Frozen"-Tracks (Frozen Terminals, Frozen R
 <div class="interview-transcript">
 <h4>Kontext</h4>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Suno AI, im Browser. Ich habe sowohl v4.5 (kostenlos) als auch v5 (beta, im Free Trial) getestet.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Einen loopbaren, atmosphärischen Soundtrack für meine sowjetisch-dystopische Spielwelt Panelki. Minimal, kalt, pixelig. Keine Vocals, eher Hintergrundmusik zum Explorieren.</p></div>
 </div>
 <h4>Die 5 Forschungsfragen</h4>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? <em>(Workflow)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war ein schneller Prototyp. Ich konnte Ideen testen, ohne selbst Musik produzieren zu können. Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? <em>(Autorschaft)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Enttäuschend. Ich war nur Kurator:in, ich konnte auswählen, aber nicht gestalten. Kein Regler, kein Parameter, den ich hätte drehen können. Nur der Prompt, und der wurde offensichtlich anders interpretiert als gemeint.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? <em>(Iteration)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>In dem Fall habe ich das Ganze ja verworfen, weil ich vermute, dass ich mit dem Modell nicht sonderlich weit komme.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen? <em>(Scheitern)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Der Output klang zu kommerziell, zu poliert, wie Stock-Music. Das Frustrierende: Die generierten <em>Beschreibungen</em> trafen genau meinen Geschmack ('Bitcrushed chiptune pads over a sparse, detuned synth choir'), aber die Musik selbst klang völlig anders.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich eine eigene musikalische/ästhetische Sprache entwickelt? <em>(Ästhetik)</em></p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Nein, komplett verfehlt. Ich wollte minimal-dystopisch, bekommen habe ich generischen Indie-Game-Sound. Das zeigt mir, dass Suno auf kommerzielle Mehrheitsästhetik trainiert ist. Meine Nische liegt einfach außerhalb dessen, was das Modell liefern kann.</p></div>
 </div>
 <h4>Synthese</h4>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Im Eintrag schreibst du, dass Sunos generierte Beschreibungen ('Bitcrushed chiptune pads over a sparse, detuned synth choir') besser klingen als die Musik selbst. Ist das frustrierend – oder zeigt es, dass du die KI vielleicht als Text-Generator für Briefings an echte Musiker nutzen könntest?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Also zeigt mir, dass für die Vision, die ich hatte, gibt es Begriffe, und es gibt mir Hoffnung, dass ich entweder bereits existierende Musik mit diesen Begriffen finden kann, ein anderes Tool verwenden könnte, um so etwas zu generieren, oder es einem echten Musiker geben könnte. Es ist sehr frustrierend.</p></div>
 </div>
 </div>

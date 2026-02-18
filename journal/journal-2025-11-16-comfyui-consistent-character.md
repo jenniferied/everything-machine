@@ -86,73 +86,73 @@ Meine Lösung – eine klare Referenz auf neutralem Hintergrund – funktioniert
 <h4>Kontext</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Welche Tools hast du in dieser Session verwendet?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>ComfyUI mit einem Network von <a href="https://www.youtube.com/@mickmumpitz" target="_blank">Mickmumpitz</a>.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was wolltest du erreichen?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich wollte schauen, ob ich Album-Cover- oder Konzeptbilder erstellen konnte von Kepler. Mir war aber wichtig, dass eine Konsistenz besteht und es ästhetisch aussieht. Ich war auch etwas von dem ComfyUI Workflow und dem Konzept überfordert, deswegen wollte ich das als Plattform nutzen, um das Ganze zu lernen.</p></div>
 </div>
 
 <h4>Die 5 Forschungsfragen</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich dein Arbeitsablauf verändert? (Workflow)</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es ist ein komplett neuer Workflow mit ComfyUI zu arbeiten. Ich glaube, ich muss wiederkehren, um das Ganze besser zu verstehen, und vielleicht nicht mit Kepler als Charakter. Denn ich habe gleich gesehen, dass er besonders schwierig ist. Er ist jetzt kein Mensch per se, und sein Stil könnte schwierig zu replizieren sein, da er kein Gesicht hat, eine Maske trägt und in der Version, in der ich sie ihnen zeigen möchte, auch noch voxelized ist.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hast du deine Rolle erlebt? (Autorschaft)</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Ich war Lernende und experimentierte eher als ich das Tool wirklich verwendete. Ich hatte mich ja an dem Netzwerk einer anderen Person orientiert.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Wie hat die schnelle KI-Ausgabe deinen Prozess beeinflusst? (Iteration)</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war gar nicht so schnell, da ich es tatsächlich lokal auf meinem M1-MacBook Pro Max 64 GB ausprobiert habe. Auch der Prozess, das Ganze zu installieren, hat länger gedauert und hat viele Gigabyte benötigt. Also war es etwas frustrierend.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Was ist schiefgelaufen? (Scheitern)</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es war sehr inkonsistent. Die Prompts haben nicht das erfüllt, was sie erfüllen sollten. Der Basketball wurde nicht entfernt, als ich ein Bild mit Basketball eingefügt habe. Besonders frustrierend war, dass Gesichter in Keplers Maske rein interpretiert worden sind. Auch als ich negative Prompts dafür eingefügt habe. Ich glaube, das wird ein größeres Problem.</p></div>
 </div>
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Hat sich eine eigene visuelle Sprache entwickelt? (Ästhetik)</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Nein, denn so weit bin ich gar nicht erst gekommen in diesem Anlauf. Denn es haben Sachen ja auch nicht funktioniert, und das, was herauskam, sah schon sehr generisch KI-mäßig aus.</p></div>
 </div>
 
 <h4>Synthese</h4>
 
 <div class="chat-message claude">
-  <div class="chat-avatar"><img src="/assets/icons/claude.svg" alt="Claude"></div>
+  <div class="chat-avatar"><img src="assets/icons/claude.svg" alt="Claude"></div>
   <div class="chat-bubble"><p>Du hast erwähnt, dass das System Gesichter in Keplers Maske interpretiert hat – obwohl er bewusst kein Gesicht haben soll. Wie fühlt es sich an, wenn die KI deine künstlerische Intention so grundlegend 'missversteht'?</p></div>
 </div>
 <div class="chat-message user">
-  <div class="chat-avatar"><img src="/assets/icons/user.png" alt="User"></div>
+  <div class="chat-avatar"><img src="assets/icons/user.png" alt="User"></div>
   <div class="chat-bubble"><p>Es ist einfach frustrierend. Am Ende des Tages ist es ein technisches Problem.</p>
 <p>Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen und auch Zeit einsparen, um Dinge zu kreieren, ohne jetzt mir ganz die Arbeit abzunehmen.</p>
 <p>Aber es zeigt halt, dass wir noch nicht ganz da sind und die Art Directability noch nicht da ist. Und das würde ich mir eben wünschen. Aber es sind halt keine magischen Tools, so wie es sich anfühlt.</p>
