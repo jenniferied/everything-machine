@@ -15,46 +15,37 @@ abstract: |
   Die vorliegende Arbeit untersucht im Rahmen einer Practice-Led Research mit
   autoethnografischem Ansatz, wie der Einsatz multimodaler KI-Systeme den kreativen
   Prozess bei der Entwicklung einer digitalen Künstleridentität verändert. Am Beispiel
-  von Kepler, einer maskierten, voxelisierten Musiker-Persona, werden vier Experimente
-  und zwei Exkurse mit KI-Tools aus den Bereichen Bildgenerierung, Musikproduktion
+  von Kepler, einer maskierten Musiker-Persona, werden vier Experimente
+  und zwei Exkurse mit KI-Tools aus den Bereichen Bild- und Videogenerierung, Musikproduktion
   und Texterstellung dokumentiert. Die Analyse identifiziert vier zentrale
-  Prozessveränderungen: (1) Flow entsteht dort, wo er nicht geplant war -- der
-  Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers
-  Nischen-Ästhetik; (2) KI beschleunigt Exploration und Prototyping, reduziert aber
-  die Kontrolle über ästhetische Details; (3) die Autorschaft verschiebt sich von der
-  Ausführenden zur Kuratorin und Dirigentin; (4) der emotionale Zyklus zwischen
-  KI-Enthusiasmus und KI-Burnout kostet kreative Energie.
+  Prozessveränderungen: Flow entsteht anfangs dort, wo er nicht geplant war;
+  der agentische Workflow kann ihn später gezielt herstellen. Der Website-Build
+  gelang produktiv, die Bild- und Videogenerierung scheiterte an Keplers Nischen-Ästhetik. KI beschleunigt Exploration und Prototyping, reduziert aber
+  die Kontrolle über ästhetische Details. Die Autorschaft verschiebt sich von der
+  Ausführenden zur Kuratorin und Orchestratorin. Zugleich erweist sich der emotionale
+  Zyklus zwischen KI-Enthusiasmus und KI-Burnout als eigenständige Belastung im
+  kreativen Prozess.
 
   *Keywords: Artistic Research, generative KI, Mensch-KI-Kollaboration, digitale Identität, Autoethnografie, kreativer Prozess, Practice-Led Research*
 ---
 
 # Einleitung
 
-## Hintergrund und Motivation
-
 Die vorliegende Arbeit versteht Artistic Research als künstlerische Praxis, die sich als Forschung qualifiziert: Man macht etwas, findet dabei etwas heraus und dokumentiert es so, dass andere davon lernen können. Zentral ist die Absicht, über die rein persönliche Entwicklung hinaus Wissen zu erzeugen: durch die Praxis selbst, nicht nur über sie.
 
-Diese Arbeit entsteht in einem Moment, in dem generative KI nahezu alle kreativen Domänen erfasst hat: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Entwicklung Fragen auf, die nicht abstrakt-philosophisch sind, sondern die konkrete Praxis von Künstler\*innen und Medienproduzent\*innen betreffen: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren?
+Diese Arbeit entsteht in einem Moment, in dem generative KI nahezu alle kreativen Domänen erfasst hat: DALL-E, Midjourney und Stable Diffusion für Bilder; ChatGPT und Claude für Text; Suno und Udio für Musik; Runway und Sora für Video. Dass diese Werkzeuge nahezu gleichzeitig verfügbar wurden, ist kein Zufall, sondern Folge konvergierender Durchbrüche in der KI-Forschung zwischen 2017 und 2022. Eine einzelne Person kann nun Visuals, Texte, Musik und Videos in einer Qualität erstellen, die früher ganze Teams erforderte. Gleichzeitig wirft diese Entwicklung Fragen auf, die nicht abstrakt-philosophisch sind, sondern die konkrete Praxis von Künstler\*innen und Medienproduzent\*innen betreffen: Was bedeutet Autorschaft, wenn Maschinen mitschreiben? Was ist Kreativität, wenn Algorithmen Bilder generieren?
 
-Dass diese Werkzeuge nahezu gleichzeitig verfügbar wurden, ist kein Zufall, sondern Folge konvergierender Durchbrüche: Generative Adversarial Networks legten 2014 die Grundlage für Bildgenerierung, die Transformer-Architektur ermöglichte 2017 die Skalierung auf Milliarden von Parametern, und Latent Diffusion Models machten 2022 hochauflösende Bildgenerierung erstmals auf Consumer-Hardware möglich. Das ist das direkte Fundament der Tools, mit denen diese Arbeit operiert.
+Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „[Kepler](https://www.instagram.com/kepler.mp3/)" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Pixelform über eine 3D-Voxelfigur hin zu einer real gefilmten Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
 
-Im Kontext meiner eigenen Praxis traf diese Frage auf ein konkretes Projekt: „[Kepler](https://www.instagram.com/kepler.mp3/)" -- das musikalische Alter Ego meines Kollaborateurs Gavin, eine maskierte, voxelisierte Musiker-Persona. Kepler steht in einer Transformation: von einer 2D-Figur mit Illustrationen hin zu einer 3D-Präsenz mit Covern, Reels und einer eigenen visuellen Welt. Seine Identität ist eine bewusste Konstruktion aus Maske, Voxel-Stil und visueller Welt -- und genau dieser Konstruktionsprozess wird durch generative KI verändert. Ich unterstütze diesen Übergang im visuellen Bereich, und genau dieser Prozess wurde zum Ausgangspunkt meiner Forschung: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Und was passiert dabei mit meinem kreativen Prozess, wenn ich nicht mehr nur Werkzeuge benutze, sondern mit ihnen zusammenarbeite?
-
-Das Projekt „Everything Machine" dokumentiert diesen Prozess transparent auf einer öffentlichen [Website](https://jenniferied.github.io/everything-machine/), der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar. Der Name verweist auf die Idee einer Maschine, die „alles" produzieren kann -- und fragt zugleich, was dieses „alles" wert ist. Denn je mehr ich mit generativer KI arbeitete, desto deutlicher wurde: Sie kann vieles schnell, aber nicht alles gut. Die „Everything Machine" ist mächtig und begrenzt zugleich -- und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung.
-
-## Forschungsfrage und Überblick
-
-Die zentrale Forschungsfrage lautet:
+Das Projekt „Everything Machine" dokumentiert diesen Prozess transparent auf einer öffentlichen [Website](https://jenniferied.github.io/everything-machine/), der vollständige Quellcode ist in einem [GitHub-Repository](https://github.com/jenniferied/everything-machine/) einsehbar. Der Name verweist auf die Idee einer Maschine, die „alles" produzieren kann -- und fragt zugleich, was dieses „alles" wert ist. Denn je mehr ich mit generativer KI arbeitete, desto deutlicher wurde: Sie kann vieles schnell, aber nicht alles gut. Die „Everything Machine" ist mächtig und begrenzt zugleich -- und genau diese Spannung macht sie zum Gegenstand künstlerischer Forschung. Die zentrale Forschungsfrage lautet:
 
 **Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?**
 
-Im Laufe der Praxis veränderte sich nicht nur der kreative Prozess, sondern auch die Art, ihn zu dokumentieren: Die Website nahm mehr Raum ein als geplant, das KI-gestützte Reflexionsinterview etablierte sich als Methode -- und wurde dann als zu knapp kritisiert. Diese Verschiebungen bestätigten, dass die Prozessfrage die richtige war: Die Veränderung des kreativen Prozesses durch KI erwies sich als die eigentliche Erkenntnis.
+Im Laufe der Praxis veränderte sich nicht nur der kreative Prozess, sondern auch die Art, ihn zu dokumentieren: Die Website nahm mehr Raum ein als geplant, das KI-gestützte Reflexionsinterview etablierte sich als Methode, wurde dann aber als zu knapp kritisiert. Diese Verschiebungen bestätigten, dass die Prozessfrage die richtige war: Die Veränderung des kreativen Prozesses durch KI erwies sich als die eigentliche Erkenntnis. Zur Beantwortung dieser Frage verbindet die Arbeit:
 
-Zur Beantwortung dieser Frage verbindet die Arbeit:
-
-1. **Praktische Experimente:** Iterative Entwicklung von Kepler durch verschiedene KI-Tools, beobachtet auf Prozessveränderungen
-2. **Theoretische Reflexion:** Einordnung in Diskurse zu Kreativität, Autorschaft und Human-AI Interaction. Die strukturierten Reflexionsinterviews orientieren sich dabei an fünf Subfragen: Wie verändert sich der Workflow? Wie verschiebt sich die Autorschaft? Welche Rolle spielt Iteration? Wie wird mit Scheitern umgegangen? Und wie entwickelt sich die Ästhetik im Prozess?
-3. **Methodische Transparenz:** Öffentliche Dokumentation des gesamten Prozesses
+- **Praktische Experimente:** Iterative Entwicklung von Kepler durch verschiedene KI-Tools, beobachtet auf Prozessveränderungen
+- **Theoretische Reflexion:** Einordnung in Diskurse zu Kreativität, Autorschaft und Human-AI Interaction. Die strukturierten Reflexionsinterviews orientieren sich dabei an fünf Subfragen: Wie verändert sich der Workflow? Wie verschiebt sich die Autorschaft? Welche Rolle spielt Iteration? Wie wird mit Scheitern umgegangen? Und wie entwickelt sich die Ästhetik im Prozess?
+- **Methodische Transparenz:** Öffentliche Dokumentation des gesamten Prozesses
 
 Die Arbeit gliedert sich in fünf Abschnitte: Nach der Einleitung folgt eine Darstellung des Forschungsstands (Abschnitt 2), dann die methodische Beschreibung (Abschnitt 3), die Darstellung meiner Forschung (Abschnitt 4) und schließlich die Diskussion (Abschnitt 5).
 
@@ -68,7 +59,7 @@ Candy unterscheidet in ihrem einflussreichen Report am Creativity & Cognition St
 
 ## Technische Grundlagen generativer KI
 
-Die aktuelle Welle generativer KI-Werkzeuge basiert auf drei konvergierenden Durchbrüchen. Die Transformer-Architektur von Vaswani et al. [-@vaswani2017attention] ersetzte 2017 rekurrente Netzwerke durch einen Attention-Mechanismus, der parallele Verarbeitung ermöglichte und die Skalierung auf Milliarden von Parametern erlaubte — die technische Voraussetzung für GPT, DALL-E und die multimodalen Systeme, mit denen diese Arbeit operiert. Radford et al. [-@radford2021clip] trainierten 2021 mit CLIP ein Modell, das Texte und Bilder in einem gemeinsamen semantischen Raum verortet — die Brücke, die natürlichsprachliche Prompts für Bildgenerierungsmodelle interpretierbar macht. Rombach et al. [-@rombach2022ldm] verschoben 2022 den Diffusionsprozess in einen komprimierten latenten Raum und machten hochauflösende Bildgenerierung erstmals auf Consumer-Hardware möglich — Stable Diffusion, das direkte Fundament von ComfyUI, dem zentralen Tool in Experiment 1.
+Die aktuelle Welle generativer KI-Werkzeuge basiert auf drei konvergierenden Durchbrüchen. Die Transformer-Architektur von Vaswani et al. [-@vaswani2017attention] ersetzte 2017 rekurrente Netzwerke — also Modelle, die Daten Schritt für Schritt nacheinander verarbeiten — durch einen Attention-Mechanismus, der parallele Verarbeitung ermöglichte und die Skalierung auf Milliarden von Parametern erlaubte. Vereinfacht gesagt lernte das Modell damit, alle Teile eines Textes gleichzeitig zu betrachten statt Wort für Wort. Das war die technische Voraussetzung für GPT, DALL-E und die multimodalen Systeme, mit denen diese Arbeit operiert. Radford et al. [-@radford2021clip] trainierten 2021 mit CLIP ein Modell auf Hunderten Millionen von Bild-Text-Paaren aus dem Internet, das Texte und Bilder in einem gemeinsamen Bedeutungsraum verortet. Dadurch kann ein Modell verstehen, welches Bild zu welcher Beschreibung passt — die Brücke, die natürlichsprachliche Prompts für Bildgenerierungsmodelle interpretierbar macht. Rombach et al. [-@rombach2022ldm] verschoben 2022 den Diffusionsprozess in einen komprimierten latenten Raum: Statt ein Bild in voller Auflösung zu berechnen, arbeitet das Modell mit einer kleineren Zwischenrepräsentation und spart so enorm Rechenleistung. Das machte hochauflösende Bildgenerierung erstmals auf Consumer-Hardware möglich — Stable Diffusion, das direkte Fundament von ComfyUI, dem zentralen Tool in Experiment 1.
 
 ## Kreativität und Mensch-KI-Kollaboration
 
@@ -78,44 +69,33 @@ Was ist generative Kunst? Galanter [-@galanter2003generative] definiert sie als 
 
 Deterding et al. [-@deterding2017mixed] beschreiben ein Spektrum kreativer Mensch-Computer-Interaktion: von „Mensch als Schöpfer, Computer als Werkzeug" über „Mixed-Initiative" — beide Seiten kollaborieren in einem engen Feedback-Loop — bis „Computer als Schöpfer, Mensch als Publikum". Die Entwicklung von Kepler findet genau in diesem Mixed-Initiative-Raum statt, in dem weder ich noch das KI-System die volle Kontrolle hat. Mir geht es nicht darum, ob die KI kreativ „ist", sondern wie sich der kreative Prozess in der Kollaboration verändert.
 
-Beim praktischen Arbeiten mit generativer KI tritt ein weiteres Phänomen auf: Das *Uncanny Valley* [@mori2012uncanny] beschreibt das Unbehagen, das entsteht, wenn künstliche Darstellungen menschenähnlich, aber nicht perfekt realistisch sind. In der Arbeit mit Kepler zeigt sich dieses Phänomen als konkretes Hindernis: Bildmodelle halluzinieren Gesichtszüge in seine Maske, weil sie die Abwesenheit eines Gesichts nicht akzeptieren.
+Beim praktischen Arbeiten mit generativer KI tritt ein weiteres Phänomen auf: Das *Uncanny Valley* [@mori2012uncanny] beschreibt das Unbehagen, das entsteht, wenn künstliche Darstellungen menschenähnlich, aber nicht perfekt realistisch sind. Dieses Konzept wird in den Experimenten als konkretes Hindernis wiederkehren.
+
 ## Artistic Research mit generativer KI
 
-Neben der theoretisch-empirischen Forschung gibt es eine wachsende Zahl von Artist-Practitioner-Projekten, die generative KI aus der Praxis heraus untersuchen. Monin und Sadokierski [-@monin2025prompting] nutzen den ausgestorbenen King-Island-Zwergemu — ein Tier, von dem kaum verlässliche Bilder existieren — als Fallstudie für KI-gestützte Bildgenerierung. Sie prompten DALL-E 2 und Midjourney parallel zu händischen Collagen und zeigen, dass die Formulierung von Prompts selbst zum Denkakt wird: „Prompting as Thinking-With", eine relationale Erkenntnismethode im Sinne Donna Haraways. Weil kein „richtiges" Bild existiert, wird jede KI-Ausgabe zum Forschungsdatum — die substituierten Trainingsdaten-Muster offenbaren, was das Modell für „Emu" hält.
+Neben der theoretisch-empirischen Forschung gibt es eine wachsende Zahl von Artist-Practitioner-Projekten, die generative KI aus der Praxis heraus untersuchen. Monin und Sadokierski [-@monin2025prompting] nutzen den ausgestorbenen King-Island-Zwergemu — ein Tier, von dem kaum verlässliche Bilder existieren — als Fallstudie für KI-gestützte Bildgenerierung. Konkret geben sie denselben Prompt an DALL-E 2 und Midjourney und vergleichen die Ergebnisse mit händischen Collagen aus historischen Quellen. Dabei zeigen sie, dass die Formulierung von Prompts selbst zum Denkakt wird: „Prompting as Thinking-With", eine relationale Erkenntnismethode im Sinne Donna Haraways. Weil kein „richtiges" Bild existiert, wird jede KI-Ausgabe zum Forschungsdatum — die substituierten Trainingsdaten-Muster offenbaren, was das Modell für „Emu" hält.
 
-Torres Núñez del Prado [-@torresnunez2025encoding] untersucht in „Encoding Culture" die strukturelle Parallele zwischen Datensatz-Kuration und Kanonbildung. Ihr Team fine-tuned Stable Diffusion 3.5 auf einem kuratierten Datensatz schwedischer Kunstgeschichte und zeigt, dass die Auswahl der Trainingsdaten dieselben Entscheidungen über Wertigkeit und Repräsentativität impliziert wie die Zusammenstellung eines kulturellen Kanons. Der Fokus liegt auf ästhetischem und institutionellem Bias — nicht auf demographischer Repräsentation, sondern darauf, welche Ästhetiken als kanonisch eingebettet werden.
+Torres Núñez del Prado [-@torresnunez2025encoding] untersucht in „Encoding Culture" die strukturelle Parallele zwischen Datensatz-Kuration und Kanonbildung. Ihr Team hat Stable Diffusion 3.5 gezielt auf einem kuratierten Datensatz schwedischer Kunstgeschichte nachtrainiert — Fine-Tuning bedeutet, dass ein vortrainiertes Modell mit zusätzlichen, spezifischen Daten weiter spezialisiert wird. Die Arbeit zeigt, dass die Auswahl der Trainingsdaten dieselben Entscheidungen über Wertigkeit und Repräsentativität impliziert wie die Zusammenstellung eines kulturellen Kanons: Welche Werke fließen ein, welche nicht? Der Fokus liegt darauf, welche Ästhetiken als kanonisch eingebettet werden — und welche fehlen.
 
 Hámošová und Rusnák [-@hamosova2023troublinggan] trainieren in „TroublingGAN" ein StyleGAN2-Modell auf Krisenfotografie (Reuters „Photos of the Week" aus 2020). Die Heterogenität des Datensatzes verhindert strukturell Fotorealismus — das Ergebnis sind visuell ambige Bilder mit Schlieren, Blobs und Hohlräumen, wo Gesichter wären. Ihr zentrales Argument: GAN-Scheitern ist nicht Defekt, sondern erkenntnistheoretisch bedeutsam. Die Unfähigkeit des Modells zu konvergieren offenbart die Komplexität des Trainingsgegenstands.
 
-Diese drei Projekte untersuchen KI-generierte Bilder jeweils aus einer Modalität heraus. Mein Ansatz erweitert die Perspektive: Kepler existiert in Bild, Audio, 3D und Code, und gerade der Wechsel zwischen den Medien zeigt, welche Prozessveränderungen stabil bleiben.
-
 ## Forschungslücke
 
-Autoethnografische Studien zu KI im kreativen Prozess gibt es -- in der visuellen Kunst, in der spekulativen Fotografie. Monin und Sadokierski bleiben bei der Bildgenerierung, Torres Núñez del Prado bei kultureller Kodierung in einem Medium, Hámošová und Rusnák bei GAN-basierten Bildern. Keines dieser Projekte dokumentiert den iterativen Prozess über mehrere Medien hinweg, und keines reflektiert systematisch, wie sich die Rolle der Künstlerin dabei verschiebt. Hier setzt meine Arbeit an: Sie untersucht die Mensch-KI-Kollaboration autoethnografisch und multimodal -- über Bild, Audio, 3D und Code -- aus der Perspektive der Künstlerin selbst. Die folgenden Abschnitte beschreiben zunächst den methodischen Rahmen und dann die konkrete Forschung, in der sich die theoretischen Konzepte dieses Kapitels an der Praxis bewähren mussten.
+Alle drei Projekte untersuchen jeweils ein Medium und verfolgen einen konzeptuell-künstlerischen Ansatz. Keines dokumentiert, ob sich Prozessmuster über Mediengrenzen hinweg wiederholen. Keines reflektiert systematisch, wie sich die Rolle der Künstlerin im Verlauf der Kollaboration verschiebt. Und keines fragt pragmatisch, wie sich KI-Tools in einen produktionsorientierten Workflow integrieren lassen. Hier setzt meine Arbeit an: Sie untersucht die Mensch-KI-Kollaboration autoethnografisch und multimodal aus der Perspektive einer Medienproduzentin. Kepler existiert in Bild, Audio, 3D und Code, und der Wechsel zwischen den Medien macht sichtbar, dass Muster wie der Speed-vs-Control-Tradeoff und die Rollenverschiebung zur Kuratorin medienübergreifend auftreten.
 
 # Methodologie
 
-## Methodischer Rahmen: Practice-Led Research
+## Methodischer Rahmen
 
-Das Projekt folgt dem Paradigma des Practice-Led Research: Die künstlerische Praxis dient als Erkenntnisquelle und generiert Wissen über den kreativen Prozess. Die Entwicklung von Kepler ist der Ort, an dem Forschung stattfindet.
-
-## Konkrete Methoden
-
-Die Forschung verbindet drei Stränge: autoethnografisches Journaling mit iterativer Experimentierung, eine öffentliche Website als Forschungsartefakt und einen KI-gestützten Reflexionsprozess.
-
-Regelmäßige Journal-Einträge dokumentieren den kreativen Prozess nach einer strukturierten Vorlage (Intention, Prozess, Ergebnis, Reflexion, nächste Schritte). Systematische Experimente mit verschiedenen KI-Tools (ComfyUI, Marble, Suno AI, fal.ai API) folgen einem Zyklus von Hypothese, Experiment, Dokumentation und Anpassung. Beide Stränge greifen ineinander: Jedes Experiment mündet in einen Journal-Eintrag, jeder Eintrag informiert das nächste Experiment.
-
-Die Website „Everything Machine" macht den gesamten Prozess transparent zugänglich und ist selbst Teil des künstlerischen Outputs. Sie wurde bewusst ohne CMS, sondern als maßgeschneiderte Webanwendung entwickelt, deren technische Architektur die methodischen Prinzipien spiegelt: Transparenz durch Versionierung (Git), Iterativität durch modularen Aufbau, Selbstreflexion durch ein integriertes Journal-System.
-
-Ein zentrales methodisches Element ist der KI-gestützte Reflexionsprozess: Nach jedem Experiment schreibe ich einen Journal-Eintrag und führe anschließend eine strukturierte Konversation mit Claude, die den Eintrag liest, Rückfragen stellt und die Reflexion entlang fester Fragen verdichtet. Diese Fragen basieren auf autoethnografischer Praxis [@ellis2011autoethnography] und Schöns „Reflection-in-Action" [@schoen1983practitioner] und decken Kontext, Prozess, Erkenntnisse und Weiterentwicklung ab. Die KI wird dabei zum Sparringspartner für die Selbstreflexion, nicht zum Autor: Sie strukturiert und verdichtet, aber die Erkenntnisse kommen aus meiner Erfahrung.
+Die Forschung verbindet drei Stränge: iterative Experimentierung, eine öffentliche Website als Forschungsartefakt und KI-gestütztes autoethnografisches Journaling. Der Rhythmus war pragmatisch: etwas ausprobieren, darüber schreiben, im Interview reflektieren, anpassen. Nach jedem Experiment schreibe ich einen Journal-Eintrag und führe anschließend eine strukturierte Konversation mit Claude, die den Eintrag liest, Rückfragen stellt und die Reflexion entlang fester Fragen verdichtet. Diese Fragen basieren auf autoethnografischer Praxis [@ellis2011autoethnography] und Schöns „Reflection-in-Action" [@schoen1983practitioner] und decken Kontext, Prozess, Erkenntnisse und Weiterentwicklung ab. Die KI wird dabei zum Sparringspartner für die Selbstreflexion, nicht zum Autor: Sie strukturiert und verdichtet, aber die Erkenntnisse kommen aus meiner Erfahrung.
 
 ## Ethische Überlegungen und KI-Offenlegung
 
-Da es sich um ein autoethnografisches Projekt handelt, werden keine personenbezogenen Daten Dritter erhoben. Die verwendeten KI-Modelle wurden auf Datensätzen trainiert, deren Zusammensetzung nicht vollständig transparent ist und deren urheberrechtlicher Status Gegenstand laufender Debatten bleibt. Dieses Spannungsfeld wird als Teil der Forschung reflektiert, nicht verschwiegen.
+Da es sich um ein autoethnografisches Projekt handelt, werden keine personenbezogenen Daten Dritter erhoben. Die verwendeten KI-Modelle wurden auf Datensätzen trainiert, deren Zusammensetzung nicht vollständig transparent ist und deren urheberrechtlicher Status Gegenstand laufender Debatten bleibt.
 
-Generative KI kam in dieser Arbeit auf vier Ebenen zum Einsatz: als Experimentgrundlage, als Reflexionspartner, als Schreibassistenz und als Entwicklungstool. Experiment 1 nutzte [ComfyUI](https://www.comfy.org/), ein komplexes, node-basiertes Werkzeug, in dem Bildgenerierungs-Workflows visuell als Knotennetzwerke zusammengesteckt werden. Experiment 2 testete [Marble](https://www.worldlabs.ai/) (World Labs) für 3D-Weltengenerierung, ein Exkurs erprobte [Suno AI](https://suno.com/) (kostenlose Stufe) für Musikgenerierung. Für die automatisierte Bild- und Videogenerierung in Experiment 3 und 4 stieg ich auf die API (Application Programming Interface, eine Programmierschnittstelle) von [fal.ai](https://fal.ai/) um, einem Anbieter, bei dem man Guthaben einzahlt und darüber verschiedene Generierungsmodelle ansprechen kann, ohne jedes einzeln installieren oder konfigurieren zu müssen. Nach jedem Experiment wurde eine strukturierte Reflexion im Dialog mit Claude durchgeführt (vollständige Transkripte auf der Projektwebsite). Claude unterstützte außerdem bei Strukturierung und Formulierung dieser Dokumentation. Die Interviews und ein Großteil der Instruktionen an Claude Code wurden per Spracheingabe über [Wispr Flow](https://www.wispr.ai/) diktiert, ein KI-gestütztes Diktationstool, dessen Spracherkennung durch ein eigenes Sprachmodell deutlich präziser arbeitet als herkömmliche Diktiersoftware.
+Generative KI kam in dieser Arbeit auf vier Ebenen zum Einsatz: als Experimentgrundlage, als Reflexionspartner, als Schreibassistenz und als Entwicklungstool. Experiment 1 nutzte [ComfyUI](https://www.comfy.org/), ein komplexes, node-basiertes Werkzeug, in dem Bildgenerierungs-Workflows visuell als Knotennetzwerke zusammengesteckt werden. Experiment 2 testete [Marble](https://www.worldlabs.ai/) von World Labs für 3D-Weltengenerierung, ein Exkurs erprobte [Suno AI](https://suno.com/) in der kostenlosen Stufe für Musikgenerierung. Für die automatisierte Bild- und Videogenerierung in Experiment 3 und 4 stieg ich auf die API (Application Programming Interface, eine Programmierschnittstelle) von [fal.ai](https://fal.ai/) um, einem Anbieter, bei dem man Guthaben einzahlt und darüber verschiedene Generierungsmodelle ansprechen kann, ohne jedes einzeln installieren oder konfigurieren zu müssen. Nach jedem Experiment wurde eine strukturierte Reflexion im Dialog mit Claude durchgeführt (vollständige Transkripte auf der Projektwebsite sowie im Anhang). Claude unterstützte außerdem bei Strukturierung und Formulierung dieser Dokumentation. Die Interviews und ein Großteil der Instruktionen an Claude Code wurden per Spracheingabe über [Wispr Flow](https://www.wispr.ai/) diktiert, ein KI-gestütztes Diktationstool, dessen Spracherkennung durch ein eigenes Sprachmodell deutlich präziser arbeitet als herkömmliche Diktiersoftware und dadurch die Reibung zwischen Gedanken und geschriebenem Text verringert.
 
-Die Projektwebsite wurde zunächst mit [Cursor](https://www.cursor.com/) gebaut, einer KI-gestützten Entwicklungsumgebung. Cursor ist ein Fork, eine eigenständige Abspaltung, von [Visual Studio Code](https://code.visualstudio.com/) (VS Code), dem verbreiteten Open-Source-Editor von Microsoft. Im Laufe der Arbeit stieg ich auf [Claude Code](https://docs.anthropic.com/en/docs/claude-code) um, ein terminalbasiertes KI-Werkzeug von Anthropic, das direkt in der Kommandozeile arbeitet statt in einer grafischen Oberfläche und sich mit VS Code kombinieren lässt. Die Arbeit erforderte auch eine finanzielle Investition: Claude (Max-Abonnement), Cursor (Lizenz) und fal.ai (Guthaben) waren kostenpflichtig.
+Die Projektwebsite wurde zunächst mit [Cursor](https://www.cursor.com/) gebaut, einer KI-gestützten Entwicklungsumgebung. Cursor ist ein Fork, eine eigenständige Abspaltung, von [Visual Studio Code](https://code.visualstudio.com/) (VS Code), dem verbreiteten Open-Source-Editor von Microsoft. Im Laufe der Arbeit stieg ich auf [Claude Code](https://docs.anthropic.com/en/docs/claude-code) um, ein terminalbasiertes KI-Werkzeug von Anthropic, das direkt in der Kommandozeile arbeitet statt in einer grafischen Oberfläche und sich mit VS Code kombinieren lässt. Das Besondere an Cursor und Claude Code ist der Zugriff auf lokale Dateien und das Betriebssystem: Damit lassen sich Dokumente, Scripts und Code erstellen und ausführen, weit über die Fähigkeiten eines Chatbots hinaus. Die Arbeit erforderte auch eine finanzielle Investition: Claude (Max-Abonnement), Cursor (Lizenz) und fal.ai (Guthaben) waren kostenpflichtig.
 
 Argumentation, Quellenauswahl und alle inhaltlichen Entscheidungen liegen bei der Autorin. Der gesamte Prozess ist auf der [Website](https://jenniferied.github.io/everything-machine/) und im [GitHub-Repository](https://github.com/jenniferied/everything-machine/) öffentlich dokumentiert.
 
@@ -123,15 +103,15 @@ Argumentation, Quellenauswahl und alle inhaltlichen Entscheidungen liegen bei de
 
 ## Ausgangspunkt und erste Schritte
 
-Am Anfang dieser Forschung stand kein theoretisches Konzept, sondern ein ganz praktisches Problem: Kepler brauchte Bilder. Videos. Eine Welt. Kepler existierte bereits als musikalische Identität: Name, Idee, Figur mit Maske und voxelisiertem Stil. Aber visuell war er fragmentarisch: ein paar Fotos, ein paar Renders aus Unreal Engine, zusammengehalten von einer ästhetischen Intuition, die ich teilte mit Gavin, meinem musikalischen Kollaborateur. Was fehlte, war Konsistenz. Und die Frage, ob generative KI diese Konsistenz liefern konnte, wurde zum Ausgangspunkt meiner Forschung.
+Am Anfang dieser Forschung stand kein theoretisches Konzept, sondern ein ganz praktisches Problem: Kepler brauchte mehr Bilder, mehr Videos, eine größere visuelle Welt. Kepler existierte bereits als musikalische Identität mit einem gewachsenen visuellen Fundament: 2D-Pixel-Art, verschiedene 3D-Modelle, zwei Alben (Blue Edition und Yellow Edition), Fotos mit echtem Kostüm und Maske. Ein Passion-Projekt ohne Budget, zusammengehalten von einer ästhetischen Intuition, die ich teilte mit Gavin, meinem musikalischen Kollaborateur. Was fehlte, war nicht die Identität, sondern die visuelle Konsistenz und Skalierbarkeit. Und die Frage, ob generative KI diese Konsistenz liefern konnte, wurde zum Ausgangspunkt meiner Forschung.
 
-Der erste Schritt kam ohne KI aus. Gavin und ich sammelten Referenzen: Pinterest-Boards für Cover-Inspiration, Kleidung, Song-spezifische Vibes. Ein Google-Drive-Ordner für geteilte Ressourcen: Fotos, existierende Artworks, Konzeptideen. Kein KI-Tool kam zum Einsatz. Was mir dabei bewusst wurde: Der Prozess des Sammelns, Sortierens und Kuratierens ist ein zutiefst menschlicher. Selbst wenn einige der gesammelten Bilder selbst KI-generiert gewesen sein mögen, die Auswahl, die Kombination, das Gespür für das Richtige -- das bleibt bei uns. Diese Beobachtung wurde zum stillen Leitmotiv der gesamten Forschung: Wo verläuft die Grenze zwischen Kuration und Generierung?
+Der erste Schritt kam ohne KI aus. Gavin und ich sammelten Referenzen: Pinterest-Boards für Cover-Inspiration, Kleidung, Song-spezifische Vibes. Ein Google-Drive-Ordner für geteilte Ressourcen: Fotos, existierende Artworks, Konzeptideen. Kein KI-Tool kam zum Einsatz.
 
 ## Entscheidungen und Abzweigungen
 
 ### Die Wahl des visuellen Stils
 
-Kepler trägt eine Maske. Er hat kein sichtbares Gesicht. Sein Stil ist voxelisiert, blockhaft, bewusst abstrahiert. Das ist keine kosmetische Entscheidung, sondern eine identitätsstiftende: Die Maske ist das, was Kepler von einem gewöhnlichen Avatar unterscheidet. Sie schafft Distanz und Projektionsfläche zugleich.
+Kepler trägt eine Maske. Er hat kein sichtbares Gesicht. In seiner 3D-Form ist sein Stil voxelisiert, blockhaft, bewusst abstrahiert. Kepler ist ein anonymer Künstler, und die Maske verbirgt seine echte Identität — das ist keine ästhetische Spielerei, sondern konstitutiv: Die Maske ist das, was Kepler von einem gewöhnlichen Avatar unterscheidet. Diese Anonymität soll auch digital gewahrt bleiben.
 
 Genau diese Designentscheidung wurde zur zentralen Herausforderung für die Arbeit mit generativer KI. Bildgenerierungsmodelle wie Flux oder Stable Diffusion sind auf Trainingsdaten aufgebaut, die überwiegend menschliche Gesichter enthalten. Das Modell "will" ein Gesicht sehen, wo keines sein soll -- es projiziert hartnäckig Gesichtszüge in Keplers Maske, selbst wenn der Prompt explizit dagegen formuliert ist. Keplers Ästhetik liegt in einer Nische, die das Modell nicht versteht, weil sie in den Trainingsdaten kaum repräsentiert ist. Was bei einer realistischen, Anime- oder Cartoon-Figur funktioniert hätte, scheiterte an Keplers bewusster Andersartigkeit.
 
@@ -147,20 +127,20 @@ Eine zentrale Entscheidung war, die Dokumentationswebsite von Grund auf mit Curs
 \includegraphics[width=0.48\textwidth]{assets/screenshot-images.png}
 \vspace{0.3em}
 \includegraphics[width=0.48\textwidth]{assets/screenshot-generations.png}
-\caption{Die fünf Seiten der Website (\url{https://jenniferied.github.io/everything-machine/}): Projektübersicht mit 3D-Viewern, Prozess-Logbuch, Über mich mit Skill-Netzwerk, Bild-Generationen und Video-Generationen.}
+\caption{Die fünf Seiten der Website (\url{https://jenniferied.github.io/everything-machine/}): Projektübersicht mit 3D-Viewern, Prozess-Logbuch, Über mich mit Interessen-Netzwerk, Bild-Generationen und Video-Generationen.}
 \end{figure}
 
-Der Bauprozess mit Cursor offenbarte eine weitere Facette der Mensch-KI-Kollaboration. Ich fühlte mich, wie ich in meinem Journal notierte, "wie eine Managerin mit Gesamtvision, die einen Junior Developer dirigiert". Die KI war schnell bei repetitiven Aufgaben, aber bei komplexen ästhetischen Entscheidungen (der richtige Abstand, der richtige Farbton, die richtige Interaktion) war ich diejenige, die führte. Mein Vorwissen in Webentwicklung war dabei entscheidend: "Garbage in, garbage out", notierte ich. Je spezifischer die Anforderungen und je größer die Codebase, desto schwieriger wird es für jemanden ohne Vorwissen, die Qualität zu steuern.
+Der Bauprozess mit Cursor war eine eigene Erfahrung. Ich fühlte mich, wie ich in meinem Journal notierte, „wie eine Managerin mit Gesamtvision, die einen Junior Developer dirigiert" (Eintrag 4). „Garbage in, garbage out", notierte ich — je spezifischer die Anforderungen, desto besser die Ergebnisse.
 
 ### Von der Intention zum Experiment
 
-Die Forschungsfrage funktionierte als Kompass für die Experimentwahl. Ich wollte verschiedene Modalitäten testen: Bild, 3D, Code, Audio. Weil Kepler multimodal existiert und weil ich verstehen wollte, ob die Muster der Kollaboration über Domänen hinweg stabil bleiben. Die Methodik des Practice-Led Research [@candy2006practice] legitimierte dabei einen explorativen Ansatz: Die Praxis selbst generiert die Erkenntnisse, nicht ein vorab definiertes Versuchsdesign.
+Die Forschungsfrage funktionierte als Kompass für die Experimentwahl. Ich wollte verschiedene Modalitäten testen: Bild, 3D, Code, Audio. Weil Kepler multimodal existiert und weil ich verstehen wollte, ob die Muster der Kollaboration über Domänen hinweg stabil bleiben.
 
 ## Experimente und Ergebnisse
 
 ### Experiment 1: Visuelle Konsistenz (ComfyUI + Flux)
 
-Mein erster ernsthafter Versuch, Kepler visuell konsistent mit KI zu generieren, nutzte ComfyUI mit dem Flux-Modell, ergänzt durch IP-Adapter, ControlNet und Face Detailer. Die Installation auf meinem M1 MacBook Pro dauerte Stunden und verschlang viele Gigabyte, schon das ein Hinweis darauf, dass generative KI kein "Zaubertool" ist, als das sie oft dargestellt wird.
+Mein erster ernsthafter Versuch, Kepler visuell konsistent mit KI zu generieren, nutzte ComfyUI, ein node-basiertes Werkzeug für Bildgenerierung, mit verschiedenen Erweiterungen für Konsistenz und Detailverbesserung. Die Installation auf meinem M1 MacBook Pro dauerte Stunden und verschlang viele Gigabyte, schon das ein Hinweis darauf, dass generative KI kein "Zaubertool" ist, als das sie oft dargestellt wird.
 
 Die Ergebnisse waren gemischt. Wenn ich ein Foto als Referenz nutzte, auf dem Kepler einen Basketball hielt, wurde der Basketball im generierten Bild beibehalten, obwohl er dort nicht hingehörte. Das Modell hat kein semantisches Verständnis davon, welche Elemente zusammengehören. Gravierender war das Gesichtsproblem: Face Detailer, eigentlich zur Verbesserung von Gesichtsdetails entwickelt, interpretierte Gesichter in Keplers Maske hinein, eine Art Face Hallucination, die selbst durch negative Prompts nicht vollständig unterdrückt werden konnte. Es handelt sich um das, was Mori [-@mori2012uncanny] als Uncanny Valley beschreibt, allerdings in einer unerwarteten Richtung: nicht ein fast-menschliches Gesicht, das Unbehagen auslöst, sondern ein Nicht-Gesicht, das vom Modell zwanghaft vervollständigt wird. Die Halluzinationen kippen ins Chaotische — weg von der ästhetischen Balance, die Keplers Identität ausmacht.
 
@@ -176,24 +156,24 @@ Bei Personen und Spiegelungen zeigte sich erneut das Uncanny Valley: verzerrte P
 
 ### Exkurs: Musik-Generierung (Suno AI)
 
-Parallel zu den visuellen Experimenten testete ich Suno AI für die Generierung von Musik -- minimal, loopbar, sowjetisch-dystopisch. Dieser Exkurs gehörte nicht direkt zur Kepler-Bildentwicklung, gab aber Aufschluss über ein Muster, das sich auch in den visuellen Experimenten zeigte.
+Parallel zu den visuellen Experimenten testete ich Suno AI für die Generierung von Musik (minimal, loopbar, sowjetisch-dystopisch). Dieser Exkurs gehörte nicht direkt zur Kepler-Bildentwicklung, gab aber Aufschluss über ein Muster, das sich auch in den visuellen Experimenten zeigte.
 
 Zwei Prompt-Ansätze: "Lo-fi" produzierte zu kommerziell klingende Ergebnisse; "Pixel Game Soundtrack" ergab etwas, das eher nach Hero-Soundtrack eines Indie-Games klang als nach atmosphärischer Hintergrundmusik. Das Kernphänomen war die Diskrepanz zwischen Beschreibung und Output. Suno generiert zu jedem Track eine detaillierte Beschreibung: "Bitcrushed chiptune pads over a sparse, detuned synth choir; slow, mechanical pulse with occasional metallic hits and distant wind FX." Diese Beschreibung trifft exakt das, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell, Stock-Music-Qualität. Dasselbe Muster wie bei ComfyUI: Generalistische Modelle defaulten auf Mainstream-Ästhetik. Die Nische, die ich suchte, erfordert entweder viele Iterationen, spezialisierte Fine-Tunes oder menschliche Expertise.
 
 ### Exkurs: KI als Lernpartner
 
-Auf einer 30-minütigen Autofahrt führte ich ein Voice-Gespräch mit Claude über KI-Grundlagen -- von Shannons Informationstheorie über die Dartmouth Conference bis zur Transformer-Architektur. Das war kein Experiment im engeren Sinne, sondern eine Erkundung der KI als personalisiertem Lernpartner.
+Auf einer 30-minütigen Autofahrt führte ich ein Voice-Gespräch mit Claude über KI-Grundlagen: von Shannons Informationstheorie über die Dartmouth Conference bis zur Transformer-Architektur. Das war kein Experiment im engeren Sinne, sondern eine Erkundung der KI als personalisiertem Lernpartner.
 
 Die wichtigste Erkenntnis betraf die Fluency Illusion: Das Gespräch fühlte sich an wie tiefes Verstehen, aber ob ich die Konzepte tatsächlich internalisiert hatte, war unklar. „Ich glaube aber, es könnte die Gefahr geben, dass ich der Illusion unterliege, dass ich es verstehe, obwohl ich es vielleicht nicht tue. Aber das Gleiche gilt ja auch, wenn ich mir ein Video anschaue" (Eintrag 5). Claude selbst wies mich darauf hin, dass es einen Unterschied gibt zwischen deklarativem Wissen ("wissen, dass") und prozeduralem Wissen ("wissen, wie"). Die Theorie wird erst real, wenn ich sie anwende. Dieses Phänomen ist relevant für jeden, der KI als Lernwerkzeug einsetzt.
 
 
 ### Experiment 3: Automatisierte Bildpipeline (fal.ai API + Claude Code)
 
-An dieser Stelle nimmt die Autoethnografie unweigerlich einen sehr technischen Charakter an. Der Bau einer Pipeline aus APIs und Skripten war kein kreativer Befreiungsschlag im klassischen Sinne, sondern entsprang der schieren Frustration über die manuelle Bedienung von Chatbots und node-basierter Software. Um KI heute für solche spezifischen Nischen künstlerisch zu nutzen, muss man vorübergehend zum Engineer werden -- ob man will oder nicht. Doch genau in dieser technischen Orchestrierung, dem gemeinsamen Debuggen und Iterieren mit Claude Code, entstand ein unerwarteter Flow. Ob das Errichten einer solchen Architektur noch klassische "künstlerische Praxis" ist oder reines Engineering, trat im Prozess in den Hintergrund: Es war der pragmatische Weg, um in einem extrem schnelllebigen Technologie-Umfeld handlungsfähig zu bleiben und die Skalierung der Experimente überhaupt erst zu ermöglichen.
+An dieser Stelle nimmt die Autoethnografie einen sehr technischen Charakter an. Der Bau einer Pipeline aus APIs und Skripten war kein kreativer Befreiungsschlag im klassischen Sinne, sondern entsprang der schieren Frustration über die manuelle Bedienung von Chatbots und node-basierter Software. Für pipeline-basierte Kontrolle über Nischen-Ästhetiken muss man vorübergehend zum Engineer werden. Doch genau in dieser technischen Orchestrierung, dem gemeinsamen Debuggen und Iterieren mit Claude Code, entstand ein unerwarteter Flow. Ob das Errichten einer solchen Architektur noch klassische "künstlerische Praxis" ist oder reines Engineering, trat im Prozess in den Hintergrund: Es war der pragmatische Weg, um in einem extrem schnelllebigen Technologie-Umfeld handlungsfähig zu bleiben und die Skalierung der Experimente überhaupt erst zu ermöglichen.
 
 Nach den Einzelexperimenten und Exkursen stellte sich eine methodische Frage: Was passiert, wenn ich den Prozess systematisiere? Gemeinsam mit Claude Code baute ich eine automatisierte Pipeline, die über die fal.ai API neun verschiedene Bildgenerierungsmodelle mit denselben Prompts und Referenzbildern ansteuerte. Die Kollaboration war dreistufig: Ich definierte die ästhetische Vision und die Evaluationskriterien, Claude Code schrieb den Pipeline-Code und orchestrierte die API-Aufrufe, die Bildmodelle generierten die Outputs -- eine neue Konstellation, in der ich als Auftraggeberin eines KI-Agenten fungierte, der seinerseits KI-Modelle steuert.
 
-Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Signature Scenes systematisch absteckten. Insgesamt entstanden 134 Bilder in 24 Output-Ordnern, evaluiert nach "Gefällt mir", "Halluzinationen" und Kommentar.
+Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Signature Scenes systematisch absteckten. Insgesamt entstanden 134 Bilder in 24 Output-Ordnern, evaluiert nach „Gefällt mir", „Halluzinationen" und Kommentar. Die folgenden Seiten dokumentieren die einzelnen Phasen.
 
 ```{=latex}
 \clearpage
@@ -201,7 +181,7 @@ Die Pipeline durchlief sieben Phasen, die den Möglichkeitsraum zwischen neun Mo
 
 #### Phase 1: Modell-Screening (5 Modelle, A-Pose)
 
-Als Referenzbild diente Keplers A-Pose-Render -- ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen. Fünf Modelle wurden getestet:
+Als Referenzbild diente Keplers A-Pose-Render (ein quadratischer 1024×1024 Render mit seitlich ausgestreckten Armen). Fünf Modelle wurden getestet:
 
 ```{=latex}
 \begin{figure}[H]
@@ -348,7 +328,7 @@ SeedDream schied wegen Gesichtshalluzinationen aus. Drei Finalisten blieben: FLU
 
 #### Phase 2b: Der Posed-Input-Durchbruch
 
-Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input" -- einem Render, in dem Kepler natürlich steht. Die A-Pose führte zu einem Overfitting-Effekt: Das Modell übernahm die starre Haltung wörtlich.
+Der entscheidende Durchbruch kam mit dem Wechsel zum "Posed Input", einem Render, in dem Kepler natürlich steht. Die A-Pose führte zu einem Overfitting-Effekt: Das Modell übernahm die starre Haltung wörtlich.
 
 ```{=latex}
 \begin{figure}[H]
@@ -512,7 +492,7 @@ Nano Banana & landscape & gemischt & teilweise & Ohne Halluz. stark \\
 
 Der Ratio-Bug wurde behoben, Tokyo Rain ersetzte Bridge. Doch ein neuer Automatisierungsfehler trat auf: Das quadratische Referenzbild wurde naiv auf Portrait- bzw. Landscape-Format skaliert statt korrekt gepaddet -- Kepler erschien verzerrt. Die Outputs zeigen deutlich sichtbare Proportionsverzerrungen: ein zu schmaler Körper im Portrait-Format, ein zu breiter im Landscape-Format. Trotzdem lieferte Nano Banana Pro selbst mit verzerrtem Input überzeugende Voxel-Ästhetik -- ein Hinweis auf die Robustheit des Modells.
 
-In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. Nano Banana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen eine wiederkehrende Dynamik: Jede Iteration löste ein Problem und offenbarte das nächste. Die Bewertung erfolgte in diesen Phasen noch pauschal pro Modell und Format, da die Outputs insgesamt zu fehlerbehaftet waren, um sinnvoll zwischen einzelnen Szenen zu differenzieren.
+In der zweiten Iteration (Ordner 17/18) wurden die Prompts verfeinert: leuchtende Voxel-Treppen statt Marmor, präzisere Szenenbeschreibungen. Das Stretching blieb jedoch bestehen, da der Fehler in der Input-Vorbereitung lag, nicht im Prompting. GPT-Image-1.5 produzierte erneut quadratische Outputs (1024×1024) trotz Portrait-Anfrage -- derselbe API-Bug wie in Phase 3a. Nano Banana Pro hingegen lieferte korrekte Formate und die stärksten Landscape-Ergebnisse der gesamten Pipeline. Die Phasen 3a--3b zeigen eine wiederkehrende Dynamik: Jede Iteration löste ein Problem und offenbarte das nächste. Die Bewertung erfolgte in diesen Phasen noch pauschal pro Modell und Format, da die Outputs insgesamt zu fehlerbehaftet waren, um sinnvoll zwischen einzelnen Szenen zu differenzieren.
 
 ```{=latex}
 \clearpage
@@ -588,7 +568,7 @@ Nano Banana & landscape & \textcolor{evalgreen}{stark} & -- & -- \\
 \end{table}
 ```
 
-Mit korrekt gepaddeten Inputs -- schwarze Balken statt Stretching -- lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch (siehe Prompt-Verzeichnis).
+Mit korrekt gepaddeten Inputs (schwarze Balken statt Stretching) lieferte die Pipeline erstmals konsistente Ergebnisse. Night Drive ersetzte Tokyo Rain als dritte Szene, die Szenen-Auswahl stabilisierte sich auf das finale Set: Night Drive, Spiral Staircase, Pool Floaty und Studio. Die finalen Prompts waren nun hochspezifisch (siehe Anhang B).
 
 Der Unterschied war unmittelbar sichtbar: Keplers Proportionen stimmten, die Voxel-Geometrie blieb erhalten, und beide Modelle produzierten erstmals Outputs, die ohne Einschränkung als Promo-Material verwendbar wären. Nano Banana Pro dominierte im Landscape-Format mit durchgehend starken Bewertungen, während GPT-Image-1.5 im Portrait-Format atmosphärischere Szenen erzeugte. Die Korrektur eines einzigen Pipeline-Parameters -- Padding statt Stretching -- machte den Unterschied zwischen unbrauchbaren und überzeugenden Ergebnissen. Ab dieser Phase wurde jede Szene einzeln bewertet, da die Qualität nun hoch genug war, um szenenbezogene Unterschiede sinnvoll zu differenzieren.
 
@@ -765,162 +745,13 @@ Das Ergebnis war eindeutig: Posed Input war A-Pose in fast allen Szenen überleg
 \clearpage
 ```
 
-#### Gesamtbewertung
+#### Analyse und Reflexion
 
-Die folgende Tabelle fasst alle 52 Einzelbewertungen aus der Pipeline zusammen. Die verwendeten Prompts sind im Prompt-Verzeichnis nach der Tabelle dokumentiert.
-
-```{=latex}
-{\footnotesize
-\begin{longtable}{lllllllp{3cm}}
-\caption{Gesamtbewertung: Alle Evaluationen der fal.ai-Pipeline} \\
-\toprule
-\textbf{Nr.} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
-\midrule
-\endfirsthead
-\toprule
-\textbf{Nr.} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-01 & MiniMax & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Minecraft-Stil, Gesichtszüge \\
-02 & Z-Image & a-pose & sq. & bedingt & \textcolor{evalgreen}{nein} & A-Pose erhalten, clean \\
-03 & FLUX Depth & a-pose & sq. & \textcolor{evalred}{nein} & -- & Körper humanoid geglättet \\
-04 & FLUX Canny & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
-05 & Era3D & a-pose & sq. & \textcolor{evalred}{nein} & -- & Nutzlos, eigene Renders besser \\
-\midrule
-06 & FLUX Kontext & a-pose & sq. & bedingt & -- & Wird besser \\
-07 & GPT-1.5 & a-pose & sq. & bedingt & teilweise & Solide, leichte Halluz. \\
-08 & SeedDream & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
-09 & Nano Banana & a-pose & sq. & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
-\midrule
-10 & FLUX Kont. & posed & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesichter halluziniert \\
-11 & GPT-1.5 & posed & sq. & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
-12 & Nano Banana & posed & sq. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
-\midrule
-13 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & teilweise & 1:1 Ratio-Bug \\
-13 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & teilweise & Auch 1:1 \\
-14 & Nano Banana & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Halb cool, halb Halluz. \\
-14 & Nano Banana & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalgreen}{nein} & Ohne Halluz. stark \\
-\midrule
-15 & GPT-1.5 & posed & portrait & gemischt & teilweise & Gestretchte Referenz \\
-15 & GPT-1.5 & posed & landsc. & gemischt & \textcolor{evalred}{ja} & Stretching + Cap fehlt \\
-16 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
-16 & Nano Banana & posed & landsc. & gemischt & \textcolor{evalgreen}{nein} & Weniger Stretching \\
-\midrule
-17 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & 1:1 Bug + Halluz. \\
-17 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Dasselbe \\
-18 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
-18 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
-\midrule
-19 & GPT-1.5 & posed & portrait & gemischt & teilweise & -- \\
-19 & GPT-1.5 & posed & landsc. & gemischt & teilweise & -- \\
-20 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
-20 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
-\midrule
-21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Scheibe fehlt \\
-21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
-21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF \\
-21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Teil d. Autos fehlt \\
-21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
-21 & GPT-1.5 & posed & landsc. & neutral & \textcolor{evalred}{ja} & PF: Cap/Haare fehlen \\
-\midrule
-22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
-22 & Nano Banana & posed & portrait & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Stufen nicht schön \\
-22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Sehr cool \\
-22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cockpit falsch \\
-22 & Nano Banana & posed & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Doppelte Treppe \\
-22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Transparent, gefällt \\
-\midrule
-23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & ND: Scheinwerfer falsch \\
-23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: A-Pose overfitted \\
-23 & GPT-1.5 & a-pose & portrait & neutral & \textcolor{evalred}{ja} & PF: Cap fehlt \\
-23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cap fehlt \\
-23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Pose zu starr \\
-23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
-\midrule
-24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
-24 & Nano Banana & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppe nicht schön \\
-24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Super \\
-24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & ND: Halluz. stören \\
-24 & Nano Banana & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppen nicht schön \\
-24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
-\end{longtable}
-}
-```
-
-#### Prompt-Verzeichnis
-
-Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, gruppiert nach Phase. Ab Phase 3b wurden für GPT-Image-1.5 und Nano Banana Pro unterschiedliche Prompt-Varianten verwendet: GPT erhielt strukturierte Prompts (Background/Center/Details/Constraints), Nano Banana natürlichsprachliche. Hier ist jeweils die Nano Banana-Variante dokumentiert; die GPT-Variante beschrieb dieselbe Szene in strukturierter Form.
-
-```{=latex}
-{\scriptsize
-
-\textbf{Phase 1 -- Modell-Screening} (alle Modelle, identischer Prompt)\\[2pt]
-\textit{Base:} ``A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark pants, standing in a dramatic cinematic environment, volumetric lighting, no face, blocky pixel art style 3D character''\\
-\textit{+ Szenen:} ``...in a neon-lit cyberpunk city at night'' / ``...in a foggy forest with golden light rays'' / ``...on a concert stage with dramatic spotlights''
-
-\vspace{6pt}
-
-\textbf{Phase 2 -- Top-Modelle in Szenen} (alle Modelle, identischer Prompt)\\[2pt]
-\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands in pockets, cinematic lighting''\\
-\textit{Forest:} ``...in a foggy forest clearing, sitting on a fallen tree, golden light rays filtering through the canopy''\\
-\textit{Concert:} ``...on a concert stage, performing with arms raised, dramatic spotlights and fog machine effects''
-
-\vspace{6pt}
-
-\textbf{Phase 2b -- Posed-Input-Test} (5 Szenen, identischer Prompt)\\[2pt]
-\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street with hands in pockets, cinematic lighting, reflections on wet ground''\\
-\textit{Park:} ``...sitting on a park bench in autumn, golden leaves falling around him, soft warm afternoon light''\\
-\textit{Concert:} ``...on a dark concert stage, performing with a microphone, dramatic red and blue spotlights, fog machine, crowd silhouettes''\\
-\textit{Rooftop:} ``...standing on a rooftop at sunset, looking over a vast city skyline, wind blowing, golden hour lighting''\\
-\textit{Studio:} ``...in a recording studio, sitting at a mixing desk with headphones around neck, warm ambient lighting, monitors glowing''
-
-\vspace{6pt}
-
-\textbf{Phase 3a -- Signature Scenes v1} (GPT + Nano Banana, identischer Prompt)\\[2pt]
-\textit{Studio:} ``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting [...]''\\
-\textit{Retro Car:} ``...driving a vintage 1970s convertible car across a long suspension bridge at night, city lights reflecting on the water below [...]''\\
-\textit{Spiral Staircase:} ``...walking up an endless spiral staircase that extends infinitely into the sky, passing through layers of clouds and stars, surreal dreamlike atmosphere, the staircase is white marble [...]''\\
-\textit{Pool Floaty:} ``...lying on a pink flamingo pool float in a turquoise swimming pool, seen from directly above as a top-down bird's eye view [...]''
-
-\vspace{6pt}
-
-\textbf{Phase 3b -- Fixed Scenes} (separate GPT/NB-Prompts, hier NB)\\[2pt]
-\textit{Studio:} ``Show this voxel character in a cozy recording studio. He's sitting at a big mixing desk with his hands on the faders, wearing headphones. Warm amber lighting [...] IMPORTANT: The character must remain completely faceless [...]''\\
-\textit{Tokyo Rain:} ``This voxel character is walking through a rainy Tokyo alley at night. Neon signs everywhere in Japanese, steam rising from street vents [...] IMPORTANT: The character must remain completely faceless [...]''\\
-\textit{Spiral Staircase:} ``...walks up an endless spiral staircase made of white marble, floating through deep space. Stars and galaxies surround the staircase [...] IMPORTANT: The character must remain completely faceless [...]''\\
-\textit{Pool Floaty:} ``Top-down bird's eye view of a turquoise swimming pool. This voxel character is lying on an inflatable pool ring (donut shape with a hole in the middle) [...] IMPORTANT: The character must remain completely faceless [...]''
-
-\vspace{6pt}
-
-\textbf{Phase 3c -- Final Scenes} (hier NB-Variante)\\[2pt]
-\textit{Studio:} wie Phase 3b\\
-\textit{Night Drive} (neu, ersetzt Tokyo): ``This voxel character is driving a vintage 1970s convertible down a long empty road at night. A big full moon and stars fill the dark sky [...] IMPORTANT: The character must remain completely faceless [...]''\\
-\textit{Spiral Staircase} (update): ``...walks up an endless spiral staircase [...] The staircase is built from the same voxel cubes as the character --- blocky geometric steps that glow with soft blue light. [...] NOT marble, NOT stone.''\\
-\textit{Pool Floaty:} wie Phase 3b, erweitert um Poolside-Details (Liegen, Cocktails, Pflanzen)
-
-\vspace{6pt}
-
-\textbf{Phase 3d -- Refined + A-Pose-Vergleich} (hier NB-Variante)\\[2pt]
-\textit{Night Drive} (refined): ``This voxel character is cruising down a night road in a sleek retro 1980s sports car with pop-up headlights. Behind him a glowing city skyline fades into the distance. Ahead, dark mountains rise on the horizon. [...] Retro synthwave vibes with teal and magenta tones. IMPORTANT: The character must remain completely faceless [...]''\\
-\textit{Spiral Staircase} (refined): ``...walks up an endless spiral staircase floating through a dreamy cloudy sky. The sky is soft pastel blue and lavender with layered clouds [...] NOT intense galaxies, just a calm dreamy twilight atmosphere. [...] blocky geometric steps that glow with soft blue neon light. [...]''\\
-\textit{Pool Floaty} (enriched): ``Top-down bird's eye view of a turquoise swimming pool at a luxurious summer resort. [...] Around the pool edge: white sun loungers, a small table with a cocktail and sunscreen, tropical potted plants, neatly folded towels, flip-flops on the tiles. [...]''
-
-}
-```
-
-```{=latex}
-\clearpage
-```
-
-#### Zusammenfassung und theoretische Einordnung
-
-Dieses Experiment markiert einen Rollenwechsel: Ich definierte das "Was" und "Warum", während Claude Code das "Wie" implementierte. Sieben Phasen steckten den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Szenen systematisch ab. Wo ich in Experiment 1 stundenlang an ComfyUI-Parametern drehte, durchlief die Pipeline denselben Suchprozess in Minuten.
+Dieses Experiment markiert einen Rollenwechsel: Ich definierte das "Was" und "Warum", während Claude Code das "Wie" implementierte. Sieben Phasen steckten den Möglichkeitsraum zwischen neun Modellen, zwei Input-Typen und drei Szenen systematisch ab. Wo ich in Experiment 1 stundenlang an ComfyUI-Parametern drehte, durchlief die Pipeline denselben Prozess in Minuten.
 
 Das Fazit war ambivalent. Einerseits gelang hier zum ersten Mal eine visuell überzeugende Kepler-Generierung ohne Fine-Tuning -- die besten Bilder aus den Posed-Phasen waren die ersten, die ich mir als Album-Cover vorstellen konnte. Andererseits blieben die Halluzinationen: fehlende Caps, falsche Cockpit-Details, gelegentlich angedeutete Gesichtszüge unter der Maske. Die Pipeline machte den Prozess skalierbar, aber nicht kontrollierbar. Eine neue Frage drängte sich auf: Wenn ein KI-Agent für mich promptet -- wo endet dann meine Autorschaft?
 
-Im Reflexionsinterview wurde mir der zentrale Shift bewusst: Der Workflow wechselte vom Überredungs-Problem zum Automatisierungs-Problem. In Experiment 1 versuchte ich stundenlang, ein einzelnes Modell dazu zu bringen, Keplers Maske zu respektieren. In Experiment 3 verglich ich neun Modelle systematisch miteinander. „Ich war technische Problemlöserin. Instruktionsbefolgerin. Claude Code hat mir detaillierte Instruktionen gegeben, wie ich das Ganze aufsetzen soll" (Eintrag 7). Dabei fiel mir etwas auf, das ich vorher nicht so klar gesehen hatte: Die Autorschaft war in diesem Projekt bereits vor dem KI-Einsatz verteilt. Keplers 3D-Modell stammt von Gavin und anderen Artists, nicht von mir. Die systematische Bildpipeline funktionierte; die Frage war nun, ob sich der Ansatz auf andere Medien übertragen ließ.
+Im Reflexionsinterview wurde mir der zentrale Shift bewusst: Der Workflow wechselte vom Überredungs-Problem zum Automatisierungs-Problem. In Experiment 1 versuchte ich stundenlang, ein einzelnes Modell dazu zu bringen, Keplers Maske zu respektieren. In Experiment 3 verglich ich neun Modelle systematisch miteinander. „Ich war technische Problemlöserin. Instruktionsbefolgerin. Claude Code hat mir detaillierte Instruktionen gegeben, wie ich das Ganze aufsetzen soll" (Eintrag 7). Dabei fiel mir etwas auf, das ich vorher nicht so klar gesehen hatte: Die Autorschaft war in diesem Projekt bereits vor dem KI-Einsatz verteilt. Keplers 3D-Modell stammt von Gavin und anderen Artists, nicht von mir. Die systematische Bildpipeline funktionierte; die Frage war nun, ob sich der Ansatz auf andere Medien übertragen ließ. Die Gesamtbewertung aller 52 Einzelergebnisse ist in Anhang C dokumentiert, die verwendeten Prompts in Anhang B.
 
 ### Experiment 4: Video-Generierung (fal.ai API + Claude Code)
 
@@ -928,12 +759,12 @@ Die automatisierte Bildpipeline aus Experiment 3 warf eine naheliegende Frage au
 
 #### Setup und Methodik
 
-Sieben Modelle wurden systematisch verglichen: PixVerse v5.5, LTX-2, Wan 2.6, Seedance 1.0 Pro, Veo 3.1, Kling O3 und Kling 3.0 V3. Die Kosten reichten von \$0.20 (PixVerse) bis \$0.84 (Kling) pro Video. Als Testbilder dienten vier Szenen aus den besten Ergebnissen der Bildpipeline -- zwei bewusst unterschiedliche Herausforderungen:
+Sieben Modelle wurden systematisch verglichen: PixVerse v5.5, LTX-2, Wan 2.6, Seedance 1.0 Pro, Veo 3.1, Kling O3 und Kling 3.0 V3. Die Kosten reichten von \$0.20 (PixVerse) bis \$0.84 (Kling) pro Video. Als Testbilder dienten vier Szenen aus den besten Ergebnissen der Bildpipeline, zwei bewusst unterschiedliche Herausforderungen:
 
-- **Studio** (Landscape, 1376×768): Kepler am Mischpult -- kontrollierte Innenszene, wenig Bewegung
-- **Pool** (Portrait, 768×1376): Kepler auf dem Pool-Ring, Vogelperspektive -- Wasser, ungewöhnlicher Blickwinkel
-- **Night Drive** (Portrait, 768×1376): Kepler im Retro-Auto auf Wüstenhighway -- Nachtszene, Fahrtbewegung
-- **Spiral Staircase** (Portrait, 768×1376): Kepler auf kosmischer Wendeltreppe -- Prompt forderte blaues Leuchten statt Marmor
+- **Studio** (1376×768): Kepler am Mischpult, kontrollierte Innenszene, wenig Bewegung
+- **Pool** (Portrait, 768×1376): Kepler auf dem Pool-Ring, Vogelperspektive; Wasser, ungewöhnlicher Blickwinkel
+- **Night Drive** (Portrait, 768×1376): Kepler im Retro-Auto auf Wüstenhighway; Nachtszene, Fahrtbewegung
+- **Spiral Staircase** (Portrait, 768×1376): Kepler auf kosmischer Wendeltreppe; Prompt forderte blaues Leuchten statt Marmor
 
 Die Prompts waren bewusst einfach gehalten: kurze Bewegungsbeschreibung plus "Camera holds still." (siehe Ergebnisse). Jedes Modell erhielt identische Inputs. Insgesamt entstanden 28 Videos (7 Modelle × 4 Szenen) bei geschätzten Gesamtkosten von ca. \$16.
 
@@ -1178,13 +1009,15 @@ LTX-2 & \textcolor{evalgreen}{gut} & \textcolor{evalred}{schlecht} & \textcolor{
 }
 ```
 
+Die vollständigen Einzelbewertungen aller 28 Videos sind in Anhang D dokumentiert.
+
 #### Analyse und Reflexion
 
-Die Ergebnisse zeigen ein klares Muster: **Preis korreliert mit Qualität, aber nicht linear.** Kling O3 (\$0.84) war mit drei von vier guten Ergebnissen der zuverlässigste Kandidat. LTX-2 (\$0.36) scheiterte an drei von vier Szenen, primär durch ein technisches Problem: Das Modell erzwingt ein 16:9-Seitenverhältnis und beschneidet Portrait-Inputs.
+Die Ergebnisse zeigen ein klares Muster: Preis korreliert mit Qualität, aber nicht linear. Kling O3 (\$0.84) war mit drei von vier guten Ergebnissen der zuverlässigste Kandidat. LTX-2 (\$0.36) scheiterte an drei von vier Szenen, primär durch ein technisches Problem: Das Modell erzwingt ein 16:9-Seitenverhältnis und beschneidet Portrait-Inputs.
 
-Das auffälligste Phänomen war die **Gesichts-Halluzination bei Portrait-Szenen**. Keplers bewusst gesichtsloser Voxel-Kopf wurde von mehreren Modellen (Wan, Seedance, PixVerse) mit realistischen Gesichtszügen versehen -- ein Problem, das bei der Landscape-Studio-Szene nicht auftrat. Die Modelle sind offenbar auf menschliche Gesichter als Default trainiert und können die bewusste Abwesenheit eines Gesichts nicht beibehalten. Dieses Phänomen spiegelt die Erfahrung aus Experiment 1 wider: Auch ComfyUI halluzinierte Gesichter in Keplers Maske. Hámošová und Rusnák [-@hamosova2023troublinggan] zeigen in ihrem Projekt *TroublingGAN*, dass das Scheitern generativer Modelle ästhetisch produktiv sein kann -- visuelle Ambiguität als bewusstes Gestaltungsmittel statt als Fehler. Keplers Gesichts-Halluzinationen sind ein konkreter Fall dieser Spannung: Was das Modell als Defizit behandelt (die Abwesenheit eines Gesichts), ist für die Künstleridentität konstitutiv.
+Das auffälligste Phänomen war die Gesichts-Halluzination bei Portrait-Szenen. Keplers bewusst gesichtsloser Voxel-Kopf wurde von mehreren Modellen (Wan, Seedance, PixVerse) mit realistischen Gesichtszügen versehen -- ein Problem, das bei der Landscape-Studio-Szene nicht auftrat. Die Modelle sind offenbar auf menschliche Gesichter als Default trainiert und können die bewusste Abwesenheit eines Gesichts nicht beibehalten. Dieses Phänomen spiegelt die Erfahrung aus Experiment 1 wider: Auch ComfyUI halluzinierte Gesichter in Keplers Maske. Hámošová und Rusnák [-@hamosova2023troublinggan] zeigen in ihrem Projekt *TroublingGAN*, dass das Scheitern generativer Modelle ästhetisch produktiv sein kann -- visuelle Ambiguität als bewusstes Gestaltungsmittel statt als Fehler. Keplers Gesichts-Halluzinationen sind ein konkreter Fall dieser Spannung: Was das Modell als Defizit behandelt (die Abwesenheit eines Gesichts), ist für die Künstleridentität konstitutiv.
 
-Überraschend war die **Inkonsistenz innerhalb einzelner Modelle**. Seedance Pro war bei Studio und Pool schlecht bis mittelmäßig, lieferte aber beim Night Drive das überzeugendste Ergebnis aller Modelle -- ein Befund, der gegen simple Rankings spricht. Veo 3.1 scheiterte beim Studio, glänzte aber beim Pool. Kein Modell war durchgehend überlegen; die beste Wahl hing von der Szene ab.
+Überraschend war die Inkonsistenz innerhalb einzelner Modelle. Seedance Pro war bei Studio und Pool schlecht bis mittelmäßig, lieferte aber beim Night Drive das überzeugendste Ergebnis aller Modelle, ein Befund, der gegen simple Rankings spricht. Veo 3.1 scheiterte beim Studio, glänzte aber beim Pool. Kein Modell war durchgehend überlegen; die beste Wahl hing von der Szene ab.
 
 Methodisch war dieses Experiment eine Erweiterung von Experiment 3: dieselbe Pipeline, dasselbe Interview-basierte Evaluationsformat, nun auf Video angewandt. Die Bewertungskriterien -- "Gefällt mir", "Halluzination", "Kommentar" -- erwiesen sich als robust über Medientypen hinweg. Die zentrale Erkenntnis für die Praxis: Video-Generierung mit Kepler ist möglich, aber nur mit den teuersten Modellen zuverlässig. Der kreative Prozess bleibt ein iteratives Auswählen aus einem unvorhersehbaren Möglichkeitsraum.
 
@@ -1194,101 +1027,88 @@ Meine Rolle beschrieb ich in der Reflexion als „neugierige Kuratorin" (Eintrag
 
 Am Anfang stand eine praktische Frage: Kann generative KI die visuelle Konsistenz liefern, die Kepler braucht? Die Antwort: nicht zuverlässig. Bildgenerierungsmodelle scheitern an Keplers Nischen-Ästhetik, halluzinieren Gesichter in seine Maske, driften in Mainstream-Ästhetiken ab. Aber das Scheitern brachte Erkenntnisse. Aus der vergleichenden Analyse der Journal-Einträge und der Reflexion nach dem autoethnografischen Modell [@ellis2011autoethnography] lassen sich vier wiederkehrende Muster identifizieren, die beschreiben, wie KI meinen kreativen Prozess verändert hat. Sie beantworten zugleich die fünf Subfragen, die die strukturierten Reflexionsinterviews geleitet haben.
 
-### 1. Unvorhersehbarer Flow
+### Unvorhersehbarer Flow
 
-Flow entstand dort, wo ich ihn nicht geplant hatte, und blieb aus, wo ich ihn erwartet hatte. Der Website-Build mit Cursor funktionierte überraschend produktiv -- „Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht", notierte ich im Journal (Eintrag 4). Die KI übernahm repetitive Aufgaben, während ich die ästhetische Vision steuerte. Umgekehrt scheiterte die Bildgenerierung für Kepler trotz intensiver Bemühungen: ComfyUI halluzinierte Gesichter in Keplers Maske -- das Modell konnte die Abwesenheit eines Gesichts nicht akzeptieren, ein konkreter Fall des Uncanny Valley. Suno produzierte zu kommerzielle Ergebnisse, weil das Modell auf Mainstream-Ästhetik trainiert ist. Die Erkenntnis: KI-gestützte Kreativität ist nicht planbar. Flow entstand dort, wo die Interaktion tatsächlich "mixed-initiative" [@deterding2017mixed] war — beim Website-Build mit engem Feedback-Loop, in dem beide Seiten beitrugen. Er blieb aus, wo die Interaktion einseitig wurde — bei Suno beschrieb ich, die KI generierte, ohne echte Rückkopplung. Die produktivsten Momente entstanden in Domänen und Konstellationen, die ich vorher nicht als Kernbereich identifiziert hatte.
+Flow entstand dort, wo ich ihn nicht geplant hatte, und blieb aus, wo ich ihn erwartet hatte. Der Website-Build mit Cursor funktionierte überraschend produktiv -- „Oh mein Gott, das war einfach sehr krass! Das hat das Aufsetzen der Website einfach tausendfach schneller gemacht", notierte ich im Journal (Eintrag 4). Die KI übernahm nicht nur repetitive, sondern auch technisch anspruchsvolle Aufgaben, die meine vorhandenen Web-Kenntnisse (HTML, CSS, JavaScript) überstiegen, während ich die ästhetische Vision steuerte. Umgekehrt scheiterte die Bildgenerierung für Kepler trotz intensiver Bemühungen: ComfyUI halluzinierte Gesichter in Keplers Maske. Das Modell konnte die Abwesenheit eines Gesichts nicht akzeptieren, ein konkreter Fall des Uncanny Valley. Suno produzierte zu kommerzielle Ergebnisse, weil das Modell auf Mainstream-Ästhetik trainiert ist. Die Erkenntnis: KI-gestützte Kreativität ist nicht planbar. Flow entstand dort, wo die Interaktion wechselseitig war, beim Website-Build mit engem Feedback-Loop, in dem beide Seiten beitrugen. Er blieb aus, wo die Interaktion einseitig wurde: Bei Suno beschrieb ich, die KI generierte, ohne echte Rückkopplung. Die produktivsten Momente entstanden in Domänen und Konstellationen, die ich vorher nicht als Kernbereich identifiziert hatte.
 
 Experiment 3 und 4 zeigten allerdings eine Gegenbewegung: Der agentische Workflow mit Claude Code und fal.ai stellte Flow gezielt her. „Ich sage der KI einfach: Recherchiere die neuesten Modelle und generiere mir fünf Beispielbilder, und dann habe ich ein Resultat" (Eintrag 8). Der reproduzierbare Workflow war die direkte Antwort auf die Frustration der Einzelversuche.
 
 KI-Tools verschieben den Workflow von linearer Ausführung zu iterativer Navigation: explorativer, weniger planbar, stärker abhängig von der Fähigkeit zu kuratieren statt zu produzieren.
 
-### 2. Speed vs. Control
+### Speed vs. Control
 
-KI beschleunigt und begrenzt den kreativen Prozess zugleich. Exploration und Prototyping werden schneller: beim Website-Build, bei der Generierung von Marble-Welten, im KI-Dialog als Lernwerkzeug. Aber die Kontrolle über ästhetische Details geht verloren. „Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte", reflektierte ich nach dem Suno-Experiment (Eintrag 6). Das Suno-Experiment illustriert das: Das Modell generiert zu jedem Track eine detaillierte Beschreibung -- "bitcrushed chiptune pads over a sparse, detuned synth choir" -- die exakt das trifft, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell. Bodens [-@boden2004creative] Konzept der explorativen Kreativität beschreibt, was hier passiert: Das Modell bewegt sich innerhalb eines Stils und probiert Variationen durch. Im Suno-Experiment — einem Exkurs in die KI-Musikgenerierung, der nicht direkt zur Kepler-Entwicklung gehörte — konnte das Modell den gewünschten Stil sprachlich präzise beschreiben, ihn aber klanglich nicht umsetzen. Es explorierte den Raum der Möglichkeiten auf der Beschreibungsebene, scheiterte aber an der Übersetzung in tatsächlichen Sound. Die Diskrepanz zwischen Beschreibung und Output zeigt den Speed-vs-Control-Tradeoff konkret: Generierung ist schnell, aber Feinsteuerung ist nicht gegeben. Die automatisierte Pipeline aus Experiment 3 illustriert beide Seiten: 24 evaluierbare Bilder entstanden in Minuten, aber Details wie Keplers Cap oder die Cockpit-Perspektive blieben unkontrollierbar.
+KI beschleunigt und begrenzt den kreativen Prozess zugleich. Exploration und Prototyping werden schneller: beim Website-Build, bei der Generierung von Marble-Welten, im KI-Dialog als Lernwerkzeug. Aber die Kontrolle über ästhetische Details geht verloren. „Prompt rein, Ergebnis in Sekunden. Aber genau diese Geschwindigkeit hat auch gezeigt, wie wenig Kontrolle ich über das Ergebnis hatte", reflektierte ich nach dem Suno-Experiment (Eintrag 6). Das Suno-Experiment illustriert das: Das Modell generiert zu jedem Track eine detaillierte Beschreibung -- "bitcrushed chiptune pads over a sparse, detuned synth choir" -- die exakt das trifft, was ich mir vorstellte. Der tatsächliche Sound ging in eine andere Richtung: zu poliert, zu kommerziell. Bodens [-@boden2004creative] Konzept der explorativen Kreativität beschreibt, was hier passiert: Das Modell bewegt sich innerhalb eines Stils und probiert Variationen durch. Im Suno-Experiment — einem Exkurs in die KI-Musikgenerierung, der nicht direkt zur Kepler-Entwicklung gehörte — konnte das Modell den gewünschten Stil sprachlich präzise beschreiben, ihn aber klanglich nicht umsetzen. Es explorierte den Raum der Möglichkeiten auf der Beschreibungsebene, scheiterte aber an der Übersetzung in tatsächlichen Sound. Die Diskrepanz zwischen Beschreibung und Output zeigt den Speed-vs-Control-Tradeoff konkret: Generierung ist schnell, aber Feinsteuerung ist nicht gegeben. Die automatisierte Pipeline aus Experiment 3 illustriert beide Seiten: 134 Bilder in 52 Einzelbewertungen entstanden in Minuten, aber Details wie Keplers Cap oder die Cockpit-Perspektive blieben unkontrollierbar.
 
-Das Tempo selbst wurde dabei zum Problem. „Das Tempo verleitet zur Oberflächlichkeit", reflektierte ich nach dem Website-Build (Eintrag 4). Die KI-Ausgabe war sofort da, und manchmal akzeptierte ich zu schnell, ohne den Code richtig zu verstehen. In Experiment 3 führte eine ungenaue Instruktion dazu, dass das Referenzbild gestretcht statt erweitert wurde. Der Fehler war vermeidbar, kostete aber Geld und Zeit, weil ich zu schnell die Instruktion geben und zu schnell das Ergebnis haben wollte (Eintrag 7).
+Das Tempo selbst wurde dabei zum Problem. „Das Tempo verleitet zur Oberflächlichkeit", reflektierte ich nach dem Website-Build (Eintrag 4). Die KI-Ausgabe war sofort da, und manchmal akzeptierte ich zu schnell, ohne den Code richtig zu verstehen. In Experiment 3 führte eine ungenaue Instruktion dazu, dass die Referenzbilder gestretcht statt erweitert wurden. Der Fehler war vermeidbar, kostete aber Geld und Zeit, weil ich zu schnell die Instruktion geben und zu schnell das Ergebnis haben wollte (Eintrag 7).
 
-Iteration wird in diesem Kontext zur Erkenntnismethode: Jeder gescheiterte Prompt, jede unerwartete Halluzination wurde zum Ausgangspunkt für reflektierte Anpassung -- Schöns [-@schoen1983practitioner] "Situation, die zurückspricht" in digitaler Form. Die Ästhetik entsteht dabei durch die Einschränkungen der KI, nicht trotz ihnen: Die Auseinandersetzung mit Halluzinationen und Mainstream-Drift schärfte das ästhetische Urteil.
+Iteration wird in diesem Kontext zur Erkenntnismethode: Jeder gescheiterte Prompt, jede unerwartete Halluzination wurde zum Ausgangspunkt für reflektierte Anpassung. Die Ästhetik entsteht dabei durch die Einschränkungen der KI, nicht trotz ihnen: Die Auseinandersetzung mit Halluzinationen und Mainstream-Drift schärfte das ästhetische Urteil.
 
-### 3. Verschiebung der Autorschaft
+### Verschiebung der Autorschaft
 
-Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin, ein rein menschlicher Akt. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Bei Marble war ich „einfach nur jemand, der experimentiert und ein Produkt ausprobiert" (Eintrag 3) -- die flachste Autorschaftsrolle im ganzen Projekt. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
+Über die Experimente hinweg verschob sich meine Rolle ständig. Beim Referenzen-Sammeln war ich Kuratorin — eine Tätigkeit, die ganz ohne KI auskam und auf ästhetischem Urteilsvermögen beruhte. Bei ComfyUI war ich Lernende und Experimentierende, orientiert am Workflow einer anderen Person. Bei Marble war ich „einfach nur jemand, der experimentiert und ein Produkt ausprobiert" (Eintrag 3) -- die flachste Autorschaftsrolle im ganzen Projekt. Beim Website-Build war ich Dirigentin: „Ich fühlte mich wie ein Manager mit Gesamtvision, der einen Junior Developer anleitet. Irgendwann wurde es eher Kollaboration, wenn wir zusammen nicht weiterkamen" (Eintrag 4). Bei Suno war ich enttäuschte Kuratorin, die nur auswählen, nicht gestalten konnte. Im KI-Dialog war ich die Fragende.
 
-Die wechselnden Rollen bewegen sich auf einem Spektrum — mal näher am "Mensch als Schöpfer" (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist kein Zufall, sondern eine Qualität des Prozesses. Die wechselnden Rollen sind Ausdruck einer Autorschaft, die sich verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. Domänenwissen erweist sich erneut als Voraussetzung für produktive Kollaboration. Wer nicht weiß, was gut ist, kann nicht kuratieren. In Experiment 3 kam eine weitere Rolle hinzu: die der Orchestratorin, die einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert. Eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
+Die wechselnden Rollen bewegen sich auf einem Spektrum — mal ganz ohne KI (Referenzen sammeln), mal in der Mixed-Initiative-Zone (Website-Build), mal näher am "Computer als Schöpfer" (Suno). Diese Rollenvielfalt ist kein Zufall, sondern eine Qualität des Prozesses. Die wechselnden Rollen sind Ausdruck einer Autorschaft, die sich verschoben hat: nicht mehr alleinige Urheberschaft, nicht vollständige Delegation. In Experiment 3 kam eine weitere Rolle hinzu: die der Orchestratorin, die einen KI-Agenten beauftragt, der seinerseits Bildmodelle steuert. Eine dreistufige Kette, die die Frage nach der Autorschaft weiter verkompliziert.
 
-Im Video-Experiment vertiefte sich die Kuratorinnen-Rolle. Das systematische Bewerten machte Spaß, die Spannung zwischen quantitativen und qualitativen Ergebnissen trieb den Prozess (Eintrag 8). Aber das Reflexionsinterview nach Experiment 3 stellte eine grundlegendere Frage: War die Autorschaft in diesem Projekt jemals ungeteilt? Keplers Grunddesign stammt von Gavin und anderen 3D-Artists. Meine Rolle war von Anfang an die der Modifiziererin, nicht der Schöpferin. „Ich fühle mich nicht wie eine Künstlerin. Macht mir aber nichts aus" (Eintrag 7). Die KI hat die verteilte Autorschaft nicht erzeugt, sondern sichtbar gemacht. Der Kreativprozess begann schon beim Kuratieren der Pinterest-Referenzen mit Gavin: „Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung" (Eintrag 1). Die Rollenverschiebung über die Experimente hinweg verläuft nicht linear. Von der Kuratorin über die Lernende und Dirigentin zur Orchestratorin und schließlich zur „Instruktionsbefolgerin" (Eintrag 7): Welche Rolle ich einnehme, hängt vom Kontext ab, nicht vom Fortschritt.
+Im Video-Experiment vertiefte sich die Kuratorinnen-Rolle. Das systematische Bewerten machte Spaß, die Spannung zwischen quantitativen und qualitativen Ergebnissen trieb den Prozess (Eintrag 8). Aber das Reflexionsinterview nach Experiment 3 stellte eine grundlegendere Frage: War die Autorschaft in diesem Projekt jemals ungeteilt? Keplers Grunddesign stammt von Gavin und anderen 3D-Artists. Meine Rolle war von Anfang an die der Modifiziererin, nicht der Schöpferin. „Ich fühle mich nicht wie eine Künstlerin. Macht mir aber nichts aus" (Eintrag 7). Die KI hat die verteilte Autorschaft nicht erzeugt, sondern sichtbar gemacht. Der Kreativprozess begann schon beim Kuratieren der Pinterest-Referenzen mit Gavin: „Die visuelle Sprache entsteht hier durch Kuration, nicht durch Generierung" (Eintrag 1). Die Rollenverschiebung über die Experimente hinweg verläuft nicht linear. Von der Kuratorin über die Lernende und Dirigentin zur Orchestratorin und schließlich zur „Instruktionsbefolgerin" (Eintrag 7) — gemeint ist die Erfahrung, in Experiment 3 detaillierte technische Anweisungen von Claude Code zu erhalten und sie auszuführen, statt selbst die Richtung vorzugeben. Welche Rolle ich einnehme, hängt vom Kontext ab, nicht vom Fortschritt.
 
-### 4. KI-Burnout und KI-Enthusiasmus
+### KI-Burnout und KI-Enthusiasmus
 
-Die emotionale Dimension der KI-Arbeit war eine Prozessveränderung, die ich nicht erwartet hatte. Es gibt einen Zyklus: Begeisterung, wenn etwas unerwartet gut funktioniert -- der Website-Build, die ersten Marble-Welten, ein Claude-Dialog, der mich wirklich weiterbringt. Und dann Frustration und Erschöpfung, wie nach dem ComfyUI-Experiment: „Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen. [...] Aber es sind halt keine magischen Tools, so wie es sich anfühlt" (Eintrag 2).
+Die emotionale Dimension der KI-Arbeit war eine Prozessveränderung, die ich nicht erwartet hatte. Es gibt einen Zyklus: Begeisterung, wenn etwas unerwartet gut funktioniert -- der Website-Build, ein Claude-Dialog, der mich wirklich weiterbringt. Und dann Frustration und Erschöpfung, wie nach dem ComfyUI-Experiment: „Ich wollte ja genau durch die Verwendung von KI neue Möglichkeiten schaffen, die intuitiv sind und Spaß machen. [...] Aber es sind halt keine magischen Tools, so wie es sich anfühlt" (Eintrag 2).
 
-Dieses Pendeln ist eine reale Belastung im kreativen Prozess. Der ständige Zwang, neue Tools zu evaluieren, Workflows umzubauen, mit Limitierungen zu kämpfen, kostet kreative Energie, die eigentlich in die Kunst fließen sollte. Man muss sich aktiv davor schützen, in diesem Zyklus aufgerieben zu werden. Die Versprechen der Technologie -- schneller, besser, alles möglich -- stehen in Spannung zur Realität einer Praxis, die oft mühsamer ist als die analoge Alternative. Der systematische Pipeline-Ansatz in Experiment 3 wirkte dem entgegen: Sieben strukturierte Phasen mit klaren Evaluationskriterien reduzierten die Frustration gegenüber den Einzelversuchen erheblich. Die Wirkung hielt bis ins Video-Experiment an: „Es hat mir Confidence gegeben, dass KI auch coole, schnelle Ergebnisse liefern kann" (Eintrag 8). Es war „erleichternd und cool, mal interessante Ergebnisse zu kriegen" (Eintrag 7). Der Pipeline-Ansatz war nicht nur methodisch effizient, sondern auch emotional stabilisierend. Der Umgang mit Scheitern ist dabei auch eine psychologische Herausforderung. ComfyUI scheiterte an Keplers Gesicht, Suno an seiner Klangwelt -- beide Erfahrungen schärften das Verständnis dafür, wo die Grenzen aktueller Modelle liegen.
+Dieses Pendeln ist eine reale Belastung im kreativen Prozess. Der ständige Zwang, neue Tools zu evaluieren, Workflows umzubauen, mit Limitierungen zu kämpfen, kostet kreative Energie, die eigentlich in die Kunst fließen sollte. Man muss sich aktiv davor schützen, in diesem Zyklus aufgerieben zu werden. Die Versprechen der Technologie (schneller, besser, alles möglich) stehen in Spannung zur Realität einer Praxis, die oft mühsamer ist als die analoge Alternative. Der systematische Pipeline-Ansatz in Experiment 3 wirkte dem entgegen: Sieben strukturierte Phasen mit klaren Evaluationskriterien reduzierten die Frustration gegenüber den Einzelversuchen erheblich. Die Wirkung hielt bis ins Video-Experiment an: „Es hat mir Confidence gegeben, dass KI auch coole, schnelle Ergebnisse liefern kann" (Eintrag 8). Es war „erleichternd und cool, mal interessante Ergebnisse zu kriegen" (Eintrag 7). Der Pipeline-Ansatz war nicht nur methodisch effizient, sondern auch emotional stabilisierend. Der Umgang mit Scheitern ist dabei auch eine psychologische Herausforderung. ComfyUI scheiterte an Keplers Gesicht, Suno an der gewünschten Klangästhetik -- beide Erfahrungen schärften das Verständnis dafür, wo die Grenzen aktueller Modelle liegen.
 
-Diese vier Veränderungen sind weder linear noch planbar. Sie entstehen im iterativen Prozess und kosten mehr Energie, als die Versprechen der Technologie vermuten lassen.
 
 # Diskussion und Interpretation
 
-## Zusammenfassung der Ergebnisse
-
-Die vorliegende Arbeit ging der Frage nach, wie der Einsatz multimodaler KI-Systeme den kreativen Prozess bei der Entwicklung des virtuellen Alter Egos Kepler verändert. Die Practice-Led Research, dokumentiert über vier Experimente und zwei Exkurse mit unterschiedlichen KI-Tools, identifiziert vier zentrale Prozessveränderungen.
-
-Erstens entsteht *Flow unvorhersehbar*: Der Website-Build gelang produktiv, die Bildgenerierung scheiterte an Keplers Nischen-Ästhetik; Phänomene wie Face Hallucination und Uncanny Valley [@mori2012uncanny] erwiesen sich dabei als konkrete Hindernisse. Zweitens durchzog ein durchgängiger *Speed-vs-Control-Tradeoff*: KI beschleunigt Exploration und Prototyping, aber die Kontrolle über ästhetische Details geht verloren; das Modell "versteht" Nischen sprachlich, kann sie aber medial nicht umsetzen. Drittens hat sich *meine Rolle merklich verschoben*: von der manuell Ausführenden zur Kuratorin und technischen Orchestratorin. Während Domänenwissen für die ästhetische Bewertung unerlässlich blieb, erzwang die Praxis paradoxerweise den vorübergehenden Wechsel in die Rolle der Software-Ingenieurin; um die Werkzeuge überhaupt auf die eigenen Nischen-Bedürfnisse zuschneiden zu können, wurde ein hohes Maß an technischer KI- und Automatisierungs-Kompetenz unumgänglich. Viertens erweist sich der *emotionale Zyklus zwischen KI-Enthusiasmus und KI-Burnout* als eigenständige Prozessveränderung: Der ständige Zwang, neue Tools zu evaluieren und mit Limitierungen zu kämpfen, kostet kreative Energie.
-
-Die vier Beobachtungen verbindet ein Prinzip: Die produktivsten Momente entstanden dort, wo Intention und KI-Eigenlogik in Spannung zueinander traten, nicht wo sie sich deckten. Experiment 3 belegt zudem die Skalierbarkeit des Ansatzes: Eine automatisierte Pipeline kann den explorativen Raum systematisch abstecken, ohne dass die zentrale Spannung zwischen Kontrolle und Generierung aufgelöst wird.
+Die produktivsten Momente entstanden dort, wo Intention und die Logik der Modelle in Spannung zueinander traten, nicht wo sie sich deckten.
 
 ## Theoretische Implikationen
 
-Bestehende Kreativitätstheorien müssen im Kontext der Mensch-KI-Kollaboration neu betrachtet werden. Bodens [-@boden2004creative] Unterscheidung zwischen explorativer und transformativer Kreativität erweist sich hier als nützlich. In meiner Praxis übernahm die KI durchgehend die explorative Rolle: Sie generierte Variationen, probierte Stile durch, lieferte schnell viele Optionen. Aber die Entscheidung, *welche* Option weiterverfolgt wird, welche Richtung stimmt und wann ein Ergebnis die bisherigen Grenzen sprengt — das lag bei mir. Transformative Kreativität ging in keinem der Experimente von den Modellen aus. Sie lag bei meinen Entscheidungen als Künstlerin. Die KI liefert Möglichkeiten; der Mensch entscheidet, welche davon neu ist. Der unvorhersehbare Flow folgt aus dieser Asymmetrie: Die KI exploriert schnell, aber ob das Ergebnis wirklich etwas verändert, erfordert menschliches Urteil.
+Bestehende Kreativitätstheorien lassen sich im Kontext der Mensch-KI-Kollaboration produktiv anwenden und differenzieren. Bodens [-@boden2004creative] Unterscheidung zwischen explorativer und transformativer Kreativität erweist sich hier als nützlich. In meiner Praxis übernahm die KI durchgehend die explorative Rolle: Sie generierte Variationen, probierte Stile durch, lieferte schnell viele Optionen. Aber die Entscheidung, *welche* Option weiterverfolgt wird, welche Richtung stimmt und wann ein Ergebnis die bisherigen Grenzen sprengt, das lag bei mir. Transformative Impulse gingen in keinem der Experimente von den Modellen aus. Sie lagen bei meinen Entscheidungen. Die KI liefert Möglichkeiten; der Mensch entscheidet, welche davon neu ist. Der unvorhersehbare Flow folgt aus dieser Asymmetrie: Die KI exploriert schnell, aber ob das Ergebnis wirklich etwas verändert, erfordert menschliches Urteil.
 
-Galanters [-@galanter2003generative] Perspektive ergänzt diesen Befund: Generative Kunst ist als Methode zu verstehen, relevant ist das *Wie* der Produktion. Der Speed-vs-Control-Tradeoff lässt sich als Navigation auf seiner Ordnung-Chaos-Skala beschreiben: KI-Tools beschleunigen die Exploration des konzeptuellen Raums, aber die Kontrolle über die Zone effektiver Komplexität bleibt beim Menschen. Was Borgdorff [-@borgdorff2012conflict] über künstlerische Forschung generell argumentiert, bestätigt sich hier konkret: Mein Vorwissen über Keplers Ästhetik (die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem) ließ sich als Prompt-Anweisung an KI-Systeme nur begrenzt übertragen. Ohne Domänenwissen produziert die Kollaboration generische Ergebnisse — Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
+Galanters [-@galanter2003generative] Perspektive ergänzt diesen Befund: Generative Kunst ist als Methode zu verstehen, relevant ist das *Wie* der Produktion. Der Speed-vs-Control-Tradeoff lässt sich als Navigation auf seiner Ordnung-Chaos-Skala beschreiben: KI-Tools beschleunigen die Exploration des konzeptuellen Raums, aber die Kontrolle über die Zone effektiver Komplexität bleibt beim Menschen. Was Borgdorff [-@borgdorff2012conflict] über künstlerische Forschung argumentiert, bestätigt sich hier: Mein Vorwissen über Keplers Ästhetik (die dystopische Klangwelt, die voxelisierte Maskierung, die Spannung zwischen Lo-Fi und Hyperdigitalem) ließ sich als Prompt-Anweisung an KI-Systeme nur begrenzt übertragen. Ohne Domänenwissen produziert die Kollaboration generische Ergebnisse. Dieses Wissen zeigte sich erst *im* iterativen Prozess, nicht vor ihm.
 
 Dieser iterative Prozess folgt dem, was Schön [-@schoen1983practitioner] Reflection-in-Action nennt: das spontane Reagieren auf unerwartete Situationen in der Praxis. Das Scheitern eines Prompts war Auslöser für reflektierte Anpassung. Bei Schön spricht physisches Material zurück: Ton, der reißt, Farbe, die verläuft. In der KI-Kollaboration antwortet ein probabilistisches System mit eigener Logik. Der emotionale Zyklus zwischen Enthusiasmus und Burnout lässt sich als Konsequenz dieser permanenten Reflection-in-Action lesen: Die Situation spricht ständig zurück, und das kostet Kraft.
 
-Deterding et al. [-@deterding2017mixed] fragen, wie Mixed-Initiative Creative Interfaces "upskilling without deskilling" ermöglichen können. Diese Frage trifft meine vierte Beobachtung: Der KI-Burnout-Zyklus ist möglicherweise ein Symptom dafür, dass aktuelle KI-Tools die Mixed-Initiative-Balance noch nicht gefunden haben — sie sind entweder zu autonom -- Suno bietet keine Eingriffsmöglichkeit -- oder zu abhängig von Expertenwissen -- ComfyUI setzt hohe technische Hürden. Die produktivsten Momente meiner Forschung entstanden dort, wo die Balance gelang: beim Website-Build, wo die KI repetitive Aufgaben übernahm und ich die ästhetische Vision steuerte. Der KI-Dialog als Lernpartner zeigte eine verwandte Problematik: Die Fluency Illusion, das Gefühl tiefen Verstehens durch flüssige KI-Erklärungen, ist ein Risiko, das beim Einsatz von KI als Wissensvermittler berücksichtigt werden muss. Die Grenze zwischen deklarativem und prozeduralem Wissen bleibt bestehen, unabhängig davon, wie überzeugend die KI erklärt.
+Deterding et al. [-@deterding2017mixed] fragen, wie Mixed-Initiative Creative Interfaces "upskilling without deskilling" ermöglichen können. Diese Frage trifft meine vierte Beobachtung: Der KI-Burnout-Zyklus ist möglicherweise ein Symptom dafür, dass aktuelle KI-Tools die Mixed-Initiative-Balance noch nicht gefunden haben. Sie sind entweder zu autonom (Suno bietet keine Eingriffsmöglichkeit) oder zu abhängig von Expertenwissen (ComfyUI setzt hohe technische Hürden). Die produktivsten Momente meiner Forschung entstanden dort, wo die Balance gelang: beim Website-Build, wo die KI nicht nur repetitive, sondern auch technisch anspruchsvolle Aufgaben übernahm und ich die ästhetische Vision steuerte.
 
-Die Erfahrungen vergleichbarer Projekte bestätigen und differenzieren diese Befunde. Monin und Sadokierski [-@monin2025prompting] zeigen, dass Prompting als „Thinking-With" funktioniert — eine Beobachtung, die sich in meiner Praxis bestätigt: Die produktivsten Prompts waren nicht präzise Instruktionen, sondern exploratives Denken mit der Maschine (vgl. Experiment 2). Torres Núñez del Prado [-@torresnunez2025encoding] argumentiert, dass Trainingsdaten-Kuration strukturell einer Kanonbildung gleicht — was erklärt, warum Keplers Nischen-Ästhetik systematisch in Richtung Mainstream gezogen wird: Die Modelle reproduzieren den ästhetischen Kanon, auf dem sie trainiert wurden. Hámošová und Rusnák [-@hamosova2023troublinggan] zeigen, dass KI-Scheitern ästhetisch produktiv sein kann — eine Perspektive, die sich in meiner Erfahrung mit Gesichts-Halluzinationen spiegelt: Was das Modell als Defizit behandelt (die Abwesenheit eines Gesichts), ist für Keplers Identität konstitutiv.
+Die Erfahrungen vergleichbarer Projekte bestätigen und differenzieren diese Befunde. Monin und Sadokierski [-@monin2025prompting] zeigen, dass Prompting als „Thinking-With" funktioniert, und in meiner Praxis bestätigt sich das: Die produktivsten Prompts waren nicht präzise Instruktionen, sondern exploratives Denken mit der Maschine (vgl. Experiment 2). Dass Keplers Nischen-Ästhetik systematisch in Richtung Mainstream gezogen wird, erklärt Torres Núñez del Prado [-@torresnunez2025encoding] strukturell: Trainingsdaten-Kuration gleicht einer Kanonbildung, und die Modelle reproduzieren den ästhetischen Kanon, auf dem sie trainiert wurden. Hámošová und Rusnák [-@hamosova2023troublinggan] zeigen, dass KI-Scheitern ästhetisch produktiv sein kann. In meinem Fall stößt diese Perspektive allerdings an ihre Grenzen. Hámošová kann als Künstlerin die visuellen Artefakte des GAN-Scheiterns bewusst als ästhetisches Element einsetzen. In meiner Praxis war das Gesichts-Halluzinieren schlicht ein Hindernis: Kepler braucht eine intakte Maske, und ein halluziniertes Gesicht zerstört seine Identität. Dieses Scheitern als Feature umzudeuten war keine Option, es musste funktionieren.
 
 ## Praktische Implikationen
 
-Für Künstler\*innen und Medienproduzent\*innen, die generative KI in ihre Praxis integrieren wollen, ergeben sich aus dieser Arbeit konkrete Erkenntnisse. Die wichtigste: Domänenwissen ist keine optionale Zugabe, sondern Voraussetzung für ästhetisch relevante Ergebnisse. Wer ohne klare ästhetische Vision promptet, erhält den kleinsten gemeinsamen Nenner, die Mainstream-Ästhetik, auf die Generalist-Modelle trainiert sind. Technisch lässt sich das als Overfitting beschreiben: Die Modelle haben so viele Mainstream-Beispiele gesehen, dass sie diesen Durchschnitt reproduzieren. Nischen-Ästhetiken, für die es weniger Trainingsdaten gibt, werden entweder in Richtung Mainstream gezogen oder scheitern ganz — ein Underfitting auf die spezifische ästhetische Domäne. Keplers Nischen-Ästhetik ließ sich nur dort realisieren, wo ich spezifisches Vokabular, präzise Referenzen und ein geschultes Urteilsvermögen einbrachte.
+Für Künstler\*innen und Medienproduzent\*innen, die generative KI in ihre Praxis integrieren wollen, ergeben sich aus dieser Arbeit konkrete Erkenntnisse. Für ästhetisch spezifische Ergebnisse jenseits des Mainstream ist Domänenwissen Voraussetzung. Wer ohne klare ästhetische Vision promptet, erhält den kleinsten gemeinsamen Nenner: die Mainstream-Ästhetik, auf die Generalist-Modelle trainiert sind. Die Modelle zeigen eine Regression zur ästhetischen Mitte der Trainingsdaten. Nischen-Ästhetiken, für die es weniger Trainingsdaten gibt, werden entweder in Richtung Mainstream gezogen oder scheitern ganz. Keplers Nischen-Ästhetik ließ sich nur dort realisieren, wo ich spezifisches Vokabular, präzise Referenzen und ein geschultes Urteilsvermögen einbrachte.
 
-Ein durchgängiger Speed-versus-Control-Trade-off zeigte sich ebenfalls: KI-Tools beschleunigen die Produktion erheblich, reduzieren aber gleichzeitig die Kontrolle über ästhetische Details. KI-Werkzeuge eignen sich für Ideation, Prototyping und Exploration, aber die finale ästhetische Entscheidung muss bei der Künstlerin verbleiben. Die Rolle verschiebt sich von der Ausführenden zur Kuratorin.
+KI-Werkzeuge eignen sich für Ideation, Prototyping und Exploration, aber die finale ästhetische Entscheidung verbleibt beim Menschen. Ein pragmatischer Ansatz zur Bewältigung dieses Speed-vs-Control-Tradeoffs erwies sich als die Kombination aus Claude Code als Orchestrator und der fal.ai API als Modell-Backend: ein reproduzierbarer Workflow für systematisches Modell-Screening, der den explorativen Raum effizient absteckt und zugleich die Frustration der Einzelversuche reduziert.
 
 ## Stärken und Limitierungen
 
-### Stärken
+Der Practice-Led Ansatz mit autoethnografischem Journaling hat erlaubt, den Prozess in einer Tiefe festzuhalten, die von außen nicht möglich wäre. Dass alles auf der Website öffentlich liegt (auch die Fehlversuche), macht die Ergebnisse nachprüfbar. Die multimodale Perspektive (Bild, Audio, Code, Text) bildet die Komplexität zeitgenössischer Medienproduktion ab, anstatt sie auf ein einzelnes Medium zu reduzieren.
 
-Der practice-led Ansatz mit autoethnografischem Journaling hat erlaubt, den Prozess in einer Tiefe festzuhalten, die von außen nicht möglich wäre. Dass alles auf der Website öffentlich liegt -- auch die Fehlversuche -- macht die Ergebnisse nachprüfbar. Die multimodale Perspektive -- Bild, Audio, Code, Text -- bildet die Komplexität zeitgenössischer Medienproduktion ab, anstatt sie auf ein einzelnes Medium zu reduzieren.
-
-### Limitierungen
-
-Als autoethnografische Einzelfallstudie ist die Generalisierbarkeit der Ergebnisse eingeschränkt. Was für meine spezifische Praxis mit Kepler gilt, muss für andere künstlerische Kontexte nicht zutreffen. Die subjektive Perspektive, die in der Artistic Research als Stärke gilt [@ellis2011autoethnography], bleibt in anderen Forschungsparadigmen eine methodische Schwäche. Die Tools, mit denen ich gearbeitet habe, werden sich schneller weiterentwickeln als akademische Publikationszyklen erlauben. Die Ergebnisse beschreiben den Stand einer Technologie in Bewegung. Schließlich: Der Schreibprozess dieser Arbeit selbst wurde durch KI-Assistenz unterstützt -- eine Verschränkung, die ich als konsequente Fortsetzung meiner Methodik verstehe, die aber offengelegt werden muss.
+Als autoethnografische Einzelfallstudie ist die Generalisierbarkeit der Ergebnisse eingeschränkt. Was für meine spezifische Praxis mit Kepler gilt, muss für andere künstlerische Kontexte nicht zutreffen. Die subjektive Perspektive, die in der Artistic Research als Stärke gilt [@ellis2011autoethnography], bleibt in anderen Forschungsparadigmen eine methodische Schwäche. Die Tools, mit denen ich gearbeitet habe, werden sich schneller weiterentwickeln als akademische Publikationszyklen erlauben. Die Ergebnisse beschreiben den Stand einer Technologie in Bewegung. Schließlich: Der Schreibprozess dieser Arbeit selbst wurde durch KI-Assistenz unterstützt, eine Verschränkung, die ich als konsequente Fortsetzung meiner Methodik verstehe, die aber offengelegt werden muss.
 
 ### Practice-Based Intention, Practice-Led Realität
 
-Ein ehrlicher Rückblick muss eine Verschiebung benennen, die sich erst im Laufe der Arbeit zeigte. Zu Beginn war das Projekt als practice-based intendiert: Die Artefakte -- Keplers generierte Bilder, die Website, die Musik -- sollten selbst Teil des Forschungsergebnisses sein. Candy [-@candy2006practice] unterscheidet die beiden Ansätze entlang einer zentralen Frage: Liegt der neue Wissensbeitrag *in* den Artefakten oder *über* die Praxis? In einer practice-based Arbeit verkörpert das Kunstwerk selbst neues Wissen, das sich nicht vollständig in Textform übersetzen lässt. In einer practice-led Arbeit generiert die Praxis Erkenntnisse, die sich als propositionales Wissen formulieren lassen. Im Verlauf hat sich meine Arbeit als practice-led erwiesen -- aus drei Gründen.
+Ein ehrlicher Rückblick muss eine Verschiebung benennen, die sich erst im Laufe der Arbeit zeigte. Zu Beginn war das Projekt als practice-based intendiert: Die Artefakte (Keplers generierte Bilder, die Website, die Musik) sollten selbst Teil des Forschungsergebnisses sein. Candy [-@candy2006practice] unterscheidet die beiden Ansätze entlang einer zentralen Frage: Liegt der neue Wissensbeitrag *in* den Artefakten oder *über* die Praxis? In einer practice-based Arbeit verkörpert das Kunstwerk selbst neues Wissen, das sich nicht vollständig in Textform übersetzen lässt. In einer practice-led Arbeit generiert die Praxis Erkenntnisse, die sich als propositionales Wissen formulieren lassen. Im Verlauf hat sich meine Arbeit als practice-led erwiesen -- aus drei Gründen.
 
-Der erste betrifft die Wissensform. Die vier Beobachtungen über Prozessveränderungen -- unvorhersehbarer Flow, Speed-vs-Control-Tradeoff, Rollenverschiebung zur Kuratorin, Burnout-Zyklus -- lassen sich vollständig in Textform vermitteln. Die generierten Bilder und Clips dienen als Belege für diese Erkenntnisse, nicht als eigenständige Wissensträger. In einer practice-based Arbeit müssten die Artefakte selbst etwas zeigen, das der Text nicht kann. Hier ist es umgekehrt: Der Text erklärt, was die Artefakte allein nicht sichtbar machen -- nämlich die Prozessveränderungen, die zu ihnen geführt haben.
+Erstens die Wissensform: Die vier Beobachtungen über Prozessveränderungen (unvorhersehbarer Flow, Speed-vs-Control-Tradeoff, Rollenverschiebung zur Kuratorin, Burnout-Zyklus) lassen sich vollständig in Textform vermitteln. Die generierten Bilder und Clips dienen als Belege für diese Erkenntnisse, nicht als eigenständige Wissensträger. In einer practice-based Arbeit müssten die Artefakte selbst etwas zeigen, das der Text nicht kann. Hier ist es umgekehrt: Der Text erklärt, was die Artefakte allein nicht sichtbar machen -- nämlich die Prozessveränderungen, die zu ihnen geführt haben.
 
-Der zweite betrifft die Fragestellung. "Wie verändert der Einsatz multimodaler KI-Systeme den kreativen Prozess?" fragt nach dem *Wie* der Veränderung, nicht nach dem *Was* des Ergebnisses. Eine practice-based Arbeit hätte eine andere Frage gebraucht -- etwa: "Welche neuen ästhetischen Formen entstehen durch die Kollaboration mit KI?" Meine Frage zielt auf Prozesswissen, und Prozesswissen ist propositional: Es lässt sich benennen, strukturieren, diskutieren. Die Methode folgt der Frage, nicht umgekehrt.
+Hinzu kommt die Fragestellung. "Wie verändert der Einsatz multimodaler KI-Systeme den kreativen Prozess?" fragt nach dem *Wie* der Veränderung, nicht nach dem *Was* des Ergebnisses. Eine practice-based Arbeit hätte eine andere Frage gebraucht -- etwa: "Welche neuen ästhetischen Formen entstehen durch die Kollaboration mit KI?" Meine Frage zielt auf Prozesswissen, und Prozesswissen ist propositional: Es lässt sich benennen, strukturieren, diskutieren. Die Methode folgt der Frage, nicht umgekehrt.
 
-Der dritte betrifft die Artefakte selbst. Die KI-generierten Bilder fühlen sich wie Zwischenergebnisse an -- ästhetisch teils interessant, aber nicht "meine Kunst". Wenn ich die Artefakte selbst nicht als eigenständige Werke betrachte, in denen sich unausgesprochenes Wissen verkörpert, fehlt die Grundlage für eine practice-based Einordnung. Paradoxerweise war die Website das Artefakt mit dem meisten Flow. Obwohl als Dokumentationstool konzipiert, wurde sie zum vielleicht künstlerischsten Element des Projekts. Aber auch hier liegt der Erkenntnisbeitrag in der Beobachtung, *dass* ausgerechnet das Dokumentationstool zum kreativsten Moment wurde. Die Erkenntnis ist über den Prozess, nicht im Artefakt.
+Schließlich die Artefakte selbst: Die KI-generierten Bilder fühlen sich wie Zwischenergebnisse an, ästhetisch teils interessant, aber nicht "meine Kunst". Wenn ich die Artefakte selbst nicht als eigenständige Werke betrachte, in denen sich unausgesprochenes Wissen verkörpert, fehlt die Grundlage für eine practice-based Einordnung. Paradoxerweise war die Website das Artefakt mit dem meisten Flow. Obwohl als Dokumentationstool konzipiert, wurde sie zum vielleicht künstlerischsten Element des Projekts. Aber auch hier liegt der Erkenntnisbeitrag in der Beobachtung, *dass* ausgerechnet das Dokumentationstool zum kreativsten Moment wurde. Die Erkenntnis ist über den Prozess, nicht im Artefakt.
 
 Diese Verschiebung von practice-based zu practice-led ist kein Scheitern der ursprünglichen Intention, sondern selbst ein Ergebnis der Forschung. Sie spiegelt das Spannungsfeld, in dem sich viele Kreative befinden, die zum ersten Mal mit generativer KI arbeiten: Die Unsicherheit, ob das hier Kunst oder Technikerprobung ist, lässt sich nicht vorab klären. Sie zeigt sich erst im Prozess.
 
-Nebenbei entstand ein wiederverwendbarer Workflow: Die Kombination aus Claude Code als Orchestrator und der fal.ai API als Modell-Backend erwies sich als reproduzierbare Methode für systematisches Modell-Screening. Dieser methodische Beitrag war nicht geplant, entspricht aber dem Charakter von Practice-Led Research [@candy2006practice]: Die Praxis generiert Erkenntnisse, die über das einzelne Projekt hinaus nutzbar sind — in diesem Fall einen reproduzierbaren Workflow für systematisches Modell-Screening.
-
 ### Abschließende autoethnografische Synthese: Die Maschine als Werkbank
 
-Die Automatisierung des Prozesses hat mich der Figur Kepler weder nähergebracht noch weiter von ihr entfremdet. Da das grundlegende 3D-Design nicht meine alleinige Kreation ist, betrachte ich die massenhaft generierten Bilder nicht als emotional aufgeladenes Endprodukt, sondern als hart erarbeitetes Fundament. Der monatelange Prozess war letztlich der Prolog: Erst jetzt, da die Pipeline steht und die Grenzen der Modelle verstanden sind, kann die eigentliche Arbeit beginnen. Die nächsten Schritte führen zurück zu mehr Kontrolle – sei es das Extrahieren spezifischer Stile aus unseren Pinterest-Boards, die gezielte Steuerung durch ControlNet oder das Erstellen von groben Blockouts in einer Game Engine, meiner eigentlichen technologischen Heimat.
+Die Automatisierung des Prozesses hat mich der Figur Kepler weder nähergebracht noch weiter von ihr entfremdet. Da das grundlegende 3D-Design nicht meine alleinige Kreation ist, betrachte ich die massenhaft generierten Bilder nicht als emotional aufgeladenes Endprodukt, sondern als erarbeitetes Fundament. Der Prozess war letztlich der Prolog: Erst jetzt, da die Pipeline steht und die Grenzen der Modelle verstanden sind, kann die eigentliche Arbeit beginnen. Die nächsten Schritte führen zurück zu mehr Kontrolle – sei es das Extrahieren spezifischer Stile aus unseren Pinterest-Boards, die gezielte Steuerung durch ControlNet oder das Erstellen von groben Blockouts in einer Game Engine, meiner eigentlichen technologischen Heimat.
 
-Der im Prozess identifizierte emotionale Zyklus aus KI-Burnout und Erschöpfung hat sich durch den automatisierten Workflow vorerst wieder in Richtung KI-Enthusiasmus und Neugier verschoben. Diese ständige Oszillation scheint der Normalzustand in der Arbeit mit einer Technologie zu sein, die nie stillsteht. Als jemand mit starkem technischen Hintergrund fühle ich mich in diesem experimentellen Raum wohl. Doch diese Autoethnografie zeigt auch deutlich: Für Medienschaffende, die nicht bereit sind, sich tief in Code, API-Dokumentationen und technische Frustrationstoleranz einzuarbeiten, bleibt die vermeintliche 'Everything Machine' vorerst ein starres Werkzeug, das den kreativen Prozess eher diktiert als befreit.
+Der im Prozess identifizierte emotionale Zyklus aus KI-Burnout und Erschöpfung hat sich durch den automatisierten Workflow vorerst wieder in Richtung KI-Enthusiasmus und Neugier verschoben. Diese ständige Oszillation scheint der Normalzustand in der Arbeit mit einer Technologie zu sein, die nie stillsteht. Als jemand mit starkem technischen Hintergrund fühle ich mich in diesem experimentellen Raum wohl. Doch diese Autoethnografie zeigt auch deutlich: Für Medienschaffende, die nicht bereit sind, sich tief in Code, API-Dokumentationen und technische Frustrationstoleranz einzuarbeiten, bleibt die vermeintliche 'Everything Machine' für Nischen-Ästhetiken vorerst ein starres Werkzeug, das den kreativen Prozess eher diktiert als befreit.
 
 ## Ausblick
 
 Die Arbeit wirft Fragen auf, die über ihren Rahmen hinausgehen. Wie verändert sich die Kollaboration, wenn KI-Modelle präziser und kontrollierbarer werden? Wird der Speed-vs-Control-Tradeoff sich auflösen, wenn Modelle Nischen-Ästhetiken besser umsetzen können? Und vor allem: Wie nachhaltig ist kreatives Arbeiten mit KI, wenn der Burnout-Zyklus anhält, wenn Tools sich schneller ändern als man sie lernen kann?
 
-Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. Das Alter Ego existiert nun in einem dokumentierten Prozessraum, der weiter bespielt werden kann, mit zukünftigen Tools, in anderen Medien, mit neuen Kollaborationsmodellen. Die Forschungsfrage bleibt dabei offen, weil die Technologie, auf die sie sich bezieht, selbst in Bewegung ist. Artistic Research, die sich mit generativer KI beschäftigt, muss diesen Zustand der Vorläufigkeit als methodische Grundbedingung akzeptieren.
+Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. Das Alter Ego existiert nun in einem dokumentierten Prozessraum, der weiter bespielt werden kann, mit zukünftigen Tools, in anderen Medien, mit neuen Kollaborationsmodellen. Die Forschungsfrage bleibt dabei offen, weil die Technologie, auf die sie sich bezieht, selbst in Bewegung ist. Artistic Research, die sich mit generativer KI beschäftigt, wird diesen Zustand der Vorläufigkeit als methodische Grundbedingung berücksichtigen müssen.
 
 ```{=latex}
 \clearpage
@@ -1299,9 +1119,16 @@ Für Kepler als Projekt sehe ich die Arbeit als Fundament, nicht als Abschluss. 
 ::: {#refs}
 :::
 
+```{=latex}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+```
+
 \newpage
 
-# Autoethnographische Interviews
+# Anhang A – Autoethnographische Interviews
 
 Die folgenden Interviews wurden als autoethnographische Methode begleitend zu jedem Experiment durchgeführt. In einem strukturierten Dialog stellte Claude fünf standardisierte Fragen zu den Forschungsdimensionen Workflow, Autorschaft, Iteration, Scheitern und Ästhetik, gefolgt von einer kontextspezifischen Synthesefrage. Die Interviews fanden unmittelbar nach jeder Session statt und wurden per Spracheingabe aufgezeichnet. Die vollständigen Journal-Einträge sind im \href{https://jenniferied.github.io/everything-machine/\#logbook}{Prozess-Logbuch} auf der Website einsehbar.
 
@@ -1875,9 +1702,219 @@ Ich bin gar nicht die Schöpferin von Kepler --- ich setze seine Vision um. Sein
 
 ```{=latex}
 \clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\listoffigures
+```
+
+# Anhang B – Promptverzeichnis (Experiment 3: Automatisierte Bildpipeline)
+
+Die folgende Übersicht dokumentiert alle in der Pipeline verwendeten Prompts, gruppiert nach Phase. Ab Phase 3b wurden für GPT-Image-1.5 und Nano Banana Pro unterschiedliche Prompt-Varianten verwendet: GPT erhielt strukturierte Prompts (Background/Center/Details/Constraints), Nano Banana natürlichsprachliche. Hier ist jeweils die Nano Banana-Variante dokumentiert; die GPT-Variante beschrieb dieselbe Szene in strukturierter Form.
+
+```{=latex}
+\vspace{6pt}
+{\scriptsize
+
+\textbf{Phase 1 -- Modell-Screening} (alle Modelle, identischer Prompt)\\[2pt]
+\textit{Base:} ``A voxel character made of small 3D cubes, faceless geometric humanoid figure, white shirt and dark pants, standing in a dramatic cinematic environment, volumetric lighting, no face, blocky pixel art style 3D character''\\
+\textit{+ Szenen:} ``...in a neon-lit cyberpunk city at night'' / ``...in a foggy forest with golden light rays'' / ``...on a concert stage with dramatic spotlights''
+
+\vspace{8pt}
+
+\textbf{Phase 2 -- Top-Modelle in Szenen} (alle Modelle, identischer Prompt)\\[2pt]
+\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down the street with hands in pockets, cinematic lighting''\\
+\textit{Forest:} ``...in a foggy forest clearing, sitting on a fallen tree, golden light rays filtering through the canopy''\\
+\textit{Concert:} ``...on a concert stage, performing with arms raised, dramatic spotlights and fog machine effects''
+
+\vspace{8pt}
+
+\textbf{Phase 2b -- Posed-Input-Test} (5 Szenen, identischer Prompt)\\[2pt]
+\textit{Cyberpunk:} ``Place this voxel character in a neon-lit cyberpunk city at night, walking down a rain-soaked street with hands in pockets, cinematic lighting, reflections on wet ground''\\
+\textit{Park:} ``...sitting on a park bench in autumn, golden leaves falling around him, soft warm afternoon light''\\
+\textit{Concert:} ``...on a dark concert stage, performing with a microphone, dramatic red and blue spotlights, fog machine, crowd silhouettes''\\
+\textit{Rooftop:} ``...standing on a rooftop at sunset, looking over a vast city skyline, wind blowing, golden hour lighting''\\
+\textit{Studio:} ``...in a recording studio, sitting at a mixing desk with headphones around neck, warm ambient lighting, monitors glowing''
+
+\vspace{8pt}
+
+\textbf{Phase 3a -- Signature Scenes v1} (GPT + Nano Banana, identischer Prompt)\\[2pt]
+\textit{Studio:} ``Place this voxel character in a professional recording studio, sitting at a large mixing console with both hands on the faders, studio monitors glowing, headphones on, warm amber lighting [...]''\\
+\textit{Retro Car:} ``...driving a vintage 1970s convertible car across a long suspension bridge at night, city lights reflecting on the water below [...]''\\
+\textit{Spiral Staircase:} ``...walking up an endless spiral staircase that extends infinitely into the sky, passing through layers of clouds and stars, surreal dreamlike atmosphere, the staircase is white marble [...]''\\
+\textit{Pool Floaty:} ``...lying on a pink flamingo pool float in a turquoise swimming pool, seen from directly above as a top-down bird's eye view [...]''
+
+\vspace{8pt}
+
+\textbf{Phase 3b -- Fixed Scenes} (separate GPT/NB-Prompts, hier NB)\\[2pt]
+\textit{Studio:} ``Show this voxel character in a cozy recording studio. He's sitting at a big mixing desk with his hands on the faders, wearing headphones. Warm amber lighting [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Tokyo Rain:} ``This voxel character is walking through a rainy Tokyo alley at night. Neon signs everywhere in Japanese, steam rising from street vents [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase:} ``...walks up an endless spiral staircase made of white marble, floating through deep space. Stars and galaxies surround the staircase [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Pool Floaty:} ``Top-down bird's eye view of a turquoise swimming pool. This voxel character is lying on an inflatable pool ring (donut shape with a hole in the middle) [...] IMPORTANT: The character must remain completely faceless [...]''
+
+\vspace{8pt}
+
+\textbf{Phase 3c -- Final Scenes} (hier NB-Variante)\\[2pt]
+\textit{Studio:} wie Phase 3b\\
+\textit{Night Drive} (neu, ersetzt Tokyo): ``This voxel character is driving a vintage 1970s convertible down a long empty road at night. A big full moon and stars fill the dark sky [...] IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase} (update): ``...walks up an endless spiral staircase [...] The staircase is built from the same voxel cubes as the character --- blocky geometric steps that glow with soft blue light. [...] NOT marble, NOT stone.''\\
+\textit{Pool Floaty:} wie Phase 3b, erweitert um Poolside-Details (Liegen, Cocktails, Pflanzen)
+
+\vspace{8pt}
+
+\textbf{Phase 3d -- Refined + A-Pose-Vergleich} (hier NB-Variante)\\[2pt]
+\textit{Night Drive} (refined): ``This voxel character is cruising down a night road in a sleek retro 1980s sports car with pop-up headlights. Behind him a glowing city skyline fades into the distance. Ahead, dark mountains rise on the horizon. [...] Retro synthwave vibes with teal and magenta tones. IMPORTANT: The character must remain completely faceless [...]''\\
+\textit{Spiral Staircase} (refined): ``...walks up an endless spiral staircase floating through a dreamy cloudy sky. The sky is soft pastel blue and lavender with layered clouds [...] NOT intense galaxies, just a calm dreamy twilight atmosphere. [...] blocky geometric steps that glow with soft blue neon light. [...]''\\
+\textit{Pool Floaty} (enriched): ``Top-down bird's eye view of a turquoise swimming pool at a luxurious summer resort. [...] Around the pool edge: white sun loungers, a small table with a cocktail and sunscreen, tropical potted plants, neatly folded towels, flip-flops on the tiles. [...]''
+
+}
+```
+
+```{=latex}
+\clearpage
+```
+
+# Anhang C – Gesamtbewertung Bildpipeline (Experiment 3)
+
+```{=latex}
+{\footnotesize
+\begin{xltabular}{\textwidth}{l l l l l l >{\centering\arraybackslash}X}
+\toprule
+\textbf{Nr.} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Nr.} & \textbf{Modell} & \textbf{Input} & \textbf{Format} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+01 & MiniMax & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Minecraft-Stil, Gesichtszüge \\
+02 & Z-Image & a-pose & sq. & bedingt & \textcolor{evalgreen}{nein} & A-Pose erhalten, clean \\
+03 & FLUX Depth & a-pose & sq. & \textcolor{evalred}{nein} & -- & Körper humanoid geglättet \\
+04 & FLUX Canny & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
+05 & Era3D & a-pose & sq. & \textcolor{evalred}{nein} & -- & Nutzlos, eigene Renders besser \\
+\midrule
+06 & FLUX Kontext & a-pose & sq. & bedingt & -- & Wird besser \\
+07 & GPT-1.5 & a-pose & sq. & bedingt & teilweise & Solide, leichte Halluz. \\
+08 & SeedDream & a-pose & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Volles Gesicht halluziniert \\
+09 & Nano Banana & a-pose & sq. & \textcolor{evalgreen}{gut} & teilweise & Beste Phase-2-Ergebnisse \\
+\midrule
+10 & FLUX Kont. & posed & sq. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & Gesichter halluziniert \\
+11 & GPT-1.5 & posed & sq. & \textcolor{evalgreen}{ja} & teilweise & Solideste Ergebnisse \\
+12 & Nano Banana & posed & sq. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & Stärkste Voxel-Ästhetik \\
+\midrule
+13 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & teilweise & 1:1 Ratio-Bug \\
+13 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & teilweise & Auch 1:1 \\
+14 & Nano Banana & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Halb cool, halb Halluz. \\
+14 & Nano Banana & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalgreen}{nein} & Ohne Halluz. stark \\
+\midrule
+15 & GPT-1.5 & posed & portrait & gemischt & teilweise & Gestretchte Referenz \\
+15 & GPT-1.5 & posed & landsc. & gemischt & \textcolor{evalred}{ja} & Stretching + Cap fehlt \\
+16 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & Stretching, keine Halluz. \\
+16 & Nano Banana & posed & landsc. & gemischt & \textcolor{evalgreen}{nein} & Weniger Stretching \\
+\midrule
+17 & GPT-1.5 & posed & portrait \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & 1:1 Bug + Halluz. \\
+17 & GPT-1.5 & posed & landsc. \textcolor{evalred}{(sq.)} & gemischt & \textcolor{evalred}{ja} & Dasselbe \\
+18 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
+18 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
+\midrule
+19 & GPT-1.5 & posed & portrait & gemischt & teilweise & -- \\
+19 & GPT-1.5 & posed & landsc. & gemischt & teilweise & -- \\
+20 & Nano Banana & posed & portrait & gemischt & \textcolor{evalgreen}{nein} & -- \\
+20 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{stark} & \textcolor{evalgreen}{nein} & -- \\
+\midrule
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Scheibe fehlt \\
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
+21 & GPT-1.5 & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF \\
+21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Teil d. Autos fehlt \\
+21 & GPT-1.5 & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & SS \\
+21 & GPT-1.5 & posed & landsc. & neutral & \textcolor{evalred}{ja} & PF: Cap/Haare fehlen \\
+\midrule
+22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+22 & Nano Banana & posed & portrait & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Stufen nicht schön \\
+22 & Nano Banana & posed & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Sehr cool \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cockpit falsch \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Doppelte Treppe \\
+22 & Nano Banana & posed & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Transparent, gefällt \\
+\midrule
+23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & ND: Scheinwerfer falsch \\
+23 & GPT-1.5 & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: A-Pose overfitted \\
+23 & GPT-1.5 & a-pose & portrait & neutral & \textcolor{evalred}{ja} & PF: Cap fehlt \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & ND: Cap fehlt \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalgreen}{nein} & SS: Pose zu starr \\
+23 & GPT-1.5 & a-pose & landsc. & \textcolor{evalgreen}{ja} & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
+\midrule
+24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & ND \\
+24 & Nano Banana & a-pose & portrait & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppe nicht schön \\
+24 & Nano Banana & a-pose & portrait & \textcolor{evalgreen}{ja} & \textcolor{evalgreen}{nein} & PF: Super \\
+24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & ND: Halluz. stören \\
+24 & Nano Banana & a-pose & landsc. & \textcolor{evalred}{nein} & \textcolor{evalred}{ja} & SS: Treppen nicht schön \\
+24 & Nano Banana & a-pose & landsc. & neutral & \textcolor{evalred}{ja} & PF: Pool Floaty falsch \\
+\end{xltabular}
+}
+```
+
+```{=latex}
+\clearpage
+```
+
+# Anhang D – Gesamtbewertung Video-Generierung (Experiment 4)
+
+```{=latex}
+{\footnotesize
+\begin{xltabular}{\textwidth}{l l r r c c >{\centering\arraybackslash}X}
+\toprule
+\textbf{Modell} & \textbf{Szene} & \textbf{\$} & \textbf{Sek.} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Modell} & \textbf{Szene} & \textbf{\$} & \textbf{Sek.} & \textbf{Bew.} & \textbf{Halluz.} & \textbf{Kommentar} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+% --- Studio (Landscape) ---
+\multicolumn{7}{l}{\textit{Studio (Landscape, 1376×768)}} \\
+\midrule
+PixVerse v5.5 & Studio & 0.20 & 37 & okay & leicht & Kamerabewegung gefällt, Bewegung unpassend \\
+LTX-2 & Studio & 0.36 & 79 & \textcolor{evalgreen}{gut} & leicht & Schwer zu beurteilen ob halluziniert \\
+Wan 2.6 & Studio & 0.50 & 68 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Bild leicht überzeichnet, Audio trotzdem generiert \\
+Seedance Pro & Studio & 0.62 & 53 & okay & \textcolor{evalgreen}{nein} & Bewegt sich nicht, aber okay \\
+Veo 3.1 & Studio & 0.80 & 49 & \textcolor{evalred}{schlecht} & leicht & Slider bewegen sich, Bewegung gefällt nicht \\
+Kling O3 & Studio & 0.84 & 165 & \textcolor{evalgreen}{gut} & leicht & Audio Meter unscharf, Bewegung gefällt sehr \\
+Kling 3.0 V3 & Studio & 0.84 & 105 & \textcolor{evalgreen}{gut} & leicht & Audio Meter schwammig, Bewegung cool \\
+\midrule
+% --- Pool (Portrait) ---
+\multicolumn{7}{l}{\textit{Pool (Portrait, 768×1376)}} \\
+\midrule
+PixVerse v5.5 & Pool & 0.20 & 33 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Voxel-Gesicht verändert sich, Bewegung zu schnell \\
+LTX-2 & Pool & 0.36 & 78 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Aspect Ratio geändert, Kamera bewegt sich zu sehr \\
+Wan 2.6 & Pool & 0.50 & 59 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht entsteht mit der Zeit, Floaty-Bewegung gelungen \\
+Seedance Pro & Pool & 0.62 & 57 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht entsteht, Zehen in Schuhen \\
+Veo 3.1 & Pool & 0.80 & 64 & \textcolor{evalgreen}{gut} & leicht & Gesicht verändert sich leicht, Floaty-Bewegung cool \\
+Kling O3 & Pool & 0.84 & 129 & \textcolor{evalgreen}{gut} & leicht & Ripples falsch, Wassersimulation top \\
+Kling 3.0 V3 & Pool & 0.84 & 108 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Das beste! \\
+\midrule
+% --- Night Drive (Portrait) ---
+\multicolumn{7}{l}{\textit{Night Drive (Portrait, 768×1376)}} \\
+\midrule
+PixVerse v5.5 & Night Drive & 0.20 & 30 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Gesicht wird Lego-Figur, Autofahrt unnatürlich \\
+LTX-2 & Night Drive & 0.36 & 89 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Auto fährt rückwärts, Aspect Ratio geändert \\
+Wan 2.6 & Night Drive & 0.50 & 60 & \textcolor{evalred}{schlecht} & leicht & Gesicht wird generiert, Animation sonst gut \\
+Seedance Pro & Night Drive & 0.62 & 55 & \textcolor{evalgreen}{gut} & \textcolor{evalgreen}{nein} & Überraschend gut \\
+Veo 3.1 & Night Drive & 0.80 & 65 & okay & leicht & Gut, fährt aber rückwärts \\
+Kling O3 & Night Drive & 0.84 & 113 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Halluziniert am Rand, zoomt heraus \\
+Kling 3.0 V3 & Night Drive & 0.84 & 138 & okay & leicht & Etwas besser als Kling O3 \\
+\midrule
+% --- Spiral Staircase (Portrait) ---
+\multicolumn{7}{l}{\textit{Spiral Staircase (Portrait, 768×1376)}} \\
+\midrule
+PixVerse v5.5 & Spiral St. & 0.20 & 37 & okay & leicht & Stufen unnatürlich, interessanter Glow \\
+LTX-2 & Spiral St. & 0.36 & 78 & \textcolor{evalred}{schlecht} & \textcolor{evalred}{stark} & Läuft fast von Stufe, Aspect Ratio ändert sich \\
+Wan 2.6 & Spiral St. & 0.50 & 58 & okay & leicht & Bewegung leicht unnatürlich \\
+Seedance Pro & Spiral St. & 0.62 & 52 & okay & leicht & Kopf verändert sich, Glow okay \\
+Veo 3.1 & Spiral St. & 0.80 & 70 & okay & leicht & Überspringt Stufen, Animation relativ okay \\
+Kling O3 & Spiral St. & 0.84 & 107 & \textcolor{evalgreen}{gut} & leicht & Eine Stufe funktioniert nicht, Leuchten gefällt \\
+Kling 3.0 V3 & Spiral St. & 0.84 & 123 & \textcolor{evalred}{schlecht} & leicht & Stufen funktionieren nicht, Kamera unvorhersehbar \\
+\end{xltabular}
+}
 ```
 
 ```{=latex}
@@ -1890,9 +1927,12 @@ Ich versichere, die vorliegende Arbeit selbstständig und ohne fremde Hilfe ange
 
 ```{=latex}
 \vspace{3em}
-\noindent Detmold, den 17. Februar 2026
+\noindent Detmold, den 18. Februar 2026
 
-\vspace{3em}
+\vspace{1.5em}
+\noindent\includegraphics[height=2cm]{unterschrift.png}
+
+\vspace{0.5em}
 \noindent\rule{6cm}{0.4pt}\\[2pt]
 Jennifer Meier
 ```

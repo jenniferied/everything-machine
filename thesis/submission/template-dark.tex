@@ -114,12 +114,16 @@
 \titlespacing*{\subsection}{0pt}{0.8em}{0.3em}
 \titlespacing*{\subsubsection}{0pt}{0.6em}{0.2em}
 
+% === URL LINE BREAKING ===
+\usepackage{xurl}  % Allow URL breaks at any position (must be before hyperref)
+
 % === HYPERLINKS ===
 \usepackage[
   colorlinks=true,
   linkcolor=accentgreen,
   citecolor=accentgreen,
   urlcolor=accentgreen,
+  linktoc=all,
   pdfusetitle
 ]{hyperref}
 
@@ -193,6 +197,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{xltabular}
 \usepackage{calc}
 
 % Fix Pandoc longtable caption issue - define dummy counter 'none'
@@ -235,19 +240,15 @@
 
 % === PANDOC CSL REFERENCES ===
 \newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
+\setlength{\cslhangindent}{0em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{0em}
 \newenvironment{CSLReferences}[2]
  {\begin{list}{}{%
   \setlength{\itemindent}{0pt}
   \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  \setlength{\itemsep}{#2\baselineskip}}%
+  \setlength{\parsep}{0.15\baselineskip}
+  \setlength{\itemsep}{0.3\baselineskip}}%
   \renewcommand{\bibitem}[2][]{\item}% suppress empty [] from citeproc
  }
  {\end{list}}
