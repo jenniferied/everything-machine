@@ -39,7 +39,7 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 **Borgdorff (2012) – The Conflict of the Faculties** analysiert die Position von Artistic Research innerhalb akademischer Strukturen und argumentiert für die Eigenständigkeit künstlerischer Erkenntnisformen. Legitimiert meine Website und mein Journal als Forschungsoutputs – das Wissen ist in den künstlerischen Artefakten verkörpert.
 
-**Candy (2006) – Practice Based Research: A Guide** unterscheidet zwischen "practice-based" (Praxis als primäre Methode) und "practice-led" (Praxis informiert die Forschung). Ich bin practice-led.
+**Candy (2006) – Practice Based Research: A Guide** definiert Practice Based Research als Forschungsmethode, bei der die kreative Praxis selbst ein integraler Bestandteil des Forschungsprozesses ist. Die Arbeit unterscheidet zwischen "practice-based" (Praxis als primäre Methode) und "practice-led" (Praxis informiert die Forschung). Candy betont die Notwendigkeit einer systematischen Dokumentation und Reflexion des kreativen Prozesses. Sie liefert den methodischen Rahmen für mein Projekt – die Unterscheidung practice-based/practice-led hilft bei der Positionierung. Ich bin practice-based.
 
 
 ## Digitale Identität
@@ -55,9 +55,9 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 **Boden (2004) – The Creative Mind** unterscheidet zwischen "exploratory", "combinational" und "transformational" creativity. Framework zur Analyse: Welche Art von Kreativität zeigt das System? Welche ich?
 
-**Franceschelli & Musolesi (2024) – Creativity and Machine Learning: A Survey** ist der aktuellste umfassende Überblick über ML und Kreativität. Top-Tier Venue (ACM Computing Surveys), bietet Evaluationskriterien für kreative KI-Systeme.
+**Franceschelli & Musolesi (2024) – Creativity and Machine Learning: A Survey** bietet einen systematischen Überblick über maschinelle Kreativität aus computerwissenschaftlicher und kognitiver Perspektive. Die Autoren analysieren verschiedene Definitionen von Kreativität und deren Operationalisierung in ML-Systemen, von GANs bis zu Large Language Models. Sie diskutieren Evaluationsmethoden für kreative Systeme und identifizieren offene Forschungsfragen an der Schnittstelle von KI und Kreativität. Aktuellster umfassender Survey zum Thema (2024), Top-Tier Venue (ACM Computing Surveys).
 
-**Banh & Strobel (2023) – Generative Artificial Intelligence** liefert aktuelle Definitionen und Einordnung der Technologien, die ich verwende (LLMs, Diffusion Models etc.).
+**Banh & Strobel (2023) – Generative Artificial Intelligence** bietet einen systematischen Überblick über generative KI-Systeme und deren Einordnung in das breitere Feld der künstlichen Intelligenz. Sie definieren generative KI als Systeme, die neue Inhalte (Text, Bild, Audio) erzeugen können, basierend auf gelernten Mustern. Der Artikel diskutiert aktuelle Anwendungen und gesellschaftliche Implikationen und liefert die Terminologie für die Beschreibung meiner Tools (LLMs, Diffusion Models etc.).
 
 
 ## Ähnliche AR-Projekte
@@ -71,14 +71,14 @@ Die folgenden Quellen bilden das theoretische und methodische Fundament meiner A
 
 ## Autoethnografie
 
-**Ellis, Adams & Bochner (2011) – Autoethnography: An Overview** systematisiert die Methode und unterscheidet zwischen evocative, analytic und critical autoethnography. Definitiver methodischer Rahmen für meine Herangehensweise.
+**Ellis, Adams & Bochner (2011) – Autoethnography: An Overview** ist der definitive Überblicksartikel der führenden Autoethnografie-Forscher\*innen. Er systematisiert die Methode und ihre verschiedenen Ansätze: evocative autoethnography (persönliche Narrative als eigenständige Erkenntnisform), analytic autoethnography (systematische Analyse kultureller Muster durch persönliche Erfahrung), und critical autoethnography (Machtstrukturen und Ungleichheiten durch persönliche Perspektive sichtbar machen). Die Autoren entwickeln Qualitätskriterien für autoethnografische Forschung und argumentieren für die Legitimität subjektiver Perspektiven. Definitiver methodischer Rahmen für meine autoethnografische Herangehensweise und Qualitätskriterien für die eigene Forschung.
 
 
 ## Human-AI Collaboration
 
-**Suh et al. (2021) – AI as Social Glue** (ACM CHI) identifiziert verschiedene Rollen, die KI im kreativen Workflow einnehmen kann: Inspirationsquelle, Vermittler zwischen Ideen, Katalysator für Entscheidungen. Direkt anwendbar auf meinen Workflow.
+**Suh et al. (2021) – AI as Social Glue** (ACM CHI) untersucht, wie generative KI-Systeme den kreativen Prozess bei kollaborativer Musikkomposition unterstützen. Die Autor\*innen identifizieren verschiedene Rollen, die KI im kreativen Workflow einnehmen kann: als Inspirationsquelle, als Vermittler zwischen unterschiedlichen Ideen, und als Katalysator für kreative Entscheidungen. Die empirische Studie zeigt, dass KI nicht nur Werkzeug ist, sondern soziale Dynamiken im kreativen Prozess aktiv beeinflusst. Direkt anwendbares Framework für die Analyse meines KI-Workflows.
 
-**Monin & Sadokierski (2025) – Prompting as Thinking-With** dokumentiert einen iterativen Prompting-Prozess und etabliert "Prompting as Thinking-With" als methodisches Konzept. Direkt anwendbar auf meinen Workflow.
+**Monin & Sadokierski (2025) – Prompting as Thinking-With** untersucht Text-to-Image-Prompting als kreative Kollaboration am Beispiel der Visualisierung eines ausgestorbenen Zwerg-Emus. Die Autor\*innen dokumentieren ihren iterativen Prompting-Prozess detailliert und zeigen, wie jeder Prompt-Zyklus neue Erkenntnisse über das Subjekt generiert. Sie etablieren "Prompting as Thinking-With" als methodisches Konzept – MIT der KI denken statt ÜBER sie. Das Konzept ist direkt anwendbar auf meinen Workflow: Prompting nicht als Befehl, sondern als dialogischer Erkenntnisprozess.
 
 **DiPisa & Stasinski (2024) – Gestaltology Encoded** entwickeln "Arcana", einen künstlichen Organismus. Zentral ist die Rolle des Scheiterns: "Failure is viewed as an inevitable and creative catalyst." Legitimiert experimentelle Fehlversuche in meinem Projekt.
 

@@ -54,7 +54,7 @@ Ich wähle **Frage 1** als Hauptfrage:
 
 Diese Frage bietet das größte Potenzial für mein Projekt. Sie stellt den kreativen Prozess in den Mittelpunkt, was dem Charakter eines Artistic Research Projekts entspricht. Es geht nicht primär um technische Machbarkeit, sondern um die Veränderungen, die KI im kreativen Arbeiten auslöst.
 
-Die Frage lässt sich ideal durch Practice-Led Research und autoethnografische Methoden beantworten. Mein iterativer Workflow -- Experimente durchführen, dokumentieren, reflektieren, anpassen -- generiert genau die Daten, die zur Beantwortung benötigt werden.
+Die Frage lässt sich ideal durch Practice-Based Research und autoethnografische Methoden beantworten. Mein iterativer Workflow -- Experimente durchführen, dokumentieren, reflektieren, anpassen -- generiert genau die Daten, die zur Beantwortung benötigt werden.
 
 Im Gegensatz zu breiteren Fragen fokussiert diese auf ein konkretes, dokumentierbares Phänomen: wie sich mein kreativer Prozess durch die Arbeit mit KI verändert.
 

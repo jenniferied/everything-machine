@@ -14,12 +14,12 @@ lang: de-DE
 
 Die zentrale Forschungsfrage lautet: *Wie verändert der Einsatz multimodaler KI-Systeme (Text, Bild, Audio) den kreativen Prozess bei der Entwicklung einer digitalen Künstleridentität?*
 
-Das Projekt verfolgt einen Practice-Led Research Ansatz, bei dem die künstlerische Praxis selbst als primäre Forschungsmethode dient. Die Entwicklung des digitalen Alter Egos "Kepler" durch iterative KI-Experimente generiert dabei sowohl künstlerische Artefakte als auch Forschungserkenntnisse.
+Das Projekt verfolgt einen Practice-Based Research Ansatz, bei dem die künstlerische Praxis selbst als primäre Forschungsmethode dient. Die Entwicklung des digitalen Alter Egos "Kepler" durch iterative KI-Experimente generiert dabei sowohl künstlerische Artefakte als auch Forschungserkenntnisse.
 
 
 # Gewählte Methoden
 
-## Practice-Led Research
+## Practice-Based Research
 
 Die tägliche Arbeit mit multimodalen KI-Systemen (Text, Bild, Audio) zur Entwicklung von Kepler bildet den Kern des Forschungsprozesses. Jede kreative Session produziert sowohl künstlerische Outputs (Bilder, Texte, Sounds) als auch prozessbezogene Daten (Prompts, Iterationen, Entscheidungen).
 
@@ -82,7 +82,7 @@ Das Projekt folgt einer vier-phasigen Struktur nach Schöns "Reflection-in-Actio
 
 **Phase 4 – Synthese:** Integration der Erkenntnisse, finale Dokumentation. Retrospektive Analyse, Identifikation von Mustern und Themen, Schreiben der Dokumentation. Reflexionsfragen: Was wurde gelernt? Was bleibt offen?
 
-*In der Praxis verliefen diese Phasen nicht streng sequenziell, sondern überlagerten sich — ein Charakteristikum von Practice-Led Research, bei dem sich die Methodik im Prozess entwickelt.*
+*In der Praxis verliefen diese Phasen nicht streng sequenziell, sondern überlagerten sich — ein Charakteristikum von Practice-Based Research, bei dem sich die Methodik im Prozess entwickelt.*
 
 
 # Zusammenfassung
