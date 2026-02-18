@@ -303,7 +303,7 @@ export class ReflectionComponent {
   static createTranscriptDropdown(transcript, id) {
     const messagesHTML = transcript.map(msg => {
       const isUser = msg.role === 'user';
-      const avatarSrc = isUser ? '/assets/icons/user.png' : '/assets/icons/claude.svg';
+      const avatarSrc = isUser ? 'assets/icons/user.png' : 'assets/icons/claude.svg';
       const avatarAlt = isUser ? 'Jennifer' : 'Claude';
 
       return `

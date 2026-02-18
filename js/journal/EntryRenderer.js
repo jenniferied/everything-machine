@@ -71,6 +71,9 @@ export class EntryRenderer {
     // Initialize audio viewers
     this.initializeAudioViewers(gridElement);
 
+    // Listen for expandable content toggles (world-info, reflection, details)
+    this.setupToggleListeners(gridElement);
+
     console.log('[EntryRenderer] Entry rendered');
   }
 
@@ -260,6 +263,42 @@ export class EntryRenderer {
         console.error('[EntryRenderer] Failed to load AudioViewer:', err);
       });
     });
+  }
+
+  /**
+   * Setup listeners for expandable content (world-info, reflection, details)
+   * Re-optimizes grid layout when content height changes
+   * @param {HTMLElement} gridElement - Grid element
+   */
+  setupToggleListeners(gridElement) {
+    const reoptimize = () => {
+      requestAnimationFrame(() => {
+        this.layoutOptimizer.optimize(gridElement);
+      });
+    };
+
+    // <details> toggle (reflection transcript)
+    gridElement.addEventListener('toggle', reoptimize, true);
+
+    // World-info and reflection-info use class toggle via global functions
+    // Listen for clicks on their toggle buttons and re-optimize after transition
+    gridElement.addEventListener('click', (e) => {
+      if (e.target.closest('.world-info-toggle') || e.target.closest('.reflection-info-toggle')) {
+        // Small delay to let CSS transition/content render
+        setTimeout(reoptimize, 50);
+      }
+    });
+
+    // Also handle reflection widget (outside grid) — it's appended after .content-grid
+    const reflectionWidget = gridElement.parentElement?.querySelector('.reflection-widget');
+    if (reflectionWidget) {
+      reflectionWidget.addEventListener('toggle', reoptimize, true);
+      reflectionWidget.addEventListener('click', (e) => {
+        if (e.target.closest('.reflection-info-toggle')) {
+          setTimeout(reoptimize, 50);
+        }
+      });
+    }
   }
 
   /**
