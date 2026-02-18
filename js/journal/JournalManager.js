@@ -123,8 +123,9 @@ export class JournalManager {
       // Render timeline
       this.timelineRenderer.render(this.entries);
       
-      // Select last (newest) entry
-      this.currentEntryIndex = this.entries.length - 1;
+      // Select entry from URL hash, or default to newest
+      const hashEntry = this.getEntryIndexFromHash();
+      this.currentEntryIndex = hashEntry !== -1 ? hashEntry : this.entries.length - 1;
       this.selectEntry(this.currentEntryIndex);
       
       this.isLoaded = true;
@@ -150,16 +151,20 @@ export class JournalManager {
     
     this.currentEntryIndex = index;
     const entry = this.entries[index];
-    
+
     // Render entry
     this.entryRenderer.render(entry);
-    
+
     // Update timeline
     this.timelineRenderer.updateActiveItem(index);
-    
+
+    // Update URL hash for deep linking
+    const slug = entry.filename.replace('.md', '');
+    history.replaceState(null, '', `#${slug}`);
+
     // Emit event
     this.eventBus.emit('journal:entrySelected', { index, entry });
-    
+
     console.log('[JournalManager] Selected entry:', entry.title);
   }
 
@@ -198,6 +203,16 @@ export class JournalManager {
   showErrorState() {
     this.logbookContainer.innerHTML = '<div class="logbook-entry"><p class="text-gray-400">Fehler beim Laden der Journal-Einträge.</p></div>';
     this.timelineContainer.innerHTML = '';
+  }
+
+  /**
+   * Find entry index from URL hash (e.g. #journal-2026-01-11-ki-verstehen)
+   * @returns {number} Entry index or -1 if not found
+   */
+  getEntryIndexFromHash() {
+    const hash = location.hash.slice(1); // remove #
+    if (!hash.startsWith('journal-')) return -1;
+    return this.entries.findIndex(e => e.filename.replace('.md', '') === hash);
   }
 
   /**

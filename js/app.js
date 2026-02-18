@@ -555,8 +555,18 @@ class Application {
     });
     
     await journalManager.initialize();
-    
+
     this.uiComponents.set('journal-manager', journalManager);
+
+    // Deep link: navigate to logbook page when hash points to a journal entry
+    if (location.hash.startsWith('#journal-')) {
+      const pageNavigator = this.uiComponents.get('page-navigator');
+      if (pageNavigator) {
+        const btn = document.querySelector('[data-page="logbook"]');
+        pageNavigator.showPage('logbook', btn, false);
+      }
+    }
+
     console.log('[App] Journal system initialized');
   }
 
