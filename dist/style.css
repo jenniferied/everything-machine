@@ -2861,10 +2861,10 @@ main.container {
     line-height: 1.4;
 }
 
-.summary-item + .summary-item::before {
+.summary-item::before {
     content: '·';
     color: #374151;
-    margin-right: 0.75rem;
+    margin-right: 0.4rem;
     font-size: 0.85rem;
 }
 
