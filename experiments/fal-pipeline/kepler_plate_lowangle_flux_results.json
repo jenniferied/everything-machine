@@ -1,0 +1,30 @@
+[
+  {
+    "run": "20260519_173040",
+    "model": "fal-ai/flux-pro/kontext/max",
+    "prompt": "Re-render the same scene from a slightly lower camera height, tilted up by about 20 degrees. Clear but not extreme low-angle view. Character stays on the staircase. Keep everything else identical — same warm yellow glow from the staircase steps, same character, same clouds, same cosmic background.",
+    "elapsed_s": 20.7,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9d2/OGb9JNzEGemW7j-Dwv20F_3480084b79d542c481dba27a9cfa1357.jpg"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_flux_20260519_173040.jpg"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:31:04.382691"
+  },
+  {
+    "run": "20260519_173325",
+    "model": "fal-ai/flux-pro/kontext/max",
+    "prompt": "Slight low-angle view. The step directly in front of the character rises into the foreground just enough to hide the character's feet. Only the body from roughly the ankles up is visible; the feet are occluded by the next step. Subtle upward tilt, not extreme.",
+    "elapsed_s": 17.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9e2/kOxCm4RCddCCwXYVOIcxo_dc77f8a4dd6147b0a40ffbb6493961b0.jpg"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_flux_20260519_173325.jpg"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:33:45.434631"
+  }
+]

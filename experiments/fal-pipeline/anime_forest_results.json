@@ -1,0 +1,32 @@
+[
+  {
+    "test": "nano_banana_2",
+    "model": "fal-ai/nano-banana-2",
+    "prompt": "Anime fantasy forest landscape, lush ancient woodland with towering trees, dappled golden sunlight filtering through den",
+    "elapsed_s": 24.7,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a976559/Yl8j5C6Bp_mTtrOzQXohj_gaMDE0BJ.png",
+    "error": null,
+    "timestamp": "2026-04-23T12:33:58.652774"
+  },
+  {
+    "test": "seedream_v4",
+    "model": "fal-ai/bytedance/seedream/v4/text-to-image",
+    "prompt": "Anime fantasy forest landscape, lush ancient woodland with towering trees, dappled golden sunlight filtering through den",
+    "elapsed_s": 12.3,
+    "cost_est": "$0.03",
+    "image": "https://v3b.fal.media/files/b/0a97655c/1IeT0gNqEdMfLuinOr6lx_e3e6a30f9cca4d2cb410e5983345600e.png",
+    "error": null,
+    "timestamp": "2026-04-23T12:34:12.826289"
+  },
+  {
+    "test": "flux_2_pro",
+    "model": "fal-ai/flux-2-pro",
+    "prompt": "Anime fantasy forest landscape, lush ancient woodland with towering trees, dappled golden sunlight filtering through den",
+    "elapsed_s": 11.8,
+    "cost_est": "$0.03",
+    "image": "https://v3b.fal.media/files/b/0a976560/3HOGeZ0fi1i_R9sIqF4la_UcC0FH7J.jpg",
+    "error": null,
+    "timestamp": "2026-04-23T12:34:46.607584"
+  }
+]

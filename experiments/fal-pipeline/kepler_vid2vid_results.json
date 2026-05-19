@@ -1,0 +1,32 @@
+[
+  {
+    "run": "20260519_164821",
+    "model": "wan-vace-14b",
+    "task": "pose",
+    "endpoint": "fal-ai/wan-vace-14b",
+    "video_input": "headtilt_neck_worldX20_hflip.mp4",
+    "style_ref": "spiral_upscale_clarity_edited.png",
+    "prompt": "Voxel character with a flat-brim baseball cap, marching up an endless spiral staircase in deep cosmic space. The staircase steps glow with a soft, warm-white luminance from within, like frosted glass lit from inside. Dreamy blue and purple nebula clouds, drifting stars and galaxies in the background. Cinematic 16:9 framing, soft volumetric lighting, painterly cosmic atmosphere. Character pose, gait and head orientation exactly follow the source video. Camera is static.",
+    "elapsed_s": 107.2,
+    "video_url": "https://v3b.fal.media/files/b/0a9ad8dc/CT29YIqC0tDEOD2P53EH-_dD5ZPB9V.mp4",
+    "saved": "kepler_wanvace_pose_20260519_164821.mp4",
+    "timestamp": "2026-05-19T16:50:13.737964"
+  },
+  {
+    "run": "20260519_165416",
+    "model": "wan-2.2-animate-move",
+    "endpoint": "fal-ai/wan/v2.2-14b/animate/move",
+    "driving": "headtilt_neck_worldX20_hflip.mp4",
+    "image_ref": "spiral_upscale_clarity_edited.png",
+    "args": {
+      "resolution": "720p",
+      "video_quality": "high",
+      "num_inference_steps": 30,
+      "guidance_scale": 1.5
+    },
+    "elapsed_s": 1316.8,
+    "video_url": "https://v3b.fal.media/files/b/0a9ad979/GmLmlS6CjbfYpU5Efq-Qx_wan_animate_output.mp4",
+    "saved": "kepler_wan_animate_move_20260519_165416.mp4",
+    "timestamp": "2026-05-19T17:16:18.491160"
+  }
+]

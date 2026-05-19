@@ -1,0 +1,11 @@
+{
+  "test": "seedance_v2_fast_forest_static",
+  "model": "bytedance/seedance-2.0/fast/image-to-video",
+  "source_image": "outputs/anime_forest/seedream_v4.png",
+  "duration_s": 7,
+  "prompt": "Glowing magical particles drift slowly through the air. Soft mist flows gently between the ancient trees. Sunbeams shift subtly through the canopy, dappled light playing across the moss-covered forest floor. Leaves and ferns sway in a soft breeze. The camera is completely static and does not move. Fixed camera, locked-off shot, no camera motion. Atmospheric anime scene, painterly, serene.",
+  "elapsed_s": 73.6,
+  "cost_est": "$1.69",
+  "video": "https://v3b.fal.media/files/b/0a976595/lx6LLPnSBRpEbDiQcijRO_video.mp4",
+  "timestamp": "2026-04-23T12:43:38.895876"
+}

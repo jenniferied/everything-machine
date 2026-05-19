@@ -1,0 +1,66 @@
+[
+  {
+    "run": "20260513_010709",
+    "model": "topaz",
+    "endpoint": "fal-ai/topaz/upscale/image",
+    "args": {
+      "upscale_factor": 2
+    },
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "elapsed_s": 12.8,
+    "cost_est": "$0.04",
+    "output_url": "https://v3b.fal.media/files/b/0a99f844/oVI1yrrZSCe0wP_HsZQ_L_image.jpeg",
+    "saved": "spiral_upscale_topaz_20260513_010709.jpg",
+    "timestamp": "2026-05-13T01:07:25.242589"
+  },
+  {
+    "run": "20260513_010709",
+    "model": "clarity",
+    "endpoint": "fal-ai/clarity-upscaler",
+    "error": "[{'type': 'less_than_equal', 'loc': ['body', 'resemblance'], 'msg': 'Input should be less than or equal to 1', 'input': 1.5, 'ctx': {'le': 1.0}}]",
+    "elapsed_s": 26.9,
+    "cost_est": "$0.04",
+    "timestamp": "2026-05-13T01:07:52.100608"
+  },
+  {
+    "run": "20260513_012155",
+    "model": "clarity",
+    "endpoint": "fal-ai/clarity-upscaler",
+    "args": {
+      "upscale_factor": 2,
+      "creativity": 0.25,
+      "resemblance": 1.0,
+      "prompt": "Voxel character with a flat baseball cap walking up a softly glowing spiral staircase in deep space. Stars, galaxies, soft clouds in the background. Cosmic blue/purple color grading.",
+      "negative_prompt": "blur, low quality, jpeg artifacts, compression, face features, eyes, mouth"
+    },
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "elapsed_s": 48.4,
+    "cost_est": "$0.04",
+    "output_url": "https://v3b.fal.media/files/b/0a99f8a0/MD89VwGhmLbOTsFBa9EOY_sk2z3sSY.png",
+    "saved": "spiral_upscale_clarity_20260513_012155.png",
+    "timestamp": "2026-05-13T01:22:47.567418"
+  },
+  {
+    "run": "20260513_012155",
+    "model": "ccsr",
+    "endpoint": "fal-ai/ccsr",
+    "args": {
+      "scale": 2
+    },
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "elapsed_s": 241.4,
+    "cost_est": "$0.05",
+    "output_url": "https://v3b.fal.media/files/b/0a99f8b8/LeaSC_kQhav2oJQYAnmqk_b38a1b2835fd48cdbaf465d5c23c43e6.png",
+    "saved": "spiral_upscale_ccsr_20260513_012155.png",
+    "timestamp": "2026-05-13T01:26:50.726279"
+  },
+  {
+    "run": "20260513_010709",
+    "model": "ccsr",
+    "endpoint": "fal-ai/ccsr",
+    "error": "[Errno 8] nodename nor servname provided, or not known",
+    "elapsed_s": 36223.1,
+    "cost_est": "$0.05",
+    "timestamp": "2026-05-13T11:11:35.158786"
+  }
+]

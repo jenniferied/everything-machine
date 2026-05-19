@@ -1,0 +1,227 @@
+[
+  {
+    "run": "20260519_171521",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the character, the spiral staircase, the cosmic background (galaxies, stars, soft clouds) and the overall color grading. Only change the camera angle: tilt it slightly upward so the scene is viewed from a little below — a subtle low-angle / worm's-eye perspective. The staircase should appear to rise above the viewer into the sky, the character a bit higher in frame. Keep the change subtle and natural, not extreme. Reframe to a true 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 32.1,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad974/5cU1XEAEcfHSerwJEWRSe_4MqLRnhW.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_171521.png"
+    ],
+    "scene": "spiral_staircase.png",
+    "timestamp": "2026-05-19T17:15:57.381414"
+  },
+  {
+    "run": "20260519_171716",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the character, the spiral staircase, the cosmic background (galaxies, stars, clouds) and the color grading. Change the camera to a STRONG extreme low-angle / worm's-eye view: the camera is on the ground looking straight up. The spiral staircase towers high above the viewer, vanishing upward into the sky. The underside of the steps is clearly visible. The character is way up above, small, near the top of the frame, seen from below. Strong upward perspective, dramatic vertical foreshortening. Reframe to a true 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad97f/KHiItOCc3j8L_PZUKomFu_SAhL1DZe.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_171716.png"
+    ],
+    "scene": "spiral_staircase.png",
+    "timestamp": "2026-05-19T17:17:44.880292"
+  },
+  {
+    "run": "20260519_171958",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the character, the spiral staircase, the warm yellow/gold glowing steps, the cosmic background (galaxies, stars, clouds) and the overall color grading. Change the camera angle: tilt the camera moderately upward — a clear but not extreme low-angle view. The viewer is looking up at the staircase from below; the underside of some steps is visible and the staircase rises into the sky above. The character is higher in frame than before. Keep it cinematic, not a worm's-eye fisheye — moderate low-angle, natural. Reframe to a true 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 27.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad990/LU7RXoA-A9TKmu9nf4COM_dAdV6YZB.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_171958.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:20:29.805327"
+  },
+  {
+    "run": "20260519_172050",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. The spiral staircase steps must remain strongly luminous — warm yellow/gold light glowing from inside the steps themselves, like frosted glass lit from within, casting warm light onto nearby clouds. This warm yellow glow is essential and must be preserved or intensified, not removed. Keep the character, the staircase shape, the cosmic background (galaxies, stars, clouds) and the dreamy color grading. Change the camera angle: tilt the camera moderately upward — a clear but not extreme low-angle view, looking up at the staircase from below. The underside of some steps is visible. The character sits higher in the frame. Keep it cinematic, moderate, not fisheye. Reframe to a true 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 26.1,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad995/4H1wsZgpdPuYc_m94ObAR_vWBt1Irl.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172050.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:21:19.993222"
+  },
+  {
+    "run": "20260519_172201",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Do NOT change the lighting, the glow, the colors, the character, the staircase, the clouds, the background, or the style in any way. The ONLY change is the camera angle: tilt the camera moderately upward so the scene is viewed from slightly below — a clear but natural low-angle view. The staircase rises above the viewer, the character sits higher in the frame, the underside of some steps becomes visible. Everything else stays identical.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.2,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad99c/LAaJNqMXdw-iJGeIpbHt6_s6zuYGJD.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172201.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:22:29.232648"
+  },
+  {
+    "run": "20260519_172249",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-render this exact scene from a lower camera position, looking slightly upward at the spiral staircase. Moderate low-angle view, natural, not extreme. CRITICAL: preserve the warm golden-yellow glow emitting from inside the staircase steps EXACTLY as in the source — same intensity, same saturated warm yellow color temperature, same warm light spilling onto the surrounding clouds. Do not desaturate, do not whiten, do not cool down the glow. Keep the character, clouds, galaxies and stars identical.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 46.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9a1/uJHPVxvvK_OVBD597w2w5_z19s7sKq.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172249.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:23:39.888916"
+  },
+  {
+    "run": "20260519_172458",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Change the camera angle to a low-angle view, looking up at the scene from below. Nothing else changes.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 26.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9ae/k0j4HkQXHMapZ7Wgf4L1i_ZZJQPRqE.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172458.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:25:30.018838"
+  },
+  {
+    "run": "20260519_172615",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Tilt the camera just a little bit upward — a subtle low-angle view, barely noticeable. Nothing else changes.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 39.1,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9b5/EnznqZODd-t3tzlHvoerU_SWPiZID3.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172615.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:26:57.474407"
+  },
+  {
+    "run": "20260519_172729",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Tilt the camera moderately upward — a clearly visible low-angle view, looking up at the scene from below, but not extreme. Nothing else changes.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 30.6,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9bd/tXiVtQ5oxPxN_Z2Cfndwm_bmCDiYW4.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172729.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:28:05.665470"
+  },
+  {
+    "run": "20260519_172842",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-render the same scene from a lower camera height. The camera is now positioned below the staircase and tilted up by about 30 degrees. The bottom of the staircase fills the foreground close to the viewer, the top of the staircase and the character recede into the upper portion of the frame. Clear upward perspective with visible underside of some steps. Keep everything else identical — same glow, same character, same clouds, same background.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 33.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9c4/b2OWeSUe-bECL93IVCO6x_zhEqYdom.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_172842.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:29:19.539683"
+  },
+  {
+    "run": "20260519_173039",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-render the same scene from a slightly lower camera height, tilted up by about 20 degrees. Clear but not extreme low-angle view. The character must stay in the scene, standing on the staircase. Keep everything else identical — same glow, same character, same clouds, same background, same warm yellow staircase glow.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9d0/_AeOGhRq5kk5I_h-P1SWY_FRXLZkpQ.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_173039.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:31:11.892626"
+  },
+  {
+    "run": "20260519_173324",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Slight low-angle view. The step directly in front of the character rises into the foreground just enough to hide the character's feet. Only the character's body from roughly the ankles up is visible; the feet are occluded by the next step. Subtle upward tilt, not extreme.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 78.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad9e0/ThHpS55G7fxI8eRD0ks_p_5YtDE2Hi.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_173324.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:34:46.661008"
+  },
+  {
+    "run": "20260519_174247",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Keep the exact same framing, composition, zoom level and subject placement. The character and staircase stay in the same spot in the frame and at the same size. Only the camera position changes: lower the camera by a few meters and tilt it slightly upward — a gentle low-angle perspective. Same scene, just viewed from a bit further below.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ada18/PTdYbbSW4uf37cFA1-1_F_HNe9ohEc.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_174247.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:43:16.351874"
+  },
+  {
+    "run": "20260519_175438",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Move the camera significantly lower — drop the camera height by about half the staircase height — and tilt it upward to keep the same subject framing. The viewer is now well below the character, looking up. The character and staircase stay similar in size and position within the frame, but you can clearly see them from below: more of the underside of the steps, the character is now silhouetted against the sky above.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 36.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ada60/TTjKhkt9lk1y8CNbORTd2_bpGNsFQY.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_175438.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T17:55:18.199161"
+  },
+  {
+    "run": "20260519_175953",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Move the camera lower — drop the camera height by about a quarter of the staircase height — and tilt it slightly upward. Keep the same framing: character and staircase at the same size and roughly the same position in the frame. A clear but moderate low-angle, between subtle and dramatic — you can see the underside of some steps but the character is not silhouetted, the scene is not extreme.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ada7f/KSjv5zTBRMelzOafeUqc1_iQPKU9iy.png"
+    ],
+    "saved": [
+      "kepler_plate_lowangle_20260519_175953.png"
+    ],
+    "scene": "spiral_upscale_clarity_edited.png",
+    "timestamp": "2026-05-19T18:00:21.865743"
+  }
+]

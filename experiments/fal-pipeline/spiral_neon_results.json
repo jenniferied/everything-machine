@@ -1,0 +1,114 @@
+[
+  {
+    "test": "spiral_staircase_neon_landscape",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the composition, framing, character pose, background (space, stars, galaxies, clouds) and overall color grading EXACTLY as they are. Make only these two changes: 1) The character's shoes should be white. 2) The spiral staircase should glow softly in a single cyan color — as if made of softly luminous cyan light — instead of white marble. Keep it a gentle, even glow in one color (cyan), not multi-color neon. Do not change anything else. Preserve the dreamy blue/purple cosmic atmosphere of the original.",
+    "elapsed_s": 23.0,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f3bb/wdlXHH-8XnhggMpgNCntP_v9cNv8lF.png"
+    ],
+    "input": "spiral_staircase.png",
+    "timestamp": "2026-05-12T21:54:18.846887"
+  },
+  {
+    "run": "20260512_220159",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the character, pose, background (space, stars, galaxies, clouds) and the overall cosmic color grading. Make these changes: 1) Reframe the composition to a true 16:9 landscape — wider, more cinematic, with more space and sky on left and right. 2) The character's shoes should be white. 3) The spiral staircase should softly glow on its own — subtle, gentle illumination from the steps, as if the marble itself emits a faint light. Keep the glow understated, not bright, not pulsing, not neon, not strongly colored. The dreamy blue/purple cosmic atmosphere of the original must be preserved.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.1,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f3ec/IJ0N8_vTn--eNztzaCvLf_tHYep1eI.png"
+    ],
+    "saved": [
+      "spiral_softglow_16x9_20260512_220159.png"
+    ],
+    "input": "spiral_staircase.png",
+    "timestamp": "2026-05-12T22:02:26.783393"
+  },
+  {
+    "run": "20260512_220408",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep the character, pose, background (space, stars, galaxies, clouds) and the overall cosmic color grading. Make these changes: 1) Reframe to a true 16:9 landscape — wider, more cinematic, more space on left and right. 2) The character's shoes should be white. 3) The spiral staircase is NOT marble. The steps themselves are luminous — they emit a soft, even warm-white light from within, like frosted glass lit from inside. The whole staircase glows gently. Keep the glow soft and uniform — single color (warm white), not bright, not pulsing, not neon, no multi-color. Subtle illumination casts faint light onto the surrounding space. The dreamy blue/purple cosmic atmosphere of the original must be preserved.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.2,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f3f9/rd2AwLhynPcjuYlW3k1k9_VX7yQXV1.png"
+    ],
+    "saved": [
+      "spiral_softglow_16x9_20260512_220408.png"
+    ],
+    "input": "spiral_staircase.png",
+    "timestamp": "2026-05-12T22:04:41.098590"
+  },
+  {
+    "run": "20260512_223505",
+    "kind": "endframe",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep EVERYTHING identical — same composition, same camera angle, same staircase, same cosmic background, same color grading, same character with the same baseball cap and same white shoes. ONLY change: the voxel character is now several steps higher up the spiral staircase, mid-stride, as if a few seconds have passed. The character must remain faceless, same outfit, same cap shape — no morphing of cap, no added face features. Aspect ratio stays 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.3,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f4b2/l6bzuD5WnorIYUpWRXyis_WDpdy43r.png"
+    ],
+    "saved": [
+      "spiral_softglow_endframe_20260512_223505.png"
+    ],
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "timestamp": "2026-05-12T22:35:32.950465"
+  },
+  {
+    "run": "20260512_224454",
+    "kind": "endframe",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep EVERYTHING identical — same composition, same camera angle, same staircase, same cosmic background, same color grading, same character with the same baseball cap and same white shoes. ONLY change: the voxel character is positioned noticeably higher up the spiral staircase than before — a few steps further up. His stance is calm and natural, with a small, normal walking step — NOT a wide stride, NOT a big leap, legs only slightly apart as in a relaxed walk. The character must remain faceless, same outfit, same cap shape — no morphing of cap, no added face features. Aspect ratio stays 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 28.7,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f4ed/ftNmA0Wg4HSJKzYU-xoRK_EX6DCV6T.png"
+    ],
+    "saved": [
+      "spiral_softglow_endframe_20260512_224454.png"
+    ],
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "timestamp": "2026-05-12T22:45:27.359196"
+  },
+  {
+    "run": "20260512_231256",
+    "kind": "endframe",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep EVERYTHING identical — same composition, same camera angle, same staircase, same cosmic background, same color grading, same character with the same baseball cap and same white shoes. ONLY change: the voxel character has climbed MANY steps higher up the spiral staircase — clearly much further along his ascent, significantly higher in the frame than before, deeper into the spiral. His stance is calm and natural, with a small, normal walking step — NOT a wide stride, NOT a big leap. The character must remain faceless, same outfit, same cap shape — no morphing of cap, no added face features. Aspect ratio stays 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 34.8,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f595/lJnKrrLcs90xcz9He1gC__BQAT8xnj.png"
+    ],
+    "saved": [
+      "spiral_softglow_endframe_20260512_231256.png"
+    ],
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "timestamp": "2026-05-12T23:13:35.130208"
+  },
+  {
+    "run": "20260512_233749",
+    "kind": "endframe",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this image. Keep EVERYTHING identical — same composition, same camera angle, same staircase, same cosmic background, same color grading, same character with the same baseball cap and same white shoes. ONLY change: the voxel character has climbed a clear distance further up the spiral staircase — noticeably higher than in the source, but not at the very top yet. He is shown FROM BEHIND, his back facing the camera, walking away upward into the spiral. The cap is seen from behind. Calm, small natural walking step — NOT a wide stride. The character must remain faceless, same outfit, same cap shape — no morphing of cap, no added face features. Aspect ratio stays 16:9 landscape.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 30.4,
+    "cost_est": "$0.15",
+    "images": [
+      "https://v3b.fal.media/files/b/0a99f62b/FEl074OiKWWlfaRlw7uBN_YMxs76wx.png"
+    ],
+    "saved": [
+      "spiral_softglow_endframe_20260512_233749.png"
+    ],
+    "input": "spiral_softglow_16x9_20260512_220408.png",
+    "timestamp": "2026-05-12T23:38:23.028904"
+  }
+]

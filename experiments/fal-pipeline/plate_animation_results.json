@@ -1,0 +1,35 @@
+[
+  {
+    "test": "kling_v3_pro",
+    "model": "fal-ai/kling-video/v3/pro/image-to-video",
+    "duration_s": 15,
+    "prompt": "The ant walks slowly across the stone, antennae twitching gently. A soft breeze stirs the surroundin",
+    "elapsed_s": 250.6,
+    "cost_est": "$1.68",
+    "video": "https://v3b.fal.media/files/b/0a97636e/JAMIPuvp9Cs7YPnaDTBON_output.mp4",
+    "error": null,
+    "timestamp": "2026-04-23T11:11:51.917229"
+  },
+  {
+    "test": "veo31_fast",
+    "model": "fal-ai/veo3.1/fast/image-to-video",
+    "duration_s": 8,
+    "prompt": "The ant walks slowly across the stone, antennae twitching gently. A soft breeze stirs the surroundin",
+    "elapsed_s": 68.0,
+    "cost_est": "$0.80",
+    "video": "https://v3b.fal.media/files/b/0a976375/2Zua_JqUFubFPhSz-ZeWE_f3d7ae369b0347159ab30786c4fb9411.mp4",
+    "error": null,
+    "timestamp": "2026-04-23T11:13:01.768242"
+  },
+  {
+    "test": "seedance_v2_fast",
+    "model": "bytedance/seedance-2.0/fast/image-to-video",
+    "duration_s": 15,
+    "prompt": "The ant walks slowly across the stone, antennae twitching gently. A soft breeze stirs the surroundin",
+    "elapsed_s": 133.7,
+    "cost_est": "$3.63",
+    "video": "https://v3b.fal.media/files/b/0a976387/j3pPv5PYz1iR2k17PzAia_video.mp4",
+    "error": null,
+    "timestamp": "2026-04-23T11:15:57.958386"
+  }
+]

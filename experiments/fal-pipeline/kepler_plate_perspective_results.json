@@ -1,0 +1,18 @@
+[
+  {
+    "run": "20260519_170849",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. Replace the small generic walking figure on the spiral staircase with the voxel character from the second image (the Kepler character: blocky/voxel-style, light grey sweater, dark trousers, dark cap). Keep the character's position, scale, and walking pose exactly where the original figure stood on the staircase. Preserve the entire scene otherwise: same spiral staircase shape and direction, same camera angle and perspective, same grey background, same soft lighting. Do not change framing or aspect ratio. The Kepler character should look integrated and stand on the steps naturally.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.2,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ad94d/varwyXTVF1MSU2m9ChEvM_3qhSAhxc.png"
+    ],
+    "saved": [
+      "kepler_plate_perspective_20260519_170849.png"
+    ],
+    "scene": "omg_mirrored.png",
+    "char_ref": "kepler-posed-landscape.png",
+    "timestamp": "2026-05-19T17:09:21.888617"
+  }
+]

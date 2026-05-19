@@ -1,0 +1,32 @@
+[
+  {
+    "test": "nano_banana_2",
+    "model": "fal-ai/nano-banana-2",
+    "prompt": "Vibrant alien exoplanet landscape, rolling hills of magenta and violet grass, bioluminescent mushroom-like flora glowing",
+    "elapsed_s": 29.7,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a976602/3TTDQSapvXiGfY0ceiG2r_hIuqEk6z.png",
+    "error": null,
+    "timestamp": "2026-04-23T13:02:17.844044"
+  },
+  {
+    "test": "seedream_v4",
+    "model": "fal-ai/bytedance/seedream/v4/text-to-image",
+    "prompt": "Vibrant alien exoplanet landscape, rolling hills of magenta and violet grass, bioluminescent mushroom-like flora glowing",
+    "elapsed_s": 8.9,
+    "cost_est": "$0.03",
+    "image": "https://v3b.fal.media/files/b/0a976606/fM7BHf2dY7l9NpEFr0diX_a70744432cca4df88f2c52d8e7c7723f.png",
+    "error": null,
+    "timestamp": "2026-04-23T13:02:28.550186"
+  },
+  {
+    "test": "flux_2_pro",
+    "model": "fal-ai/flux-2-pro",
+    "prompt": "Vibrant alien exoplanet landscape, rolling hills of magenta and violet grass, bioluminescent mushroom-like flora glowing",
+    "elapsed_s": 10.8,
+    "cost_est": "$0.03",
+    "image": "https://v3b.fal.media/files/b/0a976607/-mgTNC8QOR-GYkl2JnJjg_csbM6kR8.jpg",
+    "error": null,
+    "timestamp": "2026-04-23T13:02:40.791349"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "tag": "wormview",
+    "prompt": "Re-shoot the scene as a worm's-eye view from directly below the staircase, camera pointing up at a 45 degree angle.",
+    "saved": [
+      "flux_wormview_20260519_173638.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173638"
+  },
+  {
+    "tag": "heroshot",
+    "prompt": "Dramatic low-angle hero shot. Camera near the ground looking up at the spiral staircase rising overhead.",
+    "saved": [
+      "flux_heroshot_20260519_173638.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173638"
+  },
+  {
+    "tag": "underneath",
+    "prompt": "Camera positioned underneath the lowest step of the staircase, looking upward through the structure.",
+    "saved": [
+      "flux_underneath_20260519_173638.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173638"
+  },
+  {
+    "tag": "ground_tilt",
+    "prompt": "Camera at ground level, tilted up 35 degrees. The bottom of the staircase fills the lower frame, the character appears higher up in the frame, the staircase recedes upward into the sky.",
+    "saved": [
+      "flux_ground_tilt_20260519_173638.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173638"
+  },
+  {
+    "tag": "mild10",
+    "prompt": "Tilt the camera up by 10 degrees. Gentle low-angle, keep composition.",
+    "saved": [
+      "flux_mild10_20260519_173948.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173948"
+  },
+  {
+    "tag": "mild15",
+    "prompt": "Tilt the camera up by 15 degrees. Mild low-angle, keep composition.",
+    "saved": [
+      "flux_mild15_20260519_173948.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173948"
+  },
+  {
+    "tag": "mild20",
+    "prompt": "Tilt the camera up by 20 degrees. Moderate low-angle, keep composition.",
+    "saved": [
+      "flux_mild20_20260519_173948.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173948"
+  },
+  {
+    "tag": "slightlylower",
+    "prompt": "Lower the camera height slightly and tilt it up gently. Mild low-angle, same scene and framing otherwise.",
+    "saved": [
+      "flux_slightlylower_20260519_173948.jpg"
+    ],
+    "model": "fal-ai/flux-pro/kontext/max",
+    "stamp": "20260519_173948"
+  }
+]
