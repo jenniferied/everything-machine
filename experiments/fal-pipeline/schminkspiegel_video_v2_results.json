@@ -1,0 +1,51 @@
+[
+  {
+    "run": "20260602_143828",
+    "model": "seedance_pro",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The holographic CD spins slowly and smoothly. The camera stays static.",
+    "args": {
+      "duration": "10",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "elapsed_s": 110.6,
+    "cost_est": "$0.62",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae52/gaUGmNLaqQw9NaJT4MaWe_video.mp4",
+    "saved": "vid2_seedance_pro_10s_20260602_143828.mp4",
+    "timestamp": "2026-06-02T14:40:25.082208"
+  },
+  {
+    "run": "20260602_143828",
+    "model": "kling_v3_std",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The holographic CD spins slowly and smoothly. The camera stays static.",
+    "args": {
+      "duration": "10",
+      "generate_audio": false
+    },
+    "elapsed_s": 143.9,
+    "cost_est": "$0.56",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae55/qxyuWMmQdbngq9s_iKL0l_output.mp4",
+    "saved": "vid2_kling_v3_std_10s_20260602_143828.mp4",
+    "timestamp": "2026-06-02T14:40:57.343681"
+  },
+  {
+    "run": "20260602_143828",
+    "model": "kling_v3_pro",
+    "endpoint": "fal-ai/kling-video/v3/pro/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The holographic CD spins slowly and smoothly. The camera stays static.",
+    "args": {
+      "duration": "10",
+      "generate_audio": false
+    },
+    "elapsed_s": 725.3,
+    "cost_est": "$1.60",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae8f/RZs4JUWrQeOho_CcYIAbn_output.mp4",
+    "saved": "vid2_kling_v3_pro_10s_20260602_143828.mp4",
+    "timestamp": "2026-06-02T14:50:39.010641"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "stairs",
+    "seed": 9001,
+    "saved": "stairs_s9001_20260618_232543.mp4",
+    "elapsed_s": 115.6
+  },
+  {
+    "name": "stairs",
+    "seed": 9002,
+    "saved": "stairs_s9002_20260618_232543.mp4",
+    "elapsed_s": 403.3
+  },
+  {
+    "name": "behind_chase",
+    "seed": 9101,
+    "saved": "behind_chase_s9101_20260618_232543.mp4",
+    "elapsed_s": 147.5
+  },
+  {
+    "name": "behind_chase",
+    "seed": 9102,
+    "saved": "behind_chase_s9102_20260618_232543.mp4",
+    "elapsed_s": 1.1
+  }
+]

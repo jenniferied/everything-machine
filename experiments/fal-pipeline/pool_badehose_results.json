@@ -1,0 +1,272 @@
+[
+  {
+    "run": "20260522_180847",
+    "step": "A_badehose (22_refined schraege Ansicht -> Badehose)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered skin-tone voxel blocks in a warm light skin tone, with the same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 22.1,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b3ff5/EHoN2A_1UldBZIPLlV-KT_rgbACFsB.png"
+    ],
+    "saved": "A_badehose_20260522_180847.png",
+    "timestamp": "2026-05-22T18:09:12.871353"
+  },
+  {
+    "run": "20260522_180847",
+    "step": "B_16x9 (24_apose hochkant -> 16:9 erweitert)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "This image shows a voxel-style top-down swimming pool scene placed in the centre of a larger 16:9 canvas, with flat neutral-grey margins on the left and right sides. Fill ONLY the grey left and right margin areas by naturally extending the existing scene outward — more turquoise pool water with the same ripple pattern, more pale pool deck, more sun loungers, potted plants and palm-leaf shadows, consistent with whatever is already visible at the left and right edges of the central image. KEEP the entire central pool area, the voxel character and the gold inflatable ring EXACTLY as they are — do not move, resize, recolour, restyle or redraw any of the central content. Match the lighting, colour grade, top-down camera perspective and voxel / lego-block art style precisely. The final result is one seamless 16:9 image with no visible grey areas and no seams.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 22.1,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b3ff7/Eyc4q5G9E3nr5H5eXd277_CLvFt5yI.png"
+    ],
+    "saved": "B_16x9_20260522_180847.png",
+    "timestamp": "2026-05-22T18:09:38.007799"
+  },
+  {
+    "run": "20260522_180847",
+    "step": "B_16x9_badehose (erweitertes Bild B -> Badehose)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered skin-tone voxel blocks in a warm light skin tone, with the same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 23.0,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b3ffa/D0WMdBatzvyv7C00P-3g2_II3rTF9B.png"
+    ],
+    "saved": "B_16x9_badehose_20260522_180847.png",
+    "timestamp": "2026-05-22T18:10:03.420689"
+  },
+  {
+    "run": "20260522_181519",
+    "step": "B2_16x9 bria/expand",
+    "model": "fal-ai/bria/expand",
+    "canvas_size": [
+      2446,
+      1376
+    ],
+    "original_image_location": [
+      839,
+      0
+    ],
+    "prompt": "A turquoise swimming pool seen directly from above, with pale stone pool deck, white sun loungers, potted green plants and soft palm leaf shadows on the tiles, bright summer daylight, voxel lego block art style, smooth and seamless continuation of the existing scene.",
+    "elapsed_s": 12.8,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9b401d/3hyslR04m-E2Tg9KJYSAu_287b376d636a476f9aae93ed3d90e3f6.png",
+    "saved": "B2_16x9_20260522_181519.png",
+    "timestamp": "2026-05-22T18:15:35.917702"
+  },
+  {
+    "run": "20260522_181519",
+    "step": "B2_16x9_badehose",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered skin-tone voxel blocks in a warm light skin tone, with the same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 35.9,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b401d/jCqYaHC-OLhiz8D7mPk3n_GhFhhfhO.png"
+    ],
+    "saved": "B2_16x9_badehose_20260522_181519.png",
+    "timestamp": "2026-05-22T18:16:15.386218"
+  },
+  {
+    "run": "20260522_181755",
+    "step": "B3_portrait_badehose",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered skin-tone voxel blocks in a warm light skin tone, with the same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "9:16",
+    "elapsed_s": 30.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b402b/pTyG7yyjb2xZijjr48ccD_Dqwe4kQK.png"
+    ],
+    "saved": "B3_portrait_badehose_20260522_181755.png",
+    "timestamp": "2026-05-22T18:18:29.342840"
+  },
+  {
+    "run": "20260522_181755",
+    "step": "B3_16x9_badehose",
+    "model": "fal-ai/bria/expand",
+    "canvas_size": [
+      2446,
+      1376
+    ],
+    "original_image_location": [
+      839,
+      0
+    ],
+    "prompt": "A turquoise swimming pool seen directly from above, with pale stone pool deck, white sun loungers, potted green plants and soft palm leaf shadows on the tiles, bright summer daylight, voxel lego block art style, smooth and seamless continuation of the existing scene.",
+    "elapsed_s": 11.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9b4030/_5ox8bbVQaPWdFUvDTBl7_f3d4ea6715624981bfc2290e7b4697af.png",
+    "saved": "B3_16x9_badehose_20260522_181755.png",
+    "timestamp": "2026-05-22T18:18:43.028556"
+  },
+  {
+    "run": "20260522_183146",
+    "step": "A_badehose_v2 (weniger orange)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered bare skin in a NATURAL, SOFT, LIGHT skin tone — a neutral pale-to-medium skin tone, NOT orange, NOT over-tanned, NOT a deep bronze, with no oversaturated warm cast. Same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.4,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b407e/hpyJo52-EkRAz1agxAf8x_tYAa3Mpa.png"
+    ],
+    "saved": "A_badehose_v2_20260522_183146.png",
+    "timestamp": "2026-05-22T18:32:13.632191"
+  },
+  {
+    "run": "20260522_183313",
+    "step": "A_badehose_v3 (mittlerer Hautton)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. ONLY change the voxel character's outfit: he is now dressed for a day at the pool, wearing ONLY swim trunks (board shorts) on his hips. His torso, arms, legs and bare feet are all uncovered bare skin in a NATURAL, HEALTHY MEDIUM skin tone — a normal everyday human skin tone with a gentle warmth, NOT pale or washed-out, but also NOT orange and NOT a deep tan or bronze. A balanced, believable mid skin tone. Same blocky cubic voxel texture as the rest of his body — no white shirt or top, no dark long trousers anymore. He wears NOTHING on his feet: bare skin-tone voxel feet, definitely NOT flip-flops, sandals or shoes on his feet. The swim trunks cover only his hips and upper thighs. Keep his head, hair/cap and his relaxed lying pose exactly the same. Maintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 20.3,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b4087/9xYRaQSXimaUAVhFZflVG_E9eoJOfR.png"
+    ],
+    "saved": "A_badehose_v3_20260522_183313.png",
+    "timestamp": "2026-05-22T18:33:37.038982"
+  },
+  {
+    "run": "20260527_100413",
+    "step": "A_badehose_v4 (weisse Maske, weiss-pink)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Also keep the voxel character's body (torso, arms, legs, bare feet, skin tone) and his relaxed lying pose exactly the same. Make EXACTLY two changes, nothing else:\n1) The character's HEAD is now a plain WHITE mask — a smooth, featureless WHITE voxel head with NO facial features at all (no eyes, no mouth, no nose, no skin tone, no hair colour visible). It looks like he is wearing a blank white mask covering his entire head and any visible hair. Pure clean white voxel blocks, slightly lighter than the pool deck, with the same blocky cubic voxel texture.\n2) The swim trunks (board shorts) are now WHITE AND PINK — a white base with pink pattern, or pink with white, in a clean two-tone white-and-pink design (NOT blue, no other colours). Same swim trunks shape and coverage as before — only the colour changes from blue to white-and-pink.\nMaintain the voxel / lego-block art style precisely. Do NOT move or restyle the flip-flops at the poolside scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.5,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9bdd59/NvU1PXT9n2ZvIaXku1Zze_HHk9Rovn.png"
+    ],
+    "saved": "A_badehose_v4_20260527_100413.png",
+    "timestamp": "2026-05-27T10:04:40.557204"
+  },
+  {
+    "run": "20260527_103023",
+    "step": "A_badehose_v5 (Maske nur Gesicht)",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel-style swimming pool image. KEEP EVERYTHING IDENTICAL — the swimming pool, turquoise water and ripple pattern, the gold/bronze inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops resting on the pool deck, and the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose exactly the same.\n\nMake EXACTLY these changes, nothing else:\n\n1) OUTFIT: he now wears ONLY swim trunks (board shorts) on his hips — no white shirt or top, no dark long trousers anymore. The swim trunks are WHITE AND PINK in a clean two-tone design (NOT blue). His torso, arms, legs and feet are uncovered bare skin in a warm, natural light skin tone with a gentle healthy tan — not pale, not over-saturated orange, just a normal warm human skin tone, with the same blocky cubic voxel texture as the rest of his body. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE-MASK: KEEP his cap and KEEP his hair EXACTLY as they are in the original image — same colour, same shape, same voxel blocks. ONLY the face area (the small region where eyes, nose and mouth normally are, framed by the cap above and any visible hair around it) becomes a FEATURELESS, BLANK WHITE voxel surface — no eyes, no nose, no mouth, no facial features at all, like a small smooth white mask is fitted over just the face. Pure clean white voxel blocks, slightly lighter than the pool deck. The mask covers ONLY the face, NOT the top of the head, NOT the hair, NOT the cap — those stay unchanged.\n\nMaintain the voxel / lego-block art style precisely. Do NOT move, remove or restyle the flip-flops that sit on the pool deck as scenery — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 45.5,
+    "cost_est": "$0.04",
+    "images": [
+      "https://v3b.fal.media/files/b/0a9bddf6/BIA7QSWxiRVKt4dBOsfU9_COlZqufB.png"
+    ],
+    "saved": "A_badehose_v5_20260527_103023.png",
+    "timestamp": "2026-05-27T10:31:12.425058"
+  },
+  {
+    "run": "20260527_103724",
+    "label": "nano-banana-pro/edit run A",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bde20/OH0r-VXYx3Nt-PwkIBnuK_pool_floaty.png"
+      ],
+      "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose, his cap and his hair exactly the same.\n\nMake EXACTLY two changes, nothing else:\n\n1) OUTFIT: he now wears ONLY swim trunks (board shorts) on his hips — no white shirt, no dark long trousers. The swim trunks are WHITE AND PINK in a clean two-tone design (NOT blue). His torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT orange, NOT pale) with the same blocky cubic voxel texture. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE-MASK: ONLY the small face area (where eyes, nose and mouth normally sit) becomes a FEATURELESS, BLANK, PURE WHITE voxel surface — absolutely NO eyes, NO nose, NO mouth, NO facial features of any kind, like a smooth plain white mask is glued onto only the face. KEEP his CAP unchanged (same shape, same colour, same position). KEEP his HAIR unchanged around and below the cap. The white mask covers ONLY the face, NOT the cap, NOT the hair, NOT the back of the head. Pure white blocks, slightly lighter than the pool deck.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 25.2,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde20/uzZH-SjPs1Ay-wJroNOiL_1xk3rLZm.png",
+    "saved": "A_mask_nano_A_20260527_103724.png",
+    "timestamp": "2026-05-27T10:37:52.616232"
+  },
+  {
+    "run": "20260527_103724",
+    "label": "nano-banana-pro/edit run B",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bde20/OH0r-VXYx3Nt-PwkIBnuK_pool_floaty.png"
+      ],
+      "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose, his cap and his hair exactly the same.\n\nMake EXACTLY two changes, nothing else:\n\n1) OUTFIT: he now wears ONLY swim trunks (board shorts) on his hips — no white shirt, no dark long trousers. The swim trunks are WHITE AND PINK in a clean two-tone design (NOT blue). His torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT orange, NOT pale) with the same blocky cubic voxel texture. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE-MASK: ONLY the small face area (where eyes, nose and mouth normally sit) becomes a FEATURELESS, BLANK, PURE WHITE voxel surface — absolutely NO eyes, NO nose, NO mouth, NO facial features of any kind, like a smooth plain white mask is glued onto only the face. KEEP his CAP unchanged (same shape, same colour, same position). KEEP his HAIR unchanged around and below the cap. The white mask covers ONLY the face, NOT the cap, NOT the hair, NOT the back of the head. Pure white blocks, slightly lighter than the pool deck.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 25.0,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde23/sOVb2sMXaViH5ZdWYXc9v_UAaU3uHe.png",
+    "saved": "A_mask_nano_B_20260527_103724.png",
+    "timestamp": "2026-05-27T10:38:18.734624"
+  },
+  {
+    "run": "20260527_103724",
+    "label": "flux-pro/kontext/max",
+    "model": "fal-ai/flux-pro/kontext/max",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9bde20/OH0r-VXYx3Nt-PwkIBnuK_pool_floaty.png",
+      "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose, his cap and his hair exactly the same.\n\nMake EXACTLY two changes, nothing else:\n\n1) OUTFIT: he now wears ONLY swim trunks (board shorts) on his hips — no white shirt, no dark long trousers. The swim trunks are WHITE AND PINK in a clean two-tone design (NOT blue). His torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT orange, NOT pale) with the same blocky cubic voxel texture. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE-MASK: ONLY the small face area (where eyes, nose and mouth normally sit) becomes a FEATURELESS, BLANK, PURE WHITE voxel surface — absolutely NO eyes, NO nose, NO mouth, NO facial features of any kind, like a smooth plain white mask is glued onto only the face. KEEP his CAP unchanged (same shape, same colour, same position). KEEP his HAIR unchanged around and below the cap. The white mask covers ONLY the face, NOT the cap, NOT the hair, NOT the back of the head. Pure white blocks, slightly lighter than the pool deck.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+      "aspect_ratio": "16:9",
+      "num_images": 1,
+      "guidance_scale": 3.5,
+      "safety_tolerance": "5"
+    },
+    "elapsed_s": 15.0,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a9bde27/ApigrthyisAdVB9R88CN3_1c0bfa9bd9c94df9b7bb306c57cabd87.jpg",
+    "saved": "A_mask_flux_kontext_max_20260527_103724.jpg",
+    "timestamp": "2026-05-27T10:38:34.911967"
+  },
+  {
+    "run": "20260527_103724",
+    "label": "seedream v4.5/edit",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bde20/OH0r-VXYx3Nt-PwkIBnuK_pool_floaty.png"
+      ],
+      "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose, his cap and his hair exactly the same.\n\nMake EXACTLY two changes, nothing else:\n\n1) OUTFIT: he now wears ONLY swim trunks (board shorts) on his hips — no white shirt, no dark long trousers. The swim trunks are WHITE AND PINK in a clean two-tone design (NOT blue). His torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT orange, NOT pale) with the same blocky cubic voxel texture. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE-MASK: ONLY the small face area (where eyes, nose and mouth normally sit) becomes a FEATURELESS, BLANK, PURE WHITE voxel surface — absolutely NO eyes, NO nose, NO mouth, NO facial features of any kind, like a smooth plain white mask is glued onto only the face. KEEP his CAP unchanged (same shape, same colour, same position). KEEP his HAIR unchanged around and below the cap. The white mask covers ONLY the face, NOT the cap, NOT the hair, NOT the back of the head. Pure white blocks, slightly lighter than the pool deck.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are."
+    },
+    "elapsed_s": 20.7,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde29/JWxa_vwN6UB8iEKECYqpW_ea8cd22ea32842c3973c7a5202c36275.png",
+    "saved": "A_mask_seedream_20260527_103724.png",
+    "timestamp": "2026-05-27T10:38:57.506858"
+  },
+  {
+    "run": "20260527_104322",
+    "step": "A_v6_run1",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose unchanged.\n\nMake EXACTLY these two changes — nothing else:\n\n1) OUTFIT — HAWAIIAN BOARD SHORTS: he now wears ONLY swim trunks on his hips. The trunks are HAWAIIAN-STYLE BOARD SHORTS in PINK AND WHITE — a clearly Hawaiian / tropical floral pattern (pink hibiscus, tropical flowers, palm leaves) over a white base, or a pink base with white floral pattern. NOT plain stripes, NOT a single solid colour, NOT blue. A real Hawaiian swim-shorts vibe.\nHis torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT pale, NOT orange), with the same blocky cubic voxel texture as the rest of his body. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE + EAR RECOLOUR (this is JUST a colour recolour, not a smooth mask overlay): change the colour of his FACE voxels AND his visible EAR voxels to PURE WHITE. The blocky cubic voxel structure stays FULLY VISIBLE in the white area — same cubic resolution, same block edges, same lego-block texture as the rest of his head. Do NOT smooth it out, do NOT make it a glossy mask, do NOT round the blocks — it must clearly look like the same voxel cubes, just recoloured white. NO eyes, NO nose, NO mouth, NO eyebrows, NO facial features at all on the white voxel face.\n\nKEEP HIS CAP UNCHANGED — same DARK colour as in the original image, same shape, same position. The cap does NOT become white. KEEP HIS HAIR UNCHANGED around and below the cap — same colour, same shape. Only the FACE voxels and the EAR voxels change colour to white.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde44/QH1PnZvCnpWVQSuJepDqR_p6gKcT9M.png",
+    "saved": "A_v6_run1_20260527_104322.png",
+    "timestamp": "2026-05-27T10:43:50.577901"
+  },
+  {
+    "run": "20260527_104322",
+    "step": "A_v6_run2",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose unchanged.\n\nMake EXACTLY these two changes — nothing else:\n\n1) OUTFIT — HAWAIIAN BOARD SHORTS: he now wears ONLY swim trunks on his hips. The trunks are HAWAIIAN-STYLE BOARD SHORTS in PINK AND WHITE — a clearly Hawaiian / tropical floral pattern (pink hibiscus, tropical flowers, palm leaves) over a white base, or a pink base with white floral pattern. NOT plain stripes, NOT a single solid colour, NOT blue. A real Hawaiian swim-shorts vibe.\nHis torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT pale, NOT orange), with the same blocky cubic voxel texture as the rest of his body. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE + EAR RECOLOUR (this is JUST a colour recolour, not a smooth mask overlay): change the colour of his FACE voxels AND his visible EAR voxels to PURE WHITE. The blocky cubic voxel structure stays FULLY VISIBLE in the white area — same cubic resolution, same block edges, same lego-block texture as the rest of his head. Do NOT smooth it out, do NOT make it a glossy mask, do NOT round the blocks — it must clearly look like the same voxel cubes, just recoloured white. NO eyes, NO nose, NO mouth, NO eyebrows, NO facial features at all on the white voxel face.\n\nKEEP HIS CAP UNCHANGED — same DARK colour as in the original image, same shape, same position. The cap does NOT become white. KEEP HIS HAIR UNCHANGED around and below the cap — same colour, same shape. Only the FACE voxels and the EAR voxels change colour to white.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 31.0,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde47/HHLCRn6ITEyWHPtrVdSUk_L8qcG8Nv.png",
+    "saved": "A_v6_run2_20260527_104322.png",
+    "timestamp": "2026-05-27T10:44:22.732589"
+  },
+  {
+    "run": "20260527_104322",
+    "step": "A_v6_run3",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit this voxel / lego-block style swimming pool image. KEEP EVERYTHING IDENTICAL — the pool, turquoise water and ripples, the gold inflatable pool ring, the sun loungers, potted plants, palm-leaf shadows, the pair of flip-flops on the pool deck, the camera angle, framing, lighting and colour grade. Keep the voxel character's relaxed lying pose unchanged.\n\nMake EXACTLY these two changes — nothing else:\n\n1) OUTFIT — HAWAIIAN BOARD SHORTS: he now wears ONLY swim trunks on his hips. The trunks are HAWAIIAN-STYLE BOARD SHORTS in PINK AND WHITE — a clearly Hawaiian / tropical floral pattern (pink hibiscus, tropical flowers, palm leaves) over a white base, or a pink base with white floral pattern. NOT plain stripes, NOT a single solid colour, NOT blue. A real Hawaiian swim-shorts vibe.\nHis torso, arms, legs and bare feet are uncovered bare skin in a warm, natural, healthy light-medium skin tone (NOT pale, NOT orange), with the same blocky cubic voxel texture as the rest of his body. He wears NOTHING on his feet — bare voxel feet, NOT flip-flops or shoes.\n\n2) FACE + EAR RECOLOUR (this is JUST a colour recolour, not a smooth mask overlay): change the colour of his FACE voxels AND his visible EAR voxels to PURE WHITE. The blocky cubic voxel structure stays FULLY VISIBLE in the white area — same cubic resolution, same block edges, same lego-block texture as the rest of his head. Do NOT smooth it out, do NOT make it a glossy mask, do NOT round the blocks — it must clearly look like the same voxel cubes, just recoloured white. NO eyes, NO nose, NO mouth, NO eyebrows, NO facial features at all on the white voxel face.\n\nKEEP HIS CAP UNCHANGED — same DARK colour as in the original image, same shape, same position. The cap does NOT become white. KEEP HIS HAIR UNCHANGED around and below the cap — same colour, same shape. Only the FACE voxels and the EAR voxels change colour to white.\n\nMaintain the voxel / lego-block art style precisely. Do NOT touch the flip-flops at the poolside — they stay exactly where they are.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 27.5,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bde4a/r4timX5I-agbqS7cg3fc__l4PUB3pb.png",
+    "saved": "A_v6_run3_20260527_104322.png",
+    "timestamp": "2026-05-27T10:44:51.874309"
+  }
+]

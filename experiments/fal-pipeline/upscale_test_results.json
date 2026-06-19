@@ -1,0 +1,24 @@
+[
+  {
+    "name": "B_topaz",
+    "endpoint": "fal-ai/topaz/upscale/video",
+    "args": {
+      "upscale_factor": 2
+    },
+    "elapsed_s": 34.0,
+    "saved": "B_topaz.mp4",
+    "output_url": "https://v3b.fal.media/files/b/0a9e867b/FUWJYm0mWwL6pnuRWFzBB_video.mp4"
+  },
+  {
+    "name": "C_seedvr2",
+    "endpoint": "fal-ai/seedvr/upscale/video",
+    "args": {
+      "upscale_mode": "factor",
+      "upscale_factor": 2,
+      "seed": 42
+    },
+    "elapsed_s": 287.0,
+    "saved": "C_seedvr2.mp4",
+    "output_url": "https://v3b.fal.media/files/b/0a9e8698/6y7IAcpK9BVpg7Ud_wKwY_output.mp4"
+  }
+]

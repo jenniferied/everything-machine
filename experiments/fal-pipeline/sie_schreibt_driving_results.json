@@ -1,0 +1,116 @@
+[
+  {
+    "run": "20260519_221446",
+    "variant": "01_frontal_cadillac_dunes",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. Keep the frontal hero shot of the lego-block convertible Cadillac on a desert road at night, full moon high in the starry sky, distant mountains, warm headlight glow. Replace the driver with the voxel character from the second image. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. He sits behind the wheel, visible from chest up through the windshield. Cinematic 16:9, cool moonlit blues + warm headlight ambers. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae079/s06dJ7mKNV-rtwb34Je2o_X6IIQV8m.png"
+    ],
+    "saved": [
+      "01_frontal_cadillac_dunes_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:15:18.958411"
+  },
+  {
+    "run": "20260519_221446",
+    "variant": "02_cockpit_pov_passenger",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. Keep the cockpit POV from inside a convertible: dashboard with glowing instrument cluster, desert road stretching to a distant horizon, full moon in the starry night sky. The driver visible on the left side is the voxel character from the second image. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. He grips the steering wheel with both blocky voxel hands. Maintain the dreamy midnight palette. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "gpt-cockpit-pov-mond-wueste.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 27.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae07b/b9q4Y4kZGFU_LOkI5OgyB_nNEtFrc5.png"
+    ],
+    "saved": [
+      "02_cockpit_pov_passenger_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:15:48.456983"
+  },
+  {
+    "run": "20260519_221446",
+    "variant": "03_side_tracking_road",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a cinematic side tracking shot of the lego-block convertible Cadillac driving along an empty desert highway at night. Camera at car level, slightly behind side. Full moon huge and low on the horizon, casting silver light. Mountains in the distance. Inside the car the voxel character from the second image is driving. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. Motion blur on the wheels and road. 16:9 cinematic. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 34.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae07e/9B6z-WxSgOn6TLb5LxaQ-_X8RyTFF5.png"
+    ],
+    "saved": [
+      "03_side_tracking_road_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:16:24.089997"
+  },
+  {
+    "run": "20260519_221446",
+    "variant": "04_low_angle_hilltop",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a low angle hero shot: the lego-block convertible Cadillac cresting a small desert hill at night, headlights blazing, full moon enormous in the sky directly behind/above the car like a halo. The voxel character from the second image is driving, visible above the windshield. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. Stars, distant mountains. Cinematic, slightly underexposed. 16:9. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.2,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae082/rBxHQFw2TPLRWcoBXpfGE_maKcuqwc.png"
+    ],
+    "saved": [
+      "04_low_angle_hilltop_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:16:49.755140"
+  },
+  {
+    "run": "20260519_221446",
+    "variant": "05_behind_chase",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a behind-the-car chase shot: camera follows the lego-block convertible Cadillac from directly behind at road level. Empty two-lane desert highway disappearing into the horizon. Tail lights glowing red. Full moon high in the starry sky ahead. The voxel character driver visible from behind, head and cap above the seat-back. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. 16:9 cinematic. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 36.3,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae085/b1k_Mz527LOPToODYM5Wa_LjzP8Vv2.png"
+    ],
+    "saved": [
+      "05_behind_chase_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:17:27.700839"
+  },
+  {
+    "run": "20260519_221446",
+    "variant": "06_serpentine_aerial",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a high cinematic aerial shot of the lego-block convertible Cadillac driving along a serpentine mountain road at night, headlights cutting through darkness. Full moon huge in the sky, silvering the cliffs and switchbacks. Camera at ~30 degrees above horizontal, following from above-behind. Visible driver is the voxel character. The character is a small voxel/lego-style figure made of small cubic blocks — light grey/white blocky body, blocky arms with visible cubic texture. He wears a dark baseball cap with a flat brim (NOT a hood, NOT a hoodie, NOT a helmet). The cap shape is identical to the reference: flat curved brim pointing forward, structured crown. Face features are minimal/abstract — no detailed eyes or mouth. 16:9 cinematic. Avoid: hooded figure, hoodie, robe, cloak, hood, monk, druid, bowler hat, top hat, fedora, helmet, dome head, realistic human face.",
+    "refs": [
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 33.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae088/PBXqwiiBd93DfH-H47yKQ_umuEWR9A.png"
+    ],
+    "saved": [
+      "06_serpentine_aerial_20260519_221446.png"
+    ],
+    "timestamp": "2026-05-19T22:18:02.379793"
+  }
+]

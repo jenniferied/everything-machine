@@ -1,0 +1,40 @@
+[
+  {
+    "run": "20260602_151302",
+    "variant": "v6_lightface",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Elegant, subtle motion. The chrome reflected face in the mirror comes gently alive with a soft, lifelike micro-movement — the lips shift and part very slightly, a delicate natural motion — while the face stays a smooth on-model mirror-chrome surface showing only nose, lips and chin. Inside the mirror, BEHIND the face, the dark starry GALAXY stays clearly reflected and visible — deep space with scattered stars and a soft blue nebula glowing behind her. A soft iridescent holographic shimmer glides across the disc with a faint slow rotation of its rainbow sheen. The chrome hand stays steady and the chin stays solid. The camera stays essentially still, only the faintest float.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caf16/pkjQflMX2OhNhYoGNeOdG_dd_flux_20260602_150012.jpg",
+      "prompt": "Elegant, subtle motion. The chrome reflected face in the mirror comes gently alive with a soft, lifelike micro-movement — the lips shift and part very slightly, a delicate natural motion — while the face stays a smooth on-model mirror-chrome surface showing only nose, lips and chin. Inside the mirror, BEHIND the face, the dark starry GALAXY stays clearly reflected and visible — deep space with scattered stars and a soft blue nebula glowing behind her. A soft iridescent holographic shimmer glides across the disc with a faint slow rotation of its rainbow sheen. The chrome hand stays steady and the chin stays solid. The camera stays essentially still, only the faintest float.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 2583.3,
+    "video_url": "https://v3b.fal.media/files/b/0a9caf2a/0dpczJCGTUdA8cJvryYOn_video.mp4",
+    "saved": "v6_lightface_20260602_151302.mp4",
+    "timestamp": "2026-06-02T15:56:12.504044"
+  },
+  {
+    "run": "20260602_151302",
+    "variant": "v6_moresway",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Elegant, subtle motion. The chrome reflected face in the mirror comes gently alive with a soft, lifelike micro-movement — the lips shift and part very slightly, a delicate natural motion — while the face stays a smooth on-model mirror-chrome surface showing only nose, lips and chin. Inside the mirror, BEHIND the face, the dark starry GALAXY stays clearly reflected and visible — deep space with scattered stars and a soft blue nebula glowing behind her. A soft iridescent holographic shimmer glides across the disc with a faint slow rotation of its rainbow sheen. The chrome hand stays steady and the chin stays solid. The camera sways gently with a slow, smooth drifting motion, a soft cinematic float.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caf16/pkjQflMX2OhNhYoGNeOdG_dd_flux_20260602_150012.jpg",
+      "prompt": "Elegant, subtle motion. The chrome reflected face in the mirror comes gently alive with a soft, lifelike micro-movement — the lips shift and part very slightly, a delicate natural motion — while the face stays a smooth on-model mirror-chrome surface showing only nose, lips and chin. Inside the mirror, BEHIND the face, the dark starry GALAXY stays clearly reflected and visible — deep space with scattered stars and a soft blue nebula glowing behind her. A soft iridescent holographic shimmer glides across the disc with a faint slow rotation of its rainbow sheen. The chrome hand stays steady and the chin stays solid. The camera sways gently with a slow, smooth drifting motion, a soft cinematic float.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 2588.4,
+    "video_url": "https://v3b.fal.media/files/b/0a9caf26/kIc683qa0Ak-mpfuoY-fn_video.mp4",
+    "saved": "v6_moresway_20260602_151302.mp4",
+    "timestamp": "2026-06-02T15:56:14.033053"
+  }
+]

@@ -33,3 +33,6 @@ thesis/academic/thilos-straightA-submission/
 
 # Personal emails
 thesis/submission/abgabe-email.md
+
+# Python cache
+__pycache__/

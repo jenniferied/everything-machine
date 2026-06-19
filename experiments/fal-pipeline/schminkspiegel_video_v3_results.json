@@ -1,0 +1,55 @@
+[
+  {
+    "run": "20260602_145117",
+    "model": "kling_v25_turbo_pro",
+    "endpoint": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The round holographic CD inside the open compact spins, rotating continuously around its centre; its rainbow reflections sweep around as it turns. Static locked camera, no camera movement.",
+    "args": {
+      "duration": "10",
+      "cfg_scale": 0.8,
+      "negative_prompt": ""
+    },
+    "elapsed_s": 82.2,
+    "cost_est": "$1.05",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae9c/Aa2jU78PhUy_VNUWggbWU_output.mp4",
+    "saved": "vid3_kling_v25_turbo_pro_20260602_145117.mp4",
+    "timestamp": "2026-06-02T14:52:44.811385"
+  },
+  {
+    "run": "20260602_145117",
+    "model": "pixverse_v6",
+    "endpoint": "fal-ai/pixverse/v6/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The round holographic CD inside the open compact spins, rotating continuously around its centre; its rainbow reflections sweep around as it turns. Static locked camera, no camera movement.",
+    "args": {
+      "duration": 8,
+      "resolution": "1080p",
+      "thinking_type": "disabled",
+      "generate_audio_switch": false
+    },
+    "elapsed_s": 88.4,
+    "cost_est": "$0.40",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae9c/FS37ItJwGPRbUUekh1WUh_output.mp4",
+    "saved": "vid3_pixverse_v6_20260602_145117.mp4",
+    "timestamp": "2026-06-02T14:52:50.124619"
+  },
+  {
+    "run": "20260602_145117",
+    "model": "seedance_2_0",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The round holographic CD inside the open compact spins, rotating continuously around its centre; its rainbow reflections sweep around as it turns. Static locked camera, no camera movement.",
+    "args": {
+      "duration": "8",
+      "resolution": "1080p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 233.3,
+    "cost_est": "$2.4",
+    "video_url": "https://v3b.fal.media/files/b/0a9caeab/fUwtnJXNOyZLoF2f_Nf4p_video.mp4",
+    "saved": "vid3_seedance_2_0_20260602_145117.mp4",
+    "timestamp": "2026-06-02T14:55:19.307595"
+  }
+]

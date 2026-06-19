@@ -1,0 +1,306 @@
+[
+  {
+    "run": "20260527_105703",
+    "model": "kling_v3",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. The pool water ripples softly all around the ring and the caustic light patterns on the pool floor shimmer and dance with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+    "negative_prompt": "face, eyes, mouth, nose, eyebrows, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, camera pan, camera tilt, camera zoom, camera dolly, camera movement of any kind, scene reframing, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks",
+    "args": {
+      "duration": "5",
+      "generate_audio": false
+    },
+    "elapsed_s": 50.9,
+    "cost_est": "$0.84",
+    "video_url": "https://v3b.fal.media/files/b/0a9bde9b/L7EoqAhJcViICpln9JYFs_output.mp4",
+    "saved": "A_v6_run3_kling_v3_20260527_105703.mp4",
+    "timestamp": "2026-05-27T10:57:58.258489"
+  },
+  {
+    "run": "20260527_110343",
+    "model": "kling_o3",
+    "endpoint": "fal-ai/kling-video/o3/standard/image-to-video",
+    "error": "[{'type': 'missing', 'loc': ['body', 'image_url'], 'msg': 'Field required', 'input': {'start_image_url': 'https://v3b.fal.media/files/b/0a9bdebe/f8j8-ZLsPnlXUUpVP4fz3_A_v6_run3_20260527_104322.png', 'prompt': \"Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. Soft concentric water RIPPLES radiate outward from around the inflatable ring across the turquoise pool, and bright caustic light patterns on the pool floor shimmer and dance continuously with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.\", 'duration': '5', 'generate_audio': False, 'negative_prompt': 'face, eyes, mouth, nose, eyebrows, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, camera pan, camera tilt, camera zoom, camera dolly, camera movement of any kind, scene reframing, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks'}}]",
+    "elapsed_s": 1.7,
+    "cost_est": "$0.84",
+    "timestamp": "2026-05-27T11:03:46.898238"
+  },
+  {
+    "run": "20260527_110343",
+    "model": "veo31",
+    "endpoint": "fal-ai/veo3/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. Soft concentric water RIPPLES radiate outward from around the inflatable ring across the turquoise pool, and bright caustic light patterns on the pool floor shimmer and dance continuously with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+    "args": {
+      "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. Soft concentric water RIPPLES radiate outward from around the inflatable ring across the turquoise pool, and bright caustic light patterns on the pool floor shimmer and dance continuously with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+      "duration": "4s",
+      "generate_audio": false
+    },
+    "elapsed_s": 57.7,
+    "cost_est": "$0.80",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdec4/14ohkYzRktKTPuls432gL_1fe6f6f21ce74e39afd9e08d313cec96.mp4",
+    "saved": "A_v6_run3_veo31_20260527_110343.mp4",
+    "timestamp": "2026-05-27T11:04:46.010150"
+  },
+  {
+    "run": "20260527_110504",
+    "model": "kling_o3",
+    "endpoint": "fal-ai/kling-video/o3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. Soft concentric water RIPPLES radiate outward from around the inflatable ring across the turquoise pool, and bright caustic light patterns on the pool floor shimmer and dance continuously with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+    "args": {
+      "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. Soft concentric water RIPPLES radiate outward from around the inflatable ring across the turquoise pool, and bright caustic light patterns on the pool floor shimmer and dance continuously with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+      "duration": "5",
+      "generate_audio": false,
+      "negative_prompt": "face, eyes, mouth, nose, eyebrows, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, camera pan, camera tilt, camera zoom, camera dolly, camera movement of any kind, scene reframing, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks"
+    },
+    "elapsed_s": 54.6,
+    "cost_est": "$0.84",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdecc/pe8QxrZI44lUQyVv9oYST_output.mp4",
+    "saved": "A_v6_run3_kling_o3_20260527_110504.mp4",
+    "timestamp": "2026-05-27T11:06:03.586386"
+  },
+  {
+    "run": "20260527_113859",
+    "model": "kling_v3",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Static locked-off camera looking down at a turquoise swimming pool. The voxel / lego-block character lies relaxed on the gold inflatable pool ring and drifts ever so gently in place. The pool water ripples softly all around the ring and the caustic light patterns on the pool floor shimmer and dance with the water movement. Everything else stays completely still — the sun loungers, potted plants and palm-leaf shadows on the deck do not move, the flip-flops at the poolside do not move, the framing does not change. The voxel character's body, his cap and his white featureless voxel face / ear stay exactly as they are in the still image — no facial features ever appear, no eyes, no mouth, no nose. Voxel / lego-block art style preserved throughout. Bright summer daylight.",
+    "negative_prompt": "face, eyes, mouth, nose, eyebrows, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, camera pan, camera tilt, camera zoom, camera dolly, camera movement of any kind, scene reframing, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks",
+    "args": {
+      "duration": "15",
+      "generate_audio": false
+    },
+    "elapsed_s": 143.0,
+    "cost_est": "$1.26",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdfa0/iY33YrjhM6DfAV4gPE3Ya_output.mp4",
+    "saved": "A_v6_run3_kling_v3_15s_20260527_113859.mp4",
+    "timestamp": "2026-05-27T11:41:29.722838"
+  },
+  {
+    "run": "20260527_114900",
+    "step": "underwater_video",
+    "model": "kling_v3",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "underwater_still_20260527_114900.png",
+    "prompt": "Underwater pool scene, voxel / lego-block art style. The camera stays still beneath the water surface, looking up at the gold inflatable ring pressing into the rippling surface above and the voxel character's submerged legs and bare feet hanging into the turquoise water. The water surface above ripples and shimmers, bright sunbeams / god-rays continuously dance and shift as they pierce through the surface, caustic light patterns flicker softly on the pool floor below, suspended air bubbles drift slowly upward through the water. The character's legs sway just barely with the water. His white featureless voxel face mask never gains any facial features. Voxel blocks stay sharp throughout. Bright summer pool atmosphere.",
+    "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, character moves out of frame, character swims, character pose changes, camera pan, camera tilt, camera zoom, camera dolly, scene reframing, photorealistic style, loss of voxel blocks, blurry voxels",
+    "args": {
+      "duration": "5",
+      "generate_audio": false
+    },
+    "elapsed_s": 99.9,
+    "cost_est": "$0.42",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdfda/CUm43ZbMDpAHYHJVNWXW7_output.mp4",
+    "saved": "underwater_kling_v3_5s_20260527_114900.mp4",
+    "timestamp": "2026-05-27T11:51:10.408816"
+  },
+  {
+    "run": "20260527_121220",
+    "variant": "orbit",
+    "tier": "standard",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing",
+    "elapsed_s": 64.2,
+    "cost_est": "$0.42",
+    "video_url": "https://v3b.fal.media/files/b/0a9be060/p39shY8EpYLRXaGhtIKHm_output.mp4",
+    "saved": "A_v6_run3_kling_v3_standard_orbit_20260527_121220.mp4",
+    "timestamp": "2026-05-27T12:13:29.955919"
+  },
+  {
+    "run": "20260527_121220",
+    "variant": "dive_in",
+    "tier": "standard",
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer. Bright summer daylight. The CAMERA performs a dramatic DESCENT INTO THE POOL: it starts at the original high angle looking down at the character on the ring, then sweeps continuously DOWNWARD and FORWARD as if a drone-camera diving toward the water surface. By the END of the clip the camera is right at the water surface near the ring, almost touching it — a cinematic plunge toward the float. Smooth continuous motion, no jitter. The voxel character, ring and white face mask stay exactly the same throughout — only the camera's vantage point changes.",
+    "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing",
+    "elapsed_s": 85.7,
+    "cost_est": "$0.42",
+    "video_url": "https://v3b.fal.media/files/b/0a9be069/DpQcRjbR33og77gfsG9iW_output.mp4",
+    "saved": "A_v6_run3_kling_v3_standard_dive_in_20260527_121220.mp4",
+    "timestamp": "2026-05-27T12:14:58.331225"
+  },
+  {
+    "run": "20260527_122400",
+    "variant": "orbit",
+    "tier": "standard",
+    "duration_s": 15,
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing",
+    "elapsed_s": 125.0,
+    "cost_est": "$1.26",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0ac/uD1kfx6DYrv99dxTz9eiP_output.mp4",
+    "saved": "A_v6_run3_kling_v3_standard_orbit_15s_20260527_122400.mp4",
+    "timestamp": "2026-05-27T12:26:11.271332"
+  },
+  {
+    "run": "20260527_122400",
+    "variant": "dive_in",
+    "tier": "standard",
+    "duration_s": 15,
+    "endpoint": "fal-ai/kling-video/v3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer. Bright summer daylight. The CAMERA performs a dramatic DESCENT INTO THE POOL: it starts at the original high angle looking down at the character on the ring, then sweeps continuously DOWNWARD and FORWARD as if a drone-camera diving toward the water surface. By the END of the clip the camera is right at the water surface near the ring, almost touching it — a cinematic plunge toward the float. Smooth continuous motion, no jitter. The voxel character, ring and white face mask stay exactly the same throughout — only the camera's vantage point changes.",
+    "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character pose changes, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing",
+    "elapsed_s": 145.4,
+    "cost_est": "$1.26",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0bb/V-U332jD9Laqm5he0X6LX_output.mp4",
+    "saved": "A_v6_run3_kling_v3_standard_dive_in_15s_20260527_122400.mp4",
+    "timestamp": "2026-05-27T12:28:43.330365"
+  },
+  {
+    "run": "20260527_123349",
+    "label": "orbit_kling_v3_pro",
+    "model": "kling_v3_pro",
+    "endpoint": "fal-ai/kling-video/v3/pro/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+      "duration": "5",
+      "generate_audio": false,
+      "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character sinking into the water, character submerged, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing, pulsing caustics, flickering water"
+    },
+    "elapsed_s": 151.5,
+    "cost_est": "$0.80",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0ea/7hB1OgVA_FH-0cNkReVA2_output.mp4",
+    "saved": "A_v6_run3_orbit_kling_v3_pro_5s_20260527_123349.mp4",
+    "timestamp": "2026-05-27T12:36:26.221970"
+  },
+  {
+    "run": "20260527_123349",
+    "label": "orbit_kling_o3",
+    "model": "kling_o3",
+    "endpoint": "fal-ai/kling-video/o3/standard/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+      "duration": "5",
+      "generate_audio": false,
+      "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character sinking into the water, character submerged, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing, pulsing caustics, flickering water"
+    },
+    "elapsed_s": 54.6,
+    "cost_est": "$0.42",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0ef/6h2ykcSsicEMjuURfshKz_output.mp4",
+    "saved": "A_v6_run3_orbit_kling_o3_5s_20260527_123349.mp4",
+    "timestamp": "2026-05-27T12:37:23.104658"
+  },
+  {
+    "run": "20260527_123349",
+    "label": "orbit_veo31",
+    "model": "veo31",
+    "endpoint": "fal-ai/veo3/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+      "duration": "4s",
+      "generate_audio": false
+    },
+    "elapsed_s": 57.5,
+    "cost_est": "$0.80",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0f5/PN-P78z6DGhBch8waYMPv_7ec83a1b24814f689d0f8395dbf8db40.mp4",
+    "saved": "A_v6_run3_orbit_veo31_5s_20260527_123349.mp4",
+    "timestamp": "2026-05-27T12:38:22.214923"
+  },
+  {
+    "run": "20260527_123349",
+    "label": "orbit_seedance_pro",
+    "model": "seedance_pro",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA slowly ORBITS around the inflatable ring at a constant medium-low altitude — circling smoothly so the viewing angle on the ring and the voxel character gradually shifts through 30-60 degrees over the clip. Smooth cinematic arc movement, no jitter, no zoom. The ring and character stay roughly centred in frame as the world rotates around them.",
+      "duration": "5",
+      "resolution": "1080p",
+      "camera_fixed": false
+    },
+    "elapsed_s": 76.9,
+    "cost_est": "$0.62",
+    "video_url": "https://v3b.fal.media/files/b/0a9be0fd/-NWfoL5g-Cg8ExmkS8XRq_video.mp4",
+    "saved": "A_v6_run3_orbit_seedance_pro_5s_20260527_123349.mp4",
+    "timestamp": "2026-05-27T12:39:42.347564"
+  },
+  {
+    "run": "20260527_123349",
+    "label": "dive_in_kling_v3_pro",
+    "model": "kling_v3_pro",
+    "endpoint": "fal-ai/kling-video/v3/pro/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA performs a dramatic DESCENT INTO THE POOL: it starts at the original high angle looking down at the character on the ring, then sweeps continuously DOWNWARD and FORWARD as if a drone-camera diving toward the water surface. By the END of the clip the camera is right at the water surface near the ring, almost touching it — a cinematic plunge toward the float. Smooth continuous motion, no jitter. The voxel character, ring and white face mask stay exactly the same throughout — only the camera's vantage point changes.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Water ripples and caustic light patterns on the pool floor shimmer SMOOTHLY without pulsing. Bright summer daylight. The CAMERA performs a dramatic DESCENT INTO THE POOL: it starts at the original high angle looking down at the character on the ring, then sweeps continuously DOWNWARD and FORWARD as if a drone-camera diving toward the water surface. By the END of the clip the camera is right at the water surface near the ring, almost touching it — a cinematic plunge toward the float. Smooth continuous motion, no jitter. The voxel character, ring and white face mask stay exactly the same throughout — only the camera's vantage point changes.",
+      "duration": "5",
+      "generate_audio": false,
+      "negative_prompt": "face, eyes, mouth, nose, facial features appearing on the white mask, the white face becoming skin coloured, character sinking into the water, character submerged, character moves around the pool, deformed limbs, melted voxels, photorealistic style, loss of voxel blocks, jittery scene, heavy reframing, pulsing caustics, flickering water"
+    },
+    "elapsed_s": 89.6,
+    "cost_est": "$0.80",
+    "video_url": "https://v3b.fal.media/files/b/0a9be107/xBSSe5Mo4S9hDKD0x80Et_output.mp4",
+    "saved": "A_v6_run3_dive_in_kling_v3_pro_5s_20260527_123349.mp4",
+    "timestamp": "2026-05-27T12:41:14.733923"
+  },
+  {
+    "run": "20260527_125857",
+    "label": "orbit_seedance_pro_12s_A",
+    "model": "seedance_pro_12s_A",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": false
+    },
+    "elapsed_s": 146.3,
+    "cost_est": "$1.50",
+    "video_url": "https://v3b.fal.media/files/b/0a9be180/iWvqI9PUKI0dJ-bEXrwIV_video.mp4",
+    "saved": "A_v6_run3_orbit_seedance_pro_12s_A_20260527_125857.mp4",
+    "timestamp": "2026-05-27T13:01:32.134450"
+  },
+  {
+    "run": "20260527_125857",
+    "label": "orbit_seedance_pro_12s_B",
+    "model": "seedance_pro_12s_B",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": false
+    },
+    "elapsed_s": 144.7,
+    "cost_est": "$1.50",
+    "video_url": "https://v3b.fal.media/files/b/0a9be18f/3tdef9-IvRmNF0ODFqWRx_video.mp4",
+    "saved": "A_v6_run3_orbit_seedance_pro_12s_B_20260527_125857.mp4",
+    "timestamp": "2026-05-27T13:04:02.293875"
+  },
+  {
+    "run": "20260527_125857",
+    "label": "orbit_veo31_8s",
+    "model": "veo31_8s",
+    "endpoint": "fal-ai/veo3/image-to-video",
+    "input": "A_v6_run3_20260527_104322.png",
+    "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+    "args": {
+      "prompt": "Voxel / lego-block style swimming pool scene. The voxel character lies relaxed on the gold inflatable pool ring in the turquoise pool. He wears pink-and-white Hawaiian swim trunks and his face is a featureless plain WHITE voxel mask (no eyes, no mouth, no facial features ever appear). He keeps his dark cap and his relaxed pose throughout. Sun loungers, potted plants and palm shadows on the pool deck. Bright summer daylight, smooth water caustics. The CAMERA performs a CONTINUOUS FULL 360-DEGREE ORBIT around the voxel character and the inflatable ring — completing a full or nearly full circle by the end of the clip. The camera arcs smoothly all the way around the ring at a constant medium-low altitude, so the viewing angle sweeps through the entire circle: we see the character from one side, then from behind, then from the other side, then back near the original angle. Smooth continuous cinematic orbital sweep, NOT a small arc, NOT a subtle shift — a full revolution. The ring and character stay centred in frame as the world rotates around them. No zoom, no jitter.",
+      "duration": "8s",
+      "generate_audio": false
+    },
+    "elapsed_s": 77.4,
+    "cost_est": "$1.60",
+    "video_url": "https://v3b.fal.media/files/b/0a9be197/yjWB93q2uxFd9jwkF2gkT_92aae8389a434f60a3716e1f9dbbe575.mp4",
+    "saved": "A_v6_run3_orbit_veo31_8s_20260527_125857.mp4",
+    "timestamp": "2026-05-27T13:05:21.356268"
+  }
+]

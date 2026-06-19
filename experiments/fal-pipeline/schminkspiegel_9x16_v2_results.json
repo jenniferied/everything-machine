@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "v2_a",
+    "seed_in": 8101,
+    "seed_returned": 8101,
+    "saved": "schmink_v2_a_20260618_231224.mp4",
+    "elapsed_s": 218.3
+  },
+  {
+    "tag": "v2_b",
+    "seed_in": 8102,
+    "seed_returned": 8102,
+    "saved": "schmink_v2_b_20260618_231224.mp4",
+    "elapsed_s": 99.5
+  }
+]

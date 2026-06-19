@@ -1,0 +1,29 @@
+[
+  {
+    "name": "behind_chase",
+    "source": "behind_chase_A_fix_20260527_110811.mp4",
+    "crop": "612x1088",
+    "topaz_factor": 2,
+    "topaz_dims": "1224,2176",
+    "final": "behind_chase_9x16_1080x1920.mp4",
+    "elapsed_s": 26.5
+  },
+  {
+    "name": "kling_spiral",
+    "source": "kling3_pro_loop_20260519_180235_v2.mp4",
+    "crop": "603x1072",
+    "topaz_factor": 2,
+    "topaz_dims": "1204,2144",
+    "final": "kling_spiral_9x16_1080x1920.mp4",
+    "elapsed_s": 27.1
+  },
+  {
+    "name": "schminkspiegel_v6",
+    "source": "v6_moresway_20260602_151302.mp4",
+    "crop": "469x834",
+    "topaz_factor": 4,
+    "topaz_dims": "1872,3336",
+    "final": "schminkspiegel_v6_9x16_1080x1920.mp4",
+    "elapsed_s": 126.2
+  }
+]

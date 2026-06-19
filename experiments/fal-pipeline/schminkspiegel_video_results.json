@@ -1,0 +1,43 @@
+[
+  {
+    "run": "20260602_142627",
+    "model": "pixverse_v55",
+    "endpoint": "fal-ai/pixverse/v5.5/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The iridescent holographic CD resting in the lower pan of the compact spins steadily and smoothly around its centre, its rainbow light reflections shimmering and shifting as it rotates. Her long flowing hair sways and drifts very gently, a soft subtle movement. Everything else stays completely still and holds its position — the chrome hand, the open compact and the chrome reflected face with berry lips remain stable. Locked static camera, no camera movement, no zoom.",
+    "args": {
+      "duration": 8,
+      "generate_audio_switch": false,
+      "thinking_type": "disabled"
+    },
+    "elapsed_s": 70.3,
+    "cost_est": "$0.30",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae09/24r_CRHur5lRk_SvufGk7_output.mp4",
+    "saved": "vid_pixverse_v55_8s_20260602_142627.mp4",
+    "timestamp": "2026-06-02T14:27:42.353457"
+  },
+  {
+    "run": "20260602_142627",
+    "model": "veo31_fast",
+    "endpoint": "fal-ai/veo3.1/fast/image-to-video",
+    "error": "[{'loc': ['body'], 'msg': 'The model did not generate the expected output for this prompt. This may occur for several reasons, including unsafe content, a prompt that is incompatible with the selected media type (e.g., prompting an image model to generate audio), references to missing attachments, or other cases where the input cannot be processed as the requested output type. Please review your inputs and try again. If the issue persists, contact support.', 'type': 'no_media_generated', 'url': 'https://docs.fal.ai/errors#no_media_generated', 'input': {'prompt': 'The iridescent holographic CD resting in the lower pan of the compact spins steadily and smoothly around its centre, its rainbow light reflections shimmering and shifting as it rotates. Her long flowing hair sways and drifts very gently, a soft subtle movement. Everything else stays completely still and holds its position — the chrome hand, the open compact and the chrome reflected face with berry lips remain stable. Locked static camera, no camera movement, no zoom.', 'aspect_ratio': 'auto', 'duration': '8s', 'negative_prompt': None, 'resolution': '720p', 'generate_audio': False, 'seed': None, 'auto_fix': False, 'safety_tolerance': '4', 'image_url': 'https://v3b.fal.media/files/b/0a9cadfe/PyUFB3Dg68Ga0FDeaZc_h_ext_4x3_run2_20260602_140520.png'}}]",
+    "elapsed_s": 171.9,
+    "timestamp": "2026-06-02T14:29:21.839018"
+  },
+  {
+    "run": "20260602_142627",
+    "model": "veo3",
+    "endpoint": "fal-ai/veo3/image-to-video",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "The iridescent holographic CD resting in the lower pan of the compact spins steadily and smoothly around its centre, its rainbow light reflections shimmering and shifting as it rotates. Her long flowing hair sways and drifts very gently, a soft subtle movement. Everything else stays completely still and holds its position — the chrome hand, the open compact and the chrome reflected face with berry lips remain stable. Locked static camera, no camera movement, no zoom.",
+    "args": {
+      "duration": "8s",
+      "generate_audio": false
+    },
+    "elapsed_s": 211.7,
+    "cost_est": "$1.60",
+    "video_url": "https://v3b.fal.media/files/b/0a9cae14/VQtVwHYiMo_VwRDvuerJI_8d45537e4c644506b5829d69aaecf870.mp4",
+    "saved": "vid_veo3_8s_20260602_142627.mp4",
+    "timestamp": "2026-06-02T14:30:03.267545"
+  }
+]

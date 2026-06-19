@@ -1,0 +1,72 @@
+[
+  {
+    "run": "20260519_225352",
+    "variant": "01_front_hero_v3_mirror_fix",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the low-angle front hero shot of the red Mercedes W123 at night on the bridge — same framing, same chrome grille, same headlights, same street-lamp bokeh, same teal-orange grading. FIX 1: Front license plate must read EXACTLY 'KEP·LE 18' (NOT 'KEP·LE 23' as currently). German license plate: white background, black bold characters, blue EU strip on the left with 'D' and EU stars. Plate text reads EXACTLY: 'KEP·LE 18' (KEP = fictional Kepler county code, then the small round official seal, then LE 18). Round TUV/inspection sticker visible in the upper-right area of the rear plate (small round yellow/orange badge). Plate text is sharp and legible. FIX 2: Side mirrors of the Mercedes must be period-correct W123 mirrors — thin chrome stalks with small rectangular mirror heads mounted on the front edges of the doors. NOT oversized modern mirrors. FIX 3: Driver behind the windshield is the Kepler voxel character — Kepler voxel character (strict per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, brown voxel hair, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap, well-structured with a clearly visible THICK flat curved brim that protrudes forward and casts a shadow over the upper face. The cap is full and solid, NOT thin or flattened. BROWN voxel hair (small brown cubic blocks, same voxel resolution as the body) is visible peeking out from under the cap — from the back of the head and slightly at the sides. The face is ABSTRACT and FEATURELESS: pure light-grey voxel blocks, NO eyes, NO mouth, NO nose. The ear is minimal — barely a hint, NOT prominent or detailed. Cap is opaque. DO NOT render him as a cartoon character, DO NOT smooth out the voxel blocks, DO NOT add human facial detail. 1976-1985 Mercedes-Benz W123 sedan in deep red: 4 round headlights, square chrome grille with the three-pointed Mercedes star centered on top, chrome bumpers, boxy European 4-door sedan silhouette. CORRECT side mirrors: thin chrome stalks with small rectangular mirror heads mounted on the front of the front doors (period-correct W123 mirrors, NOT modern oversized mirrors, NOT round mirrors). Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, cartoonish character, smooth non-voxel character, Pixar style, anime style, prominent detailed ear, oversized modern side mirrors, round side mirrors, deformed steering wheel, random sticker on grille, blank circular sticker, wrong license plate text.",
+    "refs": [
+      "01_front_hero_fixed_kep_plate_20260519_224312.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.2,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae164/okc4kCPxQr5Ul3Xghkux__QIlrUQ3N.png"
+    ],
+    "saved": [
+      "01_front_hero_v3_mirror_fix_20260519_225352.png"
+    ],
+    "timestamp": "2026-05-19T22:54:29.075167"
+  },
+  {
+    "run": "20260519_225352",
+    "variant": "02_rear_hero_strict_voxel",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a low-angle hero shot from BEHIND the same red Mercedes W123 sedan at night on a bridge with street lamps. Camera close to the asphalt, looking up at the rear of the car. Show the iconic W123 rear: large rectangular red tail-light clusters with horizontal ribs glowing intensely red, chrome rear bumper, the boxy trunk and rear window. Rear license plate must read EXACTLY 'KEP·LE 18'. German license plate: white background, black bold characters, blue EU strip on the left with 'D' and EU stars. Plate text reads EXACTLY: 'KEP·LE 18' (KEP = fictional Kepler county code, then the small round official seal, then LE 18). Round TUV/inspection sticker visible in the upper-right area of the rear plate (small round yellow/orange badge). Plate text is sharp and legible. Driver silhouette of the Kepler voxel character visible through the rear windshield with cap. Kepler voxel character (strict per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, brown voxel hair, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap, well-structured with a clearly visible THICK flat curved brim that protrudes forward and casts a shadow over the upper face. The cap is full and solid, NOT thin or flattened. BROWN voxel hair (small brown cubic blocks, same voxel resolution as the body) is visible peeking out from under the cap — from the back of the head and slightly at the sides. The face is ABSTRACT and FEATURELESS: pure light-grey voxel blocks, NO eyes, NO mouth, NO nose. The ear is minimal — barely a hint, NOT prominent or detailed. Cap is opaque. DO NOT render him as a cartoon character, DO NOT smooth out the voxel blocks, DO NOT add human facial detail. 1976-1985 Mercedes-Benz W123 sedan in deep red: 4 round headlights, square chrome grille with the three-pointed Mercedes star centered on top, chrome bumpers, boxy European 4-door sedan silhouette. CORRECT side mirrors: thin chrome stalks with small rectangular mirror heads mounted on the front of the front doors (period-correct W123 mirrors, NOT modern oversized mirrors, NOT round mirrors). Cinematic 16:9, deep blue night sky, warm sodium street lamps, intense red glow from taillights, high contrast. IMPORTANT: render the driver as a STRICT VOXEL figure (small cubic blocks), NOT as a cartoon, NOT as Pixar, NOT smooth. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, cartoonish character, smooth non-voxel character, Pixar style, anime style, prominent detailed ear, oversized modern side mirrors, round side mirrors, deformed steering wheel, random sticker on grille, blank circular sticker, wrong license plate text.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.6,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae166/bjtNnDHREJdFnLtabh7Ei_uqvcC56C.png"
+    ],
+    "saved": [
+      "02_rear_hero_strict_voxel_20260519_225352.png"
+    ],
+    "timestamp": "2026-05-19T22:54:54.960353"
+  },
+  {
+    "run": "20260519_225352",
+    "variant": "03_interior_cap_thick_hair_seatbelt",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "error": "[Errno 8] nodename nor servname provided, or not known",
+    "elapsed_s": 8448.1,
+    "timestamp": "2026-05-20T01:15:43.058217"
+  },
+  {
+    "run": "20260519_225352",
+    "variant": "04_wide_establishing_grill_sticker_fix",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "error": "[Errno 8] nodename nor servname provided, or not known",
+    "elapsed_s": 55.9,
+    "timestamp": "2026-05-20T01:16:38.948269"
+  },
+  {
+    "run": "20260519_225352",
+    "variant": "05_3q_rear_bg_blur_glass_clear",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "error": "[Errno 8] nodename nor servname provided, or not known",
+    "elapsed_s": 44.8,
+    "timestamp": "2026-05-20T01:17:23.768475"
+  },
+  {
+    "run": "20260519_225352",
+    "variant": "06_front_magenta_cyan_mirror_fix",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "error": "[Errno 8] nodename nor servname provided, or not known",
+    "elapsed_s": 58.2,
+    "timestamp": "2026-05-20T01:18:21.919844"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "run": "20260519_223740",
+    "variant": "01_keep_unreal_compo_clean_kepler",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the composition, framing, lighting and atmosphere as is: portrait frontal shot of the red Mercedes W123 at night on a bridge, deep blue sky with clouds, street lamps in the background. KEEP the red Mercedes itself unchanged. REPLACE the driver behind the windshield with a cleaner, sharper version of the Kepler voxel character from the second reference. Driver is the Kepler voxel character from the second reference: small humanoid figure built from many small cubic voxel blocks, white/light grey blocky upper body with visible cubic texture, dark hair/cap on the head, dark trousers. Abstract minimal face. Same proportions and voxel resolution as in the A-pose reference. He sits behind the steering wheel, visible from chest up through the windshield, cap on his head. Improve the rendering quality of the character — crisper voxel edges, less mushy. Avoid: convertible, Cadillac, American muscle car, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "9:16",
+    "elapsed_s": 25.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae102/7aCF3SlWRg3mKl1uwkES2_6sDBmRAN.png"
+    ],
+    "saved": [
+      "01_keep_unreal_compo_clean_kepler_20260519_223740.png"
+    ],
+    "timestamp": "2026-05-19T22:38:12.045595"
+  },
+  {
+    "run": "20260519_223740",
+    "variant": "02_landscape_16x9_same_compo",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-frame this scene as a cinematic 16:9 landscape: same red Mercedes W123 frontal hero shot at night on a bridge, but with more horizontal context — both ends of the bridge, sky stretched wider, street lamps on both sides. Kepler voxel character driving. The car is a red vintage Mercedes-Benz W123 sedan, EXACTLY as shown in the first reference: deep red paint, square chrome grille with the Mercedes star, four round headlights, boxy 1970s/80s European sedan silhouette, German license plate reading 'MR W123'. Preserve the car identity precisely. Driver is the Kepler voxel character from the second reference: small humanoid figure built from many small cubic voxel blocks, white/light grey blocky upper body with visible cubic texture, dark hair/cap on the head, dark trousers. Abstract minimal face. Same proportions and voxel resolution as in the A-pose reference. Cinematic, moody night colour grade. Avoid: convertible, Cadillac, American muscle car, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 30.4,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae105/G5HMua5D8kA4sOFIfXdUW_DEBhHJZ2.png"
+    ],
+    "saved": [
+      "02_landscape_16x9_same_compo_20260519_223740.png"
+    ],
+    "timestamp": "2026-05-19T22:38:43.934598"
+  },
+  {
+    "run": "20260519_223740",
+    "variant": "03_low_angle_hero_mercedes",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a low-angle hero shot of the same red Mercedes W123 from the first reference: camera close to the asphalt looking up at the front of the car on a night bridge, headlights blazing, chrome grille dominant, the chrome Mercedes star glinting. Driver visible through the windshield: the Kepler voxel character. The car is a red vintage Mercedes-Benz W123 sedan, EXACTLY as shown in the first reference: deep red paint, square chrome grille with the Mercedes star, four round headlights, boxy 1970s/80s European sedan silhouette, German license plate reading 'MR W123'. Preserve the car identity precisely. Driver is the Kepler voxel character from the second reference: small humanoid figure built from many small cubic voxel blocks, white/light grey blocky upper body with visible cubic texture, dark hair/cap on the head, dark trousers. Abstract minimal face. Same proportions and voxel resolution as in the A-pose reference. Cinematic 16:9, underexposed sky, warm headlight bounce. Avoid: convertible, Cadillac, American muscle car, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 27.1,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae108/w_6GxgQcZYzih2_FgcFUM_HmyxeExt.png"
+    ],
+    "saved": [
+      "03_low_angle_hero_mercedes_20260519_223740.png"
+    ],
+    "timestamp": "2026-05-19T22:39:12.063894"
+  },
+  {
+    "run": "20260519_223740",
+    "variant": "04_side_profile_bridge",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a side profile shot of the same red Mercedes W123 driving across a night bridge — the entire boxy silhouette visible in profile, chrome trim, square headlights, the distinctive Mercedes W123 shape. Bridge structure and street lamps in the background as in the first reference. Driver silhouette visible through the side windows: Kepler voxel character. The car is a red vintage Mercedes-Benz W123 sedan, EXACTLY as shown in the first reference: deep red paint, square chrome grille with the Mercedes star, four round headlights, boxy 1970s/80s European sedan silhouette, German license plate reading 'MR W123'. Preserve the car identity precisely. Driver is the Kepler voxel character from the second reference: small humanoid figure built from many small cubic voxel blocks, white/light grey blocky upper body with visible cubic texture, dark hair/cap on the head, dark trousers. Abstract minimal face. Same proportions and voxel resolution as in the A-pose reference. Cinematic 16:9. Avoid: convertible, Cadillac, American muscle car, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae10b/OQ8opcp71CaP8ffBsb6vQ_uKlqpBV0.png"
+    ],
+    "saved": [
+      "04_side_profile_bridge_20260519_223740.png"
+    ],
+    "timestamp": "2026-05-19T22:39:39.115253"
+  },
+  {
+    "run": "20260519_223740",
+    "variant": "05_cockpit_interior_pov_mercedes",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create an interior shot inside the same red Mercedes W123: camera at the passenger seat looking toward the driver and forward through the windshield. Authentic Mercedes W123 70s/80s interior: cream-coloured leather seats and door panels (as hinted in the first reference), simple wooden dashboard with round analog gauges glowing amber, large thin-rimmed steering wheel with chrome Mercedes horn pad. Through the windshield: the night bridge ahead. Driver is the Kepler voxel character from the second reference. Driver is the Kepler voxel character from the second reference: small humanoid figure built from many small cubic voxel blocks, white/light grey blocky upper body with visible cubic texture, dark hair/cap on the head, dark trousers. Abstract minimal face. Same proportions and voxel resolution as in the A-pose reference. Cinematic 16:9. Avoid: convertible, Cadillac, American muscle car, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard.",
+    "refs": [
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 34.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae10d/WaZFopVFD1xpzVJQfQnPD_AupG0jEC.png"
+    ],
+    "saved": [
+      "05_cockpit_interior_pov_mercedes_20260519_223740.png"
+    ],
+    "timestamp": "2026-05-19T22:40:15.134903"
+  }
+]

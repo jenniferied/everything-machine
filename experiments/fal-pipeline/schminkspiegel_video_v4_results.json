@@ -1,0 +1,40 @@
+[
+  {
+    "run": "20260602_150143",
+    "variant": "seedance2_static",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "The round holographic disc sitting in the lower tray spins like a vinyl record on a turntable, rotating steadily and continuously around its centre; the radial rainbow streaks sweep around the disc as it turns. Locked static camera, no camera movement.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caed2/iLjGQL5xbU5LEg0wG4GKb_dd_flux_20260602_150012.jpg",
+      "prompt": "The round holographic disc sitting in the lower tray spins like a vinyl record on a turntable, rotating steadily and continuously around its centre; the radial rainbow streaks sweep around the disc as it turns. Locked static camera, no camera movement.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 161.7,
+    "video_url": "https://v3b.fal.media/files/b/0a9caee2/rwFXnmd-TUk0S5xrHQaH9_video.mp4",
+    "saved": "vid4_seedance2_static_20260602_150143.mp4",
+    "timestamp": "2026-06-02T15:04:27.951525"
+  },
+  {
+    "run": "20260602_150143",
+    "variant": "seedance2_sway",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "The round holographic disc sitting in the lower tray spins like a vinyl record on a turntable, rotating steadily and continuously around its centre; the radial rainbow streaks sweep around the disc as it turns. The camera slowly and gently sways, a subtle floating drift, while the subject stays centred.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caed2/iLjGQL5xbU5LEg0wG4GKb_dd_flux_20260602_150012.jpg",
+      "prompt": "The round holographic disc sitting in the lower tray spins like a vinyl record on a turntable, rotating steadily and continuously around its centre; the radial rainbow streaks sweep around the disc as it turns. The camera slowly and gently sways, a subtle floating drift, while the subject stays centred.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 168.5,
+    "video_url": "https://v3b.fal.media/files/b/0a9caee3/BocFCydrkxCc0QVhzPdHZ_video.mp4",
+    "saved": "vid4_seedance2_sway_20260602_150143.mp4",
+    "timestamp": "2026-06-02T15:04:34.852801"
+  }
+]

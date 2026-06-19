@@ -1,0 +1,82 @@
+[
+  {
+    "run": "20260519_223110",
+    "variant": "01_cabrio_through_hex_tunnel",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. Keep the surreal blue-neon hexagonal tunnel exactly as is — its geometry, glowing edges, perspective and color palette. Composite the Cadillac from the second reference into the tunnel: the car is driving toward the camera out of the hexagonal corridor, slightly off-center, headlights blazing warm against the cool blue neon. Add the voxel character from the third reference as driver, visible behind the windshield. Vintage lego-block convertible Cadillac, same as in the Cadillac reference: square chrome grille, four glowing headlights, sharp 1970s boxy silhouette, body assembled from lego-like blocks. Driver: small voxel/lego-style figure, light grey/white cubic blocks, dark baseball cap with flat curved brim (NOT a hood). Abstract minimal face. The hexagonal neon light reflects on the car's chrome and paint. Cinematic 16:9, dramatic contrast. Avoid: hooded figure, hoodie, robe, monk, realistic human driver, deformed car, blurry car.",
+    "refs": [
+      "unreal-hexagon-tunnel-neon.png",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 40.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0dc/HILjjA5qrcIF3dskiHU80_RqX5YvB3.png"
+    ],
+    "saved": [
+      "01_cabrio_through_hex_tunnel_20260519_223110.png"
+    ],
+    "timestamp": "2026-05-19T22:32:02.138777"
+  },
+  {
+    "run": "20260519_223110",
+    "variant": "02_cabrio_at_tunnel_exit",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a wide cinematic frame: the Cadillac from the second reference has just exited the blue-neon hexagonal tunnel from the first reference and is now driving on a dark road, the glowing hexagonal tunnel mouth still visible behind it like a portal. Voxel character driver from the third reference. Vintage lego-block convertible Cadillac, same as in the Cadillac reference: square chrome grille, four glowing headlights, sharp 1970s boxy silhouette, body assembled from lego-like blocks. Driver: small voxel/lego-style figure, light grey/white cubic blocks, dark baseball cap with flat curved brim (NOT a hood). Abstract minimal face. Cool neon blue rim light on the car from behind, warm headlights ahead. 16:9 cinematic. Avoid: hooded figure, hoodie, robe, monk, realistic human driver, deformed car, blurry car.",
+    "refs": [
+      "unreal-hexagon-tunnel-neon.png",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 33.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0e0/sQltaY0P0LO206z5HdByN_4HBzeMm5.png"
+    ],
+    "saved": [
+      "02_cabrio_at_tunnel_exit_20260519_223110.png"
+    ],
+    "timestamp": "2026-05-19T22:32:36.607088"
+  },
+  {
+    "run": "20260519_223110",
+    "variant": "03_cabrio_at_kapuzenberge_wide",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. REMOVE the cloaked/hooded figure completely. KEEP the dramatic mountain landscape, the stormy clouds, the desaturated grey-purple palette. Add the Cadillac from the second reference parked on a rocky outcrop in the foreground, three-quarter view, looking out over the mountains. The voxel character driver from the third reference stands beside the open driver door, looking out at the view, his cap silhouetted against the sky. Vintage lego-block convertible Cadillac, same as in the Cadillac reference: square chrome grille, four glowing headlights, sharp 1970s boxy silhouette, body assembled from lego-like blocks. Driver: small voxel/lego-style figure, light grey/white cubic blocks, dark baseball cap with flat curved brim (NOT a hood). Abstract minimal face. Cinematic 16:9. Avoid: hooded figure, hoodie, robe, monk, realistic human driver, deformed car, blurry car.",
+    "refs": [
+      "unreal-kapuzenfigur-berge.png",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 50.2,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0e3/p3pJ0bzqk74yEi-pjXjEj_2kjalU7G.png"
+    ],
+    "saved": [
+      "03_cabrio_at_kapuzenberge_wide_20260519_223110.png"
+    ],
+    "timestamp": "2026-05-19T22:33:28.050249"
+  },
+  {
+    "run": "20260519_223110",
+    "variant": "04_cabrio_mountain_road_serpentine",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Use the dramatic mountain landscape and cloudy-purple sky from the first reference as the world. REMOVE the hooded figure. Add a winding mountain road carved into the cliffs leading toward the camera, and on it the Cadillac from the second reference, headlights on, driving toward the viewer. Voxel character driver visible. Vintage lego-block convertible Cadillac, same as in the Cadillac reference: square chrome grille, four glowing headlights, sharp 1970s boxy silhouette, body assembled from lego-like blocks. Driver: small voxel/lego-style figure, light grey/white cubic blocks, dark baseball cap with flat curved brim (NOT a hood). Abstract minimal face. Cinematic 16:9. Avoid: hooded figure, hoodie, robe, monk, realistic human driver, deformed car, blurry car.",
+    "refs": [
+      "unreal-kapuzenfigur-berge.png",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0e8/pbkJTKBz49Kg2dQ0yvPRT_jFsrIqKU.png"
+    ],
+    "saved": [
+      "04_cabrio_mountain_road_serpentine_20260519_223110.png"
+    ],
+    "timestamp": "2026-05-19T22:33:55.542756"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "run": "20260602_141354",
+    "label": "bgdepth_flux",
+    "model": "flux",
+    "endpoint": "fal-ai/flux-pro/kontext/max",
+    "src": "ext_4x3_run1_20260602_140520.png",
+    "prompt": "Keep the chrome hand, the open compact, the holographic CD and the chrome reflected face with its berry lips EXACTLY unchanged in the centre — same shapes, pose, colours and framing. ONLY in the BACKGROUND behind the subject, add subtle extra DEPTH and DIMENSION to the dark galaxy: a few more soft layers of deep-blue and faint violet nebula clouds receding into the distance, scattered distant stars at varying depths, a gentle sense of cosmic depth. Keep it subtle, dark and mostly black, do not brighten or overpower the subject.",
+    "elapsed_s": 12.5,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a9cadb8/C5ZdV1pax9lUCqBm8ngpX_67b32de93858449599807499da09b3aa.jpg",
+    "saved": "bg_flux_20260602_141354.jpg",
+    "timestamp": "2026-06-02T14:14:10.757539"
+  },
+  {
+    "run": "20260602_141354",
+    "label": "bgdepth_nano2",
+    "model": "nano2",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "ext_4x3_run1_20260602_140520.png",
+    "prompt": "Keep the chrome hand, the open compact, the holographic CD and the chrome reflected face with its berry lips EXACTLY unchanged in the centre — same shapes, pose, colours and framing. ONLY in the BACKGROUND behind the subject, add subtle extra DEPTH and DIMENSION to the dark galaxy: a few more soft layers of deep-blue and faint violet nebula clouds receding into the distance, scattered distant stars at varying depths, a gentle sense of cosmic depth. Keep it subtle, dark and mostly black, do not brighten or overpower the subject.",
+    "elapsed_s": 24.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cadb3/dMXFE8LvmfimmJpNJPJ_g_DYgpWdJU.png",
+    "saved": "bg_nano2_20260602_141354.png",
+    "timestamp": "2026-06-02T14:14:22.409685"
+  },
+  {
+    "run": "20260602_141354",
+    "label": "bgdepth_nano1",
+    "model": "nano1",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "ext_4x3_run1_20260602_140520.png",
+    "prompt": "Keep the chrome hand, the open compact, the holographic CD and the chrome reflected face with its berry lips EXACTLY unchanged in the centre — same shapes, pose, colours and framing. ONLY in the BACKGROUND behind the subject, add subtle extra DEPTH and DIMENSION to the dark galaxy: a few more soft layers of deep-blue and faint violet nebula clouds receding into the distance, scattered distant stars at varying depths, a gentle sense of cosmic depth. Keep it subtle, dark and mostly black, do not brighten or overpower the subject.",
+    "elapsed_s": 31.0,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cadb3/kKUACcfBQ0ir5PANxgnWr_VmHVpJy5.png",
+    "saved": "bg_nano1_20260602_141354.png",
+    "timestamp": "2026-06-02T14:14:29.255745"
+  }
+]

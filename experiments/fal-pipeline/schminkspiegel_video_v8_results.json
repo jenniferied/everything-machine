@@ -1,0 +1,40 @@
+[
+  {
+    "run": "20260603_192616",
+    "variant": "v8_ef120",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "start": "dd_flux_20260602_150012.jpg",
+    "end": "end_rot120_20260603_192438.png",
+    "prompt": "Static locked camera, absolutely no camera movement. The chrome reflected face, its closed lips, the chrome hand and the compact all stay completely still and unchanged. The ONLY motion is the round holographic disc, which spins smoothly and continuously around its centre, its rainbow streaks rotating. The dark starry galaxy stays reflected in the mirror behind the face.",
+    "args": {
+      "prompt": "Static locked camera, absolutely no camera movement. The chrome reflected face, its closed lips, the chrome hand and the compact all stay completely still and unchanged. The ONLY motion is the round holographic disc, which spins smoothly and continuously around its centre, its rainbow streaks rotating. The dark starry galaxy stays reflected in the mirror behind the face.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 156.9,
+    "video_url": "https://v3b.fal.media/files/b/0a9cd6d5/qoDfnvq1fzjPHvovU29CO_video.mp4",
+    "saved": "v8_ef120_20260603_192616.mp4",
+    "timestamp": "2026-06-03T19:28:58.639730"
+  },
+  {
+    "run": "20260603_192616",
+    "variant": "v8_ef200",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "start": "dd_flux_20260602_150012.jpg",
+    "end": "end_rot200_20260603_192438.png",
+    "prompt": "Static locked camera, absolutely no camera movement. The chrome reflected face, its closed lips, the chrome hand and the compact all stay completely still and unchanged. The ONLY motion is the round holographic disc, which spins smoothly and continuously around its centre, its rainbow streaks rotating. The dark starry galaxy stays reflected in the mirror behind the face.",
+    "args": {
+      "prompt": "Static locked camera, absolutely no camera movement. The chrome reflected face, its closed lips, the chrome hand and the compact all stay completely still and unchanged. The ONLY motion is the round holographic disc, which spins smoothly and continuously around its centre, its rainbow streaks rotating. The dark starry galaxy stays reflected in the mirror behind the face.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 197.9,
+    "video_url": "https://v3b.fal.media/files/b/0a9cd6d9/RuBMhM3q8FUza0iLOaYXU_video.mp4",
+    "saved": "v8_ef200_20260603_192616.mp4",
+    "timestamp": "2026-06-03T19:29:39.376165"
+  }
+]

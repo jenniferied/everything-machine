@@ -1,0 +1,42 @@
+[
+  {
+    "tag": "epic_wide_nano",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "saved": "epic_wide_nano_20260619_104233.png"
+  },
+  {
+    "tag": "epic_wide_seedream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "saved": "epic_wide_seedream_20260619_104233.png"
+  },
+  {
+    "tag": "low_angle_nano",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "saved": "low_angle_nano_20260619_104233.png"
+  },
+  {
+    "tag": "low_angle_seedream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "saved": "low_angle_seedream_20260619_104233.png"
+  },
+  {
+    "tag": "three_quarter_nano",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "saved": "three_quarter_nano_20260619_104233.png"
+  },
+  {
+    "tag": "three_quarter_seedream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "saved": "three_quarter_seedream_20260619_104233.png"
+  },
+  {
+    "tag": "follow_nano",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "saved": "follow_nano_20260619_104233.png"
+  },
+  {
+    "tag": "follow_seedream",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "saved": "follow_seedream_20260619_104233.png"
+  }
+]

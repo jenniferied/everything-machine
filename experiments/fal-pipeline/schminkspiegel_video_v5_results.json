@@ -1,0 +1,40 @@
+[
+  {
+    "run": "20260602_150727",
+    "variant": "v5_still",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Very calm, minimal motion. Only a soft iridescent holographic shimmer of light glides gently across the round disc, with a faint slow rotation of its rainbow sheen. The chrome reflected face — its nose, lips and chin — stays completely solid, smooth and unchanged, perfectly stable. The dark starry galaxy background stays calm and steady. Clean and elegant. Locked static camera, no camera movement at all.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caef4/EEhL_LJhLeUmHrv3wX8Om_dd_flux_20260602_150012.jpg",
+      "prompt": "Very calm, minimal motion. Only a soft iridescent holographic shimmer of light glides gently across the round disc, with a faint slow rotation of its rainbow sheen. The chrome reflected face — its nose, lips and chin — stays completely solid, smooth and unchanged, perfectly stable. The dark starry galaxy background stays calm and steady. Clean and elegant. Locked static camera, no camera movement at all.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 161.3,
+    "video_url": "https://v3b.fal.media/files/b/0a9caf08/ifTpdGX-SD8SBZ9vwc1cA_video.mp4",
+    "saved": "v5_still_20260602_150727.mp4",
+    "timestamp": "2026-06-02T15:10:12.153647"
+  },
+  {
+    "run": "20260602_150727",
+    "variant": "v5_softfloat",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Very calm, minimal motion. Only a soft iridescent holographic shimmer of light glides gently across the round disc, with a faint slow rotation of its rainbow sheen. The chrome reflected face — its nose, lips and chin — stays completely solid, smooth and unchanged, perfectly stable. The dark starry galaxy background stays calm and steady. Clean and elegant. The camera holds almost perfectly still, with only the faintest, slowest floating drift.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9caef4/EEhL_LJhLeUmHrv3wX8Om_dd_flux_20260602_150012.jpg",
+      "prompt": "Very calm, minimal motion. Only a soft iridescent holographic shimmer of light glides gently across the round disc, with a faint slow rotation of its rainbow sheen. The chrome reflected face — its nose, lips and chin — stays completely solid, smooth and unchanged, perfectly stable. The dark starry galaxy background stays calm and steady. Clean and elegant. The camera holds almost perfectly still, with only the faintest, slowest floating drift.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false
+    },
+    "elapsed_s": 176.2,
+    "video_url": "https://v3b.fal.media/files/b/0a9caf06/hyba6r0jw_ncfDorsU8Fm_video.mp4",
+    "saved": "v5_softfloat_20260602_150727.mp4",
+    "timestamp": "2026-06-02T15:10:26.791310"
+  }
+]

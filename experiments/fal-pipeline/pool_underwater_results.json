@@ -1,0 +1,199 @@
+[
+  {
+    "run": "20260527_114900",
+    "step": "underwater_still",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere.",
+    "aspect_ratio": "16:9",
+    "source": "A_v6_run3_20260527_104322.png",
+    "elapsed_s": 22.7,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bdfce/L1GbdpfJTTdp-BczWLxRH_Aq1eBPf8.png",
+    "saved": "underwater_still_20260527_114900.png",
+    "timestamp": "2026-05-27T11:49:26.428642"
+  },
+  {
+    "run": "20260527_115639",
+    "label": "NanoBanana Pro run A",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bdffc/CQWaiNPj5YbUalRQ4zCVW_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 32.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bdffc/E-ajeKsRk4Xb-mcCLl9Wy_UmKEvV9R.png",
+    "saved": "uw_nanobanana_A_20260527_115639.png",
+    "timestamp": "2026-05-27T11:57:15.906658"
+  },
+  {
+    "run": "20260527_115639",
+    "label": "NanoBanana Pro run B",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bdffc/CQWaiNPj5YbUalRQ4zCVW_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 50.9,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9bdfff/qWXmb4Lvo_fvHAy9mPvt2_YskJWZtS.png",
+    "saved": "uw_nanobanana_B_20260527_115639.png",
+    "timestamp": "2026-05-27T11:58:08.240128"
+  },
+  {
+    "run": "20260527_115639",
+    "label": "NanoBanana Pro run C",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bdffc/CQWaiNPj5YbUalRQ4zCVW_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 26.3,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be004/QLWwlnCd--SZBFAvk64bv_WRl9q9pt.png",
+    "saved": "uw_nanobanana_C_20260527_115639.png",
+    "timestamp": "2026-05-27T11:58:35.555306"
+  },
+  {
+    "run": "20260527_115639",
+    "label": "GPT-Image-1.5 edit",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bdffc/CQWaiNPj5YbUalRQ4zCVW_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere.",
+      "quality": "medium",
+      "image_size": "1536x1024"
+    },
+    "elapsed_s": 27.9,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be007/_ywhnKoumENd5e9Qt5eFV_kIKh32Jn.png",
+    "saved": "uw_gpt15_20260527_115639.png",
+    "timestamp": "2026-05-27T11:59:05.994187"
+  },
+  {
+    "run": "20260527_115639",
+    "label": "Seedream v4.5 edit",
+    "model": "fal-ai/bytedance/seedream/v4.5/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9bdffc/CQWaiNPj5YbUalRQ4zCVW_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this SAME voxel / lego-block swimming pool scene from a completely different camera angle: an UNDERWATER point of view, camera placed BELOW the water surface inside the pool, looking diagonally UP toward the bright water surface above. From this underwater perspective we can see: the dark silhouette of the gold inflatable pool ring pressing into the rippling water surface from above, the voxel character's submerged LEGS and BARE FEET dangling down into the turquoise water (in the same pink-and-white Hawaiian swim trunks), and from below we glimpse the underside of his torso above the surface. The water is clear turquoise. Strong bright GOD-RAYS / SUNBEAMS pierce down through the rippling surface, shimmering caustics on the pool floor far below, suspended air BUBBLES rising slowly through the water. Keep the voxel / lego-block art style precisely — chunky cubic blocks everywhere, including in the water effects. Keep the character's white featureless face mask if any part of the face/cap is still visible from this angle, otherwise show his head silhouetted against the surface. Cinematic 16:9 underwater composition, dreamy summer swimming pool atmosphere."
+    },
+    "elapsed_s": 35.2,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be00d/U_xQMStYdVBG222yzdWZu_1450c58df91241b485f0bb577a7ade0c.png",
+    "saved": "uw_seedream_20260527_115639.png",
+    "timestamp": "2026-05-27T11:59:42.999393"
+  },
+  {
+    "run": "20260527_120508",
+    "label": "NanoBanana Pro run D",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9be02e/6euU6UnPJFQ4skCEzBqco_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this voxel / lego-block swimming pool scene as an UNDERWATER point of view — but with the voxel character CORRECTLY POSITIONED ON TOP of the gold inflatable ring (he is NOT swimming, NOT submerged, NOT diving through the ring). Physics of the pose:\n- The gold inflatable POOL RING floats HALF-SUBMERGED — its bottom half is under the water surface, its top half is above the water.\n- The voxel character lies relaxed ACROSS THE TOP of the ring. His TORSO, ARMS, SHOULDERS, HEAD, dark CAP and white featureless face MASK are clearly ABOVE the water surface (in the air).\n- His butt rests in the hole of the ring at roughly water level. His pink-and-white HAWAIIAN swim trunks straddle the waterline — the top hem above water, the bottom hem in the water.\n- His voxel LEGS and BARE voxel FEET hang DOWN INTO the turquoise water, fully submerged, clearly visible to the underwater camera as chunky cubic voxel blocks dangling under the ring.\n\nCAMERA: placed underwater inside the pool, a few feet below and to the side of the ring, looking DIAGONALLY UP at the underside of the half-submerged ring and at the dangling submerged legs and feet. Through the rippling AIR-WATER INTERFACE above, we glimpse the SILHOUETTE of the character's upper torso, arms, head, cap and white mask refracted through the rippling surface — clearly recognisable above the surface, not under it.\n\nUnderwater effects: bright GOD-RAY sunbeams piercing down through the rippling water surface from above, shimmering caustic light patterns dancing on the distant pool floor below, suspended air BUBBLES drifting slowly upward.\n\nMaintain voxel / lego-block art style precisely — chunky cubic blocks on body, ring and natural blocky look in the water. NO eyes, no nose, no mouth, no goggles, no snorkel on the white face mask. Cinematic 16:9 underwater composition, dreamy summer atmosphere.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 26.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be02f/Z5jMkU1YJgwQU-3Q0ROzj_Dm6zBtlq.png",
+    "saved": "uw2_nanobanana_D_20260527_120508.png",
+    "cropped_16x9": null,
+    "timestamp": "2026-05-27T12:05:37.591146"
+  },
+  {
+    "run": "20260527_120508",
+    "label": "NanoBanana Pro run E",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9be02e/6euU6UnPJFQ4skCEzBqco_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this voxel / lego-block swimming pool scene as an UNDERWATER point of view — but with the voxel character CORRECTLY POSITIONED ON TOP of the gold inflatable ring (he is NOT swimming, NOT submerged, NOT diving through the ring). Physics of the pose:\n- The gold inflatable POOL RING floats HALF-SUBMERGED — its bottom half is under the water surface, its top half is above the water.\n- The voxel character lies relaxed ACROSS THE TOP of the ring. His TORSO, ARMS, SHOULDERS, HEAD, dark CAP and white featureless face MASK are clearly ABOVE the water surface (in the air).\n- His butt rests in the hole of the ring at roughly water level. His pink-and-white HAWAIIAN swim trunks straddle the waterline — the top hem above water, the bottom hem in the water.\n- His voxel LEGS and BARE voxel FEET hang DOWN INTO the turquoise water, fully submerged, clearly visible to the underwater camera as chunky cubic voxel blocks dangling under the ring.\n\nCAMERA: placed underwater inside the pool, a few feet below and to the side of the ring, looking DIAGONALLY UP at the underside of the half-submerged ring and at the dangling submerged legs and feet. Through the rippling AIR-WATER INTERFACE above, we glimpse the SILHOUETTE of the character's upper torso, arms, head, cap and white mask refracted through the rippling surface — clearly recognisable above the surface, not under it.\n\nUnderwater effects: bright GOD-RAY sunbeams piercing down through the rippling water surface from above, shimmering caustic light patterns dancing on the distant pool floor below, suspended air BUBBLES drifting slowly upward.\n\nMaintain voxel / lego-block art style precisely — chunky cubic blocks on body, ring and natural blocky look in the water. NO eyes, no nose, no mouth, no goggles, no snorkel on the white face mask. Cinematic 16:9 underwater composition, dreamy summer atmosphere.",
+      "aspect_ratio": "16:9",
+      "num_images": 1
+    },
+    "elapsed_s": 109.6,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be031/mSDu3l4y2QadSLe_MMg3M_pL5Cilje.png",
+    "saved": "uw2_nanobanana_E_20260527_120508.png",
+    "cropped_16x9": null,
+    "timestamp": "2026-05-27T12:07:28.719038"
+  },
+  {
+    "run": "20260527_120508",
+    "label": "GPT-Image-1.5 (1536x1024 + 16:9-Crop)",
+    "model": "fal-ai/gpt-image-1.5/edit",
+    "args": {
+      "image_urls": [
+        "https://v3b.fal.media/files/b/0a9be02e/6euU6UnPJFQ4skCEzBqco_A_v6_run3_20260527_104322.png"
+      ],
+      "prompt": "Re-render this voxel / lego-block swimming pool scene as an UNDERWATER point of view — but with the voxel character CORRECTLY POSITIONED ON TOP of the gold inflatable ring (he is NOT swimming, NOT submerged, NOT diving through the ring). Physics of the pose:\n- The gold inflatable POOL RING floats HALF-SUBMERGED — its bottom half is under the water surface, its top half is above the water.\n- The voxel character lies relaxed ACROSS THE TOP of the ring. His TORSO, ARMS, SHOULDERS, HEAD, dark CAP and white featureless face MASK are clearly ABOVE the water surface (in the air).\n- His butt rests in the hole of the ring at roughly water level. His pink-and-white HAWAIIAN swim trunks straddle the waterline — the top hem above water, the bottom hem in the water.\n- His voxel LEGS and BARE voxel FEET hang DOWN INTO the turquoise water, fully submerged, clearly visible to the underwater camera as chunky cubic voxel blocks dangling under the ring.\n\nCAMERA: placed underwater inside the pool, a few feet below and to the side of the ring, looking DIAGONALLY UP at the underside of the half-submerged ring and at the dangling submerged legs and feet. Through the rippling AIR-WATER INTERFACE above, we glimpse the SILHOUETTE of the character's upper torso, arms, head, cap and white mask refracted through the rippling surface — clearly recognisable above the surface, not under it.\n\nUnderwater effects: bright GOD-RAY sunbeams piercing down through the rippling water surface from above, shimmering caustic light patterns dancing on the distant pool floor below, suspended air BUBBLES drifting slowly upward.\n\nMaintain voxel / lego-block art style precisely — chunky cubic blocks on body, ring and natural blocky look in the water. NO eyes, no nose, no mouth, no goggles, no snorkel on the white face mask. Cinematic 16:9 underwater composition, dreamy summer atmosphere.",
+      "quality": "medium",
+      "image_size": "1536x1024"
+    },
+    "elapsed_s": 35.0,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be03d/KZBb_UCbuP1MmC4eFE7Og_yvfUEYNG.png",
+    "saved": "uw2_gpt15_20260527_120508.png",
+    "cropped_16x9": "uw2_gpt15_20260527_120508_16x9.png",
+    "timestamp": "2026-05-27T12:08:05.226954"
+  },
+  {
+    "run": "20260527_121306",
+    "label": "S1_splitlevel",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt_strategy": "S1_splitlevel",
+    "prompt": "Iconic OVER-UNDER SPLIT-LEVEL underwater photograph of this voxel / lego-block pool scene. The horizon-like WATERLINE cuts across the middle of the frame as a clear wavy horizontal line that divides the image in two:\nTOP HALF (above water, in air): the voxel character lying relaxed across the TOP of the gold inflatable ring — torso, arms, dark CAP and featureless white face MASK clearly visible in the bright sunny air. Pool deck and palm-leaf shadows in the background.\nBOTTOM HALF (underwater, submerged): we see the SUBMERGED BOTTOM HALF of the gold inflatable ring pressing into the water from above, the character's voxel LEGS and bare voxel FEET hanging down into the turquoise water, his pink-and-white Hawaiian swim trunks straddling the waterline, GOD-RAY sunbeams piercing down through the rippling surface, caustic patterns shimmering on the pool floor below, air bubbles rising. The waterline is the visual centre of the composition.\nVoxel / lego-block art style throughout. No facial features on the white mask. Cinematic 16:9.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 25.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be05e/WAngpFYXdvVOyFjO_Q81a_wVUzAKh2.png",
+    "saved": "uw3_S1_splitlevel_20260527_121306.png",
+    "timestamp": "2026-05-27T12:13:35.261539"
+  },
+  {
+    "run": "20260527_121306",
+    "label": "S2_minimal",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt_strategy": "S2_minimal",
+    "prompt": "Underwater photograph. Snorkeler point of view looking UP from below the water surface at a person floating ABOVE on a gold pool ring. We see the underside of the inflatable ring pressing into the rippling water surface, the person's submerged legs and feet dangling down into the turquoise water, and the silhouette of their torso visible refracted through the wavy surface above. Strong sunbeams, bubbles, caustics on pool floor. Voxel / lego-block art style. The person wears pink-and-white Hawaiian swim trunks and a dark cap with a white blank face mask. 16:9 cinematic.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 40.4,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be061/kM-BG8UYqTXi2ll6Ie3lf_afn6jcFv.png",
+    "saved": "uw3_S2_minimal_20260527_121306.png",
+    "timestamp": "2026-05-27T12:14:16.930823"
+  },
+  {
+    "run": "20260527_121306",
+    "label": "S3_voxel_render",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt_strategy": "S3_voxel_render",
+    "prompt": "Voxel-engine 3D render of a swimming pool, isometric-feeling low-angle UNDERWATER CAMERA SHOT inside the pool's volume. Composition: in the upper portion of the frame, the wavy turquoise water surface forms a ceiling; pushing through that ceiling from above is the gold cubic-voxel pool ring — its lower half is below the surface and clearly visible, its upper half breaks above the surface. Lying across the top of the ring above the waterline: the lego-block character with pink-and-white Hawaiian voxel trunks, dark voxel cap and featureless white voxel face mask. His blocky legs hang DOWN INTO the water below the ring, visible to the camera. Volumetric god-rays pierce down through the surface, caustic voxel patterns dance on the pool floor below. Bubbles drift up. 16:9, clean voxel aesthetic, vivid summer palette.",
+    "aspect_ratio": "16:9",
+    "elapsed_s": 40.8,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9be065/51xmW_uyPpOlwEKZGqAPJ_GcY8Siti.png",
+    "saved": "uw3_S3_voxel_render_20260527_121306.png",
+    "timestamp": "2026-05-27T12:14:59.061966"
+  }
+]

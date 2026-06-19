@@ -1,0 +1,36 @@
+[
+  {
+    "run": "20260527_100556",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the image. KEEP EVERYTHING EXACTLY: the same composition, the same framing (camera directly behind the convertible Cadillac at road level), the full moon high in the starry sky, the distant mountains, the two-lane desert highway with its painted dashed center lines, the voxel character driver with his dark baseball cap and brown voxel hair, the rear license plate 'KEP - LE 18' (German plate with EU strip, TUV and NRW stickers — must stay sharp and legible), the red tail-light glow. Do NOT change pose, framing, plate, character, moon or mountains. Make ONLY these two color changes: 1) Recolor the Cadillac's body paint to a deep VINTAGE BORDEAUX RED — rich and slightly desaturated, like aged wine or 1970s muscle-car burgundy. The car body, fenders and trunk lid are all this bordeaux red; chrome bumpers, tail lights and trim stay metallic / red as before. The voxel-block surface texture stays the same, only the hue is now bordeaux red. 2) Shift the overall color grading of the scene slightly toward violet / purple. Instead of the current cool-blue moonlight, the moonlight, the sky and the shadowed parts of the desert pick up a gentle purple / magenta-violet cast. The grading should feel dreamy and night-club-moonlit, not garish — subtle violet, not neon. Tail-light amber stays warm against the violet ambient. Avoid: changing the framing, changing the plate text, distorted plate, blank plate, changing the character or his cap, fluorescent neon colors, oversaturated red, candy-apple red, fire-engine red, pink car, removing the moon, changing the mountains.",
+    "refs": [
+      "behind_chase_plate_20260522_171447.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.3,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9bdd63/--RX7ZVHqc8-Q4QfK5tTk_DuM28ywI.png"
+    ],
+    "saved": [
+      "behind_chase_bordeaux_20260527_100556.png"
+    ],
+    "timestamp": "2026-05-27T10:06:24.332290"
+  },
+  {
+    "run": "20260527_104711",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the image. KEEP EVERYTHING EXACTLY: same composition, same framing (camera directly behind the bordeaux convertible Cadillac at road level), the full moon high in the starry sky, distant mountains, the violet-leaning moonlit color grading, the voxel character driver with his dark baseball cap and brown voxel hair, the rear license plate 'KEP - LE 18' (German plate, must stay sharp and legible), the red tail-light glow, the bordeaux paint. Do NOT change car colour, plate, character, moon, mountains or framing. Make ONLY this change: redesign the road as a German country highway (Landstrasse). The road must have EXACTLY TWO LANES total — one lane in each direction, separated in the middle by a SINGLE WHITE DASHED CENTER LINE (broken white dashes, evenly spaced, painted on dark asphalt). There must NOT be any yellow lines anywhere on the road. There must NOT be more than two lanes. The right edge of the road is just asphalt fading into the sandy desert shoulder. The Cadillac is driving in the RIGHT LANE (its lane of travel) — so the white dashed center line runs along the LEFT side of the car (from the camera's view, slightly left of the car), and the open second lane on the far left is for oncoming traffic but is empty. The road surface stays the same dark asphalt; the dashed line is fresh clean white paint. Receding into the horizon naturally with one-point perspective.",
+    "refs": [
+      "behind_chase_bordeaux_20260527_100556.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 31.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9bde5b/zo_ymcDvjWo6ZzBtN1mgp_kaeTPFDQ.png"
+    ],
+    "saved": [
+      "behind_chase_landstrasse_20260527_104711.png"
+    ],
+    "timestamp": "2026-05-27T10:47:46.035474"
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "run": "20260521_195726",
+    "model": "kling3_pro_loop",
+    "endpoint": "fal-ai/kling-video/v3/pro/image-to-video",
+    "strategy": "treadmill loop, start=end frame, duration 10",
+    "prompt": "Seamless looping driving shot, camera chasing the convertible Cadillac from directly behind at road level. The car stays centered and fixed in the same spot in the frame the whole time — it does NOT drive away, does NOT get smaller, does NOT get closer. The two-lane desert highway and its painted dashed center lines scroll continuously toward the camera and underneath the car, like a treadmill, creating the illusion of constant forward motion. The red tail lights glow steadily and evenly. The full moon stays perfectly still high in the sky. Stars drift very slowly. Distant mountains stay still. Gentle warm wind ripple on the scene. Camera is locked directly behind the car — no zoom, no pan, no tilt, steady follow. Cinematic moonlit night, cool blue grading with warm tail-light amber.",
+    "negative_prompt": "car driving away, car shrinking, car getting smaller, car moving in frame, car getting closer, camera zoom, camera pan, camera tilt, camera shake, moon moving, moon changing size, license plate morphing, plate text changing, flickering, color shift, cuts, scene change, people, extra cars",
+    "args": {
+      "duration": "10",
+      "aspect_ratio": "16:9",
+      "generate_audio": false,
+      "negative_prompt": "car driving away, car shrinking, car getting smaller, car moving in frame, car getting closer, camera zoom, camera pan, camera tilt, camera shake, moon moving, moon changing size, license plate morphing, plate text changing, flickering, color shift, cuts, scene change, people, extra cars",
+      "cfg_scale": 0.9
+    },
+    "input": "behind_chase_plate_20260521_195454.png",
+    "elapsed_s": 169.1,
+    "cost_est": "$2.00",
+    "video_url": "https://v3b.fal.media/files/b/0a9b20d1/vx4dqVd0kEO6EIIutExlK_output.mp4",
+    "saved": "behind_chase_loop_20260521_195726.mp4",
+    "timestamp": "2026-05-21T20:00:40.178218"
+  },
+  {
+    "run": "20260522_171633",
+    "model": "seedance_pro",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "forward drive, camera_fixed, evaluated winner for night_drive",
+    "prompt": "The lego-block convertible Cadillac drives steadily FORWARD down the empty two-lane desert highway, moving away from the camera into the moonlit distance. Forward motion only — the car never reverses, never rolls backward. The road surface and the painted dashed center lines flow past underneath the car from the far horizon toward the bottom of the frame, the natural look of a car driving ahead. The red tail lights glow steadily. The voxel character driver sits calm behind the wheel, head and cap above the seat-back, unchanged. The full moon stays still high in the starry sky. Distant mountains stay still. The camera follows smoothly from directly behind at road level and holds steady — no zoom, no pan, no tilt. Cinematic moonlit night, cool blue grading with warm tail-light amber.",
+    "args": {
+      "duration": "10",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_plate_20260522_171447.png",
+    "elapsed_s": 130.7,
+    "cost_est": "$1.20",
+    "video_url": "https://v3b.fal.media/files/b/0a9b3ec8/wASOQg1cyklblCNjpxSY1_video.mp4",
+    "saved": "behind_chase_seedance_20260522_171633.mp4",
+    "timestamp": "2026-05-22T17:18:48.105313"
+  },
+  {
+    "run": "20260522_174707",
+    "model": "seedance_pro_loop",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "camera push-in/pull-out, start=end frame loop, car drives forward",
+    "prompt": "Seamless looping shot. The camera starts directly behind the lego-block convertible Cadillac at road level, then performs ONE smooth move: it slowly pushes IN, gliding closer toward the back of the car, then smoothly pulls BACK OUT, returning to the exact same starting distance and framing by the end. The camera begins and ends at the identical position so the clip loops perfectly. Throughout, the Cadillac drives steadily FORWARD down the empty, uniform two-lane desert highway — forward motion only, the car never reverses and never rolls backward. The painted dashed center lines flow past underneath the car toward the camera, the natural look of driving ahead. The red tail lights glow steadily. The voxel character driver sits calm behind the wheel, unchanged. The full moon stays still high in the starry sky, distant mountains stay still. Cinematic moonlit night, cool blue grading with warm tail-light amber.",
+    "args": {
+      "duration": "8",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "camera_fixed": false
+    },
+    "input": "behind_chase_plate_20260522_171447.png",
+    "elapsed_s": 103.7,
+    "cost_est": "$1.00",
+    "video_url": "https://v3b.fal.media/files/b/0a9b3f7d/Al3suaUiZ6ePdx7b67qMU_video.mp4",
+    "saved": "behind_chase_loop_20260522_174707.mp4",
+    "timestamp": "2026-05-22T17:48:55.311928"
+  },
+  {
+    "run": "20260522_180009",
+    "model": "seedance_pro_treadmill",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "treadmill: car fixed in frame, road scrolls; loop built in post via crossfade",
+    "prompt": "Locked-off chase shot, camera fixed directly behind the lego-block convertible Cadillac at road level. The CAR stays in exactly the same spot and the same size in the frame for the entire clip — it does not drive away, does not get smaller, does not get closer, does not move left or right, and NEVER rolls backward. Only the WORLD moves: the empty two-lane desert highway and its painted dashed white center lines flow continuously — they appear far away at the horizon, grow larger as they rush toward the camera, and sweep down and out past the bottom of the frame. This continuous forward flow of the road is the look of a car driving steadily ahead at speed. The flow is smooth, even and constant — never reversing, never stopping, never freezing. The road must clearly be moving. The red tail lights glow steadily. The voxel character driver stays 100% constant: his head, his dark baseball cap with flat brim, his brown voxel hair and his blocky cubic voxel texture do NOT change. The head keeps its hard cubic voxel blocks — it must NOT morph, must NOT smooth into a rounded Lego-toy head, and NO face features (eyes, nose, mouth) ever appear. He simply sits still behind the wheel. The full moon and the distant background mountains stay still. Cinematic moonlit night, cool blue grading with warm tail-light amber.",
+    "args": {
+      "duration": "10",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_plate_20260522_171447.png",
+    "elapsed_s": 119.2,
+    "cost_est": "$1.20",
+    "video_url": "https://v3b.fal.media/files/b/0a9b3fcc/Lz7XGozX5nazAars1LUPC_video.mp4",
+    "saved": "behind_chase_treadmill_20260522_180009.mp4",
+    "timestamp": "2026-05-22T18:02:12.707423"
+  },
+  {
+    "run": "20260522_180343",
+    "model": "seedance_pro_treadmill",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "treadmill: car fixed in frame, road scrolls; loop built in post via crossfade",
+    "prompt": "Tracking chase shot. The camera is a chase camera that FOLLOWS the lego-block convertible Cadillac, traveling forward together with it and tracking it at a CONSTANT distance directly behind it at road level. Because the camera moves with the car, the CAR stays exactly the same size and in the same spot in the frame for the entire clip — it never recedes, never shrinks, never gets closer, never drifts left or right, never drives out of frame, and NEVER rolls backward. The camera holds a steady locked framing — no zoom, no pan, no tilt, no shake — it simply travels forward with the car. Because the car and camera move forward together, the WORLD streams continuously past: the empty two-lane desert highway, its painted dashed white center lines, the roadside terrain and the mid-ground hills all appear far away at the horizon, grow larger as they rush toward the camera, and sweep down and out past the bottom of the frame. This continuous forward flow is the look of driving steadily ahead at speed — smooth, even, constant, never reversing, never stopping, never freezing. The red tail lights glow steadily. The voxel character driver stays 100% constant: his head, his dark baseball cap with flat brim, his brown voxel hair and his blocky cubic voxel texture do NOT change. The head keeps its hard cubic voxel blocks — it must NOT morph, must NOT smooth into a rounded Lego-toy head, and NO face features (eyes, nose, mouth) ever appear. He simply sits still behind the wheel. The full moon and the distant background mountains stay still. Cinematic moonlit night, cool blue grading with warm tail-light amber.",
+    "args": {
+      "duration": "10",
+      "resolution": "1080p",
+      "aspect_ratio": "16:9",
+      "camera_fixed": false
+    },
+    "input": "behind_chase_plate_20260522_171447.png",
+    "elapsed_s": 121.3,
+    "cost_est": "$1.20",
+    "video_url": "https://v3b.fal.media/files/b/0a9b3fe2/_sLZ67PsgWGTCYTK534Ad_video.mp4",
+    "saved": "behind_chase_treadmill_20260522_180343.mp4",
+    "timestamp": "2026-05-22T18:05:48.605103"
+  },
+  {
+    "run": "20260527_103544",
+    "model": "seedance_pro_bordeaux",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "clip-1 setup (camera_fixed, forward recede) + bordeaux input + head-lock prompt",
+    "prompt": "The bordeaux-red lego-block convertible Cadillac drives steadily FORWARD down the empty two-lane desert highway, moving away from the camera into the violet-moonlit distance. Forward motion only — the car never reverses, never rolls backward. The road surface and the painted dashed white center lines flow past underneath the car from the far horizon toward the bottom of the frame — the natural look of a car driving steadily ahead. The red tail lights glow steadily. The full moon stays still high in the starry sky. Distant mountains stay still. The camera follows smoothly from directly behind at road level and holds steady — no zoom, no pan, no tilt. CRITICAL — driver character consistency: the voxel character behind the wheel must stay 100% IDENTICAL for the entire clip. His head MUST keep its hard CUBIC VOXEL BLOCK texture — small visible cubic blocks of light grey/white. His dark baseball cap with the flat brim must stay on his head, the cap shape never changing. His brown voxel hair stays the same. The head must NEVER smooth out into a rounded Lego-toy minifigure head, NEVER become a plain cylinder or sphere, and NO face features (eyes, nose, mouth, ears) may appear or animate. He simply sits still behind the wheel — no head turning, no nodding. Cinematic moonlit night, violet-leaning cool grading with warm tail-light amber. Bordeaux car body stays bordeaux throughout.",
+    "args": {
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_bordeaux_20260527_100556.png",
+    "elapsed_s": 158.8,
+    "cost_est": "$1.49",
+    "video_url": "https://v3b.fal.media/files/b/0a9bde26/W6bvP_N5PgSwVhp_ap2_e_video.mp4",
+    "saved": "behind_chase_bordeaux_20260527_103544.mp4",
+    "timestamp": "2026-05-27T10:38:29.373659"
+  },
+  {
+    "run": "20260527_105532",
+    "model": "seedance_pro_landstrasse",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "clip-1 setup + landstrasse input + positive-only prompt (no negatives)",
+    "prompt": "A bordeaux-red lego-block convertible Cadillac drives steadily forward down an empty German country highway at night, moving away from the camera into the violet-moonlit distance. The road has two lanes separated by a single white dashed center line; the car cruises in the right lane. The asphalt and the dashed white line flow past from the far horizon toward the bottom of the frame, the natural look of driving forward at steady highway speed. The red tail lights glow calmly. The full moon stays high in the starry sky. Distant mountains stay still on the horizon. The camera follows from directly behind at road level with a locked steady framing — no zoom, no pan, no tilt. The driver behind the wheel is a small voxel character: his head is a tight cluster of small cubic voxel blocks in light grey and white, Minecraft-style pixel-art geometry, hard edges and visible cubic facets. A dark navy baseball cap with a flat curved brim sits firmly on top of his head; small brown voxel hair blocks peek out from under the cap. He sits still and steady, both blocky voxel hands on the wheel. The cap and the cubic voxel texture of his head stay exactly the same throughout the entire shot. Cinematic moonlit night, cool violet-leaning grading with warm tail-light amber. The bordeaux car body keeps its rich aged-wine burgundy color throughout.",
+    "args": {
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_landstrasse_20260527_104711.png",
+    "elapsed_s": 149.0,
+    "cost_est": "$1.49",
+    "video_url": "https://v3b.fal.media/files/b/0a9bde9c/XE1_8f7ql0H5kxhUFc429_video.mp4",
+    "saved": "behind_chase_landstrasse_20260527_105532.mp4",
+    "timestamp": "2026-05-27T10:58:07.576978"
+  },
+  {
+    "run": "20260527_110811",
+    "model": "seedance_pro_A_fix",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "new corrected prompt: desert road, recedes, subtle violet, positive shoulders",
+    "prompt": "A bordeaux-red voxel-block convertible Cadillac drives steadily forward down an empty desert road at night. The car drives forward and gradually recedes into the distance, getting smaller as it moves away from the static camera position behind it. The road has two lanes separated by a single white dashed center line; the car cruises in the right lane. Sandy desert shoulders with brush and rocks stretch out on both sides. The asphalt and the dashed white line flow past from the far horizon toward the bottom of the frame, the natural look of driving forward at steady highway speed. The red tail lights glow calmly. The full moon stays high in the starry sky, the moon and night sky remain pale and naturalistic with only a gentle hint of violet in the air. Distant mountains stay still on the horizon. The camera is positioned behind the car at road level with a locked, steady framing — no zoom, no pan, no tilt. The driver behind the wheel is a small voxel character: his head is a tight cluster of small cubic voxel blocks in light grey and white, Minecraft-style pixel-art geometry, hard edges and visible cubic facets. A dark navy baseball cap with a flat curved brim sits firmly on top of his head; small brown voxel hair blocks peek out from under the cap. He sits still and steady, both blocky voxel hands on the wheel. The cap and the cubic voxel texture of his head stay exactly the same throughout the entire shot. Cinematic moonlit night. The bordeaux car body keeps its rich aged-wine burgundy color throughout.",
+    "args": {
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_landstrasse_20260527_104711.png",
+    "elapsed_s": 119.8,
+    "cost_est": "$1.49",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdee5/fOmsNYHOG3qcY6AY69y56_video.mp4",
+    "saved": "behind_chase_A_fix_20260527_110811.mp4",
+    "timestamp": "2026-05-27T11:10:18.142952"
+  },
+  {
+    "run": "20260527_110811",
+    "model": "seedance_pro_B_clip1",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "clip-1 prompt with bordeaux/violet update + positive head, drop lego-block",
+    "prompt": "The bordeaux-red voxel-block convertible Cadillac drives steadily FORWARD down the empty two-lane desert highway, moving away from the camera into the moonlit distance. Forward motion only — the car never reverses, never rolls backward. The road surface and the painted dashed white center line flow past underneath the car from the far horizon toward the bottom of the frame, the natural look of a car driving ahead. The red tail lights glow steadily. The voxel character driver sits calm behind the wheel, head and cap above the seat-back, unchanged — his head is a tight cluster of small cubic voxel blocks in light grey and white, Minecraft-style pixel-art geometry with hard edges and visible cubic facets, and a dark navy baseball cap with a flat curved brim sits firmly on top. The full moon stays still high in the starry sky. Distant mountains stay still. The camera follows smoothly from directly behind at road level and holds steady — no zoom, no pan, no tilt. Cinematic moonlit night, cool violet-tinted grading with warm tail-light amber.",
+    "args": {
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_landstrasse_20260527_104711.png",
+    "elapsed_s": 5.2,
+    "cost_est": "$1.49",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdee6/76S4jFEMxDcIsk5qZX42O_video.mp4",
+    "saved": "behind_chase_B_clip1_20260527_110811.mp4",
+    "timestamp": "2026-05-27T11:10:27.623985"
+  },
+  {
+    "run": "20260527_113438",
+    "model": "seedance_pro_recede",
+    "endpoint": "fal-ai/bytedance/seedance/v1/pro/image-to-video",
+    "strategy": "planted-tripod camera + recede verbs + black cap to force forward motion and stop blue-drift",
+    "prompt": "A bordeaux-red voxel-block convertible Cadillac drives steadily ahead down an empty desert road at night. The camera is mounted on a stationary tripod planted on the side of the road, completely motionless — the camera does not move, does not pan, does not zoom, does not track the car. As the seconds pass, the Cadillac pulls ahead and shrinks in the frame: by the end of the shot it is noticeably smaller and much farther away, deep down the road toward the horizon. The road has two lanes separated by a single white dashed center line; the car cruises in the right lane. Sandy desert shoulders with brush and rocks stretch out on both sides. The asphalt and the dashed white line flow past from the far horizon toward the bottom of the frame, the natural look of driving forward at steady highway speed. The red tail lights glow calmly. The full moon stays high in the starry sky, the moon and night sky remain pale and naturalistic with only a gentle hint of violet in the air. Distant mountains stay still on the horizon. The driver behind the wheel is a small voxel character: his head is a tight cluster of small cubic voxel blocks in light grey and white, Minecraft-style pixel-art geometry, hard edges and visible cubic facets. A black baseball cap with a flat curved brim sits firmly on top of his head and stays black for the entire shot; small brown voxel hair blocks peek out from under the cap. He sits still and steady, both blocky voxel hands on the wheel. The cap and the cubic voxel texture of his head stay exactly the same throughout the entire shot. Cinematic moonlit night. The bordeaux car body keeps its rich aged-wine burgundy color throughout.",
+    "args": {
+      "duration": "12",
+      "resolution": "1080p",
+      "camera_fixed": true
+    },
+    "input": "behind_chase_landstrasse_20260527_104711.png",
+    "elapsed_s": 154.2,
+    "cost_est": "$1.49",
+    "video_url": "https://v3b.fal.media/files/b/0a9bdf87/12igyNq_sOh6CysKSrQNC_video.mp4",
+    "saved": "behind_chase_recede_20260527_113438.mp4",
+    "timestamp": "2026-05-27T11:37:18.325365"
+  }
+]

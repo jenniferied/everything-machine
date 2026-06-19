@@ -2,8 +2,7 @@
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["@anthropic-ai/mcp-playwright@latest"],
-      "disabled": true
+      "args": ["@playwright/mcp@latest"]
     },
     "firecrawl": {
       "command": "npx",

@@ -1,0 +1,80 @@
+[
+  {
+    "run": "20260519_223021",
+    "variant": "01_realistic_70s_cadillac_interior",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image to fix the cockpit and replace the interior with a realistic, photographically detailed cockpit. Keep the voxel character driver, his cap, the night-desert world through the windshield, and the cinematic moonlit mood. NEW INTERIOR: Realistic vintage 1970s American convertible car interior: dark leather/vinyl dashboard with subtle stitching, real chrome trim around the instrument cluster, four clearly visible analog gauges (speedometer, tachometer, fuel, temperature) glowing with warm amber backlight. Wood-grain accents on the center console. A correctly proportioned round steering wheel with a chrome horn ring and a chrome center hub with a small enamel emblem. The windshield frame is visible at the edges. Subtle reflections of the moonlight on the chrome and glass. DRIVER: The driver is a small voxel/lego-style figure: light grey/white blocky body made of small cubic blocks, visible cubic texture on arms and shoulders. He wears a dark baseball cap with a flat curved brim pointing forward (NOT a hood, NOT a hoodie). Abstract minimal face — no photoreal eyes or mouth. Blocky voxel hands grip the steering wheel naturally — fingers wrapped around the rim at roughly 9 and 3 o'clock. WORLD: Through the windshield: an empty desert two-lane highway at night stretching to a distant horizon, full moon high in a starry sky, low silhouetted mountains on both sides. Headlights cast warm pools of light on the asphalt ahead. Cinematic 16:9, soft moonlit blues plus warm amber dash glow. Avoid: hooded figure, hoodie, robe, monk, melted dashboard, deformed steering wheel, extra fingers, missing wheel rim, fantasy interior, neon multi-color dashboard, garish colors.",
+    "refs": [
+      "02_cockpit_pov_passenger_20260519_221446.png",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.4,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0d7/IRfBQamVa-zC0inPzIVTP_3Ke8Cabg.png"
+    ],
+    "saved": [
+      "01_realistic_70s_cadillac_interior_20260519_223021.png"
+    ],
+    "timestamp": "2026-05-19T22:31:00.336495"
+  },
+  {
+    "run": "20260519_223021",
+    "variant": "02_lower_angle_steering_centered",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Re-frame this shot from a slightly lower angle: the camera is at the passenger seat looking left-forward, so the steering wheel is more centered in the frame and we see both voxel hands gripping it. The dashboard fills the lower third. INTERIOR: Realistic vintage 1970s American convertible car interior: dark leather/vinyl dashboard with subtle stitching, real chrome trim around the instrument cluster, four clearly visible analog gauges (speedometer, tachometer, fuel, temperature) glowing with warm amber backlight. Wood-grain accents on the center console. A correctly proportioned round steering wheel with a chrome horn ring and a chrome center hub with a small enamel emblem. The windshield frame is visible at the edges. Subtle reflections of the moonlight on the chrome and glass. DRIVER: The driver is a small voxel/lego-style figure: light grey/white blocky body made of small cubic blocks, visible cubic texture on arms and shoulders. He wears a dark baseball cap with a flat curved brim pointing forward (NOT a hood, NOT a hoodie). Abstract minimal face — no photoreal eyes or mouth. Blocky voxel hands grip the steering wheel naturally — fingers wrapped around the rim at roughly 9 and 3 o'clock. WORLD: Through the windshield: an empty desert two-lane highway at night stretching to a distant horizon, full moon high in a starry sky, low silhouetted mountains on both sides. Headlights cast warm pools of light on the asphalt ahead. Cinematic 16:9. Avoid: hooded figure, hoodie, robe, monk, melted dashboard, deformed steering wheel, extra fingers, missing wheel rim, fantasy interior, neon multi-color dashboard, garish colors.",
+    "refs": [
+      "02_cockpit_pov_passenger_20260519_221446.png",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 26.1,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0da/RQeEk9NSQu0RtqjNEETc-_s398rvGP.png"
+    ],
+    "saved": [
+      "02_lower_angle_steering_centered_20260519_223021.png"
+    ],
+    "timestamp": "2026-05-19T22:31:28.747424"
+  },
+  {
+    "run": "20260519_223021",
+    "variant": "03_first_person_driver_pov",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a first-person driver POV: the camera sits where the driver's eyes would be, looking forward over the steering wheel and dashboard onto the desert road. Voxel hands visible at the bottom of the frame gripping the wheel at 9 and 3. INTERIOR: Realistic vintage 1970s American convertible car interior: dark leather/vinyl dashboard with subtle stitching, real chrome trim around the instrument cluster, four clearly visible analog gauges (speedometer, tachometer, fuel, temperature) glowing with warm amber backlight. Wood-grain accents on the center console. A correctly proportioned round steering wheel with a chrome horn ring and a chrome center hub with a small enamel emblem. The windshield frame is visible at the edges. Subtle reflections of the moonlight on the chrome and glass. WORLD: Through the windshield: an empty desert two-lane highway at night stretching to a distant horizon, full moon high in a starry sky, low silhouetted mountains on both sides. Headlights cast warm pools of light on the asphalt ahead. The steering wheel rim and chrome center emblem dominate the lower half of the frame. HANDS: blocky voxel hands as in the third reference, light-grey cubic texture, fingers wrapping the wheel naturally. Cinematic 16:9, depth of field with road slightly soft. Avoid: hooded figure, hoodie, robe, monk, melted dashboard, deformed steering wheel, extra fingers, missing wheel rim, fantasy interior, neon multi-color dashboard, garish colors.",
+    "refs": [
+      "gpt-cockpit-pov-mond-wueste.jpeg",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 28.8,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0dc/dGxcWE3e-mGaaYHlDaQdR_O9T1mtky.png"
+    ],
+    "saved": [
+      "03_first_person_driver_pov_20260519_223021.png"
+    ],
+    "timestamp": "2026-05-19T22:31:58.948464"
+  },
+  {
+    "run": "20260519_223021",
+    "variant": "04_three_quarter_dashboard_hero",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a 3/4 interior shot from the back-passenger angle: the voxel driver is on the left mid-frame, the realistic dashboard and steering wheel are on the right, the windshield occupies the upper third showing the moonlit desert road ahead. The dashboard gauges glow warm amber and reflect on the dark vinyl. DRIVER: The driver is a small voxel/lego-style figure: light grey/white blocky body made of small cubic blocks, visible cubic texture on arms and shoulders. He wears a dark baseball cap with a flat curved brim pointing forward (NOT a hood, NOT a hoodie). Abstract minimal face — no photoreal eyes or mouth. Blocky voxel hands grip the steering wheel naturally — fingers wrapped around the rim at roughly 9 and 3 o'clock. INTERIOR: Realistic vintage 1970s American convertible car interior: dark leather/vinyl dashboard with subtle stitching, real chrome trim around the instrument cluster, four clearly visible analog gauges (speedometer, tachometer, fuel, temperature) glowing with warm amber backlight. Wood-grain accents on the center console. A correctly proportioned round steering wheel with a chrome horn ring and a chrome center hub with a small enamel emblem. The windshield frame is visible at the edges. Subtle reflections of the moonlight on the chrome and glass. WORLD: Through the windshield: an empty desert two-lane highway at night stretching to a distant horizon, full moon high in a starry sky, low silhouetted mountains on both sides. Headlights cast warm pools of light on the asphalt ahead. Cinematic 16:9. Avoid: hooded figure, hoodie, robe, monk, melted dashboard, deformed steering wheel, extra fingers, missing wheel rim, fantasy interior, neon multi-color dashboard, garish colors.",
+    "refs": [
+      "02_cockpit_pov_passenger_20260519_221446.png",
+      "seedance-cadillac-frontal-mond.jpeg",
+      "spiral_upscale_clarity_edited.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 34.5,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae0df/PKLlYdm4tH90T88iFN7Y2_uXAHTFa6.png"
+    ],
+    "saved": [
+      "04_three_quarter_dashboard_hero_20260519_223021.png"
+    ],
+    "timestamp": "2026-05-19T22:32:34.862928"
+  }
+]

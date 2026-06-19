@@ -1,0 +1,42 @@
+[
+  {
+    "run": "20260602_162252",
+    "variant": "v7_spin_sway_b",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "The round holographic disc spins like a vinyl record on a turntable — clearly and continuously rotating around its centre, its radial rainbow streaks sweeping around; this spinning disc is the main motion of the shot. The chrome reflected face in the mirror stays completely still and solid, lips closed and unchanged, a smooth on-model mirror-chrome surface showing nose, lips and chin, with the dark starry GALAXY clearly reflected behind it in the mirror. The chrome hand stays steady. The camera sways gently with a slow, smooth cinematic drift.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9cb0b9/PHc63fRKsQlPcfdqPI6IY_dd_flux_20260602_150012.jpg",
+      "prompt": "The round holographic disc spins like a vinyl record on a turntable — clearly and continuously rotating around its centre, its radial rainbow streaks sweeping around; this spinning disc is the main motion of the shot. The chrome reflected face in the mirror stays completely still and solid, lips closed and unchanged, a smooth on-model mirror-chrome surface showing nose, lips and chin, with the dark starry GALAXY clearly reflected behind it in the mirror. The chrome hand stays steady. The camera sways gently with a slow, smooth cinematic drift.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false,
+      "seed": 22222
+    },
+    "elapsed_s": 161.1,
+    "video_url": "https://v3b.fal.media/files/b/0a9cb0c9/aszDXZlivhm_TZigeFSp5_video.mp4",
+    "saved": "v7_spin_sway_b_20260602_162252.mp4",
+    "timestamp": "2026-06-02T16:25:37.453154"
+  },
+  {
+    "run": "20260602_162252",
+    "variant": "v7_spin_sway_a",
+    "endpoint": "bytedance/seedance-2.0/image-to-video",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "The round holographic disc spins like a vinyl record on a turntable — clearly and continuously rotating around its centre, its radial rainbow streaks sweeping around; this spinning disc is the main motion of the shot. The chrome reflected face in the mirror stays completely still and solid, lips closed and unchanged, a smooth on-model mirror-chrome surface showing nose, lips and chin, with the dark starry GALAXY clearly reflected behind it in the mirror. The chrome hand stays steady. The camera sways gently with a slow, smooth cinematic drift.",
+    "args": {
+      "image_url": "https://v3b.fal.media/files/b/0a9cb0b9/PHc63fRKsQlPcfdqPI6IY_dd_flux_20260602_150012.jpg",
+      "prompt": "The round holographic disc spins like a vinyl record on a turntable — clearly and continuously rotating around its centre, its radial rainbow streaks sweeping around; this spinning disc is the main motion of the shot. The chrome reflected face in the mirror stays completely still and solid, lips closed and unchanged, a smooth on-model mirror-chrome surface showing nose, lips and chin, with the dark starry GALAXY clearly reflected behind it in the mirror. The chrome hand stays steady. The camera sways gently with a slow, smooth cinematic drift.",
+      "duration": "8",
+      "resolution": "720p",
+      "aspect_ratio": "4:3",
+      "generate_audio": false,
+      "seed": 11111
+    },
+    "elapsed_s": 191.3,
+    "video_url": "https://v3b.fal.media/files/b/0a9cb0cc/Xr8AOezm0lCYmwe4L7O23_video.mp4",
+    "saved": "v7_spin_sway_a_20260602_162252.mp4",
+    "timestamp": "2026-06-02T16:26:06.917889"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cd",
+    "seed": 5001,
+    "seed_returned": 5001,
+    "saved": "cd_s5001_20260619_000357.mp4",
+    "elapsed_s": 113.0
+  },
+  {
+    "name": "cd",
+    "seed": 5002,
+    "seed_returned": 5002,
+    "saved": "cd_s5002_20260619_000357.mp4",
+    "elapsed_s": 77.8
+  },
+  {
+    "name": "stairs",
+    "seed": 5101,
+    "seed_returned": 5101,
+    "saved": "stairs_s5101_20260619_000357.mp4",
+    "elapsed_s": 115.0
+  },
+  {
+    "name": "stairs",
+    "seed": 5102,
+    "seed_returned": 5102,
+    "saved": "stairs_s5102_20260619_000357.mp4",
+    "elapsed_s": 0.9
+  },
+  {
+    "name": "behind_chase",
+    "seed": 5201,
+    "seed_returned": 5201,
+    "saved": "behind_chase_s5201_20260619_000357.mp4",
+    "elapsed_s": 134.5
+  },
+  {
+    "name": "behind_chase",
+    "seed": 5202,
+    "seed_returned": 5202,
+    "saved": "behind_chase_s5202_20260619_000357.mp4",
+    "elapsed_s": 1.0
+  }
+]

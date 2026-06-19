@@ -1,0 +1,50 @@
+[
+  {
+    "run": "20260602_140520",
+    "label": "extend_4x3__run2",
+    "model": "fal-ai/bria/expand",
+    "src": "rb_M4_seedream_run1_20260602_123415.png",
+    "canvas_size": [
+      2048,
+      1536
+    ],
+    "original_image_size": [
+      1152,
+      1536
+    ],
+    "original_image_location": [
+      448,
+      0
+    ],
+    "prompt": "Deep black outer space continuing seamlessly outward to the left and right — near-total black with a few faint distant stars and a subtle deep-blue nebula haze, exactly matching and continuing the existing dark galaxy background, smooth seamless extension of the same scene, chrome arm and dark cosmos.",
+    "elapsed_s": 10.9,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cad84/G6-6dvO3FX5gqMpmgDe44_15ba7b8018a64b91b6445face385f2e8.png",
+    "saved": "ext_4x3_run2_20260602_140520.png",
+    "timestamp": "2026-06-02T14:05:35.325763"
+  },
+  {
+    "run": "20260602_140520",
+    "label": "extend_4x3__run1",
+    "model": "fal-ai/bria/expand",
+    "src": "rb_M4_seedream_run1_20260602_123415.png",
+    "canvas_size": [
+      2048,
+      1536
+    ],
+    "original_image_size": [
+      1152,
+      1536
+    ],
+    "original_image_location": [
+      448,
+      0
+    ],
+    "prompt": "Deep black outer space continuing seamlessly outward to the left and right — near-total black with a few faint distant stars and a subtle deep-blue nebula haze, exactly matching and continuing the existing dark galaxy background, smooth seamless extension of the same scene, chrome arm and dark cosmos.",
+    "elapsed_s": 124.5,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cad90/mFZjr0FfDJhKHP3mwiKvb_f8c806c9709d4c589cfbf3ee4f493e7b.png",
+    "saved": "ext_4x3_run1_20260602_140520.png",
+    "timestamp": "2026-06-02T14:07:28.834729"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "run": "20260521_195454",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP everything exactly as it is: the lego-block convertible Cadillac seen from directly behind, the empty two-lane desert highway, the full moon high in the starry sky, the distant mountains, the red tail-light glow and the cool moonlit color grading. Do NOT change the composition, framing, lighting or the car. Make ONLY this change: add a rear license plate to the back of the Cadillac, mounted centrally between the tail lights. The rear license plate must match the dedicated license-plate reference image (second image) EXACTLY: a German plate — blue EU strip with a 'D' on the left, then bold black text 'KEP', a brown/orange round TUV sticker, a round grey registration seal, then 'LE 18'. Reproduce that plate design and text faithfully. Keep it as sharp and legible as the viewing distance allows; the plate is mounted flat on the rear of the car, correctly perspective-matched to the car's tail and slightly catching the warm tail-light glow. Avoid: changing the car, changing the framing, changing the moon or sky, wrong license plate text, blank plate, distorted or floating plate, extra plates.",
+    "refs": [
+      "05_behind_chase_20260519_221446.png",
+      "kennzeichen-kep-le-18.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 23.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b20b5/75leEHDJsw89Vm2lQifLS_t3Pzg0iE.png"
+    ],
+    "saved": [
+      "behind_chase_plate_20260521_195454.png"
+    ],
+    "timestamp": "2026-05-21T19:55:56.617818"
+  },
+  {
+    "run": "20260522_171447",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP everything exactly as it is: the lego-block convertible Cadillac seen from directly behind, the empty two-lane desert highway, the full moon high in the starry sky, the distant mountains, the red tail-light glow and the cool moonlit color grading. Do NOT change the composition, framing, lighting or the car. Make ONLY this change: add a rear license plate to the back of the Cadillac, mounted centrally between the tail lights. The rear license plate must match the dedicated license-plate reference image (second image) EXACTLY: a German plate — blue EU strip with a 'D' on the left, then bold black text 'KEP', a brown/orange round TUV sticker, a round grey registration seal, then 'LE 18'. Reproduce that plate design and text faithfully. IMPORTANT — plate shape: the plate is a WIDE, long, narrow horizontal rectangle. German plates have a width-to-height ratio of roughly 4.7 to 1 (520mm wide x 110mm tall). Render it clearly WIDE and short — NOT compressed, NOT squished, NOT square, NOT cropped. The text and stickers are spread out comfortably across the full width of the wide plate, exactly proportioned like the reference image. Keep it as sharp and legible as the viewing distance allows; the plate is mounted flat on the rear of the car, correctly perspective-matched to the car's tail and slightly catching the warm tail-light glow. Avoid: changing the car, changing the framing, changing the moon or sky, wrong license plate text, blank plate, distorted or floating plate, extra plates, compressed plate, squished plate, square plate, narrow plate, plate too tall.",
+    "refs": [
+      "05_behind_chase_20260519_221446.png",
+      "kennzeichen-kep-le-18.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.6,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9b3eb1/aij0Oep-WTbkkksKswSye_jWtSshe6.png"
+    ],
+    "saved": [
+      "behind_chase_plate_20260522_171447.png"
+    ],
+    "timestamp": "2026-05-22T17:15:16.252411"
+  }
+]

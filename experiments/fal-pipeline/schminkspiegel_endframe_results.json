@@ -1,0 +1,24 @@
+[
+  {
+    "run": "20260603_192438",
+    "name": "end_rot200",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Keep this entire image perfectly identical — the chrome hand, the open compact, the chrome reflected face, the closed berry lips, the hoop earrings, the hair, the dark galaxy background and the exact framing — all completely unchanged. The ONLY change: rotate the holographic rainbow light pattern on the round disc around its centre by about 200 degrees clockwise, so the coloured radial streaks now point in a clearly different direction, as if the disc has turned. Keep the disc's round elliptical shape, its position, size and centre hole exactly the same — only its rainbow streaks are rotated. Nothing else moves or changes.",
+    "elapsed_s": 22.3,
+    "image": "https://v3b.fal.media/files/b/0a9cd6bc/Abqpk_ebftPmfoFJwMt2R_F0tQFjHs.png",
+    "saved": "end_rot200_20260603_192438.png",
+    "timestamp": "2026-06-03T19:25:03.390819"
+  },
+  {
+    "run": "20260603_192438",
+    "name": "end_rot120",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "dd_flux_20260602_150012.jpg",
+    "prompt": "Keep this entire image perfectly identical — the chrome hand, the open compact, the chrome reflected face, the closed berry lips, the hoop earrings, the hair, the dark galaxy background and the exact framing — all completely unchanged. The ONLY change: rotate the holographic rainbow light pattern on the round disc around its centre by about 120 degrees clockwise, so the coloured radial streaks now point in a clearly different direction, as if the disc has turned. Keep the disc's round elliptical shape, its position, size and centre hole exactly the same — only its rainbow streaks are rotated. Nothing else moves or changes.",
+    "elapsed_s": 24.5,
+    "image": "https://v3b.fal.media/files/b/0a9cd6bc/bMvWJvs1A6vjjcn-9j9y-_OBYWug4J.png",
+    "saved": "end_rot120_20260603_192438.png",
+    "timestamp": "2026-06-03T19:25:05.676307"
+  }
+]

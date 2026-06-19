@@ -1,0 +1,41 @@
+[
+  {
+    "run": "20260602_145741",
+    "label": "dedot_flux",
+    "model": "flux",
+    "endpoint": "fal-ai/flux-pro/kontext/max",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "Keep the entire image exactly as it is — the chrome hand, the open compact, the holographic CD, the chrome reflected face with its berry lips, the hoop earrings, the hair and the dark galaxy background — all unchanged. ONLY remove the small metal stud dots on the cheeks of the reflected chrome face (the little dots beside the nose on the left and right), leaving the cheeks as smooth clean mirror-chrome. Do not change anything else.",
+    "elapsed_s": 16.1,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a9caebb/_ZjIGiZOVRflNxTrwnPgl_bf0dc590cdc34e148753d233beba6227.jpg",
+    "saved": "dd_flux_20260602_145741.jpg",
+    "timestamp": "2026-06-02T14:58:01.070668"
+  },
+  {
+    "run": "20260602_145741",
+    "label": "dedot_nano1",
+    "model": "nano1",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "Keep the entire image exactly as it is — the chrome hand, the open compact, the holographic CD, the chrome reflected face with its berry lips, the hoop earrings, the hair and the dark galaxy background — all unchanged. ONLY remove the small metal stud dots on the cheeks of the reflected chrome face (the little dots beside the nose on the left and right), leaving the cheeks as smooth clean mirror-chrome. Do not change anything else.",
+    "elapsed_s": 25.0,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9caebe/F3CUXnIIC5KunKojkcwKm_K1pcruNN.png",
+    "saved": "dd_nano1_20260602_145741.png",
+    "timestamp": "2026-06-02T14:58:09.847772"
+  },
+  {
+    "run": "20260602_145741",
+    "label": "dedot_nano2",
+    "model": "nano2",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "src": "ext_4x3_run2_20260602_140520.png",
+    "prompt": "Keep the entire image exactly as it is — the chrome hand, the open compact, the holographic CD, the chrome reflected face with its berry lips, the hoop earrings, the hair and the dark galaxy background — all unchanged. ONLY remove the small metal stud dots on the cheeks of the reflected chrome face (the little dots beside the nose on the left and right), leaving the cheeks as smooth clean mirror-chrome. Do not change anything else.",
+    "elapsed_s": 32.5,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9caeba/ZJZNma3v4GaK9NqhV4OYx_fX3vkM8v.png",
+    "saved": "dd_nano2_20260602_145741.png",
+    "timestamp": "2026-06-02T14:58:17.277802"
+  }
+]

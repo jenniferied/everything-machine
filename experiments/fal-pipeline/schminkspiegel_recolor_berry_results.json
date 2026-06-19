@@ -1,0 +1,80 @@
+[
+  {
+    "run": "20260602_123415",
+    "label": "M2_flux__run1",
+    "method": "M2_flux",
+    "endpoint": "fal-ai/flux-pro/kontext/max",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 13.4,
+    "cost_est": "$0.08",
+    "image": "https://v3b.fal.media/files/b/0a9cab5f/0OH9i_9bb-HsMmNgZ54-S_0147a8a1c5f44801b11b4b6341a323e0.jpg",
+    "saved": "rb_M2_flux_run1_20260602_123415.jpg",
+    "timestamp": "2026-06-02T12:34:34.042814"
+  },
+  {
+    "run": "20260602_123415",
+    "label": "M1_nano1__run2",
+    "method": "M1_nano1",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 23.9,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cab5e/BW2FoFd351sjLccXyiQJG_LPCkGii3.png",
+    "saved": "rb_M1_nano1_run2_20260602_123415.png",
+    "timestamp": "2026-06-02T12:34:44.817296"
+  },
+  {
+    "run": "20260602_123415",
+    "label": "M1_nano1__run1",
+    "method": "M1_nano1",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 23.9,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cab5e/SMMqWjo3jtiwGkyUwF0z__ohLzh0CM.png",
+    "saved": "rb_M1_nano1_run1_20260602_123415.png",
+    "timestamp": "2026-06-02T12:34:45.442599"
+  },
+  {
+    "run": "20260602_123415",
+    "label": "M3_nano2ref__run1",
+    "method": "M3_nano2ref",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 24.7,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cab5e/RUO9jnLvIztYNMRkA7XCe_rIyl7IVC.png",
+    "saved": "rb_M3_nano2ref_run1_20260602_123415.png",
+    "timestamp": "2026-06-02T12:34:45.665347"
+  },
+  {
+    "run": "20260602_123415",
+    "label": "M3_nano2ref__run2",
+    "method": "M3_nano2ref",
+    "endpoint": "fal-ai/nano-banana-pro/edit",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 27.1,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cab5e/T55CwdxixEXiqI2Ns5eLW_5Cu5cqYW.png",
+    "saved": "rb_M3_nano2ref_run2_20260602_123415.png",
+    "timestamp": "2026-06-02T12:34:48.052027"
+  },
+  {
+    "run": "20260602_123415",
+    "label": "M4_seedream__run1",
+    "method": "M4_seedream",
+    "endpoint": "fal-ai/bytedance/seedream/v4.5/edit",
+    "base": "cy2_edit_openhair_hoop_flux2_pro_rose_p43_p43_20260529_155747.png",
+    "ref": "cg_nano_pro_LF_lip_berry_p43_20260529_100253.png",
+    "elapsed_s": 45.2,
+    "cost_est": "$0.04",
+    "image": "https://v3b.fal.media/files/b/0a9cab62/HvOLvHuHh6b2pA-r0owi-_2fa89691341c4c6f987d904a100389d7.png",
+    "saved": "rb_M4_seedream_run1_20260602_123415.png",
+    "timestamp": "2026-06-02T12:35:06.534994"
+  }
+]

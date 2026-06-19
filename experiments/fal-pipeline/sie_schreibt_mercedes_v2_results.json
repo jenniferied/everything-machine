@@ -1,0 +1,118 @@
+[
+  {
+    "run": "20260519_224312",
+    "variant": "01_front_hero_fixed_kep_plate",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the low-angle hero front shot of the red Mercedes W123 at night on the bridge — same framing, same chrome grille, same headlights, same street-lamp bokeh. FIX two things: (A) The driver behind the windshield is the Kepler voxel character. Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it. The cap brim sticks out clearly and shadows the face. NO face features bleeding into the cap. (B) The front license plate must read EXACTLY 'KEP·LE 23'. Vehicle license plate is a standard German plate: white background, black bold characters, blue EU strip on the left with 'D' and stars. Plate text reads exactly 'KEP·LE 23' (KEP = fictional Kepler county, LE = letters, 23 = number, with the small round official sticker between county and letters). Round TUV/inspection sticker visible in the upper-right corner of the plate (yellow/orange round badge with year markings). Sharp, legible text. Color grading: cinematic teal-orange, deep blue shadows + warm amber highlights from headlights and street lamps. High contrast, colorful but not garish. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "03_low_angle_hero_mercedes_20260519_223740.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 26.4,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae123/uxqb9FV6YFDdHjlPOCg8x_C2jK9YYS.png"
+    ],
+    "saved": [
+      "01_front_hero_fixed_kep_plate_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:43:46.540809"
+  },
+  {
+    "run": "20260519_224312",
+    "variant": "02_rear_hero_new_taillights_plate",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a NEW low-angle hero shot from BEHIND the same red Mercedes W123 at night on the same bridge. Camera close to the asphalt, looking up at the rear of the car. Show the iconic W123 rear: square red tail-light clusters glowing intensely, chrome bumper, the back of the boxy sedan body, the trunk line. Driver silhouette of the Kepler voxel character visible through the rear windshield with cap on. Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it. The REAR license plate must read EXACTLY 'KEP·LE 23'. Vehicle license plate is a standard German plate: white background, black bold characters, blue EU strip on the left with 'D' and stars. Plate text reads exactly 'KEP·LE 23' (KEP = fictional Kepler county, LE = letters, 23 = number, with the small round official sticker between county and letters). Round TUV/inspection sticker visible in the upper-right corner of the plate (yellow/orange round badge with year markings). Sharp, legible text. The car is the red 1970s/80s Mercedes-Benz W123 sedan: deep red paint, square chrome grille with the three-pointed Mercedes star, four round headlights, boxy European sedan silhouette, chrome bumpers. Street lamps recede into the distance on the bridge. Color grading: warm sodium-yellow street lights + deep blue night sky, strong red glow from taillights. High contrast cinematic. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "03_low_angle_hero_mercedes_20260519_223740.png",
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 24.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae126/MKsy-FZ7QuEUDWRx_tIUV_vCPwrvRO.png"
+    ],
+    "saved": [
+      "02_rear_hero_new_taillights_plate_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:44:11.706961"
+  },
+  {
+    "run": "20260519_224312",
+    "variant": "03_interior_cockpit_cap_fixed",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the Mercedes W123 interior exactly: cream leather seats, wooden dashboard, round amber gauges, thin-rimmed steering wheel with chrome Mercedes horn pad, view through windshield onto the night bridge. FIX the driver: replace him with a cleaner Kepler voxel character. Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it. The cap is properly placed on the head with the brim protruding forward and casting shadow. NO facial features. Voxel hands grip the steering wheel naturally at 9 and 3. Color grading: warm amber dashboard glow vs cool blue moonlight from outside, cinematic, colorful, contrast. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "05_cockpit_interior_pov_mercedes_20260519_223740.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.9,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae129/46ykapEHcQ-qWrvZhH46G_co1dc7ZT.png"
+    ],
+    "saved": [
+      "03_interior_cockpit_cap_fixed_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:44:43.533374"
+  },
+  {
+    "run": "20260519_224312",
+    "variant": "04_wide_establishing_teal_orange",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the wide establishing shot of the red Mercedes W123 driving across the night bridge with the line of street lamps. FIX the driver — cleaner Kepler voxel character, Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it.. FIX the front license plate to read EXACTLY 'KEP·LE 23'. Vehicle license plate is a standard German plate: white background, black bold characters, blue EU strip on the left with 'D' and stars. Plate text reads exactly 'KEP·LE 23' (KEP = fictional Kepler county, LE = letters, 23 = number, with the small round official sticker between county and letters). Round TUV/inspection sticker visible in the upper-right corner of the plate (yellow/orange round badge with year markings). Sharp, legible text. Color grading: strong cinematic teal-orange — push the shadows deep teal/cyan, push highlights warm orange. Filmic contrast. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "02_landscape_16x9_same_compo_20260519_223740.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 29.7,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae12c/-g_4C2ejmLTxMWOGJddUD_fk3Mixvz.png"
+    ],
+    "saved": [
+      "04_wide_establishing_teal_orange_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:45:15.021645"
+  },
+  {
+    "run": "20260519_224312",
+    "variant": "05_3q_rear_sodium_neon",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Create a NEW three-quarter rear shot of the red Mercedes W123 on a wet city night street, reflections on the asphalt. Camera slightly behind and to the right of the car. The taillights glow red, the chrome bumper catches light, the rear license plate is clearly readable: 'KEP·LE 23'. Vehicle license plate is a standard German plate: white background, black bold characters, blue EU strip on the left with 'D' and stars. Plate text reads exactly 'KEP·LE 23' (KEP = fictional Kepler county, LE = letters, 23 = number, with the small round official sticker between county and letters). Round TUV/inspection sticker visible in the upper-right corner of the plate (yellow/orange round badge with year markings). Sharp, legible text. The car is the red 1970s/80s Mercedes-Benz W123 sedan: deep red paint, square chrome grille with the three-pointed Mercedes star, four round headlights, boxy European sedan silhouette, chrome bumpers. Driver visible through rear window: Kepler voxel character. Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it. Color grading: dominant warm sodium-vapour street light yellow-orange with magenta/pink neon shop signs reflecting in the wet pavement. Heavy contrast, cinematic. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "03_low_angle_hero_mercedes_20260519_223740.png",
+      "unreal-mercedes-w123-rot-bruecke.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 45.6,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae12f/uJM_JUB3XGyuIznMglufY_NLcbTrQT.png"
+    ],
+    "saved": [
+      "05_3q_rear_sodium_neon_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:46:01.851136"
+  },
+  {
+    "run": "20260519_224312",
+    "variant": "06_front_hero_magenta_cyan",
+    "model": "fal-ai/nano-banana-pro/edit",
+    "prompt": "Edit the first image. KEEP the low-angle front hero of the red Mercedes W123 on the bridge. FIX the driver and plate as in the other variants: Kepler voxel character (per the A-pose reference): humanoid figure built from small cubic voxel blocks, white/light-grey blocky upper body with visible cubic texture, dark trousers, BLOCKY abstract head. He wears a dark navy/black baseball cap with a clearly visible flat curved brim that protrudes forward beyond the face. The brim casts a strong shadow over the upper face. The face itself is ABSTRACT and FEATURELESS — pure light grey voxel blocks, NO eyes, NO mouth, NO nose, NO facial features whatsoever bleeding through or onto the cap. The cap is opaque and solid — nothing visible through it. Plate reads EXACTLY 'KEP·LE 23'. Vehicle license plate is a standard German plate: white background, black bold characters, blue EU strip on the left with 'D' and stars. Plate text reads exactly 'KEP·LE 23' (KEP = fictional Kepler county, LE = letters, 23 = number, with the small round official sticker between county and letters). Round TUV/inspection sticker visible in the upper-right corner of the plate (yellow/orange round badge with year markings). Sharp, legible text. Color grading: night-club magenta + cyan — push shadows deep cyan/teal, push neon highlights bright magenta and pink. Highly saturated, high contrast, cinematic, like a Refn or Drive-style night palette. Avoid: face features bleeding through cap, eyes on cap, mouth on cap, transparent cap, hooded figure, hoodie, robe, realistic human driver, deformed car, melted dashboard, wrong license plate, blurry plate.",
+    "refs": [
+      "03_low_angle_hero_mercedes_20260519_223740.png",
+      "kepler-a-pose-1024.png"
+    ],
+    "aspect_ratio": "16:9",
+    "elapsed_s": 27.0,
+    "images": [
+      "https://v3b.fal.media/files/b/0a9ae134/1RW090bN2JVfR_AvlwviS_xUFwY8iv.png"
+    ],
+    "saved": [
+      "06_front_hero_magenta_cyan_20260519_224312.png"
+    ],
+    "timestamp": "2026-05-19T22:46:30.164418"
+  }
+]

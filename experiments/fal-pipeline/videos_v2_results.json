@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cd2",
+    "seed": 6001,
+    "saved": "cd2_s6001_20260619_002427.mp4",
+    "elapsed_s": 149.4
+  },
+  {
+    "name": "cd2",
+    "seed": 6002,
+    "saved": "cd2_s6002_20260619_002427.mp4",
+    "elapsed_s": 30.2
+  },
+  {
+    "name": "stairs2",
+    "seed": 6101,
+    "saved": "stairs2_s6101_20260619_002427.mp4",
+    "elapsed_s": 77.6
+  },
+  {
+    "name": "stairs2",
+    "seed": 6102,
+    "saved": "stairs2_s6102_20260619_002427.mp4",
+    "elapsed_s": 8.7
+  }
+]
